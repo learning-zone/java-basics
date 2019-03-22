@@ -103,3 +103,141 @@
 1. If a method throws NullPointerException in the superclass, can we override it with a method which throws RuntimeException? 
 1. What is immutable object? Can you write immutable object? 
 
+
+# Multithreading Questions
+
+1. What is difference between Executor.submit() and Executer.execute() method? 
+1. Can we make array volatile in Java? 
+1. What are practical uses of volatile modifier? 
+1. What are the different ways of implementing thread? Which one is more advantageous? 
+1. What kind of thread is the Garbage collector thread? 
+1. What is the difference between Process and Thread? 
+1. What are the benefits of multi-threaded programming? 
+1. What is difference between user Thread and daemon Thread? 
+1. How can we pause the execution of a Thread for specific time? 
+1. What do you understand about Thread Priority? 
+1. What is Thread Scheduler and Time Slicing? 
+1. What is context-switching in multi-threading? 
+1. How does thread communicate with each other? 
+1. Which is more preferred – Synchronized method or Synchronized block? 
+1. What is Deadlock? How to analyze and avoid deadlock situation? 
+1. What is Java Timer Class? How to schedule a task to run after specific interval? 
+1. What is Thread Pool? How can we create Thread Pool in Java? 
+1. Why must wait() method be called from the synchronized block? 
+1. What are the states in the lifecycle of a Thread? 
+1. What is the difference between wait() and sleep() method? 
+1. What is shutdown hook? 
+1. Can Java object be locked down for exclusive use by a given thread? 
+1. What is static synchronization? 
+1. How is the safety of a thread achieved? 
+1. Difference between start() and run() method of thread class. 
+1. How do you call wait() method? using if block or loop? Why? 
+1. What is false sharing in the context of multi-threading? 
+1. What is Thread Group? Why it’s advised not to use it? 
+1. What best practices you follow while writing Multi-threading and Concurrency code in Java? 
+1. How do you stop a thread in java? 
+1. Can we call run() method of a Thread class?
+1. How can we make sure main() is the last thread to finish in Java Program?
+1. Why Thread sleep() and yield() methods are static? 
+1. What is ThreadLocal? 
+1. What is Java Thread Dump, How can we get Java Thread dump of a Program? 
+1. What will happen if we don’t override Thread class run() method? 
+1. Differentiate between the Thread class and Runnable interface for creating a Thread? 
+1. What does join() method? 
+1. Can we make the user thread as daemon thread if the thread is started? 
+
+
+# Concurrency Questions
+
+1. What is race-condition? 
+1. What is the difference between ScheduledExecutorService and ExecutorService interface? 
+1. What does yield method of the Thread class do? 
+1. What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization? 
+1. What are Concurrent Collection Classes? 
+1. What is the difference between the Runnable and Callable interfaces? 
+1. What is the Thread’s interrupt flag? How can you set and check it? How does it relate to the InterruptedException? 
+1. What is Java Memory Model (JMM)? Describe its purpose and basic ideas. 
+1. Describe the conditions of livelock, and starvation. 
+1. How ReadWritelock can help in reducing contention among multiple threads? 
+1. What is the Difference between ReentrantLock and Synchronized? 
+1. What is SynchronousQueue in Java? 
+1. Why ConcurrentHashMap is faster than Hashtable in Java? 
+1. How do you share data between two threads in Java? 
+1. Describe the purpose and use-cases of the fork/join framework
+1. What is Phaser in Java concurrency? 
+1. What is Exchanger in Java concurrency? 
+1. What is Semaphore in Java concurrency? 
+1. What is lock striping in concurrent programming? 
+1. What is blocking method in Java? 
+1. What is Callable and Future in Java concurrency? 
+1. What is atomic variable in Java? 
+1. What is Busy Spinning? Why will you use Busy Spinning as wait strategy? 
+1. What is Executors Framework? 
+1. What is FutureTask class? 
+1. What are the available implementations of ExecutorService in the standard library?
+1. What are the main components of concurrency API?
+
+
+# Collections Questions
+
+1. What is Java Collections Framework? List out some benefits of Collections framework? 
+1. What is the benefit of Generics in Collections Framework? 
+1. Why Collection doesn’t extend Cloneable and Serializable interfaces? 
+1. Why Map interface doesn’t extend Collection interface? 
+1. What is difference between Enumeration and Iterator interface? 
+1. What is different between Iterator and ListIterator? 
+1. What are different ways to iterate over a list? 
+1. What is the difference between fail-fast and fail-safe iterator? 
+1. How to avoid ConcurrentModificationException while iterating a collection? 
+1. Why there are no concrete implementations of Iterator interface?
+1. What are different Collection views provided by Map interface? 
+1. What is difference between HashMap and Hashtable? 
+1. What are similarities and difference between ArrayList and Vector? 
+1. What is difference between Array and ArrayList? 
+1. What is difference between ArrayList and LinkedList? 
+1. Which collection classes provide random access of it’s elements? 
+1. What is EnumSet? 
+1. What are concurrent Collection Classes? 
+1. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue? 
+1. What is Queue and Stack, list their differences? 
+1. What is difference between Comparable and Comparator interface? 
+1. How can we sort a list of Objects? 
+1. While passing a Collection as argument to a function, how can we make sure the function will not be able to modify it? 
+1. How can we create a synchronized collection from given collection? 
+1. What are common algorithms implemented in Collections Framework? 
+1. What are best practices related to Java Collections Framework? 
+1. What is Java Priority Queue? 
+1. What is LinkedHashMap in Java? 
+1. Which kind of tree is used to implement TreeMap in Java? 
+1. What is default size of ArrayList and HashMap in Java? 
+1. What is the difference between HashSet and TreeSet? 
+1. What is the difference between Set and Map? 
+1. What is the difference between HashSet and HashMap? 
+1. What is the difference between HashMap and TreeMap? 
+1. What is the difference between Collection and Collections? 
+1. What is the advantage of the generic collection? 
+1. What is hash-collision in Hashtable and how it is handled in Java? 
+1. What is the Dictionary class? 
+1. How to synchronize ArrayList? 
+1. What are all the Classes and Interfaces that are available in the collections? 
+1. What is meant by Ordered and Sorted in collections? 
+1. Explain about the different lists available in the collection. 
+1. Explain about Map and their types. 
+1. What is the difference between List and Set? 
+1. What is the difference between peek(), poll() and remove() method of the Queue interface? 
+1. What is the difference between HashMap and ConcurrentHashMap? 
+1. What is CopyOnWriteArrayList?  How it is different from  ArrayList in Java? 
+1. What are concurrentCollectionClasses? 
+1. How to make Java ArrayList Read-Only? 
+1. How to remove duplicates from ArrayList? 
+1. How to reverse ArrayList?
+1. How to sort ArrayList in descending order? 
+1. Which design pattern followed by Iterator ?
+1. What is difference between IdentityHashMap and HashMap in Java? 
+1. What is CompareAndSwap approach? 
+1. Why there is not method like Iterator.add() to add elements to the collection? 
+1. What is ConcurrentLinkedQueue in Java?
+1. What is ConcurrentLinkedDequeue in Java?
+1. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency? 
+1. What is PriorityBlockingQueue in Java Concurrency? 
+1. What is DelayQueue in Java Concurrency?
