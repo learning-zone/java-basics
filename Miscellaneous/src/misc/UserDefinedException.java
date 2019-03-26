@@ -1,13 +1,14 @@
 package misc;
 
-public class UserDefinedException {
+public class UserDefinedException extends Exception {
 
-	public static void main(String[] args) throws Exception {
-		int price = -120;
-		if(price < 0 ) {
-			throw new PriceException(price);
-		} else {
-			System.out.println("You have entered: "+price + "rs");
-		}
+	private static final long serialVersionUID = 8331376309753029444L;
+	private int price;
+	
+	public UserDefinedException(int price) {
+		this.price = price;
+	}
+	public String toString() {
+		return "Price should not be in Negative: " + price;
 	}
 }
