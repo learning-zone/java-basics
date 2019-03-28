@@ -1,6 +1,6 @@
 package misc;
 
-public class RemoveUnwantedCharactersFromString {
+public class RemoveCharactersFromString {
 
 	public static void main(String[] args) {
 		String str = "(123)-456-78910";
