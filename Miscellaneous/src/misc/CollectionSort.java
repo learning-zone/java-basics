@@ -3,8 +3,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-
-public class CollectionSorting {
+/**
+ * Java Program to Sort a List using Collections.Sort methods 
+ * This implementation uses merge sort.
+ *
+ */
+public class CollectionSort {
 
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<>();
