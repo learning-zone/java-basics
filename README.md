@@ -414,6 +414,6 @@
 1. How to swap two String variables without third variable
 1. How to remove a particular character from a String
 1. Write a method that will remove given character from the String?
-1. How to you calculate the difference between two dates in Java? (program)
+1. How to you calculate the difference between two dates in Java? 
 1. Write a multi-threading program, print odd number using one thread and even number using other.
 
