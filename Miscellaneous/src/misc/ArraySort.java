@@ -1,7 +1,7 @@
 package misc;
 import java.util.Arrays;
 /**
- * Note:
+ * Note:-
  * java.util.Arrays uses quicksort for primitive types such as int and 
  * mergesort for objects that implement Comparable or use a Comparator.
  */
