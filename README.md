@@ -104,6 +104,29 @@
 1. What is immutable object? Can you write immutable object? 
 
 
+# Java OOPS Questions
+
+1. What is runtime polymorphism or dynamic method dispatch? 
+1. What is difference between dependency injection and factory design pattern? 
+1. Difference between Adapter and Decorator pattern? 
+1. Difference between Adapter and Proxy Pattern? 
+1. What is Template method pattern? 
+1. When do you use Visitor design pattern? 
+1. When do you use Composite design pattern? 
+1. The difference between Inheritance and Composition? 
+1. Difference between Abstract factory and Prototype design pattern? 
+1. What is Adapter pattern? When to use it? 
+1. The difference between nested public static class and a top level class in Java? 
+1. Give me an example of design pattern which is based upon open closed principle? 
+1. Can you explain Liskov Substitution principle? 
+1. What is Law of Demeter violation? Why it matters? 
+1. When do you use Flyweight pattern? 
+1. The difference between nested static class and top level class? 
+1. The difference between DOM and SAX parser in Java? 
+1. What is the difference between an object-oriented programming language and object-based programming language? 
+1. Difference between Static binding and Dynamic binding in java ?
+
+
 # Multithreading Questions
 
 1. What is difference between Executor.submit() and Executer.execute() method? 
@@ -241,7 +264,6 @@
 1. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency? 
 1. What is PriorityBlockingQueue in Java Concurrency? 
 1. What is DelayQueue in Java Concurrency?
-
 
 
 # Java Programs
