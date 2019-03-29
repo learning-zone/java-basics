@@ -448,12 +448,12 @@
 
 # JavaServer Pages (JSP)
 
-1. What are the life-cycle methods for a jsp? *
-1. How to disable caching on back button of the browser? *
-1. What are the different tags provided in JSTL? *
-1. How to disable session in JSP? *
-1. How to delete a Cookie in a JSP? *
-1. How is JSP better than Servlet technology? *
+1. What are the life-cycle methods for a jsp? 
+1. How to disable caching on back button of the browser? 
+1. What are the different tags provided in JSTL? 
+1. How to disable session in JSP? 
+1. How to delete a Cookie in a JSP? 
+1. How is JSP better than Servlet technology? 
 1. What are the JSP implicit objects?
 1. What are the differences between include directive and include action?
 1. Explain the jspDestroy() method.
