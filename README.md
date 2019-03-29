@@ -266,7 +266,7 @@
 1. What is DelayQueue in Java Concurrency?
 
 
-# Java Servlets 
+# Servlets 
 
 1. What is a Server Side Include (SSI)? 
 1. What is the difference between doGet() and doPost()? 
@@ -313,7 +313,7 @@
 1. How do you find out what client machine is making a request to your servlet?
 
 
-# Java JDBC 
+# JDBC 
 
 1. What are the steps to connect to a database in java? 
 1. What are the differences between ResultSet and RowSet? 
@@ -353,7 +353,7 @@
 1. What is JDBC Savepoint? How to use it?
 
 
-# Java String
+# String
 
 1. Define a StringJoiner and write a sample code? 
 1. What is the difference between creating String as new() and literal? 
@@ -394,7 +394,7 @@
 1. What is the purpose of toString() method in Java?
 
 
-# Java Exception Handling
+# Exception Handling
 
 1. What is UnsupportedOperationException? 
 1. What is difference between Error and Exception? 
