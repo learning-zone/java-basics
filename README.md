@@ -481,6 +481,17 @@
 1. What is a heavyweight component?
 
 
+# JUnit Testing
+
+1. How do you test static method? 
+1. How to do you test a method for an exception using JUnit? 
+1. Which unit testing libraries you have used for testing Java programs? 
+1. What is the difference between @Before and @BeforeClass annotation? 
+1. How to check if a String contains only numeric digits? 
+1. How to write LRU cache in Java using Generics? 
+1. How do you check if two given String are anagrams?
+
+
 # Java Programs
 
 1. A maximal subarray 
