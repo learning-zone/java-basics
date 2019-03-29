@@ -446,6 +446,41 @@
 1. When does an Object becomes eligible for Garbage collection in Java?
 
 
+# JavaServer Pages (JSP)
+
+1. What are the life-cycle methods for a jsp? *
+1. How to disable caching on back button of the browser? *
+1. What are the different tags provided in JSTL? *
+1. How to disable session in JSP? *
+1. How to delete a Cookie in a JSP? *
+1. How is JSP better than Servlet technology? *
+1. What are the JSP implicit objects?
+1. What are the differences between include directive and include action?
+1. Explain the jspDestroy() method.
+1. Why should we not configure JSP standard tags in web.xml?
+1. What is busy spin? Why should you use it?
+1. How do you take thread dump in Java?
+1. is Swing thread-safe?
+1. What is a thread local variable in Java? 
+1. Can we create an Immutable object, which contains a mutable object?
+1. How do you convert bytes to long in Java? 
+1. Can we cast an int value into byte variable? what will happen if the value of int is larger than byte?
+1. There are two classes B extends A and C extends B, Can we cast B into C e.g. C = (C) B; 
+1. Which class contains clone method? Cloneable or Object? 
+1. Is ++ operator is thread-safe in Java? 
+1. Difference between a = a + b and a += b ? 
+1. Can I store a double value in a long variable without casting? 
+1. What will this return 3*0.1 == 0.3? true or false? 
+1. Which one will take more memory, an int or Integer? 
+1. Explain Expression Language in JSP?
+1. Which containers use a border layout as their default layout?
+1. Which containers use a FlowLayout as their default layout?
+1. What are peerless components?
+1. is there is any difference between a Scrollbar and a ScrollPane?
+1. What is a lightweight component?
+1. What is a heavyweight component?
+
+
 # Java Programs
 
 1. A maximal subarray 
