@@ -313,6 +313,46 @@
 1. How do you find out what client machine is making a request to your servlet?
 
 
+# Java JDBC Questions
+
+1. What are the steps to connect to a database in java? 
+1. What are the differences between ResultSet and RowSet? 
+1. How can we execute stored procedures using CallableStatement? 
+1. What are CLOB and BLOB data types in JDBC? 
+1. What are the different types of lockings in JDBC? 
+1. How can we store and retrieve images from the database? 
+1. How can we store and retrieve the file in the Oracle database? 
+1. What are the differences between stored procedure and functions? 
+1. What are stored procedures? How to call stored procedure using JDBC API? 
+1. What are the JDBC statements? 
+1. What is batch processing and how to perform batch processing in JDBC? 
+1. What are the differences between Statement and PreparedStatement interface? 
+1. What is database connection pooling? What are the advantages of using a connection pool?  
+1. What is JDBC Driver?
+1. Name 5 JDBC best practices your follow? 
+1. What are the JDBC API components?
+1. What is the role of JDBC DriverManager class?
+1. What is JDBC Connection interface?
+1. What is the purpose of JDBC ResultSet interface?
+1. What is JDBC ResultSetMetaData interface?
+1. What is JDBC DatabaseMetaData interface?
+1. What is the return type of Class.forName() method?
+1. How can we set null value in JDBC PreparedStatement?
+1. What are the differences between execute, executeQuery, and executeUpdate?
+1. Which interface is responsible for transaction management in JDBC?
+1. How can we maintain the integrity of a database by using JDBC?
+1. What is the major difference between java.util.Date and java.sql.Date data type?
+1. How do you handle error condition  while writing stored procedure or accessing stored procedure from java?
+1. How do you iterate ResultSet in the reverse order?
+1. What is the use of setAutoCommit() method?
+1. What is a “dirty read”?
+1. What are the ways to load or register driver ?
+1. How to get the Database server details in java program?
+1. What is the use of getGeneratedKeys() method in Statement?
+1. What is the use of setFetchSize() and setMaxRows() methods in Statement?
+1. What is JDBC Savepoint? How to use it?
+
+
 # Java Programs
 
 1. A maximal subarray 
