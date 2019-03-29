@@ -266,6 +266,53 @@
 1. What is DelayQueue in Java Concurrency?
 
 
+# Java Servlets Questions
+
+1. What is a Server Side Include (SSI)? 
+1. What is the difference between doGet() and doPost()? 
+1. What is a servlet? What is the life-cycle of a servlet? 
+1. What are the differences between Get and Post methods? 
+1. What is Request Dispatcher? 
+1. What are the differences between forward() method and sendRedirect() methods? 
+1. How does cookies work in Servlets? 
+1. What are the differences between ServletContext vs ServletConfig? 
+1. What are the different methods of session management in servlets? 
+1. What is MIME Type? 
+1. What is the use of servlet wrapper classes? 
+1. What is difference between ServletResponse sendRedirect() and RequestDispatcher forward() method? 
+1. Why HttpServlet class is declared abstract? 
+1. What is difference between GenericServlet and HttpServlet? 
+1. How to notify an object in session when session is invalidated or timed-out? 
+1. What is servlet attributes and their scope? 
+1. How can we achieve transport layer security for our web application? 
+1. What is a deployment descriptor? 
+1. How to make sure a servlet is loaded at the application startup? 
+1. Write a servlet to upload file on server. 
+1. How do we go with database connection and log4j integration in servlet? 
+1. What is the effective way to make sure all the servlets are accessible only when user has a valid session? 
+1. Why do we have servlet listeners? 
+1. What are Scriptlets ?
+1. What is different between web server and application server?
+1. Which HTTP method is non-idempotent?
+1. What are the advantages of Servlet over CGI?
+1. What are common tasks performed by Servlet Container?
+1. What is difference between PrintWriter and ServletOutputStream?
+1. How can we create deadlock situation in servlet?
+1. What is SingleThreadModel interface?
+1. Do we need to override service() method?
+1. Is it good idea to create servlet constructor?
+1. What is the inter-servlet communication?
+1. Are Servlets Thread Safe? How to achieve thread safety in servlets?
+1. How do we call one servlet from another servlet?
+1. why we should override only no-airs init() method.
+1. What is the difference between encodeRedirectUrl and encodeURL?
+1. Why do we have servlet filters?
+1. How to handle exceptions thrown by application with another servlet?
+1. What are different ways for servlet authentication?
+1. What is Servlet Chaining?
+1. How do you find out what client machine is making a request to your servlet?
+
+
 # Java Programs
 
 1. A maximal subarray 
