@@ -1,4 +1,4 @@
-# Core-Java Questions
+# Core-Java 
 
 1. Difference between Heap and Stack in java? 
 1. What are the important features of Java 8 release? 
@@ -104,7 +104,7 @@
 1. What is immutable object? Can you write immutable object? 
 
 
-# Java OOPS Questions
+# Java OOPS 
 
 1. What is runtime polymorphism or dynamic method dispatch? 
 1. What is difference between dependency injection and factory design pattern? 
@@ -127,7 +127,7 @@
 1. Difference between Static binding and Dynamic binding in java ?
 
 
-# Multithreading Questions
+# Multithreading 
 
 1. What is difference between Executor.submit() and Executer.execute() method? 
 1. Can we make array volatile in Java? 
@@ -170,7 +170,7 @@
 1. Can we make the user thread as daemon thread if the thread is started? 
 
 
-# Concurrency Questions
+# Concurrency 
 
 1. What is race-condition? 
 1. What is the difference between ScheduledExecutorService and ExecutorService interface? 
@@ -201,7 +201,7 @@
 1. What are the main components of concurrency API?
 
 
-# Collections Questions
+# Collections 
 
 1. What is Java Collections Framework? List out some benefits of Collections framework? 
 1. What is the benefit of Generics in Collections Framework? 
@@ -266,7 +266,7 @@
 1. What is DelayQueue in Java Concurrency?
 
 
-# Java Servlets Questions
+# Java Servlets 
 
 1. What is a Server Side Include (SSI)? 
 1. What is the difference between doGet() and doPost()? 
@@ -313,7 +313,7 @@
 1. How do you find out what client machine is making a request to your servlet?
 
 
-# Java JDBC Questions
+# Java JDBC 
 
 1. What are the steps to connect to a database in java? 
 1. What are the differences between ResultSet and RowSet? 
@@ -351,6 +351,99 @@
 1. What is the use of getGeneratedKeys() method in Statement?
 1. What is the use of setFetchSize() and setMaxRows() methods in Statement?
 1. What is JDBC Savepoint? How to use it?
+
+
+# Java String
+
+1. Define a StringJoiner and write a sample code? 
+1. What is the difference between creating String as new() and literal? 
+1. Why is char array better than String for storing password? 
+1. Why are the objects immutable in java? 
+1. How many ways can we create the string object? 
+1. How can we create an immutable class in Java? 
+1. Why CharArray() is preferred over String to store the password? 
+1. Why strings have been made immutable in Java? 
+1. What is String Constant Pool? 
+1. What is String Pool? 
+1. Difference between String, StringBuffer and StringBuilder? 
+1. Why String is immutable or final in Java 
+1. Memory leak issue in String class 
+1. How many objects will be created with string initialization code? 
+1. What is String in Java? How does String work in Java? String is a data type?
+1. What are different ways to create String Object?
+1. How can we make String upper case or lower case?
+1. What is String subSequence method?
+1. How to convert String to char and vice versa?
+1. How to convert String to byte array and vice versa?
+1. Can we use String in switch case?
+1. How to Split String in java?
+1. Why Char array is preferred over String for storing password?
+1. How do you check if two Strings are equal in Java?
+1. Does String is thread-safe in Java?
+1. Why String is popular HashMap key in Java?
+1. How do you check if two Strings are equal in Java?
+1. What does String intern() method do?
+1. How to convert String to int and vice versa?
+1. How to convert String to Date in java?
+1. How do you convert bytes to String?
+1. How to Optimize Java String Creation?
+1. Is String keyword in Java?
+1. String comparison with equals() and '=='?
+1. How do you convert a String(YYYYMMDD) to date in Java?
+1. Why java uses the concept of the string literal?
+1. What is the purpose of toString() method in Java?
+
+
+# Java Exception Handling
+
+1. What is UnsupportedOperationException? 
+1. What is difference between Error and Exception? 
+1. What are the types of Exceptions? Explain the hierarchy of Java Exception classes? 
+1. Explain about Exception Propagation. 
+1. What’s the base class of all exception classes? 
+1. What are important methods of Java Exception Class?
+1. How to write custom exception in Java?
+1. What is OutOfMemoryError in Java? 
+1. What are different scenarios causing “Exception in thread main”? 
+1. What happens when exception is thrown by main method? 
+1. Provide some Java Exception Handling Best Practices?
+1. What are the differences between Checked Exception and Unchecked Exception? 
+1. What purpose does the keywords final, finally, and finalize, fulfill? 
+1. What are the differences between throw and throws? 
+1. What is a finally block? Is there a case when finally will not execute?
+1. What is the base class for Error and Exception?
+1. Is it necessary that each try block must be followed by a catch block?
+1. Can finally block be used without a catch?
+1. Is there any case when finally will not be executed?
+1. Can an exception be rethrown?
+1. Can subclass overriding method declare an exception if parent class method doesn't throw an exception?
+1. What will happen to the Exception object after exception handling?
+
+
+# Garbage Collection
+
+1. How can an object be unreferenced? 
+1. What is the purpose of garbage collection in Java, and when is it used? 
+1. The difference between Serial and Parallel Garbage Collector? 
+1. A difference between WeakReference and SoftReference in Java? 
+1. Explain Java Heap space and Garbage collection? 
+1. How do you find memory usage from Java program? How much percent of the heap is used? 
+1. What is the difference between stack and heap in Java? 
+1. What does System.gc() and Runtime.gc() methods do? 
+1. How do WeakHashMap works? 
+1. What is -XX:+UseCompressedOops JVM option? Why use it? 
+1. How do you find if JVM is 32-bit or 64-bit from Java Program? 
+1. What is the maximum heap size of 32-bit and 64-bit JVM? 
+1. Can you guarantee the garbage collection process? 
+1. What's the difference between "a == b" and "a.equals(b)"? 
+1. What is a.hashCode() used for? How is it related to a.equals(b)? 
+1. What is a compile time constant in Java? What is the risk of using it?
+1. What is the size of int in 64-bit JVM?
+1. What is the size of an int variable in 32-bit and 64-bit JVM? 
+1. If an object reference is set to null, will the Garbage Collector immediately free the memory held by that object?
+1. What is the difference between Serial and Throughput Garbage collector?
+1. Does Garbage collection occur in permanent generation space in JVM? 
+1. When does an Object becomes eligible for Garbage collection in Java?
 
 
 # Java Programs
