@@ -620,6 +620,39 @@
 1. Difference bw delete and truncate
 1. oauth1.0 vs oauth 2.0
 1. java Implementation Rules :  https://rules.sonarsource.com/java/RSPEC-2066
+1. What do you mean Run time Polymorphism?
+1. How will you create thread?
+1. Why implementing Runnable is better than extending thread?
+1. Please list out the features of OOPS?
+1. What is the Use of Synchronized?
+1. What is the difference between HashTable and HashMap?
+1. What will happen if I insert duplicate key-pair value inserted in to HashTable?
+1. Differentiate ArrayList from Vector?
+1. How do you sort out items in ArrayList in forward and reverse directions?
+1. What is Thread ? Why we go for multi-threading?
+1. Tell me about join() and wait() methods?
+1. Could you tell in what scenario you go for Abstract Class & Interface?
+1. If Parent Class have a method add() throws XXXException, and child class overrides same method without Exception, will that compile and run? Is it overridden or overloaded?
+1. Is substring() method creates new object in String pool?
+1. What are two uses of the equals() method?  
+1. If I don't have Explicit constructor in parent class and having in child class, while calling the child's constructor jvm automatically calls Implicit Constructor of parent class? Yes OR No ?
+1. What are the different types of JDBC Driver?
+1. What is abstraction in JAVA?
+1. What is inheritance in JAVA?
+1. How Encapsulation concept implemented in JAVA?
+1. What do you mean checked and unchecked Exceptions? List some example for both?
+1. Why we go for Collections Framework?
+1. I want to have ordered collection, which allows duplicates? Which collection is used for this?
+1. I want to have class, which have the behavior of Hash-map? How this can be done?
+1. What hashCode() and equals() does in HashMap?
+1. Do you know Generics? What is it? Why we need that? How did you used in your coding?
+1. Why we prefer implements Runnable to create THREAD?
+1. Difference between String and StringBuilder and StringBuffer ?
+1. What is the use of default Constructor?
+1. What is the use of static block?
+1. How can we create a object of a class without using new operator
+1. what are the purposes of native, transiant key words?
+1. what are upcasting and downcasting?
 
 
 # Java Programs
