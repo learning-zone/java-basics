@@ -598,6 +598,28 @@
 1. Scenario of browser’s browsing history, where you need to store the browsing history, what data structure will you use.? 
 1. Scenario where in we have to download a big file by clicking on a link, how will you make sure that connections is reliable throughout. 
 1. If you store Employee object as key say: Employee emp = new Employee(“name1”,20); store it in a HashMap as key, now if we add a new parameter emp.setMarriedStatus(true) and try to override it what will happen? 
+1. JDK 1.8 features.
+1. Given a string "abc" or any other string print all possible combinations of it.
+1. When is string pool garbage collected.
+1. What is the complexity of qadtree algorithm
+1. When is string stored in string pool and what are other possibilities.
+1. Spring MVC flow (what design patterns do it use).
+1. Given a requirement where in we have a html file and textbox:
+      -> user can enter number( find sum of digits)
+      -> user can enter string (print the string)
+      -> user can enter JSON object (print the attributes)
+      -> user can enter function name: add(2,3)  (invoke the respective function.)
+            Based on user input perform the indicated task in parenthesis.
+1. Given table Employee and Department write a sql statement to find count of employees department
+1. Design patterns used in Javascript.
+1. 2 way data binding in angular.
+1. We are using a string object from string constant pool, how does it behave during concurrent programming.
+1. Difference between classnotfound and noclassdeffound
+1. What do we mean by weak reference
+1. Difference bw hashset and linkedhashset
+1. Difference bw delete and truncate
+1. oauth1.0 vs oauth 2.0
+1. java Implementation Rules :  https://rules.sonarsource.com/java/RSPEC-2066
 
 
 # Java Programs
