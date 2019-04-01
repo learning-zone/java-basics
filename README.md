@@ -511,11 +511,11 @@
 1. Difference between arrayList and linkedList 
 1. How do you configure Hibernate with Spring for a webapp?
 1. What are jsp implicit objects?
-1. Difference between <sendRedirect> and <forward>
+1. Difference between sendRedirect and forward
 1. Use of UML diagram (sequence,activity,usecase) and what are the tools used to draw the same.
 1. Tell me what happens when a servlet is invoked, when is init invoked and when is sevice invoked.
 1. servlet, ejb, jsp lifecycle
-1. What are the major additions for jdk from 1.4 to 1.5, from 1.5 to 1.6 and so on.
+1. What are the major additions for jdk from 1.7 to 1.8 and so on.
 1. Show how serialization in java works
 1. Better way to manage transactions.
 1. say we have metadata information for a table, that is common to so many pages in jsp then tell me the better way to implement the same.
@@ -541,8 +541,8 @@
 1. if you have hbm.xml for an entity and also you have annotated the entity then which will be overridden.
 1. Difference between entryset and keyset.
 1. Is SessionFactory thread safe.
-1. A java prog in windows , how will u run it on linux machine 
-1. What is checked , unchecked exception and errors.
+1. A java prog in windows, how will u run it on linux machine 
+1. What is checked, unchecked exception and errors.
 1. What are the different ways to load the Spring container.
 1. How to insert in a Map key as value and value as key
 1. Write a program to read the data from stack and pass the same to the queue
@@ -556,10 +556,9 @@
 1. How to integrate SMS with JMS
 1. How spring spring interceptors work
 1. Difference between @Service and @Component tags
-1. Connecting oracle , mysql, and nosql db like mongo db together
+1. Connecting oracle, mysql, and nosql db like mongo db together
 1. Implement your own String class
 1. Jdk1.8 features like lamda expressions
-1. Difference between jdk1.4 and 1.5, 1.5 and 1.6
 1. Implement your own HashMap, like LinkedHashMap 
 1. How does xquery work implement the same
 1. There are 2 threads one thread reads a file and other writes the same to a file how to implement the same
