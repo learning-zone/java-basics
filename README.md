@@ -492,6 +492,168 @@
 1. How do you check if two given String are anagrams?
 
 
+# Miscellaneous
+
+1. What is rt.jar
+1. How bootstrap class loader works 
+1. Why string is immutable in java 
+1. Explain string pool
+1. Explain how Garbage collector algorithm works
+1. Explain JoinPoint and Pointcut in spring
+1. Interceptors in spring
+1. Why do we need to Wrapper classes.
+1. How does hibernate loads values from Table to Entity.
+1. How Website caching works
+1. What are the various ways you will secure a website.
+1. How to create marker interface 
+1. Explain how hashMap works 
+1. Write a code to implement hashMap, arrayList 
+1. Difference between arrayList and linkedList 
+1. How do you configure Hibernate with Spring for a webapp?
+1. What are jsp implicit objects?
+1. Difference between sendRedirect and forward
+1. Use of UML diagram (sequence,activity,usecase) and what are the tools used to draw the same.
+1. Tell me what happens when a servlet is invoked, when is init invoked and when is sevice invoked.
+1. servlet, ejb, jsp lifecycle
+1. What are the major additions for jdk from 1.7 to 1.8 and so on.
+1. Show how serialization in java works
+1. Better way to manage transactions.
+1. say we have metadata information for a table, that is common to so many pages in jsp then tell me the better way to implement the same.
+1. What are the various ways to load a class.
+1. private keys and public keys + sha1 and similar algorithm implementation.
+1. How to do authentication with LDAP server.
+1. Implement link list
+1. design patterns related question(Singleton, Adaptor, Factory, Strategy) 
+1. Implement bucketing using map. There is one interface named customer and other class implement this interface. Now in a map the objects of similar class should go in one bucket.
+1. Spring bean scope.
+1. What is AOP. what does spring AOP provide.what is point cut, join point.
+1. What is servlet context. parameter, argument.
+1. equals() and hashcode() contract between them.
+1. How set implement unique values.
+1. comparable and comparator difference.
+1. About spring transaction.
+1. DAO factory pattern.
+1. How to stop thread.
+1. insert a uppercase value into map without using toUpperCase()  of string class.
+1. How do you implement immutable to a class.
+1. While overriding a method can you throw another exception or broader exception.
+1. How binding of Database table happens with the POJO in Hibernate.
+1. if you have hbm.xml for an entity and also you have annotated the entity then which will be overridden.
+1. Difference between entryset and keyset.
+1. Is SessionFactory thread safe.
+1. A java prog in windows, how will u run it on linux machine 
+1. What is checked, unchecked exception and errors.
+1. What are the different ways to load the Spring container.
+1. How to insert in a Map key as value and value as key
+1. Write a program to read the data from stack and pass the same to the queue
+1. What are the measures that should be taken to scale the application
+1. What is the use of noSql db
+1. How to implement custom annotation which does logging in spring
+1. How to integrate MQ with ESB like camel
+1. How to implement transaction management in spring
+1. How to implement multiple datasources with spring data jpa
+1. How to implement webservices with spring using custom annotation
+1. How to integrate SMS with JMS
+1. How spring spring interceptors work
+1. Difference between @Service and @Component tags
+1. Connecting oracle, mysql, and nosql db like mongo db together
+1. Implement your own String class
+1. Jdk1.8 features like lamda expressions
+1. Implement your own HashMap, like LinkedHashMap 
+1. How does xquery work implement the same
+1. There are 2 threads one thread reads a file and other writes the same to a file how to implement the same
+1. How do you identify deadlock has happened in prod environment
+1. How is grid computing implemented in oracle
+1. How do you find third highest salary
+1. difference between procedures and triggers
+1. How to call the same from hibernate
+1. Advantage of spring cloud eureka
+1. Why is string class immutable?
+1. Array and arrayList what is the difference in datastructure
+1. Different ways to create singleton in spite of cloning or serialization
+1. bootstrap, class.forname, permgen what way are these done
+1. How microservices communicate with each other
+1. How does class loader work
+1. Array or ArrayList which one is faster?
+1. Provide design principle and design for User login.
+1. How to prevent from database attacks
+1. What are the idp server that you use for SSO implementation.
+1. Various ways that you implement JAAS.
+1. Various ways that you secure your website.
+1. Assume you have a singly linked list, now you need to find reverse of it without using new operator.
+1. Name design patterns used in collection framework.
+1. Object oriented feature like: Association, Composition, Aggregation
+1. Difference between DI and IOC in spring.
+1. Optimistic vs pessimistic locking in table level and row level.
+1. Main advantage of restful implementation over SOAP
+1. How do you provide security features in REST and SOAP requests?
+1. How do you implement secondary level cache? Clustering?
+1. What is SQL injection attack?
+1. Difference between symmetric , public and private keys, plz tell the procedure to implement the same using spring security.
+1. What code coverage tools are you using for your project? (we use cobetura, you can use it with ant , maven, gradle)
+1. Implement thread-safe code without using the `synchronized` keyword?
+1. Design parking lot with 100 parking space.
+1. Use of Drools
+1. Scenario of browser’s browsing history, where you need to store the browsing history, what data structure will you use.? 
+1. Scenario where in we have to download a big file by clicking on a link, how will you make sure that connections is reliable throughout. 
+1. If you store Employee object as key say: Employee emp = new Employee(“name1”,20); store it in a HashMap as key, now if we add a new parameter emp.setMarriedStatus(true) and try to override it what will happen? 
+1. JDK 1.8 features.
+1. Given a string "abc" or any other string print all possible combinations of it.
+1. When is string pool garbage collected.
+1. What is the complexity of qadtree algorithm
+1. When is string stored in string pool and what are other possibilities.
+1. Spring MVC flow (what design patterns do it use).
+1. Given a requirement where in we have a html file and textbox:
+      -> user can enter number( find sum of digits)
+      -> user can enter string (print the string)
+      -> user can enter JSON object (print the attributes)
+      -> user can enter function name: add(2,3)  (invoke the respective function.)
+            Based on user input perform the indicated task in parenthesis.
+1. Given table Employee and Department write a sql statement to find count of employees department
+1. Design patterns used in Javascript.
+1. 2 way data binding in angular.
+1. We are using a string object from string constant pool, how does it behave during concurrent programming.
+1. Difference between classnotfound and noclassdeffound
+1. What do we mean by weak reference
+1. Difference bw hashset and linkedhashset
+1. Difference bw delete and truncate
+1. oauth1.0 vs oauth 2.0
+1. java Implementation Rules :  https://rules.sonarsource.com/java/RSPEC-2066
+1. What do you mean Run time Polymorphism?
+1. How will you create thread?
+1. Why implementing Runnable is better than extending thread?
+1. Please list out the features of OOPS?
+1. What is the Use of Synchronized?
+1. What is the difference between HashTable and HashMap?
+1. What will happen if I insert duplicate key-pair value inserted in to HashTable?
+1. Differentiate ArrayList from Vector?
+1. How do you sort out items in ArrayList in forward and reverse directions?
+1. What is Thread ? Why we go for multi-threading?
+1. Tell me about join() and wait() methods?
+1. Could you tell in what scenario you go for Abstract Class & Interface?
+1. If Parent Class have a method add() throws XXXException, and child class overrides same method without Exception, will that compile and run? Is it overridden or overloaded?
+1. Is substring() method creates new object in String pool?
+1. What are two uses of the equals() method?  
+1. If I don't have Explicit constructor in parent class and having in child class, while calling the child's constructor jvm automatically calls Implicit Constructor of parent class? Yes OR No ?
+1. What are the different types of JDBC Driver?
+1. What is abstraction in JAVA?
+1. What is inheritance in JAVA?
+1. How Encapsulation concept implemented in JAVA?
+1. What do you mean checked and unchecked Exceptions? List some example for both?
+1. Why we go for Collections Framework?
+1. I want to have ordered collection, which allows duplicates? Which collection is used for this?
+1. I want to have class, which have the behavior of Hash-map? How this can be done?
+1. What hashCode() and equals() does in HashMap?
+1. Do you know Generics? What is it? Why we need that? How did you used in your coding?
+1. Why we prefer implements Runnable to create THREAD?
+1. Difference between String and StringBuilder and StringBuffer ?
+1. What is the use of default Constructor?
+1. What is the use of static block?
+1. How can we create a object of a class without using new operator
+1. what are the purposes of native, transiant key words?
+1. what are upcasting and downcasting?
+
+
 # Java Programs
 
 1. A maximal subarray 
