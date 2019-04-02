@@ -11,6 +11,7 @@ import java.util.List;
 public class CollectionSort {
 
 	public static void main(String[] args) {
+		
 		List<String> list = new ArrayList<>();
 		list.add("India");
 		list.add("India");
