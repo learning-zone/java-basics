@@ -1,5 +1,9 @@
 package misc;
-
+/**
+ * Steps:- 
+ * Bubble Sort algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+ * 
+ */
 public class BubbleSort {
 
 	public void bubbleSort(int[] arr) {
