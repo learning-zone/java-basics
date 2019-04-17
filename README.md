@@ -661,35 +661,42 @@
 1. Iterative Quick sort 
 1. Bucket sort 
 1. Counting sort 
-1. LRU cache in Java 
 1. Find missing number in an array 
 1. Generate random numbers 
-1. Convert a linked list to a binary tree 
 1. How to reverse Singly Linked List? 
+1. Create a Java program to find middle node of linked list in Java in one pass? 
+1. How to find if a linked list contains cycle or not in Java? 
+1. How to find nth element from end of linked list 
+1. How to check if linked list is palindrome in java 
+1. Add two numbers represented by linked list in java 
 1. How to print all permutation of a String in Java? 
-1. Write a program to create deadlock between two threads. 
 1. How to find duplicate characters in a string in java? 
-1. How do you print duplicate elements from an array in Java? 
-1. How to find the word with the highest frequency from a file in Java? 
-1. Write a syntax to convert a given Collection to Synchronized Collection? 
-1. Write a code to sort a list of strings using Java 8 lambda expression? 
-1. How to count occurrences of each character in a string in java? 
-1. Write code to avoid deadlock in Java where N threads are accessing N shared resources? 
-1. How to separate zeros from non-zeros in an array? 
 1. Reverse the string with preserving the position of spaces 
-1. How to sort a text file in java? 
-1. Array to ArrayList and ArrayList To Array Conversion program. 
 1. How do you find longest substring without repeating characters in a string? 
-1. Finding the most repeated word in a text file.
-1. How do you synchronize ArrayList, HashSet and HashMap in java? 
+1. Find all substrings of String in java 
+1. Check if two string rotation of each other 
+1. Write a java program to swap two string variables without using third or temp variable?
+1. Can you write a regular expression to check if String is a number? 
+1. Write a method that will remove given character from the String? 
+1. Write a function to find out longest palindrome in a given string? 
+1. How to reverse each word of a string in java? 
+1. Write a program to find top two maximum numbers in a array. 
+1. Array to ArrayList and ArrayList To Array Conversion program. 
+1. How to separate zeros from non-zeros in an array? 
+1. Find pair whose sum is closest to zero in array in java 
+1. How to find all the leaders in an integer array in java? 
+1. Java Program to find gcd and lcm of two numbers 
+1. Write a program to find the sum of the first 1000 prime numbers. 
+1. Write a multi-threading program, print odd number using one thread and even number using other. 
 1. Write a java program to find number of characters, number of words and number of lines in a text file? 
-1. How do you convert HashMap to ArrayList in java? 
-1. Write a java program to sort an ArrayList? 
-1. Finding The First Repeated And Non-Repeated Character In A String. 
-1. String to Integer and Integer to String Conversion program. 
-1. Find out duplicate number between 1 to N numbers. 
-1. Find out middle index where sum of both ends are equal. 
-1. Write a program to remove duplicates from sorted array. 
+1. Find all pairs of elements whose sum is equal to given number 
+1. Square root of number 
+1. Program to convert lower to upper case without using toUppercase() 
+1. Write a program to create deadlock between two threads. 
+1. How to find the word with the highest frequency from a file in Java? 
+1. Write a program to convert a given Collection to Synchronized Collection ? 
+1. How to sort a text file in java? 
+1. Find out middle index where sum of both ends are equal.
 1. How to sort a Stack using a temporary Stack? 
 1. Implement Binary Search Tree (BST) 
 1. Find min and max value from Binary Search Tree (BST) 
@@ -700,130 +707,69 @@
 1. Implement Binary Search Tree (BST) post-order traversal (depth first). 
 1. How to check the given Binary Tree is Binary Search Tree (BST) or not? 
 1. How to delete a node from Binary Search Tree (BST)? 
-1. Create a Java program to find middle node of linked list in Java in one pass? 
-1. How to find if a linked list contains cycle or not in Java? 
-1. Implement Producer Consumer design Pattern in Java using wait, notify and notifyAll method in Java? 
-1. How to find middle element of linked list in java 
-1. Find start node of loop in linked list 
-1. How to find nth element from end of linked list 
-1. Add two numbers represented by linked list in java 
-1. Binary tree in java 
-1. Binary tree preorder traversal 
-1. Binary tree postorder traversal 
-1. Binary tree in-order traversal 
 1. Binary tree level order traversal 
 1. Binary tree spiral order traversal 
 1. Binary tree reverse level order traversal 
 1. Binary tree boundary traversal 
 1. Print leaf nodes of binary tree 
 1. Count leaf nodes in binary tree 
-1. get maximum element in binary tree 
+1. Get maximum element in binary tree 
 1. Print all paths from root to leaf in binary tree 
 1. Print vertical sum of binary tree in java 
 1. Get level of node in binary tree in java 
 1. Lowest common ancestor(LCA) in binary tree in java 
-1. search an element in a sorted and rotated array in java
-1. Find number occurring odd number of times in array 
-1. Find pair whose sum is closest to zero in array in java 
-1. Find pair whose sum is closest to X in array in java 
-1. Find all pairs of elements whose sum is equal to given number 
-1. Search element in row wise and column wise sorted matrix  
+1. Search element in row wise and column wise sorted matrix 
+1. Stock buy and sell to maximize profit. 
 1. How to implement merge sort in java 
 1. How to implement bubble sort in java 
 1. How to implement insertion sort in java 
-1. Find all substrings of String in java 
-1. Finding Middle element of linked list in one pass 
 1. Write a program to implement hashcode and equals. 
 1. Write wait-notify code for producer-consumer problem? 
 1. Write a program to implement ArrayList. 
-1. Square root of number 
+1. Printing patterns 
 1. Leap year 
 1. Design a Vending Machine 
 1. Transpose a matrix 
-1. Adding two matrices in Java  
-1. Removal all white space from String 
-1. Find the length of linked list 
-1. Find the start of loop in linked list 
-1. Find the 3rd element from the tail linked list 
-1. Check if two string rotation of each other
+1. Adding two matrices in Java 
+1. Matrix multiplication 
 1. Write a java program to print Floyd’s Triangle?
 1. Spiral Matrix Program.
-1. Write a java program to swap two string variables without using third or temp variable?
-1. How to reverse a String in Java without using StringBuffer? 
-1. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error?
-1. Write code to remove elements from ArrayList while iterating? 
-1. Can you write a regular expression to check if String is a number? 
-1. Write a method to check if input String is Palindrome?
-1. Write a method that will remove given character from the String?
-1. Write a function to find out longest palindrome in a given string?
-1. How to create a pyramid of numbers in java?
-1. How do you remove all white spaces from a string in java?
-1. How do you check the equality of two arrays in java?
+1. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? [ Output: Infinity, No Exception ] 
+1. How do you check the equality of two arrays in java? [ Arrays.equals() ]
 1. Anagram program in java
-1. Armstrong number program in java
-1. How to find sum of all digits of a number in java?
-1. How to find second largest number in an integer array?
 1. How to perform matrix operations in java?
-1. How to find largest number less than a given number and without a given digit?
-1. How to find all pairs of elements in an array whose sum is equal to given number?
-1. How to find continuous sub array whose sum is equal to given number?
-1. How to remove duplicate elements from ArrayList in java?
-1. How to check whether given number is binary or not?
-1. How to check whether one string is a rotation of another in java?
+1. How to remove duplicate elements from ArrayList in java? 
 1. How to find intersection of two arrays in java?
-1. How to check whether user input is number or not in java?
 1. How to find trigonometric values of an angle in java?
-1. How to reverse each word of a string in java?
 1. Decimal To Binary, Decimal To Octal And Decimal To HexaDecimal In Java
-1. How to find all the leaders in an integer array in java?
 1. Reverse and add until you get a palindrome
-1. Selection sort in java
-1. Roman equivalent of a decimal number
-1. percentage of uppercase, lowercase, digits and special characters in a string
-1. Launch external applications through java code
-1. String immutable program
-1. Arrays.deepToString() method example.
+1. Selection sort in java 
+1. Launch external applications using java 
 1. Write a java program to append text to a file?
 1. Write a singleton class.
-1. Write a program to reverse a string using recursive algorithm.
+1. Write a program to sort a map by value.
+1. Write a program to print fibonacci series.
+1. Write a program to get a line with max word count from the given file.
+1. Write a program to find two lines with max characters in descending order.
+1. FizzBuzz problem 
+1. Write a Comparator in Java to compare two employees based upon there name, departments and age? 
+1. How to calculate complexity of algorithm
+1. How to you calculate the difference between two dates in Java? (program)
+1. Implement Producer Consumer design Pattern in Java using wait, notify and notifyAll method in Java? 
+1. Find Minimum numbers of platforms required for railway station in java 
+1. How to check whether given number is binary or not?
+1. Armstrong number program in java
+1. How to find sum of all digits of a number in java?
+1. How to find largest number less than a given number and without a given digit?
+1. Roman equivalent of a decimal number
+1. How to check whether user input is number or not in java?
 1. Write a program to reverse a number.
 1. Write a program to convert decimal number to binary format.
 1. Write a program to find perfect number or not.
-1. Write a program to find top two maximum numbers in a array.
-1. Write a program to sort a map by value.
-1. Write a program to find common elements between two arrays.
-1. How to swap two numbers without using temporary variable?
-1. Write a program to print fibonacci series.
 1. Write a program to find sum of each digit in the given number using recursion.
 1. Write a program to check the given number is a prime number or not?
 1. Write a program to convert binary to decimal number.
 1. Write a program to check the given number is binary number or not?
-1. Write a program to get distinct word list from the given file.
-1. Write a program to get a line with max word count from the given file.
-1. Write a program to convert string to number without using Integer.parseInt() method.
-1. Write a program to find two lines with max characters in descending order.
-1. Write a program to find the sum of the first 1000 prime numbers.
-1. Find longest substring without repeating characters.
-1. FizzBuzz problem 
-1. Write a Comparator in Java to compare two employees based upon there name, departments and age?
-1. How to reverse String in java
-1. How to check if two Strings are anagrams
-1. Find length of String without using java inbuilt length method
-1. Why String is immutable in java
-1. How to swap two numbers without using temporary variables
 1. Find prime factors of number in java
-1. Java Program to to find gcd and lcm of two numbers
-1. How to calculate complexity of algorithm
-1. Java Program to check whether two Strings are anagram or not
-1. Java program to find the percentage of uppercase, lowercase, digits and special characters in a String
-1. How to convert String to Integer and Integer to String in Java
-1. Java Program to prove that strings are immutable in java
-1. Java Program to remove all white spaces from a String
-1. Java Program to check whether one String is a rotation of another
-1. Java Program to count the number of words in a String
-1. How to swap two String variables without third variable
-1. How to remove a particular character from a String
-1. Write a method that will remove given character from the String?
-1. How to you calculate the difference between two dates in Java? 
-1. Write a multi-threading program, print odd number using one thread and even number using other.
+1. Write code to avoid deadlock in Java where N threads are accessing N shared resources?
 
