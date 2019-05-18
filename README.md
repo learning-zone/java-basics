@@ -828,21 +828,21 @@ This problem is exactly same as previous question with only difference being fin
 Now we are coming on territory of tough array questions. Given three arrays sorted in non-decreasing order, print all common elements in these arrays.
 
 Examples:
-
+```
 input1 = {1, 5, 10, 20, 40, 80}
 input2 = {6, 7, 20, 80, 100}
 input3 = {3, 4, 15, 20, 30, 70, 80, 120}
 Output: 20, 80
-
+```
 
 1. How find the first repeating element in an array of integers?   
 Given an array of integers, find the first repeating element in it. We need to find the element that occurs more than once and whose index of the first occurrence is smallest.
 
 Examples:
-
+```
 Input:  input [] = {10, 5, 3, 4, 3, 5, 6}
 Output: 5 [5 is the first element that repeats]
-
+```
 
 1. How to find first non-repeating element in array of integers?   
 This array interview question is exactly opposite of previous problem, In that you need to find first repeating element while in this you need to find first non-repeating element. I am sure you can use similar approach to solve this problem, just need to consider non repeating element though.
@@ -856,44 +856,45 @@ This is another one of the easy array questions you will find on telephonic roun
 This is another tough array question you will see on Amazon, Microsoft or Google. You have given a sorted array (sorted in non-decreasing order) of positive numbers, find the smallest positive integer value that cannot be represented as sum of elements of any subset of given set. What makes it more challenging is expected time complexity of O(n).
 
 Examples:
-
+```
 Input: {1, 3, 6, 10, 11, 15};
 Output: 2
-
+```
 
 1. How to rearrange array in alternating positive and negative number?   
 Given an array of positive and negative numbers, arrange them in an alternate fashion such that every positive number is followed by negative and vice-versa maintaining the order of appearance.
 Number of positive and negative numbers need not be equal. If there are more positive numbers they appear at the end of the array. If there are more negative numbers, they too appear in the end of the array. This is also a difficult array problem to solve and you need lot of practice to solve this kind of problems in real interviews, especially when you see it first time. If you have time constraint then always attempt these kind of questions once you are done with easier ones. 
 
 Example:
-
+```
 Input: {1, 2, 3, -4, -1, 4}
 Output: {-4, 1, -1, 2, 3, 4}
 
 Input: {-5, -2, 5, 2, 4, 7, 1, 8, 0, -8}
 output: {-5, 5, -2, 2, -8, 4, 7, 1, 8, 0} 
-
+```
 
 
 1. How to find if there is a sub array with sum equal to zero?   
 There is whole set of array related questions which are based upon sub-array or only selective elements of array e.g. from some range, this is one of such problem. Here you are given an array of positive and negative numbers, find if there is a sub-array with 0 sum.
 
 Examples:
-
+```
 Input: {4, 2, -3, 1, 6}
 Output: true 
 There is a sub-array with zero sum from index 1 to 3.
-
+```
 1. How to remove duplicates from array in place?   
 Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
 
 Do not allocate extra space for another array, you must do this in place with constant memory.
 
 For example,
+```
 Given input array A = [1,1,2],
 
 Your function should return length = 2, and A is now [1,2]. 
-
+```
 1. How to remove a given element from array in Java?   
 This is another array coding questions similar to previous one. Here you don't have to find and remove duplicates but a given number. In this problem you are given an array and a value, remove all instances of that value in place and return the new length. The order of elements can be changed. It doesn't matter what you leave beyond the new length. 
 
@@ -905,29 +906,35 @@ Given two sorted integer arrays A and B, merge B into A as one sorted array. You
 1. How to find sub array with maximum sum in an array of positive and negative number?   
 Another array coding question based upon sub-array. Here you have to find the contiguous sub-array within an array (containing at least one number) which has the largest sum.
 
-For example, given the array [−2,1,−3,4,−1,2,1,−5,4],
+For example: 
+```
+given the array [−2,1,−3,4,−1,2,1,−5,4],
 the contiguous subarray [4,−1,2,1] has the largest sum = 6. 
-
+```
 
 1. How to find sub array with largest product in array of both positive and negative number?    
 In this problem, your task is to write a program in Java or C++ to find the contiguous sub-array within an array (containing at least one number) which has the largest product.
 
-For example, given the array [2,3,-2,4],
+For example: 
+```
+given the array [2,3,-2,4],
 the contiguous subarray [2,3] has the largest product = 6. 
-
+```
 
 1. Write a program to find length of longest consecutive sequence in array of integers?   
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 
-For example,
+For example:
+```
 Given [100, 4, 200, 1, 3, 2],
 The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
-
+```
 
 1. How to find minimum value in a rotated sorted array?   
 This is another advanced level array coding question and you should only attempt this one, once you have solved the easier ones. Suppose a sorted array is rotated at some pivot unknown to you beforehand.
-
+```
 (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
+```
 
 Find the minimum element.
 
@@ -964,12 +971,13 @@ No, you cannot change the size of array once created. If you need dynamic array,
 
 1. Can you store String in an array of Integer in Java? compile time error or runtime exception?   
 This is a tricky question. Answer is both yes and no. You cannot store an String in an array of primitive int, it will result in compile time error as shown below, but if you create an array of Object and assign String[] to it and then try to store Integer object on it. Compiler won't be able to detect that and it will throw ArrayStoreExcpetion at runtime.
+```
 int[] primes = new int[10];
 primes[0] = "a";  //compile time error
         
 Object[] names = new String[3];
 names[0] = new Integer(0); // ArrayStoreException at runtime
-
+```
 
 1. What is difference between ArrayIndexOutfOBounds and ArrayStoreException?   
 ArrayIndexOutOfBoundsException comes when your code tries to access an invalid index for a given array e.g. negative index or higher index than length - 1. While, ArrayStoreException comes when you have stored an element of type other than type of array, as shown in above example.
@@ -985,9 +993,10 @@ Yes, its perfectly legal. You can create and initialize array in same line in Ja
 
 1. Difference between a[] and []a in Java?   
 You can declare an array in Java by either prefixing or suffixing[] with variable. There is not much difference between them if you are not creating more than one variable in one line, but if you do then it creates different types of variables, as shown in following example :
+```
 int a[], b; // first is int array, second is just int variable
 int[] c, d; // both c and d are integer array
-
+```
 
 1. How to search an array to check if an element exists there? 
 You can search an element inside array by using either linear search or binary search. Later is faster but you need to sort the array before performing binary search on it. Arrays class from java.util package provides binarySearch() method to search an element in array. Alternatively, you can also convert array to ArrayList and use its contains() method to find out if an element exists or not.
@@ -1038,7 +1047,7 @@ You have given an array {1, 1, 2, 3, 3, 4}, write a program to return duplicate 
 
 1. What is ArrayStoreException in java? When you will get this exception?  
 ArrayStoreException is a run time exception which occurs when you try to store non-compatible element in an array object. The type of the elements must be compatible with the type of array object. For example, you can store only string elements in an array of strings. if you try to insert integer element in an array of strings, you will get ArrayStoreException at run time.
-
+```
 public class MainClass
 {
     public static void main(String[] args) 
@@ -1052,10 +1061,11 @@ public class MainClass
         //because we are inserting integer element into an array of strings
     }
 }
+```
 1. Can you pass the negative number as an array size?
 
 No. You can’t pass the negative integer as an array size. If you pass, there will be no compile time error but you will get NegativeArraySizeException at run time.
-
+```
 public class MainClass
 {
     public static void main(String[] args) 
@@ -1065,6 +1075,7 @@ public class MainClass
         //but you will get java.lang.NegativeArraySizeException at run time
     }
 }
+```
 1. Can you change the size of the array once you define it? OR Can you insert or delete the elements after creating an array?  
 
 No. You can’t change the size of the array once you define it. You can not insert or delete the elements after creating an array. Only you can do is change the value of the elements.
@@ -1072,7 +1083,7 @@ No. You can’t change the size of the array once you define it. You can not ins
 1. What is an anonymous array? Give example?  
 
 Anonymous array is an array without reference. For example,
-
+```
 public class MainClass
 {
     public static void main(String[] args)
@@ -1084,14 +1095,14 @@ public class MainClass
         System.out.println(new int[]{21, 14, 65, 24, 21}[1]);   //Output : 14
     }
 }
-
+```
 1. What is the difference between int[] a and int a[] ?  
 
 
 1. There are two array objects of int type. one is containing 100 elements and another one is containing 10 elements. Can you assign array of 100 elements to an array of 10 elements?
 
 Yes, you can assign array of 100 elements to an array of 10 elements provided they should be of same type. While assigning, compiler checks only type of the array not the size.
-
+```
 public class MainClass
 {
     public static void main(String[] args)
@@ -1103,7 +1114,7 @@ public class MainClass
         a = b;      //Compiler checks only type, not the size
     }
 }
-
+```
 1. “int a[] = new int[3]{1, 2, 3}” – is it a legal way of defining the arrays in java?
 
 No. You should not mention the size of the array when you are providing the array contents.
@@ -1145,7 +1156,7 @@ ArrayIndexOutOfBoundsException is a run time exception which occurs when your pr
 1. How do you sort the array elements?
 
 You can sort the array elements using Arrays.sort() method. This method internally uses quick sort algorithm to sort the array elements.
-
+```
 import java.util.Arrays;
 public class MainClass
 {
@@ -1160,16 +1171,18 @@ public class MainClass
         //Output : [12, 21, 34, 45, 78, 89]
     }
 }
+```
 1. How do you find the intersection of two arrays in java?
 
 
 1. While creating the multidimensional arrays, can you specify an array dimension after an empty dimension?
 
 No. You can not specify an array dimension after an empty dimension while creating multidimensional arrays. It gives compile time error.
-
+```
 int[][][] a = new int[][5][];    //Compile time error
         
 int[][][] b = new int[5][][5];   //Compile time error
         
 int[][][] c = new int[][5][5];   //Compile time error
+```
 
