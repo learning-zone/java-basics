@@ -775,3 +775,6 @@
 
 # Java Programs [ Arrays ]
 
+1. How to find the missing number in integer array of 1 to 100? 
+
+One trick to solve this problem is to calculate sum of all numbers in the array and compare with expected sum, the difference would be the missing number.
