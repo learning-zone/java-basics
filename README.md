@@ -790,19 +790,23 @@
 1. How to find common elements in three sorted array?   
 
 Examples:
+
 ```
 input1 = {1, 5, 10, 20, 40, 80}
 input2 = {6, 7, 20, 80, 100}
 input3 = {3, 4, 15, 20, 30, 70, 80, 120}
 Output: 20, 80
+
 ```
 
 1. How find the first repeating element in an array of integers?   
 Examples:
+
 ```
 Input:  input [] = {10, 5, 3, 4, 3, 5, 6}
 Output: 5 [5 is the first element that repeats]
 ```
+
 1. How to find first non-repeating element in array of integers?   
 1. How to find top two numbers from an integer array?   
 1. How to find the smallest positive integer value that cannot be represented as sum of any subset of a given array?   
