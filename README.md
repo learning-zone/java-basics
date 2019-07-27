@@ -739,7 +739,6 @@
 1. Anagram program in java
 1. How to perform matrix operations in java?
 1. How to remove duplicate elements from ArrayList in java? 
-1. How to find intersection of two arrays in java?
 1. How to find trigonometric values of an angle in java?
 1. Decimal To Binary, Decimal To Octal And Decimal To HexaDecimal In Java
 1. Reverse and add until you get a palindrome
@@ -780,133 +779,39 @@
 1. How to check if array contains a number in Java?   
 1. How to find largest and smallest number in unsorted array?   
 1. How to find all pairs on integer array whose sum is equal to given number?   
-1. How to find repeated numbers in an array if it contains multiple duplicates?   
-1. Write a program to remove duplicates from array in Java?     
+1. How to find repeated numbers in an array if it contains multiple duplicates?       
 1. How to sort an array in place using QuickSort algorithm?   
 1. Write a program to find intersection of two sorted arrays in Java?   
-1. There is an array with every element repeated twice except one. Find that element?   
-1. How to find kth smallest element in unsorted array?   
-1. How to find kth largest element in unsorted array?   
-1. How to find common elements in three sorted array?   
-
-Examples:
-
-```
-input1 = {1, 5, 10, 20, 40, 80}
-input2 = {6, 7, 20, 80, 100}
-input3 = {3, 4, 15, 20, 30, 70, 80, 120}
-Output: 20, 80
-
-```
-
+1. There is an array with every element repeated twice except one. Find that element?     
 1. How find the first repeating element in an array of integers?   
-Examples:
-
-```
-Input:  input [] = {10, 5, 3, 4, 3, 5, 6}
-Output: 5 [5 is the first element that repeats]
-```
-
 1. How to find first non-repeating element in array of integers?   
 1. How to find top two numbers from an integer array?   
 1. How to find the smallest positive integer value that cannot be represented as sum of any subset of a given array?   
-Examples:
-```
-Input: {1, 3, 6, 10, 11, 15};
-Output: 2
-```
 1. How to rearrange array in alternating positive and negative number?   
-Example:
-```
-Input: {1, 2, 3, -4, -1, 4}
-Output: {-4, 1, -1, 2, 3, 4}
-
-Input: {-5, -2, 5, 2, 4, 7, 1, 8, 0, -8}
-output: {-5, 5, -2, 2, -8, 4, 7, 1, 8, 0} 
-```
 1. How to find if there is a sub array with sum equal to zero?   
-Examples:
-```
-Input: {4, 2, -3, 1, 6}
-Output: true 
-There is a sub-array with zero sum from index 1 to 3.
-```
 1. How to remove duplicates from array in place?   
-Example,
-```
-Given input array A = [1,1,2],
-
-Your function should return length = 2, and A is now [1,2]. 
-```
 1. How to remove a given element from array in Java?   
 1. How to merge sorted array?   
 1. How to find sub array with maximum sum in an array of positive and negative number?   
-Example: 
-```
-given the array [−2,1,−3,4,−1,2,1,−5,4],
-the contiguous subarray [4,−1,2,1] has the largest sum = 6. 
-```
 1. How to find sub array with largest product in array of both positive and negative number?    
-Example: 
-```
-given the array [2,3,-2,4],
-the contiguous subarray [2,3] has the largest product = 6. 
-```
 1. Write a program to find length of longest consecutive sequence in array of integers?   
-Example:
-```
-Given [100, 4, 200, 1, 3, 2],
-The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
-```
 1. How to find minimum value in a rotated sorted array?   
-```
-(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
-```
 1. Given an array of of size n and a number k, find all elements that appear more than n/k times?   
 1. Returns the largest sum of contiguous integers in the array  
-Example: if the input is (-10, 2, 3, -2, 0, 5, -15), the largest sum is 8
 1. Return the sum two largest integers in an array  
-1. Given an array of integers write a program that will determine if any two numbers add up to a specified number N. Do this without using hash tables
-1. How to reverse array in place in Java?   
-1. Difference between array and linked list data structure?   
-1. How to check if array contains a duplicate number?  
-1. Can you change size of array once created?   
+1. How to reverse array in place in Java?      
 1. Can you store String in an array of Integer in Java? compile time error or runtime exception?   
-```
-int[] primes = new int[10];
-primes[0] = "a";  //compile time error
-        
-Object[] names = new String[3];
-names[0] = new Integer(0); // ArrayStoreException at runtime
-```
 1. What is difference between ArrayIndexOutfOBounds and ArrayStoreException?   
-1. Can you use Generics with array?   
-1. Is it legal to initialize an array int i[] = {1, 2, 3, 4, 5};   
-1. Difference between a[] and []a in Java?   
-1. How to search an array to check if an element exists there? 
-1. How to sort an array in Java?   
+1. Can you use Generics with array?    
+1. How to search an array to check if an element exists there?   
 1. How to copy array in Java?   
 1. What is difference between an array and a linked list?   
 1. Can you make array volatile in Java?  
-1. Where does array stored in memory?   
-1. How to find missing number in array of 1 to 100 in Java?     
-1. How do you find all pair whose sum is equal to given number from integer array in Java?   
-1. How do you remove duplicates from array in Java?   
-1. How do you reverse an array in Java?   
-1. How to find duplicates numbers in array of integers in Java?    
-1. How to find top two numbers from an integer array in Java?   
-1. What is ArrayStoreException in java? When you will get this exception?  
-1. Can you pass the negative number as an array size?
-1. Can you change the size of the array once you define it? OR Can you insert or delete the elements after creating an array? 
+1. Where does array stored in memory?       
+1. How do you find all pair whose sum is equal to given number from integer array in Java?         
+1. How to find top two numbers from an integer array in Java?     
+1. Can you pass the negative number as an array size? 
 1. What is an anonymous array? Give example?  
 1. What is the difference between int[] a and int a[] ?  
-1. There are two array objects of int type. one is containing 100 elements and another one is containing 10 elements. Can yo
-1. “int a[] = new int[3]{1, 2, 3}” – is it a legal way of defining the arrays in java?
-1. What are the differences between Array and ArrayList in java?
-1. What are the different ways of copying an array into another array?
 1. What are jagged arrays in java? Give example?
-1. How do you check the equality of two arrays in java? OR How do you compare the two arrays in java?
-1. What is ArrayIndexOutOfBoundsException in java? When it occurs?
-1. How do you sort the array elements?
-1. How do you find the intersection of two arrays in java?
 1. While creating the multidimensional arrays, can you specify an array dimension after an empty dimension?
