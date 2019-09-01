@@ -1,4 +1,4 @@
-## JavaServer Pages(JSP) Notes
+## JSP Interview Questions
 
 #### Q. What are the life-cycle methods for a jsp?
 #### Q. How to disable caching on back button of the browser?
