@@ -1,4 +1,4 @@
-## Multithreading Notes
+## Multithreading Interview Questions
 
 #### Q. What is difference between Executor.submit() and Executer.execute() method?
 #### Q. Can we make array volatile in Java?
