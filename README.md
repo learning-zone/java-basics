@@ -1,4 +1,4 @@
-## Core-Java Notes
+## Core-Java Interview Questions
 
 #### Q. Difference between Heap and Stack in java?
 #### Q. What are the important features of Java 8 release?
