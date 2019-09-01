@@ -1,4 +1,4 @@
-## Servlets Notes
+## Servlets Interview Questions
 
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
