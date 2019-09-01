@@ -1,4 +1,4 @@
-## JDBC Notes
+## JDBC Interview Questions
 
 #### Q. What are the steps to connect to a database in java?
 #### Q. What are the differences between ResultSet and RowSet?
