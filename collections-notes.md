@@ -1,5 +1,7 @@
 ## Collections Interview Questions
 
+> Click :star:if you like the project. Pull Request are highly appreciated. 
+
 #### Q. What is Java Collections Framework? List out some benefits of Collections framework?
 #### Q. What is the benefit of Generics in Collections Framework?
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
