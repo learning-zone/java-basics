@@ -1,5 +1,7 @@
 ## Core-Java Interview Questions
 
+> Click :star:if you like the project. Pull Request are highly appreciated. 
+
 #### Q. Difference between Heap and Stack in java?
 #### Q. What are the important features of Java 8 release?
 #### Q. What is JVM and is it platform independent?
