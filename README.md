@@ -1,6 +1,6 @@
 ## Core-Java Interview Questions
 
-*Click <img src="https://github.com/learning-zone/java-interview-questions/blob/master/assets/star.png" width="20" height="20" align="absmiddle" /> if you like the project. Pull Request are highly appreciated.*
+*Click <img src="https://github.com/learning-zone/java-interview-questions/blob/master/assets/star.png" width="20" height="20" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
 #### Q. Difference between Heap and Stack in java?
 #### Q. What are the important features of Java 8 release?
