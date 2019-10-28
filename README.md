@@ -147,7 +147,7 @@
 #### Q. What is String Pool?
 #### Q. Difference between String, StringBuffer and StringBuilder?
 #### Q. Why String is immutable or final in Java
-#### Q. Memory leak issue in String class
+#### Q. What is a Memory Leak? How can a memory leak appear in garbage collected language?
 #### Q. How many objects will be created with string initialization code?
 #### Q. What is String in Java? How does String work in Java? String is a data type?
 #### Q. What are different ways to create String Object?
