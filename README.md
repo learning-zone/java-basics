@@ -136,7 +136,11 @@ Java Virtual Machine (JVM) is a specification that provides runtime environment 
 
 The JVM is not platform independent. Java Virtual Machine (JVM) provides the environment to execute the java file(. Class file). So at the end it's depends on kernel and kernel is differ from OS (Operating System) to OS. The JVM is used to both translate the bytecode into the machine language for a particular computer and actually execute the corresponding machine-language instructions as well.
 
-#### Q. What is JIT compiler?
+#### Q. What is JIT compiler in Java?
+The Just-In-Time (JIT) compiler is a component of the runtime environment that improves the performance of Java™ applications by compiling bytecodes to native machine code at run time.
+
+Java programs consists of classes, which contain platform-neutral bytecodes that can be interpreted by a JVM on many different computer architectures. At run time, the JVM loads the class files, determines the semantics of each individual bytecode, and performs the appropriate computation. The additional processor and memory usage during interpretation means that a Java application performs more slowly than a native application. The JIT compiler helps improve the performance of Java programs by compiling bytecodes into native machine code at run time. The JIT compiler is enabled by default. When a method has been compiled, the JVM calls the compiled code of that method directly instead of interpreting it. 
+
 #### Q. What is Classloader in Java? What are different types of classloaders?
 #### Q. Java Compiler is stored in JDK, JRE or JVM?
 #### Q. What is the difference between factory and abstract factory pattern?
