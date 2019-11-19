@@ -112,6 +112,9 @@ public class Animal implements Moveable{
   
 // Output: I am moving
 ```
+**5. Type Annotations**  
+In Java 8, Annotations can be applied wherever a type is used like in new instance creates, exception throws clause etc. This will help to enforce stronger type checks and using this feature we can come up with a type checking framework itself.
+
 #### Q. What is JVM and is it platform independent?
 Java Virtual Machine (JVM) is a specification that provides runtime environment in which java bytecode(.class files) can be executed. The JVM is the platform. The JVM acts as a "virtual" machine or processor. Java's platform independence consists mostly of its Java Virtual Machine (JVM). JVM makes this possible because it is aware of the specific instruction lengths and other particularities of the platform (Operating System).
 
