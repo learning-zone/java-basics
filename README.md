@@ -15,6 +15,34 @@
 
 
 #### Q. What is difference between Heap and Stack Memory in java?
+**Java Heap Space**  
+
+Java Heap space is used by java runtime to allocate memory to Objects and JRE classes. Whenever we create any object, it’s always created in the Heap space.
+
+Garbage Collection runs on the heap memory to free the memory used by objects that doesn’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
+
+**Java Stack Memory**  
+
+Stack in java is a section of memory which contains methods, local variables and reference variables. Local variables are created in the stack.
+
+Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
+
+As soon as method ends, the block becomes unused and become available for next method. Stack memory size is very less compared to Heap memory.
+
+**Difference**  
+
+
+|Parameter	       |Stack Memory	               |Heap Space                       |
+|------------------|-----------------------------|-----------------------------------|
+|Application	   |Stack is used in parts, one at a time during execution of a thread|	The entire application uses Heap space during runtime|
+|Size	           |Stack has size limits depending upon OS and is usually smaller then Heap|There is no size limit on Heap|
+|Storage	       |Stores only primitive variables and references to objects that are created in Heap Space|All the newly created objects are stored here|
+|Order	           |It is accessed using Last-in First-out (LIFO) memory allocation system|	This memory is accessed via complex memory management techniques that include Young Generation, Old or Tenured Generation, and Permanent Generation.|
+|Life	           |Stack memory only exists as long as the current method is running|Heap space exists as long as the application runs|
+|Efficiency	       |Comparatively much faster to allocate when compared to heap| Slower to allocate when compared to stack|
+|Allocation/Deallocation| This Memory is automatically allocated and deallocated when a method is called and returned respectively|Heap space is allocated when new objects are created and deallocated by Gargabe Collector when they are no longer referenced |
+
+
 #### Q. What are the important features of Java 8 release?
 #### Q. What is JVM and is it platform independent?
 #### Q. What is JIT compiler?
