@@ -72,7 +72,46 @@ List<String> items;
 String prefix;
 List<String> filteredList = items.stream().filter(e -> (!e.startsWith(prefix))).collect(Collectors.toList());
 ```
+**3. Date and Time API**  
 
+`Date` class has even become obsolete. The new classes intended to replace Date class are `LocalDate`, `LocalTime` and `LocalDateTime`.
+```java
+LocalDate localDate = LocalDate.now();
+LocalTime localTime = LocalTime.of(12, 20);
+LocalDateTime localDateTime = LocalDateTime.now(); 
+OffsetDateTime offsetDateTime = OffsetDateTime.now();
+ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Europe/Paris"));
+```
+
+The `Instant` class represents an instant in time to an accuracy of nanoseconds. Operations on an Instant include comparison to another `Instant` and adding or subtracting a duration.
+```java
+Instant instant = Instant.now();
+Instant instant1 = instant.plus(Duration.ofMillis(5000));
+Instant instant2 = instant.minus(Duration.ofMillis(5000));
+Instant instant3 = instant.minusSeconds(10);
+```
+**4. Default Methods**  
+Java 8 allows to add non-abstract methods in interfaces. These methods must be declared default methods. Default methods were introduces in java 8 to enable the functionality of lambda expression.
+
+Default methods enable to add new functionality to the interfaces of your libraries and ensure binary compatibility with code written for older versions of those interfaces.
+```java
+public interface Moveable {
+    default void move(){
+        System.out.println("I am moving");
+    }
+}
+```
+Moveable interface defines a method move() and provided a default implementation as well. If any class implements this interface then it need not to implement it’s own version of move() method. It can directly call instance.move().
+```java
+public class Animal implements Moveable{
+    public static void main(String[] args){
+        Animal tiger = new Animal();
+        tiger.move();
+    }
+}
+  
+// Output: I am moving
+```
 #### Q. What is JVM and is it platform independent?
 Java Virtual Machine (JVM) is a specification that provides runtime environment in which java bytecode(.class files) can be executed. The JVM is the platform. The JVM acts as a "virtual" machine or processor. Java's platform independence consists mostly of its Java Virtual Machine (JVM). JVM makes this possible because it is aware of the specific instruction lengths and other particularities of the platform (Operating System).
 
