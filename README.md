@@ -42,8 +42,26 @@ As soon as method ends, the block becomes unused and become available for next m
 |Efficiency	       |Comparatively much faster to allocate when compared to heap| Slower to allocate when compared to stack|
 |Allocation/Deallocation| This Memory is automatically allocated and deallocated when a method is called and returned respectively|Heap space is allocated when new objects are created and deallocated by Gargabe Collector when they are no longer referenced |
 
-
 #### Q. What are the important features of Java 8 release?
+**1. Lambda Expression**  
+Lambda expressions gives the ability to pass a functionality as a method argument. Lambda expression help us reduce the code clutter in using a single method class.
+Syntax:
+```java
+(x, y) -> x + y  //This function takes two parameters and return their sum.
+```
+Example:
+```java
+public class LambdaHelloWorld {
+	interface HelloWorld {
+		String hello(String name);
+	}
+
+	public static void main(String[] args) {	      
+		 HelloWorld helloWorld = (String name) -> { return "Hello " + name; };
+		 System.out.println(helloWorld.hello("Joe"));
+	}
+}
+```
 #### Q. What is JVM and is it platform independent?
 #### Q. What is JIT compiler?
 #### Q. What is Classloader in Java? What are different types of classloaders?
