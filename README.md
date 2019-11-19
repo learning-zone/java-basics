@@ -14,7 +14,7 @@
 * [Servlets Interview Questions](servlets-questions.md)
 
 
-#### Q. Difference between Heap and Stack in java?
+#### Q. What is difference between Heap and Stack Memory in java?
 #### Q. What are the important features of Java 8 release?
 #### Q. What is JVM and is it platform independent?
 #### Q. What is JIT compiler?
