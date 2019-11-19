@@ -44,7 +44,8 @@ As soon as method ends, the block becomes unused and become available for next m
 
 #### Q. What are the important features of Java 8 release?
 **1. Lambda Expression**  
-Lambda expressions gives the ability to pass a functionality as a method argument. Lambda expression help us reduce the code clutter in using a single method class.
+Lambda expressions gives the ability to pass a functionality as a method argument. Lambda expression help us reduce the code clutter in using a single method class.  
+
 Syntax:
 ```java
 (x, y) -> x + y  //This function takes two parameters and return their sum.
