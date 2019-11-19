@@ -63,8 +63,8 @@ public class LambdaHelloWorld {
 	}
 }
 ```
-**2. Pipelines and Streams**  
-Pipelines and streams enrich the Java collections framework. Sequence of aggregate operations is a pipeline. Stream is used to propagate elements from a source through a pipeline. It is a sequence of elements. Pipeline and streams makes easier in accessing the elements from collections and applying operations on it.
+**2. Stream API**  
+Java 8 java.util.stream package consists of classes, interfaces and an enum to allow functional-style operations on the elements. It performs lazy computation. So, it executes only when it requires.
 
 In this example, items is collection of String values and we want to remove the entries that begin with some prefix text.
 ```java
@@ -109,11 +109,27 @@ public class Animal implements Moveable{
         tiger.move();
     }
 }
-  
 // Output: I am moving
 ```
 **5. Type Annotations**  
 In Java 8, Annotations can be applied wherever a type is used like in new instance creates, exception throws clause etc. This will help to enforce stronger type checks and using this feature we can come up with a type checking framework itself.
+
+**6. Nashorn JavaScript Engine**  
+Nashorn is a JavaScript engine. It is used to execute JavaScript code dynamically at JVM (Java Virtual Machine). Java provides a command-line tool **jjs** which is used to execute JavaScript code. We can execute JavaScript code by two ways:
+
+1. Using jjs command-line tool, and
+1. By embedding into Java source code.
+```java
+// hello.js
+var hello = function(){  
+    print("Hello Nashorn");  
+};  
+hello();  
+```
+To run the above code
+```
+cmd> jjs hello.js
+```
 
 #### Q. What is JVM and is it platform independent?
 Java Virtual Machine (JVM) is a specification that provides runtime environment in which java bytecode(.class files) can be executed. The JVM is the platform. The JVM acts as a "virtual" machine or processor. Java's platform independence consists mostly of its Java Virtual Machine (JVM). JVM makes this possible because it is aware of the specific instruction lengths and other particularities of the platform (Operating System).
