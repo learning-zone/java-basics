@@ -153,6 +153,14 @@ The **Java ClassLoader** is a part of the Java Runtime Environment that dynamica
 **System Class Loader**: It loads application specific classes from the CLASSPATH environment variable. It can be set while invoking program using -cp or classpath command line options. 
 
 #### Q. Java Compiler is stored in JDK, JRE or JVM?
+**JDK**: Java Development Kit is the core component of Java Environment and provides all the tools, executables and binaries required to compile, debug and execute a Java Program. 
+
+**JVM**: JVM is responsible for converting Byte code to the machine specific code. JVM is also platform dependent and provides core java functions like memory management, garbage collection, security etc. JVM is customizable and we can use java options to customize it, for example allocating minimum and maximum memory to JVM. JVM is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
+
+**JRE**: Java Runtime Environment provides a platform to execute java programs. JRE consists of JVM and java binaries and other classes to execute any program successfully.
+
+![alt text](https://github.com/learning-zone/java-interview-questions/blob/assets/jdk.jpg)
+
 #### Q. What is the difference between factory and abstract factory pattern?
 #### Q. What are the methods used to implement for key Object in HashMap?
 #### Q. Difference between Serialization and Deserialization in Java.
