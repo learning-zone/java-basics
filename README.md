@@ -159,7 +159,7 @@ The **Java ClassLoader** is a part of the Java Runtime Environment that dynamica
 
 **JRE**: Java Runtime Environment provides a platform to execute java programs. JRE consists of JVM and java binaries and other classes to execute any program successfully.
 
-![alt text](https://github.com/learning-zone/java-interview-questions/blob/assets/jdk.jpg)
+![Java Compiler](https://github.com/learning-zone/java-interview-questions/blob/master/assets/jdk.jpg)
 
 #### Q. What is the difference between factory and abstract factory pattern?
 #### Q. What are the methods used to implement for key Object in HashMap?
