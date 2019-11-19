@@ -63,6 +63,16 @@ public class LambdaHelloWorld {
 	}
 }
 ```
+**2. Pipelines and Streams**  
+Pipelines and streams enrich the Java collections framework. Sequence of aggregate operations is a pipeline. Stream is used to propagate elements from a source through a pipeline. It is a sequence of elements. Pipeline and streams makes easier in accessing the elements from collections and applying operations on it.
+
+In this example, items is collection of String values and we want to remove the entries that begin with some prefix text.
+```java
+List<String> items;
+String prefix;
+List<String> filteredList = items.stream().filter(e -> (!e.startsWith(prefix))).collect(Collectors.toList());
+```
+
 #### Q. What is JVM and is it platform independent?
 #### Q. What is JIT compiler?
 #### Q. What is Classloader in Java? What are different types of classloaders?
