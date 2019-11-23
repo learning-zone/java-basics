@@ -487,6 +487,29 @@ class ACMEBicycle implements Bicycle {
 }
 ```
 #### Q. What is covariant return type?
+The covariant return type specifies that the return type may vary in the same direction as the subclass.
+```java
+class SuperClass {
+   SuperClass get() {
+      System.out.println("SuperClass");
+      return this;
+   }
+}
+public class Tester extends SuperClass {
+   Tester get() {
+      System.out.println("SubClass");
+      return this;
+   }
+   public static void main(String[] args) {
+      SuperClass tester = new Tester();
+      tester.get();
+   }
+}
+```
+Output:
+```
+Subclass
+```
 #### Q. What is the difference between abstraction and encapsulation?
 #### Q. Can there be an abstract method without an abstract class?
 #### Q. Can you declare an interface method static?
