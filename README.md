@@ -309,9 +309,6 @@ public class MyRunnable implements Runnable {
 #### Q. What are Wrapper classes?
 #### Q. What is Java Annotations?
 #### Q. What is Java Reflection API?
-#### Q. What is anonymous inner class?
-#### Q. What is default constructor?
-#### Q. Java is Pass by Value or Pass by Reference?
 #### Q. What is singleton class and how can we make a class singleton?
 #### Q. What is the numeric promotion?
 #### Q. Which API is provided by Java for operations on a set of objects?
