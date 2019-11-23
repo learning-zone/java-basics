@@ -360,7 +360,6 @@ public class MyRunnable implements Runnable {
 #### Q. When do you use Composite design pattern?
 #### Q. The difference between Inheritance and Composition?
 #### Q. Difference between Abstract factory and Prototype design pattern?
-#### Q. What is Adapter pattern? When to use it?
 #### Q. The difference between nested public static class and a top level class in Java?
 #### Q. Give me an example of design pattern which is based upon open closed principle?
 #### Q. Can you explain Liskov Substitution principle?
