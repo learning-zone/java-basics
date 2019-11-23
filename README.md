@@ -253,8 +253,26 @@ class Vector_demo {
     } 
 }
 ```
-
 #### Q. What is the difference between transient and volatile variable in Java?
+**Transient**: The transient modifier tells the Java object serialization subsystem to exclude the field when serializing an instance of the class. When the object is then deserialized, the field will be initialized to the default value; i.e. null for a reference type, and zero or false for a primitive type.
+```java
+public transient int limit = 55;   // will not persist
+public int b;   // will persist
+```
+**Volatile**: The volatile modifier tells the JVM that writes to the field should always be synchronously flushed to memory, and that reads of the field should always read from memory. This means that fields marked as volatile can be safely accessed and updated in a multi-thread application without using native or standard library-based synchronization.
+```java
+public class MyRunnable implements Runnable {
+   private volatile boolean active;
+   public void run() {
+      active = true;
+      while (active) {    
+      }
+   }
+   public void stop() {
+      active = false;  
+   }
+}
+```
 #### Q. Mention the uses of Synchronized block
 #### Q. What is the default size of load factor in hashing based collection?
 #### Q. Write a code to make Collections readOnly?
