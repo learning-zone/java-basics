@@ -223,6 +223,19 @@ class HybridCar extends Car {
 We can import the same package or same class multiple times. The JVM will internally load the class only once no matter how many times import the same class.
 
 #### Q. Distinguish between static loading and dynamic class loading?
+**Static Class Loading**: Creating objects and instance using `new` keyword is known as static class loading. The retrieval of class definition and instantiation of the object is done at compile time.
+```java
+class TestClass {
+  public static void main(String args[]) {
+      TestClass tc = new TestClass();
+  }
+}
+```
+
+**Dynamic Class Loading**: Loading classes use `Class.forName()` method. Dynamic class loading is done when the name of the class is not known at compile time.
+```java
+Class.forName (String className);
+```
 #### Q. How can we find the actual size of an object on the heap?
 #### Q. Why we use Vector class?
 #### Q. What is the difference between transient and volatile variable in Java?
