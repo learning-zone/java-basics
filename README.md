@@ -236,8 +236,24 @@ class TestClass {
 ```java
 Class.forName (String className);
 ```
-#### Q. How can we find the actual size of an object on the heap?
 #### Q. Why we use Vector class?
+Vector implements a dynamic array that means it can grow or shrink as required. Like an array, it contains components that can be accessed using an integer index. They are very similar to ArrayList but Vector is **synchronised** and have some legacy method which collection framework does not contain. It extends AbstractList and implements List interfaces.
+```java
+import java.util.*; 
+class Vector_demo { 
+
+    public static void main(String[] arg) { 
+
+        // create default vector 
+        Vector v = new Vector(); 
+        v.add(10); 
+        v.add(20); 
+        v.add("Numbers");   
+        System.out.println("Vector is " + v); 
+    } 
+}
+```
+
 #### Q. What is the difference between transient and volatile variable in Java?
 #### Q. Mention the uses of Synchronized block
 #### Q. What is the default size of load factor in hashing based collection?
