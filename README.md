@@ -487,7 +487,7 @@ class ACMEBicycle implements Bicycle {
 }
 ```
 #### Q. What is covariant return type?
-it is possible to have different return type for a overriding method in child class, but child’s return type should be sub-type of parent’s return type. Overriding method becomes variant with respect to return type. The covariant return type specifies that the return type may vary in the same direction as the subclass.
+It is possible to have different return type for a overriding method in child class, but child’s return type should be sub-type of parent’s return type. Overriding method becomes variant with respect to return type. The covariant return type specifies that the return type may vary in the same direction as the subclass.
 ```java
 class SuperClass {
    SuperClass get() {
