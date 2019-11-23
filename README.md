@@ -296,7 +296,6 @@ public class MyRunnable implements Runnable {
 #### Q. Give the hierarchy of InputStream and OutputStream classes.
 #### Q. What is the difference between the Reader/Writer class hierarchy and the InputStream/OutputStream class hierarchy?
 #### Q. What is the purpose of the finalize() method?
-#### Q. What is difference between CyclicBarrier and CountDownLatch in Java ?
 #### Q. What will be the problem if you don't override hashcode() method
 #### Q. Can you access non static variable in static context?
 #### Q. What is the purpose of the Runtime class and System class?
