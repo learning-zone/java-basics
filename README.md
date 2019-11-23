@@ -518,6 +518,8 @@ Subclass
 * Abstraction is about hiding unwanted details while giving out most essential details, while Encapsulation means hiding the code and data into a single unit e.g. class or method to protect inner working of an object from outside world. 
 
 #### Q. Can there be an abstract method without an abstract class?
+Yes. because methods in an interface are also abstract. so the interface can be use to declare abstract method.
+
 #### Q. Can you declare an interface method static?
 #### Q. Can we define private and protected modifiers for the members in interfaces?
 #### Q. When can an object reference be cast to an interface reference?
