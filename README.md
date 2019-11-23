@@ -471,6 +471,21 @@ Overriding Method
 No, we cannot achieve runtime polymorphism by data members. Method is overridden not the data members, so runtime polymorphism can't be achieved by data members.
 
 #### Q. Can you have virtual functions in Java?
+In Java, all non-static methods are by default **virtual functions**. Only methods marked with the `keyword final`, which cannot be overridden, along with `private methods`, which are not inherited, are non-virtual.
+
+**Example with virtual functions with interfaces** 
+
+```java
+interface Bicycle {         //the function applyBrakes() is virtual because
+    void applyBrakes();     //functions in interfaces are designed to be 
+}                           //overridden.
+
+class ACMEBicycle implements Bicycle {
+    public void applyBrakes(){               //Here we implement applyBrakes()
+       System.out.println("Brakes applied"); //function
+    }
+}
+```
 #### Q. What is covariant return type?
 #### Q. What is the difference between abstraction and encapsulation?
 #### Q. Can there be an abstract method without an abstract class?
