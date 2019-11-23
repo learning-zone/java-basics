@@ -273,7 +273,6 @@ public class MyRunnable implements Runnable {
    }
 }
 ```
-#### Q. What is the default size of load factor in hashing based collection?
 #### Q. Distinguish between a predicate and a function?
 #### Q. What is Nashorn in Java8?
 #### Q. How many types of memory areas are allocated by JVM?
