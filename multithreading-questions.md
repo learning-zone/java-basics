@@ -66,3 +66,4 @@
 #### Q. What is FutureTask class?
 #### Q. What are the available implementations of ExecutorService in the standard library?
 #### Q. What are the main components of concurrency API?
+#### Q. What is difference between CyclicBarrier and CountDownLatch in Java?
