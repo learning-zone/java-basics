@@ -386,6 +386,24 @@ Calling parameterized constructor of base
 Calling parameterized constructor of derived
 ```
 #### Q. Can you declare the main method as final?
+Yes. We can declare main method as final. But, In inheritance concept we cannot declare main method as final in parent class. It give compile time error. The main method has to be public because it has to be called by JVM which is outside the scope of the package and hence would need the access specifier-public.
+```java
+public class Test {
+	public final static void main(String[] args) throws Exception {
+		System.out.println("This is Test Class");
+	}
+}
+ 
+class Child extends Test {
+	public static void main(String[] args) throws Exception {
+		System.out.println("This is Child Class");
+	}
+}
+```
+Output
+```
+Cannot override the final method from Test.
+```
 #### Q. Can we declare a constructor as final?
 #### Q. Can we declare an interface as final?
 #### Q. What is the difference between the final method and abstract method?
