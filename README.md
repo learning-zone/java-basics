@@ -376,11 +376,7 @@ public class MyRunnable implements Runnable {
 #### Q. How many ways can we create the string object?
 #### Q. How can we create an immutable class in Java?
 #### Q. Why CharArray() is preferred over String to store the password?
-#### Q. Why strings have been made immutable in Java?
-#### Q. What is String Constant Pool?
-#### Q. What is String Pool?
 #### Q. Difference between String, StringBuffer and StringBuilder?
-#### Q. Why String is immutable or final in Java
 #### Q. What is a Memory Leak? How can a memory leak appear in garbage collected language?
 #### Q. How many objects will be created with string initialization code?
 #### Q. What is String in Java? How does String work in Java? String is a data type?
