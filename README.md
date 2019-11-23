@@ -162,6 +162,28 @@ The **Java ClassLoader** is a part of the Java Runtime Environment that dynamica
 ![Java Compiler](https://github.com/learning-zone/java-interview-questions/blob/master/assets/jdk.jpg)
 
 #### Q. What is the difference between factory and abstract factory pattern?
+The Factory Method is usually categorised by a switch statement where each case returns a different class, using the same root interface so that the calling code never needs to make decisions about the implementation.
+
+For example credit card validator factory which returns a different validator for each card type.
+```java
+public ICardValidator GetCardValidator (string cardType)
+{
+    switch (cardType.ToLower())
+    {
+        case "visa":
+            return new VisaCardValidator();
+        case "mastercard":
+        case "ecmc":
+            return new MastercardValidator();
+        default:
+            throw new CreditCardTypeException("Do not recognise this type");
+    }
+}
+```
+Abstract Factory patterns work around a super-factory which creates other factories. This factory is also called as factory of factories. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+
+In Abstract Factory pattern an interface is responsible for creating a factory of related objects without explicitly specifying their classes. Each generated factory can give the objects as per the Factory pattern.
+
 #### Q. What are the methods used to implement for key Object in HashMap?
 #### Q. Difference between Serialization and Deserialization in Java.
 #### Q. What is SerialVersionUID?
