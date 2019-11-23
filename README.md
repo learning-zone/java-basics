@@ -404,10 +404,11 @@ Output
 ```
 Cannot override the final method from Test.
 ```
-#### Q. Can we declare a constructor as final?
-* No
-#### Q. Can we declare an interface as final?
 #### Q. What is the difference between the final method and abstract method?
+Final method is a method that is marked as final, i.e. it cannot be overridden anymore. Just like final class cannot be inherited anymore.
+
+Abstract method, on the other hand, is an empty method that is ought to be overridden by the inherited class. Without overriding, you will quickly get compilation error.
+
 #### Q. What is the difference between compile-time polymorphism and runtime polymorphism?
 #### Q. Can you achieve Runtime Polymorphism by data members?
 #### Q. Can you have virtual functions in Java?
