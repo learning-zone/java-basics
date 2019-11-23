@@ -468,6 +468,8 @@ Output:
 Overriding Method
 ```
 #### Q. Can you achieve Runtime Polymorphism by data members?
+No, we cannot achieve runtime polymorphism by data members. Method is overridden not the data members, so runtime polymorphism can't be achieved by data members.
+
 #### Q. Can you have virtual functions in Java?
 #### Q. What is covariant return type?
 #### Q. What is the difference between abstraction and encapsulation?
