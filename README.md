@@ -219,8 +219,9 @@ class HybridCar extends Car {
     //...
 }
 ```
-#### Q. What are the advantages of JSON over XML?
 #### Q. Can we import same package/class two times? Will the JVM load the package twice at runtime?
+We can import the same package or same class multiple times. The JVM will internally load the class only once no matter how many times import the same class.
+
 #### Q. Distinguish between static loading and dynamic class loading?
 #### Q. How can we find the actual size of an object on the heap?
 #### Q. Why we use Vector class?
