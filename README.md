@@ -273,9 +273,24 @@ public class MyRunnable implements Runnable {
    }
 }
 ```
-#### Q. Distinguish between a predicate and a function?
-#### Q. What is Nashorn in Java8?
 #### Q. How many types of memory areas are allocated by JVM?
+JVM is a program which takes Java bytecode and converts the byte code (line by line) into machine understandable code. JVM perform some particular types of operations:
+
+* Loading of code
+* Verification of code
+* Executing the code
+* It provide run-time environment to the users
+
+**Types of Memory areas allocated by the JVM:**  
+
+**1. Classloader**: Classloader is a subsystem of JVM that is used to load class files.
+**2. Class(Method) Area**: Class(Method) Area stores per-class structures such as the runtime constant pool, field and method data, the code for methods.
+**3. Heap**: It is the runtime data area in which objects are allocated.
+**4. Stack**: Java Stack stores frames.It holds local variables and partial results, and plays a part in method invocation and return. Each thread has a private JVM stack, created at the same time as thread.
+**5. Program Counter Register**: PC (program counter) register. It contains the address of the Java virtual machine instruction currently being executed.
+**6. Native Method Stack**: It contains all the native methods used in the application.
+  
+
 #### Q. What will be the initial value of an object reference which is defined as an instance variable?
 #### Q. How can constructor chaining be done using this keyword?
 #### Q. Can you declare the main method as final?
