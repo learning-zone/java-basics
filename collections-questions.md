@@ -61,3 +61,4 @@
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
+#### Q. Write a code to make Collections readOnly?
