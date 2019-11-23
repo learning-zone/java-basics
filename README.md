@@ -511,6 +511,12 @@ Output:
 Subclass
 ```
 #### Q. What is the difference between abstraction and encapsulation?
+* Abstraction solves the problem at design level while Encapsulation solves it implementation level. 
+
+* In Java, Abstraction is supported using `interface` and `abstract class` while Encapsulation is supported using access modifiers e.g. public, private and protected.
+
+* Abstraction is about hiding unwanted details while giving out most essential details, while Encapsulation means hiding the code and data into a single unit e.g. class or method to protect inner working of an object from outside world. 
+
 #### Q. Can there be an abstract method without an abstract class?
 #### Q. Can you declare an interface method static?
 #### Q. Can we define private and protected modifiers for the members in interfaces?
