@@ -185,8 +185,13 @@ Abstract Factory patterns work around a super-factory which creates other factor
 In Abstract Factory pattern an interface is responsible for creating a factory of related objects without explicitly specifying their classes. Each generated factory can give the objects as per the Factory pattern.
 
 #### Q. What are the methods used to implement for key Object in HashMap?
-#### Q. Difference between Serialization and Deserialization in Java.
-#### Q. What is SerialVersionUID?
+**1. equals()** and **2. hashcode()**
+Class inherits methods from the following classes in terms of HashMap
+
+* java.util.AbstractMap
+* java.util.Object
+* java.util.Map
+
 #### Q. Difference between the Inner Class and Sub Class.
 #### Q. What are the advantages of JSON over XML?
 #### Q. Can we import same package/class two times? Will the JVM load the package twice at runtime?
