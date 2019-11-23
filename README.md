@@ -410,6 +410,63 @@ Final method is a method that is marked as final, i.e. it cannot be overridden a
 Abstract method, on the other hand, is an empty method that is ought to be overridden by the inherited class. Without overriding, you will quickly get compilation error.
 
 #### Q. What is the difference between compile-time polymorphism and runtime polymorphism?
+There are two types of polymorphism in java:
+1) Static Polymorphism also known as compile time polymorphism
+2) Dynamic Polymorphism also known as runtime polymorphism
+
+**Example of static Polymorphism**  
+
+Method overloading is one of the way java supports static polymorphism. Here we have two definitions of the same method add() which add method would be called is determined by the parameter list at the compile time. That is the reason this is also known as compile time polymorphism.
+```java
+class SimpleCalculator
+{
+    int add(int a, int b) {
+         return a + b;
+    }
+    int  add(int a, int b, int c) {
+         return a + b + c;
+    }
+}
+public class Demo
+{
+   public static void main(String args[]) {
+
+	   SimpleCalculator obj = new SimpleCalculator();
+       System.out.println(obj.add(10, 20));
+       System.out.println(obj.add(10, 20, 30));
+   }
+}
+```
+Output:
+```
+30
+60
+```
+**Runtime Polymorphism (or Dynamic polymorphism)**  
+
+It is also known as Dynamic Method Dispatch. Dynamic polymorphism is a process in which a call to an overridden method is resolved at runtime, thats why it is called runtime polymorphism. 
+```java
+class ABC {
+
+   public void myMethod() {
+	System.out.println("Overridden Method");
+   }
+}
+public class XYZ extends ABC {
+
+   public void myMethod() {
+	System.out.println("Overriding Method");
+   }
+   public static void main(String args[]) {
+	ABC obj = new XYZ();
+	obj.myMethod();
+   }
+}
+```
+Output:
+```
+Overriding Method
+```
 #### Q. Can you achieve Runtime Polymorphism by data members?
 #### Q. Can you have virtual functions in Java?
 #### Q. What is covariant return type?
