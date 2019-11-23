@@ -294,6 +294,101 @@ JVM is a program which takes Java bytecode and converts the byte code (line by l
 The object references are all initialized to `null` in Java. However in order to do anything useful with these references, It must set to a valid object, else you will get NullPointerExceptions everywhere you try to use such default initialized references.
 
 #### Q. How can constructor chaining be done using this keyword?
+Java constructor chaining is a method of calling one constructor with the help of another while considering the present object. It can be done in 2 ways –
+
+* **Within same class**: It can be done using `this()` keyword for constructors in the same class.
+* **From base class**: By using `super()` keyword to call a constructor from the base class.
+
+```java
+// Java program to illustrate Constructor Chaining 
+// within same class Using this() keyword 
+class Temp 
+{ 
+    // default constructor 1 
+    // default constructor will call another constructor 
+    // using this keyword from same class 
+    Temp() { 
+        // calls constructor 2 
+        this(5); 
+        System.out.println("The Default constructor"); 
+    } 
+  
+    // parameterized constructor 2 
+    Temp(int x) { 
+        // calls constructor 3 
+        this(10, 20); 
+        System.out.println(x); 
+    } 
+  
+    // parameterized constructor 3 
+    Temp(int x, int y) { 
+        System.out.println(10 + 20); 
+    } 
+  
+    public static void main(String args[]) { 
+        // invokes default constructor first 
+        new Temp(); 
+    } 
+} 
+```
+Ouput:
+```
+30
+10
+The Default constructor
+```
+```java
+// Java program to illustrate Constructor Chaining to 
+// other class using super() keyword 
+class Base 
+{ 
+    String name; 
+  
+    // constructor 1 
+    Base() { 
+        this(""); 
+        System.out.println("No-argument constructor of" +  
+                                           " base class"); 
+    } 
+  
+    // constructor 2 
+    Base(String name) { 
+        this.name = name; 
+        System.out.println("Calling parameterized constructor" 
+                                              + " of base"); 
+    } 
+} 
+  
+class Derived extends Base 
+{ 
+    // constructor 3 
+    Derived() { 
+        System.out.println("No-argument constructor " +  
+                           "of derived"); 
+    } 
+  
+    // parameterized constructor 4 
+    Derived(String name) { 
+        // invokes base class constructor 2 
+        super(name); 
+        System.out.println("Calling parameterized " +  
+                           "constructor of derived"); 
+    } 
+  
+    public static void main(String args[]) { 
+        // calls parameterized constructor 4 
+        Derived obj = new Derived("test"); 
+  
+        // Calls No-argument constructor 
+        // Derived obj = new Derived(); 
+    } 
+} 
+```
+Output:
+```
+Calling parameterized constructor of base
+Calling parameterized constructor of derived
+```
 #### Q. Can you declare the main method as final?
 #### Q. Can we declare a constructor as final?
 #### Q. Can we declare an interface as final?
