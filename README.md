@@ -405,6 +405,7 @@ Output
 Cannot override the final method from Test.
 ```
 #### Q. Can we declare a constructor as final?
+* No
 #### Q. Can we declare an interface as final?
 #### Q. What is the difference between the final method and abstract method?
 #### Q. What is the difference between compile-time polymorphism and runtime polymorphism?
