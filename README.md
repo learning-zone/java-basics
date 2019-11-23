@@ -443,7 +443,6 @@ public class MyRunnable implements Runnable {
 #### Q. What is the maximum heap size of 32-bit and 64-bit JVM?
 #### Q. Can you guarantee the garbage collection process?
 #### Q. What's the difference between "a == b" and "a.equals(b)"?
-#### Q. What is a.hashCode() used for? How is it related to a.equals(b)?
 #### Q. What is a compile time constant in Java? What is the risk of using it?
 #### Q. What is the size of an int variable in 32-bit and 64-bit JVM?
 #### Q. If an object reference is set to null, will the Garbage Collector immediately free the memory held by that object?
