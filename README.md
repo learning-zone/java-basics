@@ -192,7 +192,33 @@ Class inherits methods from the following classes in terms of HashMap
 * java.util.Object
 * java.util.Map
 
-#### Q. Difference between the Inner Class and Sub Class.
+#### Q. What is difference between the Inner Class and Sub Class?
+Nested Inner class can access any private instance variable of outer class. Like any other instance variable, we can have access modifier private, protected, public and default modifier.
+```java
+class Outer { 
+   class Inner { 
+      public void show() { 
+           System.out.println("In a nested class method"); 
+      } 
+   } 
+} 
+class Main { 
+   public static void main(String[] args) { 
+       Outer.Inner in = new Outer().new Inner(); 
+       in.show(); 
+   } 
+} 
+```
+A subclass is class which inherits a method or methods from a superclass.
+```java
+class Car {
+    //...
+}
+ 
+class HybridCar extends Car {
+    //...
+}
+```
 #### Q. What are the advantages of JSON over XML?
 #### Q. Can we import same package/class two times? Will the JVM load the package twice at runtime?
 #### Q. Distinguish between static loading and dynamic class loading?
