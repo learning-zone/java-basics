@@ -273,7 +273,7 @@ public class MyRunnable implements Runnable {
    }
 }
 ```
-#### Q. Mention the uses of Synchronized block
+#### Q. Mention the uses of Synchronized block?
 #### Q. What is the default size of load factor in hashing based collection?
 #### Q. Write a code to make Collections readOnly?
 #### Q. Distinguish between a predicate and a function?
@@ -292,7 +292,6 @@ public class MyRunnable implements Runnable {
 #### Q. What is the difference between abstraction and encapsulation?
 #### Q. Can there be an abstract method without an abstract class?
 #### Q. Can you declare an interface method static?
-#### Q. What is a marker interface?
 #### Q. Can we define private and protected modifiers for the members in interfaces?
 #### Q. When can an object reference be cast to an interface reference?
 #### Q. How the metacharacters are different from the ordinary characters?
