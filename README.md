@@ -761,7 +761,6 @@ public class CopyFile {
 #### Q. The difference between Serial and Parallel Garbage Collector?
 #### Q. A difference between WeakReference and SoftReference in Java?
 #### Q. How do you find memory usage from Java program? How much percent of the heap is used?
-#### Q. How do WeakHashMap works?
 #### Q. What is -XX:+UseCompressedOops JVM option? Why use it?
 #### Q. How do you find if JVM is 32-bit or 64-bit from Java Program?
 #### Q. What is the maximum heap size of 32-bit and 64-bit JVM?
