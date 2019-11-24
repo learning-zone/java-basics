@@ -654,7 +654,6 @@ public class CopyFile {
 #### Q. Can we change the scope of the overridden method in the subclass?
 #### Q. What is the final variable, final class, and final blank variable?
 #### Q. How to make a read-only and write-only class in Java?
-#### Q. What are the advantages of Encapsulation in Java?
 #### Q. What is the static import?
 #### Q. Name some classes present in java.util.regex package.
 #### Q. What is a nested class? Is there any difference between nested classes and inner classes?
