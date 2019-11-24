@@ -747,7 +747,6 @@ public class CopyFile {
 #### Q. What are the differences between Checked Exception and Unchecked Exception?
 #### Q. What purpose does the keywords final, finally, and finalize, fulfill?
 #### Q. What are the differences between throw and throws?
-#### Q. What is a finally block? Is there a case when finally will not execute?
 #### Q. What is the base class for Error and Exception?
 #### Q. Is it necessary that each try block must be followed by a catch block?
 #### Q. Can finally block be used without a catch?
