@@ -563,7 +563,6 @@ public class TestFoo implements Foo {
     }
 }
 ``` 
-#### Q. How the metacharacters are different from the ordinary characters?
 #### Q. Give the hierarchy of InputStream and OutputStream classes.
 #### Q. What is the difference between the Reader/Writer class hierarchy and the InputStream/OutputStream class hierarchy?
 #### Q. What is the purpose of the finalize() method?
