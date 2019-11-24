@@ -521,6 +521,8 @@ Subclass
 Yes. because methods in an interface are also abstract. so the interface can be use to declare abstract method.
 
 #### Q. Can you declare an interface method static?
+Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
+
 #### Q. Can we define private and protected modifiers for the members in interfaces?
 #### Q. When can an object reference be cast to an interface reference?
 #### Q. How the metacharacters are different from the ordinary characters?
