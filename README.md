@@ -636,7 +636,6 @@ public class CopyFile {
 #### Q. What are assertions in Java?
 #### Q. Can we have multiple public classes in a java source file?
 #### Q. What is Java Package and which package is imported by default?
-#### Q. What is final, finally and finalize in java?
 #### Q. What is the difference between abstract class and interface?
 #### Q. What are Wrapper classes?
 #### Q. What is Java Annotations?
