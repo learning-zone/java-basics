@@ -629,16 +629,13 @@ public class CopyFile {
    }
 }
 ```
-#### Q. What is the difference between the Reader/Writer class hierarchy and the InputStream/OutputStream class hierarchy?
-#### Q. What is the purpose of the finalize() method?
-#### Q. What will be the problem if you don't override hashcode() method?
+
 #### Q. Can you access non static variable in static context?
 #### Q. What is the purpose of the Runtime class and System class?
 #### Q. What are FilterStreams?
 #### Q. What are assertions in Java?
 #### Q. Can we have multiple public classes in a java source file?
 #### Q. What is Java Package and which package is imported by default?
-#### Q. What is static keyword?
 #### Q. What is final, finally and finalize in java?
 #### Q. What is the difference between abstract class and interface?
 #### Q. What are Wrapper classes?
