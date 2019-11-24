@@ -571,7 +571,7 @@ A stream can be defined as a sequence of data. There are two kinds of Streams âˆ
 
 **Byte Streams**  
 Java byte streams are used to perform input and output of 8-bit bytes. Though there are many classes related to byte streams but the most frequently used classes are, FileInputStream and FileOutputStream.
-Example
+
 ```java
 import java.io.*;
 public class CopyFile {
@@ -601,6 +601,7 @@ public class CopyFile {
 ```
 **Character Streams**  
 Java Byte streams are used to perform input and output of 8-bit bytes, whereas Java Character streams are used to perform input and output for 16-bit unicode. Though there are many classes related to character streams but the most frequently used classes are, FileReader and FileWriter. 
+
 ```java
 import java.io.*;
 public class CopyFile {
