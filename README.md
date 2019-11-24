@@ -523,7 +523,27 @@ Yes. because methods in an interface are also abstract. so the interface can be 
 #### Q. Can you declare an interface method static?
 Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
 
-#### Q. Can we define private and protected modifiers for the members in interfaces?
+#### Q. Can we use private or protected member variables in an interface?
+The java compiler adds public and abstract keywords before the interface method and **public, static and final keyword** before data members automatically
+```java
+public interface Test{
+   public string name1;
+   private String email;
+   protected pass;
+}
+```
+as you have declare variable in test interface with private and protected it will give error. if you do not specify the modifier the compiler will add public static final automatically.
+```java
+public interface Test{
+   public static final string name1;
+   public static final  String email;
+   public static final pass;
+}
+```
+* interfaces cannot be instantiated that is why the variable are **static**
+* interface are used to achieve the 100% abstraction there for the variable are **final**
+* An interface provide a way for the client to interact with the object. If variables were not public, the clients would not have access to them. that is why variable are **public**
+
 #### Q. When can an object reference be cast to an interface reference?
 #### Q. How the metacharacters are different from the ordinary characters?
 #### Q. Give the hierarchy of InputStream and OutputStream classes.
