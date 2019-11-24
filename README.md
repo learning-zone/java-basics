@@ -544,7 +544,25 @@ public interface Test {
 * interface are used to achieve the 100% abstraction there for the variable are **final**
 * An interface provide a way for the client to interact with the object. If variables were not public, the clients would not have access to them. that is why variable are **public**
 
-#### Q. When can an object reference be cast to an interface reference?
+#### Q. When can an object reference be cast to a Java interface reference?
+An interface reference can point to any object of a class that implements this interface 
+```java
+interface Foo {
+  void display();
+}
+
+public class TestFoo implements Foo {
+
+    void display() {
+      System.out.println(“Hello World”);
+    }
+
+    public static void main(String[] args) {
+      Foo foo = new TestFoo();
+      foo.display();
+    }
+}
+``` 
 #### Q. How the metacharacters are different from the ordinary characters?
 #### Q. Give the hierarchy of InputStream and OutputStream classes.
 #### Q. What is the difference between the Reader/Writer class hierarchy and the InputStream/OutputStream class hierarchy?
