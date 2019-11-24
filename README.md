@@ -563,7 +563,27 @@ public class TestFoo implements Foo {
     }
 }
 ``` 
-#### Q. Give the hierarchy of InputStream and OutputStream classes.
+#### Q. Give the hierarchy of InputStream and OutputStream classes?
+Java performs I/O through Streams. A Stream is linked to a physical layer by java I/O system to make input and output operation in java. Java encapsulates Stream under java.io package. Java defines two types of streams. 
+
+* **Byte Stream**: It provides a convenient means for handling input and output of byte.
+* **Character Stream**: It provides a convenient means for handling input and output of characters. Character stream uses Unicode and therefore can be internationalized.
+
+**Java Byte Stream Classes**  
+Byte stream is defined by using two abstract class at the top of hierarchy, they are InputStream and OutputStream.
+
+|Stream class	        |Description                       |
+|-----------------------|----------------------------------|
+|BufferedInputStream	|Used for Buffered Input Stream.|
+|BufferedOutputStream	|Used for Buffered Output Stream.|
+|DataInputStream	    |Contains method for reading java standard datatype|
+|DataOutputStream	    |An output stream that contain method for writing java standard data type|
+|FileInputStream	    |Input stream that reads from a file|
+|FileOutputStream	    |Output stream that write to a file.|
+|InputStream	        |Abstract class that describe stream input.|
+|OutputStream	        |Abstract class that describe stream output.|
+|PrintStream	        |Output Stream that contain print() and println() method|
+
 #### Q. What is the difference between the Reader/Writer class hierarchy and the InputStream/OutputStream class hierarchy?
 #### Q. What is the purpose of the finalize() method?
 #### Q. What will be the problem if you don't override hashcode() method?
