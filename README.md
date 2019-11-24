@@ -752,7 +752,6 @@ public class CopyFile {
 #### Q. What is the base class for Error and Exception?
 #### Q. Is it necessary that each try block must be followed by a catch block?
 #### Q. Can finally block be used without a catch?
-#### Q. Is there any case when finally will not be executed?
 #### Q. Can an exception be rethrown?
 #### Q. Can subclass overriding method declare an exception if parent class method doesn't throw an exception?
 #### Q. What will happen to the Exception object after exception handling?
