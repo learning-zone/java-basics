@@ -526,7 +526,7 @@ Java 8 interface changes include static methods and default methods in interface
 #### Q. Can we use private or protected member variables in an interface?
 The java compiler adds public and abstract keywords before the interface method and **public, static and final keyword** before data members automatically
 ```java
-public interface Test{
+public interface Test {
    public string name1;
    private String email;
    protected pass;
@@ -534,7 +534,7 @@ public interface Test{
 ```
 as you have declare variable in test interface with private and protected it will give error. if you do not specify the modifier the compiler will add public static final automatically.
 ```java
-public interface Test{
+public interface Test {
    public static final string name1;
    public static final  String email;
    public static final pass;
