@@ -659,7 +659,6 @@ public class CopyFile {
 #### Q. What is a nested class? Is there any difference between nested classes and inner classes?
 #### Q. What is the nested interface?
 #### Q. How will you invoke any external process in Java?
-#### Q. What do you understand by an IO stream?
 #### Q. What are the super most classes for all the streams?
 #### Q. What is the purpose of using BufferedInputStream and BufferedOutputStream classes?
 #### Q. How to set the Permissions to a file in Java?
