@@ -740,7 +740,6 @@ public class CopyFile {
 #### Q. What’s the base class of all exception classes?
 #### Q. What are important methods of Java Exception Class?
 #### Q. How to write custom exception in Java?
-#### Q. What is OutOfMemoryError in Java?
 #### Q. What are different scenarios causing “Exception in thread main”?
 #### Q. What happens when exception is thrown by main method?
 #### Q. Provide some Java Exception Handling Best Practices?
