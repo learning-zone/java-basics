@@ -1,5 +1,6 @@
 ## Collections Interview Questions
 
+#### Q. What will be the problem if you don't override hashcode() method?
 #### Q. What is the default size of load factor in hashing based collection?
 #### Q. What is Java Collections Framework? List out some benefits of Collections framework?
 #### Q. What is the benefit of Generics in Collections Framework?
