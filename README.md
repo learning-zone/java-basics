@@ -633,6 +633,10 @@ public class CopyFile {
 No, non-static variable cannot be referenced in a static context directly one needs to use object.
 
 #### Q. What is the purpose of the Runtime class and System class?
+**Runtime Class**: The purpose of the Runtime class is to provide access to the Java runtime system. The runtime information like memory availability, invoking the garbage collector, etc.
+
+**System Class**: The purpose of the System class is to provide access to system resources. It contains accessibility to standard input, standart output, error output streams, current time in millis, terminating the application, etc.
+
 #### Q. What are FilterStreams?
 #### Q. What are assertions in Java?
 #### Q. Can we have multiple public classes in a java source file?
