@@ -629,8 +629,9 @@ public class CopyFile {
    }
 }
 ```
-
 #### Q. Can you access non static variable in static context?
+No, non-static variable cannot be referenced in a static context directly one needs to use object.
+
 #### Q. What is the purpose of the Runtime class and System class?
 #### Q. What are FilterStreams?
 #### Q. What are assertions in Java?
