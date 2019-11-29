@@ -900,6 +900,40 @@ public class Car
 }
 ```
 #### Q. What are the restrictions that are applied to the Java static methods?
+If a method is declared as static, it is a member of a class rather than belonging to the object of the class. It can be called without creating an object of the class. A static method also has the power to access static data members of the class.
+
+* There are a few restrictions imposed on a static method
+* The static method cannot use non-static data member or invoke non-static method directly.
+* The this and super cannot be used in static context.
+* The static method can access only static type data (static type instance variable).
+* There is no need to create an object of the class to invoke the static method.
+* A static method cannot be overridden in a subclass
+
+```java
+class Parent {
+   static void display() {
+      System.out.println("Super class");    
+   }
+}
+public class Example extends Parent {
+   void display()  // trying to override display() {
+      System.out.println("Sub class");  
+   }
+   public static void main(String[] args) {
+      Parent obj = new Example();
+      obj.display();
+   }
+}
+```
+This generates a compile time error. The output is as follows −
+```
+Example.java:10: error: display() in Example cannot override display() in Parent
+void display()  // trying to override display()
+     ^
+overridden method is static
+
+1 error
+```
 #### Q. What is the difference between aggregation and composition?
 #### Q. What is object cloning?
 #### Q. What is method overloading with type promotion?
