@@ -852,10 +852,6 @@ Output
 boolean
 Test
 ```
-
-#### Q. What is singleton class and how can we make a class singleton?
-#### Q. What is the numeric promotion?
-#### Q. Which API is provided by Java for operations on a set of objects?
 #### Q. Is delete, next, main, exit or null keyword in java?
 #### Q. What is the default value of the local variables?
 #### Q. How many types of constructors are used in Java?
