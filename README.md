@@ -727,8 +727,20 @@ public class Example {
 #### Q. Can we have multiple public classes in a java source file?
 A Java source file can have only one class declared as **public**, we cannot put two or more public classes together in a **.java** file. This is because of the restriction that the file name should be same as the name of the public class with **.java** extension. If we want to multiple classes under consideration are to be declared as public, we have to store them in separate source files and attach the package statement as the first statement in those source files.
 
-#### Q. What is Java Package and which package is imported by default?
 #### Q. What is the difference between abstract class and interface?
+Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods. Abstract class and interface both can't be instantiated.
+
+|Sl.No|Abstract class	            |Interface                        |
+|-----|-----------------------------|---------------------------------|
+| 01. |Abstract class can have abstract and non-abstract methods.|	Interface can have only abstract methods. Since Java 8, it can have default and static methods also.|
+| 02. |Abstract class doesn't support multiple inheritance.|	Interface supports multiple inheritance.|
+| 03. |Abstract class can have final, non-final, static and non-static variables.	|Interface has only static and final variables.|
+| 04. |Abstract class can provide the implementation of interface.|Interface can't provide the implementation of abstract class.|
+| 05. |The abstract keyword is used to declare abstract class.|The interface keyword is used to declare interface.|
+| 06. |An abstract class can extend another Java class and implement multiple Java interfaces.|An interface can extend another Java interface only.|
+| 07. |An abstract class can be extended using keyword "extends".|An interface can be implemented using keyword "implements".|
+| 08. |A Java abstract class can have class members like private, protected, etc.|Members of a Java interface are public by default.|
+
 #### Q. What are Wrapper classes?
 #### Q. What is Java Annotations?
 #### Q. What is Java Reflection API?
