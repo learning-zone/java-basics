@@ -904,7 +904,7 @@ If a method is declared as static, it is a member of a class rather than belongi
 
 * There are a few restrictions imposed on a static method
 * The static method cannot use non-static data member or invoke non-static method directly.
-* The this and super cannot be used in static context.
+* The `this` and `super` cannot be used in static context.
 * The static method can access only static type data (static type instance variable).
 * There is no need to create an object of the class to invoke the static method.
 * A static method cannot be overridden in a subclass
