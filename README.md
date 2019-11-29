@@ -673,7 +673,7 @@ public class CustomExceptionExample {
 			 System.out.println("File Close failed, just log it.");
 			 break;
 		  default:
-			 System.out.println("Unknown exception occured, lets log it for further debugging."+e.getMessage());
+			 System.out.println("Unknown exception occured," +e.getMessage());
 			 e.printStackTrace();
 		}
 	}
