@@ -630,6 +630,18 @@ public class CopyFile {
 }
 ```
 #### Q. What are the types of Exceptions? Explain the hierarchy of Java Exception classes?
+Exception is an error event that can happen during the execution of a program and disrupts its normal flow.
+
+**Types of Java Exceptions**  
+
+**1. Checked Exception**: The classes which directly inherit Throwable class except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.
+**2. Unchecked Exception**: The classes which inherit RuntimeException are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+**3. Error**: Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
+
+**Hierarchy of Java Exception classes**   
+The java.lang.Throwable class is the root class of Java Exception hierarchy which is inherited by two subclasses: Exception and Error. 
+
+![Java Exception](https://github.com/learning-zone/java-interview-questions/blob/master/assets/exception.png)
 
 #### Q. Can you access non static variable in static context?
 No, non-static variable cannot be referenced in a static context directly one needs to use object.
