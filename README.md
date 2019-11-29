@@ -783,7 +783,6 @@ Output
 20 20 20
 ```
 
-#### Q. What is Java Annotations?
 #### Q. What is Java Reflection API?
 #### Q. What is singleton class and how can we make a class singleton?
 #### Q. What is the numeric promotion?
