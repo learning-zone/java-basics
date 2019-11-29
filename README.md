@@ -618,7 +618,7 @@ public class CopyFile {
          while ((c = in.read()) != -1) {
             out.write(c);
          }
-      }finally {
+      } finally {
          if (in != null) {
             in.close();
          }
@@ -684,9 +684,9 @@ public class CustomExceptionExample {
 			fis = new FileInputStream(file);
 		} catch (FileNotFoundException e) {
 			throw new MyException(e.getMessage(),"FILE_NOT_FOUND_EXCEPTION");
-		}finally{
+		} finally {
 			try {
-				if(fis !=null)fis.close();
+				if(fis !=null) fis.close();
 			} catch (IOException e) {
 				throw new MyException(e.getMessage(),"FILE_CLOSE_EXCEPTION");
 			}
