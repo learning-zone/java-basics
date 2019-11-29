@@ -852,8 +852,9 @@ Output
 boolean
 Test
 ```
-#### Q. Is delete, next, main, exit or null keyword in java?
 #### Q. What is the default value of the local variables?
+There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
+
 #### Q. How many types of constructors are used in Java?
 #### Q. What are the restrictions that are applied to the Java static methods?
 #### Q. What is the difference between aggregation and composition?
