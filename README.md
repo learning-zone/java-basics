@@ -629,6 +629,8 @@ public class CopyFile {
    }
 }
 ```
+#### Q. What are the types of Exceptions? Explain the hierarchy of Java Exception classes?
+
 #### Q. Can you access non static variable in static context?
 No, non-static variable cannot be referenced in a static context directly one needs to use object.
 
@@ -737,7 +739,6 @@ No, non-static variable cannot be referenced in a static context directly one ne
 #### Q. What is the purpose of toString() method in Java?
 #### Q. What is UnsupportedOperationException?
 #### Q. What is difference between Error and Exception?
-#### Q. What are the types of Exceptions? Explain the hierarchy of Java Exception classes?
 #### Q. Explain about Exception Propagation.
 #### Q. What’s the base class of all exception classes?
 #### Q. What are important methods of Java Exception Class?
