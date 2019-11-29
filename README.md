@@ -725,6 +725,8 @@ public class Example {
 }
 ```
 #### Q. Can we have multiple public classes in a java source file?
+A Java source file can have only one class declared as **public**, we cannot put two or more public classes together in a **.java** file. This is because of the restriction that the file name should be same as the name of the public class with **.java** extension. If we want to multiple classes under consideration are to be declared as public, we have to store them in separate source files and attach the package statement as the first statement in those source files.
+
 #### Q. What is Java Package and which package is imported by default?
 #### Q. What is the difference between abstract class and interface?
 #### Q. What are Wrapper classes?
