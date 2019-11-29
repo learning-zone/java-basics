@@ -703,8 +703,27 @@ No, non-static variable cannot be referenced in a static context directly one ne
 
 **System Class**: The purpose of the System class is to provide access to system resources. It contains accessibility to standard input, standart output, error output streams, current time in millis, terminating the application, etc.
 
-#### Q. What are FilterStreams?
 #### Q. What are assertions in Java?
+An assertion allows testing the correctness of any assumptions that have been made in the program. Assertion is achieved using the assert statement in Java. While executing assertion, it is believed to be true. If it fails, JVM throws an error named AssertionError. It is mainly used for testing purposes during development.
+
+The assert statement is used with a Boolean expression and can be written in two different ways.
+```
+// First way 
+assert expression;
+
+// Second way
+assert expression1 : expression2;
+```
+Example:
+```java
+public class Example {
+   public static void main(String[] args) {
+      int age = 14;
+      assert age <= 18 : "Cannot Vote";
+      System.out.println("The voter's age is " + age);
+   }
+}
+```
 #### Q. Can we have multiple public classes in a java source file?
 #### Q. What is Java Package and which package is imported by default?
 #### Q. What is the difference between abstract class and interface?
