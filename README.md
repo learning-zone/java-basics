@@ -856,6 +856,49 @@ Test
 There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
 
 #### Q. How many types of constructors are used in Java?
+In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling constructor, memory for the object is allocated in the memory.
+
+**Types of Java Constructors**  
+
+* Default Constructor (or) no-arg Constructor
+* Parameterized Constructor
+
+Example: Default Constructor (or) no-arg constructor
+```java
+public class Car 
+{
+    Car() {
+      System.out.println("Default Constructor of Car class called");
+    }
+    public static void main(String args[]) {
+      //Calling the default constructor
+      Car c = new Car();
+    }
+}
+```
+Output
+```
+Default Constructor of Car class called
+```
+Example: Parameterized Constructor   
+```java
+public class Car 
+{
+    String carColor;
+    Car(String carColor) {
+        this.carColor = carColor;
+    }
+    
+    public void disp() {
+        System.out.println("Color of the Car is : "+carColor);
+    }
+    public static void main(String args[]) {
+        //Calling the parameterized constructor
+        Car c = new Car("Blue");
+        c.disp();
+    }
+}
+```
 #### Q. What are the restrictions that are applied to the Java static methods?
 #### Q. What is the difference between aggregation and composition?
 #### Q. What is object cloning?
