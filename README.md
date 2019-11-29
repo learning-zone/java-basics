@@ -730,7 +730,7 @@ A Java source file can have only one class declared as **public**, we cannot put
 #### Q. What is the difference between abstract class and interface?
 Abstract class and interface both are used to achieve abstraction where we can declare the abstract methods. Abstract class and interface both can't be instantiated.
 
-|Sl.No|Abstract class	            |Interface                        |
+|Sl.No|Abstract Class	            |Interface                        |
 |-----|-----------------------------|---------------------------------|
 | 01. |Abstract class can have abstract and non-abstract methods.|	Interface can have only abstract methods. Since Java 8, it can have default and static methods also.|
 | 02. |Abstract class doesn't support multiple inheritance.|	Interface supports multiple inheritance.|
