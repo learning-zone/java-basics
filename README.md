@@ -1030,8 +1030,18 @@ class ABC extends XYZ {
    }  
 }
 ```
-#### Q. How to make a read-only and write-only class in Java?
 #### Q. What is the static import?
+The static import feature of Java 5 facilitate the java programmer to access any static member of a class directly. There is no need to qualify it by the class name.
+```java
+import static java.lang.System.*;    
+class StaticImportExample {
+
+  public static void main(String args[]) {    
+   out.println("Hello");//Now no need of System.out  
+   out.println("Java");  
+  }   
+}  
+```
 #### Q. Name some classes present in java.util.regex package.
 #### Q. What is a nested class? Is there any difference between nested classes and inner classes?
 #### Q. What is the nested interface?
