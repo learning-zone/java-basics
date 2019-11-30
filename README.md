@@ -965,7 +965,6 @@ class Engine {
     private String type;
 }
 ```
-#### Q. What is object cloning?
 #### Q. What is method overloading with type promotion?
 #### Q. Can we override the private methods?
 #### Q. Can we change the scope of the overridden method in the subclass?
