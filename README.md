@@ -966,6 +966,70 @@ class Engine {
 }
 ```
 #### Q. What is the final variable, final class, and final blank variable?
+**Final Variable**: final variables are nothing but constants. We cannot change the value of a final variable once it is initialized.
+```java
+class Demo {  
+
+   final int MAX_VALUE = 99;
+   void myMethod() {  
+      MAX_VALUE = 101;
+   }  
+   public static void main(String args[]) {  
+      Demo obj = new  Demo();  
+      obj.myMethod();  
+   }  
+}
+```
+Output
+```
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The final field Demo.MAX_VALUE cannot be assigned
+
+	at beginnersbook.com.Demo.myMethod(Details.java:6)
+	at beginnersbook.com.Demo.main(Details.java:10)
+```
+**Blank final variable**: A final variable that is not initialized at the time of declaration is known as blank final variable. We must initialize the blank final variable in constructor of the class otherwise it will throw a compilation error (Error: `variable MAX_VALUE might not have been initialized`).
+```java
+class Demo {  
+   //Blank final variable
+   final int MAX_VALUE;
+	 
+   Demo() {
+      //It must be initialized in constructor
+      MAX_VALUE = 100;
+   }
+   void myMethod() {  
+      System.out.println(MAX_VALUE);
+   }  
+   public static void main(String args[]) {  
+      Demo obj = new  Demo();  
+      obj.myMethod();  
+   }  
+}
+```
+Output
+```
+100
+```
+**Final Method**: A final method cannot be overridden. Which means even though a sub class can call the final method of parent class without any issues but it cannot override it.
+```java
+class XYZ {  
+   final void demo() {
+      System.out.println("XYZ Class Method");
+   }  
+}  
+	     
+class ABC extends XYZ {  
+   void demo() {
+      System.out.println("ABC Class Method");
+   }  
+	     
+   public static void main(String args[]) {  
+      ABC obj= new ABC();  
+      obj.demo();  
+   }  
+}
+```
 #### Q. How to make a read-only and write-only class in Java?
 #### Q. What is the static import?
 #### Q. Name some classes present in java.util.regex package.
