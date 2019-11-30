@@ -1357,6 +1357,24 @@ java.io.NotSerializableException: This class cannot be Serialized
 | 05.|Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
 
 #### Q. What are the ways to instantiate the Class class?
+**1. Using new keyword**
+```java
+MyObject object = new MyObject();
+```
+**2. Using Class.forName()**
+```java
+MyObject object = (MyObject) Class.forName("subin.rnd.MyObject").newInstance();
+```
+**3. Using clone()**
+```java
+MyObject anotherObject = new MyObject();
+MyObject object = (MyObject) anotherObject.clone();
+```
+**4. Using object deserialization**
+```java
+ObjectInputStream inStream = new ObjectInputStream(anInputStream );
+MyObject object = (MyObject) inStream.readObject();
+```
 #### Q. What is the purpose of using javap?
 #### Q. What are autoboxing and unboxing? When does it occur?
 #### Q. What is a native method?
