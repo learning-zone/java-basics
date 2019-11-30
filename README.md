@@ -1356,17 +1356,11 @@ java.io.NotSerializableException: This class cannot be Serialized
 | 04.|It’s hard to analyze and modify class structure because any change may break the serialization.|	It’s more easy to analyze and modify class structure because of complete control over serialization logic.|
 | 05.|Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
 
-#### Q. How do I convert a numeric IP address like 192.18.97.39 into a hostname like java.sun.com?
 #### Q. What is the purpose of using java.lang.Class class?
 #### Q. What are the ways to instantiate the Class class?
 #### Q. What is the purpose of using javap?
 #### Q. What are autoboxing and unboxing? When does it occur?
 #### Q. What is a native method?
-#### Q. What comes to mind when someone mentions a shallow copy in Java?
-#### Q. What is Locale?
-#### Q. What is the right data type to represent a price in Java?
-#### Q. What will happen if you put return statement or System.exit () on try or catch block? Will finally block execute?
-#### Q. What will happen if we put a key object in a HashMap which is already there?
 #### Q. If a method throws NullPointerException in the superclass, can we override it with a method which throws RuntimeException?
 #### Q. What is immutable object? Can you write immutable object?
 #### Q. What is runtime polymorphism or dynamic method dispatch?
