@@ -1347,6 +1347,15 @@ java.io.NotSerializableException: This class cannot be Serialized
     at SerDeser11throwNotSerExc.SerializeConstructorCheck.main(SerializeConstructorCheck.java:51)
 ```
 #### Q. What is the difference between Serializable and Externalizable interface?
+
+|Sl.No |SERIALIZABLE |	EXTERNALIZABLE        |
+|----|----------------|-----------------------|
+| 01.|Serializable is a marker interface i.e. does not contain any method.|	Externalizable interface contains two methods writeExternal() and readExternal() which implementing classes MUST override.|
+| 02.|Serializable interface pass the responsibility of serialization to JVM and it’s default algorithm.|	Externalizable provides control of serialization logic to programmer – to write custom logic.|
+| 03.|Mostly, default serialization is easy to implement, but has higher performance cost.|Serialization done using Externalizable, add more responsibility to programmer but often result in better performance.|
+| 04.|It’s hard to analyze and modify class structure because any change may break the serialization.|	It’s more easy to analyze and modify class structure because of complete control over serialization logic.|
+| 05.|Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
+
 #### Q. How do I convert a numeric IP address like 192.18.97.39 into a hostname like java.sun.com?
 #### Q. What is the purpose of using java.lang.Class class?
 #### Q. What are the ways to instantiate the Class class?
