@@ -1072,6 +1072,26 @@ public class RegexExample {
 }  
 ```
 #### Q. How will you invoke any external process in Java?
+We can invoke the external process in Java using **exec()** method of **Runtime Class**.
+```java
+class ExternalProcessExample 
+{ 
+    public static void main(String[] args) { 
+        try { 
+            // Command to create an external process 
+            String command = "C:\Program Files (x86)"+ 
+                 "\Google\Chrome\Application\chrome.exe"; 
+  
+            // Running the above command 
+            Runtime run  = Runtime.getRuntime(); 
+            Process proc = run.exec(command); 
+        } catch (IOException e) { 
+            e.printStackTrace(); 
+        } 
+    } 
+} 
+```
+
 #### Q. What are the super most classes for all the streams?
 #### Q. What is the purpose of using BufferedInputStream and BufferedOutputStream classes?
 #### Q. How to set the Permissions to a file in Java?
