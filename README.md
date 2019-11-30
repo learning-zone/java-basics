@@ -1091,9 +1091,93 @@ class ExternalProcessExample
     } 
 } 
 ```
-
-#### Q. What are the super most classes for all the streams?
 #### Q. What is the purpose of using BufferedInputStream and BufferedOutputStream classes?
+`BufferedInputStream` and `BufferedOutputStream` class is used for buffering an input and output stream while reading and writing, respectively. It internally uses buffer to store data. It adds more efficiency than to write data directly into a stream. So, it makes the performance fast.
+
+**BufferedInputStreamExample.java**
+```java
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class BufferedInputStreamExample {
+
+	public static void main(String[] args) {
+		File file = new File("file.txt");
+		FileInputStream fileInputStream = null;
+		BufferedInputStream bufferedInputStream = null;
+
+		try {
+			fileInputStream = new FileInputStream(file);
+			bufferedInputStream = new BufferedInputStream(fileInputStream);
+			// Create buffer
+			byte[] buffer = new byte[1024];
+			int bytesRead = 0;
+			while ((bytesRead = bufferedInputStream.read(buffer)) != -1) {
+				System.out.println(new String(buffer, 0, bytesRead));
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (fileInputStream != null) {
+					fileInputStream.close();
+				}
+				if (bufferedInputStream != null) {
+					bufferedInputStream.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+```
+Output
+```
+This is an example of reading data from file
+```
+**BufferedOutputStreamExample.java**  
+```java
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class BufferedOutputStreamExample {
+
+	public static void main(String[] args) {
+		File file=new File("outfile.txt");
+		FileOutputStream fileOutputStream=null;
+		BufferedOutputStream bufferedOutputStream=null;
+		try {
+			fileOutputStream = new FileOutputStream(file);
+			bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
+			bufferedOutputStream.write("This is an example of writing data to a file".getBytes());
+			bufferedOutputStream.flush();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(fileOutputStream!=null) {
+					fileOutputStream.close();
+				}
+				if(bufferedOutputStream!=null) {
+					bufferedOutputStream.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+```
+Output 
+```
+This is an example of writing data to a file
+```
 #### Q. How to set the Permissions to a file in Java?
 #### Q. In Java, How many ways you can take input from the console?
 #### Q. How can you avoid serialization in child class if the base class is implementing the Serializable interface?
