@@ -1356,7 +1356,6 @@ java.io.NotSerializableException: This class cannot be Serialized
 | 04.|It’s hard to analyze and modify class structure because any change may break the serialization.|	It’s more easy to analyze and modify class structure because of complete control over serialization logic.|
 | 05.|Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
 
-#### Q. What is the purpose of using java.lang.Class class?
 #### Q. What are the ways to instantiate the Class class?
 #### Q. What is the purpose of using javap?
 #### Q. What are autoboxing and unboxing? When does it occur?
