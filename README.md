@@ -965,8 +965,6 @@ class Engine {
     private String type;
 }
 ```
-#### Q. What is method overloading with type promotion?
-#### Q. Can we override the private methods?
 #### Q. Can we change the scope of the overridden method in the subclass?
 #### Q. What is the final variable, final class, and final blank variable?
 #### Q. How to make a read-only and write-only class in Java?
