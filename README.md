@@ -1179,6 +1179,47 @@ Output
 This is an example of writing data to a file
 ```
 #### Q. How to set the Permissions to a file in Java?
+Java 7 has introduced PosixFilePermission Enum and **java.nio.file.Files** includes a method setPosixFilePermissions(Path path, `Set<PosixFilePermission> perms`) that can be used to set file permissions easily.
+```java
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.attribute.PosixFilePermission;
+import java.util.HashSet;
+import java.util.Set;
+
+public class FilePermissions {
+
+    public static void main(String[] args) throws IOException {
+        File file = new File("/Users/file.txt");
+               
+        //change permission to 777 for all the users
+        //no option for group and others
+        file.setExecutable(true, false);
+        file.setReadable(true, false);
+        file.setWritable(true, false);
+        
+        //using PosixFilePermission to set file permissions 777
+        Set<PosixFilePermission> perms = new HashSet<PosixFilePermission>();
+        //add owners permission
+        perms.add(PosixFilePermission.OWNER_READ);
+        perms.add(PosixFilePermission.OWNER_WRITE);
+        perms.add(PosixFilePermission.OWNER_EXECUTE);
+        //add group permissions
+        perms.add(PosixFilePermission.GROUP_READ);
+        perms.add(PosixFilePermission.GROUP_WRITE);
+        perms.add(PosixFilePermission.GROUP_EXECUTE);
+        //add others permissions
+        perms.add(PosixFilePermission.OTHERS_READ);
+        perms.add(PosixFilePermission.OTHERS_WRITE);
+        perms.add(PosixFilePermission.OTHERS_EXECUTE);
+        
+        Files.setPosixFilePermissions(Paths.get("/Users/run.sh"), perms);
+    }
+}
+```
+
 #### Q. In Java, How many ways you can take input from the console?
 #### Q. How can you avoid serialization in child class if the base class is implementing the Serializable interface?
 #### Q. Can a Serialized object be transferred via network?
