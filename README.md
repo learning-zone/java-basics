@@ -1148,7 +1148,7 @@ import java.io.IOException;
 public class BufferedOutputStreamExample {
 
 	public static void main(String[] args) {
-		File file=new File("outfile.txt");
+		File file = new File("outfile.txt");
 		FileOutputStream fileOutputStream=null;
 		BufferedOutputStream bufferedOutputStream=null;
 		try {
