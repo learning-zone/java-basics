@@ -1161,10 +1161,10 @@ public class BufferedOutputStreamExample {
 			e.printStackTrace();
 		} finally {
 			try {
-				if(fileOutputStream!=null) {
+				if(fileOutputStream != null) {
 					fileOutputStream.close();
 				}
-				if(bufferedOutputStream!=null) {
+				if(bufferedOutputStream != null) {
 					bufferedOutputStream.close();
 				}
 			} catch (IOException e) {
