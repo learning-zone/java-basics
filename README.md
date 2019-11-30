@@ -1346,8 +1346,6 @@ java.io.NotSerializableException: This class cannot be Serialized
     at java.io.ObjectOutputStream.writeObject(Unknown Source)
     at SerDeser11throwNotSerExc.SerializeConstructorCheck.main(SerializeConstructorCheck.java:51)
 ```
-
-#### Q. Can a Serialized object be transferred via network?
 #### Q. What is the difference between Serializable and Externalizable interface?
 #### Q. How do I convert a numeric IP address like 192.18.97.39 into a hostname like java.sun.com?
 #### Q. What is the purpose of using java.lang.Class class?
