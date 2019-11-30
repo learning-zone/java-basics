@@ -1043,8 +1043,6 @@ class StaticImportExample {
 }  
 ```
 #### Q. Name some classes present in java.util.regex package.
-#### Q. What is a nested class? Is there any difference between nested classes and inner classes?
-#### Q. What is the nested interface?
 #### Q. How will you invoke any external process in Java?
 #### Q. What are the super most classes for all the streams?
 #### Q. What is the purpose of using BufferedInputStream and BufferedOutputStream classes?
