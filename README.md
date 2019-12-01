@@ -1513,8 +1513,17 @@ DOM and SAX parser are extensively used to read and parse XML file in java and h
 |Load	            |Load entire document in memory	|does not load entire document.                    |
 |suitable	      |better suitable for smaller and efficient memory|	SAX is suitable for larger XML doc|
 
-#### Q. Define a StringJoiner and write a sample code?
 #### Q. What is the difference between creating String as new() and literal?
+When you create String object using `new()` operator, it always create a new object in heap memory. On the other hand, if you create object using String literal syntax e.g. "Java", it may return an existing object from String pool (a cache of String object in Perm gen space, which is now moved to heap space in recent Java release), if it's already exists. Otherwise it will create a new string object and put in string pool for future re-use.
+```java
+String a = "abc"; 
+String b = "abc";
+System.out.println(a == b);  // true
+
+String c = new String("abc");
+String d = new String("abc");
+System.out.println(c == d);  // false
+```
 #### Q. Why is char array better than String for storing password?
 #### Q. Why are the objects immutable in java?
 #### Q. How many ways can we create the string object?
