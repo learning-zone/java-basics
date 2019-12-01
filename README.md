@@ -1549,6 +1549,30 @@ public final class Employee {
 }  
 ```
 #### Q. What is difference between String, StringBuffer and StringBuilder?
+**Mutability Difference:**  `String` is **immutable**, if you try to alter their values, another object gets created, whereas `StringBuffer` and `StringBuilder` are **mutable** so they can change their values.
+
+**Thread-Safety Difference:** The difference between `StringBuffer` and `StringBuilder` is that StringBuffer is thread-safe. So when the application needs to be run only in a single thread then it is better to use StringBuilder. StringBuilder is more efficient than StringBuffer.
+
+Example: StringBuffer 
+```java
+public class BufferTest{  
+   public static void main(String[] args){  
+        StringBuffer buffer=new StringBuffer("Hello");  
+        buffer.append(" World");  
+        System.out.println(buffer);  
+   }  
+}  
+```
+Example: StringBuilder 
+```java
+public class BuilderTest{  
+    public static void main(String[] args){  
+        StringBuilder builder=new StringBuilder("Hello");  
+        builder.append(" World");  
+        System.out.println(builder);  
+    }  
+}  
+```
 #### Q. What is a Memory Leak? How can a memory leak appear in garbage collected language?
 #### Q. How many objects will be created with string initialization code?
 #### Q. How can we make String upper case or lower case?
