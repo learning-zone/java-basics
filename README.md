@@ -1386,7 +1386,7 @@ class Simple {
 }  
 ```
 ```
-cmd> javap Simple  
+cmd> javap Simple.class  
 ```
 Output
 ```
