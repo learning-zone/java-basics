@@ -1610,37 +1610,15 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 * Through finalize() Methods
 * Calling String.intern() on Long String
 
-#### Q. How many objects will be created with string initialization code?
-#### Q. How can we make String upper case or lower case?
-#### Q. What is String subSequence method?
-#### Q. How to convert String to char and vice versa?
-#### Q. How to convert String to byte array and vice versa?
-#### Q. Can we use String in switch case?
-#### Q. How to Split String in java?
-#### Q. Why Char array is preferred over String for storing password?
-#### Q. How do you check if two Strings are equal in Java?
-#### Q. Does String is thread-safe in Java?
 #### Q. Why String is popular HashMap key in Java?
-#### Q. How do you check if two Strings are equal in Java?
-#### Q. What does String intern() method do?
-#### Q. How to convert String to int and vice versa?
-#### Q. How to convert String to Date in java?
 #### Q. How do you convert bytes to String?
 #### Q. How to Optimize Java String Creation?
-#### Q. String comparison with equals() and '=='?
-#### Q. How do you convert a String(YYYYMMDD) to date in Java?
 #### Q. Why java uses the concept of the string literal?
-#### Q. What is the purpose of toString() method in Java?
 #### Q. What is UnsupportedOperationException?
 #### Q. What is difference between Error and Exception?
 #### Q. Explain about Exception Propagation.
-#### Q. What’s the base class of all exception classes?
-#### Q. What are important methods of Java Exception Class?
-#### Q. How to write custom exception in Java?
 #### Q. What are different scenarios causing “Exception in thread main”?
 #### Q. What happens when exception is thrown by main method?
-#### Q. Provide some Java Exception Handling Best Practices?
-#### Q. What are the differences between Checked Exception and Unchecked Exception?
 #### Q. What purpose does the keywords final, finally, and finalize, fulfill?
 #### Q. What are the differences between throw and throws?
 #### Q. What is the base class for Error and Exception?
