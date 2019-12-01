@@ -1524,11 +1524,7 @@ String c = new String("abc");
 String d = new String("abc");
 System.out.println(c == d);  // false
 ```
-#### Q. Why is char array better than String for storing password?
-#### Q. Why are the objects immutable in java?
-#### Q. How many ways can we create the string object?
 #### Q. How can we create an immutable class in Java?
-#### Q. Why CharArray() is preferred over String to store the password?
 #### Q. Difference between String, StringBuffer and StringBuilder?
 #### Q. What is a Memory Leak? How can a memory leak appear in garbage collected language?
 #### Q. How many objects will be created with string initialization code?
