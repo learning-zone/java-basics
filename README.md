@@ -1578,8 +1578,8 @@ The standard definition of a memory leak is a scenario that occurs when **object
 
 Some tools that do memory management to identifies useless objects or memeory leaks like:
 
-* HP OVO
-* HP J METER
+* HP OpenView
+* HP JMETER
 * JProbe
 * IBM Tivoli
 
