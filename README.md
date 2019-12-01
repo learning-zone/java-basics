@@ -1513,7 +1513,6 @@ DOM and SAX parser are extensively used to read and parse XML file in java and h
 |Load	            |Load entire document in memory	|does not load entire document.                    |
 |suitable	      |better suitable for smaller and efficient memory|	SAX is suitable for larger XML doc|
 
-#### Q. Difference between Static binding and Dynamic binding in java ?
 #### Q. Define a StringJoiner and write a sample code?
 #### Q. What is the difference between creating String as new() and literal?
 #### Q. Why is char array better than String for storing password?
