@@ -1481,6 +1481,27 @@ public class DateContainer {
 }
 ```
 #### Q. The difference between Inheritance and Composition?
+Though both Inheritance and Composition provides code reusablility, main difference between Composition and Inheritance in Java is that Composition allows reuse of code without extending it but for Inheritance you must extend the class for any reuse of code or functionality. Inheritance is an **"is-a"** relationship. Composition is a **"has-a"**.
+
+Example: Inheritance 
+```java
+class Fruit {
+   //...
+}
+class Apple extends Fruit {
+   //...
+}
+```
+Example: Composition 
+```java
+class Fruit {
+   //...
+}
+class Apple {
+   private Fruit fruit = new Fruit();
+   //...
+}
+```
 #### Q. The difference between nested static class and top level class?
 #### Q. The difference between DOM and SAX parser in Java?
 #### Q. Difference between Static binding and Dynamic binding in java ?
