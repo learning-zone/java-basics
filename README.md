@@ -1397,6 +1397,33 @@ class Simple {
 }  
 ```
 #### Q. What are autoboxing and unboxing? When does it occur?
+The automatic conversion of primitive data types into its equivalent Wrapper type is known as boxing and opposite operation is known as unboxing.
+
+Example: Autoboxing
+```java
+class BoxingExample1 {  
+   public static void main(String args[]) {  
+      int a = 50;  
+      Integer a2 = new Integer(a); //Boxing  
+      Integer a3 = 5; //Boxing  
+      
+      System.out.println(a2+" "+a3);  
+   }   
+}  
+```
+
+Example: Unboxing 
+```java
+class UnboxingExample1 {  
+   public static void main(String args[]) {  
+      Integer i = new Integer(50);  
+      int a = i;  
+          
+      System.out.println(a);  
+   }   
+} 
+```
+
 #### Q. What is a native method?
 #### Q. If a method throws NullPointerException in the superclass, can we override it with a method which throws RuntimeException?
 #### Q. What is immutable object? Can you write immutable object?
