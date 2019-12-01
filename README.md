@@ -1458,7 +1458,6 @@ Output
 ```
 4
 ```
-#### Q. If a method throws NullPointerException in the superclass, can we override it with a method which throws RuntimeException?
 #### Q. What is immutable object? Can you write immutable object?
 #### Q. What is runtime polymorphism or dynamic method dispatch?
 #### Q. What is difference between dependency injection and factory design pattern?
