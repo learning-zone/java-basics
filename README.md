@@ -1459,6 +1459,27 @@ Output
 4
 ```
 #### Q. What is immutable object? Can you write immutable object?
+Immutable objects are objects that don't change. A Java immutable object must have all its fields be internal, private final fields. It must not implement any setters. It needs a constructor that takes a value for every single field.
+
+**Creating an Immutable Object**  
+
+* Don't add any setter method
+* Declare all fields final and private
+* If a field is a mutable object create defensive copies of it for getter methods
+* If a mutable object passed to the constructor must be assigned to a field create a defensive copy of it
+* Don't allow subclasses to override methods.
+
+```java
+public class DateContainer {
+  private final Date date;
+  public DateContainer() {
+      this.date = new Date();
+  }
+  public Date getDate() {
+    return new Date(date.getTime());
+  }
+}
+```
 #### Q. What is runtime polymorphism or dynamic method dispatch?
 #### Q. What is difference between dependency injection and factory design pattern?
 #### Q. Difference between Adapter and Decorator pattern?
