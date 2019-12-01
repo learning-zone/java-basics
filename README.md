@@ -1579,9 +1579,9 @@ The standard definition of a memory leak is a scenario that occurs when **object
 Some tools that do memory management to identifies useless objects or memeory leaks like:
 
 * <a href="https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-c00990822&docLocale=en_US">HP OpenView</a>
-* HP JMETER
-* JProbe
-* IBM Tivoli
+* <a href="https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=HPJMETER">HP JMETER</a>
+* <a href="http://www.javaperformancetuning.com/tools/jprobe/index.shtml">JProbe</a>
+* <a href="https://www.ibm.com/support/knowledgecenter/en/SSTFXA_6.3.0/com.ibm.itm.doc_6.3/install/itm_over.htm">IBM Tivoli</a>
 
 ```java
 // Java Program to illustrate memory leaks 
