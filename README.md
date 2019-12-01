@@ -1502,7 +1502,6 @@ class Apple {
    //...
 }
 ```
-#### Q. The difference between nested static class and top level class?
 #### Q. The difference between DOM and SAX parser in Java?
 #### Q. Difference between Static binding and Dynamic binding in java ?
 #### Q. Define a StringJoiner and write a sample code?
