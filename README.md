@@ -1611,7 +1611,6 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 * Calling String.intern() on Long String
 
 #### Q. Why String is popular HashMap key in Java?
-#### Q. How do you convert bytes to String?
 #### Q. How to Optimize Java String Creation?
 #### Q. Why java uses the concept of the string literal?
 #### Q. What is UnsupportedOperationException?
@@ -1627,26 +1626,18 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 #### Q. Can an exception be rethrown?
 #### Q. Can subclass overriding method declare an exception if parent class method doesn't throw an exception?
 #### Q. What will happen to the Exception object after exception handling?
-#### Q. How can an object be unreferenced?
 #### Q. What is the purpose of garbage collection in Java, and when is it used?
 #### Q. The difference between Serial and Parallel Garbage Collector?
 #### Q. A difference between WeakReference and SoftReference in Java?
 #### Q. How do you find memory usage from Java program? How much percent of the heap is used?
-#### Q. What is -XX:+UseCompressedOops JVM option? Why use it?
-#### Q. How do you find if JVM is 32-bit or 64-bit from Java Program?
-#### Q. What is the maximum heap size of 32-bit and 64-bit JVM?
-#### Q. What's the difference between "a == b" and "a.equals(b)"?
 #### Q. What is a compile time constant in Java? What is the risk of using it?
-#### Q. What is the size of an int variable in 32-bit and 64-bit JVM?
 #### Q. If an object reference is set to null, will the Garbage Collector immediately free the memory held by that object?
 #### Q. What is the difference between Serial and Throughput Garbage collector?
 #### Q. Does Garbage collection occur in permanent generation space in JVM?
-#### Q. When does an Object becomes eligible for Garbage collection in Java?
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
 #### Q. What is the difference between @Before and @BeforeClass annotation?
-#### Q. How to check if a String contains only numeric digits?
 #### Q. What is difference between dependency injection and factory design pattern?
 #### Q. Difference between Adapter and Decorator pattern?
 #### Q. Difference between Adapter and Proxy Pattern?
