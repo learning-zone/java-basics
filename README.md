@@ -1503,6 +1503,16 @@ class Apple {
 }
 ```
 #### Q. The difference between DOM and SAX parser in Java?
+DOM and SAX parser are extensively used to read and parse XML file in java and have their own set of advantage and disadvantage. 
+
+|                 |DOM (Document Object Model)     |Parser	SAX (Simple API for XML) Parser           |
+|-----------------|--------------------------------|--------------------------------------------------|
+|Abbreviation	   |DOM stands for Document Object Model|	SAX stands for Simple API for XML Parsing    |
+|type	            |Load entire memory and keep in tree structure|	event based parser                  |
+|size of Document	|good for smaller size	         |good to choose for larger size of file.           |
+|Load	            |Load entire document in memory	|does not load entire document.                    |
+|suitable	      |better suitable for smaller and efficient memory|	SAX is suitable for larger XML doc|
+
 #### Q. Difference between Static binding and Dynamic binding in java ?
 #### Q. Define a StringJoiner and write a sample code?
 #### Q. What is the difference between creating String as new() and literal?
