@@ -1480,23 +1480,9 @@ public class DateContainer {
   }
 }
 ```
-#### Q. What is runtime polymorphism or dynamic method dispatch?
-#### Q. What is difference between dependency injection and factory design pattern?
-#### Q. Difference between Adapter and Decorator pattern?
-#### Q. Difference between Adapter and Proxy Pattern?
-#### Q. What is Template method pattern?
-#### Q. When do you use Visitor design pattern?
-#### Q. When do you use Composite design pattern?
 #### Q. The difference between Inheritance and Composition?
-#### Q. Difference between Abstract factory and Prototype design pattern?
-#### Q. The difference between nested public static class and a top level class in Java?
-#### Q. Give me an example of design pattern which is based upon open closed principle?
-#### Q. Can you explain Liskov Substitution principle?
-#### Q. What is Law of Demeter violation? Why it matters?
-#### Q. When do you use Flyweight pattern?
 #### Q. The difference between nested static class and top level class?
 #### Q. The difference between DOM and SAX parser in Java?
-#### Q. What is the difference between an object-oriented programming language and object-based programming language?
 #### Q. Difference between Static binding and Dynamic binding in java ?
 #### Q. Define a StringJoiner and write a sample code?
 #### Q. What is the difference between creating String as new() and literal?
@@ -1569,3 +1555,17 @@ public class DateContainer {
 #### Q. Which unit testing libraries you have used for testing Java programs?
 #### Q. What is the difference between @Before and @BeforeClass annotation?
 #### Q. How to check if a String contains only numeric digits?
+#### Q. What is difference between dependency injection and factory design pattern?
+#### Q. Difference between Adapter and Decorator pattern?
+#### Q. Difference between Adapter and Proxy Pattern?
+#### Q. What is Template method pattern?
+#### Q. When do you use Visitor design pattern?
+#### Q. When do you use Composite design pattern?
+#### Q. Difference between Abstract factory and Prototype design pattern?
+#### Q. Can you explain Liskov Substitution principle?
+#### Q. Give me an example of design pattern which is based upon open closed principle?
+#### Q. What is Law of Demeter violation? Why it matters?
+#### Q. When do you use Flyweight pattern?
+
+
+
