@@ -1423,8 +1423,41 @@ class UnboxingExample1 {
    }   
 } 
 ```
-
 #### Q. What is a native method?
+A native method is a Java method (either an instance method or a class method) whose implementation is also written in another programming language such as C/C++. Moreover, a method marked as native cannot have a body and should end with a semicolon:
+
+**Main.java**
+```java
+public class Main {
+   public native int intMethod(int i);
+   public static void main(String[] args) {
+      System.loadLibrary("Main");
+      System.out.println(new Main().intMethod(2));
+   }
+}
+```
+**Main.c**
+```c
+#include <jni.h>
+#include "Main.h"
+
+JNIEXPORT jint JNICALL Java_Main_intMethod(
+    JNIEnv *env, jobject obj, jint i) {
+  return i * i;
+}
+```
+**Compile and run**  
+```
+javac Main.java
+javah -jni Main
+gcc -shared -fpic -o libMain.so -I${JAVA_HOME}/include \
+  -I${JAVA_HOME}/include/linux Main.c
+java -Djava.library.path=. Main
+```
+Output
+```
+4
+```
 #### Q. If a method throws NullPointerException in the superclass, can we override it with a method which throws RuntimeException?
 #### Q. What is immutable object? Can you write immutable object?
 #### Q. What is runtime polymorphism or dynamic method dispatch?
