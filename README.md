@@ -1623,8 +1623,7 @@ Since String is immutable, its hashcode is cached at the time of creation and it
 |Consequences           |As the error is detected the program will terminated abnormally.|As an exception is detected, it is thrown and caught by the "throw" and "catch" keywords correspondingly.|
 |Types	               |Errors are classified as unchecked type.|Exceptions are classified as checked or unchecked type.|
 |Package	               |In Java, errors are defined "java.lang.Error" package.|In Java, an exceptions are defined in"java.lang.Exception".|
-|Example	               |OutOfMemory, StackOverFlow.	            |Checked Exceptions : NoSuchMethod, ClassNotFound.
-Unchecked Exceptions : NullPointer, IndexOutOfBounds. |
+|Example	               |OutOfMemory, StackOverFlow.|Checked Exceptions: NoSuchMethod, ClassNotFound.Unchecked Exceptions: NullPointer, IndexOutOfBounds.|
 
 #### Q. Explain about Exception Propagation.
 #### Q. What are different scenarios causing “Exception in thread main”?
