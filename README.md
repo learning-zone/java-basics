@@ -1611,6 +1611,8 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 * Calling `String.intern()` on Long String
 
 #### Q. Why String is popular HashMap key in Java?
+Since String is immutable, its hashcode is cached at the time of creation and it doesn’t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
+
 #### Q. How to Optimize Java String Creation?
 #### Q. Why java uses the concept of the string literal?
 #### Q. What is UnsupportedOperationException?
