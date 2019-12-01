@@ -1603,12 +1603,12 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 
 **Types of Memory Leaks in Java**  
 
-* Memory Leak Through static Fields
-* Unclosed Resources
-* Adding Objects With no hashCode() and equals() Into a HashSet
-* Inner Classes That Reference Outer Classes
-* Through finalize() Methods
-* Calling String.intern() on Long String
+* Memory Leak through static Fields
+* Unclosed Resources/connections
+* Adding Objects With no `hashCode()` and `equals()` Into a HashSet
+* Inner Classes that Reference Outer Classes
+* Through `finalize()` Methods
+* Calling `String.intern()` on Long String
 
 #### Q. Why String is popular HashMap key in Java?
 #### Q. How to Optimize Java String Creation?
