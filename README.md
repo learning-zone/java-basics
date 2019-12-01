@@ -1548,7 +1548,7 @@ public final class Employee {
    }
 }  
 ```
-#### Q. Difference between String, StringBuffer and StringBuilder?
+#### Q. What is difference between String, StringBuffer and StringBuilder?
 #### Q. What is a Memory Leak? How can a memory leak appear in garbage collected language?
 #### Q. How many objects will be created with string initialization code?
 #### Q. How can we make String upper case or lower case?
