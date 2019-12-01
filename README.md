@@ -1494,8 +1494,6 @@ public class DateContainer {
 #### Q. Difference between String, StringBuffer and StringBuilder?
 #### Q. What is a Memory Leak? How can a memory leak appear in garbage collected language?
 #### Q. How many objects will be created with string initialization code?
-#### Q. What is String in Java? How does String work in Java? String is a data type?
-#### Q. What are different ways to create String Object?
 #### Q. How can we make String upper case or lower case?
 #### Q. What is String subSequence method?
 #### Q. How to convert String to char and vice versa?
@@ -1512,7 +1510,6 @@ public class DateContainer {
 #### Q. How to convert String to Date in java?
 #### Q. How do you convert bytes to String?
 #### Q. How to Optimize Java String Creation?
-#### Q. Is String keyword in Java?
 #### Q. String comparison with equals() and '=='?
 #### Q. How do you convert a String(YYYYMMDD) to date in Java?
 #### Q. Why java uses the concept of the string literal?
