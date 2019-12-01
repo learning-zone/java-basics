@@ -1376,6 +1376,26 @@ ObjectInputStream inStream = new ObjectInputStream(anInputStream );
 MyObject object = (MyObject) inStream.readObject();
 ```
 #### Q. What is the purpose of using javap?
+The javap command displays information about the fields, constructors and methods present in a class file. The javap command (also known as the Java Disassembler) disassembles one or more class files. 
+ Example:
+ ```java
+class Simple {  
+  public static void main(String args[]) {  
+    System.out.println("Hello World");  
+  }  
+}  
+```
+```
+javap Simple  
+```
+Output
+```
+Compiled from ".java"  
+class Simple {  
+  Simple();  
+  public static void main(java.lang.String[]);  
+}  
+```
 #### Q. What are autoboxing and unboxing? When does it occur?
 #### Q. What is a native method?
 #### Q. If a method throws NullPointerException in the superclass, can we override it with a method which throws RuntimeException?
