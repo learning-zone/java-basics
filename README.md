@@ -1377,7 +1377,7 @@ MyObject object = (MyObject) inStream.readObject();
 ```
 #### Q. What is the purpose of using javap?
 The javap command displays information about the fields, constructors and methods present in a class file. The javap command (also known as the Java Disassembler) disassembles one or more class files. 
- Example:
+
  ```java
 class Simple {  
   public static void main(String args[]) {  
@@ -1386,7 +1386,7 @@ class Simple {
 }  
 ```
 ```
-javap Simple  
+cmd> javap Simple  
 ```
 Output
 ```
