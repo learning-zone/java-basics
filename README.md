@@ -1574,6 +1574,42 @@ public class BuilderTest{
 }  
 ```
 #### Q. What is a Memory Leak? How can a memory leak appear in garbage collected language?
+The standard definition of a memory leak is a scenario that occurs when **objects are no longer being used by the application, but the Garbage Collector is unable to remove them from working memory** – because they’re still being referenced. As a result, the application consumes more and more resources – which eventually leads to a fatal OutOfMemoryError.
+
+Some tools that do memory management to identifies useless objects or memeory leaks like:
+
+* HP OVO
+* HP J METER
+* JProbe
+* IBM Tivoli
+
+```java
+// Java Program to illustrate memory leaks 
+import java.util.Vector; 
+public class MemoryLeaksDemo  
+{ 
+   public static void main(String[] args) { 
+      Vector v = new Vector(214444); 
+      Vector v1 = new Vector(214744444); 
+      Vector v2 = new Vector(214444); 
+      System.out.println("Memory Leaks Example"); 
+   } 
+} 
+```
+Output
+```
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
+```
+
+**Types of Memory Leaks in Java**  
+
+* Memory Leak Through static Fields
+* Unclosed Resources
+* Adding Objects With no hashCode() and equals() Into a HashSet
+* Inner Classes That Reference Outer Classes
+* Through finalize() Methods
+* Calling String.intern() on Long String
+
 #### Q. How many objects will be created with string initialization code?
 #### Q. How can we make String upper case or lower case?
 #### Q. What is String subSequence method?
