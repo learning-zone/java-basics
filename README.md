@@ -1613,7 +1613,6 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 #### Q. Why String is popular HashMap key in Java?
 Since String is immutable, its hashcode is cached at the time of creation and it doesn’t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
 
-#### Q. What is UnsupportedOperationException?
 #### Q. What is difference between Error and Exception?
 #### Q. Explain about Exception Propagation.
 #### Q. What are different scenarios causing “Exception in thread main”?
