@@ -1614,6 +1614,18 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 Since String is immutable, its hashcode is cached at the time of creation and it doesn’t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
 
 #### Q. What is difference between Error and Exception?
+
+|BASIS FOR COMPARISON	|ERROR                                    |EXCEPTION                               |
+|-----------------------|-----------------------------------------|----------------------------------------|
+|Basic	               |An error is caused due to lack of system resources.|An exception is caused because of the code.|
+|Recovery	            |An error is irrecoverable.	            |An exception is recoverable.|
+|Keywords	            |There is no means to handle an error by the program code.|	Exceptions are handled using three keywords "try", "catch", and "throw".|
+|Consequences           |As the error is detected the program will terminated abnormally.|As an exception is detected, it is thrown and caught by the "throw" and "catch" keywords correspondingly.|
+|Types	               |Errors are classified as unchecked type.|Exceptions are classified as checked or unchecked type.|
+|Package	               |In Java, errors are defined "java.lang.Error" package.|In Java, an exceptions are defined in"java.lang.Exception".|
+|Example	               |OutOfMemory, StackOverFlow.	            |Checked Exceptions : NoSuchMethod, ClassNotFound.
+Unchecked Exceptions : NullPointer, IndexOutOfBounds. |
+
 #### Q. Explain about Exception Propagation.
 #### Q. What are different scenarios causing “Exception in thread main”?
 #### Q. What happens when exception is thrown by main method?
