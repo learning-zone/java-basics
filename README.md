@@ -1650,8 +1650,13 @@ class TestExceptionPropagation {
   }  
 }  
 ```
-
 #### Q. What are different scenarios causing “Exception in thread main”?
+Some of the common main thread exception are as  follows:
+* **Exception in thread main java.lang.UnsupportedClassVersionError**: This exception comes when your java class is compiled from another JDK version and you are trying to run it from another java version.
+* **Exception in thread main java.lang.NoClassDefFoundError**: There are two variants of this exception. The first one is where you provide the class full name with .class extension. The second scenario is when Class is not found.
+* **Exception in thread main java.lang.NoSuchMethodError: main**: This exception comes when you are trying to run a class that doesn’t have main method.
+* **Exception in thread “main” java.lang.ArithmeticException**: Whenever any exception is thrown from main method, it prints the exception is console. The first part explains that exception is thrown from main method, second part prints the exception class name and then after a colon, it prints the exception message.
+
 #### Q. What happens when exception is thrown by main method?
 #### Q. What purpose does the keywords final, finally, and finalize, fulfill?
 #### Q. What are the differences between throw and throws?
