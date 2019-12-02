@@ -1625,7 +1625,32 @@ Since String is immutable, its hashcode is cached at the time of creation and it
 |Package	               |In Java, errors are defined "java.lang.Error" package.|In Java, an exceptions are defined in"java.lang.Exception".|
 |Example	               |OutOfMemory, StackOverFlow.|Checked Exceptions: NoSuchMethod, ClassNotFound.Unchecked Exceptions: NullPointer, IndexOutOfBounds.|
 
-#### Q. Explain about Exception Propagation.
+#### Q. Explain about Exception Propagation?
+An exception is first thrown from the top of the stack and if it is not caught, it drops down the call stack to the previous method, If not caught there, the exception again drops down to the previous method, and so on until they are caught or until they reach the very bottom of the call stack. This is called exception propagation.
+```java
+class TestExceptionPropagation {
+
+  void m() {  
+    int data = 50/0;  
+  }  
+  void n() {  
+    m();  
+  }  
+  void p() {  
+      try {  
+         n();  
+      } catch(Exception e) { 
+         System.out.println("exception handled");
+      }  
+  }  
+  public static void main(String args[]) {  
+   TestExceptionPropagation obj = new TestExceptionPropagation();  
+   obj.p();  
+   System.out.println("Normal Flow...");  
+  }  
+}  
+```
+
 #### Q. What are different scenarios causing “Exception in thread main”?
 #### Q. What happens when exception is thrown by main method?
 #### Q. What purpose does the keywords final, finally, and finalize, fulfill?
