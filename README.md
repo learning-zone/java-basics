@@ -1705,8 +1705,17 @@ Output
 ```
 You shouldn't divide number by zero
 ```
-
 #### Q. The difference between Serial and Parallel Garbage Collector?
+**Serial Garbage Collector**  
+
+Serial garbage collector works by holding all the application threads. It is designed for the single-threaded environments. It uses just a single thread for garbage collection. The way it works by freezing all the application threads while doing garbage collection may not be suitable for a server environment. It is best suited for simple command-line programs.
+
+Turn on the `-XX:+UseSerialGC` JVM argument to use the serial garbage collector.
+
+**Parallel Garbage Collector**  
+
+Parallel garbage collector is also called as throughput collector. It is the default garbage collector of the JVM. Unlike serial garbage collector, this uses multiple threads for garbage collection. Similar to serial garbage collector this also freezes all the application threads while performing garbage collection.
+
 #### Q. A difference between WeakReference and SoftReference in Java?
 #### Q. How do you find memory usage from Java program? How much percent of the heap is used?
 #### Q. What is a compile time constant in Java? What is the risk of using it?
