@@ -1657,9 +1657,54 @@ Some of the common main thread exception are as  follows:
 * **Exception in thread main java.lang.NoSuchMethodError: main**: This exception comes when you are trying to run a class that doesn’t have main method.
 * **Exception in thread “main” java.lang.ArithmeticException**: Whenever any exception is thrown from main method, it prints the exception is console. The first part explains that exception is thrown from main method, second part prints the exception class name and then after a colon, it prints the exception message.
 
-#### Q. What happens when exception is thrown by main method?
-#### Q. What purpose does the keywords final, finally, and finalize, fulfill?
 #### Q. What are the differences between throw and throws?
+**Throw** keyword is used in the method body to throw an exception, while **throws** is used in method signature to declare the exceptions that can occur in the statements present in the method.
+
+**Throw Example**  
+```java
+public class ThrowExample {  
+   void checkAge(int age) {  
+      if(age < 18)  
+         throw new ArithmeticException("Not Eligible for voting");  
+      else  
+         System.out.println("Eligible for voting");  
+      }  
+   public static void main(String args[]) {  
+      ThrowExample obj = new ThrowExample();
+      obj.checkAge(13);  
+      System.out.println("End Of Program");  
+   }  
+}
+```
+Output
+```
+Exception in thread "main" java.lang.ArithmeticException: 
+Not Eligible for voting
+at Example1.checkAge(Example1.java:4)
+at Example1.main(Example1.java:10)
+```
+**Throws Example**  
+```java
+public class ThrowsExample {  
+   int division(int a, int b) throws ArithmeticException {  
+	  int t = a/b;
+	  return t;
+   }  
+   public static void main(String args[]) {  
+	  ThrowsExample obj = new ThrowsExample();
+      try {
+         System.out.println(obj.division(15,0));  
+      }
+      catch(ArithmeticException e) {
+         System.out.println("You shouldn't divide number by zero");
+      }
+   }  
+}
+```
+Output
+```
+You shouldn't divide number by zero
+```
 #### Q. What is the base class for Error and Exception?
 #### Q. Is it necessary that each try block must be followed by a catch block?
 #### Q. Can finally block be used without a catch?
