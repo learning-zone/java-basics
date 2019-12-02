@@ -1705,13 +1705,7 @@ Output
 ```
 You shouldn't divide number by zero
 ```
-#### Q. What is the base class for Error and Exception?
-#### Q. Is it necessary that each try block must be followed by a catch block?
-#### Q. Can finally block be used without a catch?
-#### Q. Can an exception be rethrown?
-#### Q. Can subclass overriding method declare an exception if parent class method doesn't throw an exception?
-#### Q. What will happen to the Exception object after exception handling?
-#### Q. What is the purpose of garbage collection in Java, and when is it used?
+
 #### Q. The difference between Serial and Parallel Garbage Collector?
 #### Q. A difference between WeakReference and SoftReference in Java?
 #### Q. How do you find memory usage from Java program? How much percent of the heap is used?
