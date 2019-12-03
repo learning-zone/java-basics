@@ -1826,8 +1826,6 @@ They are replaced with actual values at compile time because compiler know their
 ```java
 private final int x = 10;
 ```
-
-#### Q. What is the difference between Serial and Throughput Garbage collector?
 #### Q. Does Garbage collection occur in permanent generation space in JVM?
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
