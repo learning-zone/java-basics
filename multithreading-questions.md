@@ -1,5 +1,6 @@
 ## Multithreading Interview Questions
 
+#### Q. What are the states in the lifecycle of a Thread?
 #### Q. What is difference between Executor.submit() and Executer.execute() method?
 #### Q. Can we make array volatile in Java?
 #### Q. What are practical uses of volatile modifier?
@@ -18,7 +19,6 @@
 #### Q. What is Java Timer Class? How to schedule a task to run after specific interval?
 #### Q. What is Thread Pool? How can we create Thread Pool in Java?
 #### Q. Why must wait() method be called from the synchronized block?
-#### Q. What are the states in the lifecycle of a Thread?
 #### Q. What is the difference between wait() and sleep() method?
 #### Q. What is shutdown hook?
 #### Q. Can Java object be locked down for exclusive use by a given thread?
