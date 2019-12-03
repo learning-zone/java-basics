@@ -1822,7 +1822,6 @@ If a primitive type or a string is defined as a constant and the value is known 
 * initialized within declaration
 * initialized with constant expression
 
-**public static final** variables are known as compile time constant, public is optional there.
 They are replaced with actual values at compile time because compiler know their value up-front and also knows that it cannot be changed during run-time.
 ```java
 private final int x = 10;
