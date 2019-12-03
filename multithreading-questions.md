@@ -15,7 +15,56 @@ A java thread can be in any of following thread states during it’s life cycle 
 **4. Non-Runnable (Blocked)**: This is the state when the thread is still alive, but is currently not eligible to run.  
 **5. Terminated**: A thread is in terminated or dead state when its run() method exits.  
 
-#### Q. What are the different ways of implementing thread? Which one is more advantageous?
+#### Q. What are the different ways of implementing thread? 
+There are two ways to create a thread:
+* extends Thread class
+* implement Runnable interface
+
+**1. Extends Thread class**  
+Create a thread by a new class that extends Thread class and create an instance of that class. The extending class must override run() method which is the entry point of new thread.
+```java
+public class MyThread extends Thread {
+     
+    public void run() {
+      System.out.println("Thread started running..");
+    }
+    public static void main( String args[] ) {
+       MyThread mt = new  MyThread();
+       mt.start();
+    }
+}
+```
+Output
+```
+Thread started running..
+```
+**2. Implementing the Runnable Interface**  
+After implementing runnable interface, the class needs to implement the run() method, which is `public void run()`.
+
+* run() method introduces a concurrent thread into your program. This thread will end when run() returns.
+* You must specify the code for your thread inside run() method.
+* run() method can call other methods, can use other classes and declare variables just like any other normal method.
+```java
+class MyThread implements Runnable {
+
+    public void run() {
+        System.out.println("Thread started running..");
+    }
+    public static void main(String args[]) {
+        MyThread mt = new MyThread();
+        Thread t = new Thread(mt);
+        t.start();
+    }
+}
+```
+
+**Difference between Runnable vs Thread**  
+
+* Implementing Runnable is the preferred way to do it. Here, you’re not really specializing or modifying the thread’s behavior. You’re just giving the thread something to run. That means composition is the better way to go.
+* Java only supports single inheritance, so you can only extend one class.
+* Instantiating an interface gives a cleaner separation between your code and the implementation of threads.
+* Implementing Runnable makes your class more flexible. If you extend Thread then the action you’re doing is always going to be in a thread. However, if you implement Runnable it doesn’t have to be. You can run it in a thread, or pass it to some kind of executor service, or just pass it around as a task within a single threaded application.
+
 #### Q. What is the difference between Process and Thread?
 #### Q. What are the benefits of multi-threaded programming?
 #### Q. What is difference between user Thread and daemon Thread?
