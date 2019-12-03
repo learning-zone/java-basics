@@ -1813,6 +1813,21 @@ public class Example
 } 
 ```
 #### Q. What is a compile time constant in Java? What is the risk of using it?
+If a primitive type or a string is defined as a constant and the value is known at compile time, the compiler replaces the constant name everywhere in the code with its value. This is called a compile-time constant.
+
+**Compile time constant must be:**  
+
+* declared final
+* primitive or String
+* initialized within declaration
+* initialized with constant expression
+
+**public static final** variables are known as compile time constant, public is optional there.
+They are replaced with actual values at compile time because compiler know their value up-front and also knows that it cannot be changed during run-time.
+```java
+private final int x = 10;
+```
+
 #### Q. What is the difference between Serial and Throughput Garbage collector?
 #### Q. Does Garbage collection occur in permanent generation space in JVM?
 #### Q. How do you test static method?
