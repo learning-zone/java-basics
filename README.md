@@ -1813,7 +1813,6 @@ public class Example
 } 
 ```
 #### Q. What is a compile time constant in Java? What is the risk of using it?
-#### Q. If an object reference is set to null, will the Garbage Collector immediately free the memory held by that object?
 #### Q. What is the difference between Serial and Throughput Garbage collector?
 #### Q. Does Garbage collection occur in permanent generation space in JVM?
 #### Q. How do you test static method?
