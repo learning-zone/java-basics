@@ -5,12 +5,12 @@
 
 ### Table of Contents
 
-* [JDBC Interview Questions](JDBC-questions.md)
+* [Multithreading Interview Questions](multithreading-questions.md)
 * [Collections Interview Questions](collections-questions.md)
+* [JDBC Interview Questions](JDBC-questions.md)
 * [Java Programs](java-programs.md)
 * [Java String Methods](java-string-methods.md)
 * [JSP Interview Questions](jsp-questions.md)
-* [Multithreading Interview Questions](multithreading-questions.md)
 * [Servlets Interview Questions](servlets-questions.md)
 
 
