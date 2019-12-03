@@ -1812,7 +1812,6 @@ public class Example
     } 
 } 
 ```
-#### Q. How do you find memory usage from Java program? How much percent of the heap is used?
 #### Q. What is a compile time constant in Java? What is the risk of using it?
 #### Q. If an object reference is set to null, will the Garbage Collector immediately free the memory held by that object?
 #### Q. What is the difference between Serial and Throughput Garbage collector?
