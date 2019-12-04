@@ -199,7 +199,6 @@ class ThreadB extends Thread {
 #### Q. What do you understand about Thread Priority?
 #### Q. What is Thread Scheduler and Time Slicing?
 #### Q. What is context-switching in multi-threading?
-#### Q. Which is more preferred – Synchronized method or Synchronized block?
 #### Q. What is Deadlock? How to analyze and avoid deadlock situation?
 #### Q. What is Java Timer Class? How to schedule a task to run after specific interval?
 #### Q. What is Thread Pool? How can we create Thread Pool in Java?
