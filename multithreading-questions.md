@@ -102,6 +102,64 @@ Daemon threads are low priority threads which always run in background and user 
 * User threads are foreground threads. They always run in foreground and perform some specific task assigned to them. Where as daemon threads are background threads. They always run in background and act in a supporting role to user threads.
 * JVM will not force the user threads to terminate. It will wait for user threads to terminate themselves. On the other hand, JVM will force the daemon threads to terminate if all the user threads have finished their task.
 
+**create Daemon Thread**  
+```java
+/**
+ * Java Program to demonstrate difference beween a daemon and a user thread .
+ * 
+ */
+public class DaemonThreadDemo {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        // main thread is a non-daemon thread
+        String name = Thread.currentThread().getName();
+        boolean isDaemon = Thread.currentThread().isDaemon();
+
+        System.out.println("name: " + name + ", isDaemon: " + isDaemon);
+
+        // Any new thread spawned from main is also non-daemon or user thread
+        // as seen below:
+        Runnable task = new Task();
+        Thread t1 = new Thread(task, "T1");
+        System.out.println("Thread spawned from main thread");
+        System.out.println("name: " + t1.getName() + ", isDaemon: " + t1.isDaemon());
+
+        // though you can make a daemon thread by calling setDaemon()
+        // before starting it as shown below:
+        t1.setDaemon(true);
+        t1.start();
+
+        // let's wait for T1 to finish
+        t1.join();
+    }
+
+    private static class Task implements Runnable {
+
+        @Override
+        public void run() {
+            Thread t = Thread.currentThread();
+            System.out.println("Thread made daemon by calling setDaemon() method");
+            System.out.println("name: " + t.getName() + ", isDaemon: " + t.isDaemon());
+
+            // Any new thread created from daemon thread is also daemon
+            Thread t2 = new Thread("T2");
+            System.out.println("Thread spawned from a daemon thread");
+            System.out.println("name: " + t2.getName() + ", isDaemon: " + t2.isDaemon());
+        }
+    }
+}
+```
+Output
+```
+name: main, isDaemon: false
+Thread spawned from main thread
+name: T1, isDaemon: false
+Thread made daemon by calling setDaemon() method
+name: T1, isDaemon: true
+Thread spawned from a daemon thread
+name: T2, isDaemon: true
+```
 #### Q. How does thread communicate with each other?
 #### Q. What do you understand about Thread Priority?
 #### Q. What is Thread Scheduler and Time Slicing?
