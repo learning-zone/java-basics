@@ -197,6 +197,39 @@ class ThreadB extends Thread {
 }
 ```
 #### Q. What do you understand about Thread Priority?
+Every thread in Java has a priority that helps the thread scheduler to determine the order in which threads scheduled. The threads with higher priority will usually run before and more frequently than lower priority threads. By default, all the threads had the same priority, i.e., they regarded as being equally distinguished by the scheduler, when a thread created it inherits its priority from the thread that created it.
+
+Default priority of a thread is 5 (NORM_PRIORITY). The value of MIN_PRIORITY is 1 and the value of MAX_PRIORITY is 10.
+
+* public static int MIN_PRIORITY
+* public static int NORM_PRIORITY
+* public static int MAX_PRIORITY
+
+```java
+class TestMultiPriority1 extends Thread {  
+  
+  public void run() {  
+   System.out.println("Running thread name is:" + Thread.currentThread().getName());  
+   System.out.println("Running thread priority is:" + Thread.currentThread().getPriority());  
+  }  
+
+ public static void main(String args[]) {  
+  TestMultiPriority1 m1 = new TestMultiPriority1();  
+  TestMultiPriority1 m2 = new TestMultiPriority1();  
+  m1.setPriority(Thread.MIN_PRIORITY);  
+  m2.setPriority(Thread.MAX_PRIORITY);  
+  m1.start();  
+  m2.start();  
+ }  
+}     
+```
+Output
+```
+Running thread name is: Thread-0
+Running thread priority is: 10
+Running thread name is: Thread-1
+Running thread priority is: 1    
+```
 #### Q. What is Thread Scheduler and Time Slicing?
 #### Q. What is context-switching in multi-threading?
 #### Q. What is Deadlock? How to analyze and avoid deadlock situation?
