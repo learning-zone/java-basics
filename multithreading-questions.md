@@ -175,10 +175,10 @@ class ThreadA {
       b.start();
       synchronized(b) {
        try {
-        System.out.println("Waiting for b to complete...");
-        b.wait();
+            System.out.println("Waiting for b to complete...");
+            b.wait();
        } catch (InterruptedException e) {}
-         System.out.println("Total is: " + b.total);
+            System.out.println("Total is: " + b.total);
       }
     }
 }
@@ -188,12 +188,12 @@ class ThreadB extends Thread {
 
  public void run() {
    synchronized(this) {
-   for(int i=0;i<100;i++) {
-      total += i;
+    for(int i=0;i<100;i++) {
+        total += i;
+    }
+    notify();
    }
-   notify();
   }
- }
 }
 ```
 #### Q. What do you understand about Thread Priority?
