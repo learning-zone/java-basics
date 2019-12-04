@@ -161,6 +161,41 @@ Thread spawned from a daemon thread
 name: T2, isDaemon: true
 ```
 #### Q. How does thread communicate with each other?
+**Inter-thread communication** is a mechanism in which a thread is paused running in its critical section and another thread is allowed to enter (or lock) in the same critical section to be executed. It is implemented by following methods of Object class:
+
+* wait()
+* notify()
+* notifyAll()
+
+```java
+class ThreadA {
+
+    public static void main(String [] args) {
+      ThreadB b = new ThreadB();
+      b.start();
+      synchronized(b) {
+       try {
+        System.out.println("Waiting for b to complete...");
+        b.wait();
+       } catch (InterruptedException e) {}
+         System.out.println("Total is: " + b.total);
+      }
+    }
+}
+
+class ThreadB extends Thread {
+ int total;
+
+ public void run() {
+   synchronized(this) {
+   for(int i=0;i<100;i++) {
+      total += i;
+   }
+   notify();
+  }
+ }
+}
+```
 #### Q. What do you understand about Thread Priority?
 #### Q. What is Thread Scheduler and Time Slicing?
 #### Q. What is context-switching in multi-threading?
