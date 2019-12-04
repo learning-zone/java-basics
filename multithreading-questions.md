@@ -90,8 +90,18 @@ Both processes and threads are independent sequences of execution. The typical d
 * All the threads running within a process share the same address space, file descriptors, stack and other process related attributes.
 * Since the threads of a process share the same memory, synchronizing the access to the shared data within the process gains unprecedented importance.
 
-#### Q. What are the benefits of multi-threaded programming?
 #### Q. What is difference between user Thread and daemon Thread?
+Daemon threads are low priority threads which always run in background and user threads are high priority threads which always run in foreground. User Thread or Non-Daemon are designed to do specific or complex task where as daemon threads are used to perform supporting tasks.
+
+**Difference Between Daemon Threads And User Threads In Java**  
+
+* User threads are created by the application (user) to perform some specific task. Where as daemon threads are mostly created by the JVM to perform some background tasks like garbage collection.
+
+* JVM will wait for user threads to finish their tasks. JVM will not exit until all user threads finish their tasks. On the other side, JVM will not wait for daemon threads to finish their tasks. It will exit as soon as all user threads finish their tasks.
+* User threads are high priority threads, They are designed mainly to execute some important task in an application. Where as daemon threads are less priority threads. They are designed to serve the user threads.
+* User threads are foreground threads. They always run in foreground and perform some specific task assigned to them. Where as daemon threads are background threads. They always run in background and act in a supporting role to user threads.
+* JVM will not force the user threads to terminate. It will wait for user threads to terminate themselves. On the other hand, JVM will force the daemon threads to terminate if all the user threads have finished their task.
+
 #### Q. How does thread communicate with each other?
 #### Q. What do you understand about Thread Priority?
 #### Q. What is Thread Scheduler and Time Slicing?
