@@ -520,9 +520,80 @@ synchronized(LOCK) {
     LOCK.wait(); // LOCK is not held
 }
 ```
-#### Q. What is shutdown hook?
-#### Q. Can Java object be locked down for exclusive use by a given thread?
 #### Q. What is static synchronization?
+Static synchronization is achieved by static synchronized methods. Static synchronized method locked on **class** and non-static synchronized method locked on **current object** i.e. static and non-static synchronized methods can run at same time. It can produce inconsistency problem.
+
+If static synchronized method is called a class level lock is acquired and then if an object is tries to access non-static synchronized method at the same time it will not be accessible because class level lock is already acquired.
+```java
+/**
+ * This program is used to show the multithreading 
+ * example with synchronization using static synchronized method.
+ * @author codesjava
+ */
+class PrintTable {    
+    public synchronized static void printTable(int n) {
+	   System.out.println("Table of " + n);
+       for(int i = 1; i <= 10; i++) {
+           System.out.println(n*i);  
+           try {  
+        	 Thread.sleep(500);  
+           } catch(Exception e) {
+        	 System.out.println(e);
+           }  
+        }         
+    }  
+}  
+ 
+class MyThread1 extends Thread {    
+    public void run() { 
+    	PrintTable.printTable(2);  
+    }        
+}  
+ 
+class MyThread2 extends Thread {   
+	public void run() {  
+		PrintTable.printTable(5);  
+	}  
+}  
+ 
+public class MultiThreadExample {  
+    public static void main(String args[]) {
+ 
+    	//creating threads.
+	    MyThread1 t1 = new MyThread1();  
+	    MyThread2 t2 = new MyThread2();  
+ 
+	    //start threads.
+	    t1.start();  
+	    t2.start();  
+    }  
+}
+```
+Output
+```
+Table of 2
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Table of 5
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+```
 #### Q. How is the safety of a thread achieved?
 #### Q. What is difference between start() and run() method of thread class.
 #### Q. What is false sharing in the context of multi-threading?
