@@ -495,7 +495,11 @@ task 4 complete
 * Thread Leakage
 * Resource Thrashing
 
-#### Q. Why must wait() method be called from the synchronized block?
+#### Q. Why wait(), notify() and notifyAll() must be called from inside of the synchronized block or method.?
+`wait()` forces the thread to release its lock. This means that it must own the lock of an object before calling the `wait()` method of that (same) object. Hence the thread must be in one of the object's synchronized methods or synchronized block before calling wait().
+
+When a thread invokes an object's `notify()` or `notifyAll()` method, one (an arbitrary thread) or all of the threads in its waiting queue are removed from the waiting queue to the entry queue. They then actively contend for the object's lock, and the one that gets the lock goes on to execute.
+
 #### Q. What is the difference between wait() and sleep() method?
 #### Q. What is shutdown hook?
 #### Q. Can Java object be locked down for exclusive use by a given thread?
