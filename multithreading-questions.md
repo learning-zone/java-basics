@@ -231,6 +231,62 @@ Running thread name is: Thread-1
 Running thread priority is: 1    
 ```
 #### Q. What is Thread Scheduler and Time Slicing?
+**Thread scheduler** in java is the part of the JVM that decides which thread should run. The thread scheduler mainly uses preemptive or time slicing scheduling to schedule the threads.
+
+**Preemptive scheduling**: The highest priority task executes until it enters the waiting or dead states or a higher priority task comes into existence.
+
+**Time slicing**: A task executes for a predefined slice of time and then reenters the pool of ready tasks. The scheduler then determines which task should execute next, based on priority and other factors.
+
+Example: Thread Scheduler
+```java
+class FirstThread extends Thread {
+	public void run(){
+		for(int i = 0; i < 10; ++i) {
+			System.out.println("I am in first thread");
+			try{
+				Thread.sleep(1000);
+			}
+			catch(InterruptedException ie) {
+				System.out.println("Exception occurs ");
+			}
+		}
+	}
+}
+
+class SecondThread {
+	public static void main(String[] args){
+		FirstThread ft = new FirstThread();
+		ft.start();
+		for(int j = 1; j < 10; ++j) {
+			System.out.println("I am in second thread");
+		}
+	}
+}
+```
+Output
+```
+cmd> java SecondThread
+I am in second thread
+I am in first thread
+I am in second thread
+I am in second thread
+I am in second thread
+I am in second thread
+I am in second thread
+I am in second thread
+I am in second thread
+I am in second thread
+I am in first thread
+I am in first thread
+I am in first thread
+I am in first thread
+I am in first thread
+I am in first thread
+I am in first thread
+I am in first thread
+I am in first thread
+```
+
 #### Q. What is context-switching in multi-threading?
 #### Q. What is Deadlock? How to analyze and avoid deadlock situation?
 #### Q. What is Java Timer Class? How to schedule a task to run after specific interval?
