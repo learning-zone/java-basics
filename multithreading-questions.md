@@ -371,7 +371,6 @@ public void run() {
 
 **3. Avoid waiting indefinitely**: You can get deadlock if two threads are waiting for each other to finish indefinitely using thread join. If your thread has to wait for another thread to finish, it’s always best to use join with maximum time you want to wait for thread to finish.
 
-#### Q. What is Java Timer Class? How to schedule a task to run after specific interval?
 #### Q. What is Thread Pool? How can we create Thread Pool in Java?
 #### Q. Why must wait() method be called from the synchronized block?
 #### Q. What is the difference between wait() and sleep() method?
