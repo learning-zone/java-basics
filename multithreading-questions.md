@@ -286,8 +286,9 @@ I am in first thread
 I am in first thread
 I am in first thread
 ```
-
 #### Q. What is context-switching in multi-threading?
+Context Switching is the process of storing and restoring of CPU state so that Thread execution can be resumed from the same point at a later point of time. Context Switching is the essential feature for multitasking operating system and support for multi-threaded environment.
+
 #### Q. What is Deadlock? How to analyze and avoid deadlock situation?
 #### Q. What is Java Timer Class? How to schedule a task to run after specific interval?
 #### Q. What is Thread Pool? How can we create Thread Pool in Java?
