@@ -290,6 +290,87 @@ I am in first thread
 Context Switching is the process of storing and restoring of CPU state so that Thread execution can be resumed from the same point at a later point of time. Context Switching is the essential feature for multitasking operating system and support for multi-threaded environment.
 
 #### Q. What is Deadlock? How to analyze and avoid deadlock situation?
+**Deadlock** is a programming situation where two or more threads are blocked forever, this situation arises with at least two threads and two or more resources.
+```java
+class HelloClass {
+	public synchronized void first(HiClass hi) {
+		try {
+			Thread.sleep(1000);
+		}
+		catch(InterruptedException ie) {}
+		System.out.println(" HelloClass is calling 	HiClass second() method");
+		hi.second();
+	}
+
+	public synchronized void second() {
+		System.out.println("I am inside second method of HelloClass");
+	}
+}
+
+class HiClass {
+	public synchronized void first(HelloClass he) {
+		try {
+			Thread.sleep(1000);
+		}
+		catch(InterruptedException ie){}
+		System.out.println(" HiClass is calling HelloClass second() method");
+		he.second();
+	}
+
+	public synchronized void second() {
+		System.out.println("I am inside second method of HiClass");
+	}
+}
+
+class DeadlockClass extends Thread {
+	HelloClass he = new HelloClass();
+	HiClass hi = new HiClass();
+
+	public void demo() {
+		this.start();
+		he.first(hi);
+	} 
+	public void run() {
+		hi.first(he);
+	}
+
+	public static void main(String[] args) {
+		DeadlockClass dc = new DeadlockClass();
+		dc.demo();
+	}
+}
+```
+Output
+```
+cmd> java DeadlockClass
+HelloClass is calling HiClass second() method
+HiClass is calling HelloClass second() method
+```
+**Avoid deadlock**  
+
+**`1. Avoid Nested Locks**: This is the most common reason for deadlocks, avoid locking another resource if you already hold one. It’s almost impossible to get deadlock situation if you are working with only one object lock. For example, here is the another implementation of run() method without nested lock and program runs successfully without deadlock situation.
+```java
+public void run() {
+    String name = Thread.currentThread().getName();
+    System.out.println(name + ' acquiring lock on ' + obj1);
+    synchronized (obj1) {
+        System.out.println(name + ' acquired lock on ' + obj1);
+        work();
+    }
+    System.out.println(name + ' released lock on ' + obj1);
+    System.out.println(name + ' acquiring lock on ' + obj2);
+    synchronized (obj2) {
+        System.out.println(name + ' acquired lock on ' + obj2);
+        work();
+    }
+    System.out.println(name + ' released lock on ' + obj2);
+    System.out.println(name + ' finished execution.');
+}
+```
+**2. Lock Only What is Required**: You should acquire lock only on the resources you have to work on, for example in above program I am locking the complete Object resource but if we are only interested in one of it’s fields, then we should lock only that specific field not complete object.
+
+**3. Avoid waiting indefinitely**: You can get deadlock if two threads are waiting for each other to finish indefinitely using thread join. If your thread has to wait for another thread to finish, it’s always best to use join with maximum time you want to wait for thread to finish.
+
 #### Q. What is Java Timer Class? How to schedule a task to run after specific interval?
 #### Q. What is Thread Pool? How can we create Thread Pool in Java?
 #### Q. Why must wait() method be called from the synchronized block?
