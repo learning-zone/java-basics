@@ -638,6 +638,48 @@ I am executed by main
 I am executed by Thread-0
 ```
 #### Q. What is Thread Group? Why it’s advised not to use it?
+ThreadGroup creates a group of threads. It offers a convenient way to manage groups of threads as a unit. This is particularly valuable in situation in which you want to suspend and resume a number of related threads.
+
+* The thread group form a tree in which every thread group except the initial thread group has a parent.
+* A thread is allowed to access information about its own thread group but not to access information about its thread group’s parent thread group or any other thread group.
+```java
+// Java code illustrating Thread Group 
+import java.lang.*; 
+class NewThread extends Thread  
+{ 
+    NewThread(String threadname, ThreadGroup tgob) { 
+        super(tgob, threadname); 
+        start(); 
+    } 
+    public void run() { 
+  
+        for (int i = 0; i < 1000; i++) { 
+            try { 
+                Thread.sleep(10); 
+            } 
+            catch (InterruptedException ex) { 
+                System.out.println("Exception encounterted"); 
+            } 
+        } 
+    } 
+}  
+public class ThreadGroupExample  
+{ 
+    public static void main(String arg[]) { 
+        // creating the thread group 
+        ThreadGroup tg = new ThreadGroup("Parent Thread Group"); 
+  
+        NewThread t1 = new NewThread("One", tg); 
+        System.out.println("Starting One"); 
+        NewThread t2 = new NewThread("Two", tg); 
+        System.out.println("Starting two"); 
+  
+        // checking the number of active thread 
+        System.out.println("Number of active thread: "
+                           + tg.activeCount()); 
+    } 
+} 
+```
 #### Q. How do you stop a thread in java?
 #### Q. Can we call run() method of a Thread class?
 #### Q. How can we make sure main() is the last thread to finish in Java Program?
