@@ -782,6 +782,39 @@ If there is no waiting thread or all the waiting threads of low priority then th
 **3. Give up monitors**:  Thread.sleep() method does not cause cause currently executing thread to give up any monitors while yield() method give up the monitors.
 
 #### Q. What is ThreadLocal?
+The Java ThreadLocal class enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to the same ThreadLocal variable, the two threads cannot see each other's ThreadLocal variables. Thus, the Java ThreadLocal class provides a simple way to make code thread safe that would not otherwise be so.
+
+**Creating a ThreadLocal**   
+```java
+private ThreadLocal threadLocal = new ThreadLocal();
+```
+**Set ThreadLocal Value**
+```java
+threadLocal.set("A thread local value");
+```
+**Get ThreadLocal Value**
+```java
+String threadLocalValue = (String) threadLocal.get();
+```
+**Remove ThreadLocal Value**
+```java
+threadLocal.remove();
+```
+Example
+```java
+// Java code illustrating get() and set() method 
+public class ThreadLocalExample { 
+  
+    public static void main(String[] args) { 
+  
+        ThreadLocal<Number> tlObj = new ThreadLocal<Number>(); 
+  
+        // setting the value 
+        tlObj.set(100);  
+        System.out.println("value = " + tlObj.get()); 
+    } 
+} 
+```
 #### Q. What is Java Thread Dump, How can we get Java Thread dump of a Program?
 #### Q. What will happen if we don’t override Thread class run() method?
 #### Q. What is differentiate between the Thread class and Runnable interface for creating a Thread?
