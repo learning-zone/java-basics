@@ -707,15 +707,14 @@ class MyThread extends Thread
 public class MainClass 
 {   
     public static void main(String[] args) {
+
         MyThread thread = new MyThread();
-         
         thread.start();
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
-         
+        } 
         //call stopRunning() method whenever you want to stop a thread
         thread.stopRunning();
     }   
