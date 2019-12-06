@@ -773,8 +773,14 @@ Thread is running :2
 Thread is running :3
 Thread is running :4
 ```
-#### Q. How can we make sure main() is the last thread to finish in Java Program?
-#### Q. Why Thread sleep() and yield() methods are static?
+#### Q. What is difference between Yield and Sleep method in Java?
+**1. Currently executing thread state**: sleep()  method causes the currently executing thread to sleep for the number of milliseconds specified in the argument. yield() method temporarily pauses the currently executing thread to give a chance to the remaining waiting threads of the same priority to execute.
+If there is no waiting thread or all the waiting threads of low priority then the current thread will continue its execution.
+
+**2. Interrupted Exception**: Sleep method throws the Interrupted exception if another thread interrupts the sleeping thread.  yield method does not throw Interrupted Exception.
+
+**3. Give up monitors**:  Thread.sleep() method does not cause cause currently executing thread to give up any monitors while yield() method give up the monitors.
+
 #### Q. What is ThreadLocal?
 #### Q. What is Java Thread Dump, How can we get Java Thread dump of a Program?
 #### Q. What will happen if we don’t override Thread class run() method?
