@@ -822,7 +822,6 @@ public class ThreadLocalExample {
 #### Q. Can we make the user thread as daemon thread if the thread is started?
 #### Q. What is race-condition?
 #### Q. What is the difference between ScheduledExecutorService and ExecutorService interface?
-#### Q. What does yield() method of the Thread class do?
 #### Q. What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization?
 #### Q. What are Concurrent Collection Classes?
 #### Q. What is the difference between the Runnable and Callable interfaces?
