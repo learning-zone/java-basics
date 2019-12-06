@@ -734,7 +734,7 @@ Stopped Running….
 ```
 #### Q. Can we call run() method of a Thread class?
 No, you can not directly call run method to start a thread. You need to call start method to create a new thread.
-If you call run method directly , it won’t create a new thread and it will be in same stack as main.
+If you call run method directly, it won’t create a new thread and it will be in same stack as main.
 ```java
 class CustomThread extends Thread {
  
