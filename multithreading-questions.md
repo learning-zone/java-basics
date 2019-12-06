@@ -901,6 +901,29 @@ JNI global references: 116
 * VisualVM Profiler  
 
 #### Q. What will happen if we don’t override Thread class run() method?
+If we don't override Thread class run() method in our defined thread then Thread class run() method will be executed and we will not get any output because Thread class run() is with an empty implementation.
+
+It is highly recommended to override run() method because it improves the performance of the system. If we override run() method in the user-defined thread then in run() method we will define a job and Our created thread is responsible to execute run() method.
+```
+abstract class NotOverridableRunMethod extends Thread {
+	abstract public void run();
+}
+
+class ParentMain {
+	public static void main(String[] args) {
+		OverrideRunMethod orn = new OverrideRunMethod();
+		orn.start();
+		System.out.println("Thread class run() method will be executed with empty implementation");
+	}
+}
+```
+Output
+```
+cmd> java ParentMain
+Thread class run() method will be executed with empty implementation
+I am in run() method 
+```
+
 #### Q. What is differentiate between the Thread class and Runnable interface for creating a Thread?
 #### Q. What does join() method?
 #### Q. Can we make the user thread as daemon thread if the thread is started?
