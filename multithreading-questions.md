@@ -681,6 +681,58 @@ public class ThreadGroupExample
 } 
 ```
 #### Q. How do you stop a thread in java?
+A thread is automatically destroyed when the run() method has completed. But it might be required to kill/stop a thread before it has completed its life cycle. Modern ways to suspend/stop a thread are by using a boolean flag and Thread.interrupt() method.
+```java
+class MyThread extends Thread
+{
+    //Initially setting the flag as true
+    private volatile boolean flag = true;
+     
+    //This method will set flag as false
+    public void stopRunning() {
+        flag = false;
+    }
+     
+    @Override
+    public void run() {
+         
+        //This will make thread continue to run until flag becomes false
+        while (flag) {
+            System.out.println("I am running....");
+        }
+        System.out.println("Stopped Running....");
+    }
+}
+ 
+public class MainClass 
+{   
+    public static void main(String[] args) {
+        MyThread thread = new MyThread();
+         
+        thread.start();
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+         
+        //call stopRunning() method whenever you want to stop a thread
+        thread.stopRunning();
+    }   
+}
+```
+Output 
+```
+I am running….
+I am running….
+I am running….
+I am running….
+I am running….
+I am running….
+I am running….
+I am running….
+Stopped Running….
+```
 #### Q. Can we call run() method of a Thread class?
 #### Q. How can we make sure main() is the last thread to finish in Java Program?
 #### Q. Why Thread sleep() and yield() methods are static?
