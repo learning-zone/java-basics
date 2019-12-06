@@ -637,9 +637,6 @@ Output
 I am executed by main
 I am executed by Thread-0
 ```
-
-
-#### Q. What is false sharing in the context of multi-threading?
 #### Q. What is Thread Group? Why it’s advised not to use it?
 #### Q. How do you stop a thread in java?
 #### Q. Can we call run() method of a Thread class?
