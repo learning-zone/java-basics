@@ -605,9 +605,40 @@ Table of 5
 * In order to avoid thread-safety issue minimize sharing of objects between multiple thread.
 * Volatile keyword in Java can also be used to instruct thread not to cache variables and read from main memory and can also instruct JVM not to reorder or optimize code from threading perspective.
 
+#### Q. What is difference between start() and run() method of thread class?
+* When program calls `start()` method a **new Thread** is created and code inside `run()` method is executed in new Thread while if you call `run()` method directly **no new Thread is created** and code inside `run()` will execute on current Thread.
+
+* `start()` Can't be invoked more than one time otherwise throws `java.lang.IllegalStateException`  but `run()` can be invoked multiple times
+```java
+class MyThread extends Thread
+{
+    @Override
+    public void run() {
+        System.out.println("I am executed by " +currentThread().getName());
+    }
+}
+ 
+public class ThreadExample
+{
+    public static void main(String[] args) {
+
+        MyThread myThread = new MyThread();
+ 
+        // Calling run() method directly 
+        myThread.run();
+ 
+        // Calling start() method. It creates a new thread which executes run() method
+        myThread.start();
+    }
+}
+```
+Output
+```
+I am executed by main
+I am executed by Thread-0
+```
 
 
-#### Q. What is difference between start() and run() method of thread class.
 #### Q. What is false sharing in the context of multi-threading?
 #### Q. What is Thread Group? Why it’s advised not to use it?
 #### Q. How do you stop a thread in java?
