@@ -1393,7 +1393,6 @@ Starvation can occur due to the following reasons:
 
 * Threads are waiting on a resource forever but they remain waiting forever because other threads are constantly notified instead of the hungry ones.
 
-#### Q. What is SynchronousQueue in Java?
 #### Q. How do you share data between two threads in Java?
 #### Q. Describe the purpose and use-cases of the fork/join framework
 #### Q. What is Phaser in Java concurrency?
