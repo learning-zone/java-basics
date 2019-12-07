@@ -1126,8 +1126,6 @@ Value for Thread at last Thread-3 0
 Value for Thread After increment Thread-1 1
 Value for Thread at last Thread-1 0
 ```
-
-#### Q. What is the difference between ScheduledExecutorService and ExecutorService interface?
 #### Q. What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization?
 #### Q. What are Concurrent Collection Classes?
 #### Q. What is the difference between the Runnable and Callable interfaces?
