@@ -1400,7 +1400,6 @@ We should declare such variables as static and volatile.
 
 We know that static fields are shared across all the objects of the class, and it belongs to the class and not the individual objects. But, for static and non-volatile variable also, threads may cache the variable locally.
 
-#### Q. Describe the purpose and use-cases of the fork/join framework
 #### Q. What is Phaser in Java concurrency?
 #### Q. What is Exchanger in Java concurrency?
 #### Q. What is Semaphore in Java concurrency?
