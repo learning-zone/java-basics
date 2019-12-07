@@ -1419,6 +1419,17 @@ The concurrency API are designed and optimized specifically for synchronized mul
 * Phaser
 
 #### Q. What is difference between CyclicBarrier and CountDownLatch in Java?
+Both CyclicBarrier and CountDownLatch are used to implement a scenario where one Thread waits for one or more Thread to complete their job before starts processing. The differences are:
+
+**1. Definition**:  CountDownLatch  is a synchronization aid that allows one or more threads to wait until a set of operations being performed in other threads completes.
+
+CyclicBarrier is a synchronization aid that allows a set of threads to all wait for each other to reach a common barrier point.
+
+**2. Reusable**: A CountDownLatch is initialized with given count. count reaches zero by calling of countDown() method. The count can not be reset.
+
+CyclicBarrier is used to reset count. The barrier is called cyclic because it can be reused after the waiting threads are released (or count  become zero).  
+
+
 #### Q. What is Semaphore in Java concurrency?
 #### Q. What is FutureTask class?
 #### Q. What is lock striping in concurrent programming?
