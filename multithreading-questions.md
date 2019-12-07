@@ -1306,6 +1306,39 @@ Output
 4
 ```
 #### Q. What is the Thread’s interrupt flag? How can you set and check it? How does it relate to the InterruptedException?
+If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked), calling the interrupt() method on the thread, breaks out the sleeping or waiting state throwing InterruptedException. If the thread is not in the sleeping or waiting state, calling the interrupt() method performs normal behaviour and doesn't interrupt the thread but sets the interrupt flag to true.
+
+Example: Interrupting a thread that stops working
+```java
+// Java Program to illustrate the concept of interrupt() method 
+// while a thread stops working 
+class ThreadsInterruptExample extends Thread { 
+
+    public void run() { 
+        try { 
+            Thread.sleep(1000); 
+            System.out.println("Task"); 
+        } catch (InterruptedException e) { 
+            throw new RuntimeException("Thread " +  
+                                      "interrupted"); 
+        } 
+    } 
+    public static void main(String args[]) { 
+        Geeks t1 = new Geeks(); 
+        t1.start(); 
+        try { 
+            t1.interrupt(); 
+        } 
+        catch (Exception e) { 
+            System.out.println("Exception handled"); 
+        } 
+    } 
+} 
+```
+Output
+```
+Exception in thread "Thread-0" java.lang.RuntimeException: Thread interrupted
+```
 #### Q. What is Java Memory Model (JMM)? Describe its purpose and basic ideas.
 #### Q. Describe the conditions of livelock, and starvation.
 #### Q. How ReadWritelock can help in reducing contention among multiple threads?
