@@ -1323,7 +1323,7 @@ class ThreadsInterruptExample extends Thread {
         } 
     } 
     public static void main(String args[]) { 
-        Geeks t1 = new Geeks(); 
+        ThreadsInterruptExample t1 = new ThreadsInterruptExample(); 
         t1.start(); 
         try { 
             t1.interrupt(); 
