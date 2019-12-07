@@ -1174,6 +1174,137 @@ public class ConcurrencyLockExample implements Runnable {
 }
 ```
 #### Q. What is the difference between the Runnable and Callable interface?
+Runnable and Callable interface both are used in the multithreading environment. Runnable is the core interface provided for representing multi-threaded tasks and Callable is an improved version of Runnable that was added in Java 1.5.
+
+**Difference between Callable and Runnable in Java**  
+
+**1. Checked Exception**: Callable's call() method can throw checked exception while  Runnable run() method can  not throw checked exception.
+
+**2. Return value**: Return type of Runnable run() method is void , so it can not return any value. while Callable can return the Future object, which represents the life cycle of a task and provides methods to check if the task has been completed or canceled.
+
+**3. Implementation**: Callable needs to implement call() method while Runnable needs to implement run() method.
+
+**4. Execution**: Limitation of Callable interface lies in java is that one can not pass it to Thread as one pass the Runnable instance. There is no constructor defined in the Thread class which accepts a Callable interface. 
+
+Example: Callable Interface
+```java
+// Java program to illustrate Callable and FutureTask 
+// for random number generation 
+import java.util.Random; 
+import java.util.concurrent.Callable; 
+import java.util.concurrent.FutureTask; 
+  
+class CallableExample implements Callable 
+{ 
+  
+  public Object call() throws Exception { 
+    Random generator = new Random(); 
+    Integer randomNumber = generator.nextInt(5); 
+    Thread.sleep(randomNumber * 1000); 
+    return randomNumber; 
+  } 
+} 
+  
+public class CallableFutureTest 
+{ 
+  public static void main(String[] args) throws Exception { 
+  
+    // FutureTask is a concrete class that 
+    // implements both Runnable and Future 
+    FutureTask[] randomNumberTasks = new FutureTask[5]; 
+  
+    for (int i = 0; i < 5; i++) { 
+      Callable callable = new CallableExample(); 
+  
+      // Create the FutureTask with Callable 
+      randomNumberTasks[i] = new FutureTask(callable); 
+  
+      // As it implements Runnable, create Thread 
+      // with FutureTask 
+      Thread t = new Thread(randomNumberTasks[i]); 
+      t.start(); 
+    } 
+  
+    for (int i = 0; i < 5; i++) { 
+      // As it implements Future, we can call get() 
+      System.out.println(randomNumberTasks[i].get()); 
+    } 
+  } 
+}
+```
+Output
+```
+4
+2
+3
+3
+0
+```
+Example: Runnable Interface
+```java
+// Java program to illustrate Runnable 
+// for random number generation 
+import java.util.Random; 
+import java.util.concurrent.Callable; 
+import java.util.concurrent.FutureTask; 
+  
+class RunnableExample implements Runnable 
+{ 
+    // Shared object to store result 
+    private Object result = null; 
+  
+    public void run() { 
+        Random generator = new Random(); 
+        Integer randomNumber = generator.nextInt(5); 
+  
+        // As run cannot throw any Exception 
+        try { 
+            Thread.sleep(randomNumber * 1000); 
+        } catch (InterruptedException e) { 
+            e.printStackTrace(); 
+        } 
+  
+        // Store the return value in result when done 
+        result = randomNumber; 
+  
+        // Wake up threads blocked on the get() method 
+        synchronized(this) { 
+            notifyAll(); 
+        } 
+    } 
+  
+    public synchronized Object get() throws InterruptedException  { 
+        while (result == null) 
+            wait(); 
+  
+        return result; 
+    } 
+} 
+
+public class RunnableTest 
+{ 
+    public static void main(String[] args) throws Exception { 
+        RunnableExample[] randomNumberTasks = new RunnableExample[5]; 
+  
+        for (int i = 0; i < 5; i++) { 
+            randomNumberTasks[i] = new RunnableExample(); 
+            Thread t = new Thread(randomNumberTasks[i]); 
+            t.start(); 
+        } 
+  
+        for (int i = 0; i < 5; i++) 
+            System.out.println(randomNumberTasks[i].get()); 
+    } 
+} 
+```
+Output
+```
+0
+4
+3
+1
+4
+```
 #### Q. What is the Thread’s interrupt flag? How can you set and check it? How does it relate to the InterruptedException?
 #### Q. What is Java Memory Model (JMM)? Describe its purpose and basic ideas.
 #### Q. Describe the conditions of livelock, and starvation.
