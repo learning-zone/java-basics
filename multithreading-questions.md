@@ -1179,7 +1179,6 @@ public class ConcurrencyLockExample implements Runnable {
 #### Q. Describe the conditions of livelock, and starvation.
 #### Q. How ReadWritelock can help in reducing contention among multiple threads?
 #### Q. What is SynchronousQueue in Java?
-#### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 #### Q. How do you share data between two threads in Java?
 #### Q. Describe the purpose and use-cases of the fork/join framework
 #### Q. What is Phaser in Java concurrency?
