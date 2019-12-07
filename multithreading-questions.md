@@ -1400,21 +1400,21 @@ We should declare such variables as static and volatile.
 
 We know that static fields are shared across all the objects of the class, and it belongs to the class and not the individual objects. But, for static and non-volatile variable also, threads may cache the variable locally.
 
-#### Q. What is Phaser in Java concurrency?
-#### Q. What is Exchanger in Java concurrency?
+#### Q. What are the main components of concurrency API?
+#### Q. What is difference between CyclicBarrier and CountDownLatch in Java?
 #### Q. What is Semaphore in Java concurrency?
+#### Q. What is FutureTask class?
 #### Q. What is lock striping in concurrent programming?
 #### Q. What is blocking method in Java?
 #### Q. What is Callable and Future in Java concurrency?
 #### Q. What is atomic variable in Java?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
 #### Q. What is Executors Framework?
-#### Q. What is FutureTask class?
 #### Q. What are the available implementations of ExecutorService in the standard library?
-#### Q. What are the main components of concurrency API?
-#### Q. What is difference between CyclicBarrier and CountDownLatch in Java?
 #### Q. Can we make array volatile in Java?
 #### Q. What are practical uses of volatile modifier?
 #### Q. What kind of thread is the Garbage collector thread?
 #### Q. How can we pause the execution of a Thread for specific time?
 #### Q. What is difference between Executor.submit() and Executer.execute() method?
+#### Q. What is Phaser in Java concurrency?
+#### Q. What is Exchanger in Java concurrency?
