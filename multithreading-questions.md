@@ -1319,8 +1319,7 @@ class ThreadsInterruptExample extends Thread {
             Thread.sleep(1000); 
             System.out.println("Task"); 
         } catch (InterruptedException e) { 
-            throw new RuntimeException("Thread " +  
-                                      "interrupted"); 
+            throw new RuntimeException("Thread interrupted"); 
         } 
     } 
     public static void main(String args[]) { 
