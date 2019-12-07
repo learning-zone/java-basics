@@ -924,7 +924,17 @@ Thread class run() method will be executed with empty implementation
 I am in run() method 
 ```
 
-#### Q. What is difference between the Thread class and Runnable interface for creating a Thread??
+#### Q. What is difference between the Thread class and Runnable interface for creating a Thread?
+A thread can be defined in two ways. First, by extending a **Thread class** that has already implemented a Runnable interface. Second, by directly implementing a **Runnable interface**.
+
+|THREAD	                                    |RUNNABLE                                                       |
+|-------------------------------------------|---------------------------------------------------------------|
+|Each thread creates a unique object and gets associated with it.|	Multiple threads share the same objects.|
+|As each thread create a unique object, more memory required.|As multiple threads share the same object less memory is used.|
+|In Java, multiple inheritance not allowed hence, after a class extends Thread class, it can not extend any other class.|	If a class define thread implementing the Runnable interface it has a chance of extending one class.|
+|A user must extend thread class only if it wants to override the other methods in Thread class.|If you only want to specialize run method then implementing Runnable is a better option.|
+|Extending Thread class introduces tight coupling as the class contains code of Thread class and also the job assigned to the thread|	Implementing Runnable interface introduces loose coupling as the code of Thread is separate form the job of Threads.|
+
 #### Q. What does join() method?
 #### Q. Can we make the user thread as daemon thread if the thread is started?
 #### Q. What is race-condition?
