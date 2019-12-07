@@ -1430,6 +1430,80 @@ CyclicBarrier is a synchronization aid that allows a set of threads to all wait 
 CyclicBarrier is used to reset count. The barrier is called cyclic because it can be reused after the waiting threads are released (or count  become zero).  
 
 #### Q. What is Semaphore in Java concurrency?
+A Semaphore is a thread synchronization construct that can be used either to send signals between threads to avoid missed signals, or to guard a critical section like you would with a lock. Java 5 comes with semaphore implementations in the java.util.concurrent package.   
+
+**1. Simple Semaphore**: 
+```java
+public class Semaphore {
+  private boolean signal = false;
+
+  public synchronized void take() {
+    this.signal = true;
+    this.notify();
+  }
+
+  public synchronized void release() throws InterruptedException{
+    while(!this.signal) wait();
+    this.signal = false;
+  }
+}
+```
+The take() method sends a signal which is stored internally in the Semaphore. The release() method waits for a signal. When received the signal flag is cleared again, and the release() method exited.
+
+**2. Counting Semaphore**: 
+```java
+public class CountingSemaphore {
+  private int signals = 0;
+
+  public synchronized void take() {
+    this.signals++;
+    this.notify();
+  }
+
+  public synchronized void release() throws InterruptedException{
+    while(this.signals == 0) wait();
+    this.signals--;
+  }
+}
+```
+**3. Bounded Semaphore**   
+```java
+public class BoundedSemaphore {
+  private int signals = 0;
+  private int bound   = 0;
+
+  public BoundedSemaphore(int upperBound){
+    this.bound = upperBound;
+  }
+
+  public synchronized void take() throws InterruptedException{
+    while(this.signals == bound) wait();
+    this.signals++;
+    this.notify();
+  }
+
+  public synchronized void release() throws InterruptedException{
+    while(this.signals == 0) wait();
+    this.signals--;
+    this.notify();
+  }
+}
+```
+**4. Using Semaphores as Locks**  
+```java
+BoundedSemaphore semaphore = new BoundedSemaphore(1);
+
+...
+
+semaphore.take();
+
+try{
+  //critical section
+} finally {
+  semaphore.release();
+}
+```
+
 #### Q. What is FutureTask class?
 #### Q. What is lock striping in concurrent programming?
 #### Q. What is blocking method in Java?
