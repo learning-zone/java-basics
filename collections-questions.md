@@ -65,4 +65,5 @@
 #### Q. What is DelayQueue in Java Concurrency?
 #### Q. Write a code to make Collections readOnly?
 #### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
+#### Q. What is SynchronousQueue in Java?
 
