@@ -1429,7 +1429,6 @@ CyclicBarrier is a synchronization aid that allows a set of threads to all wait 
 
 CyclicBarrier is used to reset count. The barrier is called cyclic because it can be reused after the waiting threads are released (or count  become zero).  
 
-
 #### Q. What is Semaphore in Java concurrency?
 #### Q. What is FutureTask class?
 #### Q. What is lock striping in concurrent programming?
