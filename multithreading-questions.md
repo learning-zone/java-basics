@@ -1393,7 +1393,13 @@ Starvation can occur due to the following reasons:
 
 * Threads are waiting on a resource forever but they remain waiting forever because other threads are constantly notified instead of the hungry ones.
 
-#### Q. How do you share data between two threads in Java?
+#### Q. How do I share a variable between 2 Java threads?
+We should declare such variables as static and volatile.
+
+Volatile variables are shared across multiple threads. This means that individual threads won’t cache its copy in the thread local. But every object would have its own copy of the variable so threads may cache value locally.
+
+We know that static fields are shared across all the objects of the class, and it belongs to the class and not the individual objects. But, for static and non-volatile variable also, threads may cache the variable locally.
+
 #### Q. Describe the purpose and use-cases of the fork/join framework
 #### Q. What is Phaser in Java concurrency?
 #### Q. What is Exchanger in Java concurrency?
