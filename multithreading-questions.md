@@ -927,6 +927,8 @@ I am in run() method
 #### Q. What is difference between the Thread class and Runnable interface for creating a Thread?
 A thread can be defined in two ways. First, by extending a **Thread class** that has already implemented a Runnable interface. Second, by directly implementing a **Runnable interface**.
 
+**Difference**  
+
 |THREAD	CLASS                               |RUNNABLE INTERFACE                                             |
 |-------------------------------------------|---------------------------------------------------------------|
 |Each thread creates a unique object and gets associated with it.|	Multiple threads share the same objects.|
