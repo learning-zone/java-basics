@@ -1347,7 +1347,52 @@ All local variables of primitive types ( boolean, byte, short, char, int, long, 
 
 The heap contains all objects created in your Java application, regardless of what thread created the object. This includes the object versions of the primitive types (e.g. Byte, Integer, Long etc.). It does not matter if an object was created and assigned to a local variable, or created as a member variable of another object, the object is still stored on the heap.
 
-#### Q. Describe the conditions of livelock, and starvation.
+#### Q. Describe the conditions of livelock and starvation?
+**Livelock** occurs when two or more processes continually repeat the same interaction in response to changes in the other processes without doing any useful work. These processes are not in the waiting state, and they are running concurrently. This is different from a deadlock because in a deadlock all processes are in the waiting state.
+```java
+var l1 = .... // lock object like semaphore or mutex etc 
+var l2 = .... // lock object like semaphore or mutex etc 
+      
+    // Thread1 
+    Thread.Start( ()=> { 
+              
+    while (true) { 
+          
+        if (!l1.Lock(1000)) { 
+            continue; 
+        } 
+        if (!l2.Lock(1000)) { 
+            continue; 
+        } 
+          
+        // do some work 
+    }); 
+  
+    // Thread2 
+    Thread.Start( ()=> { 
+            
+      while (true) { 
+            
+        if (!l2.Lock(1000)) { 
+            continue; 
+        }   
+        if (!l1.Lock(1000)) { 
+            continue; 
+        }   
+        // do some work 
+    }); 
+```
+
+**starvation** describes a situation where a greedy thread holds a resource for a long time so other threads are blocked forever. The blocked threads are waiting to acquire the resource but they never get a chance. Thus they starve to death.
+
+Starvation can occur due to the following reasons:
+
+* Threads are blocked infinitely because a thread takes long time to execute some synchronized code (e.g. heavy I/O operations or infinite loop).
+
+* A thread doesn’t get CPU’s time for execution because it has low priority as compared to other threads which have higher priority.
+
+* Threads are waiting on a resource forever but they remain waiting forever because other threads are constantly notified instead of the hungry ones.
+
 #### Q. How ReadWritelock can help in reducing contention among multiple threads?
 #### Q. What is SynchronousQueue in Java?
 #### Q. How do you share data between two threads in Java?
