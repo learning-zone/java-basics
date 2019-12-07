@@ -1126,14 +1126,59 @@ Value for Thread at last Thread-3 0
 Value for Thread After increment Thread-1 1
 Value for Thread at last Thread-1 0
 ```
-#### Q. What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization?
+#### Q. What is Lock interface in Java Concurrency API? What is the Difference between ReentrantLock and Synchronized?
+A `java.util.concurrent.locks.Lock` is a thread synchronization mechanism just like synchronized blocks. A Lock is, however, more flexible and more sophisticated than a synchronized block. Since Lock is an interface, you need to use one of its implementations to use a Lock in your applications. `ReentrantLock` is one such implementation of Lock interface.
+```java
+Lock lock = new ReentrantLock();
+ 
+lock.lock();
+ 
+//critical section
+lock.unlock();
+```
+
+**Difference between Lock Interface and synchronized keyword**  
+
+* Having a timeout trying to get access to a `synchronized` block is not possible. Using `Lock.tryLock(long timeout, TimeUnit timeUnit)`, it is possible.
+* The `synchronized` block must be fully contained within a single method. A Lock can have it’s calls to `lock()` and `unlock()` in separate methods.
+
+```java
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ConcurrencyLockExample implements Runnable {
+
+	private Resource resource;
+	private Lock lock;
+	
+	public ConcurrencyLockExample(Resource r) {
+		this.resource = r;
+		this.lock = new ReentrantLock();
+	}
+	
+	@Override
+	public void run() {
+		try {
+			if(lock.tryLock(10, TimeUnit.SECONDS)) {
+			  resource.doSomething();
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} finally {
+			//release lock
+			lock.unlock();
+		}
+		resource.doLogging();
+	}
+}
+```
 #### Q. What are Concurrent Collection Classes?
 #### Q. What is the difference between the Runnable and Callable interfaces?
 #### Q. What is the Thread’s interrupt flag? How can you set and check it? How does it relate to the InterruptedException?
 #### Q. What is Java Memory Model (JMM)? Describe its purpose and basic ideas.
 #### Q. Describe the conditions of livelock, and starvation.
 #### Q. How ReadWritelock can help in reducing contention among multiple threads?
-#### Q. What is the Difference between ReentrantLock and Synchronized?
 #### Q. What is SynchronousQueue in Java?
 #### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 #### Q. How do you share data between two threads in Java?
