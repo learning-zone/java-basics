@@ -1173,7 +1173,7 @@ public class ConcurrencyLockExample implements Runnable {
 	}
 }
 ```
-#### Q. What is the difference between the Runnable and Callable interfaces?
+#### Q. What is the difference between the Runnable and Callable interface?
 #### Q. What is the Thread’s interrupt flag? How can you set and check it? How does it relate to the InterruptedException?
 #### Q. What is Java Memory Model (JMM)? Describe its purpose and basic ideas.
 #### Q. Describe the conditions of livelock, and starvation.
