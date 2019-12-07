@@ -938,6 +938,74 @@ A thread can be defined in two ways. First, by extending a **Thread class** that
 |Extending Thread class introduces tight coupling as the class contains code of Thread class and also the job assigned to the thread|	Implementing Runnable interface introduces loose coupling as the code of Thread is separate form the job of Threads.|
 
 #### Q. What does join() method?
+`java.lang.Thread` class provides the join() method which allows one thread to wait until another thread completes its execution. 
+```java
+public class ThreadJoinExample {
+
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new MyRunnable(), "t1");
+        Thread t2 = new Thread(new MyRunnable(), "t2");
+        Thread t3 = new Thread(new MyRunnable(), "t3");
+        
+        t1.start();
+        
+        //start second thread after waiting for 2 seconds or if it's dead
+        try {
+            t1.join(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        t2.start();
+        
+        //start third thread only when first thread is dead
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
+        t3.start();
+        
+        //let all threads finish execution before finishing main thread
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+        System.out.println("All threads are dead, exiting main thread");
+    }
+
+}
+
+class MyRunnable implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println("Thread started: "+Thread.currentThread().getName());
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Thread ended: "+Thread.currentThread().getName());
+    }
+}
+```
+Output
+```
+Thread started: t1
+Thread started: t2
+Thread ended: t1
+Thread started: t3
+Thread ended: t2
+Thread ended: t3
+All threads are dead, exiting main thread
+```
 #### Q. Can we make the user thread as daemon thread if the thread is started?
 #### Q. What is race-condition?
 #### Q. What is the difference between ScheduledExecutorService and ExecutorService interface?
