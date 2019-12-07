@@ -66,7 +66,7 @@ class MyThread implements Runnable {
 * Implementing Runnable makes your class more flexible. If you extend Thread then the action you’re doing is always going to be in a thread. However, if you implement Runnable it doesn’t have to be. You can run it in a thread, or pass it to some kind of executor service, or just pass it around as a task within a single threaded application.
 
 #### Q. What is the difference between Process and Thread?
-Both processes and threads are independent sequences of execution. The typical difference is that threads (of the same process) run in a shared memory space, while processes run in separate memory spaces.
+Both processes and threads are independent sequences of execution. The typical difference is that threads run in a **shared memory space**, while processes run in **separate memory spaces**.
 
 **Process**  
 
