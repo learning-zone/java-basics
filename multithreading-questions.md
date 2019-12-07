@@ -1006,7 +1006,6 @@ Thread ended: t2
 Thread ended: t3
 All threads are dead, exiting main thread
 ```
-#### Q. Can we make the user thread as daemon thread if the thread is started?
 #### Q. What is race-condition?
 #### Q. What is the difference between ScheduledExecutorService and ExecutorService interface?
 #### Q. What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization?
