@@ -1007,6 +1007,128 @@ Thread ended: t3
 All threads are dead, exiting main thread
 ```
 #### Q. What is race-condition?
+Race condition in Java occurs in a multi-threaded environment **when more than one thread try to access a shared resource** (modify, write) at the same time. Since multiple threads try to race each other to finish executing a method thus the name **race condition**.
+
+**Example of race condition in Java**   
+```java
+class Counter  implements Runnable{
+    private int c = 0;
+
+    public void increment() {
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        c++;
+    }
+
+    public void decrement() {    
+        c--;
+    }
+
+    public int getValue() {
+        return c;
+    }
+    
+    @Override
+    public void run() {
+        //incrementing
+        this.increment();
+        System.out.println("Value for Thread After increment " 
+        + Thread.currentThread().getName() + " " + this.getValue());
+        //decrementing
+        this.decrement();
+        System.out.println("Value for Thread at last " 
+        + Thread.currentThread().getName() + " " + this.getValue());        
+    }
+}
+
+public class RaceConditionDemo{
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+        Thread t1 = new Thread(counter, "Thread-1");
+        Thread t2 = new Thread(counter, "Thread-2");
+        Thread t3 = new Thread(counter, "Thread-3");
+        t1.start();
+        t2.start();
+        t3.start();
+    }    
+}
+```
+Output
+```
+Value for Thread After increment Thread-2 3
+Value for Thread at last Thread-2 2
+Value for Thread After increment Thread-1 2
+Value for Thread at last Thread-1 1
+Value for Thread After increment Thread-3 1
+Value for Thread at last Thread-3 0
+```
+
+**Using synchronization to avoid race condition in Java**  
+To fix the race condition we need to have a way to restrict resource access to only one thread at a time. We have to use `synchronized` keyword to synchronize the access to the shared resource. 
+```java
+//This class' shared object will be accessed by threads
+class Counter  implements Runnable{
+    private int c = 0;
+
+    public  void increment() {
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        c++;
+    }
+
+    public  void decrement() {    
+        c--;        
+    }
+
+    public  int getValue() {
+        return c;
+    }
+    
+    @Override
+    public void run() {
+        synchronized(this){
+            // incrementing
+            this.increment();
+            System.out.println("Value for Thread After increment " 
+             + Thread.currentThread().getName() + " " + this.getValue());
+            //decrementing
+            this.decrement();
+            System.out.println("Value for Thread at last " + Thread.currentThread().getName() 
+                + " " + this.getValue());
+        }        
+    }
+}
+
+public class RaceConditionDemo{
+    public static void main(String[] args) {
+        Counter counter = new Counter();
+        Thread t1 = new Thread(counter, "Thread-1");
+        Thread t2 = new Thread(counter, "Thread-2");
+        Thread t3 = new Thread(counter, "Thread-3");
+        t1.start();
+        t2.start();
+        t3.start();
+    }    
+}
+```
+Output
+```
+Value for Thread After increment Thread-2 1
+Value for Thread at last Thread-2 0
+Value for Thread After increment Thread-3 1
+Value for Thread at last Thread-3 0
+Value for Thread After increment Thread-1 1
+Value for Thread at last Thread-1 0
+```
+
 #### Q. What is the difference between ScheduledExecutorService and ExecutorService interface?
 #### Q. What is Lock interface in Java Concurrency API? What are it’s benefits over synchronization?
 #### Q. What are Concurrent Collection Classes?
