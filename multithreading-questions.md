@@ -1018,7 +1018,6 @@ class Counter  implements Runnable{
         try {
             Thread.sleep(10);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         c++;
@@ -1045,7 +1044,7 @@ class Counter  implements Runnable{
     }
 }
 
-public class RaceConditionDemo{
+public class RaceConditionExample {
     public static void main(String[] args) {
         Counter counter = new Counter();
         Thread t1 = new Thread(counter, "Thread-1");
@@ -1078,7 +1077,6 @@ class Counter  implements Runnable{
         try {
             Thread.sleep(10);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         c++;
@@ -1094,7 +1092,7 @@ class Counter  implements Runnable{
     
     @Override
     public void run() {
-        synchronized(this){
+        synchronized(this) {
             // incrementing
             this.increment();
             System.out.println("Value for Thread After increment " 
@@ -1107,7 +1105,7 @@ class Counter  implements Runnable{
     }
 }
 
-public class RaceConditionDemo{
+public class RaceConditionExample {
     public static void main(String[] args) {
         Counter counter = new Counter();
         Thread t1 = new Thread(counter, "Thread-1");
