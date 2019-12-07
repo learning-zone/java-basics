@@ -1339,6 +1339,14 @@ Output
 Exception in thread "Thread-0" java.lang.RuntimeException: Thread interrupted
 ```
 #### Q. What is Java Memory Model (JMM)? Describe its purpose and basic ideas.
+The Java memory model used internally in the JVM divides memory between thread stacks and the heap. Each thread running in the Java virtual machine has its own thread stack. The thread stack contains information about what methods the thread has called to reach the current point of execution. 
+
+The thread stack also contains all local variables for each method being executed (all methods on the call stack). A thread can only access it's own thread stack. Local variables created by a thread are invisible to all other threads than the thread who created it. Even if two threads are executing the exact same code, the two threads will still create the local variables of that code in each their own thread stack. Thus, each thread has its own version of each local variable.
+
+All local variables of primitive types ( boolean, byte, short, char, int, long, float, double) are fully stored on the thread stack and are thus not visible to other threads. One thread may pass a copy of a pritimive variable to another thread, but it cannot share the primitive local variable itself.
+
+The heap contains all objects created in your Java application, regardless of what thread created the object. This includes the object versions of the primitive types (e.g. Byte, Integer, Long etc.). It does not matter if an object was created and assigned to a local variable, or created as a member variable of another object, the object is still stored on the heap.
+
 #### Q. Describe the conditions of livelock, and starvation.
 #### Q. How ReadWritelock can help in reducing contention among multiple threads?
 #### Q. What is SynchronousQueue in Java?
