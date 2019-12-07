@@ -1396,7 +1396,7 @@ Starvation can occur due to the following reasons:
 #### Q. How do I share a variable between 2 Java threads?
 We should declare such variables as static and volatile.
 
-Volatile variables are shared across multiple threads. This means that individual threads won’t cache its copy in the thread local. But every object would have its own copy of the variable so threads may cache value locally.
+**Volatile variables** are shared across multiple threads. This means that individual threads won’t cache its copy in the thread local. But every object would have its own copy of the variable so threads may cache value locally.
 
 We know that static fields are shared across all the objects of the class, and it belongs to the class and not the individual objects. But, for static and non-volatile variable also, threads may cache the variable locally.
 
