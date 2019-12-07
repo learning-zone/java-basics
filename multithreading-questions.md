@@ -924,7 +924,7 @@ Thread class run() method will be executed with empty implementation
 I am in run() method 
 ```
 
-#### Q. What is differentiate between the Thread class and Runnable interface for creating a Thread?
+#### Q. What is difference between the Thread class and Runnable interface for creating a Thread??
 #### Q. What does join() method?
 #### Q. Can we make the user thread as daemon thread if the thread is started?
 #### Q. What is race-condition?
