@@ -1401,6 +1401,23 @@ We should declare such variables as static and volatile.
 We know that static fields are shared across all the objects of the class, and it belongs to the class and not the individual objects. But, for static and non-volatile variable also, threads may cache the variable locally.
 
 #### Q. What are the main components of concurrency API?
+The concurrency API are designed and optimized specifically for synchronized multithreaded access. They are grouped under the `java.util.concurrent` package.
+
+**Main Components**  
+
+* Executor
+* ExecutorService
+* ScheduledExecutorService
+* Future
+* CountDownLatch
+* CyclicBarrier
+* Semaphore
+* ThreadFactory
+* BlockingQueue
+* DelayQueue
+* Locks
+* Phaser
+
 #### Q. What is difference between CyclicBarrier and CountDownLatch in Java?
 #### Q. What is Semaphore in Java concurrency?
 #### Q. What is FutureTask class?
