@@ -1632,11 +1632,11 @@ public class SafeCounterWithoutLock {
 #### Q. What is Executors Framework?
 The Executor framework helps to **decouple a command submission from command execution**. In the java.util.concurrent package there are three interfaces:
 
-**Executor** — Used to submit a new task.
+**1. Executor** — Used to submit a new task.
 
-**ExecutorService** — A subinterface of Executor that adds methods to manage lifecycle of threads used to run the submitted tasks and methods to produce a Future to get a result from an asynchronous computation.
+**2. ExecutorService** — A subinterface of Executor that adds methods to manage lifecycle of threads used to run the submitted tasks and methods to produce a Future to get a result from an asynchronous computation.
 
-**ScheduledExecutorService** — A subinterface of ExecutorService, to execute commands periodically or after a given delay.
+**3. ScheduledExecutorService** — A subinterface of ExecutorService, to execute commands periodically or after a given delay.
 
 #### Q. What are the available implementations of ExecutorService in the standard library?
 #### Q. Can we make array volatile in Java?
