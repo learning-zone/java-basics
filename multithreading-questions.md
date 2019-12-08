@@ -1608,11 +1608,11 @@ Atomic variables allow us to perform atomic operations on the variables. The mos
 *  `set()`: writes the value to memory, so that the change is visible to other threads; equivalent to writing a volatile variable
 *  `lazySet()`: eventually writes the value to memory, may be reordered with subsequent relevant memory operations. One use case is nullifying references, for the sake of garbage collection, which is never going to be accessed again. In this case, better performance is achieved by delaying the null volatile write
 *  `compareAndSet()`: same as described in section 3, returns true when it succeeds, else false
-*  `weakCompareAndSet()`: same as described in section 3, but weaker in the sense, that it does not create happens-before *  orderings. This means that it may not necessarily see updates made to other variables
+*  `weakCompareAndSet()`: same as described in section 3, but weaker in the sense, that it does not create happens-before  orderings. This means that it may not necessarily see updates made to other variables
 
 ```java
 public class SafeCounterWithoutLock {
-    
+
     private final AtomicInteger counter = new AtomicInteger(0);
      
     public int getValue() {
