@@ -1504,7 +1504,7 @@ try{
 }
 ```
 #### Q. What is Callable and Future in Java concurrency?
-Future and FutureTask in Java allows to write asynchronous code. A Future interface provides methods **to check if the computation is complete, to wait for its completion and to retrieve the results of the computation**. The result is retrieved using Future’s get() method when the computation has completed, and it blocks until it is completed.
+Future and FutureTask in Java allows to write asynchronous code. A Future interface provides methods **to check if the computation is complete, to wait for its completion and to retrieve the results of the computation**. The result is retrieved using Future’s get() method when the computation has completed, and it blocks until it is completed. We need a callable object to create a future task and then we can use Java Thread Pool Executor to process these asynchronously.
 
 ```java
 import java.util.concurrent.Callable; 
@@ -1522,7 +1522,7 @@ import java.util.logging.Logger;
 public class FutureExample { 
 
     private static final ExecutorService threadpool = Executors.newFixedThreadPool(3); 
-    
+
     public static void main(String args[]) throws InterruptedException, ExecutionException { 
         FactorialCalculator task = new FactorialCalculator(10); 
         System.out.println("Submitting Task ..."); 
