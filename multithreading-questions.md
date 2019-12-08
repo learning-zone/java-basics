@@ -1655,6 +1655,12 @@ First an ExecutorService is created using the Executors newFixedThreadPool() fac
 Second, an anonymous implementation of the Runnable interface is passed to the execute() method. This causes the Runnable to be executed by one of the threads in the ExecutorService.
 
 #### Q. What are the available implementations of ExecutorService in the standard library?
+The ExecutorService interface has three standard implementations:
+
+* **ThreadPoolExecutor**: for executing tasks using a pool of threads. Once a thread is finished executing the task, it goes back into the pool. If all threads in the pool are busy, then the task has to wait for its turn.
+* **ScheduledThreadPoolExecutor**: allows to schedule task execution instead of running it immediately when a thread is available. It can also schedule tasks with fixed rate or fixed delay.
+* **ForkJoinPool**: is a special ExecutorService for dealing with recursive algorithms tasks. If you use a regular ThreadPoolExecutor for a recursive algorithm, you will quickly find all your threads are busy waiting for the lower levels of recursion to finish. The ForkJoinPool implements the so-called work-stealing algorithm that allows it to use available threads more efficiently.
+
 #### Q. Can we make array volatile in Java?
 #### Q. What are practical uses of volatile modifier?
 #### Q. What kind of thread is the Garbage collector thread?
