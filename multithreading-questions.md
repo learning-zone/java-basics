@@ -1664,6 +1664,10 @@ The ExecutorService interface has three standard implementations:
 #### Q. What kind of thread is the Garbage collector thread?
 * Daemon thread
 #### Q. How can we pause the execution of a Thread for specific time?
+* **Thread.sleep(...)**: causes the currently executing thread to sleep (cease execution) for the specified number of milliseconds plus the specified number of nanoseconds, subject to the precision and accuracy of system timers and schedulers. The thread does not lose ownership of any monitors;
+* **Thread.yield()**: causes the currently executing thread object to temporarily pause and allow other threads to execute;
+* **Monitors**: you call wait on the object you want to lock and you release the lock by calling notify on the same object.
+
 #### Q. What is difference between Executor.submit() and Executer.execute() method?
 #### Q. What is Phaser in Java concurrency?
 #### Q. What is Exchanger in Java concurrency?
