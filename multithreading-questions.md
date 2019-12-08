@@ -1583,6 +1583,24 @@ Task is completed, let's check result
 Factorial of 1000000 is : 3628800
 ```
 #### Q. What is blocking method in Java?
+Blocking methods in Java are those methods which block the executing thread until their operation finished. Example of blocking method is `InputStream read()` method which blocks until all data from InputStream has been read completely.
+
+```java
+public class BlcokingCallTest {
+
+    public static void main(String args[]) throws FileNotFoundException, IOException  {
+      System.out.println("Calling blocking method in Java");
+      int input = System.in.read();
+      System.out.println("Blocking method is finished");
+    }  
+}
+```
+**Examples of blocking methods in Java:**  
+
+* **InputStream.read()** which blocks until input data is available, an exception is thrown or end of Stream is detected.
+* **ServerSocket.accept()** which listens for incoming socket connection in Java and blocks until a connection is made.
+* **InvokeAndWait()** wait until code is executed from Event Dispatcher thread.
+
 #### Q. What is atomic variable in Java?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
 #### Q. What is Executors Framework?
