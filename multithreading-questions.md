@@ -1638,7 +1638,7 @@ The Executor framework helps to **decouple a command submission from command exe
 
 **3. ScheduledExecutorService** — A subinterface of ExecutorService, to execute commands periodically or after a given delay.
 
-**Java ExecutorService Example**  
+Example: **Java ExecutorService**  
 ```java
 ExecutorService executorService = Executors.newFixedThreadPool(10);
 
