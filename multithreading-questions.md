@@ -1629,8 +1629,6 @@ public class SafeCounterWithoutLock {
     }
 }
 ```
-
-#### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
 #### Q. What is Executors Framework?
 #### Q. What are the available implementations of ExecutorService in the standard library?
 #### Q. Can we make array volatile in Java?
@@ -1640,3 +1638,4 @@ public class SafeCounterWithoutLock {
 #### Q. What is difference between Executor.submit() and Executer.execute() method?
 #### Q. What is Phaser in Java concurrency?
 #### Q. What is Exchanger in Java concurrency?
+#### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
