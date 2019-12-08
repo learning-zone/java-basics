@@ -1503,8 +1503,6 @@ try{
   semaphore.release();
 }
 ```
-
-#### Q. What is FutureTask class?
 #### Q. What is lock striping in concurrent programming?
 #### Q. What is blocking method in Java?
 #### Q. What is Callable and Future in Java concurrency?
