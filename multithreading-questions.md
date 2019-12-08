@@ -1638,6 +1638,23 @@ The Executor framework helps to **decouple a command submission from command exe
 
 **3. ScheduledExecutorService** — A subinterface of ExecutorService, to execute commands periodically or after a given delay.
 
+**Java ExecutorService Example**  
+```java
+ExecutorService executorService = Executors.newFixedThreadPool(10);
+
+executorService.execute(new Runnable() {
+    public void run() {
+        System.out.println("Asynchronous task");
+    }
+});
+
+executorService.shutdown();
+```
+First an ExecutorService is created using the Executors newFixedThreadPool() factory method. This creates a thread pool with 10 threads executing tasks.
+
+Second, an anonymous implementation of the Runnable interface is passed to the execute() method. This causes the Runnable to be executed by one of the threads in the ExecutorService.
+
+
 #### Q. What are the available implementations of ExecutorService in the standard library?
 #### Q. Can we make array volatile in Java?
 #### Q. What are practical uses of volatile modifier?
