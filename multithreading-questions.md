@@ -1524,10 +1524,14 @@ public class FutureExample {
     private static final ExecutorService threadpool = Executors.newFixedThreadPool(3); 
 
     public static void main(String args[]) throws InterruptedException, ExecutionException { 
+        
         FactorialCalculator task = new FactorialCalculator(10); 
         System.out.println("Submitting Task ..."); 
+        
         Future future = threadpool.submit(task); 
+        
         System.out.println("Task is submitted"); 
+        
         while (!future.isDone()) { 
             System.out.println("Task is not completed yet...."); 
             Thread.sleep(1); //sleep for 1 millisecond before checking again 
@@ -1535,10 +1539,13 @@ public class FutureExample {
         System.out.println("Task is completed, let's check result"); 
         long factorial = future.get(); 
         System.out.println("Factorial of 1000000 is : " + factorial); 
+        
         threadpool.shutdown(); 
     } 
     private static class FactorialCalculator implements Callable { 
+        
         private final int number; 
+        
         public FactorialCalculator(int number) { 
             this.number = number; 
         } 
