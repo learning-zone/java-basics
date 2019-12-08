@@ -1673,7 +1673,7 @@ The ExecutorService interface has three standard implementations:
 
 * Takes Runnable object as parameter.
 * Returns void.
-* This is used in most of the scenarios. Useful when you want to execute a task asynchronously in thread pool but doesn't bother about it's result.
+* Useful when you want to execute a task asynchronously in thread pool but doesn't bother about it's result.
 * Example: Delegating a request (for which no response required) to another service, sending an email.
 
 **submit()**:  
