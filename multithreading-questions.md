@@ -1582,7 +1582,6 @@ Task is not completed yet....
 Task is completed, let's check result 
 Factorial of 1000000 is : 3628800
 ```
-#### Q. What is lock striping in concurrent programming?
 #### Q. What is blocking method in Java?
 #### Q. What is atomic variable in Java?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
