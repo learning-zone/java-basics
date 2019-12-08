@@ -1661,9 +1661,8 @@ The ExecutorService interface has three standard implementations:
 * **ScheduledThreadPoolExecutor**: allows to schedule task execution instead of running it immediately when a thread is available. It can also schedule tasks with fixed rate or fixed delay.
 * **ForkJoinPool**: is a special ExecutorService for dealing with recursive algorithms tasks. If you use a regular ThreadPoolExecutor for a recursive algorithm, you will quickly find all your threads are busy waiting for the lower levels of recursion to finish. The ForkJoinPool implements the so-called work-stealing algorithm that allows it to use available threads more efficiently.
 
-#### Q. Can we make array volatile in Java?
-#### Q. What are practical uses of volatile modifier?
 #### Q. What kind of thread is the Garbage collector thread?
+* Daemon thread
 #### Q. How can we pause the execution of a Thread for specific time?
 #### Q. What is difference between Executor.submit() and Executer.execute() method?
 #### Q. What is Phaser in Java concurrency?
