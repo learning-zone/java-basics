@@ -1669,6 +1669,20 @@ The ExecutorService interface has three standard implementations:
 * **Monitors**: you call wait on the object you want to lock and you release the lock by calling notify on the same object.
 
 #### Q. What is difference between Executor.submit() and Executer.execute() method?
+**execute()**:  
+
+* Takes Runnable object as parameter.
+* Returns void.
+* This is used in most of the scenarios. Useful when you want to execute a task asynchronously in thread pool but doesn't bother about it's result.
+* Example: Delegating a request (for which no response required) to another service, sending an email.
+
+**submit()**:  
+
+* Takes Runnable or Callable object as parameter.
+* Returns Future object.
+* Useful when the calling thread needs the output from the task executed. Using Future object, you can get result, check whether the task is completed without failure or can request cancelling the task before its completion.
+* Example: Parallel stream search in Java 8.
+
 #### Q. What is Phaser in Java concurrency?
 #### Q. What is Exchanger in Java concurrency?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
