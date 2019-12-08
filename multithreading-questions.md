@@ -1602,6 +1602,34 @@ public class BlcokingCallTest {
 * **InvokeAndWait()** wait until code is executed from Event Dispatcher thread.
 
 #### Q. What is atomic variable in Java?
+Atomic variables allow us to perform atomic operations on the variables. The most commonly used atomic variable classes in Java are `AtomicInteger`, `AtomicLong`, `AtomicBoolean`, and `AtomicReference`. These classes represent an int, long, boolean and object reference respectively which can be atomically updated. The main methods exposed by these classes are:
+
+*  `get()`: gets the value from the memory, so that changes made by other threads are visible; equivalent to reading a volatile variable
+*  `set()`: writes the value to memory, so that the change is visible to other threads; equivalent to writing a volatile variable
+*  `lazySet()`: eventually writes the value to memory, may be reordered with subsequent relevant memory operations. One use case is nullifying references, for the sake of garbage collection, which is never going to be accessed again. In this case, better performance is achieved by delaying the null volatile write
+*  `compareAndSet()`: same as described in section 3, returns true when it succeeds, else false
+*  `weakCompareAndSet()`: same as described in section 3, but weaker in the sense, that it does not create happens-before *  orderings. This means that it may not necessarily see updates made to other variables
+
+```java
+public class SafeCounterWithoutLock {
+    
+    private final AtomicInteger counter = new AtomicInteger(0);
+     
+    public int getValue() {
+        return counter.get();
+    }
+    public void increment() {
+        while(true) {
+            int existingValue = getValue();
+            int newValue = existingValue + 1;
+            if(counter.compareAndSet(existingValue, newValue)) {
+                return;
+            }
+        }
+    }
+}
+```
+
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
 #### Q. What is Executors Framework?
 #### Q. What are the available implementations of ExecutorService in the standard library?
