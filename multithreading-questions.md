@@ -1684,5 +1684,82 @@ The ExecutorService interface has three standard implementations:
 * Example: Parallel stream search in Java 8.
 
 #### Q. What is Phaser in Java concurrency?
+The Phaser allows us to build logic in which **threads need to wait on the barrier before going to the next step of execution**. Phaser is similar to other synchronization barrier utils like CountDownLatch and CyclicBarrier. 
+
+**CountDownLatch vs CyclicBarrier vs Phaser**  
+
+**1. CountDownLatch**:
+
+* Created with a fixed number of threads
+* Cannot be reset
+* Allows threads to wait(CountDownLatch#await()) or continue with its execution(CountDownLatch#countDown()).
+
+**2. CyclicBarrier**:  
+
+* Can be reset.
+* Does not a provide a method for the threads to advance. The threads have to wait till all the threads arrive.
+* Created with fixed number of threads.
+
+**3. Phaser**: 
+
+* Number of threads need not be known at Phaser creation time. They can be added dynamically.
+* Can be reset and hence is, reusable.
+* Allows threads to wait(Phaser#arriveAndAwaitAdvance()) or continue with its execution(Phaser#arrive()).
+* Supports multiple Phases(hence the name phaser).
+
+**PhaserExample.java**  
+```java
+import java.util.concurrent.Phaser;
+ 
+public class PhaserExample
+{
+    public static void main(String[] args) throws InterruptedException
+    {
+          Phaser phaser = new Phaser();
+          phaser.register();//register self... phaser waiting for 1 party (thread)
+          int phasecount = phaser.getPhase();
+          
+          System.out.println("Phasecount is "+phasecount);
+          new PhaserExample().testPhaser(phaser,2000);//phaser waiting for 2 parties
+          new PhaserExample().testPhaser(phaser,4000);//phaser waiting for 3 parties
+          new PhaserExample().testPhaser(phaser,6000);//phaser waiting for 4 parties
+          //now that all threads are initiated, we will de-register main thread 
+          //so that the barrier condition of 3 thread arrival is meet.
+          phaser.arriveAndDeregister();
+                  Thread.sleep(10000);
+                  phasecount = phaser.getPhase();
+          System.out.println("Phasecount is "+phasecount);
+ 
+    }
+ 
+    private void testPhaser(final Phaser phaser,final int sleepTime) {
+        phaser.register();
+        new Thread() {
+            @Override
+            public void run() {
+                        try {
+                            System.out.println(Thread.currentThread().getName()+" arrived");
+                            phaser.arriveAndAwaitAdvance();//threads register arrival to the phaser.
+                            Thread.sleep(sleepTime);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    System.out.println(Thread.currentThread().getName()+" after passing barrier");
+                }
+            }.start();
+    }
+}
+```
+Output
+```
+Phasecount is 0
+Thread-0 arrived
+Thread-2 arrived
+Thread-1 arrived
+Thread-0 after passing barrier
+Thread-1 after passing barrier
+Thread-2 after passing barrier
+Phasecount is 1
+```
 #### Q. What is Exchanger in Java concurrency?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
