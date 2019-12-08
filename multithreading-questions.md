@@ -1654,7 +1654,6 @@ First an ExecutorService is created using the Executors newFixedThreadPool() fac
 
 Second, an anonymous implementation of the Runnable interface is passed to the execute() method. This causes the Runnable to be executed by one of the threads in the ExecutorService.
 
-
 #### Q. What are the available implementations of ExecutorService in the standard library?
 #### Q. Can we make array volatile in Java?
 #### Q. What are practical uses of volatile modifier?
