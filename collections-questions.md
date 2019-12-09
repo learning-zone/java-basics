@@ -1,6 +1,9 @@
 ## Collections Interview Questions
 
 #### Q. What is Java Collections Framework? List out some benefits of Collections framework?
+
+![Java Collections Framework](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection.png)
+
 #### Q. What will be the problem if you don't override hashcode() method?
 #### Q. What is the default size of load factor in hashing based collection?
 #### Q. What is the benefit of Generics in Collections Framework?
