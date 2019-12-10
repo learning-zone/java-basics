@@ -168,4 +168,4 @@ Checking equality between alex1 and alex2 = false
 #### Q. Write a code to make Collections readOnly?
 #### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 #### Q. What is SynchronousQueue in Java?
-
+#### Q. What is the default size of load factor in hashing based collection?
