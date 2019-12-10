@@ -104,7 +104,6 @@ alex1 hashcode = 1852704110
 alex2 hashcode = 2032578917
 Checking equality between alex1 and alex2 = false
 ```
-#### Q. What is the default size of load factor in hashing based collection?
 #### Q. What is the benefit of Generics in Collections Framework?
 #### Q. How do WeakHashMap works?
 #### Q. What is difference between Array and ArrayList?
