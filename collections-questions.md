@@ -63,6 +63,45 @@ Some collections, like HashSet, HashMap or HashTable use the hashcode value of a
 
 If hashcode() in not overridden then the default implementation in Object class will be used by collections. This implementation gives different values for different objects, even if they are equal according to the equals() method.
 
+Example:
+```java
+public class Student {
+    private int id;
+    private String name;
+    public Student(int id, String name) {
+        this.name = name;
+        this.id = id;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+public class HashcodeEquals {
+    public static void main(String[] args) {
+        Student alex1 = new Student(1, "Alex");
+        Student alex2 = new Student(1, "Alex");
+        System.out.println("alex1 hashcode = " + alex1.hashCode());
+        System.out.println("alex2 hashcode = " + alex2.hashCode());
+        System.out.println("Checking equality between alex1 and alex2 = " + alex1.equals(alex2));
+    }
+}
+```
+Output
+```
+alex1 hashcode = 1852704110
+alex2 hashcode = 2032578917
+Checking equality between alex1 and alex2 = false
+```
 #### Q. What is the default size of load factor in hashing based collection?
 #### Q. What is the benefit of Generics in Collections Framework?
 #### Q. How do WeakHashMap works?
