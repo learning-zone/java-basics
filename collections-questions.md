@@ -56,6 +56,13 @@ Some common known classes implementing this interface are **ArrayDeque, Concurre
 ![Java Collections Framework](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection.png)
 
 #### Q. What will be the problem if you don't override hashcode() method?
+Some collections, like HashSet, HashMap or HashTable use the hashcode value of an object to find out how the object would be stored in the collection, and subsequently hashcode is used to help locate the object in the collection. Hashing retrieval involves:
+
+* First, find out the right bucket using hashCode().
+* Secondly, search the bucket for the right element using equals()
+
+If hashcode() in not overridden then the default implementation in Object class will be used by collections. This implementation gives different values for different objects, even if they are equal according to the equals() method.
+
 #### Q. What is the default size of load factor in hashing based collection?
 #### Q. What is the benefit of Generics in Collections Framework?
 #### Q. How do WeakHashMap works?
