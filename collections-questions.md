@@ -105,6 +105,8 @@ alex2 hashcode = 2032578917
 Checking equality between alex1 and alex2 = false
 ```
 #### Q. What is the benefit of Generics in Collections Framework?
+Generics allow us to provide the type of Object that a collection can contain, so if we try to add any element of other type it throws compile time error. This avoids ClassCastException at Runtime because we will get the error at compilation. Also Generics make code clean since we don’t need to use casting and instanceof operator. 
+
 #### Q. How do WeakHashMap works?
 #### Q. What is difference between Array and ArrayList?
 #### Q. What is difference between ArrayList and LinkedList?
