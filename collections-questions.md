@@ -118,7 +118,7 @@ import java.util.WeakHashMap;
 public class WeakHashMapExample {
 
     public static void main(final String[] args) {
-        
+
         final Map<Key, Project> map = new WeakHashMap<>();
         Key key1 = new Key("ACTIVE");
         final Key key2 = new Key("INACTIVE");
@@ -153,6 +153,58 @@ INACTIVE   [project id : 200, project name : Employee Management System,
 ```
 
 #### Q. What is difference between Array and ArrayList?
+**1. Size**: Array in Java is fixed in size. We can not change the size of array after creating it. ArrayList is dynamic in size. When we add elements to an ArrayList, its capacity increases automatically.
+
+**2. Performance**: In Java Array and ArrayList give different performance for different operations.
+
+add() or get(): Adding an element to or retrieving an element from an array or ArrayList object has similar performance. These are constant time operations.
+
+resize(): Automatic resize of ArrayList slows down the performance. ArrayList is internally backed by an Array. In resize() a temporary array is used to copy elements from old array to new array.
+
+**3. Primitives**: Array can contain both primitive data types as well as objects. But ArrayList can not contain primitive data types. It contains only objects.
+
+**4. Iterator**: In an ArrayList we use an Iterator object to traverse the elements. We use for loop for iterating elements in an array.
+
+**5. Type Safety**: Java helps in ensuring Type Safety of elements in an ArrayList by using Generics. An Array can contain objects of same type of classe. If we try to store a different data type object in an Array then it throws ArrayStoreException.
+
+**6. Length**: Size of ArrayList can be obtained by using size() method. Every array object has length variable that is same as the length/size of the array.
+
+**7. Adding elements**: In an ArrayList we can use add() method to add objects. In an Array assignment operator is used for adding elements.
+
+**8. Multi-dimension**: An Array can be multi-dimensional. An ArrayList is always of single dimension
+```java
+// A Java program to demonstrate differences between array 
+// and ArrayList 
+import java.util.ArrayList; 
+import java.util.Arrays; 
+  
+class Test 
+{ 
+    public static void main(String args[]) { 
+        /* ........... Normal Array............. */
+        int[] arr = new int[2]; 
+        arr[0] = 10; 
+        arr[1] = 20; 
+        System.out.println(arr[0]); 
+  
+        /*............ArrayList..............*/
+        // Create an arrayList with initial capacity 2 
+        ArrayList<Integer> arrL = new ArrayList<Integer>(2); 
+  
+        // Add elements to ArrayList 
+        arrL.add(30); 
+        arrL.add(40); 
+  
+        // Access elements of ArrayList 
+        System.out.println(arrL.get(0)); 
+    } 
+} 
+```
+Output
+```
+10
+30
+```
 #### Q. What is difference between ArrayList and LinkedList?
 #### Q. What is difference between Comparable and Comparator interface?
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
