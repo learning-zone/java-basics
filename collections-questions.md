@@ -108,6 +108,50 @@ Checking equality between alex1 and alex2 = false
 Generics allow us to provide the type of Object that a collection can contain, so if we try to add any element of other type it throws compile time error. This avoids ClassCastException at Runtime because we will get the error at compilation. Also Generics make code clean since we don’t need to use casting and instanceof operator. 
 
 #### Q. How do WeakHashMap works?
+WeakHashMap is a Hash table-based implementation of the Map interface with weak keys. An entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. Both null values and the null key are supported. This class has performance characteristics similar to those of the HashMap class and has the same efficiency parameters of initial capacity and load factor. 
+```java
+// Java program to illustrate  
+// WeakHashmap  
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.WeakHashMap;
+public class WeakHashMapExample {
+
+    public static void main(final String[] args) {
+        
+        final Map<Key, Project> map = new WeakHashMap<>();
+        Key key1 = new Key("ACTIVE");
+        final Key key2 = new Key("INACTIVE");
+        map.put(key1, new Project(100, "Customer Management System", "Customer Management System"));
+        map.put(key2, new Project(200, "Employee Management System", "Employee Management System"));
+        key1 = null;
+        System.gc();
+        for (final Entry<Key, Project> entry : map.entrySet()) {
+            System.out.println(entry.getKey().getKey() + "   " + entry.getValue());
+        }
+    }
+}
+class Key {
+    private String key;
+    public Key(final String key) {
+        super();
+        this.key = key;
+    }
+    public String getKey() {
+        return key;
+    }
+    public void setKey(final String key) {
+        this.key = key;
+    }
+}
+
+```
+Output
+```
+INACTIVE   [project id : 200, project name : Employee Management System, 
+           project desc : Employee Management System ]
+```
+
 #### Q. What is difference between Array and ArrayList?
 #### Q. What is difference between ArrayList and LinkedList?
 #### Q. What is difference between Comparable and Comparator interface?
