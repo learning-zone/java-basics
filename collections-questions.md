@@ -255,6 +255,61 @@ public class ArrayListLinkedListExample
 } 
 ```
 #### Q. What is difference between Comparable and Comparator interface?
+**Comparable**: A comparable object is capable of comparing itself with another object. The class itself must implements the `java.lang.Comparable` interface in order to be able to compare its instances.
+
+**Comparator**: A comparator object is capable of comparing two different objects. The class is not comparing its instances, but some other class’s instances. This comparator class must implement the `java.util.Comparator` interface.
+
+Comparable and Comparator both are interfaces and can be used to sort collection elements.
+
+| Sl.No|Comparable	         |Comparator                                                |
+|------|-----------------------|----------------------------------------------------------|
+| 01.|Comparable provides a single sorting sequence. In other words, we can sort the collection on the basis of a single element such as id, name, and price.|The Comparator provides multiple sorting sequences. In other words, we can sort the collection on the basis of multiple elements such as id, name, and price etc.|
+| 02.|Comparable affects the original class, i.e., the actual class is modified.|Comparator doesn't affect the original class, i.e., the actual class is not modified.|
+| 03.|Comparable provides compareTo() method to sort elements.|	Comparator provides compare() method to sort elements.|
+| 04.|Comparable is present in java.lang package.|A Comparator is present in the java.util package.|
+| 05.|We can sort the list elements of Comparable type by Collections.sort(List) method.|We can sort the list elements of Comparator type by Collections.sort(List, Comparator) method.|
+
+```java
+//Java Program to demonstrate the use of Java Comparable.  
+//Creating a class which implements Comparable Interface  
+import java.util.*;  
+import java.io.*;  
+
+class Student implements Comparable<Student> {  
+  int rollno;  
+  String name;  
+  int age;  
+  Student(int rollno,String name,int age){  
+    this.rollno=rollno;  
+    this.name=name;  
+    this.age=age;  
+  }  
+  public int compareTo(Student st){  
+    if(age==st.age)  
+        return 0;  
+    else if(age>st.age)  
+        return 1;  
+    else  
+        return -1;  
+  }  
+}  
+//Creating a test class to sort the elements  
+public class TestSort3 {  
+
+  public static void main(String args[]) {  
+    ArrayList<Student> al=new ArrayList<Student>();  
+    al.add(new Student(101,"Vijay",23));  
+    al.add(new Student(106,"Ajay",27));  
+    al.add(new Student(105,"Jai",21));  
+    
+    Collections.sort(al);  
+    for(Student st:al) {  
+        System.out.println(st.rollno+" "+st.name+" "+st.age);  
+    }  
+  }  
+}  
+```
+
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is difference between Enumeration and Iterator interface?
