@@ -206,6 +206,54 @@ Output
 30
 ```
 #### Q. What is difference between ArrayList and LinkedList?
+ArrayList and LinkedList both implements List interface and maintains insertion order. Both are non synchronized classes.
+
+|Sl.No |ArrayList               |LinkedList                                                                 |
+|------|------------------------|--------------------------------------------------------------------------|
+|  01. |ArrayList internally uses a dynamic array to store the elements.|LinkedList internally uses a doubly linked list to store the elements.|
+| 02. |Manipulation with ArrayList is slow because it internally uses an array. If any element is removed from the array, all the bits are shifted in memory.	|Manipulation with LinkedList is faster than ArrayList because it uses a doubly linked list, so no bit shifting is required in memory.|
+| 03. |An ArrayList class can act as a list only because it implements List only.|	LinkedList class can act as a list and queue both because it implements List and Deque interfaces.|
+| 04. | ArrayList is better for storing and accessing data.|LinkedList is better for manipulating data.|
+
+```java
+// Java program to demonstrate difference between ArrayList and 
+// LinkedList. 
+import java.util.ArrayList; 
+import java.util.LinkedList; 
+
+public class ArrayListLinkedListExample 
+{ 
+	public static void main(String[] args) {
+
+		ArrayList<String> arrlistobj = new ArrayList<String>(); 
+		arrlistobj.add("One"); 
+		arrlistobj.add("Two"); 
+		arrlistobj.add("Three"); 
+		arrlistobj.remove(1); // Remove value at index 2 
+		System.out.println("ArrayList object output: " + arrlistobj); 
+
+		// Checking if an element is present. 
+		if (arrlistobj.contains("Two")) 
+			System.out.println("Found"); 
+		else
+			System.out.println("Not found"); 
+
+
+		LinkedList llobj = new LinkedList(); 
+		llobj.add("Four"); 
+		llobj.add("Five"); 
+		llobj.add("Six"); 
+		llobj.remove("Five"); 
+		System.out.println("LinkedList object output: " + llobj); 
+
+		// Checking if an element is present. 
+		if (llobj.contains("Five")) 
+			System.out.println("Found"); 
+		else
+			System.out.println("Not found"); 
+	} 
+} 
+```
 #### Q. What is difference between Comparable and Comparator interface?
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
 #### Q. Why Map interface doesn’t extend Collection interface?
