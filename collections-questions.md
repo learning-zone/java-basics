@@ -350,12 +350,12 @@ The front of the priority queue contains the least element according to the spec
 * PriorityQueue is an unbounded queue and grows dynamically. 
 * It does not allow NULL objects.
 * Objects added to PriorityQueue MUST be comparable.
-* The objects of the priority queue are ordered by default in natural order.
+* The objects of the priority queue are ordered **by default in natural order**.
 * A Comparator can be used for custom ordering of objects in the queue.
-* The head of the priority queue is the least element based on the natural ordering or comparator based ordering. When we poll * the queue, it returns the head object from the queue.
+* The **head** of the priority queue is the **least** element based on the natural ordering or comparator based ordering. When we poll the queue, it returns the head object from the queue.
 * If multiple objects are present of same priority the it can poll any one of them randomly.
-* PriorityQueue is not thread safe. Use PriorityBlockingQueue in concurrent environment.
-* It provides O(log(n)) time for add and poll methods.
+* PriorityQueue is **not thread safe**. Use `PriorityBlockingQueue` in concurrent environment.
+* It provides **O(log(n))** time for add and poll methods.
 
 ```java
 import java.util.*;
