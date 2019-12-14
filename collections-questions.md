@@ -341,6 +341,42 @@ ArrayList with duplicate elements: [1, 1, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7, 8]
 ArrayList without duplicate elements: [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 #### Q. What is Java Priority Queue?
+A priority queue in Java is a special type of queue wherein all the elements are ordered as per their natural ordering or based on a custom Comparator supplied at the time of creation.
+
+The front of the priority queue contains the least element according to the specified ordering, and the rear of the priority queue contains the greatest element. So when we remove an element from the priority queue, the least element according to the specified ordering is removed first. The Priority Queue class is part of Java’s collections framework and implements the Queue interface. 
+```java
+import java.util.PriorityQueue;
+
+public class CreatePriorityQueueStringExample {
+
+    public static void main(String[] args) {
+        // Create a Priority Queue
+        PriorityQueue<String> namePriorityQueue = new PriorityQueue<>();
+
+        // Add items to a Priority Queue (ENQUEUE)
+        namePriorityQueue.add("Lisa");
+        namePriorityQueue.add("Robert");
+        namePriorityQueue.add("John");
+        namePriorityQueue.add("Chris");
+        namePriorityQueue.add("Angelina");
+        namePriorityQueue.add("Joe");
+
+        // Remove items from the Priority Queue (DEQUEUE)
+        while (!namePriorityQueue.isEmpty()) {
+            System.out.println(namePriorityQueue.remove());
+        }
+    }
+}
+```
+Output
+```
+Angelina
+Chris
+Joe
+John
+Lisa
+Robert
+```
 #### Q. What is LinkedHashMap in Java?
 #### Q. What are different Collection views provided by Map interface?
 #### Q. What is difference between HashMap and Hashtable?
