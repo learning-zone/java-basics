@@ -309,8 +309,11 @@ public class TestSort3 {
   }  
 }  
 ```
-
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
+Collection is an interface that specifies a group of objects known as elements. The details of how the group of elements is maintained is left up to the concrete implementations of `Collection`. For example, some Collection implementations like `List` allow duplicate elements whereas other implementations like `Set` don't.
+
+Collection is the root interface for all the collection classes ( like ArrayList, LinkedList ). If collection interface extends Cloneable/Serializable interfaces, then it is mandating all the concrete implementations of this interface to implement cloneable and serializable interfaces. To give freedom to concrete implementation classes, Collection interface don’t extended Cloneable or Serializable interfaces.
+
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is difference between Enumeration and Iterator interface?
 #### Q. What is different between Iterator and ListIterator?
