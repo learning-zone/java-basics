@@ -455,6 +455,57 @@ Key is: 2   & Value is: Karon
 Key is: 100 & Value is: Jim
 ```
 #### Q. What are different Collection views provided by Map interface?
+In the inheritance tree of the Map interface, there are several implementations but only 3 major, common, and general purpose implementations - they are HashMap and LinkedHashMap and TreeMap. 
+
+* **HashMap**: this implementation uses a hash table as the underlying data structure. It implements all of the Map operations and allows null values and one null key. This class is roughly equivalent to Hashtable - a legacy data structure before Java Collections Framework, but it is not synchronized and permits nulls. HashMap does not guarantee the order of its key-value elements. Therefore, consider to use a HashMap when order does not matter and nulls are acceptable.  
+```java
+Map<Integer, String> mapHttpErrors = new HashMap<>();
+ 
+mapHttpErrors.put(200, "OK");
+mapHttpErrors.put(303, "See Other");
+mapHttpErrors.put(404, "Not Found");
+mapHttpErrors.put(500, "Internal Server Error");
+ 
+System.out.println(mapHttpErrors);
+```
+Output
+```
+{404=Not Found, 500=Internal Server Error, 200=OK, 303=See Other}
+```
+* **LinkedHashMap**: this implementation uses a hash table and a linked list as the underlying data structures, thus the order of a LinkedHashMap is predictable, with insertion-order as the default order. This implementation also allows nulls like HashMap. So consider using a LinkedHashMap when you want a Map with its key-value pairs are sorted by their insertion order.  
+```java
+Map<String, String> mapContacts = new LinkedHashMap<>();
+ 
+mapContacts.put("0169238175", "Tom");
+mapContacts.put("0904891321", "Peter");
+mapContacts.put("0945678912", "Mary");
+mapContacts.put("0981127421", "John");
+ 
+System.out.println(mapContacts);
+```
+Output
+```
+{0169238175=Tom, 0904891321=Peter, 0945678912=Mary, 0981127421=John}
+```
+* **TreeMap**: this implementation uses a red-black tree as the underlying data structure. A TreeMap is sorted according to the natural ordering of its keys, or by a Comparator provided at creation time. This implementation does not allow nulls. So consider using a TreeMap when you want a Map sorts its key-value pairs by the natural order of the keys (e.g. alphabetic order or numeric order), or by a custom order you specify.
+```java
+Map<String, String> mapLang = new TreeMap<>();
+ 
+mapLang.put(".c", "C");
+mapLang.put(".java", "Java");
+mapLang.put(".pl", "Perl");
+mapLang.put(".cs", "C#");
+mapLang.put(".php", "PHP");
+mapLang.put(".cpp", "C++");
+mapLang.put(".xml", "XML");
+ 
+System.out.println(mapLang);
+```
+Output
+```
+{.c=C, .cpp=C++, .cs=C#, .java=Java, .php=PHP, .pl=Perl, .xml=XML}
+```
+
 #### Q. What is difference between HashMap and Hashtable?
 #### Q. What are similarities and difference between ArrayList and Vector?
 #### Q. Which collection classes provide random access of it’s elements?
