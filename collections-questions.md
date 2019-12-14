@@ -345,26 +345,34 @@ A priority queue in Java is a special type of queue wherein all the elements are
 
 The front of the priority queue contains the least element according to the specified ordering, and the rear of the priority queue contains the greatest element. So when we remove an element from the priority queue, the least element according to the specified ordering is removed first. The Priority Queue class is part of Java’s collections framework and implements the Queue interface. 
 ```java
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class CreatePriorityQueueStringExample {
 
-    public static void main(String[] args) {
-        // Create a Priority Queue
-        PriorityQueue<String> namePriorityQueue = new PriorityQueue<>();
+    public static void main(String args[]){  
 
-        // Add items to a Priority Queue (ENQUEUE)
-        namePriorityQueue.add("Lisa");
-        namePriorityQueue.add("Robert");
-        namePriorityQueue.add("John");
-        namePriorityQueue.add("Chris");
-        namePriorityQueue.add("Angelina");
-        namePriorityQueue.add("Joe");
+        PriorityQueue<String> queue = new PriorityQueue<String>();  
+        queue.add("Amit");  
+        queue.add("Vijay");  
+        queue.add("Karan");  
+        queue.add("Jai");  
+        queue.add("Rahul");  
+        System.out.println("head: "+queue.element());  
+        System.out.println("head: "+queue.peek());  
+        System.out.println("Iterating the queue elements: ");  
 
-        // Remove items from the Priority Queue (DEQUEUE)
-        while (!namePriorityQueue.isEmpty()) {
-            System.out.println(namePriorityQueue.remove());
-        }
+        Iterator itr = queue.iterator();  
+        while(itr.hasNext()) {  
+            System.out.println(itr.next());  
+        }  
+        queue.remove();  
+        queue.poll();  
+        System.out.println("after removing two elements: ");  
+
+        Iterator<String> itr2 = queue.iterator();  
+        while(itr2.hasNext()) {  
+            System.out.println(itr2.next());  
+        }  
     }
 }
 ```
