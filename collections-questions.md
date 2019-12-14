@@ -344,6 +344,19 @@ ArrayList without duplicate elements: [1, 2, 3, 4, 5, 6, 7, 8]
 A priority queue in Java is a special type of queue wherein all the elements are ordered as per their natural ordering or based on a custom Comparator supplied at the time of creation.
 
 The front of the priority queue contains the least element according to the specified ordering, and the rear of the priority queue contains the greatest element. So when we remove an element from the priority queue, the least element according to the specified ordering is removed first. The Priority Queue class is part of Java’s collections framework and implements the Queue interface. 
+
+**features**  
+
+* PriorityQueue is an unbounded queue and grows dynamically. 
+* It does not allow NULL objects.
+* Objects added to PriorityQueue MUST be comparable.
+* The objects of the priority queue are ordered by default in natural order.
+* A Comparator can be used for custom ordering of objects in the queue.
+* The head of the priority queue is the least element based on the natural ordering or comparator based ordering. When we poll * the queue, it returns the head object from the queue.
+* If multiple objects are present of same priority the it can poll any one of them randomly.
+* PriorityQueue is not thread safe. Use PriorityBlockingQueue in concurrent environment.
+* It provides O(log(n)) time for add and poll methods.
+
 ```java
 import java.util.*;
 
@@ -422,7 +435,7 @@ public class LinkedHashMapDemo {
 
         // Generating a Set of entries
         Set set = lhmap.entrySet();
-        
+
         // Displaying elements of LinkedHashMap
         Iterator iterator = set.iterator();
         while(iterator.hasNext()) {
