@@ -570,8 +570,6 @@ Hash map:
 102 Rahul
 104 Amit
 ```
-
-#### Q. What are similarities and difference between ArrayList and Vector?
 #### Q. Which collection classes provide random access of it’s elements?
 #### Q. What is EnumSet?
 #### Q. What are concurrent Collection Classes?
