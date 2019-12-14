@@ -507,6 +507,71 @@ Output
 ```
 
 #### Q. What is difference between HashMap and Hashtable?
+HashMap and Hashtable both are used to store data in key and value form. Both are using hashing technique to store unique keys.
+
+|Sl.No|HashMap	              |Hashtable                                         |
+|-----|-----------------------|--------------------------------------------------|
+| 01. |HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper synchronization code.|Hashtable is synchronized. It is thread-safe and can be shared with many threads.|
+| 02. |HashMap allows one null key and multiple null values.|Hashtable doesn't allow any null key or value.|
+| 03. |HashMap is a new class introduced in JDK 1.2.|Hashtable is a legacy class.|
+| 04. |HashMap is fast.       |Hashtable is slow.|
+| 05. |We can make the HashMap as synchronized by calling this code
+Map m = Collections.synchronizedMap(hashMap);|	Hashtable is internally synchronized and can't be unsynchronized.|
+| 06. |HashMap is traversed by Iterator.	|Hashtable is traversed by Enumerator and Iterator.|
+| 07. |Iterator in HashMap is fail-fast.	|Enumerator in Hashtable is not fail-fast.         |
+| 08. |HashMap inherits AbstractMap class.	|Hashtable inherits Dictionary class.              |
+
+```java
+/**
+   A sample Java program to demonstrate HashMap and HashTable 
+**/
+import java.util.*; 
+import java.lang.*; 
+import java.io.*; 
+
+class HashMapHashtableExample  
+{ 
+    public static void main(String args[]) {
+
+        // hashtable  
+        Hashtable<Integer,String> ht = new Hashtable<Integer,String>(); 
+        ht.put(101," ajay"); 
+        ht.put(101,"Vijay"); 
+        ht.put(102,"Ravi"); 
+        ht.put(103,"Rahul"); 
+
+        System.out.println("Hash table: "); 
+        for (Map.Entry m:ht.entrySet()) { 
+            System.out.println(m.getKey()+" "+m.getValue()); 
+        } 
+  
+        // hashmap 
+        HashMap<Integer,String> hm = new HashMap<Integer,String>(); 
+        hm.put(100,"Amit"); 
+        hm.put(104,"Amit");  // hash map allows duplicate values 
+        hm.put(101,"Vijay"); 
+        hm.put(102,"Rahul"); 
+        System.out.println("Hash map: "); 
+        for (Map.Entry m:hm.entrySet()) { 
+            System.out.println(m.getKey()+" "+m.getValue()); 
+        } 
+    } 
+} 
+```
+Output
+```
+Hash table:
+103 Rahul
+102 Ravi
+101 Vijay
+
+Hash map:
+100 Amit
+101 Vijay
+102 Rahul
+104 Amit
+```
+
 #### Q. What are similarities and difference between ArrayList and Vector?
 #### Q. Which collection classes provide random access of it’s elements?
 #### Q. What is EnumSet?
