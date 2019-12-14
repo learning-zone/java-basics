@@ -378,12 +378,18 @@ public class CreatePriorityQueueStringExample {
 ```
 Output
 ```
-Angelina
-Chris
-Joe
-John
-Lisa
-Robert
+head: Amit
+head: Amit
+iterating the queue elements:
+Amit
+Jai
+Karan
+Vijay
+Rahul
+after removing two elements:
+Karan
+Rahul
+Vijay 
 ```
 #### Q. What is LinkedHashMap in Java?
 #### Q. What are different Collection views provided by Map interface?
