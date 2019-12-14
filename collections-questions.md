@@ -392,6 +392,55 @@ Rahul
 Vijay 
 ```
 #### Q. What is LinkedHashMap in Java?
+LinkedHashMap is just like HashMap with an additional feature of maintaining an order of elements inserted into it. Java LinkedHashMap class is Hashtable and Linked list implementation of the Map interface, with predictable iteration order. It inherits HashMap class and implements the Map interface.
+
+**Features**
+
+* Java LinkedHashMap contains values based on the key.
+* Java LinkedHashMap contains unique elements.
+* Java LinkedHashMap may have one null key and multiple null values.
+* Java LinkedHashMap is non synchronized.
+* Java LinkedHashMap maintains insertion order.
+* The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+
+```java
+import java.util.LinkedHashMap;
+import java.util.Set;
+import java.util.Iterator;
+import java.util.Map;
+public class LinkedHashMapDemo {
+    public static void main(String args[]) {
+        // HashMap Declaration
+        LinkedHashMap<Integer, String> lhmap = 
+                new LinkedHashMap<Integer, String>();
+        //Adding elements to LinkedHashMap
+        lhmap.put(22, "Abey");
+        lhmap.put(33, "Dawn");
+        lhmap.put(1, "Sherry");
+        lhmap.put(2, "Karon");
+        lhmap.put(100, "Jim");
+
+        // Generating a Set of entries
+        Set set = lhmap.entrySet();
+        
+        // Displaying elements of LinkedHashMap
+        Iterator iterator = set.iterator();
+        while(iterator.hasNext()) {
+           Map.Entry me = (Map.Entry)iterator.next();
+           System.out.print("Key is: "+ me.getKey() + 
+                   "& Value is: "+me.getValue()+"\n");
+        }
+    }
+}
+```
+Output
+```
+Key is: 22  & Value is: Abey
+Key is: 33  & Value is: Dawn
+Key is: 1   & Value is: Sherry
+Key is: 2   & Value is: Karon
+Key is: 100 & Value is: Jim
+```
 #### Q. What are different Collection views provided by Map interface?
 #### Q. What is difference between HashMap and Hashtable?
 #### Q. What are similarities and difference between ArrayList and Vector?
