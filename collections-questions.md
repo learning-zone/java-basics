@@ -309,18 +309,9 @@ public class TestSort3 {
   }  
 }  
 ```
-#### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
-Collection is an interface that specifies a group of objects known as elements. The details of how the group of elements is maintained is left up to the concrete implementations of `Collection`. For example, some Collection implementations like `List` allow duplicate elements whereas other implementations like `Set` don't.
-
-Collection is the root interface for all the collection classes ( like ArrayList, LinkedList ). If collection interface extends Cloneable/Serializable interfaces, then it is mandating all the concrete implementations of this interface to implement cloneable and serializable interfaces. To give freedom to concrete implementation classes, Collection interface don’t extended Cloneable or Serializable interfaces.
-
-#### Q. Why Map interface doesn’t extend Collection interface?
-#### Q. What is difference between Enumeration and Iterator interface?
-#### Q. What is different between Iterator and ListIterator?
-#### Q. What are different ways to iterate over a list?
-#### Q. What is the difference between fail-fast and fail-safe iterator?
-#### Q. How to avoid ConcurrentModificationException while iterating a collection?
-#### Q. Why there are no concrete implementations of Iterator interface?
+#### Q. How to remove duplicates from ArrayList?
+#### Q. What is Java Priority Queue?
+#### Q. What is LinkedHashMap in Java?
 #### Q. What are different Collection views provided by Map interface?
 #### Q. What is difference between HashMap and Hashtable?
 #### Q. What are similarities and difference between ArrayList and Vector?
@@ -330,11 +321,15 @@ Collection is the root interface for all the collection classes ( like ArrayList
 #### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
 #### Q. What is Queue and Stack, list their differences?
 #### Q. How can we sort a list of Objects?
+#### Q. How to reverse ArrayList?
+#### Q. What is difference between Enumeration and Iterator interface?
+#### Q. What is different between Iterator and ListIterator?
+#### Q. What are different ways to iterate over a list?
+#### Q. What is the difference between fail-fast and fail-safe iterator?
+#### Q. How to avoid ConcurrentModificationException while iterating a collection?
+#### Q. Why there are no concrete implementations of Iterator interface?
 #### Q. How can we create a synchronized collection from given collection?
 #### Q. What are common algorithms implemented in Collections Framework?
-#### Q. What are best practices related to Java Collections Framework?
-#### Q. What is Java Priority Queue?
-#### Q. What is LinkedHashMap in Java?
 #### Q. Which kind of tree is used to implement TreeMap in Java?
 #### Q. What is default size of ArrayList and HashMap in Java?
 #### Q. What is the difference between HashSet and TreeSet?
@@ -356,8 +351,6 @@ Collection is the root interface for all the collection classes ( like ArrayList
 #### Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
 #### Q. What are concurrentCollectionClasses?
 #### Q. How to make Java ArrayList Read-Only?
-#### Q. How to remove duplicates from ArrayList?
-#### Q. How to reverse ArrayList?
 #### Q. How to sort ArrayList in descending order?
 #### Q. Which design pattern followed by Iterator?
 #### Q. What is difference between IdentityHashMap and HashMap in Java?
@@ -372,3 +365,10 @@ Collection is the root interface for all the collection classes ( like ArrayList
 #### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 #### Q. What is SynchronousQueue in Java?
 #### Q. What is the default size of load factor in hashing based collection?
+#### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
+Collection is an interface that specifies a group of objects known as elements. The details of how the group of elements is maintained is left up to the concrete implementations of `Collection`. For example, some Collection implementations like `List` allow duplicate elements whereas other implementations like `Set` don't.
+
+Collection is the root interface for all the collection classes ( like ArrayList, LinkedList ). If collection interface extends Cloneable/Serializable interfaces, then it is mandating all the concrete implementations of this interface to implement cloneable and serializable interfaces. To give freedom to concrete implementation classes, Collection interface don’t extended Cloneable or Serializable interfaces.
+
+#### Q. Why Map interface doesn’t extend Collection interface?
+
