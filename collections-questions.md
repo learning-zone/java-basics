@@ -511,7 +511,7 @@ HashMap and Hashtable both are used to store data in key and value form. Both ar
 
 |Sl.No|HashMap	              |Hashtable                                         |
 |-----|-----------------------|--------------------------------------------------|
-| 01. |HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper synchronization code.|Hashtable is synchronized. It is thread-safe and can be shared with many threads.|
+| 01. |HashMap is **non synchronized**. It is not-thread safe and can't be shared between many threads without proper synchronization code.|Hashtable is **synchronized**. It is thread-safe and can be shared with many threads.|
 | 02. |HashMap allows one null key and multiple null values.|Hashtable doesn't allow any null key or value.|
 | 03. |HashMap is a new class introduced in JDK 1.2.|Hashtable is a legacy class.|
 | 04. |HashMap is fast.       |Hashtable is slow.|
