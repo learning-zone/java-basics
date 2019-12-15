@@ -728,7 +728,7 @@ THREE : 3
 #### Q. How can we sort a list of Objects?
 #### Q. How to reverse ArrayList?
 #### Q. What is difference between Enumeration and Iterator interface?
-#### Q. What is different between Iterator and ListIterator?
+#### Q. What is difference between Iterator and ListIterator?
 #### Q. What are different ways to iterate over a list?
 #### Q. How to avoid ConcurrentModificationException while iterating a collection?
 #### Q. Why there are no concrete implementations of Iterator interface?
