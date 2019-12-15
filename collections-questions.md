@@ -570,7 +570,6 @@ Hash map:
 102 Rahul
 104 Amit
 ```
-#### Q. Which collection classes provide random access of it’s elements?
 #### Q. What is EnumSet?
 Java EnumSet class is the specialized Set implementation for use with enum types. It inherits AbstractSet class and implements the Set interface.
 
