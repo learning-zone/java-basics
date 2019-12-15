@@ -574,6 +574,79 @@ Hash map:
 #### Q. What is EnumSet?
 Java EnumSet class is the specialized Set implementation for use with enum types. It inherits AbstractSet class and implements the Set interface.
 
+**Features**  
+
+* It can contain only enum values and all the values have to belong to the same enum
+* It doesn't allow to add null values, throwing a NullPointerException in an attempt to do so
+* It's not thread-safe, so we need to synchronize it externally if required
+* The elements are stored following the order in which they are declared in the enum
+* It uses a fail-safe iterator that works on a copy, so it won't throw a ConcurrentModificationException if the collection is modified when iterating over it
+
+```java
+import java.util.EnumSet; 
+import java.util.Set; 
+/** 
+* Simple Java Program to demonstrate how to use EnumSet. 
+* It has some interesting use cases and it's specialized collection for 
+* Enumeration types. Using Enum with EnumSet will give you far better 
+* performance than using Enum with HashSet, or LinkedHashSet. 
+*
+**/ 
+public class EnumSetDemo { 
+    private enum Color { 
+        RED(255, 0, 0), GREEN(0, 255, 0), BLUE(0, 0, 255); 
+        private int r; 
+        private int g; 
+        private int b; 
+        private Color(int r, int g, int b) { 
+            this.r = r; this.g = g; this.b = b; 
+        } 
+        public int getR() { 
+            return r; 
+        } 
+        public int getG() { 
+            return g; 
+        } 
+        public int getB() { 
+            return b; 
+        } 
+    } 
+    public static void main(String args[]) { 
+        // this will draw line in yellow color 
+        EnumSet<Color> yellow = EnumSet.of(Color.RED, Color.GREEN); 
+        drawLine(yellow); 
+        // RED + GREEN + BLUE = WHITE 
+        EnumSet<Color> white = EnumSet.of(Color.RED, Color.GREEN, Color.BLUE); 
+        drawLine(white); 
+        // RED + BLUE = PINK 
+        EnumSet<Color> pink = EnumSet.of(Color.RED, Color.BLUE); 
+        drawLine(pink); 
+    } 
+    public static void drawLine(Set<Color> colors) { 
+        System.out.println("Requested Colors to draw lines : " + colors); 
+        for (Color c : colors) { 
+            System.out.println("drawing line in color : " + c); 
+        } 
+    } 
+}
+```
+Output
+```
+Output: Requested Colors to draw lines : [RED, GREEN] 
+drawing line in color : RED 
+drawing line in color : GREEN 
+
+Requested Colors to draw lines : [RED, GREEN, BLUE] 
+drawing line in color : RED 
+drawing line in color : GREEN 
+drawing line in color : BLUE 
+
+Requested Colors to draw lines : [RED, BLUE] 
+drawing line in color : RED 
+drawing line in color : BLUE
+
+
+```
 #### Q. What are concurrent Collection Classes?
 #### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
 #### Q. What is Queue and Stack, list their differences?
