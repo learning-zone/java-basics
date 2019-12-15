@@ -572,6 +572,8 @@ Hash map:
 ```
 #### Q. Which collection classes provide random access of it’s elements?
 #### Q. What is EnumSet?
+Java EnumSet class is the specialized Set implementation for use with enum types. It inherits AbstractSet class and implements the Set interface.
+
 #### Q. What are concurrent Collection Classes?
 #### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
 #### Q. What is Queue and Stack, list their differences?
