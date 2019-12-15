@@ -643,9 +643,8 @@ drawing line in color : BLUE
 Requested Colors to draw lines : [RED, BLUE] 
 drawing line in color : RED 
 drawing line in color : BLUE
-
-
 ```
+#### Q. What is the difference between fail-fast and fail-safe iterator?
 #### Q. What are concurrent Collection Classes?
 #### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
 #### Q. What is Queue and Stack, list their differences?
@@ -654,7 +653,6 @@ drawing line in color : BLUE
 #### Q. What is difference between Enumeration and Iterator interface?
 #### Q. What is different between Iterator and ListIterator?
 #### Q. What are different ways to iterate over a list?
-#### Q. What is the difference between fail-fast and fail-safe iterator?
 #### Q. How to avoid ConcurrentModificationException while iterating a collection?
 #### Q. Why there are no concrete implementations of Iterator interface?
 #### Q. How can we create a synchronized collection from given collection?
