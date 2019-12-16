@@ -721,8 +721,26 @@ FOUR : 4
 ONE : 1
 THREE : 3
 ```
-
 #### Q. What are concurrent Collection Classes?
+The concurrent collection APIs of Java provide a range of classes that are specifically designed to deal with concurrent operations. These classes are alternatives to the Java Collection Framework and provide similar functionality except with the additional support of concurrency.
+
+**Java Concurrent Collection Classes**  
+
+* BlockingQueue  
+* ArrayBlockingQueue 
+* SynchronousQueue 
+* PriorityBlockingQueue 
+* LinkedBlockingQueue 
+* DelayQueue 
+* BlockingDeque 
+* LinkedBlockingDeque 
+* TransferQueue 
+* LinkedTransferQueue 
+* ConcurrentMap 
+* ConcurrentHashMap 
+* ConcurrentNavigableMap 
+* ConcurrentSkipListMap 
+
 #### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
 #### Q. What is Queue and Stack, list their differences?
 #### Q. How can we sort a list of Objects?
