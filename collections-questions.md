@@ -742,7 +742,7 @@ The concurrent collection APIs of Java provide a range of classes that are speci
 * ConcurrentSkipListMap 
 
 #### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
-A thread trying to dequeue from an empty queue is blocked until some other thread inserts an item into the queue. A thread trying to enqueue an item in a full queue is blocked until some other thread makes space in the queue, either by dequeuing one or more items or clearing the queue completely.
+**BlockingQueue**: When a thread try to dequeue from an empty queue is blocked until some other thread inserts an item into the queue. Also, when a thread try to enqueue an item in a full queue is blocked until some other thread makes space in the queue, either by dequeuing one or more items or clearing the queue completely.
 
 **Producter-Consumer Problem**  
 
