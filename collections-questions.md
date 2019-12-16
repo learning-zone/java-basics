@@ -742,6 +742,70 @@ The concurrent collection APIs of Java provide a range of classes that are speci
 * ConcurrentSkipListMap 
 
 #### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
+A thread trying to dequeue from an empty queue is blocked until some other thread inserts an item into the queue. A thread trying to enqueue an item in a full queue is blocked until some other thread makes space in the queue, either by dequeuing one or more items or clearing the queue completely.
+
+**Producter-Consumer Problem**  
+
+Producer and Consumer are two separate threads which share a same bounded Queue. The role of producer to produce elements and push to the queue. The producer halts producing if the queue is full and resumes producing when the size of queue is not full. The consumer consumes the element from the queue. The consumers halt consuming if the size of queue is 0 (empty) and resumes consuming once the queue has an element.
+
+The problem can be approached using various techniques
+
+* Using wait() and notifyAll()
+* Using BlockingQueue
+* Using sempahores
+
+```java
+public class ProducerConsumerBlockingQueue {
+
+  static int MAX_SIZE = 5;
+  static BlockingQueue queue = new LinkedBlockingQueue(MAX_SIZE);
+
+  public static void main(String[] args) {
+
+    Producer producer = new Producer();
+    Consumer consumer = new Consumer();
+    producer.start();
+    consumer.start();
+  }
+
+  static class Producer extends Thread {
+    Random random = new Random();
+
+    public void run() {
+      while (true) {
+        int element = random.nextInt(MAX_SIZE);
+        try {
+          queue.put(element);
+        } catch (InterruptedException e) {
+        }
+      }
+    }
+  }
+
+  static class Consumer extends Thread {
+    public void run() {
+      while (true) {
+        try {
+          System.out.println("Consumed " + queue.take());
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+  }
+}
+```
+Output
+```
+Producer 2
+Producer 3
+Consumed 2
+Consumed 3
+Producer 0
+Producer 4
+Consumed 0
+```
+
 #### Q. What is Queue and Stack, list their differences?
 #### Q. How can we sort a list of Objects?
 #### Q. How to reverse ArrayList?
