@@ -808,6 +808,26 @@ Consumed 0
 Here, The Producer start producing objects and pushing it to the Queue. Once the queue is full, the producer will wait until consumer consumes it and it will start producing again. Similar behavior is displayed by consumer. where the consumer waits until there is a single element in queue. It will resume consumer once the queue has element.
 
 #### Q. What is difference between Enumeration and Iterator interface?
+Enumeration and Iterator are two interfaces in java.util package which are used to traverse over the elements of a Collection object.
+
+**Differences**  
+
+|Iterator	|Enumeration         |
+|-----------|--------------------|
+|hasNext()	|hasMoreElements()   |
+|next()	    |nextElement()       |
+|remove()	|(Not Available)     |
+
+
+| Sl.No |Enumeration	             |Iterator                          |
+|-------|----------------------------|----------------------------------|
+| 01.  |Using Enumeration, you can only traverse the collection. You can’t do any modifications to collection while traversing it.    |Using Iterator, you can remove an element of the collection while traversing it.|
+| 02.  |Enumeration is introduced in JDK 1.0|	Iterator is introduced from JDK 1.2     |
+| 03.  |Enumeration is used to traverse the legacy classes like Vector, Stack and HashTable.|Iterator is used to iterate most of the classes in the collection framework like ArrayList, HashSet, HashMap, LinkedList etc.|
+| 04.  |Methods : hasMoreElements() and nextElement()|	Methods : hasNext(), next() and remove()|
+| 05.  |Enumeration is fail-safe in nature.	|Iterator is fail-fast in nature.|
+| 06.  |Enumeration is not safe and secured due to it’s fail-safe nature.|	Iterator is safer and secured than Enumeration.|
+
 #### Q. What is difference between Iterator and ListIterator?
 #### Q. What are different ways to iterate over a list?
 #### Q. How to avoid ConcurrentModificationException while iterating a collection?
