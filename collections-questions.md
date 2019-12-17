@@ -807,7 +807,6 @@ Consumed 0
 ```
 Here, The Producer start producing objects and pushing it to the Queue. Once the queue is full, the producer will wait until consumer consumes it and it will start producing again. Similar behavior is displayed by consumer. where the consumer waits until there is a single element in queue. It will resume consumer once the queue has element.
 
-#### Q. How can we sort a list of Objects?
 #### Q. How to reverse ArrayList?
 #### Q. What is difference between Enumeration and Iterator interface?
 #### Q. What is difference between Iterator and ListIterator?
