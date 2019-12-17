@@ -865,8 +865,6 @@ public class PerformanceTest {
 ```
 #### Q. What is difference between Iterator and ListIterator?
 #### Q. What are different ways to iterate over a list?
-#### Q. How to avoid ConcurrentModificationException while iterating a collection?
-#### Q. Why there are no concrete implementations of Iterator interface?
 #### Q. How can we create a synchronized collection from given collection?
 #### Q. What are common algorithms implemented in Collections Framework?
 #### Q. Which kind of tree is used to implement TreeMap in Java?
