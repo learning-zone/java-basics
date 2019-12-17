@@ -846,20 +846,20 @@ public class PerformanceTest {
         
         enum = v.elements();
         iter = v.iterator();
-        // CODE BLOCK FOR ITERATO
+        // ITERATOR
         start = System.currentTimeMillis();
         while(iter.hasNext()) {
             element = iter.next();
         }
-        System.out.println("Iterator took " + (System.currentTimeMillis()-start));
+        System.out.println("Iterator took " + (System.currentTimeMillis() - start));
         System.gc();   //request to GC to free up some memory
         
-        // CODE BLOCK FOR ENUMERATION
+        // ENUMERATION
         start = System.currentTimeMillis();
         while(enum.hasMoreElements()) {
             element = enum.nextElement();
         }
-        System.out.println("Enumeration took " + (System.currentTimeMillis()-start));
+        System.out.println("Enumeration took " + (System.currentTimeMillis() - start));
     }
 }
 ```
