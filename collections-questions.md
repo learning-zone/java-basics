@@ -828,6 +828,41 @@ Enumeration and Iterator are two interfaces in java.util package which are used 
 | 05.  |Enumeration is fail-safe in nature.	|Iterator is fail-fast in nature.|
 | 06.  |Enumeration is not safe and secured due to it’s fail-safe nature.|	Iterator is safer and secured than Enumeration.|
 
+```java
+import java.util.*;
+public class PerformanceTest {
+
+    public static void main(String[] args) {
+
+        Vector v = new Vector();
+        Object element;
+        Enumeration enum;
+        Iterator iter;
+        long start;
+        
+        for(int i = 0; i < 1000000; i++) {
+            v.add("New Element");
+        }
+        
+        enum = v.elements();
+        iter = v.iterator();
+        // CODE BLOCK FOR ITERATO
+        start = System.currentTimeMillis();
+        while(iter.hasNext()) {
+            element = iter.next();
+        }
+        System.out.println("Iterator took " + (System.currentTimeMillis()-start));
+        System.gc();   //request to GC to free up some memory
+        
+        // CODE BLOCK FOR ENUMERATION
+        start = System.currentTimeMillis();
+        while(enum.hasMoreElements()) {
+            element = enum.nextElement();
+        }
+        System.out.println("Enumeration took " + (System.currentTimeMillis()-start));
+    }
+}
+```
 #### Q. What is difference between Iterator and ListIterator?
 #### Q. What are different ways to iterate over a list?
 #### Q. How to avoid ConcurrentModificationException while iterating a collection?
