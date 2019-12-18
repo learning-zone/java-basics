@@ -919,6 +919,60 @@ Backward Traversal :
 50 40 30 20 10
 ```
 #### Q. How can we create a synchronized collection from given collection?
+In Java, normally collections aren't synchronized, which leads to fast performance. However, in multi-threaded situations, it can be very useful for collections to be synchronized. The Java Collections class has several static methods on it that provide synchronized collections. These methods are:
+
+* Synchronized Collection Methods of Collections class
+* Collections.synchronizedCollection(Collection<T> c)
+* Collections.synchronizedList(List<T> list)
+* Collections.synchronizedMap(Map<K,V> m)
+* Collections.synchronizedSet(Set<T> s)
+* Collections.synchronizedSortedMap(SortedMap<K,V> m)
+* Collections.synchronizedSortedSet(SortedSet<T> s)
+
+```java
+/**
+* Java program to demonstrate synchronizedCollection() 
+*
+**/
+import java.util.*; 
+
+public class synchronizedCollectionExample 
+{ 
+
+	public static void main(String[] argv) { 
+
+		try { 
+
+			// creating object of List<String> 
+			List<Integer> list = new ArrayList<Integer>(); 
+
+			// populate the list 
+			list.add(10); 
+			list.add(20); 
+			list.add(30); 
+			list.add(40); 
+			list.add(50); 
+
+			// printing the Collection 
+			System.out.println("Collection : " + list); 
+
+			// getting the syncronised view of Collection 
+			Collection<Integer> c = Collections.synchronizedCollection(list); 
+
+			// printing the Collection 
+			System.out.println("Synchronized view is: " + c); 
+
+		} catch (IllegalArgumentException e) { 
+			System.out.println("Exception thrown: " + e); 
+		} 
+	} 
+} 
+```
+Output
+```
+Collection : [10, 20, 30, 40, 50]
+Synchronized view is : [10, 20, 30, 40, 50]
+```
 #### Q. What are common algorithms implemented in Collections Framework?
 #### Q. Which kind of tree is used to implement TreeMap in Java?
 #### Q. What is default size of ArrayList and HashMap in Java?
