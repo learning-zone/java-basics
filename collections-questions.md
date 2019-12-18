@@ -884,31 +884,24 @@ class IteratorExample
 
 		// Iterator 
 		Iterator itr = list.iterator(); 
-
 		System.out.println("Iterator:"); 
 		System.out.println("Forward traversal: "); 
 
 		while (itr.hasNext()) 
 			System.out.print(itr.next() + " "); 
 
-		System.out.println(); 
-
 		// ListIterator 
 		ListIterator i = list.listIterator(); 
-
-		System.out.println("ListIterator:"); 
+		System.out.println("\nListIterator:"); 
 		System.out.println("Forward Traversal : "); 
 
 		while (i.hasNext()) 
 			System.out.print(i.next() + " "); 
 
-		System.out.println(); 
-		System.out.println("Backward Traversal : "); 
+		System.out.println("\nBackward Traversal : "); 
 
 		while (i.hasPrevious()) 
 			System.out.print(i.previous() + " "); 
-
-		System.out.println(); 
 	} 
 } 
 ```
@@ -921,6 +914,7 @@ Forward traversal:
 ListIterator:
 Forward Traversal : 
 10 20 30 40 50 
+
 Backward Traversal : 
 50 40 30 20 10
 ```
