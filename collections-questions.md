@@ -864,6 +864,66 @@ public class PerformanceTest {
 }
 ```
 #### Q. What is difference between Iterator and ListIterator?
+ListIterator is the child interface of Iterator interface. The major difference between Iterator and ListIterator is that Iterator can traverse the elements in the collection only in **forward direction** whereas, the ListIterator can traverse the elements in a collection in both the **forward as well as the backwards direction**.
+
+```java
+import java.io.*; 
+import java.util.*; 
+
+class IteratorExample
+{ 
+	public static void main(String[] args) {
+
+		ArrayList<Integer> list = new ArrayList<Integer>(); 
+
+		list.add(10); 
+		list.add(20); 
+		list.add(30); 
+		list.add(40); 
+		list.add(50); 
+
+		// Iterator 
+		Iterator itr = list.iterator(); 
+
+		System.out.println("Iterator:"); 
+		System.out.println("Forward traversal: "); 
+
+		while (itr.hasNext()) 
+			System.out.print(itr.next() + " "); 
+
+		System.out.println(); 
+
+		// ListIterator 
+		ListIterator i = list.listIterator(); 
+
+		System.out.println("ListIterator:"); 
+		System.out.println("Forward Traversal : "); 
+
+		while (i.hasNext()) 
+			System.out.print(i.next() + " "); 
+
+		System.out.println(); 
+		System.out.println("Backward Traversal : "); 
+
+		while (i.hasPrevious()) 
+			System.out.print(i.previous() + " "); 
+
+		System.out.println(); 
+	} 
+} 
+```
+Output
+```
+Iterator:
+Forward traversal: 
+10 20 30 40 50 
+
+ListIterator:
+Forward Traversal : 
+10 20 30 40 50 
+Backward Traversal : 
+50 40 30 20 10
+```
 #### Q. What are different ways to iterate over a list?
 #### Q. How can we create a synchronized collection from given collection?
 #### Q. What are common algorithms implemented in Collections Framework?
