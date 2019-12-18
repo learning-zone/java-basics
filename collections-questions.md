@@ -918,7 +918,6 @@ Forward Traversal :
 Backward Traversal : 
 50 40 30 20 10
 ```
-#### Q. What are different ways to iterate over a list?
 #### Q. How can we create a synchronized collection from given collection?
 #### Q. What are common algorithms implemented in Collections Framework?
 #### Q. Which kind of tree is used to implement TreeMap in Java?
