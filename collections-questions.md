@@ -1047,6 +1047,7 @@ class HashSetDemo{
 Output
 ```
 HashSet contains: 
+
 Rick
 Singh
 Ram
@@ -1080,6 +1081,7 @@ class TreeSetDemo{
 **Output**: Elements are sorted in ascending order.
 ```
 TreeSet contains: 
+
 Abhijeet
 Kevin
 Ram
