@@ -984,20 +984,15 @@ Synchronized view is : [10, 20, 30, 40, 50]
 |HashTable   | 11       |
 |HashSet     | 16       |
 
-**ArrayList**:
-Constructs an empty list with an initial capacity of 10.
+**ArrayList**: Constructs an empty list with an initial capacity of 10.
 
-**Vector**:
-Constructs an empty vector so that its internal data array has size 10 and its standard capacity increment is zero.
+**Vector**: Constructs an empty vector so that its internal data array has size 10 and its standard capacity increment is zero.
 
-**HashMap**:
-Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
+**HashMap**: Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
 
-**Hashtable**:
-Constructs a new, empty hashtable with a default initial capacity (11) and load factor (0.75).
+**Hashtable**: Constructs a new, empty hashtable with a default initial capacity (11) and load factor (0.75).
 
-**Hashset**:
-Constructs a new, empty set; the backing HashMap instance has default initial capacity (16) and load factor (0.75).
+**Hashset**: Constructs a new, empty set; the backing HashMap instance has default initial capacity (16) and load factor (0.75).
 
 #### Q. What is the difference between HashSet and TreeSet?
 #### Q. What is the difference between Set and Map?
