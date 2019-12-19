@@ -973,7 +973,32 @@ Output
 Collection : [10, 20, 30, 40, 50]
 Synchronized view is : [10, 20, 30, 40, 50]
 ```
-#### Q. What is default size of ArrayList and HashMap in Java?
+#### Q. What is a default capacity of ArrayList, Vector, HashMap, Hashtable and Hashset?
+
+|Collections | Capacity |
+|------------|----------|
+|ArrayList   | 10       |
+|Vector      | 10       |
+|HashSet     | 16       |
+|HashMap     | 16       |
+|HashTable   | 11       |
+|HashSet     | 16       |
+
+**ArrayList**:
+Constructs an empty list with an initial capacity of 10.
+
+**Vector**:
+Constructs an empty vector so that its internal data array has size 10 and its standard capacity increment is zero.
+
+**HashMap**:
+Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
+
+**Hashtable**:
+Constructs a new, empty hashtable with a default initial capacity (11) and load factor (0.75).
+
+**Hashset**:
+Constructs a new, empty set; the backing HashMap instance has default initial capacity (16) and load factor (0.75).
+
 #### Q. What is the difference between HashSet and TreeSet?
 #### Q. What is the difference between Set and Map?
 #### Q. What is the difference between HashSet and HashMap?
