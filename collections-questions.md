@@ -1045,7 +1045,6 @@ Collections is an utility class in java.util package. It consists of only static
 #### Q. Write a code to make Collections readOnly?
 #### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 #### Q. What is SynchronousQueue in Java?
-#### Q. What is the default size of load factor in hashing based collection?
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
 Collection is an interface that specifies a group of objects known as elements. The details of how the group of elements is maintained is left up to the concrete implementations of `Collection`. For example, some Collection implementations like `List` allow duplicate elements whereas other implementations like `Set` don't.
 
