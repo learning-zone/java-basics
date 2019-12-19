@@ -1023,7 +1023,7 @@ Collections is an utility class in java.util package. It consists of only static
 ```java
 import java.util.HashSet;
 class HashSetExample { 
-    
+
   public static void main(String[] args) {
      // Create a HashSet
      HashSet<String> hset = new HashSet<String>();
@@ -1091,6 +1091,21 @@ Rick
 Singh
 ```
 #### Q. What is the difference between Set and Map?
+
+**Sets**:-
+
+1. Set does not  allow duplicates. Set and all of the classes which implements Set interface should have unique elements.
+2. Set allows single null value at most.
+3. Set does not  maintain any order; still few of its classes sort the elements in an order such as LinkedHashSet maintains the elements in insertion order.
+4. Classes used in sets are Set: HashSet, Linked HashSet, TreeSet, SortedSet etc.
+
+**Maps**:-
+
+1. Map stored the elements as key & value pair. Map doesn’t allow duplicate keys while it allows duplicate values.
+2. Map can have single null key at most and any number of null values.
+3. Set Map also doesn’t stores the elements in an order, however few of its classes does the same.
+4. Classes in Maps HashMap, TreeMap, WeakHashMap, LinkedHashMap, IdentityHashMap etc.
+
 #### Q. What is the difference between HashSet and HashMap?
 #### Q. What is the difference between HashMap and TreeMap?
 #### Q. What is the advantage of the generic collection?
