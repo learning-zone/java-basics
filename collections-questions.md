@@ -1022,7 +1022,8 @@ Collections is an utility class in java.util package. It consists of only static
 
 ```java
 import java.util.HashSet;
-class HashSetDemo{ 
+class HashSetExample { 
+    
   public static void main(String[] args) {
      // Create a HashSet
      HashSet<String> hset = new HashSet<String>();
@@ -1056,7 +1057,8 @@ Abhijeet
 ```
 ```java
 import java.util.TreeSet;
-class TreeSetDemo{ 
+class TreeSetExample { 
+
   public static void main(String[] args) {
      // Create a TreeSet
      TreeSet<String> tset = new TreeSet<String>();
