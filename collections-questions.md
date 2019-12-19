@@ -973,7 +973,6 @@ Output
 Collection : [10, 20, 30, 40, 50]
 Synchronized view is : [10, 20, 30, 40, 50]
 ```
-#### Q. Which kind of tree is used to implement TreeMap in Java?
 #### Q. What is default size of ArrayList and HashMap in Java?
 #### Q. What is the difference between HashSet and TreeSet?
 #### Q. What is the difference between Set and Map?
