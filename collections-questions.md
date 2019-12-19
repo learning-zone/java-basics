@@ -1016,6 +1016,76 @@ Collections is an utility class in java.util package. It consists of only static
 |Collections.reverse()	              |This method reverses the order of elements in the specified collection.|
 
 #### Q. What is the difference between HashSet and TreeSet?
+1) HashSet gives better performance (faster) than TreeSet for the operations like add, remove, contains, size etc. HashSet offers constant time cost while TreeSet offers log(n) time cost for such operations.
+
+2) HashSet does not maintain any order of elements while TreeSet elements are sorted in ascending order by default.
+
+```java
+import java.util.HashSet;
+class HashSetDemo{ 
+  public static void main(String[] args) {
+     // Create a HashSet
+     HashSet<String> hset = new HashSet<String>();
+ 
+     //add elements to HashSet
+     hset.add("Abhijeet");
+     hset.add("Ram");
+     hset.add("Kevin");
+     hset.add("Singh");
+     hset.add("Rick");
+     // Duplicate removed
+     hset.add("Ram"); 
+ 
+     // Displaying HashSet elements
+     System.out.println("HashSet contains: ");
+     for(String temp : hset){
+        System.out.println(temp);
+     }
+  }
+}
+```
+Output
+```
+HashSet contains: 
+Rick
+Singh
+Ram
+Kevin
+Abhijeet
+```
+```java
+import java.util.TreeSet;
+class TreeSetDemo{ 
+  public static void main(String[] args) {
+     // Create a TreeSet
+     TreeSet<String> tset = new TreeSet<String>();
+ 
+     //add elements to TreeSet
+     tset.add("Abhijeet");
+     tset.add("Ram");
+     tset.add("Kevin");
+     tset.add("Singh");
+     tset.add("Rick");
+     // Duplicate removed
+     tset.add("Ram"); 
+  
+     // Displaying TreeSet elements
+     System.out.println("TreeSet contains: ");
+     for(String temp : tset){
+        System.out.println(temp);
+     }
+  }
+}
+```
+**Output**: Elements are sorted in ascending order.
+```
+TreeSet contains: 
+Abhijeet
+Kevin
+Ram
+Rick
+Singh
+```
 #### Q. What is the difference between Set and Map?
 #### Q. What is the difference between HashSet and HashMap?
 #### Q. What is the difference between HashMap and TreeMap?
