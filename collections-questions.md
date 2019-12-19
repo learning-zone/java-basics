@@ -1002,7 +1002,6 @@ Synchronized view is : [10, 20, 30, 40, 50]
 #### Q. What is the advantage of the generic collection?
 #### Q. What is hash-collision in Hashtable and how it is handled in Java?
 #### Q. What is the Dictionary class?
-#### Q. How to synchronize ArrayList?
 #### Q. What are all the Classes and Interfaces that are available in the collections?
 #### Q. What is meant by Ordered and Sorted in collections?
 #### Q. Explain about the different lists available in the collection.
