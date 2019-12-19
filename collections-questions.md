@@ -994,11 +994,31 @@ Synchronized view is : [10, 20, 30, 40, 50]
 
 **Hashset**: Constructs a new, empty set; the backing HashMap instance has default initial capacity (16) and load factor (0.75).
 
+#### Q. What is the difference between Collection and Collections?
+**Collection Interface**  
+
+Collection is a root level interface of the Java Collection Framework. Most of the classes in Java Collection Framework inherit from this interface. List, Set and Queue are main sub interfaces of this interface. JDK provides direct implementations of it’s sub interfaces. **ArrayList, Vector, HashSet, LinkedHashSet, PriorityQueue** are some indirect implementations of Collection interface. 
+
+**Collections Class**  
+
+Collections is an utility class in java.util package. It consists of only static methods which are used to operate on objects of type Collection.
+
+|Collections Methods                  | Description  |
+|-------------------------------------|-------------------------------------------------------------|
+|Collections.max()	                  |This method returns maximum element in the specified collection.|
+|Collections.min()	                  |This method returns minimum element in the given collection.|
+|Collections.sort()	                  |This method sorts the specified collection.|
+|Collections.shuffle()	              |This method randomly shuffles the elements in the specified collection.|
+|Collections.synchronizedCollection() |This method returns synchronized collection backed by the specified collection.|
+|Collections.binarySearch()	          |This method searches the specified collection for the specified object using binary search algorithm.|
+|Collections.disjoint()	              |This method returns true if two specified collections have no elements in c|ommon.|
+|Collections.copy()	                  |This method copies all elements from one collection to another collectio|n.|
+|Collections.reverse()	              |This method reverses the order of elements in the specified collection.|
+
 #### Q. What is the difference between HashSet and TreeSet?
 #### Q. What is the difference between Set and Map?
 #### Q. What is the difference between HashSet and HashMap?
 #### Q. What is the difference between HashMap and TreeMap?
-#### Q. What is the difference between Collection and Collections?
 #### Q. What is the advantage of the generic collection?
 #### Q. What is hash-collision in Hashtable and how it is handled in Java?
 #### Q. What is the Dictionary class?
