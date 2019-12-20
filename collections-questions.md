@@ -1122,22 +1122,21 @@ Singh
 5. HashMap is not synchronized which means they are not suitable for thread-safe operations until unless synchronized explicitly.
 
 #### Q. What is the difference between HashMap and TreeMap?
-Java **HashMap** and **TreeMap** both are the classes of the Java Collections framework. Java Map implementation usually acts as a bucketed hash table. When buckets get too large, they get transformed into nodes of TreeNodes, each structured similarly to those in java.util.TreeMap.
+Java **HashMap** and **TreeMap** both are the classes of the Java Collections framework. Java Map implementation usually acts as a bucketed hash table. When buckets get too large, they get transformed into nodes of **TreeNodes**, each structured similarly to those in java.util.TreeMap.
 
 |HashMap	                       |TreeMap                           |
 |----------------------------------|----------------------------------|
 |Java HashMap is a hashtable based implementation of Map interface.|Java TreeMap is a Tree structure-based implementation of Map interface.|
 |HashMap implements Map, Cloneable, and Serializable interface.|TreeMap implements NavigableMap, Cloneable, and Serializable interface.|
-|HashMap allows a single null key and multiple null values.|TreeMap does not allow null keys but can have multiple null values.|
+|HashMap allows a **single** null key and multiple null values.|TreeMap does not allow **null** keys but can have multiple null values.|
 |HashMap allows heterogeneous elements because it does not perform sorting on keys.|TreeMap allows homogeneous values as a key because of sorting.|
-|HashMap is faster than TreeMap because it provides constant-time performance that is O(1) for the basic operations like get() and put().|TreeMap is slow in comparison to HashMap because it provides the performance of O(log(n)) for most operations like add(), remove() and contains().|
-|The HashMap class uses the hash table.	|TreeMap internally uses a Red-Black tree, which is a self-balancing Binary Search Tree.|
-|It uses equals() method of the Object class to compare keys. The equals() method of Map class overrides it.|It uses the compareTo() method to compare keys.|
+|HashMap is **faster** than TreeMap because it provides constant-time performance that is O(1) for the basic operations like get() and put().|TreeMap is **slow** in comparison to HashMap because it provides the performance of O(log(n)) for most operations like add(), remove() and contains().|
+|The HashMap class uses the **hash table**.	|TreeMap internally uses a **Red-Black** tree, which is a self-balancing Binary Search Tree.|
+|It uses **equals()** method of the Object class to compare keys. The equals() method of Map class overrides it.|It uses the **compareTo()** method to compare keys.|
 |HashMap class contains only basic functions like get(), put(), KeySet(), etc. .|TreeMap class is rich in functionality, because it contains functions like: tailMap(), firstKey(), lastKey(), pollFirstEntry(), pollLastEntry().|
 |Order of elements	HashMap does not maintain any order.|The elements are sorted in natural order (ascending).|
 |The HashMap should be used when we do not require key-value pair in sorted order.|	The TreeMap should be used when we require key-value pair in sorted (ascending) order.|
 
-#### Q. What is the advantage of the generic collection?
 #### Q. What is hash-collision in Hashtable and how it is handled in Java?
 #### Q. What is the Dictionary class?
 #### Q. What are all the Classes and Interfaces that are available in the collections?
