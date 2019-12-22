@@ -50,7 +50,7 @@ black
 ```
 #### Q. Find the missing number in an array?
 #### Q. Write a program to generate random numbers between the given range?
-#### Q. Write a java program to swap two string variables without using third or temp variable?
+#### Q. Write a java program to swap two string variables without using temp variable?
 #### Q. Write a java program to Move all zeroes to end of array?
 ```
 Input:  arr[] = {1, 2, 0, 4, 3, 0, 5, 0};
