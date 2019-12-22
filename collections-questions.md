@@ -1301,7 +1301,56 @@ D
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
-#### Q. Write a code to make Collections readOnly?
+#### Q. How to make an ArrayList read only in Java?
+An ArrayList can be made read-only easily with the help of **Collections.unmodifiableList()** method. This method takes the modifiable ArrayList as a parameter and returns the read-only unmodifiable view of this ArrayList.
+
+```java
+// Java program to demonstrate 
+// unmodifiableList() method 
+
+import java.util.*; 
+
+public class ReadOnlyArrayListExample 
+{ 
+	public static void main(String[] argv) 
+		throws Exception {
+
+		try { 
+
+			// creating object of ArrayList<Character> 
+			List<Character> list = new ArrayList<Character>(); 
+
+			// populate the list 
+			list.add('X'); 
+			list.add('Y'); 
+			list.add('Z'); 
+
+			// printing the list 
+			System.out.println("Initial list: "+ list); 
+
+			// getting readonly list using unmodifiableList() method 
+			List<Character> immutablelist = Collections.unmodifiableList(list); 
+
+			// printing the list 
+			System.out.println("ReadOnly ArrayList: "+ immutablelist); 
+
+			// Adding element to new Collection 
+			System.out.println("\nTrying to modify the ReadOnly ArrayList."); 
+			immutablelist.add('A'); 
+		} catch (UnsupportedOperationException e) { 
+			System.out.println("Exception thrown : " + e); 
+		} 
+	} 
+} 
+```
+Output
+```
+Initial list: [X, Y, Z]
+ReadOnly ArrayList: [X, Y, Z]
+
+Trying to modify the ReadOnly ArrayList.
+Exception thrown : java.lang.UnsupportedOperationException
+```
 #### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 #### Q. What is SynchronousQueue in Java?
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
