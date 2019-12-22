@@ -67,7 +67,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a method that will remove given character from the String?
 #### Q. Write a function to find out longest palindrome in a given string?
 #### Q. Write a program to find top two maximum numbers in a array?
-#### Q. How to separate zeros from non-zeros in an array?
 #### Q. Find pair whose sum is closest to zero in array in java
 #### Q. How to find all the leaders in an integer array in java?
 #### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
@@ -110,8 +109,10 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a program to implement hashcode and equals.
 #### Q. Write wait-notify code for producer-consumer problem?
 #### Q. Write a program to implement ArrayList.
-#### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? [ Output: Infinity, No Exception ]
-#### Q. How do you check the equality of two arrays in java? [ Arrays.equals() ]
+#### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
+* Output: Infinity, No Exception
+#### Q. How do you check the equality of two arrays in java?
+* Arrays.equals() 
 #### Q. How to perform matrix operations in java?
 #### Q. How to remove duplicate elements from ArrayList in java?
 #### Q. How to find trigonometric values of an angle in java?
@@ -127,7 +128,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. FizzBuzz problem
 #### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
 #### Q. How to calculate complexity of algorithm
-#### Q. How to you calculate the difference between two dates in Java? (program)
 #### Q. Implement Producer Consumer design Pattern in Java using wait, notify and notifyAll method in Java?
 #### Q. Find Minimum numbers of platforms required for railway station in java
 #### Q. How to check whether given number is binary or not?
@@ -200,4 +200,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Spiral Matrix Program.
 #### Q. Anagram program in java
 #### Q. Write a program to print fibonacci series.
+#### Q. How to you calculate the difference between two dates in Java? 
+
 
