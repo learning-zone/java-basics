@@ -1305,8 +1305,11 @@ D
 An ArrayList can be made read-only easily with the help of **Collections.unmodifiableList()** method. This method takes the modifiable ArrayList as a parameter and returns the read-only unmodifiable view of this ArrayList.
 
 ```java
-// Java program to demonstrate 
-// unmodifiableList() method 
+/**
+* Java program to demonstrate 
+* unmodifiableList() method 
+*
+**/
 
 import java.util.*; 
 
