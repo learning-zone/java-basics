@@ -9,6 +9,7 @@
 * [Collections Interview Questions](collections-questions.md)
 * [JDBC Interview Questions](JDBC-questions.md)
 * [Java Programs](java-programs.md)
+* [Predict the Output](predict-output.md)
 * [Java String Methods](java-string-methods.md)
 * [JSP Interview Questions](jsp-questions.md)
 * [Servlets Interview Questions](servlets-questions.md)
