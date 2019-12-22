@@ -1225,7 +1225,10 @@ Size of Dictionary : 1
 * TreeMap Class
 * PriorityQueue Class
 
-#### Q. What is meant by Ordered and Sorted in collections?
+#### Q. What is the difference between an ordered and a sorted collection?
+An **ordered collection** means that the elements of the collection have a specific order. The order is independent of the value. Example: List.
+
+A **sorted collection** means that not only does the collection have order, but the order depends on the value of the element. Example: SortedSet.
 #### Q. Explain about the different lists available in the collection.
 #### Q. Explain about Map and their types?
 #### Q. What is the difference between List and Set?
