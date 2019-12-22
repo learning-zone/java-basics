@@ -79,35 +79,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a program to convert a given Collection to Synchronized Collection ?
 #### Q. How to sort a text file in java?
 #### Q. Find out middle index where sum of both ends are equal.
-#### Q. How to sort a Stack using a temporary Stack?
-#### Q. Implement Binary Search Tree (BST)
-#### Q. Find min and max value from Binary Search Tree (BST)
-#### Q. Find height of a Binary Search Tree (BST)
-#### Q. Implement Binary Search Tree (BST) Level order traversal (breadth first).
-#### Q. Implement Binary Search Tree (BST) pre-order traversal (depth first).
-#### Q. Implement Binary Search Tree (BST) in-order traversal (depth first).
-#### Q. Implement Binary Search Tree (BST) post-order traversal (depth first).
-#### Q. How to check the given Binary Tree is Binary Search Tree (BST) or not?
-#### Q. How to delete a node from Binary Search Tree (BST)?
-#### Q. Binary tree level order traversal
-#### Q. Binary tree spiral order traversal
-#### Q. Binary tree reverse level order traversal
-#### Q. Binary tree boundary traversal
-#### Q. Print leaf nodes of binary tree
-#### Q. Count leaf nodes in binary tree
-#### Q. Get maximum element in binary tree
-#### Q. Print all paths from root to leaf in binary tree
-#### Q. Print vertical sum of binary tree in java
-#### Q. Get level of node in binary tree in java
-#### Q. Lowest common ancestor(LCA) in binary tree in java
-#### Q. Search element in row wise and column wise sorted matrix
-#### Q. Stock buy and sell to maximize profit.
-#### Q. How to implement merge sort in java
-#### Q. How to implement bubble sort in java
-#### Q. How to implement insertion sort in java
-#### Q. Write a program to implement hashcode and equals.
-#### Q. Write wait-notify code for producer-consumer problem?
-#### Q. Write a program to implement ArrayList.
 #### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
 * Output: Infinity, No Exception
 #### Q. How do you check the equality of two arrays in java?
@@ -181,6 +152,35 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. How to find nth element from end of linked list
 #### Q. How to check if linked list is palindrome in java
 #### Q. Add two numbers represented by linked list in java
+#### Q. How to sort a Stack using a temporary Stack?
+#### Q. Implement Binary Search Tree (BST)
+#### Q. Find min and max value from Binary Search Tree (BST)
+#### Q. Find height of a Binary Search Tree (BST)
+#### Q. Implement Binary Search Tree (BST) Level order traversal (breadth first).
+#### Q. Implement Binary Search Tree (BST) pre-order traversal (depth first).
+#### Q. Implement Binary Search Tree (BST) in-order traversal (depth first).
+#### Q. Implement Binary Search Tree (BST) post-order traversal (depth first).
+#### Q. How to check the given Binary Tree is Binary Search Tree (BST) or not?
+#### Q. How to delete a node from Binary Search Tree (BST)?
+#### Q. Binary tree level order traversal
+#### Q. Binary tree spiral order traversal
+#### Q. Binary tree reverse level order traversal
+#### Q. Binary tree boundary traversal
+#### Q. Print leaf nodes of binary tree
+#### Q. Count leaf nodes in binary tree
+#### Q. Get maximum element in binary tree
+#### Q. Print all paths from root to leaf in binary tree
+#### Q. Print vertical sum of binary tree in java
+#### Q. Get level of node in binary tree in java
+#### Q. Lowest common ancestor(LCA) in binary tree in java
+#### Q. Search element in row wise and column wise sorted matrix
+#### Q. Stock buy and sell to maximize profit.
+#### Q. How to implement merge sort in java
+#### Q. How to implement bubble sort in java
+#### Q. How to implement insertion sort in java
+#### Q. Write a program to implement hashcode and equals.
+#### Q. Write wait-notify code for producer-consumer problem?
+#### Q. Write a program to implement ArrayList.
 #### Q. A maximal subarray
 #### Q. Sort a linked list
 #### Q. Iterative Quick sort
