@@ -65,3 +65,20 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 Answer: D
 ```
 #### Q. What is the output of following program?
+```java
+public class Test{  
+    
+	 int birds = 10;
+     public static void main(String []args){  
+       int trees = 5;
+       System.out.println(trees+birds);
+     }  
+}  
+```
+Output
+```
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	Cannot make a static reference to the non-static field birds
+
+	at Test.main(Test.java:7)
+```
