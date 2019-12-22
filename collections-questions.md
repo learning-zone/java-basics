@@ -1193,7 +1193,7 @@ Value at key = 20 : Code
 
 There is no key-value pair : false
 
-Keys in Dictionary : 123
+Keys in Dictionary : 10
 Keys in Dictionary : 20
 
 Remove : Code
