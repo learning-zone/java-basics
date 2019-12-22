@@ -57,7 +57,7 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 	at Test.main(Test.java:5)
 ```
 #### Q. Which statement about a valid .java file is true?
-**A.** It can only contains one class declaration.  
+**A.** It can only contain one class declaration.  
 **B.** It can contain one pulic class declaration and one public interface definition.  
 **C.** It must define at least one public class.  
 **D.** It may define at most one public class.  
