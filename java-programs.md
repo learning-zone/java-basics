@@ -67,7 +67,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a method that will remove given character from the String?
 #### Q. Write a function to find out longest palindrome in a given string?
 #### Q. Write a program to find top two maximum numbers in a array?
-#### Q. Find pair whose sum is closest to zero in array in java
 #### Q. How to find all the leaders in an integer array in java?
 #### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
 #### Q. Java Program to find gcd and lcm of two numbers
@@ -148,7 +147,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. How to find duplicate number on Integer array in Java?
 #### Q. How to check if array contains a number in Java?
 #### Q. How to find largest and smallest number in unsorted array?
-#### Q. How to find all pairs on integer array whose sum is equal to given number?
 #### Q. How to find repeated numbers in an array if it contains multiple duplicates?
 #### Q. How to sort an array in place using QuickSort algorithm?
 #### Q. Write a program to find intersection of two sorted arrays in Java?
@@ -171,7 +169,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. How to search an array to check if an element exists there?
 #### Q. How to copy array in Java?
 #### Q. Can you make array volatile in Java?
-#### Q. How do you find all pair whose sum is equal to given number from integer array in Java?
 #### Q. How to find top two numbers from an integer array in Java?
 #### Q. Can you pass the negative number as an array size?
 #### Q. What is an anonymous array? Give example?
