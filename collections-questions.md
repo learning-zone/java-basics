@@ -1138,6 +1138,70 @@ Java **HashMap** and **TreeMap** both are the classes of the Java Collections fr
 |The HashMap should be used when we do not require key-value pair in sorted order.|	The TreeMap should be used when we require key-value pair in sorted (ascending) order.|
 
 #### Q. What is the Dictionary class?
+**util.Dictionary** is an abstract class, representing a key-value relation and works similiar to a map. Both keys and values can be objects of any type but not null. An attempt to insert either a null key or a null value to a dictionary causes a NullPointerException exception.
+
+```java
+/** 
+* Dictionary class Example using  
+* put(), elements(), get(), isEmpty(), keys() remove(), size() 
+* Methods
+*
+**/
+import java.util.*; 
+public class DictionaryExample 
+{ 
+	public static void main(String[] args) { 
+
+		// Initializing a Dictionary 
+		Dictionary dictionary = new Hashtable(); 
+
+		// put() method 
+		dictionary.put("10", "Code"); 
+		dictionary.put("20", "Program"); 
+
+		// elements() method : 
+		for (Enumeration i = dictionary.elements(); i.hasMoreElements();) { 
+			System.out.println("Value in Dictionary : " + i.nextElement()); 
+		} 
+
+		// get() method : 
+		System.out.println("\nValue at key = 6 : " + dictionary.get("6")); 
+		System.out.println("Value at key = 20 : " + dictionary.get("10")); 
+
+		// isEmpty() method : 
+		System.out.println("\nThere is no key-value pair : " + dictionary.isEmpty() + "\n"); 
+
+		// keys() method : 
+		for (Enumeration k = dictionary.keys(); k.hasMoreElements();) { 
+			System.out.println("Keys in Dictionary : " + k.nextElement()); 
+		} 
+
+		// remove() method : 
+		System.out.println("\nRemove : " + dictionary.remove("10")); 
+		System.out.println("Check the value of removed key : " + dictionary.get("10")); 
+		System.out.println("\nSize of Dictionary : " + dictionary.size()); 
+	} 
+} 
+```
+Output
+```
+Value in Dictionary : Code
+Value in Dictionary : Program
+
+Value at key = 6 : null
+Value at key = 20 : Code
+
+There is no key-value pair : false
+
+Keys in Dictionary : 123
+Keys in Dictionary : 20
+
+Remove : Code
+Check the value of removed key : null
+
+Size of Dictionary : 1
+```
+
 #### Q. What are all the Classes and Interfaces that are available in the collections?
 #### Q. What is meant by Ordered and Sorted in collections?
 #### Q. Explain about the different lists available in the collection.
