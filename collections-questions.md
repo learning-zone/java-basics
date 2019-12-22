@@ -1357,6 +1357,90 @@ ConcurrentHashMap uses multiple buckets to store data. This avoids read locks an
 When we read from a ConcurrentHashMap using get(), there are no locks, contrary to the HashTable for which all operations are simply synchronized. HashTable was released in old versions of Java whereas ConcurrentHashMap is added in java 1.5 version.
 
 #### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
+This represents a collection that is indented to hold data before processing. It is an arrangement of the type First-In-First-Out (FIFO). The first element put in the queue is the first element taken out from it.
+
+**The peek() method**  
+
+This method returns the object at the top of the current queue, without removing it. If the queue is empty this method returns null.
+
+```java
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+public class QueueExample 
+{
+   public static void main(String args[]) {
+    
+      Queue<String> queue = new LinkedList<String>();
+      queue.add("Java");
+      queue.add("JavaFX");
+      queue.add("OpenCV");
+      queue.add("Coffee Script");
+      queue.add("HBase");
+
+      System.out.println("Element at the top of the queue: "+queue.peek());
+      Iterator<String> it = queue.iterator();
+      System.out.println("Contents of the queue: ");
+      while(it.hasNext()) {
+         System.out.println(it.next());
+      }
+   }
+}
+```
+Output
+```
+Element at the top of the queue: Java
+Contents of the queue:
+Java
+JavaFX
+OpenCV
+Coffee Script
+Hbase
+```
+**The poll() method**  
+
+The peek() method of the Queue interface returns the object at the top of the current queue and removes it. If the queue is empty this method returns null.
+
+```java
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+public class QueueExample 
+{
+   public static void main(String args[]) {
+
+      Queue<String> queue = new LinkedList<String>();
+      queue.add("Java");
+      queue.add("JavaFX");
+      queue.add("OpenCV");
+      queue.add("Coffee Script");
+      queue.add("HBase");
+
+      System.out.println("Element at the top of the queue: "+queue.poll());
+      Iterator<String> it = queue.iterator();
+      System.out.println("Contents of the queue: ");
+      while(it.hasNext()) {
+         System.out.println(it.next());
+      }
+   }
+}
+```
+Output
+```
+Element at the top of the queue: Java
+Contents of the queue:
+JavaFX
+OpenCV
+Coffee Script
+HBase
+```
+
+**Differences**  
+
+Both **poll()** and **remove()** method is used to remove head object of the Queue.
+
+The main difference lies when the Queue is empty(). If Queue is empty then poll() method will return **null**. While in similar case, remove() method will throw **NoSuchElementException**. peek() method retrieves but does not remove the head of the Queue. If queue is empty then peek() method also returns null.
+
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
