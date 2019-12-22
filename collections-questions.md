@@ -1227,6 +1227,15 @@ Size of Dictionary : 1
 
 #### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 #### Q. What is the difference between HashMap and ConcurrentHashMap?
+ 	
+|HashMap	                   |ConcurrentHashMap                                     |
+|------------------------------|------------------------------------------------------|
+|HashMap is not synchronized.  |ConcurrentHashMap is synchronized.|
+|HashMap is not thread safe.   |ConcurrentHashMap is thread safe.|
+|HashMap iterator is fail-fast and ArrayList throws ConcurrentModificationException if concurrent modification happens during iteration. |ConcurrentHashMap is fail-safe and it will never throw ConcurrentModificationException during iteration.|
+|HashMap allows key and value to be null.|ConcurrentHashMap does not allow null key/value. It will throw NullPointerException.|
+|HashMap is faster.     	   |ConcurrentHashMap is slower than HashMap.|
+
 #### Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
 #### Q. What are concurrentCollectionClasses?
 #### Q. How to make Java ArrayList Read-Only?
