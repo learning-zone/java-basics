@@ -1356,11 +1356,12 @@ ConcurrentHashMap uses multiple buckets to store data. This avoids read locks an
 
 When we read from a ConcurrentHashMap using get(), there are no locks, contrary to the HashTable for which all operations are simply synchronized. HashTable was released in old versions of Java whereas ConcurrentHashMap is added in java 1.5 version.
 
+#### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
 #### Q. What is SynchronousQueue in Java?
-#### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
+
 
