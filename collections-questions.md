@@ -1237,9 +1237,6 @@ Size of Dictionary : 1
 |HashMap is faster.     	   |ConcurrentHashMap is slower than HashMap.|
 
 #### Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
-#### Q. What are concurrent Collection Classes?
-Concurrent collection APIs are an addition to Java from version 5 and are a part of the package called `java.util.concurrent`. They are an improvement of existing collection APIs and have been designed for concurrent access from multiple threads. For Example: ArrayBlockingQueue, ConcurrentLinkedDeque, ConcurrentLinkedQueue, ConcurrentSkipListMap, ConcurrentSkipListSet, CopyOnWriteArraySet, DelayQueue, LinkedBlockingDeque, LinkedBlockingQueue, LinkedTransferQueue, PriorityBlockingQueue, SynchronousQueue, etc.
-
 #### Q. How to make Java ArrayList Read-Only?
 #### Q. Which design pattern followed by Iterator?
 #### Q. What is difference between IdentityHashMap and HashMap in Java?
