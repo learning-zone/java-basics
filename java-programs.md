@@ -66,7 +66,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Can you write a regular expression to check if String is a number?
 #### Q. Write a method that will remove given character from the String?
 #### Q. Write a function to find out longest palindrome in a given string?
-#### Q. How to reverse each word of a string in java?
 #### Q. Write a program to find top two maximum numbers in a array?
 #### Q. How to separate zeros from non-zeros in an array?
 #### Q. Find pair whose sum is closest to zero in array in java
@@ -123,7 +122,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a java program to append text to a file?
 #### Q. Write a singleton class.
 #### Q. Write a program to sort a map by value.
-#### Q. Write a program to print fibonacci series.
 #### Q. Write a program to get a line with max word count from the given file.
 #### Q. Write a program to find two lines with max characters in descending order.
 #### Q. FizzBuzz problem
@@ -138,7 +136,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. How to find largest number less than a given number and without a given digit?
 #### Q. Roman equivalent of a decimal number
 #### Q. How to check whether user input is number or not in java?
-#### Q. Write a program to reverse a number.
 #### Q. Write a program to convert decimal number to binary format.
 #### Q. Write a program to find perfect number or not.
 #### Q. Write a program to find sum of each digit in the given number using recursion.
@@ -171,8 +168,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Given an array of of size n and a number k, find all elements that appear more than n/k times?
 #### Q. Returns the largest sum of contiguous integers in the array
 #### Q. Return the sum two largest integers in an array
-#### Q. How to reverse array in place in Java?
-
 #### Q. How to search an array to check if an element exists there?
 #### Q. How to copy array in Java?
 #### Q. Can you make array volatile in Java?
@@ -204,3 +199,5 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a java program to print Floyd’s Triangle?
 #### Q. Spiral Matrix Program.
 #### Q. Anagram program in java
+#### Q. Write a program to print fibonacci series.
+
