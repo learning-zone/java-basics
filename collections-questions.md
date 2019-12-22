@@ -1294,13 +1294,10 @@ c
 D
 [A, B, c, D]
 ```
-#### Q. How to make Java ArrayList Read-Only?
 #### Q. Which design pattern followed by Iterator?
 #### Q. What is difference between IdentityHashMap and HashMap in Java?
 #### Q. What is CompareAndSwap approach?
 #### Q. Why there is not method like Iterator.add() to add elements to the collection?
-#### Q. What is ConcurrentLinkedQueue in Java?
-#### Q. What is ConcurrentLinkedDequeue in Java?
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
