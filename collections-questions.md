@@ -1137,7 +1137,6 @@ Java **HashMap** and **TreeMap** both are the classes of the Java Collections fr
 |Order of elements	HashMap does not maintain any order.|The elements are sorted in natural order (ascending).|
 |The HashMap should be used when we do not require key-value pair in sorted order.|	The TreeMap should be used when we require key-value pair in sorted (ascending) order.|
 
-#### Q. What is hash-collision in Hashtable and how it is handled in Java?
 #### Q. What is the Dictionary class?
 #### Q. What are all the Classes and Interfaces that are available in the collections?
 #### Q. What is meant by Ordered and Sorted in collections?
