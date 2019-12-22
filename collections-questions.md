@@ -1230,7 +1230,6 @@ Size of Dictionary : 1
 #### Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
 #### Q. What are concurrentCollectionClasses?
 #### Q. How to make Java ArrayList Read-Only?
-#### Q. How to sort ArrayList in descending order?
 #### Q. Which design pattern followed by Iterator?
 #### Q. What is difference between IdentityHashMap and HashMap in Java?
 #### Q. What is CompareAndSwap approach?
