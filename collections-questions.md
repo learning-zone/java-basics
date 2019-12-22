@@ -1351,12 +1351,16 @@ Collection is an interface that specifies a group of objects known as elements. 
 
 Collection is the root interface for all the collection classes ( like ArrayList, LinkedList ). If collection interface extends Cloneable/Serializable interfaces, then it is mandating all the concrete implementations of this interface to implement cloneable and serializable interfaces. To give freedom to concrete implementation classes, Collection interface don’t extended Cloneable or Serializable interfaces.
 
+#### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
+ConcurrentHashMap uses multiple buckets to store data. This avoids read locks and greatly improves performance over a HashTable. Both are thread safe, but there are obvious performance wins with ConcurrentHashMap.
+
+When we read from a ConcurrentHashMap using get(), there are no locks, contrary to the HashTable for which all operations are simply synchronized. HashTable was released in old versions of Java whereas ConcurrentHashMap is added in java 1.5 version.
+
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
-#### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 #### Q. What is SynchronousQueue in Java?
 #### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 
