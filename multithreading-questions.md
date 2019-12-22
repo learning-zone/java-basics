@@ -1761,5 +1761,9 @@ Thread-1 after passing barrier
 Thread-2 after passing barrier
 Phasecount is 1
 ```
+#### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
+#### Q. What is PriorityBlockingQueue in Java Concurrency?
+#### Q. What is DelayQueue in Java Concurrency?
+#### Q. What is SynchronousQueue in Java?
 #### Q. What is Exchanger in Java concurrency?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
