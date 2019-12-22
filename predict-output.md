@@ -70,8 +70,7 @@ public class Test {
     
   int birds = 10;
   public static void main(String[] args) {  
-    int trees = 5;
-    System.out.println(trees+birds);
+    System.out.println(birds);
   }  
 }  
 ```
@@ -82,3 +81,4 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 	at Test.main(Test.java:7)
 ```
+#### Q. What is the output of following program?
