@@ -82,3 +82,23 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 	at Test.main(Test.java:7)
 ```
 #### Q. What is the output of following program?
+```java
+public class Test {  
+    
+    private static int one = 10;
+    int two = 20;
+    public static void main(String []args) {  
+      
+      Test test = new Test();
+      int today = 20; two = 40;
+      System.out.println(today + test.two + test.one);
+    }  
+}  
+```
+Output
+```
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	Cannot make a static reference to the non-static field two
+
+	at Test.main(Test.java:9)
+```
