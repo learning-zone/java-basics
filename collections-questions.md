@@ -1225,7 +1225,6 @@ Size of Dictionary : 1
 * TreeMap Class
 * PriorityQueue Class
 
-#### Q. Explain about Map and their types?
 #### Q. What is the difference between List and Set?
 #### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 #### Q. What is the difference between HashMap and ConcurrentHashMap?
