@@ -48,13 +48,14 @@ Duplicate words in a given string :
 big
 black
 ```
-#### Q. A maximal subarray
-#### Q. Sort a linked list
-#### Q. Iterative Quick sort
-#### Q. Bucket sort
-#### Q. Counting sort
 #### Q. Find missing number in an array
-#### Q. Generate random numbers
+#### Q. Write a program to generate random numbers between the given range?
+#### Q. Write a java program to swap two string variables without using third or temp variable?
+#### Q. Write a java program to Move all zeroes to end of array?
+```
+Input:  arr[] = {1, 2, 0, 4, 3, 0, 5, 0};
+Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
+```
 #### Q. How to reverse Singly Linked List?
 #### Q. Create a Java program to find middle node of linked list in Java in one pass?
 #### Q. How to find if a linked list contains cycle or not in Java?
@@ -67,7 +68,6 @@ black
 #### Q. How do you find longest substring without repeating characters in a string?
 #### Q. Find all substrings of String in java
 #### Q. Check if two string rotation of each other
-#### Q. Write a java program to swap two string variables without using third or temp variable?
 #### Q. Can you write a regular expression to check if String is a number?
 #### Q. Write a method that will remove given character from the String?
 #### Q. Write a function to find out longest palindrome in a given string?
@@ -204,3 +204,8 @@ black
 #### Q. What is the difference between int[] a and int a[] ?
 #### Q. What are jagged arrays in java? Give example?
 #### Q. While creating the multidimensional arrays, can you specify an array dimension after an empty dimension?
+#### Q. A maximal subarray
+#### Q. Sort a linked list
+#### Q. Iterative Quick sort
+#### Q. Bucket sort
+#### Q. Counting sort
