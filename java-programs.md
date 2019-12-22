@@ -178,7 +178,6 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. How to find the smallest positive integer value that cannot be represented as sum of any subset of a given array?
 #### Q. How to rearrange array in alternating positive and negative number?
 #### Q. How to find if there is a sub array with sum equal to zero?
-#### Q. How to remove duplicates from array in place?
 #### Q. How to remove a given element from array in Java?
 #### Q. How to merge sorted array?
 #### Q. How to find sub array with maximum sum in an array of positive and negative number?
