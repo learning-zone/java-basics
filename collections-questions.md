@@ -1201,8 +1201,30 @@ Check the value of removed key : null
 
 Size of Dictionary : 1
 ```
-
 #### Q. What are all the Classes and Interfaces that are available in the collections?
+**Java Collections Interfaces**  
+
+* Collection Interface
+* Iterator Interface
+* Set Interface
+* List Interface
+* Queue Interface
+* Dequeue Interface
+* Map Interface
+* ListIterator Interface
+* SortedSet Interface
+* SortedMap Interface
+
+**Java Collections Classes**  
+
+* HashSet Class
+* TreeSet Class
+* ArrayList Class
+* LinkedList Class
+* HashMap Class
+* TreeMap Class
+* PriorityQueue Class
+
 #### Q. What is meant by Ordered and Sorted in collections?
 #### Q. Explain about the different lists available in the collection.
 #### Q. Explain about Map and their types?
