@@ -5,7 +5,7 @@
 public class First {
 
 	public static void main(String[] args) {
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 5; i++) {
 			System.out.println(i + ' ');
 		}
 	}
@@ -18,13 +18,25 @@ Output
 34
 35
 36
-37
-38
-39
-40
-41
 ```
+#### Q. What is the output of following program?
+```java
+import java.util.ArrayList;
+public class First {
 
-
+	public static void main(String[] args) {
+		ArrayList arrList = new ArrayList();
+		arrList.add(1);
+		arrList.add('1');
+		arrList.add("1");
+		
+		System.out.println(arrList);
+	}
+}
+```
+Output
+```
+[1, 1, 1]
+```
 
 
