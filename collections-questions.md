@@ -1225,7 +1225,6 @@ Size of Dictionary : 1
 * TreeMap Class
 * PriorityQueue Class
 
-#### Q. What is the difference between List and Set?
 #### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 #### Q. What is the difference between HashMap and ConcurrentHashMap?
 #### Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
