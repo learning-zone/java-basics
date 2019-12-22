@@ -190,13 +190,9 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Return the sum two largest integers in an array
 #### Q. How to reverse array in place in Java?
 #### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
-#### Q. What is difference between ArrayIndexOutfOBounds and ArrayStoreException?
-#### Q. Can you use Generics with array?
 #### Q. How to search an array to check if an element exists there?
 #### Q. How to copy array in Java?
-#### Q. What is difference between an array and a linked list?
 #### Q. Can you make array volatile in Java?
-#### Q. Where does array stored in memory?
 #### Q. How do you find all pair whose sum is equal to given number from integer array in Java?
 #### Q. How to find top two numbers from an integer array in Java?
 #### Q. Can you pass the negative number as an array size?
