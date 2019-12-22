@@ -66,13 +66,13 @@ Answer: D
 ```
 #### Q. What is the output of following program?
 ```java
-public class Test{  
+public class Test {  
     
-	 int birds = 10;
-     public static void main(String []args){  
-       int trees = 5;
-       System.out.println(trees+birds);
-     }  
+	int birds = 10;
+    public static void main(String[] args) {  
+      int trees = 5;
+      System.out.println(trees+birds);
+    }  
 }  
 ```
 Output
