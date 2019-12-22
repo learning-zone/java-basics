@@ -1225,7 +1225,6 @@ Size of Dictionary : 1
 * TreeMap Class
 * PriorityQueue Class
 
-#### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 #### Q. What is the difference between HashMap and ConcurrentHashMap?
  	
 |HashMap	                   |ConcurrentHashMap                                     |
@@ -1294,11 +1293,6 @@ c
 D
 [A, B, c, D]
 ```
-#### Q. What is CompareAndSwap approach?
-#### Q. Why there is not method like Iterator.add() to add elements to the collection?
-#### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
-#### Q. What is PriorityBlockingQueue in Java Concurrency?
-#### Q. What is DelayQueue in Java Concurrency?
 #### Q. How to make an ArrayList read only in Java?
 An ArrayList can be made read-only easily with the help of **Collections.unmodifiableList()** method. This method takes the modifiable ArrayList as a parameter and returns the read-only unmodifiable view of this ArrayList.
 
@@ -1352,12 +1346,18 @@ ReadOnly ArrayList: [X, Y, Z]
 Trying to modify the ReadOnly ArrayList.
 Exception thrown : java.lang.UnsupportedOperationException
 ```
-#### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
-#### Q. What is SynchronousQueue in Java?
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
 Collection is an interface that specifies a group of objects known as elements. The details of how the group of elements is maintained is left up to the concrete implementations of `Collection`. For example, some Collection implementations like `List` allow duplicate elements whereas other implementations like `Set` don't.
 
 Collection is the root interface for all the collection classes ( like ArrayList, LinkedList ). If collection interface extends Cloneable/Serializable interfaces, then it is mandating all the concrete implementations of this interface to implement cloneable and serializable interfaces. To give freedom to concrete implementation classes, Collection interface don’t extended Cloneable or Serializable interfaces.
 
 #### Q. Why Map interface doesn’t extend Collection interface?
+#### Q. What is CompareAndSwap approach?
+#### Q. Why there is not method like Iterator.add() to add elements to the collection?
+#### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
+#### Q. What is PriorityBlockingQueue in Java Concurrency?
+#### Q. What is DelayQueue in Java Concurrency?
+#### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
+#### Q. What is SynchronousQueue in Java?
+#### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 
