@@ -1353,7 +1353,6 @@ Collection is the root interface for all the collection classes ( like ArrayList
 
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
-#### Q. Why there is not method like Iterator.add() to add elements to the collection?
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
