@@ -48,7 +48,7 @@ Duplicate words in a given string :
 big
 black
 ```
-#### Q. Find missing number in an array
+#### Q. Find the missing number in an array?
 #### Q. Write a program to generate random numbers between the given range?
 #### Q. Write a java program to swap two string variables without using third or temp variable?
 #### Q. Write a java program to Move all zeroes to end of array?
