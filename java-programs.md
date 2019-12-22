@@ -56,12 +56,7 @@ black
 Input:  arr[] = {1, 2, 0, 4, 3, 0, 5, 0};
 Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 ```
-#### Q. How to reverse Singly Linked List?
-#### Q. Create a Java program to find middle node of linked list in Java in one pass?
-#### Q. How to find if a linked list contains cycle or not in Java?
-#### Q. How to find nth element from end of linked list
-#### Q. How to check if linked list is palindrome in java
-#### Q. Add two numbers represented by linked list in java
+#### Q. Write a multi-threading program to print odd number using one thread and even number using other?
 #### Q. How to print all permutation of a String in Java?
 #### Q. How to find duplicate characters in a string in java?
 #### Q. Reverse the string with preserving the position of spaces
@@ -72,19 +67,17 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a method that will remove given character from the String?
 #### Q. Write a function to find out longest palindrome in a given string?
 #### Q. How to reverse each word of a string in java?
-#### Q. Write a program to find top two maximum numbers in a array.
-#### Q. Array to ArrayList and ArrayList To Array Conversion program.
+#### Q. Write a program to find top two maximum numbers in a array?
 #### Q. How to separate zeros from non-zeros in an array?
 #### Q. Find pair whose sum is closest to zero in array in java
 #### Q. How to find all the leaders in an integer array in java?
+#### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
 #### Q. Java Program to find gcd and lcm of two numbers
-#### Q. Write a program to find the sum of the first 1000 prime numbers.
-#### Q. Write a multi-threading program, print odd number using one thread and even number using other.
+#### Q. Write a program to find the sum of the first 1000 prime numbers?
 #### Q. Write a java program to find number of characters, number of words and number of lines in a text file?
 #### Q. Find all pairs of elements whose sum is equal to given number
-#### Q. Square root of number
 #### Q. Program to convert lower to upper case without using toUppercase()
-#### Q. Write a program to create deadlock between two threads.
+#### Q. Write a program to create deadlock between two threads?
 #### Q. How to find the word with the highest frequency from a file in Java?
 #### Q. Write a program to convert a given Collection to Synchronized Collection ?
 #### Q. How to sort a text file in java?
@@ -118,17 +111,8 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Write a program to implement hashcode and equals.
 #### Q. Write wait-notify code for producer-consumer problem?
 #### Q. Write a program to implement ArrayList.
-#### Q. Printing patterns
-#### Q. Leap year
-#### Q. Design a Vending Machine
-#### Q. Transpose a matrix
-#### Q. Adding two matrices in Java
-#### Q. Matrix multiplication
-#### Q. Write a java program to print Floyd’s Triangle?
-#### Q. Spiral Matrix Program.
-#### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? [ Output: Infinity, No #### Q. Exception ]
+#### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? [ Output: Infinity, No Exception ]
 #### Q. How do you check the equality of two arrays in java? [ Arrays.equals() ]
-#### Q. Anagram program in java
 #### Q. How to perform matrix operations in java?
 #### Q. How to remove duplicate elements from ArrayList in java?
 #### Q. How to find trigonometric values of an angle in java?
@@ -188,7 +172,7 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. Returns the largest sum of contiguous integers in the array
 #### Q. Return the sum two largest integers in an array
 #### Q. How to reverse array in place in Java?
-#### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
+
 #### Q. How to search an array to check if an element exists there?
 #### Q. How to copy array in Java?
 #### Q. Can you make array volatile in Java?
@@ -199,8 +183,24 @@ Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
 #### Q. What is the difference between int[] a and int a[] ?
 #### Q. What are jagged arrays in java? Give example?
 #### Q. While creating the multidimensional arrays, can you specify an array dimension after an empty dimension?
+#### Q. How to reverse Singly Linked List?
+#### Q. Create a Java program to find middle node of linked list in Java in one pass?
+#### Q. How to find if a linked list contains cycle or not in Java?
+#### Q. How to find nth element from end of linked list
+#### Q. How to check if linked list is palindrome in java
+#### Q. Add two numbers represented by linked list in java
 #### Q. A maximal subarray
 #### Q. Sort a linked list
 #### Q. Iterative Quick sort
 #### Q. Bucket sort
 #### Q. Counting sort
+#### Q. Square root of number
+#### Q. Printing patterns
+#### Q. Leap year
+#### Q. Design a Vending Machine
+#### Q. Transpose a matrix
+#### Q. Adding two matrices in Java
+#### Q. Matrix multiplication
+#### Q. Write a java program to print Floyd’s Triangle?
+#### Q. Spiral Matrix Program.
+#### Q. Anagram program in java
