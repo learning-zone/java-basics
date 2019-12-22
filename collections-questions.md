@@ -1237,6 +1237,63 @@ Size of Dictionary : 1
 |HashMap is faster.     	   |ConcurrentHashMap is slower than HashMap.|
 
 #### Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
+CopyOnWriteArrayList class is introduced in JDK 1.5, which implements List interface. It is enhanced version of ArrayList in which all modifications (add, set, remove, etc) are implemented by making a fresh copy.
+
+```java
+/**
+* Java program to illustrate 
+* CopyOnWriteArrayList class 
+*
+**/
+import java.util.concurrent.CopyOnWriteArrayList; 
+import java.util.*; 
+
+class ConcurrentDemo extends Thread { 
+
+	static CopyOnWriteArrayList arrList = new CopyOnWriteArrayList(); 
+
+	public void run() { 
+		// Child thread trying to 
+		// add new element in the 
+		// Collection object 
+		arrList.add("D"); 
+	} 
+
+	public static void main(String[] args) 
+		throws InterruptedException { 
+		arrList.add("A"); 
+		arrList.add("B"); 
+		arrList.add("c"); 
+
+		// We create a child thread 
+		// that is going to modify 
+		// ArrayList. 
+		ConcurrentDemo t = new ConcurrentDemo(); 
+		t.run(); 
+
+		Thread.sleep(1000); 
+
+		// Now we iterate through 
+		// the ArrayList and get 
+		// exception. 
+		Iterator itr = arrList.iterator(); 
+		while (itr.hasNext()) { 
+			String s = (String)itr.next(); 
+			System.out.println(s); 
+			Thread.sleep(1000); 
+		} 
+		System.out.println(arrList); 
+	} 
+} 
+```
+Output
+```
+A
+B
+c
+D
+[A, B, c, D]
+```
 #### Q. How to make Java ArrayList Read-Only?
 #### Q. Which design pattern followed by Iterator?
 #### Q. What is difference between IdentityHashMap and HashMap in Java?
