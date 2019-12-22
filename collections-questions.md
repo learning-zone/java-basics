@@ -1443,9 +1443,6 @@ The main difference lies when the Queue is empty(). If Queue is empty then poll(
 
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
-#### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
-#### Q. What is PriorityBlockingQueue in Java Concurrency?
-#### Q. What is DelayQueue in Java Concurrency?
-#### Q. What is SynchronousQueue in Java?
+
 
 
