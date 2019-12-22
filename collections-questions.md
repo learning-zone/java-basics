@@ -1294,7 +1294,6 @@ c
 D
 [A, B, c, D]
 ```
-#### Q. Which design pattern followed by Iterator?
 #### Q. What is difference between IdentityHashMap and HashMap in Java?
 #### Q. What is CompareAndSwap approach?
 #### Q. Why there is not method like Iterator.add() to add elements to the collection?
