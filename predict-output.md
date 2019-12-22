@@ -2,7 +2,7 @@
 
 #### Q. What is the output of following program?
 ```java
-public class First {
+public class Test {
 
 	public static void main(String[] args) {
 		for(int i = 0; i < 5; i++) {
@@ -22,7 +22,7 @@ Output
 #### Q. What is the output of following program?
 ```java
 import java.util.ArrayList;
-public class First {
+public class Test {
 
 	public static void main(String[] args) {
 		ArrayList arrList = new ArrayList();
@@ -38,5 +38,22 @@ Output
 ```
 [1, 1, 1]
 ```
+#### Q. What is the output of following program?
+```java
+public class Test {
 
+	public static void main(String[] args) {
+		for(int i=0; 0; i++) {
+			System.out.println("Hello World!");
+		}
+	}
+}
+```
+Output
+```
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	Type mismatch: cannot convert from int to boolean
+
+	at Test.main(Test.java:5)
+```
 
