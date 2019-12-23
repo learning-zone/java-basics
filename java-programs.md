@@ -82,6 +82,61 @@ Output
 ```
 #### Q. Write a program to generate random numbers between the given range?
 #### Q. Write a java program to swap two string variables without using temp variable?
+**Algorithm**  
+
+1. Append second string to first string and store in first string:
+   a = a + b
+
+2. call the method substring(int beginindex, int endindex)
+   by passing beginindex as 0 and endindex as,
+      a.length() - b.length():
+   b = substring(0,a.length()-b.length());
+
+3. call the method substring(int beginindex) by passing 
+   b.length() as argument to store the value of initial 
+   b string in a
+   a = substring(b.length());
+
+```java
+/**
+* Java program to swap two strings without using a temporary 
+* variable.
+**/ 
+import java.util.*; 
+
+class Swap 
+{	 
+	public static void main(String args[]) {
+
+		// Declare two strings 
+		String a = "Hello"; 
+		String b = "World"; 
+		
+		// Print String before swapping 
+		System.out.println("Strings before swap: a = " + 
+									a + " and b = "+b); 
+		
+		// append 2nd string to 1st 
+		a = a + b; 
+		
+		// store intial string a in string b 
+		b = a.substring(0, a.length() - b.length()); 
+		
+		// store initial string b in string a 
+		a = a.substring(b.length()); 
+		
+		// print String after swapping 
+		System.out.println("Strings after swap: a = " + 
+									a + " and b = " + b);		 
+	}	 
+} 
+```
+Output
+```
+Strings before swap: a = Hello and b = World
+Strings after swap: a = World and b = Hello
+```
+
 #### Q. Write a java program to Move all zeroes to end of array?
 ```
 Input:  arr[] = {1, 2, 0, 4, 3, 0, 5, 0};
