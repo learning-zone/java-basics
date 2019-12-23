@@ -51,8 +51,9 @@ black
 #### Q. Find the missing number in an array?
 **Algorithm**  
 
-1. Get the sum of numbers which is total = n*(n+1)/2
-2. Subtract all the numbers from sum and we will get the missing number
+1. Calculate `A = n (n+1)/2` where n is largest number in series 1…N.
+1. Calculate B = Sum of all numbers in given series
+1. Missing number = A – B
 
 ```java
 // Java program to find missing Number 
