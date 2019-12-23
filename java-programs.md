@@ -49,6 +49,36 @@ big
 black
 ```
 #### Q. Find the missing number in an array?
+**Algorithm**  
+
+1. Get the sum of numbers which is total = n*(n+1)/2
+2. Subtract all the numbers from sum and we will get the missing number
+
+```java
+// Java program to find missing Number 
+
+public class Test {  
+    
+	public static void main(String[] args) {
+
+		int total;
+		int[] numbers = new int[]{1, 2, 3, 4, 6, 7};
+		total = 7;
+		int expected_sum = total * ((total + 1) / 2);
+		int num_sum = 0;
+		
+		for (int i: numbers) {
+		 num_sum += i;
+		}
+		
+		System.out.print( expected_sum - num_sum );
+	}
+}   
+```
+Output
+```
+5
+```
 #### Q. Write a program to generate random numbers between the given range?
 #### Q. Write a java program to swap two string variables without using temp variable?
 #### Q. Write a java program to Move all zeroes to end of array?
