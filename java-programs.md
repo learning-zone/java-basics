@@ -183,113 +183,87 @@ Array after pushing all zeros to end of array:
 ```
 #### Q. Write a multi-threading program to print odd number using one thread and even number using other?
 ```java
-public class OddEvenPrintMain {
- 
-	boolean odd;
-	int count = 1;
-	int MAX = 5;
- 
-	public void printOdd() {
-		synchronized (this) {
-			while (count < MAX) {
-				System.out.println("Checking odd loop");
- 
-				while (!odd) {
-					try {
-						System.out.println("Odd waiting : " + count);
-						wait();
-						System.out.println("Notified odd :" + count);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				System.out.println("Odd Thread :" + count);
-				count++;
-				odd = false;
-				notify();
-			}
-		}
-	}
- 
-	public void printEven() {
- 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
-		}
-		synchronized (this) {
-			while (count < MAX) {
-				System.out.println("Checking even loop");
- 
-				while (odd) {
-					try {
-						System.out.println("Even waiting: " + count);
-						wait();
-						System.out.println("Notified even:" + count);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				}
-				System.out.println("Even thread :" + count);
-				count++;
-				odd = true;
-				notify();
- 
-			}
-		}
-	}
- 
-	public static void main(String[] args) {
- 
-		OddEvenPrintMain oep = new OddEvenPrintMain();
-		oep.odd = true;
-		Thread t1 = new Thread(new Runnable() {
- 
-			@Override
-			public void run() {
-				oep.printEven();
-			}
-		});
-		Thread t2 = new Thread(new Runnable() {
- 
-			@Override
-			public void run() {
-				oep.printOdd();
-			}
-		});
- 
-		t1.start();
-		t2.start();
- 
-		try {
-			t1.join();
-			t2.join();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+class TaskEvenOdd implements Runnable {
+
+    private int max;
+    private Printer print;
+    private boolean isEvenNumber;
+
+    TaskEvenOdd(Printer print, int max, boolean isEvenNumber) {
+        this.print = print;
+        this.max = max;
+        this.isEvenNumber = isEvenNumber;
+    }
+
+    @Override
+    public void run() {
+   
+        int number = isEvenNumber == true ? 2 : 1;
+        while (number <= max) {
+
+            if (isEvenNumber) {
+                //System.out.println("Thread Even: "+ Thread.currentThread().getName());
+                print.printEven(number);
+            } else {
+                //System.out.println("Thread Odd: "+ Thread.currentThread().getName());
+                print.printOdd(number);
+            }
+            number += 2;
+        }
+    }
 }
+
+class Printer {
+
+    boolean isOdd = false;
+
+    synchronized void printEven(int number) {
+
+        while (isOdd == false) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Thread Even: " + number);
+        isOdd = false;
+        notifyAll();
+    }
+
+    synchronized void printOdd(int number) {
+        while (isOdd == true) {
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Thread Odd: " + number);
+        isOdd = true;
+        notifyAll();
+    }
+}
+
+public class Test 
+{  
+	static int MAX = 5;
+	public static void main(String... args) {
+        Printer print = new Printer();
+        Thread t1 = new Thread(new TaskEvenOdd(print, MAX, false));
+        Thread t2 = new Thread(new TaskEvenOdd(print, MAX, true));
+        t1.start();
+        t2.start();
+    }	 
+} 
 ```
 Output
 ```
-Checking odd loop
-Odd Thread :1
-Checking odd loop
-Odd waiting : 2
-Checking even loop
-Even thread :2
-Checking even loop
-Even waiting: 3
-Notified odd :3
-Odd Thread :3
-Checking odd loop
-Odd waiting : 4
-Notified even:4
-Even thread :4
-Notified odd :5
-Odd Thread :5
+Thread Odd: 1
+Thread Even: 2
+Thread Odd: 3
+Thread Even: 4
+Thread Odd: 5
 ```
 #### Q. How to print all permutation of a String in Java?
 #### Q. How to find duplicate characters in a string in java?
