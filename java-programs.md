@@ -265,7 +265,7 @@ Thread Odd: 3
 Thread Even: 4
 Thread Odd: 5
 ```
-#### Q. How to print all permutation of a String in Java?
+#### Q. How to print all permutations of a String in Java?
 #### Q. How to find duplicate characters in a string in java?
 #### Q. Reverse the string with preserving the position of spaces
 #### Q. How do you find longest substring without repeating characters in a string?
