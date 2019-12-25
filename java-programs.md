@@ -81,6 +81,7 @@ Output
 5
 ```
 #### Q. Write a program to generate random numbers between the given range?
+*TODO*
 #### Q. Write a java program to swap two string variables without using temp variable?
 **Algorithm**  
 
@@ -113,8 +114,7 @@ class Swap
 		String b = "World"; 
 		
 		// Print String before swapping 
-		System.out.println("Strings before swap: a = " + 
-									a + " and b = "+b); 
+		System.out.println("Strings before swap: a = " + a + " and b = "+b); 
 		
 		// append 2nd string to 1st 
 		a = a + b; 
@@ -126,8 +126,7 @@ class Swap
 		a = a.substring(b.length()); 
 		
 		// print String after swapping 
-		System.out.println("Strings after swap: a = " + 
-									a + " and b = " + b);		 
+		System.out.println("Strings after swap: a = " + a + " and b = " + b);		 
 	}	 
 } 
 ```
@@ -320,7 +319,6 @@ public class PermuteString
     }   
 }  
 ```
-
 #### Q. How to find duplicate characters in a string in java?
 #### Q. Reverse the string with preserving the position of spaces
 #### Q. How do you find longest substring without repeating characters in a string?
