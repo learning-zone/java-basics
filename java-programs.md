@@ -275,7 +275,7 @@ Thread Odd: 5
 **Recursive Approach**  
 
 
-![Backtrack](https://github.com/learning-zone/java-interview-questions/blob/master/assets/exception.png)
+![Recursive Approach](https://github.com/learning-zone/java-interview-questions/blob/master/assets/recursive.png)
 
 ```java
 public class PermuteString 
