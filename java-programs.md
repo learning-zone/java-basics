@@ -319,6 +319,17 @@ public class PermuteString
     }   
 }  
 ```
+Output
+```
+All the permutations of the string are: 
+
+ABC
+ACB
+BAC
+BCA
+CBA
+CAB
+```
 #### Q. How to find duplicate characters in a string in java?
 #### Q. Reverse the string with preserving the position of spaces
 #### Q. How do you find longest substring without repeating characters in a string?
