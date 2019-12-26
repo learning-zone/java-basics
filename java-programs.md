@@ -387,7 +387,6 @@ Output
 India Is my country --> yrtnu oc ym sIaidnI
 ```
 #### Q. How do you find longest substring without repeating characters in a string?
-#### Q. Find all substrings of String in java
 #### Q. Check if two string rotation of each other
 #### Q. Can you write a regular expression to check if String is a number?
 #### Q. Write a method that will remove given character from the String?
