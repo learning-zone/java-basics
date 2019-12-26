@@ -330,7 +330,6 @@ BCA
 CBA
 CAB
 ```
-#### Q. How to find duplicate characters in a string in java?
 #### Q. Reverse the string with preserving the position of spaces
 #### Q. How do you find longest substring without repeating characters in a string?
 #### Q. Find all substrings of String in java
