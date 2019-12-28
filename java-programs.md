@@ -469,7 +469,6 @@ Output
 ```
 Is Number: true
 ```
-#### Q. Write a method that will remove given character from the String?
 #### Q. Write a function to find out longest palindrome in a given string?
 #### Q. Write a program to find top two maximum numbers in a array?
 #### Q. How to find all the leaders in an integer array in java?
