@@ -501,14 +501,43 @@ First Max Number: 99
 Second Max Number: 78
 ```
 #### Q. How to find all the leaders in an integer array in java?
-#### Q. Java Program to find gcd and lcm of two numbers
-#### Q. Write a program to find the sum of the first 1000 prime numbers?
+An element is leader if it is greater than all the elements to its right side. And the rightmost element is always a leader. For example int the array {16, 17, 4, 3, 5, 2}, leaders are 17, 5 and 2.
+
+```java
+public class Test 
+{
+	/*Java Function to print leaders in an array */
+    void printLeaders(int arr[], int size) { 
+        for (int i = 0; i < size; i++) { 
+            int j; 
+            for (j = i + 1; j < size; j++) { 
+                if (arr[i] <= arr[j]) 
+                    break; 
+            } 
+            if (j == size) // the loop didn't break 
+                System.out.print(arr[i] + " "); 
+        } 
+    } 
+  
+    /* Driver program to test above functions */
+    public static void main(String[] args) { 
+    	Test lead = new Test(); 
+        int arr[] = new int[]{25, 10, 2, 4, 1, 3}; 
+        int n = arr.length; 
+        lead.printLeaders(arr, n); 
+    } 
+} 
+```
+Output
+```
+25 10 4 3 
+```
 #### Q. Write a java program to find number of characters, number of words and number of lines in a text file?
 #### Q. Find all pairs of elements whose sum is equal to given number
 #### Q. Program to convert lower to upper case without using toUppercase()
 #### Q. Write a program to create deadlock between two threads?
 #### Q. How to find the word with the highest frequency from a file in Java?
-#### Q. Write a program to convert a given Collection to Synchronized Collection ?
+#### Q. Write a program to convert a given Collection to Synchronized Collection?
 #### Q. How to sort a text file in java?
 #### Q. Find out middle index where sum of both ends are equal.
 #### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
@@ -631,5 +660,7 @@ Second Max Number: 78
 #### Q. Anagram program in java
 #### Q. Write a program to print fibonacci series.
 #### Q. How to you calculate the difference between two dates in Java? 
+#### Q. Java Program to find gcd and lcm of two numbers
+#### Q. Write a program to find the sum of the first 1000 prime numbers?
 
 
