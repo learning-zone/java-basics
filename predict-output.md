@@ -125,3 +125,23 @@ Output
 ```
 [2 5]
 ```
+#### Q. What is the output of following program?
+```java
+public class Test 
+{
+    public static void main(String a[]) {
+      try {
+      	int val = 10/0;
+      } catch(Exception e) {
+      	System.out.println(e);
+      } catch(ArithmeticException ae) {
+      	System.out.println(ae);
+      }
+    }
+} 
+```
+Output
+```
+Unresolved compilation problem: 
+Unreachable catch block for ArithmeticException. It is already handled by the catch block for Exception
+```
