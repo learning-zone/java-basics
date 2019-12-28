@@ -479,7 +479,7 @@ public class TwoMaxNumbers {
         for(int n:nums) {
             if(maxOne < n) {
                 maxTwo = maxOne;
-                maxOne =n;
+                maxOne = n;
             } else if(maxTwo < n) {
                 maxTwo = n;
             }
