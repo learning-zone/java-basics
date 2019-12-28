@@ -470,6 +470,36 @@ Output
 Is Number: true
 ```
 #### Q. Write a program to find top two maximum numbers in a array?
+```java
+public class TwoMaxNumbers {
+ 
+    public void printTwoMaxNumbers(int[] nums) {
+        int maxOne = 0;
+        int maxTwo = 0;
+        for(int n:nums) {
+            if(maxOne < n) {
+                maxTwo = maxOne;
+                maxOne =n;
+            } else if(maxTwo < n) {
+                maxTwo = n;
+            }
+        }
+        System.out.println("First Max Number: "+maxOne);
+        System.out.println("Second Max Number: "+maxTwo);
+    }
+     
+    public static void main(String a[]) {
+        int num[] = {5,34,78,2,45,1,99,23};
+        TwoMaxNumbers tmn = new TwoMaxNumbers();
+        tmn.printTwoMaxNumbers(num);
+    }
+}
+```
+Output
+```
+First Max Number: 99
+Second Max Number: 78
+```
 #### Q. How to find all the leaders in an integer array in java?
 #### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
 #### Q. Java Program to find gcd and lcm of two numbers
