@@ -131,7 +131,14 @@ To run the above code
 ```
 cmd> jjs hello.js
 ```
-
+#### Q. What is a Functional Interface? What is SAM Interface?
+#### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
+#### Q. Explain Differences between Collection API and Stream API?
+#### Q. What is Spliterator in Java SE 8?Differences between Iterator and Spliterator in Java SE 8?
+#### Q. What is Optional in Java 8? What is the use of Optional?Advantages of Java 8 Optional?
+#### Q. What is Type Inference? Is Type Inference available in older versions like Java 7 and Before 7 or it is available only in Java SE 8?
+#### Q. Differences between External Iteration and Internal Iteration?
+#### Q. Differences between Functional Programming and Object-Oriented Programming?
 #### Q. What is JVM and is it platform independent?
 Java Virtual Machine (JVM) is a specification that provides runtime environment in which java bytecode(.class files) can be executed. The JVM is the platform. The JVM acts as a "virtual" machine or processor. Java's platform independence consists mostly of its Java Virtual Machine (JVM). JVM makes this possible because it is aware of the specific instruction lengths and other particularities of the platform (Operating System).
 
