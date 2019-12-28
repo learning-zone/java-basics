@@ -501,7 +501,6 @@ First Max Number: 99
 Second Max Number: 78
 ```
 #### Q. How to find all the leaders in an integer array in java?
-#### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
 #### Q. Java Program to find gcd and lcm of two numbers
 #### Q. Write a program to find the sum of the first 1000 prime numbers?
 #### Q. Write a java program to find number of characters, number of words and number of lines in a text file?
