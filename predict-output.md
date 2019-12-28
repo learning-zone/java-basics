@@ -43,9 +43,9 @@ Output
 public class Test {
 
 	public static void main(String[] args) {
-	  for(int i=0; 0; i++) {
-	  	System.out.println("Hello World!");
-	  }
+		for(int i=0; 0; i++) {
+			System.out.println("Hello World!");
+		}
 	}
 }
 ```
@@ -70,11 +70,11 @@ public class Test {
     
     private static int one = 10;
     int two = 20;
-    public static void main(String []args) {  
-      
-      Test test = new Test();
-      int today = 20; two = 40;
-      System.out.println(today + test.two + test.one);
+
+    public static void main(String []args) {    
+    	Test test = new Test();
+    	int today = 20; two = 40;
+    	System.out.println(today + test.two + test.one);
     }  
 }  
 ```
@@ -89,19 +89,19 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 ```java
 public class Test{  
     
-	 static int start = 2;
-	 final int end;
-	 public Test(int x) {
-		 x = 4;
-		 end = x;
-	 }
-	 public void fly(int distance) {
-		 System.out.println(end-start+" ");
-		 System.out.println(distance);
-	 }
-     public static void main(String []args){  
-       new Test(10).fly(5);
-     }  
+	static int start = 2;
+	final int end;
+	public Test(int x) {
+		x = 4;
+		end = x;
+	}
+	public void fly(int distance) {
+		System.out.println(end-start+" ");
+		System.out.println(distance);
+	}
+    public static void main(String []args){  
+    	new Test(10).fly(5);
+    }  
 }  
 ```
 Output
@@ -113,18 +113,20 @@ Output
 public class Test 
 {
     public static void main(String a[]) {
-      try {
-      	int val = 10/0;
-      } catch(Exception e) {
-      	System.out.println(e);
-      } catch(ArithmeticException ae) {
-      	System.out.println(ae);
-      }
+    	try {
+    		int val = 10/0;
+    	} catch(Exception e) {
+    		System.out.println(e);
+    	} catch(ArithmeticException ae) {
+    		System.out.println(ae);
+    	}
     }
 } 
 ```
 Output
 ```
-Unresolved compilation problem: 
-Unreachable catch block for ArithmeticException. It is already handled by the catch block for Exception
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	Unreachable catch block for ArithmeticException. It is already handled by the catch block for Exception
+
+	at Test.main(Test.java:12)
 ```
