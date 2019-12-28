@@ -68,23 +68,6 @@ Answer: D
 ```java
 public class Test {  
     
-  int birds = 10;
-  public static void main(String[] args) {  
-    System.out.println(birds);
-  }  
-}  
-```
-Output
-```
-Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
-	Cannot make a static reference to the non-static field birds
-
-	at Test.main(Test.java:7)
-```
-#### Q. What is the output of following program?
-```java
-public class Test {  
-    
     private static int one = 10;
     int two = 20;
     public static void main(String []args) {  
