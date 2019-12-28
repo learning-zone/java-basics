@@ -469,7 +469,6 @@ Output
 ```
 Is Number: true
 ```
-#### Q. Write a function to find out longest palindrome in a given string?
 #### Q. Write a program to find top two maximum numbers in a array?
 #### Q. How to find all the leaders in an integer array in java?
 #### Q. Can you store String in an array of Integer in Java? compile time error or runtime exception?
@@ -543,6 +542,7 @@ Is Number: true
 #### Q. Return the sum two largest integers in an array
 #### Q. How to search an array to check if an element exists there?
 #### Q. How to copy array in Java?
+#### Q. Write a function to find out longest palindrome in a given string?
 #### Q. Can you make array volatile in Java?
 #### Q. How to find top two numbers from an integer array in Java?
 #### Q. Can you pass the negative number as an array size?
