@@ -454,6 +454,21 @@ Output
 Strings are rotations of each other
 ```
 #### Q. Can you write a regular expression to check if String is a number?
+```java
+public class StringTest 
+{
+	public static void main (String[] args) { 
+		String regex = "[0-9]+";
+		// String regex = "\\d+";
+		String data = "23343453";
+		System.out.println("Is Number: "+ data.matches(regex));
+	} 
+} 
+```
+Output
+```
+Is Number: true
+```
 #### Q. Write a method that will remove given character from the String?
 #### Q. Write a function to find out longest palindrome in a given string?
 #### Q. Write a program to find top two maximum numbers in a array?
