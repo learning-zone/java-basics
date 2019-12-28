@@ -545,9 +545,8 @@ public class Test
         int lineCount = 0;
          
         try (
-        		BufferedReader reader = new BufferedReader(new FileReader("C:\\file.txt"));
-        	) {
-            
+        	BufferedReader reader = new BufferedReader(new FileReader("C:\\file.txt"));
+        ) {    
             // Reading the first line into currentLine
             String currentLine = reader.readLine();
              
