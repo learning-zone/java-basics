@@ -506,7 +506,6 @@ An element is leader if it is greater than all the elements to its right side. A
 ```java
 public class Test 
 {
-	/*Java Function to print leaders in an array */
     void printLeaders(int arr[], int size) { 
         for (int i = 0; i < size; i++) { 
             int j; 
@@ -518,8 +517,7 @@ public class Test
                 System.out.print(arr[i] + " "); 
         } 
     } 
-  
-    /* Driver program to test above functions */
+    
     public static void main(String[] args) { 
     	Test lead = new Test(); 
         int arr[] = new int[]{25, 10, 2, 4, 1, 3}; 
