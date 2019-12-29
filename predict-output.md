@@ -130,3 +130,34 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 	at Test.main(Test.java:12)
 ```
+#### Q. What is the output of following program?
+```java
+public class Test 
+{  	
+    static void charNum(String inputString) {
+    	HashMap<Character, Integer> charMap = new HashMap<Character, Integer>();
+    	char[] strArray = inputString.toCharArray();
+    	for(char c: strArray) {
+    		if(charMap.containsKey(c)) {
+    			charMap.put(c,  charMap.get(c)+1);
+    		} else {
+    			charMap.put(c, 1);
+    		}
+    	}
+    	Set<Character> charInString = charMap.keySet();
+    	for(Character ch: charInString) {
+    		if(charMap.get(ch) > 1) {
+    			System.out.println(ch +" : "+ charMap.get(ch));
+    		}
+    	}
+    }
+	public static void main(String[] args) {
+       charNum("JavaJ2Ee");
+    }   
+} 
+```
+Output
+```
+a : 2
+J : 2
+```
