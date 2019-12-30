@@ -630,6 +630,172 @@ Output
 HELLO WORLD --> hello world
 ```
 #### Q. Write a program to create deadlock between two threads?
+```java
+public class Test 
+{  	
+	// Creating Object Locks
+    static Object ObjectLock1 = new Object();
+    static Object ObjectLock2 = new Object();
+   
+    private static class ThreadName1 extends Thread {
+      public void run() {
+         synchronized (ObjectLock1) {
+            System.out.println("Thread 1: Has  ObjectLock1");
+            /* Adding sleep() method so that
+               Thread 2 can lock ObjectLock2 */
+            try { 
+                Thread.sleep(100);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Thread 1: Waiting for ObjectLock 2");
+            /*Thread 1 has ObjectLock1 
+              but waiting for ObjectLock2*/
+            synchronized (ObjectLock2) {
+               System.out.println("Thread 1: No DeadLock");
+            }
+         }
+      }
+   }
+   private static class ThreadName2 extends Thread {
+      public void run() {
+         synchronized (ObjectLock2) {
+            System.out.println("Thread 2: Has  ObjectLock2");
+            /* Adding sleep() method so that
+               Thread 1 can lock ObjectLock1 */
+            try { 
+                Thread.sleep(100);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Thread 2: Waiting for ObjectLock 1");
+            /*Thread 2 has ObjectLock2 
+              but waiting for ObjectLock1*/
+            synchronized (ObjectLock1) {
+               System.out.println("Thread 2: No DeadLock");
+            }
+         }
+      }
+   }
+   
+   public static void main(String args[]) {
+      ThreadName1 thread1 = new ThreadName1();
+      ThreadName2 thread2 = new ThreadName2();
+      thread1.start();
+      thread2.start();
+   }
+} 
+```
+Output
+```
+Thread 1: Has  ObjectLock1
+Thread 2: Has  ObjectLock2
+Thread 2: Waiting for ObjectLock 1
+Thread 1: Waiting for ObjectLock 2
+```
+**To Get the Deadlocak Details**  
+```
+To get the Thread PID
+cmd > jps   // 9004 Test
+cmd > jcmd 9004 Thread.print
+
+
+9004:
+2019-12-30 20:39:13
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.121-b13 mixed mode):
+
+"DestroyJavaVM" #12 prio=5 os_prio=0 tid=0x000000000261d800 nid=0x25a8 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Thread-1" #11 prio=5 os_prio=0 tid=0x000000001d746000 nid=0xe78 waiting for monitor entry [0x000000001de9e000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at Test$ThreadName2.run(Test.java:45)
+        - waiting to lock <0x000000076b3eae68> (a java.lang.Object)
+        - locked <0x000000076b3eae78> (a java.lang.Object)
+
+"Thread-0" #10 prio=5 os_prio=0 tid=0x000000001d745000 nid=0x468c waiting for monitor entry [0x000000001dd9e000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at Test$ThreadName1.run(Test.java:24)
+        - waiting to lock <0x000000076b3eae78> (a java.lang.Object)
+        - locked <0x000000076b3eae68> (a java.lang.Object)
+
+"Service Thread" #9 daemon prio=9 os_prio=0 tid=0x000000001d6c1000 nid=0x2c08 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread2" #8 daemon prio=9 os_prio=2 tid=0x000000001bd6c000 nid=0x265c waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #7 daemon prio=9 os_prio=2 tid=0x000000001bd46000 nid=0x461c waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=2 tid=0x000000001bd3c800 nid=0x2bb8 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" #5 daemon prio=5 os_prio=2 tid=0x000000001bd3b000 nid=0x2b2c waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=2 tid=0x000000001bd39800 nid=0x55e4 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=1 tid=0x000000001bd29000 nid=0x32fc in Object.wait() [0x000000001d09f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x000000076b388ec8> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+        - locked <0x000000076b388ec8> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"Reference Handler" #2 daemon prio=10 os_prio=2 tid=0x0000000002751000 nid=0x39e4 in Object.wait() [0x000000001cf9f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x000000076b386b68> (a java.lang.ref.Reference$Lock)
+        at java.lang.Object.wait(Object.java:502)
+        at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+        - locked <0x000000076b386b68> (a java.lang.ref.Reference$Lock)
+        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"VM Thread" os_prio=2 tid=0x000000001bd06800 nid=0x5990 runnable
+
+"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x0000000002676800 nid=0x51d8 runnable
+
+"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x0000000002678000 nid=0x489c runnable
+
+"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x000000000267a000 nid=0x2e5c runnable
+
+"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x000000000267b800 nid=0x52ec runnable
+
+"VM Periodic Task Thread" os_prio=2 tid=0x000000001d6cb000 nid=0x45ec waiting on condition
+
+JNI global references: 5
+
+
+Found one Java-level deadlock:
+=============================
+"Thread-1":
+  waiting to lock monitor 0x00000000027572b8 (object 0x000000076b3eae68, a java.lang.Object),
+  which is held by "Thread-0"
+"Thread-0":
+  waiting to lock monitor 0x0000000002759d58 (object 0x000000076b3eae78, a java.lang.Object),
+  which is held by "Thread-1"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-1":
+        at Test$ThreadName2.run(Test.java:45)
+        - waiting to lock <0x000000076b3eae68> (a java.lang.Object)
+        - locked <0x000000076b3eae78> (a java.lang.Object)
+"Thread-0":
+        at Test$ThreadName1.run(Test.java:24)
+        - waiting to lock <0x000000076b3eae78> (a java.lang.Object)
+        - locked <0x000000076b3eae68> (a java.lang.Object)
+
+Found 1 deadlock.
+
+
+```
 #### Q. How to find the word with the highest frequency from a file in Java?
 #### Q. Write a program to convert a given Collection to Synchronized Collection?
 #### Q. How to sort a text file in java?
