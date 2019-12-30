@@ -669,7 +669,6 @@ HELLO WORLD --> hello world
 #### Q. Write a program to check the given number is binary number or not?
 #### Q. Find prime factors of number in java
 #### Q. Write code to avoid deadlock in Java where N threads are accessing N shared resources?
-#### Q. How to find the missing number in integer array of 1 to 100?
 #### Q. How to find duplicate number on Integer array in Java?
 #### Q. How to check if array contains a number in Java?
 #### Q. How to find largest and smallest number in unsorted array?
