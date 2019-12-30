@@ -695,7 +695,7 @@ Thread 2: Has  ObjectLock2
 Thread 2: Waiting for ObjectLock 1
 Thread 1: Waiting for ObjectLock 2
 ```
-**To Get the Deadlocak Details**  
+**To get the Deadlocak details**  
 ```
 To get the Thread PID
 cmd > jps   // 9004 Test
