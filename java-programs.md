@@ -608,7 +608,7 @@ Output
 ```
 #### Q. Program to convert lower to upper case without using toUppercase()?
 ```java
-public class Test 
+public class LowerToUpperCase 
 {  	
     public static void toLowerCase(String a) {
         for (int i = 0; i< a.length(); i++) {
