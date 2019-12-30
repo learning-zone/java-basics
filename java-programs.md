@@ -858,7 +858,6 @@ Number Of Occurrences: 5
 * Output: Infinity, No Exception
 #### Q. How do you check the equality of two arrays in java?
 * Arrays.equals() 
-#### Q. How to perform matrix operations in java?
 #### Q. How to remove duplicate elements from ArrayList in java?
 #### Q. How to find trigonometric values of an angle in java?
 #### Q. Decimal To Binary, Decimal To Octal And Decimal To HexaDecimal In Java
@@ -974,5 +973,6 @@ Number Of Occurrences: 5
 #### Q. How to you calculate the difference between two dates in Java? 
 #### Q. Java Program to find gcd and lcm of two numbers
 #### Q. Write a program to find the sum of the first 1000 prime numbers?
+#### Q. How to perform matrix operations in java?
 
 
