@@ -10,10 +10,10 @@
 Object
 ```
 #### Q. Which of the following interface is used to declare core methods in java?
-Set
-EventListner
-Collection
-Comparator
+* Set
+* EventListner
+* Collection
+* Comparator
 ```
 Collection
 ```
