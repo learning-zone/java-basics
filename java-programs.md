@@ -852,7 +852,6 @@ Output
 The most repeated word in input file is: java
 Number Of Occurrences: 5
 ```
-#### Q. Write a program to convert a given Collection to Synchronized Collection?
 #### Q. How to sort a text file in java?
 #### Q. Find out middle index where sum of both ends are equal.
 #### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
