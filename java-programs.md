@@ -580,7 +580,7 @@ public class Test
 ```
 #### Q. Find all pairs of elements whose sum is equal to given number?
 ```java
-public class Test 
+public class FindPairs 
 {  	
 	// Prints number of pairs in arr[0..n-1] with sum equal 
     // to 'sum' 
