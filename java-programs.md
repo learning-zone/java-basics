@@ -853,6 +853,57 @@ The most repeated word in input file is: java
 Number Of Occurrences: 5
 ```
 #### Q. How to sort a text file in java?
+```java
+public class SortTextFile 
+{  	
+	public static void main(String[] args) {
+		
+		//Create an ArrayList object to hold the lines of input file
+		ArrayList<String> lines = new ArrayList<String>();
+		
+		try (
+			BufferedReader	reader = new BufferedReader(new FileReader("C:\\file.txt"));
+			BufferedWriter	writer = new BufferedWriter(new FileWriter("C:\\output.txt"));
+		)
+		{
+			//Reading all the lines of input file one by one and adding them into ArrayList
+			String currentLine = reader.readLine();
+			
+			while (currentLine != null) {
+				lines.add(currentLine);	
+				currentLine = reader.readLine();
+			}
+			
+			//Sorting the ArrayList
+			Collections.sort(lines);
+			
+			//Writing sorted lines into output file
+			for (String line : lines) {
+				writer.write(line);
+				writer.newLine();
+			}
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}	
+} 
+```
+Output
+```
+20
+50
+Enterprise JavaBeans (EJB)
+J2EE Connector Architecture (J2EE-CA, or JCA)
+Java Database Connectivity (JDBC)
+Java Message Service (JMS)
+Java Naming and Directory Interface (JNDI)
+Java Servlets
+Java Transaction API (JTA)
+Java Transaction Service (JTS)
+JavaMail
+JavaServer Pages (JSP)
+```
 #### Q. Find out middle index where sum of both ends are equal.
 #### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
 * Output: Infinity, No Exception
