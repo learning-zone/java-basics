@@ -631,7 +631,7 @@ HELLO WORLD --> hello world
 ```
 #### Q. Write a program to create deadlock between two threads?
 ```java
-public class Test 
+public class DeadlockExample  
 {  	
 	// Creating Object Locks
     static Object ObjectLock1 = new Object();
