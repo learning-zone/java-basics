@@ -904,7 +904,48 @@ Java Transaction Service (JTS)
 JavaMail
 JavaServer Pages (JSP)
 ```
-#### Q. Find out middle index where sum of both ends are equal.
+#### Q. Find middle index of array where both ends sum is equal?
+```java
+public class FindMiddleIndex 
+{
+    public static int findMiddleIndex(int[] array) throws Exception {
+
+        int endIndex = array.length - 1;
+        int startIndex = 0;
+        int leftSum = 0;
+        int rightSum = 0;
+        while (true) {
+            if (leftSum > rightSum) {
+                rightSum += array[endIndex--];
+            } else {
+                leftSum += array[startIndex++];
+            }
+            if (startIndex > endIndex) {
+                if (leftSum == rightSum) {
+                    break;
+                } else {
+                    throw new Exception("No such combination found in the array.");
+                }
+            }
+        }
+        return endIndex;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 7, 5, 2, 8, 3};
+        try {
+            int index = findMiddleIndex(array);
+            System.out.println("Sum preceding the index " + index + " is equal to sum succeeding the index " + index);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+}
+```
+Output
+```
+Sum preceding the index 2 is equal to sum succeeding the index 2
+```
 #### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
 * Output: Infinity, No Exception
 #### Q. How do you check the equality of two arrays in java?
