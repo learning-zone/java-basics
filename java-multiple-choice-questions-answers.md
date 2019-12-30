@@ -25,4 +25,11 @@ Collection
 ```
 List
 ```
-
+#### Q. Which of this interface must contain a unique element?
+* Set
+* List
+* Array
+* Collection
+```
+Set
+```
