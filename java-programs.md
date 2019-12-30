@@ -578,7 +578,34 @@ public class Test
     }   
 } 
 ```
-#### Q. Find all pairs of elements whose sum is equal to given number
+#### Q. Find all pairs of elements whose sum is equal to given number?
+```java
+public class Test 
+{  	
+	// Prints number of pairs in arr[0..n-1] with sum equal 
+    // to 'sum' 
+    public static void getPairsCount(int[] arr, int sum) {
+        // Consider all possible pairs and check their sums 
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if ((arr[i] + arr[j]) == sum) {
+                	System.out.printf("(%d, %d) %n", arr[i], arr[j]); 
+                }
+            }
+        }
+    }
+	public static void main(String args[]) { 
+        int[] arr = { 1, 5, 7, -1, 5 }; 
+        int sum = 12; 
+        getPairsCount(arr, sum); 
+    }
+} 
+```
+Output
+```
+(5, 7) 
+(7, 5)
+```
 #### Q. Program to convert lower to upper case without using toUppercase()
 #### Q. Write a program to create deadlock between two threads?
 #### Q. How to find the word with the highest frequency from a file in Java?
