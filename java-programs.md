@@ -644,7 +644,6 @@ HELLO WORLD --> hello world
 #### Q. Decimal To Binary, Decimal To Octal And Decimal To HexaDecimal In Java
 #### Q. Reverse and add until you get a palindrome
 #### Q. Selection sort in java
-#### Q. Launch external applications using java
 #### Q. Write a java program to append text to a file?
 #### Q. Write a singleton class.
 #### Q. Write a program to sort a map by value.
