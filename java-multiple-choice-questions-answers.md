@@ -17,3 +17,12 @@ Object
 ```
 Collection
 ```
+#### Q. Which of these interface handle sequences?
+* Set
+* List
+* Comparator
+* Collection
+```
+List
+```
+
