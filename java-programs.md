@@ -793,8 +793,6 @@ Java stack information for the threads listed above:
         - locked <0x000000076b3eae68> (a java.lang.Object)
 
 Found 1 deadlock.
-
-
 ```
 #### Q. How to find the word with the highest frequency from a file in Java?
 #### Q. Write a program to convert a given Collection to Synchronized Collection?
