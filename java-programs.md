@@ -993,11 +993,16 @@ ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
 ```
 #### Q. Write a java program to append text to a file?
 #### Q. Write a program to sort a map by value?
+#### Q. How to find duplicate number on Integer array in Java?
+#### Q. How to check if array contains a number in Java?
+#### Q. How to find largest and smallest number in unsorted array?
+#### Q. How to find repeated numbers in an array if it contains multiple duplicates?
 #### Q. FizzBuzz problem
 #### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
 #### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
-
-
+#### Q. How to rearrange array in alternating positive and negative number?
+#### Q. How to find if there is a sub array with sum equal to zero?
+#### Q. How to remove a given element from array in Java?
 #### Q. How to find trigonometric values of an angle in java?
 #### Q. Reverse and add until you get a palindrome
 #### Q. Selection sort in java
@@ -1018,20 +1023,12 @@ ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
 #### Q. Write a program to check the given number is binary number or not?
 #### Q. Find prime factors of number in java
 #### Q. Write code to avoid deadlock in Java where N threads are accessing N shared resources?
-#### Q. How to find duplicate number on Integer array in Java?
-#### Q. How to check if array contains a number in Java?
-#### Q. How to find largest and smallest number in unsorted array?
-#### Q. How to find repeated numbers in an array if it contains multiple duplicates?
 #### Q. How to sort an array in place using QuickSort algorithm?
 #### Q. Write a program to find intersection of two sorted arrays in Java?
-#### Q. There is an array with every element repeated twice except one. Find that element?
 #### Q. How find the first repeating element in an array of integers?
 #### Q. How to find first non-repeating element in array of integers?
 #### Q. How to find top two numbers from an integer array?
 #### Q. How to find the smallest positive integer value that cannot be represented as sum of any subset of a given array?
-#### Q. How to rearrange array in alternating positive and negative number?
-#### Q. How to find if there is a sub array with sum equal to zero?
-#### Q. How to remove a given element from array in Java?
 #### Q. How to merge sorted array?
 #### Q. How to find sub array with maximum sum in an array of positive and negative number?
 #### Q. How to find sub array with largest product in array of both positive and negative number?
