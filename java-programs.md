@@ -991,18 +991,17 @@ Output
 ArrayList with duplicates: [1, 10, 1, 2, 2, 3, 10, 3, 3, 4, 5, 5]
 ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
 ```
+#### Q. Write a java program to append text to a file?
+#### Q. Write a program to sort a map by value?
+#### Q. FizzBuzz problem
+#### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
+
 #### Q. How to find trigonometric values of an angle in java?
 #### Q. Decimal To Binary, Decimal To Octal And Decimal To HexaDecimal In Java
 #### Q. Reverse and add until you get a palindrome
 #### Q. Selection sort in java
-#### Q. Write a java program to append text to a file?
-#### Q. Write a singleton class.
-#### Q. Write a program to sort a map by value.
-#### Q. Write a program to get a line with max word count from the given file.
-#### Q. Write a program to find two lines with max characters in descending order.
-#### Q. FizzBuzz problem
-#### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
-#### Q. How to calculate complexity of algorithm
+#### Q. Write a singleton class in java?
+#### Q. How to calculate complexity of algorithm?
 #### Q. Implement Producer Consumer design Pattern in Java using wait, notify and notifyAll method in Java?
 #### Q. Find Minimum numbers of platforms required for railway station in java
 #### Q. How to check whether given number is binary or not?
