@@ -1,7 +1,7 @@
 ## Java Programs
 
 #### Q. Write a function to find out duplicate words in a given string?
-**Algorithm**  
+**Approach**  
 
 1. Define a string.
 1. Convert the string into lowercase to make the comparison insensitive.
@@ -49,7 +49,7 @@ big
 black
 ```
 #### Q. Find the missing number in an array?
-**Algorithm**  
+**Approach**  
 
 1. Calculate `A = n (n+1)/2` where n is largest number in series 1…N.
 1. Calculate B = Sum of all numbers in given series
@@ -83,7 +83,7 @@ Output
 #### Q. Write a program to generate random numbers between the given range?
 *TODO*
 #### Q. Write a java program to swap two string variables without using temp variable?
-**Algorithm**  
+**Approach**  
 
 1. Append second string to first string and store in first string:
    a = a + b
@@ -265,7 +265,7 @@ Thread Even: 4
 Thread Odd: 5
 ```
 #### Q. How to print all permutations of a String in Java?
-**Algorithm**  
+**Approach**  
 
 1. Define a string.
 1. Fix a character and swap the rest of the characters.
@@ -331,7 +331,7 @@ CBA
 CAB
 ```
 #### Q. Reverse the string with preserving the position of spaces
-**Algorithm**  
+**Approach**  
 
 1. Create a string to store result. Mark the space position of the given string in this string.
 1. Insert the character from input string into the result string in reverse order.
@@ -378,7 +378,7 @@ Output
 India Is my country --> yrtnu oc ym sIaidnI
 ```
 #### Q. How do you find longest substring without repeating characters in a string?
-**Algorithm**  
+**Approach**  
 
 1. Start traversing the string from left to right and maintain track
 2. Check the non-repeating characters in current substring with the help of a start and end index
@@ -415,7 +415,7 @@ Output
 LongestSubstringFindOut --> LongestSub
 ```
 #### Q. A Program to check if strings are rotations of each other or not?
-**Algorithm**
+**Approach**
 
 1. Create a temp string and store concatenation of str1 to str1 in temp.
         temp = str1.str1
