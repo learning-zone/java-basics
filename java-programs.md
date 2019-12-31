@@ -951,6 +951,50 @@ Sum preceding the index 2 is equal to sum succeeding the index 2
 #### Q. How do you check the equality of two arrays in java?
 * Arrays.equals() 
 #### Q. How to remove duplicate elements from ArrayList in java?
+**Using Java 8 Stream.distinct()**  
+
+**Approach**  
+
+1. Get the ArrayList with duplicate values.
+1. Create a new List from this ArrayList.
+1. Using Stream().distinct() method which return distinct object stream.
+1. convert this object stream into List
+
+```java
+// Java program to remove duplicates from ArrayList 
+import java.util.ArrayList; 
+import java.util.Arrays; 
+import java.util.List; 
+import java.util.stream.Collectors; 
+
+// Program to remove duplicates from a List in Java 8 
+class ArrayListExample 
+{ 
+	public static void main(String[] args) { 
+		// input list with duplicates 
+		List<Integer> list = new ArrayList<>( 
+			Arrays.asList(1, 10, 1, 2, 2, 3, 10, 3, 3, 4, 5, 5)); 
+			// Print the Arraylist 
+		System.out.println("ArrayList with duplicates: "
+						+ list); 
+
+		// Construct a new list from the set constucted from elements 
+		// of the original list 
+		List<Integer> newList = list.stream() 
+									.distinct() 
+									.collect(Collectors.toList()); 
+
+		// Print the ArrayList with duplicates removed 
+		System.out.println("ArrayList with duplicates removed: "
+						+ newList); 
+	} 
+} 
+```
+Output
+```
+ArrayList with duplicates: [1, 10, 1, 2, 2, 3, 10, 3, 3, 4, 5, 5]
+ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
+```
 #### Q. How to find trigonometric values of an angle in java?
 #### Q. Decimal To Binary, Decimal To Octal And Decimal To HexaDecimal In Java
 #### Q. Reverse and add until you get a palindrome
