@@ -961,7 +961,10 @@ Sum preceding the index 2 is equal to sum succeeding the index 2
 1. convert this object stream into List
 
 ```java
-// Java program to remove duplicates from ArrayList 
+/**
+* Java program to remove duplicates from ArrayList
+*
+**/ 
 import java.util.ArrayList; 
 import java.util.Arrays; 
 import java.util.List; 
