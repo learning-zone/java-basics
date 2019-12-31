@@ -995,9 +995,10 @@ ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
 #### Q. Write a program to sort a map by value?
 #### Q. FizzBuzz problem
 #### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
+#### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
+
 
 #### Q. How to find trigonometric values of an angle in java?
-#### Q. Decimal To Binary, Decimal To Octal And Decimal To HexaDecimal In Java
 #### Q. Reverse and add until you get a palindrome
 #### Q. Selection sort in java
 #### Q. Write a singleton class in java?
@@ -1014,7 +1015,6 @@ ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
 #### Q. Write a program to find perfect number or not.
 #### Q. Write a program to find sum of each digit in the given number using recursion.
 #### Q. Write a program to check the given number is a prime number or not?
-#### Q. Write a program to convert binary to decimal number.
 #### Q. Write a program to check the given number is binary number or not?
 #### Q. Find prime factors of number in java
 #### Q. Write code to avoid deadlock in Java where N threads are accessing N shared resources?
