@@ -335,7 +335,7 @@ CAB
 
 1. Create a string to store result. Mark the space position of the given string in this string.
 1. Insert the character from input string into the result string in reverse order.
-1. while inserting the character check if the result string already contains a space at index ‘j’ or not. If it contains, we copy the character to the next position.
+1. While inserting the character check if the result string already contains a space at index ‘j’ or not. If it contains, we copy the character to the next position.
 
 ```java
 // Java program to reverse a string 
