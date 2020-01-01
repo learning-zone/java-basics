@@ -992,6 +992,24 @@ ArrayList with duplicates: [1, 10, 1, 2, 2, 3, 10, 3, 3, 4, 5, 5]
 ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
 ```
 #### Q. Write a java program to append text to a file?
+```java
+public class Test 
+{  	
+	public static void main(String[] args) {
+        String path = "C:\\file.txt";
+        String text = "Append new text";
+        try (
+        	FileWriter fw = new FileWriter(path, true);
+        ) {
+            fw.write(text);
+        }
+        catch(IOException e) {
+        	e.printStackTrace();
+        }
+    }
+} 
+```
+
 #### Q. Write a program to sort a map by value?
 #### Q. How to find duplicate number on Integer array in Java?
 #### Q. How to check if array contains a number in Java?
