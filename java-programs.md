@@ -1011,7 +1011,7 @@ public class Test
 ```
 #### Q. Write a program to sort a map by value?
 ```java
-public class SortMap 
+public class SortMapExample 
 {
 	public static Map<String, String> sortMap(Map<String, String> map) {
 
