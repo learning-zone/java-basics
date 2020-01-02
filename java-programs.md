@@ -1079,7 +1079,7 @@ public class FindBiggestSmallestNumber
 {
 	public static void main(String[] args) {
 		
-        int numbers[] = new int[]{85, 91, 7, 98, 71, 57, 20, 38, 97, 6};
+        int numbers[] = {85, 91, 7, 98, 71, 57, 20, 38, 97, 6};
         int smallest = numbers[0];
         int biggest = numbers[0];
        
