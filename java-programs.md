@@ -1073,7 +1073,6 @@ Output
 Duplicate Element: 4
 Duplicate Element: 2
 ```
-#### Q. How to check if array contains a number in Java?
 #### Q. How to find largest and smallest number in unsorted array?
 #### Q. How to find repeated numbers in an array if it contains multiple duplicates?
 #### Q. FizzBuzz problem
