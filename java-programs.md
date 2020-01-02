@@ -1126,7 +1126,7 @@ Output
 15  ---> fizzbuzz
 23  ---> 23 
 ```
-#### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
+#### Q. Write a Comparator in Java to compare two employees based upon their name, departments and age?
 #### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
 #### Q. How to rearrange array in alternating positive and negative number?
 #### Q. How to find if there is a sub array with sum equal to zero?
