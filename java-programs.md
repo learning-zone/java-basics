@@ -1127,6 +1127,104 @@ Output
 23  ---> 23 
 ```
 #### Q. Write a Comparator in Java to compare two employees based upon their name, departments and age?
+**Name Sorter**
+```java
+import java.util.Comparator;
+ 
+public class NameSorter implements Comparator<Employee>{
+ 
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return o1.getName().compareTo(o2.getName());
+    }
+}
+```
+**Department Sorter**
+```java
+import java.util.Comparator;
+ 
+public class DepartmentSorter implements Comparator<Employee> {
+
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return o1.getDepartment().compareTo(o2.getDepartment());
+    }
+}
+```
+**Age Sorter**
+```java
+import java.util.Comparator;
+ 
+public class AgeSorter implements Comparator<Employee> {
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return o1.getAge() - o2.getAge();
+    }
+}
+```
+**compare with Comparator**  
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+ 
+public class TestSorting 
+{
+    public static void main(String[] args) {
+
+        Employee e1 = new Employee(1, "aTestName", "dLastName", 34);
+        Employee e2 = new Employee(2, "nTestName", "pLastName", 30);
+        Employee e3 = new Employee(3, "kTestName", "sLastName", 31);
+        Employee e4 = new Employee(4, "dTestName", "zLastName", 25);
+ 
+        List<Employee> employees = new ArrayList<Employee>();
+        employees.add(e2);
+        employees.add(e3);
+        employees.add(e1);
+        employees.add(e4);
+ 
+        // UnSorted List
+        System.out.println(employees);
+ 
+        Collections.sort(employees);
+ 
+        // Default Sorting by employee id
+        System.out.println(employees);
+ 
+        Collections.sort(employees, new NameSorter());
+ 
+        // Sorted by Employee Name
+        System.out.println(employees);
+ 
+        Collections.sort(employees, new DepartmentSorter());
+ 
+        // Sorted by Department Name
+        System.out.println(employees);
+ 
+        Collections.sort(employees, new AgeSorter());
+ 
+        // Sorted by Employee Age
+        System.out.println(employees);
+    }
+}
+```
+Output:
+```
+//Unsorted
+ 
+[Employee : 2 - nTestName - pLastName - 30
+, Employee : 3 - kTestName - sLastName - 31
+, Employee : 1 - aTestName - dLastName - 34
+, Employee : 4 - dTestName - zLastName - 25]
+ 
+//Default sorting based on employee id
+ 
+[Employee : 1 - aTestName - dLastName - 34
+, Employee : 2 - nTestName - pLastName - 30
+, Employee : 3 - kTestName - sLastName - 31
+, Employee : 4 - dTestName - zLastName - 25]
+
+```
 #### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
 #### Q. How to rearrange array in alternating positive and negative number?
 #### Q. How to find if there is a sub array with sum equal to zero?
