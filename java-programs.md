@@ -1099,7 +1099,33 @@ Output
 Smallest Number is: 6
 Largest Number is: 98
 ```
-#### Q. FizzBuzz problem
+#### Q. FizzBuzz problem:- Write a program which return "fizz" if the number is a multiplier of 3, return "buzz" if its multiplier of 5 and return "fizzbuzz" if the number is divisible by both 3 and 5. If the number is not divisible by either 3 or 5 then it should just return the number itself.
+```java
+public class FizzBuzzExample 
+{
+	public static String fizzBuzz(int number) {
+        if (number % 3 == 0) {
+            if (number % 5 == 0) {
+                return "fizzbuzz";
+            } else {
+                return "fizz";
+            }
+        } else if (number % 5 == 0) {
+            return "buzz";
+        }
+        return String.valueOf(number);
+    }
+	public static void main(String[] args) {
+		System.out.println(fizzBuzz(15));
+	}
+}
+```
+Output
+```
+3   ---> fizz
+15  ---> fizzbuzz
+23  ---> 23 
+```
 #### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
 #### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
 #### Q. How to rearrange array in alternating positive and negative number?
