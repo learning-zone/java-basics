@@ -1083,7 +1083,7 @@ public class FindBiggestSmallestNumber
         int smallest = numbers[0];
         int biggest = numbers[0];
        
-        for(int i=1; i< numbers.length; i++) {
+        for(int i = 1; i < numbers.length; i++) {
                 if(numbers[i] > biggest)
                         biggest = numbers[i];
                 else if (numbers[i] < smallest)
