@@ -1099,7 +1099,6 @@ Output
 Smallest Number is: 6
 Largest Number is: 98
 ```
-#### Q. How to find repeated numbers in an array if it contains multiple duplicates?
 #### Q. FizzBuzz problem
 #### Q. Write a Comparator in Java to compare two employees based upon there name, departments and age?
 #### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
