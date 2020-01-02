@@ -1051,6 +1051,28 @@ Key: India,         Value: New Delhi
 Key: United States, Value: Washington
 ```
 #### Q. How to find duplicate number on Integer array in Java?
+```java
+public class DuplicatesInArray 
+{
+	public static void main(String[] args) {
+		
+        int[] array = {4, 2, 4, 5, 2, 3, 1};  
+        Set<Integer> set = new HashSet<>();
+         
+        for(int i = 0; i < array.length ; i++) {
+            //If same integer is already present then add method will return FALSE 
+            if(set.add(array[i]) == false) {
+                System.out.println("Duplicate Element Found: " + array[i]);
+            }
+        }
+    } 
+}
+```
+Output
+```
+Duplicate Element: 4
+Duplicate Element: 2
+```
 #### Q. How to check if array contains a number in Java?
 #### Q. How to find largest and smallest number in unsorted array?
 #### Q. How to find repeated numbers in an array if it contains multiple duplicates?
