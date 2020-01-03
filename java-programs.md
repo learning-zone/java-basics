@@ -1313,6 +1313,72 @@ Enter The Decimal Number: 100
 HexaDecimal Equivalent of 100 is 64
 ```
 #### Q. How to rearrange array in alternating positive and negative number?
+**Objective**: Given an array arrA[] which has negative and positive elements, rearrange the array in such a manner that positive and negative elements occupy the alternate positions and if there are extra positive or negative elements are left then append it to the end.
+
+Example:
+```
+int[] arrA = { 1, 2, -3, -4, -5, 6, -7, -8, 9, 10, -11, -12, -13, 14 };
+Output: -13 9 -3 10 -5 6 -7 2 -12 1 -11 14 -4 -8
+```
+**Quick Sort Technique**
+
+* Take the pivot element as 0 and do the first round of Quick Sort.
+* After above step you will have all the negative elements on left and all the positive elements on the right.
+* Then just the every alternate element in the left half (negative elements) with the elements in the right (positive elements)
+
+```java
+public class RearragePostiveNegativeAlternatively 
+{
+	public void rerrange(int[] arrA) {
+		int pivot = 0;
+		int left = 0;
+		int right = arrA.length - 1;
+		while (right > left) {
+			while (arrA[left] < 0 && left < right)
+				left++;
+			while (arrA[right] > 0 && left < right)
+				right--;
+			if (left < right) {
+
+				int temp = arrA[left];
+				arrA[left] = arrA[right];
+				arrA[right] = temp;
+				left++;
+				right--;
+			}
+		}
+		// At the point all the negative elements on the left half and
+		// positive elements on the right half of the array
+		// swap the every alternate element in the left half (negative
+		// elements) with the elements in the right (positive elements)
+		left = 1;
+		int high = 0;
+		while (arrA[high] < 0)
+			high++;
+		right = high;
+		while (arrA[left] < 0 && right < arrA.length) {
+			int temp = arrA[left];
+			arrA[left] = arrA[right];
+			arrA[right] = temp;
+			left = left + 2;
+			right++;
+		}
+		for (int i = 0; i < arrA.length; i++) {
+			System.out.print("  " + arrA[i]);
+		}
+	}
+
+	public static void main(String[] args) throws java.lang.Exception {
+		int[] arrA = { 1, 2, -3, -4, -5, 6, -7, -8, 9, 10, -11, -12, -13, 14 };
+		RearragePostiveNegativeAlternatively i = new RearragePostiveNegativeAlternatively();
+		i.rerrange(arrA);
+	}
+}
+```
+Output
+```
+-13 9 -3 10 -5 6 -7 2 -12 1 -11 14 -4 -8
+```
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
 #### Q. How to find trigonometric values of an angle in java?
