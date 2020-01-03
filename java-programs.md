@@ -1282,6 +1282,36 @@ Enter The Decimal Number: 8
 
 Octal Equivalent of 8 is 10
 ```
+```java
+public class DecimalToHexaDecimal 
+{
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);     
+        System.out.println("Enter The Decimal Number: ");
+         
+        int inputNumber = sc.nextInt();   
+        int copyOfInputNumber = inputNumber;
+        String hexa = "";
+         
+        //Digits in HexaDecimal Number System
+        char hexaDecimals[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};         
+        int rem = 0;
+        
+        while (inputNumber > 0) {
+            rem = inputNumber % 16;
+            hexa =  hexaDecimals[rem] + hexa;
+            inputNumber = inputNumber / 16;
+        }
+        System.out.println("HexaDecimal Equivalent of "+copyOfInputNumber+" is "+hexa);
+    }
+}
+```
+Output
+```
+Enter The Decimal Number: 100
+
+HexaDecimal Equivalent of 100 is 64
+```
 #### Q. How to rearrange array in alternating positive and negative number?
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
