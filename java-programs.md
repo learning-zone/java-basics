@@ -1226,6 +1226,34 @@ Output:
 
 ```
 #### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
+```java
+public class DecimalToBinary 
+{
+	public static void main(String[] args) {
+		
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Decimal Number: ");
+        int inputNumber = sc.nextInt();
+        
+        int copyOfInputNumber = inputNumber;
+        String binary = "";
+        int rem = 0;
+                  
+        while (inputNumber > 0) {
+            rem = inputNumber % 2;
+            binary =  rem + binary;
+            inputNumber = inputNumber/2;
+        }
+        System.out.println("Binary Equivalent of "+copyOfInputNumber+" is "+binary);
+    }
+}
+```
+Output
+```
+Enter the Decimal Number: 5
+
+Binary Equivalent of 5 is 101
+````
 #### Q. How to rearrange array in alternating positive and negative number?
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
