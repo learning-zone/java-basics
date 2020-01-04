@@ -7,6 +7,7 @@
 
 * [Multithreading Interview Questions](multithreading-questions.md)
 * [Collections Interview Questions](collections-questions.md)
+* [Hibernate Interview Questions](hibernate-questions.md)
 * [JDBC Interview Questions](JDBC-questions.md)
 * [Java Programs](java-programs.md)
 * [Predict the Output](predict-output.md)
