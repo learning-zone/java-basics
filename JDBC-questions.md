@@ -3,6 +3,7 @@
 #### Q. What are the steps to connect to a database in java?
 #### Q. What are the differences between ResultSet and RowSet?
 #### Q. How can we execute stored procedures using CallableStatement?
+#### Q. What are the differences between Statement and PreparedStatement interface?
 #### Q. What are CLOB and BLOB data types in JDBC?
 #### Q. What are the different types of lockings in JDBC?
 #### Q. How can we store and retrieve images from the database?
@@ -11,7 +12,6 @@
 #### Q. What are stored procedures? How to call stored procedure using JDBC API?
 #### Q. What are the JDBC statements?
 #### Q. What is batch processing and how to perform batch processing in JDBC?
-#### Q. What are the differences between Statement and PreparedStatement interface?
 #### Q. What is database connection pooling? What are the advantages of using a connection pool?
 #### Q. What is JDBC Driver?
 #### Q. Name 5 JDBC best practices your follow?
