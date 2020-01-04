@@ -134,3 +134,102 @@
 #### Q. Is Hibernate Session object thread-safe?
 #### Q. Does Hibernate support polymorphism?
 #### Q. How many Hibernate sessions exist at any point of time in an application?
+#### Q. What is Hibernate?
+#### Q. What are the advantages of Hibernate over JDBC? 
+#### Q. Difference between get() vs load() method in Hibernate? 
+#### Q. What is N+1 SELECT problem in Hibernate? 
+#### Q. What are some strategies to solve the N+1 SELECT problem in Hibernate? 
+#### Q. What is the difference between save() and persist() method in Hibernate? 
+#### Q. What is the requirement for a Java object to become a Hibernate entity object? 
+#### Q. What are different types of caches available in Hibernate? 
+#### Q. What is the difference between the first and second level cache in Hibernate? 
+#### Q. Does Hibernate Session interface thread-safe in Java? 
+#### Q. Does SessionFactory thread-safe in Hibernate? 
+#### Q. What is different between Session and SessionFactory in Hibernate? 
+#### Q. What is criterion query in hibernate? 
+#### Q. What are other ORM frameworks? Any alternative of Hibernate?
+#### Q. What is the difference between save() and saveOrUpdate() method of Hibernate? 
+#### Q. What is difference between getCurrentSession() and openSession() in Hibernate? 
+#### Q. What is Hibernate Query Language (HQL)? 
+#### Q. When do you use merge() and update() in Hibernate? 
+#### Q. The difference between sorted and ordered collection in Hibernate? 
+#### Q. How do you log SQL queries issued by the Hibernate framework in Java application?
+#### Q. What are the three states of a Hibernate Persistence object can be? 
+#### Q. What is the difference between the transient, persistent and detached state in Hibernate? 
+#### Q. Which cache is used by Session Object in Hibernate? First level or second level cache? 
+#### Q. What is ORM?
+#### Q. How properties of a class are mapped to the columns of a database table in Hibernate?
+#### Q. What’s the usage of Configuration Interface in hibernate?
+#### Q. How can we use new custom interfaces to enhance functionality of built-in interfaces of hibernate?
+#### Q. Should all the mapping files of hibernate have .hbm.xml extension to work properly?
+#### Q. How do we create session factory in hibernate?
+#### Q. What are POJOs and what’s their significance?
+#### Q. What’s HQL?
+#### Q. How can we invoke stored procedures in hibernate?
+#### Q. What is criteria API?
+#### Q. What are the benefits of using Hibernate template?
+#### Q. How can we see hibernate generated SQL on console?
+#### Q. What are the two types of collections in hibernate?
+#### Q. What’s the difference between session.save() and session.saveOrUpdate() methods in hibernate?
+#### Q. What the benefits are of hibernate over JDBC?
+#### Q. How can we get hibernate statistics?
+#### Q. What is transient instance state in Hibernate?
+#### Q. How can we reduce database write action times in Hibernate?
+#### Q. What’s the usage of callback interfaces in hibernate?
+#### Q. When an instance goes in detached state in hibernate?
+#### Q. What the four ORM levels are in hibernate?
+#### Q. What’s transaction management in hibernate? How it works?
+#### Q. What the two methods are of hibernate configuration?
+#### Q. What is the default cache service of hibernate?
+#### Q. What are the two mapping associations used in hibernate?
+#### Q. What’s the usage of Hibernate QBC API?
+#### Q. In how many ways, objects can be fetched from database in hibernate?
+#### Q. How primary key is created by using hibernate?
+#### Q. How can we reattach any detached objects in Hibernate?
+#### Q. What are different ways to disable hibernate second level cache?
+#### Q. What is ORM metadata?
+#### Q. Which one is the default transaction factory in hibernate?
+#### Q. What’s the role of JMX in hibernate?
+#### Q. How can we bind hibernate session factory to JNDI ?
+#### Q. In how many ways objects can be identified in Hibernate?
+#### Q. What different fetching strategies are of hibernate?
+#### Q. How mapping of java objects is done with database tables?
+#### Q. What are derived properties in hibernate?
+#### Q. What is meant by a Named SQL Query in hibernate and how it’s used?
+#### Q. What’s the difference between load() and get() method in hibernate?
+#### Q. What’s the use of version property in hibernate?
+#### Q. What is attribute oriented programming?
+#### Q. What’s the use of session.lock() in hibernate?
+#### Q. Does hibernate support polymorphism?
+#### Q. What the three inheritance models are of hibernate?
+#### Q. How can we map the classes as immutable?
+#### Q. What’s general hibernate flow using RDBMS?
+#### Q. What is Light Object Mapping?
+#### Q. What’s difference between managed associations and hibernate associations?
+#### Q. Explain hibernate architecture?
+#### Q. What are the core interfaces of Hibernate?
+#### Q. Mention some of the advantages of using ORM over JDBC.
+#### Q. Define criteria in terms of Hibernate.
+#### Q. List some of the databases supported by Hibernate.
+#### Q. List the key components of Hibernate.
+#### Q. Mention two components of Hibernate configuration object.
+#### Q. How is SQL query created in Hibernate?
+#### Q. What does HQL stand for?
+#### Q. How is HQL query created?
+#### Q. How can we add criteria to a SQL query?
+#### Q. Define persistent classes.
+#### Q. What is SessionFactory?
+#### Q. Is SessionFactory a thread-safe object?
+#### Q. What is Session?
+#### Q. What is the difference between session.save() and session.persist() method?
+#### Q. What is the difference between get and load method?
+#### Q. What is the difference between update and merge method?
+#### Q. What are the states of the object in hibernate?
+#### Q. What are the inheritance mapping strategies?
+#### Q. How to make an immutable class in hibernate?
+#### Q. What is automatic dirty checking in hibernate?
+#### Q. How many types of association mapping are possible in hibernate?
+#### Q. Is it possible to perform collection mapping with One-to-One and Many-to-One?
+#### Q. What is lazy loading in hibernate?
+#### Q. What is HQL (Hibernate Query Language)?
+#### Q. What is the difference between first level cache and second level cache?
