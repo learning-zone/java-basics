@@ -63,7 +63,6 @@
 #### Q. What do you understand by Hibernate tuning?
 #### Q. Can you explain what is Hibernate Query Language?
 #### Q. What is your understanding of Light Object Mapping?
-#### Q. What is an ORM?
 #### Q. What is a dialect?
 #### Q. What are HQL queries?
 #### Q. What are the possible ways to configure Hibernate framework?
