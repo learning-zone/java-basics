@@ -751,6 +751,9 @@ public class CustomExceptionExample {
 	}
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Can you access non static variable in static context?
 No, non-static variable cannot be referenced in a static context directly one needs to use object.
@@ -797,6 +800,10 @@ Abstract class and interface both are used to achieve abstraction where we can d
 | 06. |An abstract class can extend another Java class and implement multiple Java interfaces.|An interface can extend another Java interface only.|
 | 07. |An abstract class can be extended using keyword "extends".|An interface can be implemented using keyword "implements".|
 | 08. |A Java abstract class can have class members like private, protected, etc.|Members of a Java interface are public by default.|
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What are Wrapper classes?
 The wrapper class in Java provides the mechanism to convert primitive into object and object into primitive.
