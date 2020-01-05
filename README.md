@@ -245,6 +245,10 @@ class HybridCar extends Car {
     //...
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Can we import same package/class two times? Will the JVM load the package twice at runtime?
 We can import the same package or same class multiple times. The JVM will internally load the class only once no matter how many times import the same class.
 
@@ -279,6 +283,10 @@ class Vector_demo {
     } 
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the difference between transient and volatile variable in Java?
 **Transient**: The transient modifier tells the Java object serialization subsystem to exclude the field when serializing an instance of the class. When the object is then deserialized, the field will be initialized to the default value; i.e. null for a reference type, and zero or false for a primitive type.
 ```java
