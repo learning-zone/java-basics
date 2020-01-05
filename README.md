@@ -508,6 +508,10 @@ Output:
 ```
 Overriding Method
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Can you achieve Runtime Polymorphism by data members?
 No, we cannot achieve runtime polymorphism by data members. Method is overridden not the data members, so runtime polymorphism can't be achieved by data members.
 
@@ -557,6 +561,10 @@ Subclass
 * In Java, Abstraction is supported using `interface` and `abstract class` while Encapsulation is supported using access modifiers e.g. public, private and protected.
 
 * Abstraction is about hiding unwanted details while giving out most essential details, while Encapsulation means hiding the code and data into a single unit e.g. class or method to protect inner working of an object from outside world. 
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Can there be an abstract method without an abstract class?
 Yes. because methods in an interface are also abstract. so the interface can be use to declare abstract method.
