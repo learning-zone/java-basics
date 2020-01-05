@@ -1044,6 +1044,10 @@ class Engine {
     private String type;
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the final variable, final class, and final blank variable?
 **Final Variable**: final variables are nothing but constants. We cannot change the value of a final variable once it is initialized.
 ```java
@@ -1109,6 +1113,10 @@ class ABC extends XYZ {
    }  
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the static import?
 The static import feature of Java 5 facilitate the java programmer to access any static member of a class directly. There is no need to qualify it by the class name.
 ```java
