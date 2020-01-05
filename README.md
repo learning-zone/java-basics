@@ -1831,6 +1831,10 @@ Output
 ```
 You shouldn't divide number by zero
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. The difference between Serial and Parallel Garbage Collector?
 **Serial Garbage Collector**  
 
@@ -1938,6 +1942,10 @@ public class Example
     } 
 } 
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is a compile time constant in Java? What is the risk of using it?
 If a primitive type or a string is defined as a constant and the value is known at compile time, the compiler replaces the constant name everywhere in the code with its value. This is called a compile-time constant.
 
@@ -1967,6 +1975,8 @@ private final int x = 10;
 #### Q. Give me an example of design pattern which is based upon open closed principle?
 #### Q. What is Law of Demeter violation? Why it matters?
 #### Q. When do you use Flyweight pattern?
-
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 
