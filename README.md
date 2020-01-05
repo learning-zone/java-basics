@@ -45,6 +45,10 @@ As soon as method ends, the block becomes unused and become available for next m
 |Efficiency	       |Comparatively much faster to allocate when compared to heap| Slower to allocate when compared to stack|
 |Allocation/Deallocation| This Memory is automatically allocated and deallocated when a method is called and returned respectively|Heap space is allocated when new objects are created and deallocated by Gargabe Collector when they are no longer referenced |
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the important features of Java 8 release?
 **1. Lambda Expression**  
 Lambda expressions gives the ability to pass a functionality as a method argument. Lambda expression help us reduce the code clutter in using a single method class.  
@@ -133,6 +137,10 @@ To run the above code
 ```
 cmd> jjs hello.js
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is a Functional Interface? What is SAM Interface?
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
