@@ -323,6 +323,9 @@ JVM is a program which takes Java bytecode and converts the byte code (line by l
 **4. Stack**: Java Stack stores frames.It holds local variables and partial results, and plays a part in method invocation and return. Each thread has a private JVM stack, created at the same time as thread.  
 **5. Program Counter Register**: PC (program counter) register. It contains the address of the Java virtual machine instruction currently being executed.  
 **6. Native Method Stack**: It contains all the native methods used in the application.
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What will be the initial value of an object reference which is defined as an instance variable?
 The object references are all initialized to `null` in Java. However in order to do anything useful with these references, It must set to a valid object, else you will get NullPointerExceptions everywhere you try to use such default initialized references.
@@ -419,6 +422,10 @@ Output:
 Calling parameterized constructor of base
 Calling parameterized constructor of derived
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Can you declare the main method as final?
 Yes. We can declare main method as final. But, In inheritance concept we cannot declare main method as final in parent class. It give compile time error. The main method has to be public because it has to be called by JVM which is outside the scope of the package and hence would need the access specifier-public.
 ```java
