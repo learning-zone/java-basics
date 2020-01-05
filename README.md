@@ -1449,6 +1449,10 @@ java.io.NotSerializableException: This class cannot be Serialized
     at java.io.ObjectOutputStream.writeObject(Unknown Source)
     at SerDeser11throwNotSerExc.SerializeConstructorCheck.main(SerializeConstructorCheck.java:51)
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the difference between Serializable and Externalizable interface?
 
 |Sl.No |SERIALIZABLE |	EXTERNALIZABLE        |
@@ -1499,6 +1503,10 @@ class Simple {
   public static void main(java.lang.String[]);  
 }  
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are autoboxing and unboxing? When does it occur?
 The automatic conversion of primitive data types into its equivalent Wrapper type is known as boxing and opposite operation is known as unboxing.
 
