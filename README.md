@@ -612,6 +612,10 @@ public class TestFoo implements Foo {
     }
 }
 ``` 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Give the hierarchy of InputStream and OutputStream classes?
 A stream can be defined as a sequence of data. There are two kinds of Streams −
 
@@ -678,6 +682,10 @@ public class CopyFile {
    }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the types of Exceptions? Explain the hierarchy of Java Exception classes?
 Exception is an error event that can happen during the execution of a program and disrupts its normal flow.
 
