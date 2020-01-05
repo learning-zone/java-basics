@@ -1728,6 +1728,9 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 * Inner Classes that Reference Outer Classes
 * Through `finalize()` Methods
 * Calling `String.intern()` on Long String
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Why String is popular HashMap key in Java?
 Since String is immutable, its hashcode is cached at the time of creation and it doesn’t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
@@ -1769,6 +1772,10 @@ class TestExceptionPropagation {
   }  
 }  
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are different scenarios causing "Exception in thread main"?
 Some of the common main thread exception are as  follows:
 * **Exception in thread main java.lang.UnsupportedClassVersionError**: This exception comes when your java class is compiled from another JDK version and you are trying to run it from another java version.
