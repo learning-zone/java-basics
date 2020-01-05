@@ -1613,6 +1613,10 @@ class Apple {
    //...
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. The difference between DOM and SAX parser in Java?
 DOM and SAX parser are extensively used to read and parse XML file in java and have their own set of advantage and disadvantage. 
 
@@ -1659,6 +1663,10 @@ public final class Employee {
    }
 }  
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between String, StringBuffer and StringBuilder?
 **Mutability Difference:**  `String` is **immutable**, if you try to alter their values, another object gets created, whereas `StringBuffer` and `StringBuilder` are **mutable** so they can change their values.
 
