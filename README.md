@@ -1314,6 +1314,10 @@ public class FilePermissions {
     }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. In Java, How many ways you can take input from the console?
 In Java, there are three different ways for reading input from the user in the command line environment(console).
 
@@ -1369,6 +1373,10 @@ public class Sample
    } 
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How can you avoid serialization in child class if the base class is implementing the Serializable interface?
 If superClass has implemented Serializable that means subclass is also Serializable (as subclass always inherits all features from its parent class), for avoiding Serialization in sub-class we can define **writeObject()** method and throw **NotSerializableException()** from there as done below.
 ```java
