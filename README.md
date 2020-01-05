@@ -846,6 +846,9 @@ Output
 ```
 20 20 20
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is Java Reflection API?
 Java Reflection is the process of analyzing and modifying all the capabilities of a class at runtime. Reflection API in Java is used to manipulate class and its members which include fields, methods, constructor, etc. at runtime. The **java.lang.Class** class provides many methods that can be used to get metadata, examine and change the run time behavior of a class.
@@ -916,6 +919,10 @@ Output
 boolean
 Test
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the default value of the local variables?
 There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
 
