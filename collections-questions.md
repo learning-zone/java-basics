@@ -1441,6 +1441,406 @@ Both **poll()** and **remove()** method is used to remove head object of the Que
 
 The main difference lies when the Queue is empty(). If Queue is empty then poll() method will return **null**. While in similar case, remove() method will throw **NoSuchElementException**. peek() method retrieves but does not remove the head of the Queue. If queue is empty then peek() method also returns null.
 
+#### Q. How HashMap works in Java?
+HashMap in Java works on **hashing** principle. It is a data structure which allow to store object and retrieve it in constant time O(1). In hashing, hash functions are used to link key and value in HashMap. Objects are stored by calling **put(key, value)** method of HashMap and retrieved by calling **get(key)** method. When we call put method, **hashcode()** method of the key object is called so that hash function of the map can find a bucket location to store value object, which is actually an index of the internal array, known as the table. HashMap internally stores mapping in the form of **Map.Entry** object which contains both key and value object.
+
+Since the internal array of HashMap is of fixed size, and if you keep storing objects, at some point of time hash function will return same bucket location for two different keys, this is called **collision** in HashMap. In this case, a linked list is formed at that bucket location and a new entry is stored as next node.
+
+If we try to retrieve an object from this linked list, we need an extra check to search correct value, this is done by **equals()** method. Since each node contains an entry, HashMap keeps comparing entry's key object with the passed key using equals() and when it return true, Map returns the corresponding value.
+
+Example:
+```java
+/**
+* Java program to illustrate internal working of HashMap 
+*
+**/
+import java.util.HashMap; 
+  
+class Key { 
+    String key; 
+    Key(String key) { 
+        this.key = key; 
+    } 
+  
+    @Override
+    public int hashCode() { 
+        int hash = (int)key.charAt(0); 
+        System.out.println("hashCode for key: "
+                           + key + " = " + hash); 
+        return hash; 
+    } 
+  
+    @Override
+    public boolean equals(Object obj) { 
+        return key.equals(((Key)obj).key); 
+    } 
+} 
+ 
+public class HashMapExample { 
+    public static void main(String[] args) { 
+        HashMap map = new HashMap(); 
+        map.put(new Key("Hello"), 20); 
+        map.put(new Key("World"), 30); 
+        map.put(new Key("Java"), 40); 
+  
+        System.out.println(); 
+        System.out.println("Value for key World: " + map.get(new Key("World"))); //hashCode for key: World = 118
+        System.out.println("Value for key Java: " + map.get(new Key("Java")));   //hashCode for key: Java = 115
+    } 
+} 
+```
+#### Q. Write a code to convert HashMap to ArrayList.  
+```java
+import java.util.ArrayList; 
+import java.util.Collection; 
+import java.util.HashMap; 
+import java.util.Map.Entry; 
+import java.util.Set; 
+public class MapToListExamples {
+
+    public static void main(String[] args) {
+
+        // Creating a HashMap object 
+        HashMap<String, String> performanceMap = new HashMap<String, String>(); 
+         
+        // Adding elements to HashMap 
+        performanceMap.put("John Kevin", "Average");  
+        performanceMap.put("Ladarious Fernandez", "Very Good"); 
+        performanceMap.put("Ivan Jose", "Very Bad"); 
+        performanceMap.put("Smith Jacob", "Very Good"); 
+        performanceMap.put("Athena Stiltner", "Bad"); 
+         
+        // Getting Set of keys 
+        Set<String> keySet = performanceMap.keySet(); 
+         
+        // Creating an ArrayList of keys 
+        ArrayList<String> listOfKeys = new ArrayList<String>(keySet); 
+         
+        System.out.println("ArrayList Of Keys :"); 
+         
+        for (String key : listOfKeys) {
+            System.out.println(key); 
+        }
+                  
+        // Getting Collection of values 
+        Collection<String> values = performanceMap.values(); 
+         
+        // Creating an ArrayList of values 
+        ArrayList<String> listOfValues = new ArrayList<String>(values); 
+         
+        System.out.println("ArrayList Of Values :"); 
+         
+        for (String value : listOfValues) { 
+            System.out.println(value); 
+        } 
+                  
+        // Getting the Set of entries 
+        Set<Entry<String, String>> entrySet = performanceMap.entrySet(); 
+         
+        // Creating an ArrayList Of Entry objects 
+        ArrayList<Entry<String, String>> listOfEntry = new ArrayList<Entry<String,String>>(entrySet); 
+         
+        System.out.println("ArrayList of Key-Values :"); 
+         
+        for (Entry<String, String> entry : listOfEntry) { 
+            System.out.println(entry.getKey()+" : "+entry.getValue()); 
+        } 
+    } 
+}
+```
+#### Q. What is difference between arrayList and linkedList?
+
+ArrayList and LinkedList both implements List interface and maintains insertion order. Both are non synchronized classes.
+
+|ArrayList	                                                          |LinkedList                                         |
+|--------------------------------------------------------------------|---------------------------------------------------
+| ArrayList internally uses a dynamic array to store the elements.  |	LinkedList internally uses a doubly linked list to                                                                           store the elements. |
+| Manipulation with ArrayList is slow because it internally uses an array. If any element is removed from the array, all the bits are shifted in memory.|Manipulation with LinkedList is faster than ArrayList because it uses a doubly linked list, so no bit shifting is required in memory.|
+| An ArrayList class can act as a list only because it implements List only.|	LinkedList class can act as a list and queue |both because it implements List and Deque interfaces.|
+| ArrayList is better for storing and accessing data. 	          |LinkedList is better for manipulating data.|
+
+#### Q. How Set/HashSet implement unique values?
+
+Java HashSet class is used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements Set interface.
+
+* HashSet stores the elements by using a mechanism called hashing.
+* HashSet contains unique elements only.
+* HashSet allows null value.
+* HashSet class is non synchronized.
+* HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+* HashSet is the best approach for search operations.
+* The initial default capacity of HashSet is 16, and the load factor is 0.75.
+
+Example:
+```java
+import java.util.*;  
+class HashSetExample {  
+
+ public static void main(String args[]){  
+
+    // Creating HashSet and adding elements  
+    HashSet<String> set=new HashSet();  
+           set.add("10");    
+           set.add("20");    
+           set.add("30");   
+           set.add("40");  
+           set.add("50");  
+           Iterator<String> i=set.iterator();  
+           while(i.hasNext()) {  
+             System.out.println(i.next());  
+           }  
+    }  
+}  
+```
+
+When we create a HashSet, it internally creates a HashMap and if we insert an element into this HashSet using add() method, it actually call put() method on internally created HashMap object with element you have specified as it’s key and constant Object called **PRESENT** as it’s value. So we can say that a Set achieves uniqueness internally through HashMap. 
+
+#### Q. What is Comparable and Comparator Interface in java?
+
+Comparable and Comparator both are interfaces and can be used to sort collection elements.
+
+|Comparable	                |Comparator                                                                                |
+|---------------------------|------------------------------------------------------------------------------------------|
+|1) Comparable provides a single sorting sequence. In other words, we can sort the collection on the basis of a single element such as id, name, and price. |The Comparator provides multiple sorting sequences. In other words, we can sort the collection on the basis of multiple elements such as id, name, and price etc.|
+|2) Comparable affects the original class, i.e., the actual class is modified.|Comparator doesn't affect the original class, i.e., the actual class is not modified.|
+|3) Comparable provides compareTo() method to sort elements. | Comparator provides compare() method to sort elements.
+|4) Comparable is present in java.lang package.|A Comparator is present in the java.util package.|
+5) We can sort the list elements of Comparable type by Collections.sort(List) method.|We can sort the list elements of Comparator type by Collections.sort(List, Comparator) method.|
+
+Example:
+```java
+/**
+* Java Program to demonstrate the use of Java Comparable.
+*
+**/
+import java.util.*;  
+import java.io.*;  
+
+class Student implements Comparable<Student>{  
+    int rollno;  
+    String name;  
+    int age;  
+    Student(int rollno,String name,int age){  
+        this.rollno=rollno;  
+        this.name=name;  
+        this.age=age;  
+    }  
+    public int compareTo(Student st){  
+        if(age==st.age)  
+          return 0;  
+        else if(age>st.age)  
+          return 1;  
+        else  
+          return -1;  
+    }  
+}  
+
+// Creating a test class to sort the elements  
+public class ComparableMain {  
+    public static void main(String args[]) {  
+        ArrayList<Student> al=new ArrayList<Student>();  
+        al.add(new Student(101,"Ryan Frey",23));  
+        al.add(new Student(106,"Kenna Bean",27));  
+        al.add(new Student(105,"Jontavius Herrell",21));  
+
+        Collections.sort(al);  
+        for(Student st:al){  
+            System.out.println(st.rollno+" "+st.name+" "+st.age);  
+        }  
+    }  
+}  
+```
+Example: Java Comparator 
+Student.java
+```java
+class Student {  
+    int rollno;  
+    String name;  
+    int age;  
+    Student(int rollno,String name,int age) {  
+      this.rollno=rollno;  
+      this.name=name;  
+      this.age=age;  
+    }  
+}
+```
+AgeComparator.java
+```java
+import java.util.*;  
+
+class AgeComparator implements Comparator<Student> {  
+    public int compare(Student s1,Student s2) {  
+    if(s1.age==s2.age)  
+      return 0;  
+    else if(s1.age>s2.age)  
+      return 1;  
+    else  
+      return -1;  
+    } 
+}  
+```
+NameComparator.java
+```java
+import java.util.*;  
+
+class NameComparator implements Comparator<Student> {  
+    public int compare(Student s1,Student s2) {  
+        return s1.name.compareTo(s2.name);  
+    }  
+}  
+```
+TestComparator.java
+```java
+/**
+* Java Program to demonstrate the use of Java Comparator  
+*
+**/
+import java.util.*;  
+import java.io.*; 
+
+class TestComparator {  
+
+    public static void main(String args[]) {  
+        // Creating a list of students  
+        ArrayList<Student> al=new ArrayList<Student>();  
+        al.add(new Student(101,"Caelyn Romero",23));  
+        al.add(new Student(106,"Olivea Gold",27));  
+        al.add(new Student(105,"Courtlyn Kilgore",21));  
+        
+        System.out.println("Sorting by Name");  
+        // Using NameComparator to sort the elements  
+        Collections.sort(al,new NameComparator());  
+        // Traversing the elements of list  
+        for(Student st: al){  
+          System.out.println(st.rollno+" "+st.name+" "+st.age);  
+        }  
+        
+        System.out.println("sorting by Age");  
+        // Using AgeComparator to sort the elements  
+        Collections.sort(al,new AgeComparator());  
+        // Travering the list again  
+        for(Student st: al){  
+          System.out.println(st.rollno+" "+st.name+" "+st.age);  
+        }
+    }  
+}  
+```
+
+Output:
+```java
+Sorting by Name
+106 Caelyn Romero 23
+105 Courtlyn Kilgore 21
+101 Olivea Gold 27
+
+Sorting by Age       
+105 Courtlyn Kilgore 21
+101 Caelyn Romero 23
+106 Olivea Gold 27
+```
+#### Q. Difference between containsKey(), keySet() and values() in HashMap. 
+
+* **The keySet() method**:
+This method returns a Set view of all the keys in the map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. 
+
+* **The containsKey() method**:
+It returns true if this map maps one or more keys to the specified value.
+
+* **The values() methods**:
+It returns a Collection view of the values contained in this map. The collection is backed by the map, so changes to the map are reflected in the collection, and vice-versa.
+
+Example:
+```java
+/**
+* Java program illustrating usage of HashMap class methods 
+* keySet(), values(), containsKey() 
+*
+**/
+import java.util.*; 
+public class HashMapExample {
+
+    public static void main(String args[]) {
+
+        // Creation of HashMap 
+        HashMap<String, String> map = new HashMap<>(); 
+  
+        // Adding values to HashMap as ("keys", "values") 
+        map.put("Language", "Java"); 
+        map.put("Platform", "Window"); 
+        map.put("Code", "HashMap"); 
+        map.put("Learn", "More"); 
+  
+        // containsKey() method is to check the presence of a particluar key
+        if (map.containsKey("Code")) 
+            System.out.println("Testing .containsKey : " + map.get("Code")); 
+  
+        // keySet() method returns all the keys in HashMap 
+        Set<String> mapKeys = map.keySet(); 
+        System.out.println("Initial keys  : " + mapKeys); 
+  
+  
+        // values() method return all the values in HashMap 
+        Collection<String> mapValues = map.values(); 
+        System.out.println("Initial values : " + mapValues); 
+  
+        // Adding new set of key-value 
+        map.put("Search", "JavaArticle"); 
+  
+        // Again using .keySet() and .values() methods 
+        System.out.println("New Keys : " + mapKeys); 
+        System.out.println("New Values: " + mapValues); 
+    } 
+} 
+```
+#### Q. What is the difference between Array and ArrayList data-structure? 
+* **Resizable**: Implementation of array is simple fixed sized array but Implementation of ArrayList is dynamic sized array.
+* **Primitives**: Array can contain both primitives and objects but ArrayList can contain only object elements
+* **Generics**: We can’t use generics along with array but ArrayList allows us to use generics to ensure type safety.
+* **Length**: We can use length variable to calculate length of an array but size() method to calculate size of ArrayList.
+* **Store**: Array use assignment operator to store elements but ArrayList use add() to insert elements.
+
+Example:
+```java
+/*
+* A Java program to demonstrate differences between array 
+* and ArrayList 
+*
+**/
+import java.util.ArrayList; 
+import java.util.Arrays; 
+
+class ArrayExample {
+
+    public static void main(String args[]) { 
+        
+        /* ........... Normal Array............. */
+        // Need to specify the size for array  
+        int[] arr = new int[3]; 
+        arr[0] = 10; 
+        arr[1] = 20; 
+        arr[2] = 30; 
+        // We cannot add more elements to array arr[] 
+  
+        /*............ArrayList..............*/
+        // Need not to specify size  
+        ArrayList<Integer> arrL = new ArrayList<Integer>(); 
+        arrL.add(10); 
+        arrL.add(20); 
+        arrL.add(30); 
+        arrL.add(40); 
+        // We can add more elements to arrL 
+  
+        System.out.println(arrL); 
+        System.out.println(Arrays.toString(arr)); 
+    } 
+} 
+```
+#### Q. Array or ArrayList which one is faster?  
+* Array is faster
+
+#### Q. What is difference between HashSet and LinkedHashSet?
+A HashSet is unordered and unsorted Set. LinkedHashSet is the ordered version of HashSet. The only difference between HashSet and LinkedHashSet is that LinkedHashSet maintains the **insertion order**. When we iterate through a HashSet, the order is unpredictable while it is predictable in case of LinkedHashSet. The reason why LinkedHashSet maintains insertion order is because the underlying data structure is a doubly-linked list.
+
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
 
