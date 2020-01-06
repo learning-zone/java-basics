@@ -1960,6 +1960,1005 @@ They are replaced with actual values at compile time because compiler know their
 ```java
 private final int x = 10;
 ```
+#### Q. How bootstrap class loader works in java?
+
+Bootstrap **ClassLoader** is repsonsible for loading standard JDK classs files from **rt.jar** and it is parent of all class loaders in java.
+There are three types of built-in ClassLoader in Java:
+
+**1. Bootstrap Class Loader** – It loads JDK internal classes, typically loads rt.jar and other core classes for example java.lang.* package classes  
+
+**2. Extensions Class Loader** – It loads classes from the JDK extensions directory, usually $JAVA_HOME/lib/ext directory.  
+
+**3. System Class Loader** – It loads classes from the current classpath that can be set while invoking a program using -cp or -classpath command line options.
+
+```java
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ * Java program to demonstrate How ClassLoader works in Java
+ * 
+ **/
+
+public class ClassLoaderTest {
+  
+    public static void main(String args[]) {
+        try {          
+            //printing ClassLoader of this class
+            System.out.println("ClassLoader : "+ ClassLoaderTest.class.getClassLoader());
+
+            //trying to explicitly load this class again using Extension class loader
+            Class.forName("Explicitly load class", true 
+                            ,  ClassLoaderTest.class.getClassLoader().getParent());
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ClassLoaderTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+}
+```
+
+#### Q. Why string is immutable in java? 
+
+The string is Immutable in Java because String objects are cached in String pool. Since cached String literals are shared between multiple clients there is always a risk, where one client's action would affect all another client. 
+
+Since string is immutable it can safely share between many threads and avoid any synchronization issues in java.
+
+#### Q. What is Java String Pool?  
+
+String Pool in java is a pool of Strings stored in Java Heap Memory. String pool helps in saving a lot of space for Java Runtime although it takes more time to create the String.
+
+When we use double quotes to create a String, it first looks for String with the same value in the String pool, if found it just returns the reference else it creates a new String in the pool and then returns the reference. However using **new** operator, we force String class to create a new String object in heap space.
+
+```java
+/**
+* Java program to illustrate String Pool
+*
+**/
+public class StringPool {
+
+    public static void main(String[] args) {
+        String s1 = "Java";
+        String s2 = "Java";
+        String s3 = new String("Java");
+        
+        System.out.println("s1 == s2 :" +(s1==s2)); // true
+        System.out.println("s1 == s3 :" +(s1==s3)); // false
+    }
+}
+```
+#### Q. How Garbage collector algorithm works? 
+Garbage collection works on **Mark** and **Sweep** algorithm. In Mark phase it detects all the unreachable objects and Sweep phase it reclaim the heap space used by the garbage objects and make the space available again to the program.
+
+There are methods like <code>System.gc()</code> and <code>Runtime.gc()</code> which is used to send request of Garbage collection to JVM but it’s not guaranteed that garbage collection will happen. If there is no memory space for creating a new object in Heap Java Virtual Machine throws <code>OutOfMemoryError</code> or <code>java.lang.OutOfMemoryError</code> heap space
+
+#### Q. How to create marker interface?
+An interface with no methods is known as marker or tagged interface. It provides some useful information to JVM/compiler so that JVM/compiler performs some special operations on it. It is used for better readability of code.  Example: **Serializable, Clonnable** etc. 
+
+Syntax:
+```java
+public interface Interface_Name {
+
+}
+```
+Example:
+```java
+/**
+* Java program to illustrate Maker Interface 
+*
+**/
+interface Marker {    }
+
+class A implements Marker {
+      //do some task
+}
+
+class Main {
+         public static void main(String[] args) {
+            A obj = new A();
+            if (obj instanceOf Marker){
+                // do some task
+            }
+       }
+}
+```
+#### Q. How serialization works in java?
+Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
+
+Example:
+```java
+/**
+* Serialization and Deserialization  
+* example of a Java object 
+*
+**/
+import java.io.*; 
+  
+class Employee implements Serializable { 
+private static final long serialversionUID = 
+                                 129348938L; 
+    transient int a; 
+    static int b; 
+    String name; 
+    int age; 
+  
+    // Default constructor 
+    public Employee(String name, int age, int a, int b) { 
+        this.name = name; 
+        this.age = age; 
+        this.a = a; 
+        this.b = b; 
+    }
+} 
+  
+public class SerialExample { 
+
+    public static void printdata(Employee object1) { 
+        System.out.println("name = " + object1.name); 
+        System.out.println("age = " + object1.age); 
+        System.out.println("a = " + object1.a); 
+        System.out.println("b = " + object1.b); 
+    } 
+  
+    public static void main(String[] args) { 
+        Employee object = new Employee("ab", 20, 2, 1000); 
+        String filename = "shubham.txt"; 
+  
+        // Serialization 
+        try { 
+            // Saving of object in a file 
+            FileOutputStream file = new FileOutputStream(filename); 
+            ObjectOutputStream out = new ObjectOutputStream(file); 
+  
+            // Method for serialization of object 
+            out.writeObject(object); 
+  
+            out.close(); 
+            file.close(); 
+  
+            System.out.println("Object has been serialized\n"
+                              + "Data before Deserialization."); 
+            printdata(object); 
+            // value of static variable changed 
+            object.b = 2000; 
+        } 
+        catch (IOException ex) { 
+            System.out.println("IOException is caught"); 
+        } 
+  
+        object = null; 
+  
+        // Deserialization 
+        try { 
+            // Reading the object from a file 
+            FileInputStream file = new FileInputStream(filename); 
+            ObjectInputStream in = new ObjectInputStream(file); 
+  
+            // Method for deserialization of object 
+            object = (Employee)in.readObject(); 
+  
+            in.close(); 
+            file.close(); 
+            System.out.println("Object has been deserialized\n"
+                                + "Data after Deserialization."); 
+            printdata(object); 
+            System.out.println("z = " + object1.z); 
+        } 
+        catch (IOException ex) { 
+            System.out.println("IOException is caught"); 
+        } 
+        catch (ClassNotFoundException ex) { 
+            System.out.println("ClassNotFoundException is caught"); 
+        } 
+    } 
+}
+```
+#### Q. What are the various ways to load a class in Java?
+
+**1. Creating a reference**:
+```java
+SomeClass someInstance = null;
+```
+
+**2. Using Class.forName(String)**:
+```java
+ Class.forName("SomeClass");
+```
+
+**3. Using SystemClassLoader()**: 
+```java
+ClassLoader.getSystemClassLoader().loadClass("SomeClass");
+```
+
+**4. Using Overloaded Class.forName()**:
+```java
+Class.forName(String name, boolean initialize, ClassLoader loader);
+```
+#### Q. Java Program to Implement Singly Linked List
+
+The singly linked list is a linear data structure in which each element of the list contains a pointer which points to the next element in the list. Each element in the singly linked list is called a node. Each node has two components: data and a pointer next which points to the next node in the list. 
+
+Example:
+```java
+public class SinglyLinkedList {    
+    // Represent a node of the singly linked list    
+    class Node{    
+        int data;    
+        Node next;    
+            
+        public Node(int data) {    
+            this.data = data;    
+            this.next = null;    
+        }    
+    }    
+     
+    // Represent the head and tail of the singly linked list    
+    public Node head = null;    
+    public Node tail = null;    
+        
+    // addNode() will add a new node to the list    
+    public void addNode(int data) {    
+        // Create a new node    
+        Node newNode = new Node(data);    
+            
+        // Checks if the list is empty    
+        if(head == null) {    
+            // If list is empty, both head and tail will point to new node    
+            head = newNode;    
+            tail = newNode;    
+        }    
+        else {    
+            // newNode will be added after tail such that tail's next will point to newNode    
+            tail.next = newNode;    
+            // newNode will become new tail of the list    
+            tail = newNode;    
+        }    
+    }    
+        
+    // display() will display all the nodes present in the list    
+    public void display() {    
+        // Node current will point to head    
+        Node current = head;    
+            
+        if(head == null) {    
+            System.out.println("List is empty");    
+            return;    
+        }    
+        System.out.println("Nodes of singly linked list: ");    
+        while(current != null) {    
+            // Prints each node by incrementing pointer    
+            System.out.print(current.data + " ");    
+            current = current.next;    
+        }    
+        System.out.println();    
+    }    
+        
+    public static void main(String[] args) {    
+            
+        SinglyLinkedList sList = new SinglyLinkedList();    
+            
+        // Add nodes to the list    
+        sList.addNode(10);    
+        sList.addNode(20);    
+        sList.addNode(30);    
+        sList.addNode(40);    
+            
+        // Displays the nodes present in the list    
+        sList.display();    
+    }    
+}  
+```
+**Output:**
+```java
+Nodes of singly linked list: 
+10 20 30 40
+```
+
+#### Q. Design patterns related question (Singleton, Adaptor, Factory, Strategy) 
+
+**Java Singleton Pattern**
+
+**1. Eager initialization:**  
+In eager initialization, the instance of Singleton Class is created at the time of class loading.
+
+Example:
+```java
+public class EagerInitializedSingleton {
+    
+    private static final EagerInitializedSingleton instance = new EagerInitializedSingleton();
+    
+    // private constructor to avoid client applications to use constructor
+    private EagerInitializedSingleton(){}
+
+    public static EagerInitializedSingleton getInstance(){
+        return instance;
+    }
+}
+```
+
+**2. Static block initialization**  
+Static block initialization implementation is similar to eager initialization, except that instance of class is created in the static block that provides option for exception handling.
+
+Example:
+```java
+public class StaticBlockSingleton  {
+
+    private static StaticBlockSingleton  instance;
+    
+    private StaticBlockSingleton (){}
+    
+    // static block initialization for exception handling
+    static{
+        try{
+            instance = new StaticBlockSingleton ();
+        }catch(Exception e){
+            throw new RuntimeException("Exception occured in creating Singleton instance");
+        }
+    }
+    
+    public static StaticBlockSingleton getInstance(){
+        return instance;
+    }
+}
+```
+
+**3. Lazy Initialization**  
+Lazy initialization method to implement Singleton pattern creates the instance in the global access method.
+
+Example:
+```java
+public class LazyInitializedSingleton  {
+
+    private static LazyInitializedSingleton  instance;
+    
+    private LazyInitializedSingleton(){}
+    
+    public static LazyInitializedSingleton  getInstance(){
+        if(instance == null){
+            instance = new LazyInitializedSingleton ();
+        }
+        return instance;
+    }
+}
+```
+
+**4. Thread Safe Singleton**  
+The easier way to create a thread-safe singleton class is to make the global access method synchronized, so that only one thread can execute this method at a time.
+
+Example:
+```java
+public class ThreadSafeSingleton {
+
+    private static ThreadSafeSingleton instance;
+    
+    private ThreadSafeSingleton(){}
+    
+    public static synchronized ThreadSafeSingleton getInstance(){
+        if(instance == null){
+            instance = new ThreadSafeSingleton();
+        }
+        return instance;
+    }
+}
+```
+
+**5. Bill Pugh Singleton Implementation**  
+Prior to Java5, memory model had a lot of issues and above methods caused failure in certain scenarios in multithreaded environment. So, Bill Pugh suggested a concept of inner static classes to use for singleton.
+
+Example:
+```java
+public class BillPughSingleton {
+
+    private BillPughSingleton(){}
+    
+    private static class SingletonHelper{
+        private static final BillPughSingleton INSTANCE = new BillPughSingleton();
+    }
+    
+    public static BillPughSingleton getInstance(){
+        return SingletonHelper.INSTANCE;
+    }
+}
+```
+
+**Adapter Design Pattern in Java**
+
+Adapter design pattern is one of the structural design pattern and its used so that two unrelated interfaces can work together. The object that joins these unrelated interface is called an Adapter.
+
+Example:
+
+we have two incompatible interfaces: **MediaPlayer** and **MediaPackage**. MP3 class is an implementation of the MediaPlayer interface and we have VLC and MP4 as implementations of the MediaPackage interface. We want to use MediaPackage implementations as MediaPlayer instances. So, we need to create an adapter to help to work with two incompatible classes.
+
+MediaPlayer.java
+```java
+public interface MediaPlayer {
+    void play(String filename);
+}
+```
+
+MediaPackage.java
+```java
+public interface MediaPackage {
+    void playFile(String filename);
+}
+```
+
+MP3.java
+```java
+public class MP3 implements MediaPlayer {
+ @Override
+ public void play(String filename) {
+    System.out.println("Playing MP3 File " + filename);
+ }
+}
+```
+
+MP4.java
+```java
+public class MP4 implements MediaPackage {
+    @Override
+    public void playFile(String filename) {
+        System.out.println("Playing MP4 File " + filename);
+    }
+}
+```
+
+VLC.java
+```java
+public class VLC implements MediaPackage {
+    @Override
+    public void playFile(String filename) {
+        System.out.println("Playing VLC File " + filename);
+    }
+}
+```
+
+FormatAdapter.java
+```java
+public class FormatAdapter implements MediaPlayer {
+    private MediaPackage media;
+    public FormatAdapter(MediaPackage m) {
+        media = m;
+    }
+    @Override
+    public void play(String filename) {
+        System.out.print("Using Adapter --> ");
+        media.playFile(filename);
+    }
+}
+```
+
+Main.java
+```java
+public class Main {
+    public static void main(String[] args) {
+        MediaPlayer player = new MP3();
+        player.play("file.mp3");
+        player = new FormatAdapter(new MP4());
+        player.play("file.mp4");
+        player = new FormatAdapter(new VLC());
+        player.play("file.avi");
+    }
+}
+```
+
+**Java Factory Pattern**
+
+A Factory Pattern or Factory Method Pattern says that just define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate. In other words, subclasses are responsible to create the instance of the class.
+
+Example: Calculate Electricity Bill
+Plan.java
+```java
+import java.io.*;      
+abstract class Plan {  
+    protected double rate;  
+    abstract void getRate();  
+
+    public void calculateBill(int units){  
+        System.out.println(units*rate);  
+    }  
+}  
+```
+
+DomesticPlan.java
+```java
+class  DomesticPlan extends Plan{  
+    @override  
+    public void getRate(){  
+        rate=3.50;              
+    }  
+}
+```
+
+CommercialPlan.java
+```java
+class  CommercialPlan extends Plan{  
+    @override   
+    public void getRate(){   
+        rate=7.50;  
+    }   
+}  
+```
+
+InstitutionalPlan.java
+```java
+class  InstitutionalPlan extends Plan{  
+    @override  
+    public void getRate(){   
+        rate=5.50;  
+   }   
+} 
+```
+
+GetPlanFactory.java
+```java
+class GetPlanFactory {  
+      
+    // use getPlan method to get object of type Plan   
+    public Plan getPlan(String planType){  
+        if(planType == null){  
+            return null;  
+        }  
+        if(planType.equalsIgnoreCase("DOMESTICPLAN")) {  
+                return new DomesticPlan();  
+            }   
+        else if(planType.equalsIgnoreCase("COMMERCIALPLAN")){  
+            return new CommercialPlan();  
+        }   
+        else if(planType.equalsIgnoreCase("INSTITUTIONALPLAN")) {  
+            return new InstitutionalPlan();  
+        }  
+         return null;  
+    }  
+} 
+```
+
+GenerateBill.java
+```java
+import java.io.*;    
+class GenerateBill {
+
+    public static void main(String args[])throws IOException {  
+      GetPlanFactory planFactory = new GetPlanFactory();  
+        
+      System.out.print("Enter the name of plan for which the bill will be generated: ");  
+      BufferedReader br=new BufferedReader(new InputStreamReader(System.in));  
+  
+      String planName=br.readLine();  
+      System.out.print("Enter the number of units for bill will be calculated: ");  
+      int units=Integer.parseInt(br.readLine());  
+  
+      Plan p = planFactory.getPlan(planName);  
+      // call getRate() method and calculateBill()method of DomesticPaln.  
+  
+       System.out.print("Bill amount for "+planName+" of  "+units+" units is: ");  
+           p.getRate();  
+           p.calculateBill(units);  
+    }  
+} 
+```
+
+**Strategy Design Pattern in Java**
+
+Strategy design pattern is one of the behavioral design pattern. Strategy pattern is used when we have multiple algorithm for a specific task and client decides the actual implementation to be used at runtime.
+
+Example: Simple Shopping Cart where we have two payment strategies – using Credit Card or using PayPal.
+
+PaymentStrategy.java
+```java
+public interface PaymentStrategy {
+	public void pay(int amount);
+}
+```
+
+CreditCardStrategy.java
+```java
+public class CreditCardStrategy implements PaymentStrategy {
+
+	private String name;
+	private String cardNumber;
+	private String cvv;
+	private String dateOfExpiry;
+	
+	public CreditCardStrategy(String nm, String ccNum, String cvv, String expiryDate){
+		this.name=nm;
+		this.cardNumber=ccNum;
+		this.cvv=cvv;
+		this.dateOfExpiry=expiryDate;
+	}
+	@Override
+	public void pay(int amount) {
+		System.out.println(amount +" paid with credit/debit card");
+	}
+}
+```
+
+PaypalStrategy.java
+```java
+public class PaypalStrategy implements PaymentStrategy {
+
+	private String emailId;
+	private String password;
+	
+	public PaypalStrategy(String email, String pwd){
+		this.emailId=email;
+		this.password=pwd;
+	}
+	@Override
+	public void pay(int amount) {
+		System.out.println(amount + " paid using Paypal.");
+	}
+}
+```
+
+Item.java
+```java
+public class Item {
+
+	private String upcCode;
+	private int price;
+	
+	public Item(String upc, int cost){
+		this.upcCode=upc;
+		this.price=cost;
+	}
+	public String getUpcCode() {
+		return upcCode;
+	}
+	public int getPrice() {
+		return price;
+	}
+}
+```
+
+ShoppingCart.java
+```java
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShoppingCart {
+
+	List<Item> items;
+	
+	public ShoppingCart(){
+		this.items=new ArrayList<Item>();
+	}
+	public void addItem(Item item){
+		this.items.add(item);
+	}
+	public void removeItem(Item item){
+		this.items.remove(item);
+	}
+	public int calculateTotal(){
+		int sum = 0;
+		for(Item item : items){
+			sum += item.getPrice();
+		}
+		return sum;
+	}
+	public void pay(PaymentStrategy paymentMethod){
+		int amount = calculateTotal();
+		paymentMethod.pay(amount);
+	}
+}
+```
+
+ShoppingCartTest.java
+```java
+public class ShoppingCartTest {
+
+	public static void main(String[] args) {
+		ShoppingCart cart = new ShoppingCart();
+		
+		Item item1 = new Item("1234",10);
+		Item item2 = new Item("5678",40);
+		
+		cart.addItem(item1);
+		cart.addItem(item2);
+		
+		// pay by paypal
+		cart.pay(new PaypalStrategy("myemail@example.com", "mypwd"));
+		
+		// pay by credit card
+		cart.pay(new CreditCardStrategy("Pankaj Kumar", "1234567890123456", "786", "12/15"));
+	}
+}
+```
+
+Output 
+```java
+500 paid using Paypal.
+500 paid with credit/debit card
+```
+#### Q. While overriding a method can you throw another exception or broader exception? 
+
+If a method declares to throw a given exception, the overriding method in a subclass can only declare to throw that exception or its subclass. This is because of polymorphism.
+
+Example:
+```java
+class A {
+   public void message() throws IOException {..}
+}
+
+class B extends A {
+   @Override
+   public void message() throws SocketException {..} // allowed
+
+   @Override
+   public void message() throws SQLException {..} // NOT allowed
+
+   public static void main(String args[]) {
+        A a = new B();
+        try {
+            a.message();
+        } catch (IOException ex) {
+            // forced to catch this by the compiler
+        }
+   }
+}
+```
+#### Q. What is checked, unchecked exception and errors? 
+
+**1. Checked Exception**:
+
+* These are the classes that extend **Throwable** except **RuntimeException** and **Error**.
+* They are also known as compile time exceptions because they are checked at **compile time**, meaning the compiler forces us to either handle them with try/catch or indicate in the function signature that it **throws** them and forcing us to deal with them in the caller.
+* They are programmatically recoverable problems which are caused by unexpected conditions outside the control of the code (e.g. database down, file I/O error, wrong input, etc).
+* Example: **IOException, SQLException** etc.
+
+```java
+import java.io.*; 
+  
+class Main { 
+    public static void main(String[] args) { 
+        FileReader file = new FileReader("C:\\assets\\file.txt"); 
+        BufferedReader fileInput = new BufferedReader(file); 
+          
+        for (int counter = 0; counter < 3; counter++)  
+            System.out.println(fileInput.readLine()); 
+          
+        fileInput.close(); 
+    } 
+} 
+```
+output:
+```
+Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - 
+unreported exception java.io.FileNotFoundException; must be caught or declared to be 
+thrown
+    at Main.main(Main.java:5)
+```
+After adding IOException
+```java
+import java.io.*; 
+  
+class Main { 
+    public static void main(String[] args) throws IOException { 
+        FileReader file = new FileReader("C:\\assets\\file.txt"); 
+        BufferedReader fileInput = new BufferedReader(file); 
+           
+        for (int counter = 0; counter < 3; counter++)  
+            System.out.println(fileInput.readLine()); 
+          
+        fileInput.close(); 
+    } 
+} 
+```
+output:
+```java
+Output: First three lines of file “C:\assets\file.txt”
+```
+
+**2. Unchecked Exception**:
+
+* The classes that extend **RuntimeException** are known as unchecked exceptions.
+* Unchecked exceptions are not checked at compile-time, but rather at **runtime**, hence the name.
+* They are also programmatically recoverable problems but unlike checked exception they are caused by faults in code flow or configuration.
+* Example:  **ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException** etc.
+
+```java
+class Main { 
+   public static void main(String args[]) { 
+      int x = 0; 
+      int y = 10; 
+      int z = y/x; 
+  } 
+} 
+```
+Output:
+```java
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+    at Main.main(Main.java:5)
+Java Result: 1
+```
+
+**3. Error**:
+
+**Error** refers to an irrecoverable situation that is not being handled by a **try/catch**.  
+Example: **OutOfMemoryError, VirtualMachineError, AssertionError** etc.
+
+#### Q. What is difference between ClassNotFoundException and NoClassDefFoundError?
+`ClassNotFoundException` and `NoClassDefFoundError` occur when a particular class is not found at runtime. However, they occur at different scenarios.
+
+`ClassNotFoundException` is an exception that occurs when you try to load a class at run time using `Class.forName()` or `loadClass()` methods and mentioned classes are not found in the classpath.
+
+`NoClassDefFoundError` is an error that occurs when a particular class is present at compile time, but was missing at run time.
+#### Q. What do we mean by weak reference?
+In Java there are four types of references differentiated on the way by which they are garbage collected.
+
+1. Strong Reference
+1. Weak Reference
+1. Soft Reference
+1. Phantom Reference
+
+**1. Strong Reference**: This is the default type/class of Reference Object. Any object which has an active strong reference are not eligible for garbage collection. The object is garbage collected only when the variable which was strongly referenced points to null.
+```java
+StrongReferenceClass obj = new StrongReferenceClass();
+```
+Here `obj` object is strong reference to newly created instance of MyClass, currently obj is active object so can't be garbage collected.
+
+**2. Weak Reference**: A weakly referenced object is cleared by the Garbage Collector when it’s weakly reachable.
+Weak reachability means that an object has neither strong nor soft references pointing to it. The object can be reached only by traversing a weak reference. To create such references `java.lang.ref.WeakReference` class is used.
+```java
+/**
+* Java Code to illustrate Weak reference
+*
+**/ 
+import java.lang.ref.WeakReference; 
+class WeakReferenceExample { 
+    
+    public void message() { 
+        System.out.println("Weak Reference Example!"); 
+    } 
+} 
+
+public class MainClass {
+
+    public static void main(String[] args) { 
+        // Strong Reference 
+        WeakReferenceExample obj = new WeakReferenceExample();    
+        obj.message(); 
+          
+        // Creating Weak Reference to WeakReferenceExample-type object to which 'obj'  
+        // is also pointing. 
+        WeakReference<WeakReferenceExample> weakref = new WeakReference<WeakReferenceExample>(obj); 
+
+        obj = null;  // is available for garbage collection.
+        obj = weakref.get();  
+        obj.message(); 
+    } 
+} 
+```
+Output
+```
+Weak Reference Example!
+Weak Reference Example!
+```
+**3. Soft Reference**: In Soft reference, even if the object is free for garbage collection then also its not garbage collected, until JVM is in need of memory badly.The objects gets cleared from the memory when JVM runs out of memory.To create such references `java.lang.ref.SoftReference` class is used.
+```java
+/**
+* Java Code to illustrate Soft reference
+*
+**/ 
+import java.lang.ref.SoftReference; 
+class SoftReferenceExample { 
+    
+    public void message() { 
+        System.out.println("Soft Reference Example!"); 
+    } 
+} 
+
+public class MainClass {
+
+    public static void main(String[] args) { 
+        // Soft Reference 
+        SoftReferenceExample obj = new SoftReferenceExample();    
+        obj.message(); 
+          
+        // Creating Soft Reference to SoftReferenceExample-type object to which 'obj'  
+        // is also pointing. 
+        SoftReference<SoftReferenceExample> softref = new SoftReference<SoftReferenceExample>(obj); 
+
+        obj = null;  // is available for garbage collection.
+        obj = softref.get();  
+        obj.message(); 
+    } 
+} 
+```
+Output
+```
+Soft Reference Example!
+Soft Reference Example!
+```
+**4. Phantom Reference**: The objects which are being referenced by phantom references are eligible for garbage collection. But, before removing them from the memory, JVM puts them in a queue called **reference queue**. They are put in a reference queue after calling finalize() method on them. To create such references `java.lang.ref.PhantomReference` class is used.
+```java
+/**
+* Code to illustrate Phantom reference 
+*
+**/
+import java.lang.ref.*; 
+class PhantomReferenceExample { 
+    
+    public void message() { 
+        System.out.println("Phantom Reference Example!"); 
+    } 
+} 
+  
+public class MainClass {
+
+    public static void main(String[] args) {
+
+        //Strong Reference 
+        PhantomReferenceExample obj = new PhantomReferenceExample();    
+        obj.message(); 
+          
+        //Creating reference queue 
+        ReferenceQueue<PhantomReferenceExample> refQueue = new ReferenceQueue<PhantomReferenceExample>(); 
+  
+        //Creating Phantom Reference to PhantomReferenceExample-type object to which 'obj'  
+        //is also pointing. 
+        PhantomReference<PhantomReferenceExample> phantomRef = null; 
+        phantomRef = new PhantomReference<PhantomReferenceExample>(obj, refQueue); 
+        obj = null;  
+        obj = phantomRef.get();  //It always returns null
+        obj.message(); //It shows NullPointerException
+    } 
+} 
+```
+#### Q. What do you mean Run time Polymorphism?
+`Polymorphism` in Java is a concept by which we can perform a single action in different ways.   
+There are two types of polymorphism in java:  
+
+* **Static Polymorphism** also known as compile time polymorphism
+* **Dynamic Polymorphism** also known as runtime polymorphism
+
+Example: Static Polymorphism
+```java
+class SimpleCalculator {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+    int  add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+public class MainClass
+{
+   public static void main(String args[]) {
+	   SimpleCalculator obj = new SimpleCalculator();
+       System.out.println(obj.add(10, 20));
+       System.out.println(obj.add(10, 20, 30));
+   }
+}
+```
+Output
+```
+30
+60
+```
+Example: Runtime polymorphism
+```java
+class ABC {
+   public void myMethod() {
+	  System.out.println("Overridden Method");
+   }
+}
+public class XYZ extends ABC {
+
+   public void myMethod() {
+	  System.out.println("Overriding Method");
+   }
+   public static void main(String args[]) {
+      ABC obj = new XYZ();
+	  obj.myMethod();
+   }
+}
+```
+Output
+```
+Overriding Method
+```
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
