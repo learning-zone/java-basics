@@ -1379,6 +1379,92 @@ Output
 ```
 -13 9 -3 10 -5 6 -7 2 -12 1 -11 14 -4 -8
 ```
+#### Q. How Convert lower to upper case without using toUppercase() in java?
+
+```java
+/**
+* Java program to Convert lower to upper case
+* 
+**/
+public class toLowerCase {
+
+    public static void main(String[] args) {
+        toLowerCase(args[0]);
+    }
+
+    public static void toLowerCase(String a) {
+
+        for (int i = 0; i< a.length(); i++) {
+            char aChar = a.charAt(i);
+            if (65 <= aChar && aChar<=90) {
+                aChar = (char)( (aChar + 32) ); 
+            }
+            System.out.print(aChar);
+         }
+     }
+}    
+```
+#### Q. Explain deadlock condition in-between two threads with example?
+
+```java
+public class DeadLockSimulator {
+     
+    public static Object Lock1 = new Object();
+    public static Object Lock2 = new Object();
+
+    private static class FirstThread extends Thread {
+        public void run() {
+            synchronized (Lock1) {
+            System.out.println("Thread 1: Holding lock 1...");
+            try { Thread.sleep(10); } catch (Exception e) {}
+            System.out.println("Thread 1: Waiting for lock 2...");
+            synchronized (Lock2) {
+                System.out.println("Thread 1: Holding lock 1 & 2...");
+            }
+            }
+        }
+    }
+    
+    private static class SecondThread extends Thread {
+        public void run() {
+            synchronized (Lock2) {
+            System.out.println("Thread 2: Holding lock 2...");
+            try { Thread.sleep(10); } catch (Exception e) {}
+            System.out.println("Thread 2: Waiting for lock 1...");
+            synchronized (Lock1) {
+                System.out.println("Thread 2: Holding lock 1 & 2...");
+            }
+            }
+        }
+    }
+     
+    public static void main(String args[]) {
+         
+        new FirstThread().start();
+        new SecondThread().start();
+    }
+}
+```
+Output:
+```java
+"Thread-1" prio=6 tid=0x0000000007319000 nid=0x7cd3c waiting for monitor entry [0x0000000008a3f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+    at com.tier1app.DeadLockSimulator$SecondThread.run(DeadLockSimulator.java:29)
+    - waiting to lock 0x00000007ac3b1970 (a java.lang.Object)
+    - locked 0x00000007ac3b1980 (a java.lang.Object)
+ 
+   Locked ownable synchronizers:
+    - None
+ 
+"Thread-0" prio=6 tid=0x0000000007318800 nid=0x7da14 waiting for monitor entry [0x000000000883f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+    at com.tier1app.DeadLockSimulator$FirstThread.run(DeadLockSimulator.java:16)
+    - waiting to lock 0x00000007ac3b1980 (a java.lang.Object)
+    - locked 0x00000007ac3b1970 (a java.lang.Object)
+ 
+   Locked ownable synchronizers:
+    - None
+```
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
 #### Q. How to find trigonometric values of an angle in java?
