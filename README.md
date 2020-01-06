@@ -1,4 +1,4 @@
-## Core-Java Interview Questions
+## Java, J2EE, JSP, Servlet, Hibernate Interview Questions and Answers
 
 *Click <img src="https://github.com/learning-zone/java-interview-questions/blob/master/assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
