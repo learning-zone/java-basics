@@ -1781,6 +1781,113 @@ Phasecount is 1
     <b><a href="#">↥ back to top</a></b>
 </div>
 
+#### Q. How to stop a Thread in Java?
+A thread is automatically destroyed when the run() method has completed. But it might be required to kill/stop a thread before it has completed its life cycle. Modern ways to suspend/stop a thread are by using a **boolean flag** and **Thread.interrupt()** method.
+
+Example: Stop a thread Using a boolean variable
+```java
+/**
+* Java program to illustrate 
+* stopping a thread using boolean flag 
+*
+**/
+class MyThread extends Thread {
+
+    // Initially setting the flag as true 
+    private volatile boolean flag = true;
+     
+    // This method will set flag as false
+    public void stopRunning() {
+        flag = false;
+    }
+     
+    @Override
+    public void run() {
+                 
+        // This will make thread continue to run until flag becomes false 
+        while (flag) {
+            System.out.println("I am running....");
+        }
+        System.out.println("Stopped Running....");
+    }
+}
+ 
+public class MainClass {
+
+    public static void main(String[] args) {
+
+        MyThread thread = new MyThread();
+        thread.start();
+         
+        try {
+            Thread.sleep(100);
+        } 
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+         
+        // call stopRunning() method whenever you want to stop a thread
+        thread.stopRunning();
+    }   
+}
+```
+Output:
+```java
+I am running….
+I am running….
+I am running….
+I am running….
+I am running….
+Stopped Running….
+```
+
+Example: Stop a thread Using interrupt() Method
+```java
+/**
+* Java program to illustrate 
+* stopping a thread using interrupt() method 
+*
+**/
+class MyThread extends Thread {
+
+    @Override
+    public void run() {
+
+        while (!Thread.interrupted()) {
+            System.out.println("I am running....");
+        }
+        System.out.println("Stopped Running.....");
+    }
+}
+ 
+public class MainClass {
+
+    public static void main(String[] args) {
+
+        MyThread thread = new MyThread(); 
+        thread.start();
+         
+        try {
+            Thread.sleep(100);
+        } 
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // interrupting the thread         
+        thread.interrupt();
+    }   
+}
+```
+Output:
+```java
+I am running….
+I am running….
+I am running….
+I am running….
+I am running….
+Stopped Running….
+```
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
