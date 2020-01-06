@@ -1683,6 +1683,10 @@ The ExecutorService interface has three standard implementations:
 * Useful when the calling thread needs the output from the task executed. Using Future object, you can get result, check whether the task is completed without failure or can request cancelling the task before its completion.
 * Example: Parallel stream search in Java 8.
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is Phaser in Java concurrency?
 The Phaser allows us to build logic in which **threads need to wait on the barrier before going to the next step of execution**. Phaser is similar to other synchronization barrier utils like CountDownLatch and CyclicBarrier. 
 
@@ -1761,9 +1765,16 @@ Thread-1 after passing barrier
 Thread-2 after passing barrier
 Phasecount is 1
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
 #### Q. What is SynchronousQueue in Java?
 #### Q. What is Exchanger in Java concurrency?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
