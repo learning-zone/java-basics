@@ -1,6 +1,6 @@
 ## Hibernate Interview Questions & Answers
 
-#### Q. How to integrate Hibernate and Spring frameworks?
+#### Q. How to integrate Hibernate and Spring framework?
 #### Q. What is Hibernate Framework?
 #### Q. What is HQL and what are its benefits?
 #### Q. Why is ORM preferred over JDBC?
