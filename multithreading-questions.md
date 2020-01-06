@@ -1582,6 +1582,10 @@ Task is not completed yet....
 Task is completed, let's check result 
 Factorial of 1000000 is : 3628800
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is blocking method in Java?
 Blocking methods in Java are those methods which block the executing thread until their operation finished. Example of blocking method is `InputStream read()` method which blocks until all data from InputStream has been read completely.
 
