@@ -1629,6 +1629,10 @@ public class SafeCounterWithoutLock {
     }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is Executors Framework?
 The Executor framework helps to **decouple a command submission from command execution**. In the java.util.concurrent package there are three interfaces:
 
@@ -1653,6 +1657,10 @@ executorService.shutdown();
 First an ExecutorService is created using the Executors newFixedThreadPool() factory method. This creates a thread pool with 10 threads executing tasks.
 
 Second, an anonymous implementation of the Runnable interface is passed to the execute() method. This causes the Runnable to be executed by one of the threads in the ExecutorService.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What are the available implementations of ExecutorService in the standard library?
 The ExecutorService interface has three standard implementations:
