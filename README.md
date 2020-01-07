@@ -2959,6 +2959,258 @@ Output
 ```
 Overriding Method
 ```
+#### Q. If I do not have Explicit constructor in parent class and having in child class, while calling the child constructor jvm automatically calls Implicit Constructor of parent class? 
+If the subclass constructor does not specify which superclass constructor to invoke then the compiler will automatically call the accessible no-args constructor in the superclass.
+
+#### Q. What are the different types of JDBC Driver?
+JDBC Driver is a software component that enables java application to interact with the database.   
+There are 4 types of JDBC drivers:
+
+1. **JDBC-ODBC bridge driver**: The JDBC-ODBC bridge driver uses ODBC driver to connect to the database. The JDBC-ODBC bridge driver converts JDBC method calls into the ODBC function calls. This is now discouraged because of thin driver.
+1. **Native-API driver**: The Native API driver uses the client-side libraries of the database. The driver converts JDBC method calls into native calls of the database API. It is not written entirely in java.
+1. **Network Protocol driver**: The Network Protocol driver uses middleware (application server) that converts JDBC calls directly or indirectly into the vendor-specific database protocol. It is fully written in java.
+1. **Thin driver**: The thin driver converts JDBC calls directly into the vendor-specific database protocol. That is why it is known as thin driver. It is fully written in Java language.
+
+#### Q. How Encapsulation concept implemented in JAVA?
+Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class. Therefore, it is also known as `data hiding`.
+
+To achieve encapsulation in Java −  
+* Declare the variables of a class as private.
+* Provide public setter and getter methods to modify and view the variables values.
+
+Example:
+```java
+public class EncapClass {
+   private String name;
+
+   public String getName() {
+      return name;
+   }
+   public void setName(String newName) {
+      name = newName;
+   }
+}
+
+public class MainClass {
+
+   public static void main(String args[]) {
+      EncapClass obj = new EncapClass();
+      obj.setName("Pradeep Kumar");
+      System.out.print("Name : " + obj.getName());
+   }
+}
+```
+#### Q. Do you know Generics? How did you used in your coding?
+`Generics` allows type (Integer, String, … etc and user defined types) to be a parameter to methods, classes and interfaces. For example, classes like HashSet, ArrayList, HashMap, etc use generics very well.
+
+**Advantages**
+* **Type-safety**: We can hold only a single type of objects in generics. It doesn't allow to store other objects.
+* **Type Casting**: There is no need to typecast the object.
+* **Compile-Time Checking**: It is checked at compile time so problem will not occur at runtime.
+
+Example:
+```java
+/** 
+* A Simple Java program to show multiple 
+* type parameters in Java Generics 
+*
+* We use < > to specify Parameter type
+*
+**/ 
+class GenericClass<T, U> { 
+    T obj1;  // An object of type T 
+    U obj2;  // An object of type U 
+  
+    // constructor 
+    GenericClass(T obj1, U obj2) { 
+        this.obj1 = obj1; 
+        this.obj2 = obj2; 
+    } 
+  
+    // To print objects of T and U 
+    public void print() { 
+        System.out.println(obj1); 
+        System.out.println(obj2); 
+    } 
+} 
+  
+// Driver class to test above 
+class MainClass { 
+    public static void main (String[] args) { 
+        GenericClass <String, Integer> obj = 
+            new GenericClass<String, Integer>("Generic Class Example !", 100); 
+  
+        obj.print(); 
+    } 
+}
+```
+Output:
+```
+Generic Class Example !
+100
+```
+
+#### Q. What is difference between String, StringBuilder and StringBuffer?
+String is `immutable`, if you try to alter their values, another object gets created, whereas `StringBuffer` and `StringBuilder` are mutable so they can change their values.  
+
+The difference between `StringBuffer` and `StringBuilder` is that `StringBuffer` is thread-safe. So when the application needs to be run only in a single thread then it is better to use `StringBuilder`. `StringBuilder` is more efficient than StringBuffer.
+
+**Situations**:  
+* If your string is not going to change use a String class because a `String` object is immutable.
+* If your string can change (example: lots of logic and operations in the construction of the string) and will only be accessed from a single thread, using a `StringBuilder` is good enough.
+* If your string can change, and will be accessed from multiple threads, use a `StringBuffer` because `StringBuffer` is synchronous so you have thread-safety.  
+
+Example:
+```java
+class StringExample {
+
+    // Concatenates to String 
+    public static void concat1(String s1) { 
+        s1 = s1 + "World"; 
+    } 
+  
+    // Concatenates to StringBuilder 
+    public static void concat2(StringBuilder s2) { 
+        s2.append("World"); 
+    } 
+  
+    // Concatenates to StringBuffer 
+    public static void concat3(StringBuffer s3) { 
+        s3.append("World"); 
+    } 
+  
+    public static void main(String[] args) { 
+        String s1 = "Hello"; 
+        concat1(s1);  // s1 is not changed 
+        System.out.println("String: " + s1); 
+  
+        StringBuilder s2 = new StringBuilder("Hello"); 
+        concat2(s2); // s2 is changed 
+        System.out.println("StringBuilder: " + s2); 
+  
+        StringBuffer s3 = new StringBuffer("Hello"); 
+        concat3(s3); // s3 is changed 
+        System.out.println("StringBuffer: " + s3); 
+    } 
+} 
+```
+Output  
+```
+String: Hello
+StringBuilder: World
+StringBuffer: World
+```
+#### Q. How can we create a object of a class without using new operator?
+Different ways to create an object in Java
+* **Using new Keyword**
+```java
+class ObjectCreationExample{
+	String Owner;
+}
+public class MainClass {
+	public static void main(String[] args) {
+		// Here we are creating Object of JBT using new keyword
+		ObjectCreationExample obj = new ObjectCreationExample();
+	}
+}
+
+```
+* **Using New Instance (Reflection)**
+```java
+class CreateObjectClass {
+	static int j = 10;
+	CreateObjectClass() {
+		i = j++;
+	}
+	int i;
+	@Override
+	public String toString() {
+		return "Value of i :" + i;
+	}
+}
+
+class MainClass {
+	public static void main(String[] args) {
+		try {
+			Class cls = Class.forName("CreateObjectClass");
+			CreateObjectClass obj = (CreateObjectClass) cls.newInstance();
+			CreateObjectClass obj1 = (CreateObjectClass) cls.newInstance();
+			System.out.println(obj);
+			System.out.println(obj1);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+```
+* **Using Clone**
+```java
+ class CreateObjectWithClone implements Cloneable {
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+	int i;
+	static int j = 10;
+	CreateObjectWithClone() {
+		i = j++;
+	}
+	@Override
+	public String toString() {
+		return "Value of i :" + i;
+	}
+}
+
+class MainClass {
+	public static void main(String[] args) {
+		CreateObjectWithClone obj1 = new CreateObjectWithClone();
+		System.out.println(obj1);
+		try {
+			CreateObjectWithClone obj2 = (CreateObjectWithClone) obj1.clone();
+			System.out.println(obj2);
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```
+* **Using ClassLoader**
+```java
+class CreateObjectWithClassLoader {
+	static int j = 10;
+	CreateObjectWithClassLoader() {
+		i = j++;
+	}
+	int i;
+	@Override
+	public String toString() {
+		return "Value of i :" + i;
+	}
+}
+
+public class MainClass {
+	public static void main(String[] args) {
+		CreateObjectWithClassLoader obj = null;
+		try {
+			obj = (CreateObjectWithClassLoader) new MainClass().getClass()
+					.getClassLoader().loadClass("CreateObjectWithClassLoader").newInstance();
+        // Fully qualified classname should be used.
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println(obj);
+	}
+}
+```
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
