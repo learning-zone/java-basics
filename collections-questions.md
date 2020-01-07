@@ -1841,6 +1841,133 @@ class ArrayExample {
 #### Q. What is difference between HashSet and LinkedHashSet?
 A HashSet is unordered and unsorted Set. LinkedHashSet is the ordered version of HashSet. The only difference between HashSet and LinkedHashSet is that LinkedHashSet maintains the **insertion order**. When we iterate through a HashSet, the order is unpredictable while it is predictable in case of LinkedHashSet. The reason why LinkedHashSet maintains insertion order is because the underlying data structure is a doubly-linked list.
 
+#### Q. What is the difference between HashTable and HashMap?
+|HashMap	                                           |Hashtable                                               |
+|------------------------------------------------------|--------------------------------------------------------|
+|HashMap is **non synchronized**. It is not-thread safe and can't be shared between many threads without proper synchronization code. |	Hashtable is **synchronized**. It is thread-safe and can be shared with many threads.|
+|HashMap allows one null key and multiple null values. |Hashtable doesn't allow any null key or value.|
+|HashMap is a new class introduced in JDK 1.2. |Hashtable is a legacy class.|
+|HashMap is fast.	                           |Hashtable is slow.|
+|We can make the HashMap as synchronized by calling this code
+ Map m = Collections.synchronizedMap(hashMap); | Hashtable is internally synchronized and can't be unsynchronized.|
+|HashMap is traversed by Iterator.             |Hashtable is traversed by Enumerator and Iterator.|
+|Iterator in HashMap is fail-fast.             |Enumerator in Hashtable is not fail-fast.|
+|HashMap inherits AbstractMap class.           |	Hashtable inherits Dictionary class.|
+
+Example:
+```java
+/**
+* A sample Java program to demonstrate HashMap and HashTable 
+*
+**/
+import java.util.*; 
+import java.lang.*; 
+import java.io.*; 
+
+class Example 
+{ 
+    public static void main(String args[]) { 
+        // HashTable  
+        Hashtable<Integer,String> ht = new Hashtable<Integer,String>(); 
+        ht.put(101,"One"); 
+        ht.put(101,"Two"); 
+        ht.put(102,"Three");  
+        System.out.println("Hash Table Values"); 
+        for (Map.Entry m:ht.entrySet()) { 
+            System.out.println(m.getKey() + " " + m.getValue()); 
+        } 
+  
+        // HashMap
+        HashMap<Integer,String> hm = new HashMap<Integer,String>(); 
+        hm.put(100,"Four"); 
+        hm.put(104,"Four");  // hash map allows duplicate values 
+        hm.put(101,"Five");
+        System.out.println("Hash Map Values"); 
+        for (Map.Entry m:hm.entrySet()) { 
+            System.out.println(m.getKey() + " " + m.getValue()); 
+        } 
+    } 
+} 
+```
+Output:
+```
+Hash Table Values
+102 Three
+101 One
+
+Hash Map Values
+100 Four
+101 Five
+104 Four
+```
+
+#### Q. What happens when a duplicate key is put into a HashMap?
+By definition, the `put` command replaces the previous value associated with the given key in the map (conceptually like an array indexing operation for primitive types).
+
+The map simply drops its reference to the value. If nothing else holds a reference to the object, that object becomes eligible for garbage collection. Additionally, Java returns any previous value associated with the given key (or `null` if none present), so you can determine what was there and maintain a reference if necessary.
+
+#### Q. What are the differences between ArrayList and Vector?
+|ArrayList	                    |Vector                               |
+|-------------------------------|-------------------------------------|
+|ArrayList is **not synchronized**. |Vector is **synchronized**.              |
+|ArrayList **increments 50%** of current array size if the number of elements exceeds from its capacity.|	Vector **increments 100%** means doubles the array size if the total number of elements exceeds than its capacity. |
+|ArrayList is not a legacy class. It is introduced in JDK 1.2. |	Vector is a legacy class.|
+|ArrayList is **fast** because it is non-synchronized. | Vector is **slow** because it is synchronized, i.e., in a multithreading environment, it holds the other threads in runnable or non-runnable state until current thread releases the lock of the object.|
+|ArrayList uses the **Iterator** interface to traverse the elements. |A Vector can use the **Iterator** interface or **Enumeration** interface to traverse the elements.|
+
+Example:
+```java
+/**
+* Java Program to illustrate use of ArrayList 
+* and Vector in Java 
+*
+**/
+import java.io.*; 
+import java.util.*; 
+  
+class Example
+{ 
+    public static void main (String[] args) { 
+        // creating an ArrayList 
+        ArrayList<String> arrlist = new ArrayList<String>(); 
+  
+        // adding object to arraylist 
+        arrlist.add("One"); 
+        arrlist.add("Two"); 
+        arrlist.add("Three"); 
+          
+        // traversing elements using Iterator' 
+        System.out.println("ArrayList elements are:"); 
+        Iterator itr = arrlist.iterator(); 
+        while (itr.hasNext()) 
+            System.out.println(itr.next()); 
+  
+        // creating Vector 
+        Vector<String> vtr = new Vector<String>(); 
+        vtr.addElement("Four"); 
+        vtr.addElement("Five"); 
+        vtr.addElement("Six"); 
+  
+        // traversing elements using Enumeration 
+        System.out.println("\nVector elements are:"); 
+        Enumeration eum = vtr.elements(); 
+        while (eum.hasMoreElements()) 
+            System.out.println(eum.nextElement()); 
+    } 
+} 
+```
+Output:
+```
+ArrayList elements are:
+One
+Two
+Three
+
+Vector elements are:
+Four
+Five
+Six
+```
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
 
