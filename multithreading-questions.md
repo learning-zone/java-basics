@@ -1956,6 +1956,11 @@ Runnable interface Example
 Main method executed by main thread
 Run method executed by child Thread
 ```
+#### Q. Tell me about join() and wait() methods?
+The `wait()` and `join()` methods are used to pause the current thread. The `wait()` is used in with `notify()` and `notifyAll()` methods, but `join()` is used in Java to wait until one thread finishes its execution. 
+
+The `wait()` is mainly used for shared resources, a thread notifies other waiting thread when a resource becomes free. On the other hand `join()` is used for waiting a thread to die.
+
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
