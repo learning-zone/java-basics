@@ -1968,6 +1968,9 @@ Four
 Five
 Six
 ```
+#### Q. If you store Employee object as key say: Employee emp = new Employee(“name1”,20); store it in a HashMap as key, now if we add a new parameter emp.setMarriedStatus(true) and try to override it what will happen? 
+new instance of Employee will be inserted to HashMap 
+
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
 
