@@ -1465,6 +1465,28 @@ Output:
    Locked ownable synchronizers:
     - None
 ```
+#### Q. How do you sort out items in ArrayList in reverse direction?
+Reverse order of all elements of Java ArrayList
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class MainClass {
+  public static void main(String[] args) {
+    ArrayList<String> arrayList = new ArrayList<String>();
+
+    arrayList.add("A");
+    arrayList.add("B");
+    arrayList.add("C");
+    arrayList.add("D");
+    arrayList.add("E");
+
+    System.out.println(arrayList);
+    Collections.reverse(arrayList);
+    System.out.println(arrayList);
+  }
+}
+```
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
 #### Q. How to find trigonometric values of an angle in java?
