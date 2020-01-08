@@ -2794,6 +2794,9 @@ Java Result: 1
 
 **Error** refers to an irrecoverable situation that is not being handled by a **try/catch**.  
 Example: **OutOfMemoryError, VirtualMachineError, AssertionError** etc.
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between ClassNotFoundException and NoClassDefFoundError?
 `ClassNotFoundException` and `NoClassDefFoundError` occur when a particular class is not found at runtime. However, they occur at different scenarios.
