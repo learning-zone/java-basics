@@ -1,12 +1,10 @@
 ## Hibernate Interview Questions & Answers
 
 #### Q. How to integrate hibernate with spring boot?
-**Spring boot hibernate configuration example**  
 
 **Step 01: Maven Dependencies**
-
-**pom.xml**
 ```xml
+<!-- pom.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -19,7 +17,7 @@
         <version>2.1.5.RELEASE</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.howtodoinjava.demo</groupId>
+    <groupId>com.javaexample.demo</groupId>
     <artifactId>SpringBoot2Demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SpringBoot2Demo</name>
@@ -69,7 +67,7 @@
 **Step 02: Create JPA entity classes**  
 
 ```java
-/**EmployeeEntity.java**/
+/** EmployeeEntity.java **/
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -107,11 +105,11 @@ public class EmployeeEntity {
 
 Extend `JpaRepository` interface to allows to create repository implementations automatically, at runtime, for any given entity class. The types of entity class and it’s ID field are specified in the generic parameters on JpaRepository.
 ```java
-//EmployeeRepository.java
+/** EmployeeRepository.java **/
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
  
-import com.howtodoinjava.demo.entity.EmployeeEntity;
+import com.javaexample.demo.entity.EmployeeEntity;
  
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Long> {
@@ -183,9 +181,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
- 
-import com.howtodoinjava.demo.entity.EmployeeEntity;
-import com.howtodoinjava.demo.repository.EmployeeRepository;
+import com.javaexample.demo.entity.EmployeeEntity;
+import com.javaexample.demo.repository.EmployeeRepository;
  
 @SpringBootApplication
 public class SpringBoot2DemoApplication implements CommandLineRunner {
