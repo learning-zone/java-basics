@@ -2926,6 +2926,10 @@ public class MainClass {
     } 
 } 
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What do you mean Run time Polymorphism?
 `Polymorphism` in Java is a concept by which we can perform a single action in different ways.   
 There are two types of polymorphism in java:  
