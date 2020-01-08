@@ -2263,6 +2263,9 @@ public class SinglyLinkedList {
 Nodes of singly linked list: 
 10 20 30 40
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Design patterns related question (Singleton, Adaptor, Factory, Strategy) 
 
