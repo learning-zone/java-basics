@@ -2159,6 +2159,10 @@ public class SerialExample {
     } 
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the various ways to load a class in Java?
 
 **1. Creating a reference**:
