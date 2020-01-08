@@ -2684,6 +2684,10 @@ Output
 500 paid using Paypal.
 500 paid with credit/debit card
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. While overriding a method can you throw another exception or broader exception? 
 
 If a method declares to throw a given exception, the overriding method in a subclass can only declare to throw that exception or its subclass. This is because of polymorphism.
