@@ -3082,6 +3082,9 @@ Output:
 Generic Class Example !
 100
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between String, StringBuilder and StringBuffer?
 String is `immutable`, if you try to alter their values, another object gets created, whereas `StringBuffer` and `StringBuilder` are mutable so they can change their values.  
