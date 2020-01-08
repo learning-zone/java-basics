@@ -3136,6 +3136,10 @@ String: Hello
 StringBuilder: World
 StringBuffer: World
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How can we create a object of a class without using new operator?
 Different ways to create an object in Java
 * **Using new Keyword**
