@@ -256,7 +256,6 @@ Where as, Hibernate is the actual implementation of JPA guidelines. When hiberna
 |It is used to map Java data types with database tables and SQL data types.|It is the standard API which allows developers to perform database operations smoothly.|
 |The Query language in this is Hibernate Query Language.|The query language of JPA is JPQL (Java Persistence Query Language)|
 
-#### Q. What is Hibernate Framework?
 #### Q. What is HQL and what are its benefits?
 #### Q. Why is ORM preferred over JDBC?
 #### Q. Mention the Key components of Hibernate?
