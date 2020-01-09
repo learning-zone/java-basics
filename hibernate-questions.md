@@ -352,7 +352,6 @@ query.setFirstResult(1);
 query.setMaxResults(10);
 List results = query.list();
 ```
-#### Q. Why is ORM preferred over JDBC?
 #### Q. Mention the Key components of Hibernate?
 #### Q. Explain Session object in Hibernate?
 #### Q. How transaction management works in Hibernate?
