@@ -353,7 +353,6 @@ query.setMaxResults(10);
 List results = query.list();
 ```
 #### Q. Mention the Key components of Hibernate?
-**Core components of Hibernate**  
 
 **hibernate.cfg.xml**: This file has database connection details  
 
