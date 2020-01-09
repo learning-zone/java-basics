@@ -370,6 +370,34 @@ List results = query.list();
 * Session should be closed once the task is completed
 
 #### Q. Explain Session object in Hibernate?
+A Session is used to get a physical connection with a database. The Session object is lightweight and designed to be instantiated each time an interaction is needed with the database. Persistent objects are saved and retrieved through a Session object.
+
+The lifecycle of a Session is bounded by the beginning and end of a logical transaction. The main function of the Session is to offer create, read and delete operations for instances of mapped entity classes. Instances may exist in one of three states:
+
+* **transient** − A new instance of a persistent class, which is not associated with a Session and has no representation in the database and no identifier value is considered transient by Hibernate.
+
+* **persistent** − You can make a transient instance persistent by associating it with a Session. A persistent instance has a representation in the database, an identifier value and is associated with a Session.
+
+* **detached** − Once we close the Hibernate Session, the persistent instance will become a detached instance.
+
+```java
+Session session = factory.openSession();
+Transaction tx = null;
+
+try {
+   tx = session.beginTransaction();
+   // do some work
+   ...
+   tx.commit();
+}
+
+catch (Exception e) {
+   if (tx!=null) tx.rollback();
+   e.printStackTrace(); 
+} finally {
+   session.close();
+}
+```
 #### Q. How transaction management works in Hibernate?
 #### Q. Explain the Criteria object in Hibernate?
 #### Q. Explain the Query object in Hibernate?
