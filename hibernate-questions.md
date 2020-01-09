@@ -244,6 +244,18 @@ Hibernate:
 Employee id 2 -> EmployeeEntity [id=2, firstName=Deja, lastName=Vu, email=xyz@email.com]
 ```
 #### Q. Mention the differences between JPA and Hibernate?
+JPA is a specification for accessing, persisting and managing the data between Java objects and the relational database. 
+
+Where as, Hibernate is the actual implementation of JPA guidelines. When hibernate implements the JPA specification, this will be certified by the JPA group upon following all the standards mentioned in the specification. For example, JPA guidelines would provide information of mandatory and optional features to be implemented as part of the JPA implementation.
+
+|Hibernate                                  |JPA                                                  |
+|-------------------------------------------|-----------------------------------------------------|
+|Hibernate is the object-relational mapping framework which helps to deal with the data persistence.|It is the Java specification to manage the java application with relational data.|
+|It’s is one of the best JPA providers.	    |It is the only specification which doesn’t deal with any implementation.|
+|In this, we use Session for handling the persistence in an application.|In this, we use the Entity manager.         |
+|It is used to map Java data types with database tables and SQL data types.|It is the standard API which allows developers to perform database operations smoothly.|
+|The Query language in this is Hibernate Query Language.|The query language of JPA is JPQL (Java Persistence Query Language)|
+
 #### Q. What is Hibernate Framework?
 #### Q. What is HQL and what are its benefits?
 #### Q. Why is ORM preferred over JDBC?
