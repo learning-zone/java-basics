@@ -257,6 +257,101 @@ Where as, Hibernate is the actual implementation of JPA guidelines. When hiberna
 |The Query language in this is Hibernate Query Language.|The query language of JPA is JPQL (Java Persistence Query Language)|
 
 #### Q. What is HQL and what are its benefits?
+Hibernate Query Language (HQL) is an object-oriented query language, similar to SQL, but instead of operating on tables and columns, HQL works with persistent objects and their properties. HQL queries are translated by Hibernate into conventional SQL queries, which in turns perform action on database.
+
+**Advantages Of HQL:**  
+
+* HQL is database independent, means if we write any program using HQL commands then our program will be able to execute in all the databases with out doing any further changes to it
+* HQL supports object oriented features like Inheritance, polymorphism,Associations(Relation ships)
+* HQL is initially given for selecting object from database and in hibernate 3.x we can doDML operations ( insert, update…) too
+
+**Different Ways Of Construction HQL Select**  
+
+**FROM Clause**
+```sql
+/** In SQL **/
+sql> select * from Employee
+
+/** In HQL **/
+String hql = "FROM Employee";
+Query query = session.createQuery(hql);
+List results = query.list();
+```
+**AS Clause**
+```sql
+String hql = "FROM Employee AS E";
+Query query = session.createQuery(hql);
+List results = query.list();
+```
+**SELECT Clause**
+```sql
+String hql = "SELECT E.firstName FROM Employee E";
+Query query = session.createQuery(hql);
+List results = query.list();
+```
+**WHERE Clause**  
+```sql
+String hql = "FROM Employee E WHERE E.id = 10";
+Query query = session.createQuery(hql);
+List results = query.list();
+```
+**ORDER BY Clause**
+```sql
+String hql = "FROM Employee E WHERE E.id > 10 ORDER BY E.salary DESC";
+Query query = session.createQuery(hql);
+List results = query.list();
+```
+**GROUP BY Clause**
+```sql
+String hql = "SELECT SUM(E.salary), E.firtName FROM Employee E " +
+             "GROUP BY E.firstName";
+Query query = session.createQuery(hql);
+List results = query.list();
+```
+**Using Named Parameters**  
+Hibernate supports named parameters in its HQL queries. This makes writing HQL queries that accept input from the user easy and you do not have to defend against SQL injection attacks. Following is the simple syntax of using named parameters −
+
+```sql
+String hql = "FROM Employee E WHERE E.id = :employee_id";
+Query query = session.createQuery(hql);
+query.setParameter("employee_id",10);
+List results = query.list();
+```
+**UPDATE Clause**  
+```sql
+String hql = "UPDATE Employee set salary = :salary "  + 
+             "WHERE id = :employee_id";
+Query query = session.createQuery(hql);
+query.setParameter("salary", 1000);
+query.setParameter("employee_id", 10);
+int result = query.executeUpdate();
+System.out.println("Rows affected: " + result);
+```
+**DELETE Clause**  
+```sql
+String hql = "DELETE FROM Employee "  + 
+             "WHERE id = :employee_id";
+Query query = session.createQuery(hql);
+query.setParameter("employee_id", 10);
+int result = query.executeUpdate();
+System.out.println("Rows affected: " + result);
+```
+**INSERT Clause**
+```sql
+String hql = "INSERT INTO Employee(firstName, lastName, salary)"  + 
+             "SELECT firstName, lastName, salary FROM old_employee";
+Query query = session.createQuery(hql);
+int result = query.executeUpdate();
+System.out.println("Rows affected: " + result);
+```
+**Pagination using Query**
+```sql
+String hql = "FROM Employee";
+Query query = session.createQuery(hql);
+query.setFirstResult(1);
+query.setMaxResults(10);
+List results = query.list();
+```
 #### Q. Why is ORM preferred over JDBC?
 #### Q. Mention the Key components of Hibernate?
 #### Q. Explain Session object in Hibernate?
