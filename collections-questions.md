@@ -679,6 +679,10 @@ Requested Colors to draw lines : [RED, BLUE]
 drawing line in color : RED 
 drawing line in color : BLUE
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the difference between fail-fast and fail-safe iterator?
 **fail-fast Iterator**  
 
