@@ -329,6 +329,10 @@ public class TestSort3 {
   }  
 }  
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How to remove duplicates from ArrayList?
 The LinkedHashSet is the best approach for removing duplicate elements in an arraylist. LinkedHashSet does two things internally :
 
