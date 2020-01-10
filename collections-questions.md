@@ -1420,6 +1420,10 @@ ReadOnly ArrayList: [X, Y, Z]
 Trying to modify the ReadOnly ArrayList.
 Exception thrown : java.lang.UnsupportedOperationException
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
 Collection is an interface that specifies a group of objects known as elements. The details of how the group of elements is maintained is left up to the concrete implementations of `Collection`. For example, some Collection implementations like `List` allow duplicate elements whereas other implementations like `Set` don't.
 
