@@ -1884,6 +1884,10 @@ public class HashMapExample {
     } 
 } 
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the difference between Array and ArrayList data-structure? 
 * **Resizable**: Implementation of array is simple fixed sized array but Implementation of ArrayList is dynamic sized array.
 * **Primitives**: Array can contain both primitives and objects but ArrayList can contain only object elements
@@ -1927,6 +1931,10 @@ class ArrayExample {
     } 
 } 
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Array or ArrayList which one is faster?  
 * Array is faster
 
@@ -1992,6 +2000,9 @@ Hash Map Values
 101 Five
 104 Four
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What happens when a duplicate key is put into a HashMap?
 By definition, the `put` command replaces the previous value associated with the given key in the map (conceptually like an array indexing operation for primitive types).
@@ -2060,11 +2071,18 @@ Four
 Five
 Six
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. If you store Employee object as key say: Employee emp = new Employee(“name1”,20); store it in a HashMap as key, now if we add a new parameter emp.setMarriedStatus(true) and try to override it what will happen? 
 new instance of Employee will be inserted to HashMap 
 
 #### Q. Why Map interface doesn’t extend Collection interface?
 #### Q. What is CompareAndSwap approach?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 
 
