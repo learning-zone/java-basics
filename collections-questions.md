@@ -849,6 +849,9 @@ Producer 4
 Consumed 0
 ```
 Here, The Producer start producing objects and pushing it to the Queue. Once the queue is full, the producer will wait until consumer consumes it and it will start producing again. Similar behavior is displayed by consumer. where the consumer waits until there is a single element in queue. It will resume consumer once the queue has element.
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between Enumeration and Iterator interface?
 Enumeration and Iterator are two interfaces in java.util package which are used to traverse over the elements of a Collection object.
