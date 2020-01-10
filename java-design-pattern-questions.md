@@ -1,6 +1,6 @@
 ## Java Design Pattern Questions and Answers
 
-#### What are the design patterns are available in Java?
+#### Q. What are the design patterns available in Java?
 Java Design Patterns are divided into three categories – creational, structural, and behavioral design patterns.
 
 **1. Creational Design Patterns**
