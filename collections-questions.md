@@ -533,6 +533,9 @@ Output
 ```
 {.c=C, .cpp=C++, .cs=C#, .java=Java, .php=PHP, .pl=Perl, .xml=XML}
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between HashMap and Hashtable?
 HashMap and Hashtable both are used to store data in key and value form. Both are using hashing technique to store unique keys.
