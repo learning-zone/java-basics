@@ -160,6 +160,9 @@ Output
 INACTIVE   [project id : 200, project name : Employee Management System, 
            project desc : Employee Management System ]
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between Array and ArrayList?
 **1. Size**: Array in Java is fixed in size. We can not change the size of array after creating it. ArrayList is dynamic in size. When we add elements to an ArrayList, its capacity increases automatically.
