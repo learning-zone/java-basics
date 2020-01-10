@@ -1027,6 +1027,10 @@ Output
 Collection : [10, 20, 30, 40, 50]
 Synchronized view is : [10, 20, 30, 40, 50]
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is a default capacity of ArrayList, Vector, HashMap, Hashtable and Hashset?
 
 |Collections | Capacity |
