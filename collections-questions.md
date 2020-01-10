@@ -968,6 +968,10 @@ Forward Traversal :
 Backward Traversal : 
 50 40 30 20 10
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How can we create a synchronized collection from given collection?
 In Java, normally collections aren't synchronized, which leads to fast performance. However, in multi-threaded situations, it can be very useful for collections to be synchronized. The Java Collections class has several static methods on it that provide synchronized collections. These methods are:
 
