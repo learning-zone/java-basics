@@ -1144,6 +1144,10 @@ Ram
 Rick
 Singh
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the difference between Set and Map?
 
 **Sets**:-
