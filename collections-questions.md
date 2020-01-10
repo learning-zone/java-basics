@@ -1518,6 +1518,9 @@ HBase
 Both **poll()** and **remove()** method is used to remove head object of the Queue.
 
 The main difference lies when the Queue is empty(). If Queue is empty then poll() method will return **null**. While in similar case, remove() method will throw **NoSuchElementException**. peek() method retrieves but does not remove the head of the Queue. If queue is empty then peek() method also returns null.
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How HashMap works in Java?
 HashMap in Java works on **hashing** principle. It is a data structure which allow to store object and retrieve it in constant time O(1). In hashing, hash functions are used to link key and value in HashMap. Objects are stored by calling **put(key, value)** method of HashMap and retrieved by calling **get(key)** method. When we call put method, **hashcode()** method of the key object is called so that hash function of the map can find a bucket location to store value object, which is actually an index of the internal array, known as the table. HashMap internally stores mapping in the form of **Map.Entry** object which contains both key and value object.
@@ -1626,6 +1629,10 @@ public class MapToListExamples {
     } 
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between arrayList and linkedList?
 
 ArrayList and LinkedList both implements List interface and maintains insertion order. Both are non synchronized classes.
@@ -1672,6 +1679,9 @@ class HashSetExample {
 ```
 
 When we create a HashSet, it internally creates a HashMap and if we insert an element into this HashSet using add() method, it actually call put() method on internally created HashMap object with element you have specified as it’s key and constant Object called **PRESENT** as it’s value. So we can say that a Set achieves uniqueness internally through HashMap. 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is Comparable and Comparator Interface in java?
 
@@ -1816,6 +1826,10 @@ Sorting by Age
 101 Caelyn Romero 23
 106 Olivea Gold 27
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Difference between containsKey(), keySet() and values() in HashMap. 
 
 * **The keySet() method**:
