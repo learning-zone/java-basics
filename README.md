@@ -14,6 +14,7 @@
 * [Java String Methods](java-string-methods.md)
 * [JSP Interview Questions](jsp-questions.md)
 * [Servlets Interview Questions](servlets-questions.md)
+* [Java Design Pattern Questions and Answers](java-design-pattern-questions.md)
 * [Java Multiple Choice Questions and Answers](java-multiple-choice-questions-answers.md)
 
 
