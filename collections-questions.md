@@ -270,6 +270,10 @@ public class ArrayListLinkedListExample
 	} 
 } 
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between Comparable and Comparator interface?
 **Comparable**: A comparable object is capable of comparing itself with another object. The class itself must implements the `java.lang.Comparable` interface in order to be able to compare its instances.
 
