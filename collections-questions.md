@@ -1199,6 +1199,10 @@ Java **HashMap** and **TreeMap** both are the classes of the Java Collections fr
 |Order of elements	HashMap does not maintain any order.|The elements are sorted in natural order (ascending).|
 |The HashMap should be used when we do not require key-value pair in sorted order.|	The TreeMap should be used when we require key-value pair in sorted (ascending) order.|
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the Dictionary class?
 **util.Dictionary** is an abstract class, representing a key-value relation and works similiar to a map. Both keys and values can be objects of any type but not null. An attempt to insert either a null key or a null value to a dictionary causes a NullPointerException exception.
 
