@@ -1267,6 +1267,10 @@ Check the value of removed key : null
 
 Size of Dictionary : 1
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are all the Classes and Interfaces that are available in the collections?
 **Java Collections Interfaces**  
 
