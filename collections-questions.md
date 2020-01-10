@@ -909,6 +909,10 @@ public class PerformanceTest {
     }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between Iterator and ListIterator?
 ListIterator is the child interface of Iterator interface. The major difference between Iterator and ListIterator is that Iterator can traverse the elements in the collection only in **forward direction** whereas, the ListIterator can traverse the elements in a collection in both the **forward as well as the backwards direction**.
 
