@@ -58,6 +58,10 @@ Some common known classes implementing this interface are **ArrayDeque, Concurre
 
 ![Java Collections Framework](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection.png)
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What will be the problem if you don't override hashcode() method?
 Some collections, like HashSet, HashMap or HashTable use the hashcode value of an object to find out how the object would be stored in the collection, and subsequently hashcode is used to help locate the object in the collection. Hashing retrieval involves:
 
