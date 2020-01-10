@@ -217,6 +217,10 @@ Output
 10
 30
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between ArrayList and LinkedList?
 ArrayList and LinkedList both implements List interface and maintains insertion order. Both are non synchronized classes.
 
