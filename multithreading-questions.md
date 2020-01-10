@@ -1961,6 +1961,13 @@ The `wait()` and `join()` methods are used to pause the current thread. The `wai
 
 The `wait()` is mainly used for shared resources, a thread notifies other waiting thread when a resource becomes free. On the other hand `join()` is used for waiting a thread to die.
 
+#### Q. How to implement thread-safe code without using the synchronized keyword? 
+* **Atomic updates**: A technique in which you call atomic instructions like compare and set provided by the CPU
+* **java.util.concurrent.locks.ReentrantLock**: A lock implementation that provides more flexibility than synchronized blocks
+* **java.util.concurrent.locks.ReentrantReadWriteLock**: A lock implementation in which reads do not block reads
+* **java.util.concurrent.locks.StampedLock** a nonreeantrant Read-Write lock with the possibility of optimistically reading values.
+* **java.lang.ThreadLocal**: No need for synchronization if the mutable state is confined to a single thread. This can be done by using local variables or `java.lang.ThreadLocal`.
+
 #### Q. What is difference between ArrayBlockingQueue & LinkedBlockingQueue in Java Concurrency?
 #### Q. What is PriorityBlockingQueue in Java Concurrency?
 #### Q. What is DelayQueue in Java Concurrency?
