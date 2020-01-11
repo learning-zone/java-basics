@@ -434,8 +434,112 @@ try {
     sessionObj.close(); 
 }
 ```
-
 #### Q. Explain the Criteria object in Hibernate?
+The Criteria API allows to build up a criteria query object programmatically; the `org.hibernate.Criteria` interface defines the available methods for one of these objects. The Hibernate Session interface contains several overloaded `createCriteria()` methods.
+
+**1. Restrictions with Criteria**  
+
+```java
+Criteria cr = session.createCriteria(Employee.class);
+
+// To get records having salary is equal to 2000
+cr.add(Restrictions.eq("salary", 2000));
+List results = cr.list();
+
+// To get records having salary more than 2000
+cr.add(Restrictions.gt("salary", 2000));
+
+// To get records having salary less than 2000
+cr.add(Restrictions.lt("salary", 2000));
+
+// To get records having fistName starting with zara
+cr.add(Restrictions.like("firstName", "zara%"));
+
+// Case sensitive form of the above restriction.
+cr.add(Restrictions.ilike("firstName", "zara%"));
+
+// To get records having salary in between 1000 and 2000
+cr.add(Restrictions.between("salary", 1000, 2000));
+
+// To check if the given property is null
+cr.add(Restrictions.isNull("salary"));
+
+// To check if the given property is not null
+cr.add(Restrictions.isNotNull("salary"));
+
+// To check if the given property is empty
+cr.add(Restrictions.isEmpty("salary"));
+
+// To check if the given property is not empty
+cr.add(Restrictions.isNotEmpty("salary"));
+```
+
+**2. Logical Expression Restrictions**  
+```java
+Criteria cr = session.createCriteria(Employee.class);
+
+Criterion salary = Restrictions.gt("salary", 2000);
+Criterion name = Restrictions.ilike("firstNname","zara%");
+
+// To get records matching with OR conditions
+LogicalExpression orExp = Restrictions.or(salary, name);
+cr.add( orExp );
+
+// To get records matching with AND conditions
+LogicalExpression andExp = Restrictions.and(salary, name);
+cr.add( andExp );
+
+List results = cr.list();
+```
+
+**3. Pagination Using Criteria**  
+```java
+Criteria cr = session.createCriteria(Employee.class);
+cr.setFirstResult(1);
+cr.setMaxResults(10);
+List results = cr.list();
+```
+
+**4. Sorting the Results**  
+The Criteria API provides the **org.hibernate.criterion.Order** class to sort your result set in either ascending or descending order, according to one of your object's properties. 
+```java
+Criteria cr = session.createCriteria(Employee.class);
+
+// To get records having salary more than 2000
+cr.add(Restrictions.gt("salary", 2000));
+
+// To sort records in descening order
+cr.addOrder(Order.desc("salary"));
+
+// To sort records in ascending order
+cr.addOrder(Order.asc("salary"));
+
+List results = cr.list();
+```
+
+**5. Projections & Aggregations**  
+The Criteria API provides the **org.hibernate.criterion.Projections** class, which can be used to get average, maximum, or minimum of the property values. The Projections class is similar to the Restrictions class, in that it provides several static factory methods for obtaining **Projection** instances.
+```java
+Criteria cr = session.createCriteria(Employee.class);
+
+// To get total row count.
+cr.setProjection(Projections.rowCount());
+
+// To get average of a property.
+cr.setProjection(Projections.avg("salary"));
+
+// To get distinct count of a property.
+cr.setProjection(Projections.countDistinct("firstName"));
+
+// To get maximum of a property.
+cr.setProjection(Projections.max("salary"));
+
+// To get minimum of a property.
+cr.setProjection(Projections.min("salary"));
+
+// To get sum of a property.
+cr.setProjection(Projections.sum("salary"));
+```
 #### Q. Explain the Query object in Hibernate?
 #### Q. Mention some of the databases that Hibernate supports?
 #### Q. What is a One-to-One association in Hibernate?
