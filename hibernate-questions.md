@@ -401,7 +401,7 @@ catch (Exception e) {
 #### Q. How transaction management works in Hibernate?
 A **Transaction** is a sequence of operation which works as an atomic unit. A transaction only completes if all the operations completed successfully. A transaction has the Atomicity, Consistency, Isolation, and Durability properties (ACID).
 
-In hibernate framework, **Transaction interface** that defines the unit of work. It maintains abstraction from the transaction implementation (JTA,JDBC). A transaction is associated with Session and instantiated by calling **session.beginTransaction()**.
+In hibernate framework, **Transaction interface** that defines the unit of work. It maintains abstraction from the transaction implementation (JTA, JDBC). A transaction is associated with Session and instantiated by calling **session.beginTransaction()**.
 
 
 |Transaction interface      | Description              |
