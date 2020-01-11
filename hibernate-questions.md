@@ -776,7 +776,6 @@ First Name: Mohd  Last Name: Yasee  Salary: 3000
 Total Coint: 4
 Total Salary: 15000
 ```
-#### Q. Mention some of the databases that Hibernate supports?
 #### Q. What is a One-to-One association in Hibernate?
 #### Q. What is One-to-Many association in Hibernate?
 #### Q. What is a Many-to-One association in Hibernate?
