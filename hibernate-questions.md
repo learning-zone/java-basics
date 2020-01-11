@@ -627,7 +627,7 @@ Hibernate Mapping File
    </class>
 </hibernate-mapping>
 ```
-ManageEmployee.sql
+ManageEmployee.java
 ```java
 import java.util.List; 
 import java.util.Date;
