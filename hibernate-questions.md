@@ -411,7 +411,7 @@ In hibernate framework, **Transaction interface** that defines the unit of work.
 |void rollback()            |forces this transaction to rollback.|
 |void setTimeout(int seconds)| It sets a transaction timeout for any transaction started by a subsequent call to begin on this |instance.|
 |boolean isAlive()          |checks if the transaction is still alive.|
-|void registerSynchronization(Synchronization s) |registers a user synchronization callback for this transaction.|
+|`void registerSynchronization(Synchronization s)` |registers a user synchronization callback for this transaction.|
 |boolean wasCommited()      |checks if the transaction is commited successfully.|
 |boolean wasRolledBack()    |checks if the transaction is rolledback successfully.|
 
