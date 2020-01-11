@@ -3256,6 +3256,15 @@ public class MainClass {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
+#### Q. What code coverage tools are you using for your project? 
+* <a href="https://cobertura.github.io/cobertura/" target="_blank">Cobertura</a>
+
+#### Q. Scenario of browser’s browsing history, where you need to store the browsing history, what data structure will you use.? 
+* use `stack`
+
+#### Q. Scenario where in we have to download a big file by clicking on a link, how will you make sure that connections is reliable throughout. 
+* use `persistent MQueues`
+
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
