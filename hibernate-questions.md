@@ -399,6 +399,22 @@ catch (Exception e) {
 }
 ```
 #### Q. How transaction management works in Hibernate?
+A **Transaction** is a sequence of operation which works as an atomic unit. A transaction only completes if all the operations completed successfully. A transaction has the Atomicity, Consistency, Isolation, and Durability properties (ACID).
+
+In hibernate framework, **Transaction interface** that defines the unit of work. It maintains abstraction from the transaction implementation (JTA,JDBC). A transaction is associated with Session and instantiated by calling **session.beginTransaction()**.
+
+
+|Transaction interface      | Description              |
+|---------------------------|--------------------------|
+|void begin()               |starts a new transaction. |
+|void commit()              |ends the unit of work unless we are in FlushMode.NEVER.|
+|void rollback()            |forces this transaction to rollback.|
+|void setTimeout(int seconds)| It sets a transaction timeout for any transaction started by a subsequent call to begin on this |instance.|
+|boolean isAlive()          |checks if the transaction is still alive.|
+|void registerSynchronization(Synchronization s) |registers a user synchronization callback for this transaction.|
+|boolean wasCommited()      |checks if the transaction is commited successfully.|
+|boolean wasRolledBack()    |checks if the transaction is rolledback successfully.|
+
 #### Q. Explain the Criteria object in Hibernate?
 #### Q. Explain the Query object in Hibernate?
 #### Q. Mention some of the databases that Hibernate supports?
