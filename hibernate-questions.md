@@ -1030,10 +1030,6 @@ Annotation Example. Transaction Details=
 20, 100.0, pradeep Kr, pradeep@yahoo.com, San Jose, USA
 Closing SessionFactory
 ```
-
-#### Q. What is One-to-Many association in Hibernate?
-#### Q. What is a Many-to-One association in Hibernate?
-#### Q. What is Many-to-Many association in Hibernate?
 #### Q. What is hibernate caching? Explain Hibernate first level cache?
 #### Q. What is second level cache in Hibernate?
 #### Q. What is Query level cache in Hibernate?
@@ -1167,3 +1163,6 @@ Closing SessionFactory
 #### Q. What are the inheritance mapping strategies?
 #### Q. What is automatic dirty checking in hibernate?
 #### Q. Is it possible to perform collection mapping with One-to-One and Many-to-One?
+#### Q. What is One-to-Many association in Hibernate?
+#### Q. What is a Many-to-One association in Hibernate?
+#### Q. What is Many-to-Many association in Hibernate?
