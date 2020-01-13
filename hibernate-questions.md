@@ -1138,7 +1138,7 @@ Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_
 Session Contains Employee with id=2?true
 ```
 #### Q. What is second level cache in Hibernate?
-Hibernate second level cache uses a common cache for all the session object of a session factory. It is useful if you have multiple session objects from a session factory. SessionFactory holds the second level cache data. It is global for all the session objects and not enabled by default.
+**Hibernate second level cache** uses a common cache for all the session object of a session factory. It is useful if you have multiple session objects from a session factory. **SessionFactory** holds the second level cache data. It is global for all the session objects and not enabled by default.
 
 Different vendors have provided the implementation of Second Level Cache.
 
