@@ -1004,8 +1004,8 @@ public class HibernateOneToOneAnnotationMain {
 		
 		Customer1 cust = new Customer1();
 		cust.setAddress("San Jose, USA");
-		cust.setEmail("pradeep@yahoo.com");
-		cust.setName("pradeep Kr");
+		cust.setEmail("Alex@yahoo.com");
+		cust.setName("Alex Kr");
 		
 		txn.setCustomer(cust);
 		
@@ -1027,10 +1027,116 @@ customer1x1_.txn_id as txn_id1_0_1_, customer1x1_.cust_address as cust_add2_0_1_
 customer1x1_.cust_name as cust_nam4_0_1_ from TRANSACTION txn1x0_ left outer join CUSTOMER customer1x1_ on 
 txn1x0_.txn_id=customer1x1_.txn_id where txn1x0_.txn_id=?
 Annotation Example. Transaction Details=
-20, 100.0, pradeep Kr, pradeep@yahoo.com, San Jose, USA
+20, 100.0, Alex Kr, Alex@yahoo.com, San Jose, USA
 Closing SessionFactory
 ```
 #### Q. What is hibernate caching? Explain Hibernate first level cache?
+Hibernate Cache can be very useful in gaining fast application performance if used correctly. The idea behind cache is to reduce the number of database queries, hence reducing the throughput time of the application.
+
+Hibernate comes with different types of Cache:
+
+**First Level Cache**: Hibernate first level cache is associated with the **Session object**. Hibernate uses this cache by default. Here, it processes one transaction after another one, means wont process one transaction many times. Mainly it reduces the number of SQL queries it needs to generate within a given transaction. That is instead of updating after every modification done in the transaction, it updates the transaction only at the end of the transaction.
+
+**Second Level Cache**: Second-level cache always associates with the **Session Factory object**. While running the transactions, in between it loads the objects at the Session Factory level, so that those objects will be available to the entire application, not bound to single user. Since the objects are already loaded in the cache, whenever an object is returned by the query, at that time no need to go for a database transaction. In this way the second level cache works. Here we can use query level cache also.
+
+Hibernate Second Level cache is disabled by default but we can enable it through configuration. Currently EHCache and Infinispan provides implementation for Hibernate Second level cache and we can use them. We will look into this in the next tutorial for hibernate caching.
+
+**Query Cache**: Hibernate can also cache result set of a query. Hibernate Query Cache doesn’t cache the state of the actual entities in the cache; it caches only identifier values and results of value type. So it should always be used in conjunction with the second-level cache.
+
+Example: Hibernate Caching – First Level Cache
+```java
+
+package com.example.hibernate.main;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.example.hibernate.model.Employee;
+import com.example.hibernate.util.HibernateUtil;
+
+public class HibernateCacheExample {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session = sessionFactory.getCurrentSession();
+		Transaction tx = session.beginTransaction();
+		
+		//Get employee with id=1
+		Employee emp = (Employee) session.load(Employee.class, new Long(1));
+		printData(emp,1);
+		
+		//waiting for sometime to change the data in backend
+		Thread.sleep(10000);
+		
+		//Fetch same data again, check logs that no query fired
+		Employee emp1 = (Employee) session.load(Employee.class, new Long(1));
+		printData(emp1,2);
+		
+		//Create new session
+		Session newSession = sessionFactory.openSession();
+		//Get employee with id=1, notice the logs for query
+		Employee emp2 = (Employee) newSession.load(Employee.class, new Long(1));
+		printData(emp2,3);
+		
+		//START: evict example to remove specific object from hibernate first level cache
+		//Get employee with id=2, first time hence query in logs
+		Employee emp3 = (Employee) session.load(Employee.class, new Long(2));
+		printData(emp3,4);
+		
+		//evict the employee object with id=1
+		session.evict(emp);
+		System.out.println("Session Contains Employee with id=1?"+session.contains(emp));
+
+		//since object is removed from first level cache, you will see query in logs
+		Employee emp4 = (Employee) session.load(Employee.class, new Long(1));
+		printData(emp4,5);
+		
+		//this object is still present, so you won't see query in logs
+		Employee emp5 = (Employee) session.load(Employee.class, new Long(2));
+		printData(emp5,6);
+		//END: evict example
+		
+		//START: clear example to remove everything from first level cache
+		session.clear();
+		Employee emp6 = (Employee) session.load(Employee.class, new Long(1));
+		printData(emp6,7);
+		Employee emp7 = (Employee) session.load(Employee.class, new Long(2));
+		printData(emp7,8);
+		
+		System.out.println("Session Contains Employee with id=2?"+session.contains(emp7));
+		
+		tx.commit();
+		sessionFactory.close();
+	}
+
+	private static void printData(Employee emp, int count) {
+		System.out.println(count+":: Name="+emp.getName()+", Zipcode="+emp.getAddress().getZipcode());
+	}
+}
+```
+Output
+```
+Hibernate Configuration loaded
+Hibernate serviceRegistry created
+Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_name2_1_0_, employee0_.emp_salary as emp_sala3_1_0_, address1_.emp_id as emp_id1_0_1_, address1_.address_line1 as address_2_0_1_, address1_.city as city3_0_1_, address1_.zipcode as zipcode4_0_1_ from EMPLOYEE employee0_ left outer join ADDRESS address1_ on employee0_.emp_id=address1_.emp_id where employee0_.emp_id=?
+1:: Name=Alex, Zipcode=95129
+2:: Name=Alex, Zipcode=95129
+Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_name2_1_0_, employee0_.emp_salary as emp_sala3_1_0_, address1_.emp_id as emp_id1_0_1_, address1_.address_line1 as address_2_0_1_, address1_.city as city3_0_1_, address1_.zipcode as zipcode4_0_1_ from EMPLOYEE employee0_ left outer join ADDRESS address1_ on employee0_.emp_id=address1_.emp_id where employee0_.emp_id=?
+3:: Name=AlexK, Zipcode=95129
+Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_name2_1_0_, employee0_.emp_salary as emp_sala3_1_0_, address1_.emp_id as emp_id1_0_1_, address1_.address_line1 as address_2_0_1_, address1_.city as city3_0_1_, address1_.zipcode as zipcode4_0_1_ from EMPLOYEE employee0_ left outer join ADDRESS address1_ on employee0_.emp_id=address1_.emp_id where employee0_.emp_id=?
+4:: Name=David, Zipcode=95051
+Session Contains Employee with id=1?false
+Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_name2_1_0_, employee0_.emp_salary as emp_sala3_1_0_, address1_.emp_id as emp_id1_0_1_, address1_.address_line1 as address_2_0_1_, address1_.city as city3_0_1_, address1_.zipcode as zipcode4_0_1_ from EMPLOYEE employee0_ left outer join ADDRESS address1_ on employee0_.emp_id=address1_.emp_id where employee0_.emp_id=?
+5:: Name=Alex, Zipcode=95129
+6:: Name=David, Zipcode=95051
+Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_name2_1_0_, employee0_.emp_salary as emp_sala3_1_0_, address1_.emp_id as emp_id1_0_1_, address1_.address_line1 as address_2_0_1_, address1_.city as city3_0_1_, address1_.zipcode as zipcode4_0_1_ from EMPLOYEE employee0_ left outer join ADDRESS address1_ on employee0_.emp_id=address1_.emp_id where employee0_.emp_id=?
+7:: Name=Alex, Zipcode=95129
+Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_name2_1_0_, employee0_.emp_salary as emp_sala3_1_0_, address1_.emp_id as emp_id1_0_1_, address1_.address_line1 as address_2_0_1_, address1_.city as city3_0_1_, address1_.zipcode as zipcode4_0_1_ from EMPLOYEE employee0_ left outer join ADDRESS address1_ on employee0_.emp_id=address1_.emp_id where employee0_.emp_id=?
+8:: Name=David, Zipcode=95051
+Session Contains Employee with id=2?true
+```
 #### Q. What is second level cache in Hibernate?
 #### Q. What is Query level cache in Hibernate?
 #### Q. Explain Hibernate configuration file and Hibernate mapping file?
