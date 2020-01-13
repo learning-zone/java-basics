@@ -1286,13 +1286,11 @@ public class FetchTest {
    }    
 }    
 ```
-#### Q. What is Query level cache in Hibernate?
 #### Q. Explain Hibernate configuration file and Hibernate mapping file?
 #### Q. What are concurrency strategies?
 #### Q. What is Lazy loading in hibernate?
 #### Q. Explain the persistent classes in Hibernate?
 #### Q. Explain some of the elements of hbm.xml?
-#### Q. Describe the method used to create an HQL Query and SQL Query?
 #### Q. What is Java Persistence API (JPA)?
 #### Q. Name some important interfaces of Hibernate framework?
 #### Q. Name some important annotations used for Hibernate mapping?
