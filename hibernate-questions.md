@@ -1286,7 +1286,6 @@ public class FetchTest {
    }    
 }    
 ```
-#### Q. Explain Hibernate configuration file and Hibernate mapping file?
 #### Q. What are concurrency strategies?
 #### Q. What is Lazy loading in hibernate?
 #### Q. Explain the persistent classes in Hibernate?
@@ -1418,3 +1417,6 @@ public class FetchTest {
 #### Q. What is One-to-Many association in Hibernate?
 #### Q. What is a Many-to-One association in Hibernate?
 #### Q. What is Many-to-Many association in Hibernate?
+#### Q. Describe the method used to create an HQL Query and SQL Query?
+#### Q. What is Query level cache in Hibernate?
+#### Q. Explain Hibernate configuration file and Hibernate mapping file?
