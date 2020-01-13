@@ -1347,6 +1347,13 @@ public void doAfterTransactionCompletion(boolean success,
 }
 ```
 #### Q. What is Lazy loading in hibernate?
+Hibernate defaults to a lazy fetching strategy for all entities and collections. Lazy loading in hibernate improves the performance. It loads the child objects on demand. To enable lazy loading explicitly you must use **fetch = FetchType.LAZY** on a association which you want to lazy load when you are using hibernate annotations.
+
+Example:
+```java
+@OneToMany( mappedBy = "category", fetch = FetchType.LAZY )
+private Set<ProductEntity> products; 
+```
 #### Q. Explain the persistent classes in Hibernate?
 #### Q. Explain some of the elements of hbm.xml?
 #### Q. What is Java Persistence API (JPA)?
