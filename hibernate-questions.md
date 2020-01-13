@@ -1287,6 +1287,65 @@ public class FetchTest {
 }    
 ```
 #### Q. What are concurrency strategies?
+The READ_WRITE strategy is an asynchronous cache concurrency mechanism and to prevent data integrity issues (e.g. stale cache entries), it uses a locking mechanism that provides unit-of-work isolation guarantees.
+
+In hibernate, cache concurrency strategy can be set globally using the property hibernate.cache. default_cache_concurrency_strategy. The allowed values are,
+
+* **read-only**: caching will work for read only operation. supported by ConcurrentHashMap, EHCache, Infinispan
+* **nonstrict-read-write**: caching will work for read and write but one at a time. supported by ConcurrentHashMap, EHCache.
+* **read-write**: caching will work for read and write, can be used simultaneously. supported by ConcurrentHashMap, EHCache.
+* **transactional**: caching will work for transaction. supported by EHCache, Infinispan.
+
+Example: Inserting data ( READ_WRITE strategy )
+```java
+@Override
+public boolean afterInsert(
+    Object key, Object value, Object version)
+        throws CacheException {
+    region().writeLock( key );
+    try {
+        final Lockable item =
+            (Lockable) region().get( key );
+        if ( item == null ) {
+            region().put( key,
+                new Item( value, version,
+                    region().nextTimestamp()
+                )
+            );
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    finally {
+        region().writeUnlock( key );
+    }
+}
+```
+For an entity to be cached upon insertion, it must use a SEQUENCE generator, the cache being populated by the EntityInsertAction:
+```java
+@Override
+public void doAfterTransactionCompletion(boolean success,
+    SessionImplementor session)
+    throws HibernateException {
+ 
+    final EntityPersister persister = getPersister();
+    if ( success && isCachePutEnabled( persister,
+        getSession() ) ) {
+            final CacheKey ck = getSession()
+               .generateCacheKey(
+                    getId(),
+                    persister.getIdentifierType(),
+                    persister.getRootEntityName() );
+ 
+            final boolean put = cacheAfterInsert(
+                persister, ck );
+        }
+    }
+    postCommitInsert( success );
+}
+```
 #### Q. What is Lazy loading in hibernate?
 #### Q. Explain the persistent classes in Hibernate?
 #### Q. Explain some of the elements of hbm.xml?
