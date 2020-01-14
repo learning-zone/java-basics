@@ -1470,6 +1470,8 @@ Relationship annotations:
 * @ManyToOne
 * @ManyToMany
 
+![Java Exception](https://github.com/learning-zone/java-interview-questions/blob/master/assets/jpa_class_level_architecture.png)
+
 **JPA - Architecture**  
 
 |Units	                |Description                                                    |
