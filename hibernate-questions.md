@@ -1355,6 +1355,16 @@ Example:
 private Set<ProductEntity> products; 
 ```
 #### Q. Explain the persistent classes in Hibernate?
+Java classes whose objects or instances will be stored in database tables are called persistent classes in Hibernate. Hibernate works best if these classes follow some simple rules, also known as the Plain Old Java Object (POJO) programming model.
+
+There are following main rules of persistent classes
+
+* All Java classes that will be persisted need a default constructor. 
+* All classes should contain an ID in order to allow easy identification of your objects within Hibernate and the database. This property maps to the primary key column of a database table.
+* All attributes that will be persisted should be declared private and have getXXX and setXXX methods defined in the JavaBean style.
+* A central feature of Hibernate, proxies, depends upon the persistent class being either non-final, or the implementation of an interface that declares all public methods.
+* All classes that do not extend or implement some specialized classes and interfaces required by the EJB framework.
+
 #### Q. Explain some of the elements of hbm.xml?
 #### Q. What is Java Persistence API (JPA)?
 #### Q. Name some important interfaces of Hibernate framework?
