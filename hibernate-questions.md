@@ -1454,6 +1454,33 @@ Syntax
 </hibernate-mapping>
 ```
 #### Q. What is Java Persistence API (JPA)?
+Java Persistence API is a collection of classes and methods to persistently store the vast amounts of data into a database.
+The Java Persistence API (JPA) is one possible approach to ORM. Via JPA the developer can map, store, update and retrieve data from relational databases to Java objects and vice versa. JPA can be used in Java-EE and Java-SE applications.
+
+JPA metadata is typically defined via annotations in the Java class. Alternatively, the metadata can be defined via XML or a combination of both. A XML configuration overwrites the annotations.
+
+**Relationship Mapping**  
+
+JPA allows to define relationships between classes. Classes can have one to one, one to many, many to one, and many to many relationships with other classes. A relationship can be bidirectional or unidirectional, e.g. in a bidirectional relationship both classes store a reference to each other while in an unidirectional case only one class has a reference to the other class. 
+
+Relationship annotations:
+
+* @OneToOne
+* @OneToMany
+* @ManyToOne
+* @ManyToMany
+
+**JPA - Architecture**  
+
+|Units	                |Description                                                    |
+|-----------------------|---------------------------------------------------------------|
+|EntityManagerFactory	|This is a factory class of EntityManager. It creates and manages multiple EntityManager instances.|
+|EntityManager	        |It is an Interface, it manages the persistence operations on objects. It works like factory for Query instance.|
+|Entity	                |Entities are the persistence objects, stores as records in the database.|
+|EntityTransaction	    |It has one-to-one relationship with EntityManager. For each EntityManager, operations are maintained by EntityTransaction class.|
+|Persistence	        |This class contain static methods to obtain EntityManagerFactory instance.|
+|Query	                |This interface is implemented by each JPA vendor to obtain relational objects that meet the criteria.|
+
 #### Q. Name some important interfaces of Hibernate framework?
 #### Q. Name some important annotations used for Hibernate mapping?
 #### Q. What is Hibernate SessionFactory and how to configure it?
