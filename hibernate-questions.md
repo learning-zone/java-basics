@@ -1355,16 +1355,73 @@ Example:
 private Set<ProductEntity> products; 
 ```
 #### Q. Explain the persistent classes in Hibernate?
-Java classes whose objects or instances will be stored in database tables are called persistent classes in Hibernate. Hibernate works best if these classes follow some simple rules, also known as the Plain Old Java Object (POJO) programming model.
+Persistence class are simple POJO classes in an application. It works as implementation of the business application for example Employee, department etc. It is not necessary that all instances of persistence class are defined persistence.
 
 There are following main rules of persistent classes
 
-* All Java classes that will be persisted need a default constructor. 
-* All classes should contain an ID in order to allow easy identification of your objects within Hibernate and the database. This property maps to the primary key column of a database table.
-* All attributes that will be persisted should be declared private and have getXXX and setXXX methods defined in the JavaBean style.
-* A central feature of Hibernate, proxies, depends upon the persistent class being either non-final, or the implementation of an interface that declares all public methods.
-* All classes that do not extend or implement some specialized classes and interfaces required by the EJB framework.
+* A persistence class should have a default constructor.
+* A persistence class should have an id to uniquely identify the class objects.
+* All attributes should be declared private.
+* Public getter and setter methods should be defined to access the class attributes.
 
+```java
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Date;
+
+@Entity
+@Table(name = "employee")
+public class Employee {
+    @Id
+    @GeneratedValue
+    @Column(name = "emp_id")
+    private int id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "salary")
+    private int salary;
+
+    @Column(name = "date_of_join")
+    private Date dateOfJoin;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public Date getDateOfJoin() {
+        return dateOfJoin;
+    }
+
+    public void setDateOfJoin(Date dateOfJoin) {
+        this.dateOfJoin = dateOfJoin;
+    }
+}
+```
 #### Q. Explain some of the elements of hbm.xml?
 #### Q. What is Java Persistence API (JPA)?
 #### Q. Name some important interfaces of Hibernate framework?
