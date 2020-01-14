@@ -1423,6 +1423,36 @@ public class Employee {
 }
 ```
 #### Q. Explain some of the elements of hbm.xml?
+Hibernate mapping file is used by hibernate framework to get the information about the mapping of a POJO class and a database table.
+
+It mainly contains the following mapping information:
+
+* Mapping information of a POJO class name to a database table name.
+* Mapping information of POJO class properties to database table columns.
+
+Elements of the Hibernate mapping file:
+
+* **hibernate-mapping**: It is the root element.
+* **Class**: It defines the mapping of a POJO class to a database table.
+* **Id**: It defines the unique key attribute or primary key of the table.
+* **generator**: It is the sub element of the id element. It is used to automatically generate the id.
+* **property**: It is used to define the mapping of a POJO class property to database table column.
+
+Syntax
+```xml
+<hibernate-mapping>
+ 
+ <class name="POJO class name" table="table name in database">
+  <id name="propertyName" column="columnName" type="propertyType" >
+	<generator class="generatorClass"/>
+  </id>
+  <property name="propertyName1" column="colName1" type="propertyType " />
+  <property name="propertyName2" column="colName2" type="propertyType " />
+   . . . . .
+ </class>
+ 
+</hibernate-mapping>
+```
 #### Q. What is Java Persistence API (JPA)?
 #### Q. Name some important interfaces of Hibernate framework?
 #### Q. Name some important annotations used for Hibernate mapping?
