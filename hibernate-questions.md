@@ -1484,6 +1484,19 @@ Relationship annotations:
 |Query	                |This interface is implemented by each JPA vendor to obtain relational objects that meet the criteria.|
 
 #### Q. Name some important interfaces of Hibernate framework?
+* **Session Interface**: This is the primary interface used by hibernate applications
+The instances of this interface are lightweight and are inexpensive to create and destroy
+Hibernate sessions are not thread safe
+
+* **Session Factory Interface**: This is a factory that delivers the session objects to hibernate application.
+
+* **Configuration Interface**: This interface is used to configure and bootstrap hibernate.
+The instance of this interface is used by the application in order to specify the location of hbm documents
+
+* **Transaction Interface**: This interface abstracts the code from any kind of transaction implementations such as JDBC transaction, JTA transaction
+
+* **Query and Criteria Interface**: This interface allows the user to perform queries and also control the flow of the query execution
+
 #### Q. Name some important annotations used for Hibernate mapping?
 #### Q. What is Hibernate SessionFactory and how to configure it?
 #### Q. What is difference between openSession and getCurrentSession?
