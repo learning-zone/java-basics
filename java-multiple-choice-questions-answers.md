@@ -334,3 +334,18 @@ D. You can store a primitive directly into an ArrayList.
 ```
 B. You can convert a primitive to a wrapper class object simply by assigning it.
 ```
+#### Q. What is the output of the following?
+```java
+Integer integer = new Integer(4);
+System.out.print(integer.byteValue());
+System.out.print("-");
+int i = new Integer(4);
+System.out.print(i.byteValue());
+```
+A. 4-0  
+B. 4-4  
+C. The code does not compile.  
+D. The code compiles but throws an exception at runtime  
+```
+C. The code does not compile.
+```
