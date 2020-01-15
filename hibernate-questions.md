@@ -1719,7 +1719,6 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. What are the collection types in Hibernate?
 #### Q. How to implement Joins in Hibernate?
 #### Q. Why we should not make Entity Class final?
-#### Q. Can we execute native sql query in hibernate?
 #### Q. What is the benefit of native sql query support in hibernate?
 #### Q. What is Named SQL Query? What are the benefits of Named SQL Query?
 #### Q. How to log hibernate generated sql queries in log files?
