@@ -1681,7 +1681,37 @@ mysql> select * from student;
 +-----+--------+--------+-------+------+
 1 row in set (0.05 sec)
 ```
-#### Q. What is difference between merge() And update() methods in Hibernate?
+#### Q. What is difference between merge() and update() methods in Hibernate?
+Both update() and merge() methods in hibernate are used to convert the object which is in detached state into persistence state. But there are different situation where we should be used update() and where should be used merge() method in hibernate
+
+```java
+Employee emp1 = new Employee();
+emp1.setEmpId(100);
+emp1.setEmpName("Alex");
+//create session
+Session session1 = createNewHibernateSession();
+session1.saveOrUpdate(emp1);
+session1.close();
+//emp1 object in detached state now
+
+emp1.setEmpName("Alex Rajput");//Updated Name
+//Create session again
+Session session2 = createNewHibernateSession();
+Employee emp2 =(Employee)session2.get(Employee.class, 100);
+//emp2 object in persistent state with id 100
+
+//below we try to make on detached object with id 100 to persistent state by using update method of hibernate
+session2.update(emp1);//It occurs the exception NonUniqueObjectException because emp2 object is having employee with same empid as 100. In order //to avoid this exception we are using merge like given below instead of session.update(emp1);
+
+session2.merge(emp1); //it merge the object state with emp2
+session2.update(emp1); //Now it will work with exception
+```
+In the hibernate session we can maintain only one employee object in persistent state with same primary key, while converting a detached object into persistent, if already that session has a persistent object with the same primary key then hibernate throws an Exception whenever update() method is called to reattach a detached object with a session. In this case we need to call **merge()** method instead of **update()** so that hibernate copies the state changes from detached object into persistent object and we can say a detached object is converted into a persistent object.
+
+* **Update()**:  Suppose we are dealing with any employee object in the same session then we should use update() or saveOrUpdate() method. if you are sure that the session does not contains an already persistent instance with the same identifier,then use update to save the data in hibernate
+
+* **merge()**: Suppose we are creating a session and load an employee object. Now object in session cache. If we close the session at this point and we edit state of object and tried to save using update() it will throw exception. To make object persistent we need to open another session. Now we load same object again in current session. So if we want to update present object with previous object changes we have to use merge() method. Merge method will merge changes of both states of object and will save in database.
+
 #### Q. What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
 #### Q. What will happen if we don’t have no-args constructor in Entity bean?
 #### Q. What is difference between sorted collection and ordered collection, which one is better?
