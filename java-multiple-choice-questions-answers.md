@@ -239,3 +239,32 @@ D. It will not compile without initializing on the declaration line
 ```
 B. It defaults to null.  
 ```
+#### Q. How many of the following methods compile?
+public class Test 
+{
+	public String convert(int value) {
+		return value.toString();
+	}
+	public String convert(Integer value) {
+		return value.toString();
+    }
+	public String convert(Object value) {
+		return value.toString();
+	}
+		
+	public static void main(String... args) {
+		Test obj = new Test();
+		System.out.println(obj.convert(10));
+	}
+}
+A. None  
+B. One  
+C. Two  
+D. Three  
+```
+C. Two
+
+Explanation: Objects have instance methods while primitives do not. Since int is a primitive, you
+cannot call instance methods on it. Integer and String are both objects and have
+instance methods
+```
