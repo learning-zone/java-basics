@@ -1681,7 +1681,7 @@ mysql> select * from student;
 +-----+--------+--------+-------+------+
 1 row in set (0.05 sec)
 ```
-#### Q. What is use of Hibernate Session merge() call?
+#### Q. What is difference between merge() And update() methods in Hibernate?
 #### Q. What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
 #### Q. What will happen if we don’t have no-args constructor in Entity bean?
 #### Q. What is difference between sorted collection and ordered collection, which one is better?
