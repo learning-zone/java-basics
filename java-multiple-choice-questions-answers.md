@@ -213,3 +213,21 @@ A. double num1, int num2 = 0;
 Explanation: A. Option A does not compile because Java does not allow declaring different types as
 part of the same declaration. 
 ```
+#### Q. What is the output of the following?
+public static void main(String... args) {
+   String chair, table = "metal";
+   chair = chair + table;
+   System.out.println(chair);
+} 
+A. metal  
+B. metalmetal  
+C. nullmetal  
+D. The code does not compile  
+```
+D. The code does not compile 
+
+Explanation: Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	The local variable chair may not have been initialized
+
+	at Test.main(Test.java:7)
+```
