@@ -226,10 +226,7 @@ D. The code does not compile
 ```
 D. The code does not compile 
 
-Explanation: Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
-	The local variable chair may not have been initialized
-
-	at Test.main(Test.java:7)
+Explanation: The local variable chair may not have been initialized
 ```
 #### Q. Which is correct about an instance variable of type String?
 A. It defaults to an empty string.  
@@ -277,4 +274,20 @@ C. int num = _9_99;
 D. None of the above; they all compile.  
 ```
 C. int num = _9_99; 
+```
+#### Q. Which is the first line to trigger a compiler error?
+```java
+double d1 = 5f; // p1
+double d2 = 5.0; // p2
+float f1 = 5f; // p3
+float f2 = 5.0; // p4
+```
+A. p1  
+B. p2  
+C. p3  
+D. p4  
+```
+D. P4
+
+Explanation: Type mismatch: cannot convert from double to float
 ```
