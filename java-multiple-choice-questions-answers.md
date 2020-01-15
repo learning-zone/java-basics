@@ -308,10 +308,10 @@ public class Bowling {
  }
 }
 ```
-A. None
-B. One
-C. Two
-D. Three
+A. None  
+B. One  
+C. Two  
+D. Three  
 ```
 C. Two
 ```
