@@ -1648,14 +1648,8 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. Can you explain what is Hibernate Query Language?
 #### Q. What is your understanding of Light Object Mapping?
 #### Q. What is a dialect?
-#### Q. What are HQL queries?
 #### Q. What are the possible ways to configure Hibernate framework?
 #### Q. What is a connection pool?
-#### Q. What is JPA?
-#### Q. How does JPA help in Hibernate framework?
-#### Q. What are the advantages of using Hibernate over JDBC?
-#### Q. What are the configurations involved in Hibernate framework?
-#### Q. What is Hibernate configuration file?
 #### Q. How does Hibernate create the database connection?
 #### Q. What are possible ways to configure object-table mapping?
 #### Q. Which annotation is used to declare a class as a hibernate bean?
