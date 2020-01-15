@@ -1643,7 +1643,6 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. What are your views on the function addClass?
 #### Q. Can you explain the role of addDirectory() and addjar() methods?
 #### Q. What do you understand by Hibernate tuning?
-#### Q. Can you explain what is Hibernate Query Language?
 #### Q. What is your understanding of Light Object Mapping?
 #### Q. What is a dialect?
 #### Q. What are the possible ways to configure Hibernate framework?
