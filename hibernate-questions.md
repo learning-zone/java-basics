@@ -1740,8 +1740,6 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. Can you explain the role of addDirectory() and addjar() methods?
 #### Q. What do you understand by Hibernate tuning?
 #### Q. What is your understanding of Light Object Mapping?
-#### Q. What is a dialect?
-#### Q. What is a connection pool?
 #### Q. How does Hibernate create the database connection?
 #### Q. What are possible ways to configure object-table mapping?
 #### Q. Which annotation is used to declare a class as a hibernate bean?
