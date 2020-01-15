@@ -203,10 +203,10 @@ a : 2
 J : 2
 ```
 #### Q. Which of the following declarations does not compile?
-A. double num1, int num2 = 0;
-B. int num1, num2;
-C. int num1, num2 = 0;
-D. int num1 = 0, num2 = 0;
+A. double num1, int num2 = 0;  
+B. int num1, num2;  
+C. int num1, num2 = 0;  
+D. int num1 = 0, num2 = 0;  
 ```
 A. double num1, int num2 = 0;
 
