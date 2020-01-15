@@ -291,3 +291,27 @@ D. P4
 
 Explanation: Type mismatch: cannot convert from double to float
 ```
+#### Q. How many instance initializers are in this code?
+```java
+public class Bowling {
+ { 
+     System.out.println(); 
+ }
+ public Bowling () {
+    System.out.println();
+ }
+ static { 
+    System.out.println(); 
+ }
+ { 
+     System.out.println(); 
+ }
+}
+```
+A. None
+B. One
+C. Two
+D. Three
+```
+C. Two
+```
