@@ -2,7 +2,7 @@
 
 
 
-#### Q. Exaplain Singleton, MVC, Front-Controller, DAO, DTO, Service-Locator, Factory, Prototype design patterns?
+#### Q. Exaplain MVC, Front-Controller, DAO, DTO, Service-Locator, Prototype design patterns?
 *TODO*
 
 #### Q. What are the design patterns available in Java?
