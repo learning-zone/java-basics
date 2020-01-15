@@ -270,3 +270,11 @@ Explanation: Objects have instance methods while primitives do not. Since int is
 cannot call instance methods on it. Integer and String are both objects and have
 instance methods
 ```
+#### Q. Which of the following does not compile?
+A. int num = 999;  
+B. int num = 9_9_9;  
+C. int num = _9_99;  
+D. None of the above; they all compile.  
+```
+C. int num = _9_99; 
+```
