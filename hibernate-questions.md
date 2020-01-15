@@ -1759,11 +1759,6 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. How many Hibernate sessions exist at any point of time in an application?
 #### Q. What is N+1 SELECT problem in Hibernate? What are some strategies to solve the N+1 SELECT problem in Hibernate? 
 #### Q. What is the requirement for a Java object to become a Hibernate entity object? 
-#### Q. What are different types of caches available in Hibernate? 
-#### Q. What is different between Session and SessionFactory in Hibernate? 
-#### Q. What are other ORM frameworks? Any alternative of Hibernate?
-#### Q. What is difference between getCurrentSession() and openSession() in Hibernate? 
-#### Q. When do you use merge() and update() in Hibernate? 
 #### Q. How do you log SQL queries issued by the Hibernate framework in Java application?
 #### Q. What are the three states of a Hibernate Persistence object can be? 
 #### Q. What is the difference between the transient, persistent and detached state in Hibernate? 
