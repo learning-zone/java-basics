@@ -1614,7 +1614,6 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 |load() method will throw an exception if the unique id is not found in the database.|get() method will return null if the unique id is not found in the database.| 
 |load() just returns a proxy by default and database won't be hit until the proxy is first invoked.|get() will hit the database immediately.| 
 
-#### Q. How to configure Hibernate Second Level Cache using EHCache?
 #### Q. What are different states of an entity bean?
 #### Q. What is use of Hibernate Session merge() call?
 #### Q. What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
