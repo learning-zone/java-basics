@@ -1708,10 +1708,6 @@ session2.update(emp1); //Now it will work with exception
 ```
 In the hibernate session we can maintain only one employee object in persistent state with same primary key, while converting a detached object into persistent, if already that session has a persistent object with the same primary key then hibernate throws an Exception whenever update() method is called to reattach a detached object with a session. In this case we need to call **merge()** method instead of **update()** so that hibernate copies the state changes from detached object into persistent object and we can say a detached object is converted into a persistent object.
 
-* **Update()**:  Suppose we are dealing with any employee object in the same session then we should use update() or saveOrUpdate() method. if you are sure that the session does not contains an already persistent instance with the same identifier,then use update to save the data in hibernate
-
-* **merge()**: Suppose we are creating a session and load an employee object. Now object in session cache. If we close the session at this point and we edit state of object and tried to save using update() it will throw exception. To make object persistent we need to open another session. Now we load same object again in current session. So if we want to update present object with previous object changes we have to use merge() method. Merge method will merge changes of both states of object and will save in database.
-
 #### Q. What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
 #### Q. What will happen if we don’t have no-args constructor in Entity bean?
 #### Q. What is difference between sorted collection and ordered collection, which one is better?
