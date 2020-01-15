@@ -1694,14 +1694,19 @@ session1.saveOrUpdate(emp1);
 session1.close();
 //emp1 object in detached state now
 
-emp1.setEmpName("Alex Rajput");//Updated Name
+emp1.setEmpName("Alex Rajput");// Updated Name
 //Create session again
 Session session2 = createNewHibernateSession();
 Employee emp2 =(Employee)session2.get(Employee.class, 100);
 //emp2 object in persistent state with id 100
 
-//below we try to make on detached object with id 100 to persistent state by using update method of hibernate
-session2.update(emp1);//It occurs the exception NonUniqueObjectException because emp2 object is having employee with same empid as 100. In order //to avoid this exception we are using merge like given below instead of session.update(emp1);
+/** 
+Try to make on detached object with id 100 to persistent state by using update method of hibernate
+It occurs the exception NonUniqueObjectException because emp2 object is having employee with same
+empid as 100. In order to avoid this exception we are using merge like given below instead of 
+**/
+session2.update(emp1);
+session.update(emp1);
 
 session2.merge(emp1); //it merge the object state with emp2
 session2.update(emp1); //Now it will work with exception
