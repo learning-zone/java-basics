@@ -1551,7 +1551,7 @@ public class HibernateUtil {
     }
 }
 ```
-#### Q. What is difference between openSession and getCurrentSession?
+#### Q. What is the difference between opensession and getcurrentsession in hibernate?
 #### Q. What is difference between Hibernate Session get() and load() method?
 #### Q. How to configure Hibernate Second Level Cache using EHCache?
 #### Q. What are different states of an entity bean?
