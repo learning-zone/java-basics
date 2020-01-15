@@ -1,4 +1,4 @@
-## Java Multiple Choice Questions and Answers
+## Java Multiple Choice Questions 
 
 
 #### Q. Which of the follwing below live on the heap in java?
