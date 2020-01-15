@@ -1658,12 +1658,7 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. How to configure the connection pool size?
 #### Q. How do you configure folder scan for Hibernate beans?
 #### Q. How to configure hibernate beans without Spring framework?
-#### Q. What is the purpose of Session.beginTransaction()?
-#### Q. Which are the different types of relationships available in Hibernate mapping?
-#### Q. Which annotation is used to define the mapping in Java files?
 #### Q. Is it possible to connect multiple database in a single Java application using Hibernate?
-#### Q. What is a Criteria query in Hibernate?
-#### Q. What is load() method of session Object?
 #### Q. Does Hibernate support polymorphism?
 #### Q. How many Hibernate sessions exist at any point of time in an application?
 #### Q. What is N+1 SELECT problem in Hibernate? What are some strategies to solve the N+1 SELECT problem in Hibernate? 
