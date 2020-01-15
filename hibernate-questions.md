@@ -1760,18 +1760,13 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. What is N+1 SELECT problem in Hibernate? What are some strategies to solve the N+1 SELECT problem in Hibernate? 
 #### Q. What is the requirement for a Java object to become a Hibernate entity object? 
 #### Q. How do you log SQL queries issued by the Hibernate framework in Java application?
-#### Q. What are the three states of a Hibernate Persistence object can be? 
 #### Q. What is the difference between the transient, persistent and detached state in Hibernate? 
 #### Q. How properties of a class are mapped to the columns of a database table in Hibernate?
 #### Q. What is the usage of Configuration Interface in hibernate?
 #### Q. How can we use new custom interfaces to enhance functionality of built-in interfaces of hibernate?
-#### Q. Should all the mapping files of hibernate have .hbm.xml extension to work properly?
-#### Q. How do we create session factory in hibernate?
 #### Q. What are POJOs and what is their significance?
 #### Q. How can we invoke stored procedures in hibernate?
 #### Q. What are the benefits of using Hibernate template?
-#### Q. What are the two types of collections in hibernate?
-#### Q. What is the difference between session.save() and session.saveOrUpdate() methods in hibernate?
 #### Q. How can we get hibernate statistics?
 #### Q. How can we reduce database write action times in Hibernate?
 #### Q. When an instance goes in detached state in hibernate?
@@ -1794,7 +1789,6 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. What is attribute oriented programming?
 #### Q. What is the use of session.lock() in hibernate?
 #### Q. What the three inheritance models are of hibernate?
-#### Q. How can we map the classes as immutable?
 #### Q. What is general hibernate flow using RDBMS?
 #### Q. What is Light Object Mapping?
 #### Q. What is difference between managed associations and hibernate associations?
