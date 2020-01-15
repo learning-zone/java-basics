@@ -13,8 +13,8 @@
 * [Java String Methods](java-string-methods.md)
 * [JSP Interview Questions](jsp-questions.md)
 * [Servlets Interview Questions](servlets-questions.md)
-* [Java Design Pattern Questions and Answers](java-design-pattern-questions.md)
-* [Java Multiple Choice Questions and Answers](java-multiple-choice-questions-answers.md)
+* [Java Design Pattern Questions](java-design-pattern-questions.md)
+* [Java Multiple Choice Questions](java-multiple-choice-questions-answers.md)
 
 
 #### Q. What is difference between Heap and Stack Memory in java?
