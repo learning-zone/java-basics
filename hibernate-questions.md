@@ -1552,6 +1552,60 @@ public class HibernateUtil {
 }
 ```
 #### Q. What is the difference between opensession and getcurrentsession in hibernate?
+Hibernate SessionFactory getCurrentSession() method returns the session bound to the context. Since this session object belongs to the hibernate context, we don't need to close it. Once the session factory is closed, this session object gets closed.
+
+Hibernate SessionFactory openSession() method always opens a new session. We should close this session object once we are done with all the database operations.
+
+|Parameter          |openSession        |getCurrentSession               |
+|-------------------|-------------------|--------------------------------|
+|Session object     |It always create new Session object |It creates a new Session if not exists , else use same session which is in current hibernate context|
+|Flush and close    |You need to explicitly flush and close session objects|You do not need to flush and close session objects, it will be automatically taken care by Hibernate internally|
+|Performance        |In single threaded environment , It is slower than getCurrentSession|In single threaded environment , It is faster than getOpenSession|
+|Configuration      |You do not need to configure any property to call this method|You need to configure additional property “hibernate.current_session_context_class” to call getCurrentSession method, otherwise it will throw exceptions.|
+
+Example: openSession()
+```java
+Transaction transaction = null;
+Session session = HibernateUtil.getSessionFactory().openSession();
+try {
+    transaction = session.beginTransaction();
+    // do Some work
+    
+    session.flush(); // extra work
+    transaction.commit();            
+} catch(Exception ex) {            
+    if(transaction != null) {
+        transaction.rollback();
+    }
+    ex.printStackTrace();
+} finally {
+    if(session != null) {
+        session.close(); // extra work    
+    }            
+}           
+```
+Example: getCurrentSession()
+```java
+Transaction transaction = null;
+Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+try {
+    transaction = session.beginTransaction();
+    // do Some work
+   
+    // session.flush(); // no need
+    transaction.commit();           
+} catch(Exception ex) {           
+    if(transaction != null) {
+        transaction.rollback();
+    }
+    ex.printStackTrace();
+} finally {
+    if(session != null) {
+        // session.close(); // no need   
+    }           
+}     
+```
+
 #### Q. What is difference between Hibernate Session get() and load() method?
 #### Q. How to configure Hibernate Second Level Cache using EHCache?
 #### Q. What are different states of an entity bean?
