@@ -1615,6 +1615,72 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 |load() just returns a proxy by default and database won't be hit until the proxy is first invoked.|get() will hit the database immediately.| 
 
 #### Q. What are different states of an entity bean?
+The Entity bean has three states:
+
+**1. Transient**: Transient objects exist in heap memory. Hibernate does not manage transient objects or persist changes to transient objects. Whenever pojo class object created then it will be in the Transient state.
+
+Transient state Object does not represent any row of the database, It means not associated with any Session object or no relation with the database its just an normal object.
+
+**2. Persistent**: Persistent objects exist in the database, and Hibernate manages the persistence for persistent objects. If fields or properties change on a persistent object, Hibernate will keep the database representation up to date when the application marks the changes as to be committed.
+
+Any instance returned by a **get()** or **load()** method is persistent state object.
+
+**3. Detached**: Detached objects have a representation in the database, but changes to the object will not be reflected in the database, and vice-versa. A detached object can be created by closing the session that it was associated with, or by evicting it from the session with a call to the session's `evict()` method.
+
+Example:
+```java
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+ 
+import com.example.hibernate.Student;
+ 
+public class ObjectStatesDemo {
+
+    public static void main(String[] args) {
+ 
+        // Transient object state
+        Student student = new Student();
+        student.setId(101);
+        student.setName("Alex");
+        student.setRoll("10");
+        student.setDegree("B.E");
+        student.setPhone("9999");
+
+        // Transient object state
+        Session session = new AnnotationConfiguration().configure()
+                .buildSessionFactory().openSession();
+        Transaction t = session.beginTransaction();
+
+        // Persistent object state
+        session.save(student);
+        t.commit();
+
+        // Detached object state
+        session.close();
+    }
+}
+```
+Output
+```
+Hibernate: 
+    insert 
+    into
+        STUDENT
+        (degree, name, phone, roll, id) 
+    values
+        (?, ?, ?, ?, ?)
+```
+In The Database :
+```sql
+mysql> select * from student;
++-----+--------+--------+-------+------+
+| id  | degree | name   | phone | roll |
++-----+--------+--------+-------+------+
+| 101 | B.E    | Alex   | 9999  | 10   |
++-----+--------+--------+-------+------+
+1 row in set (0.05 sec)
+```
 #### Q. What is use of Hibernate Session merge() call?
 #### Q. What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
 #### Q. What will happen if we don’t have no-args constructor in Entity bean?
