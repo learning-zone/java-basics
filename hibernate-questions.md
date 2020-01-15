@@ -1790,7 +1790,6 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. What is the use of session.lock() in hibernate?
 #### Q. What the three inheritance models are of hibernate?
 #### Q. What is general hibernate flow using RDBMS?
-#### Q. What is Light Object Mapping?
 #### Q. What is difference between managed associations and hibernate associations?
 #### Q. Mention two components of Hibernate configuration object.
 #### Q. What are the inheritance mapping strategies?
