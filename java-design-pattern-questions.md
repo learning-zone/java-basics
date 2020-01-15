@@ -150,9 +150,6 @@ public class BillPughSingleton {
 ```
 
 #### Q. Explain Adapter Design Pattern in Java?
-
-**Adapter Design Pattern in Java**
-
 Adapter design pattern is one of the structural design pattern and its used so that two unrelated interfaces can work together. The object that joins these unrelated interface is called an Adapter.
 
 Example:
