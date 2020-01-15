@@ -42,10 +42,7 @@ Java Design Patterns are divided into three categories – creational, structura
 * Dependency Injection Pattern
 * MVC Pattern
 
-#### Q. Design patterns related question (Singleton, Adaptor, Factory, Strategy) 
-
-**Java Singleton Pattern**
-
+#### Q. Explain Singleton Design Pattern in Java? 
 **1. Eager initialization:**  
 In eager initialization, the instance of Singleton Class is created at the time of class loading.
 
@@ -148,7 +145,6 @@ public class BillPughSingleton {
     }
 }
 ```
-
 #### Q. Explain Adapter Design Pattern in Java?
 Adapter design pattern is one of the structural design pattern and its used so that two unrelated interfaces can work together. The object that joins these unrelated interface is called an Adapter.
 
