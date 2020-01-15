@@ -1699,8 +1699,6 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. What different fetching strategies are of hibernate?
 #### Q. How mapping of java objects is done with database tables?
 #### Q. What are derived properties in hibernate?
-#### Q. What is meant by a Named SQL Query in hibernate and how its used?
-#### Q. What is the difference between load() and get() method in hibernate?
 #### Q. What is the use of version property in hibernate?
 #### Q. What is attribute oriented programming?
 #### Q. What is the use of session.lock() in hibernate?
@@ -1710,9 +1708,7 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. What is Light Object Mapping?
 #### Q. What is difference between managed associations and hibernate associations?
 #### Q. Mention two components of Hibernate configuration object.
-#### Q. How can we add criteria to a SQL query?
 #### Q. What are the inheritance mapping strategies?
 #### Q. What is automatic dirty checking in hibernate?
-#### Q. Describe the method used to create an HQL Query and SQL Query?
 #### Q. What is Query level cache in Hibernate?
 #### Q. Explain Hibernate configuration file and Hibernate mapping file?
