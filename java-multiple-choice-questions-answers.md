@@ -231,3 +231,11 @@ Explanation: Exception in thread "main" java.lang.Error: Unresolved compilation 
 
 	at Test.main(Test.java:7)
 ```
+#### Q. Which is correct about an instance variable of type String?
+A. It defaults to an empty string.  
+B. It defaults to null.  
+C. It does not have a default value.  
+D. It will not compile without initializing on the declaration line  
+```
+B. It defaults to null.  
+```
