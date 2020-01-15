@@ -1791,7 +1791,6 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. What the three inheritance models are of hibernate?
 #### Q. What is general hibernate flow using RDBMS?
 #### Q. What is difference between managed associations and hibernate associations?
-#### Q. Mention two components of Hibernate configuration object.
 #### Q. What are the inheritance mapping strategies?
 #### Q. What is automatic dirty checking in hibernate?
 #### Q. What is Query level cache in Hibernate?
