@@ -1605,8 +1605,15 @@ try {
     }           
 }     
 ```
-
 #### Q. What is difference between Hibernate Session get() and load() method?
+Hibernate Session class provides two method to access object e.g. `session.get()` and `session.load()`.The difference between get() vs load() method is that get() involves database hit if object doesn't exists in **Session Cache** and returns a fully initialized object which may involve several database call while load method can return proxy in place and only initialize the object or hit the database if any method other than getId() is called on persistent or entity object. This lazy initialization can save couple of database round-trip which result in better performance.
+
+|load() 	                                    |get() 
+|-----------------------------------------------|-------------------------------------------------
+|Only use the load() method if you are sure that the object exists.|If you are not sure that the object exists, then use one of the get() methods.| 
+|load() method will throw an exception if the unique id is not found in the database.|get() method will return null if the unique id is not found in the database.| 
+|load() just returns a proxy by default and database won't be hit until the proxy is first invoked.|get() will hit the database immediately.| 
+
 #### Q. How to configure Hibernate Second Level Cache using EHCache?
 #### Q. What are different states of an entity bean?
 #### Q. What is use of Hibernate Session merge() call?
