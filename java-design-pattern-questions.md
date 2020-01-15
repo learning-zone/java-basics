@@ -145,6 +145,10 @@ public class BillPughSingleton {
     }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Explain Adapter Design Pattern in Java?
 Adapter design pattern is one of the structural design pattern and its used so that two unrelated interfaces can work together. The object that joins these unrelated interface is called an Adapter.
 
@@ -224,6 +228,10 @@ public class Main {
     }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Explain Factory Design Pattern in Java?
 A Factory Pattern or Factory Method Pattern says that just define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate. In other words, subclasses are responsible to create the instance of the class.
 
@@ -318,6 +326,9 @@ class GenerateBill {
     }  
 } 
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Explain Strategy Design Pattern in Java?
 Strategy design pattern is one of the behavioral design pattern. Strategy pattern is used when we have multiple algorithm for a specific task and client decides the actual implementation to be used at runtime.
@@ -445,9 +456,8 @@ public class ShoppingCartTest {
 	}
 }
 ```
-
 Output 
-```java
+```
 500 paid using Paypal.
 500 paid with credit/debit card
 ```
