@@ -326,3 +326,11 @@ A. It may be called zero or one times.
 The finalize() method may not be called, such as if your program crashes.
 However, it is guaranteed to be called no more than once.
 ```
+#### Q. Which of the following is true about primitives?
+A. You can call methods on a primitive.  
+B. You can convert a primitive to a wrapper class object simply by assigning it.  
+C. You can convert a wrapper class object to a primitive by calling valueOf().  
+D. You can store a primitive directly into an ArrayList.  
+```
+B. You can convert a primitive to a wrapper class object simply by assigning it.
+```
