@@ -240,6 +240,7 @@ D. It will not compile without initializing on the declaration line
 B. It defaults to null.  
 ```
 #### Q. How many of the following methods compile?
+```java
 public class Test 
 {
 	public String convert(int value) {
@@ -257,6 +258,7 @@ public class Test
 		System.out.println(obj.convert(10));
 	}
 }
+```
 A. None  
 B. One  
 C. Two  
