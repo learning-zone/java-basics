@@ -1724,16 +1724,10 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. What is general hibernate flow using RDBMS?
 #### Q. What is Light Object Mapping?
 #### Q. What is difference between managed associations and hibernate associations?
-#### Q. Explain hibernate architecture?
 #### Q. Mention two components of Hibernate configuration object.
-#### Q. How is SQL query created in Hibernate?
 #### Q. How can we add criteria to a SQL query?
 #### Q. What are the inheritance mapping strategies?
 #### Q. What is automatic dirty checking in hibernate?
-#### Q. Is it possible to perform collection mapping with One-to-One and Many-to-One?
-#### Q. What is One-to-Many association in Hibernate?
-#### Q. What is a Many-to-One association in Hibernate?
-#### Q. What is Many-to-Many association in Hibernate?
 #### Q. Describe the method used to create an HQL Query and SQL Query?
 #### Q. What is Query level cache in Hibernate?
 #### Q. Explain Hibernate configuration file and Hibernate mapping file?
