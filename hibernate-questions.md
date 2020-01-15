@@ -1625,7 +1625,6 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. Can we execute native sql query in hibernate?
 #### Q. What is the benefit of native sql query support in hibernate?
 #### Q. What is Named SQL Query? What are the benefits of Named SQL Query?
-#### Q. What is the benefit of Hibernate Criteria API?
 #### Q. How to log hibernate generated sql queries in log files?
 #### Q. What is cascading and what are different types of cascading?
 #### Q. How to integrate log4j logging in hibernate application?
@@ -1637,7 +1636,6 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 #### Q. What are the technologies that are supported by Hibernate?
 #### Q. What is your understanding of Hibernate proxy?
 #### Q. Can you explain Hibernate callback interfaces?
-#### Q. What is your idea regarding session interface?
 #### Q. How to create database applications in Java with the use of Hibernate?
 #### Q. Can you share your views on mapping description files?
 #### Q. What are your thoughts on file mapping in Hibernate?
