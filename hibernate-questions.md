@@ -1497,8 +1497,60 @@ The instance of this interface is used by the application in order to specify th
 
 * **Query and Criteria Interface**: This interface allows the user to perform queries and also control the flow of the query execution
 
-#### Q. Name some important annotations used for Hibernate mapping?
 #### Q. What is Hibernate SessionFactory and how to configure it?
+SessionFactory is an interface. SessionFactory can be created by providing Configuration object, which will contain all DB related property details pulled from either hibernate.cfg.xml file or hibernate.properties file. SessionFactory is a factory for Session objects.
+
+We can create one SessionFactory implementation per database in any application. If your application is referring to multiple databases, then you need to create one SessionFactory per database.
+
+The SessionFactory is a heavyweight object; it is usually created during application start up and kept for later use. The SessionFactory is a thread safe object and used by all the threads of an application.
+```java
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+ 
+import com.example.model.Employee;
+ 
+public class HibernateUtil {
+ 
+    private static SessionFactory sessionFactory = null;
+ 
+    static {
+        try {
+            loadSessionFactory();
+        } catch(Exception e){
+            System.err.println("Exception while initializing hibernate util.. ");
+            e.printStackTrace();
+        }
+    }
+ 
+    public static void loadSessionFactory() {
+ 
+        Configuration configuration = new Configuration();
+        configuration.configure("/j2n-hibernate.cfg.xml");
+        configuration.addAnnotatedClass(Employee.class);
+        ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+        sessionFactory = configuration.buildSessionFactory(srvcReg);
+    }
+ 
+    public static Session getSession() throws HibernateException {
+ 
+        Session retSession=null;
+            try {
+                retSession = sessionFactory.openSession();
+            } catch(Throwable t) {
+                System.err.println("Exception while getting session.. ");
+                t.printStackTrace();
+            }
+            if(retSession == null) {
+                System.err.println("session is discovered null");
+            }
+            return retSession;
+    }
+}
+```
 #### Q. What is difference between openSession and getCurrentSession?
 #### Q. What is difference between Hibernate Session get() and load() method?
 #### Q. How to configure Hibernate Second Level Cache using EHCache?
