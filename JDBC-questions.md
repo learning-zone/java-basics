@@ -181,6 +181,12 @@ public class Proc {
 }  
 ```
 #### Q. What are the differences between Statement and PreparedStatement interface?
+JDBC API provides 3 different interfaces to execute the different types of SQL queries. They are,
+
+* **Statement**  –  Used to execute normal SQL queries.
+* **PreparedStatement**  –  Used to execute dynamic or parameterized SQL queries.
+* **CallableStatement**  –  Used to execute the stored procedures.
+
 #### Q. What are CLOB and BLOB data types in JDBC?
 #### Q. What are the different types of lockings in JDBC?
 #### Q. How can we store and retrieve images from the database?
