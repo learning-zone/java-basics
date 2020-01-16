@@ -170,9 +170,13 @@ public class Proc {
       CallableStatement stmt = con.prepareCall(SQL);  
       stmt.setInt(1,1011);  
       stmt.setString(2,"Alex");  
-      stmt.execute();  
-        
-      System.out.println("success");  
+      ResultSet rs = stmt.executeQuery();
+    
+      while(rs.next()){
+        System.out.println(rs.getString(1));
+      }
+      
+      rs.close();
    }  
 }  
 ```
