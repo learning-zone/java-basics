@@ -253,7 +253,6 @@ The types of locks in JDBC:
 |You cannot call stored procedures from a function|You can call a function from a stored procedure.|
 |You can call a function using a select statement.|You cannot call a procedure using select statements.|
 
-#### Q. What are the JDBC statements?
 #### Q. What is batch processing and how to perform batch processing in JDBC?
 #### Q. What is database connection pooling? What are the advantages of using a connection pool?
 #### Q. What is JDBC Driver?
