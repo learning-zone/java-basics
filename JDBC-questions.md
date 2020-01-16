@@ -117,7 +117,6 @@ Student: [RollNo : 1, Name : John ]
 Student: Roll No 0, updated in the database
 Student: [RollNo : 0, Name : Michael ]
 ```
-#### Q. What are the steps to connect to a database in java?
 #### Q. What are the differences between ResultSet and RowSet?
 #### Q. How can we execute stored procedures using CallableStatement?
 #### Q. What are the differences between Statement and PreparedStatement interface?
