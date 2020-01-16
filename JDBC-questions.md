@@ -244,13 +244,10 @@ The types of locks in JDBC:
 **4. Database Lock**: In order to prevent the read or update access from other transactions when the database is open, the database lock is used.
 
 #### Q. What are the differences between stored procedure and functions?
-#### Q. How can we store and retrieve images from the database?
-#### Q. How can we store and retrieve the file in the Oracle database?
 #### Q. What are the JDBC statements?
 #### Q. What is batch processing and how to perform batch processing in JDBC?
 #### Q. What is database connection pooling? What are the advantages of using a connection pool?
 #### Q. What is JDBC Driver?
-#### Q. Name 5 JDBC best practices your follow?
 #### Q. What are the JDBC API components?
 #### Q. What is the role of JDBC DriverManager class?
 #### Q. What is JDBC Connection interface?
@@ -267,11 +264,13 @@ The types of locks in JDBC:
 #### Q. How do you iterate ResultSet in the reverse order?
 #### Q. What is the use of setAutoCommit() method?
 #### Q. What is a “dirty read”?
-#### Q. What are the ways to load or register driver ?
+#### Q. What are the ways to load or register driver?
 #### Q. How to get the Database server details in java program?
 #### Q. What is the use of getGeneratedKeys() method in Statement?
 #### Q. What is the use of setFetchSize() and setMaxRows() methods in Statement?
 #### Q. What is JDBC Savepoint? How to use it?
 #### Q. What are CLOB and BLOB data types in JDBC?
 #### Q. Explain optimistic and pessimistic locking in JDBC?
+#### Q. How can we store and retrieve images from the database?
+#### Q. How can we store and retrieve the file in the Oracle database?
 
