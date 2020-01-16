@@ -191,7 +191,7 @@ JDBC API provides 3 different interfaces to execute the different types of SQL q
 
 Statement interface is used to execute normal SQL queries. We can’t pass the parameters to SQL query at run time using this interface. This interface is preferred over other two interfaces if we are executing a particular SQL query only once. The performance of this interface is also very less compared to other two interfaces. In most of time, Statement interface is used for DDL statements like **CREATE, ALTER, DROP** etc.
 ```sql
-// Creating The Statement Object
+/** Creating The Statement Object **/
 Statement stmt = con.createStatement();
   
 //Executing The Statement
