@@ -254,6 +254,85 @@ The types of locks in JDBC:
 |You can call a function using a select statement.|You cannot call a procedure using select statements.|
 
 #### Q. What is batch processing and how to perform batch processing in JDBC?
+Batch Processing allows to group related SQL statements into a batch and submit them with one call to the database. The java.sql.Statement and java.sql.PreparedStatement interfaces provide methods for batch processing.
+
+* **addBatch()**: The addBatch() method of Statement, PreparedStatement, and CallableStatement is used to add individual statements to the batch.
+
+* **executeBatch()**: The executeBatch() is used to start the execution of all the statements grouped together. The executeBatch() returns an array of integers, and each element of the array represents the update count for the respective update statement.
+
+* **clearBatch()**: This method removes all the statements added with the addBatch() method. 
+
+**Batching with Statement Object**  
+```sql
+// Create statement object
+Statement stmt = conn.createStatement();
+
+// Set auto-commit to false
+conn.setAutoCommit(false);
+
+// Create SQL statement
+String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(200,'Zia', 'Ali', 30)";
+// Add above SQL statement in the batch.
+stmt.addBatch(SQL);
+
+// Create one more SQL statement
+String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(201,'Raj', 'Kumar', 35)";
+// Add above SQL statement in the batch.
+stmt.addBatch(SQL);
+
+// Create one more SQL statement
+String SQL = "UPDATE Employees SET age = 35 " +
+             "WHERE id = 100";
+// Add above SQL statement in the batch.
+stmt.addBatch(SQL);
+
+// Create an int[] to hold returned values
+int[] count = stmt.executeBatch();
+
+//Explicitly commit statements to apply changes
+conn.commit();
+```
+**Batching with PrepareStatement Object**   
+```sql
+// Create SQL statement
+String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(?, ?, ?, ?)";
+
+// Create PrepareStatement object
+PreparedStatemen pstmt = conn.prepareStatement(SQL);
+
+//Set auto-commit to false
+conn.setAutoCommit(false);
+
+// Set the variables
+pstmt.setInt( 1, 400 );
+pstmt.setString( 2, "Pappu" );
+pstmt.setString( 3, "Singh" );
+pstmt.setInt( 4, 33 );
+// Add it to the batch
+pstmt.addBatch();
+
+// Set the variables
+pstmt.setInt( 1, 401 );
+pstmt.setString( 2, "Pawan" );
+pstmt.setString( 3, "Singh" );
+pstmt.setInt( 4, 31 );
+// Add it to the batch
+pstmt.addBatch();
+
+//add more batches
+.
+.
+.
+.
+// Create an int[] to hold returned values
+int[] count = stmt.executeBatch();
+
+// Explicitly commit statements to apply changes
+conn.commit();
+```
 #### Q. What is database connection pooling? What are the advantages of using a connection pool?
 #### Q. What is JDBC Driver?
 #### Q. What are the JDBC API components?
