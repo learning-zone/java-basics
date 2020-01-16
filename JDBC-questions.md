@@ -229,7 +229,7 @@ cstmt.execute();
  
 /** Use cstmt.getter() methods to retrieve the result returned by the stored procedure **/
 ```
-#### Q. What are the different types of lockings in JDBC?
+#### Q. What are the different types of locking in JDBC?
 #### Q. How can we store and retrieve images from the database?
 #### Q. How can we store and retrieve the file in the Oracle database?
 #### Q. What are the differences between stored procedure and functions?
