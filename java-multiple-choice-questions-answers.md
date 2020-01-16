@@ -389,3 +389,13 @@ C. Two
 
 Explanation: All three references point to the String apple. This makes the other two String objects eligible for garbage collection.
 ```
+#### Q. Which of the following does not compile?
+A. double num = 2.718;  
+B. double num = 2._718;  
+C. double num = 2.7_1_8;  
+D. None of the above; they all compile  
+```
+B. double num = 2._718;
+
+Underscores are allowed between any two digits in a numeric literal. Underscores are not allowed adjacent to a decimal point
+```
