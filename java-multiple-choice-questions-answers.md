@@ -349,3 +349,13 @@ D. The code compiles but throws an exception at runtime
 ```
 C. The code does not compile.
 ```
+#### Q. Which two primitives have wrapper classes that are not merely the name of the primitive with an uppercase letter?
+A. byte and char  
+B. byte and int  
+C. char and int  
+D. None of the above  
+```
+C. char and int
+
+Explanation: The wrapper class for int is Integer and the wrapper class for char is Character. All other primitives have the same name. For example, the wrapper class for boolean is Boolean.
+```
