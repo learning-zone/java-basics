@@ -118,6 +118,18 @@ Student: Roll No 0, updated in the database
 Student: [RollNo : 0, Name : Michael ]
 ```
 #### Q. What are the differences between ResultSet and RowSet?
+A **ResultSet** maintains a connection to a database and because of that it can’t be serialized and also we cant pass the Resultset object from one class to other class across the network.
+
+**RowSet** is a disconnected, serializable version of a JDBC ResultSet and also the RowSet extends the ResultSet interface so it has all the methods of ResultSet. The RowSet can be serialized because it doesn’t have a connection to any database and also it can be sent from one class to another across the network.
+
+|ResultSet	                           |RowSet                                                                        |
+|--------------------------------------|------------------------------------------------------------------------------|
+|A ResultSet always maintains connection with the database.|A RowSet can be connected, disconnected from the database.|
+|It cannot be serialized.	            |A RowSet object can be serialized.|
+|ResultSet object cannot be passed other over network.|You can pass a RowSet object over the network.|
+|ResultSet object is not a JavaBean object You can create/get a result set using the executeQuery() method.|ResultSet Object is a JavaBean object. You can get a RowSet using the RowSetProvider.newFactory().createJdb cRowSet() method.|
+|By default, ResultSet object is not scrollable or, updatable.|By default, RowSet object is scrollable and updatable.|
+
 #### Q. How can we execute stored procedures using CallableStatement?
 #### Q. What are the differences between Statement and PreparedStatement interface?
 #### Q. What are CLOB and BLOB data types in JDBC?
