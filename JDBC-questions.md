@@ -131,6 +131,51 @@ A **ResultSet** maintains a connection to a database and because of that it canâ
 |By default, ResultSet object is not scrollable or, updatable.|By default, RowSet object is scrollable and updatable.|
 
 #### Q. How can we execute stored procedures using CallableStatement?
+**CallableStatement** interface in java is used to call stored procedure from java program. **Stored Procedures** are group of statements that we compile in the database for some task. Stored procedures are beneficial when we are dealing with multiple tables with complex scenario and rather than sending multiple queries to the database, we can send required data to the stored procedure and have the logic executed in the database server itself.
+
+A CallableStatement object provides a way to call stored procedures using JDBC. Connection.prepareCall() method provides you CallableStatement object.
+
+```sql
+create or replace procedure "INSERTUSERS"  
+(id IN NUMBER,  
+name IN VARCHAR2)  
+is  
+begin  
+insert into users values(id,name);  
+end;  
+/    
+```
+```java
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+
+/**
+ * 
+ * A Simple example to use CallableStatement in Java Program.
+ */
+public class Proc {  
+
+   public static void main(String[] args) throws Exception{  
+     try {
+        Class.forName("oracle.jdbc.driver.OracleDriver");  
+        Connection con=DriverManager.getConnection(  
+        "jdbc:oracle:thin:@localhost:1521:xe","system","oracle");  
+     } catch (Exception e) {
+       e.printStackTrace();
+     }
+      
+      String SQL = "{call INSERTUSERS(?,?)}";
+      CallableStatement stmt = con.prepareCall(SQL);  
+      stmt.setInt(1,1011);  
+      stmt.setString(2,"Alex");  
+      stmt.execute();  
+        
+      System.out.println("success");  
+   }  
+}  
+```
 #### Q. What are the differences between Statement and PreparedStatement interface?
 #### Q. What are CLOB and BLOB data types in JDBC?
 #### Q. What are the different types of lockings in JDBC?
