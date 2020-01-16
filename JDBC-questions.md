@@ -254,7 +254,7 @@ The types of locks in JDBC:
 |You can call a function using a select statement.|You cannot call a procedure using select statements.|
 
 #### Q. What is batch processing and how to perform batch processing in JDBC?
-Batch Processing allows to group related SQL statements into a batch and submit them with one call to the database. The java.sql.Statement and java.sql.PreparedStatement interfaces provide methods for batch processing.
+Batch Processing allows to group related SQL statements into a batch and submit them with one call to the database. The `java.sql.Statement` and `java.sql.PreparedStatement` interfaces provide methods for batch processing.
 
 * **addBatch()**: The addBatch() method of Statement, PreparedStatement, and CallableStatement is used to add individual statements to the batch.
 
