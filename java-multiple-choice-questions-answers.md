@@ -359,3 +359,33 @@ C. char and int
 
 Explanation: The wrapper class for int is Integer and the wrapper class for char is Character. All other primitives have the same name. For example, the wrapper class for boolean is Boolean.
 ```
+#### Q. How do you force garbage collection to occur at a certain point?
+A. Call System.forceGc()  
+B. Call System.gc()  
+C. Call System.requireGc()  
+D. None of the above   
+```
+D. None of the above
+
+Explanation: While you can suggest to the JVM that it might want to run a garbage collection cycle, the JVM is free to ignore your suggestion.
+```
+#### Q. How many of the String objects are eligible for garbage collection right before the end of the main method?
+```java
+public static void main(String[] fruits) {
+  String fruit1 = new String("apple");
+  String fruit2 = new String("orange");
+  String fruit3 = new String("pear");
+  fruit3 = fruit1;
+  fruit2 = fruit3;
+  fruit1 = fruit2;
+}
+```
+A. None  
+B. One  
+C. Two  
+D. Three  
+```
+C. Two 
+
+Explanation: All three references point to the String apple. This makes the other two String objects eligible for garbage collection.
+```
