@@ -261,3 +261,5 @@ cstmt.execute();
 #### Q. What is the use of setFetchSize() and setMaxRows() methods in Statement?
 #### Q. What is JDBC Savepoint? How to use it?
 #### Q. What are CLOB and BLOB data types in JDBC?
+#### Q. Explain optimistic and pessimistic locking in JDBC?
+
