@@ -243,10 +243,9 @@ The types of locks in JDBC:
 
 **4. Database Lock**: In order to prevent the read or update access from other transactions when the database is open, the database lock is used.
 
+#### Q. What are the differences between stored procedure and functions?
 #### Q. How can we store and retrieve images from the database?
 #### Q. How can we store and retrieve the file in the Oracle database?
-#### Q. What are the differences between stored procedure and functions?
-#### Q. What are stored procedures? How to call stored procedure using JDBC API?
 #### Q. What are the JDBC statements?
 #### Q. What is batch processing and how to perform batch processing in JDBC?
 #### Q. What is database connection pooling? What are the advantages of using a connection pool?
