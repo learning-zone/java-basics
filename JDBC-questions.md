@@ -194,40 +194,40 @@ Statement interface is used to execute normal SQL queries. We can’t pass the p
 /** Creating The Statement Object **/
 Statement stmt = con.createStatement();
   
-//Executing The Statement
+/** Executing The Statement **/
 stmt.executeUpdate("CREATE TABLE STUDENT(ID NUMBER NOT NULL, NAME VARCHAR)");
 ```
 **2. PreparedStatement**  
 
 PreparedStatement is used to execute dynamic or parameterized SQL queries. PreparedStatement extends Statement interface. We can pass the parameters to SQL query at run time using this interface. It is recommended to use PreparedStatement if we are executing a particular SQL query multiple times. It gives better performance than Statement interface. Because, PreparedStatement are precompiled and the query plan is created only once irrespective of how many times we are executing that query. 
 ```sql
-// Creating PreparedStatement object 
+/** Creating PreparedStatement object **/
 PreparedStatement pstmt = con.prepareStatement("update STUDENT set NAME = ? where ID = ?");
   
-//Setting values to place holders using setter methods of PreparedStatement object
-pstmt.setString(1, "MyName");   //Assigns "MyName" to first place holder
+/** Setting values to place holders using setter methods of PreparedStatement object **/
+pstmt.setString(1, "MyName");   /** Assigns "MyName" to first place holder **/
           
-pstmt.setInt(2, 111);     //Assigns "111" to second place holder
+pstmt.setInt(2, 111);     /** Assigns "111" to second place holder **/
  
-//Executing PreparedStatement
+/** Executing PreparedStatement **/
 pstmt.executeUpdate();
 ```
 **3. CallableStatement**  
 
 CallableStatement is used to execute the stored procedures. CallableStatement extends PreparedStatement. Usng CallableStatement, we can pass 3 types of parameters to stored procedures. They are : **IN** – used to pass the values to stored procedure, **OUT** – used to hold the result returned by the stored procedure and **IN OUT** – acts as both IN and OUT parameter. Before calling the stored procedure, we must register OUT parameters using **registerOutParameter()** method of CallableStatement. The performance of this interface is higher than the other two interfaces. Because, it calls the stored procedures which are already compiled and stored in the database server.
 ```sql
-//Creating CallableStatement object
+/** Creating CallableStatement object **/
 CallableStatement cstmt = con.prepareCall("{call anyProcedure(?, ?, ?)}");
  
-//Use cstmt.setter() methods to pass IN parameters
+/** Use cstmt.setter() methods to pass IN parameters **/
  
-//Use cstmt.registerOutParameter() method to register OUT parameters
+/** Use cstmt.registerOutParameter() method to register OUT parameters **/
  
-//Executing the CallableStatement
+/** Executing the CallableStatement **/
  
 cstmt.execute();
  
-//Use cstmt.getter() methods to retrieve the result returned by the stored procedure
+/** Use cstmt.getter() methods to retrieve the result returned by the stored procedure **/
 ```
 #### Q. What are CLOB and BLOB data types in JDBC?
 #### Q. What are the different types of lockings in JDBC?
