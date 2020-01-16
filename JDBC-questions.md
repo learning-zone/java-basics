@@ -229,7 +229,6 @@ cstmt.execute();
  
 /** Use cstmt.getter() methods to retrieve the result returned by the stored procedure **/
 ```
-#### Q. What are CLOB and BLOB data types in JDBC?
 #### Q. What are the different types of lockings in JDBC?
 #### Q. How can we store and retrieve images from the database?
 #### Q. How can we store and retrieve the file in the Oracle database?
@@ -261,3 +260,4 @@ cstmt.execute();
 #### Q. What is the use of getGeneratedKeys() method in Statement?
 #### Q. What is the use of setFetchSize() and setMaxRows() methods in Statement?
 #### Q. What is JDBC Savepoint? How to use it?
+#### Q. What are CLOB and BLOB data types in JDBC?
