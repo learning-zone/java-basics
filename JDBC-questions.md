@@ -334,6 +334,10 @@ int[] count = stmt.executeBatch();
 conn.commit();
 ```
 #### Q. What is database connection pooling? What are the advantages of using a connection pool?
+**Connection pooling** means that connections are reused rather than created each time a connection is requested. To facilitate connection reuse, a memory cache of database connections, called a connection pool, is maintained by a connection pooling module as a layer on top of any standard JDBC driver product.
+
+Connection pooling is performed in the background and does not affect how an application is coded; however, the application must use a DataSource object (an object implementing the DataSource interface) to obtain a connection instead of using the DriverManager class. 
+
 #### Q. What is JDBC Driver?
 #### Q. What are the JDBC API components?
 #### Q. What is the role of JDBC DriverManager class?
