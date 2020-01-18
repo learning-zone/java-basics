@@ -365,3 +365,6 @@ Connection pooling is performed in the background and does not affect how an app
 #### Q. How can we store and retrieve images from the database?
 #### Q. How can we store and retrieve the file in the Oracle database?
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
