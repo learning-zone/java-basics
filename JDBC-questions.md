@@ -338,7 +338,6 @@ conn.commit();
 
 Connection pooling is performed in the background and does not affect how an application is coded; however, the application must use a DataSource object (an object implementing the DataSource interface) to obtain a connection instead of using the DriverManager class. 
 
-
 **JDBC 3.0 API Framework**  
 
 The JDBC 3.0 API specifies a ConnectionEvent class and the following interfaces as the hooks for any connection pooling implementation:
@@ -347,6 +346,35 @@ The JDBC 3.0 API specifies a ConnectionEvent class and the following interfaces 
 * PooledConnection
 * ConnectionEventListener
 
+**JDBC Connection Pooling Frameworks: Apache Commons DBCP**  
+
+```java
+public class DBCPDataSource {
+     
+    private static BasicDataSource ds = new BasicDataSource();
+     
+    static {
+        ds.setUrl("jdbc:h2:mem:test");
+        ds.setUsername("user");
+        ds.setPassword("password");
+        ds.setMinIdle(5);
+        ds.setMaxIdle(10);
+        ds.setMaxOpenPreparedStatements(100);
+    }
+     
+    public static Connection getConnection() throws SQLException {
+        return ds.getConnection();
+    }
+     
+    private DBCPDataSource(){ }
+}
+```
+In this case, we've used a wrapper class with a static block to easily configure DBCP's properties.
+
+Here's how to get a pooled connection with the DBCPDataSource class:
+```java
+Connection con = DBCPDataSource.getConnection();
+```
 #### Q. What is JDBC Driver?
 #### Q. What are the JDBC API components?
 #### Q. What is the role of JDBC DriverManager class?
