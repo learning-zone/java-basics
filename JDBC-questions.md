@@ -338,6 +338,15 @@ conn.commit();
 
 Connection pooling is performed in the background and does not affect how an application is coded; however, the application must use a DataSource object (an object implementing the DataSource interface) to obtain a connection instead of using the DriverManager class. 
 
+
+**JDBC 3.0 API Framework**  
+
+The JDBC 3.0 API specifies a ConnectionEvent class and the following interfaces as the hooks for any connection pooling implementation:
+
+* ConnectionPoolDataSource
+* PooledConnection
+* ConnectionEventListener
+
 #### Q. What is JDBC Driver?
 #### Q. What are the JDBC API components?
 #### Q. What is the role of JDBC DriverManager class?
