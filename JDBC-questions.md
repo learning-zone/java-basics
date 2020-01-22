@@ -472,6 +472,24 @@ JDBC Driver is a software component that enables java application to interact wi
 * Network Protocol driver (fully java driver)
 * Thin driver (fully java driver)
 
+**1. JDBC-ODBC bridge driver**  
+
+The JDBC-ODBC bridge driver uses ODBC driver to connect to the database. The JDBC-ODBC bridge driver converts JDBC method calls into the ODBC function calls. This is now discouraged because of thin driver.
+
+Oracle does not support the JDBC-ODBC Bridge from Java 8. Oracle recommends that you use JDBC drivers provided by the vendor of your database instead of the JDBC-ODBC Bridge.
+
+**2. Native-API driver**  
+
+The Native API driver uses the client-side libraries of the database. The driver converts JDBC method calls into native calls of the database API. It is not written entirely in java.
+
+**3. Network Protocol driver**  
+
+The Network Protocol driver uses middleware (application server) that converts JDBC calls directly or indirectly into the vendor-specific database protocol. It is fully written in java.
+
+**4. Thin driver**  
+
+The thin driver converts JDBC calls directly into the vendor-specific database protocol. That is why it is known as thin driver. It is fully written in Java language.
+
 #### Q. What are the JDBC API components?
 #### Q. What is the role of JDBC DriverManager class?
 #### Q. What is JDBC Connection interface?
