@@ -542,6 +542,51 @@ Column Name of 1st column: ID
 Column Type Name of 1st column: NUMBER
 ```
 #### Q. What is JDBC DatabaseMetaData interface?
+DatabaseMetaData interface provides methods to get meta data of a database such as database product name, database product version, driver name, name of total number of tables, name of total number of views etc.
+
+| Methods                      | Description                          |
+|------------------------------|--------------------------------------|
+|getDriverName():              |It returns the name of the JDBC driver.|
+|getDriverVersion():           |It returns the version number of the JDBC driver.|
+|getUserName():                |It returns the username of the database.|
+|getDatabaseProductName():     |It returns the product name of the database.|
+|getDatabaseProductVersion():  |It returns the product version of the database.|
+|getTables():                  |It returns the description of the tables of the specified catalog. The table type can be TABLE, VIEW, ALIAS, SYSTEM TABLE, SYNONYM etc.|
+
+```java
+import java.sql.*;  
+class Dbmd {  
+
+  public static void main(String args[]) {  
+    
+    try {  
+      Class.forName("oracle.jdbc.driver.OracleDriver");  
+        
+      Connection con = DriverManager.getConnection(  
+      "jdbc:oracle:thin:@localhost:1521:xe","system","oracle");  
+      DatabaseMetaData dbmd = con.getMetaData();  
+        
+      System.out.println("Driver Name: "+dbmd.getDriverName());  
+      System.out.println("Driver Version: "+dbmd.getDriverVersion());  
+      System.out.println("UserName: "+dbmd.getUserName());  
+      System.out.println("Database Product Name: "+dbmd.getDatabaseProductName());  
+      System.out.println("Database Product Version: "+dbmd.getDatabaseProductVersion());  
+        
+      con.close();  
+    } catch(Exception e) { 
+        System.out.println(e);
+    }  
+  }  
+}  
+```
+Output
+```
+Driver Name: Oracle JDBC Driver
+       Driver Version: 10.2.0.1.0XE
+       Database Product Name: Oracle
+       Database Product Version: Oracle Database 10g Express Edition
+                                 Release 10.2.0.1.0 -Production
+```
 #### Q. What is the return type of Class.forName() method?
 #### Q. How can we set null value in JDBC PreparedStatement?
 #### Q. What are the differences between execute, executeQuery, and executeUpdate?
