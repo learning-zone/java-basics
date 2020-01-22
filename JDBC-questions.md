@@ -464,7 +464,6 @@ public class ConnectionPool {
     }
 }
 ```
-
 #### Q. What is JDBC Driver?
 #### Q. What are the JDBC API components?
 #### Q. What is the role of JDBC DriverManager class?
