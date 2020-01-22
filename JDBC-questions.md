@@ -507,7 +507,7 @@ The JDBC API provides the following interfaces and classes −
 * **SQLException**: This class handles any errors that occur in a database application.
 
 #### Q. What is JDBC ResultSetMetaData interface?
-ResultSetMetaData is an interface in java.sql package of JDBC API which is used to get the metadata about a ResultSet object. Whenever we query the database using SELECT statement, the result will be stored in a ResultSet object. Every ResultSet object is associated with one ResultSetMetaData object. This object will have all the meta data about a ResultSet object like schema name, table name, number of columns, column name, datatype of a column etc. We can get this ResultSetMetaData object using getMetaData() method of ResultSet.
+ResultSetMetaData is an interface in **java.sql** package of JDBC API which is used to get the metadata about a ResultSet object. Whenever we query the database using SELECT statement, the result will be stored in a ResultSet object. Every ResultSet object is associated with one ResultSetMetaData object. This object will have all the meta data about a ResultSet object like schema name, table name, number of columns, column name, datatype of a column etc. We can get this ResultSetMetaData object using **getMetaData()** method of ResultSet.
 
 ```java
 import java.sql.*;  
