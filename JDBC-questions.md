@@ -465,6 +465,13 @@ public class ConnectionPool {
 }
 ```
 #### Q. What is JDBC Driver?
+JDBC Driver is a software component that enables java application to interact with the database. There are 4 types of JDBC drivers:  
+
+* JDBC-ODBC bridge driver
+* Native-API driver (partially java driver)
+* Network Protocol driver (fully java driver)
+* Thin driver (fully java driver)
+
 #### Q. What are the JDBC API components?
 #### Q. What is the role of JDBC DriverManager class?
 #### Q. What is JDBC Connection interface?
