@@ -506,8 +506,6 @@ The JDBC API provides the following interfaces and classes −
 
 * **SQLException**: This class handles any errors that occur in a database application.
 
-
-#### Q. What is the role of JDBC DriverManager class?
 #### Q. What is JDBC Connection interface?
 #### Q. What is the purpose of JDBC ResultSet interface?
 #### Q. What is JDBC ResultSetMetaData interface?
