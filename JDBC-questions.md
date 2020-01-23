@@ -588,7 +588,7 @@ Driver Name: Oracle JDBC Driver
                                  Release 10.2.0.1.0 -Production
 ```
 #### Q. How can we set null value in JDBC PreparedStatement?
-Use the setNull method to bind null to the parameter. The setNull method accepts two parameter, index and the sql type as arguments.
+Use the **setNull()** method to bind null to the parameter. The setNull() method accepts two parameter, index and the sql type as arguments.
 
 ```java
 import java.sql.Connection;
