@@ -588,6 +588,43 @@ Driver Name: Oracle JDBC Driver
                                  Release 10.2.0.1.0 -Production
 ```
 #### Q. How can we set null value in JDBC PreparedStatement?
+Use the setNull method to bind null to the parameter. The setNull method accepts two parameter, index and the sql type as arguments.
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class Main {
+
+  public static void main(String[] args) throws Exception {
+    
+    Connection conn = getConnection();
+    PreparedStatement pstmt = null;
+
+    conn = getConnection();
+    String query = "insert into nullable_table(id,string_column, int_column) values(?, ?, ?)";
+
+    // create PrepareStatement object
+    pstmt = conn.prepareStatement(query);
+    pstmt.setString(1, "0001");
+    pstmt.setNull(2, java.sql.Types.VARCHAR);
+    pstmt.setNull(3, java.sql.Types.INTEGER);
+
+    // execute query, and return number of rows created
+    int rowCount = pstmt.executeUpdate();
+    System.out.println("rowCount=" + rowCount);
+
+    conn.close();
+  }
+
+  private static Connection getConnection() throws Exception {
+    Class.forName("org.hsqldb.jdbcDriver");
+    String url = "jdbc:hsqldb:mem:data/tutorial";
+    return DriverManager.getConnection(url, "sa", "");
+  }
+}
+```
 #### Q. What are the differences between execute, executeQuery, and executeUpdate?
 #### Q. Which interface is responsible for transaction management in JDBC?
 #### Q. How can we maintain the integrity of a database by using JDBC?
