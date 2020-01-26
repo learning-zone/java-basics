@@ -1570,6 +1570,9 @@ public class HashMapExample {
     } 
 } 
 ```
+#### Q. How does Java HashMap handles collisions?
+*TODO*
+
 #### Q. Write a code to convert HashMap to ArrayList.  
 ```java
 import java.util.ArrayList; 
