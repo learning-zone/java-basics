@@ -118,6 +118,19 @@ web.xml
     </servlet-mapping>
 </web-app>
 ```
+#### Q. What is a servlet?
+**A servlet** is an interface whose implementation extends the functionality of a server. A servlet interacts with clients through a request-response principle. Although servlets can handle any request, they are commonly used to expand web servers.
+
+Most of the classes and interfaces required to create servlets are contained in `javax.servlet` and packages `javax.servlet.http`.
+
+**Basic servlet methods**
+
+* `public void init(ServletConfig config) throws ServletException` starts immediately after loading the servlet into memory;
+* `public ServletConfig getServletConfig()` returns a reference to an object that provides access to servlet configuration information;
+* `public String getServletInfo()` returns a string containing information about the servlet, for example: author and version of the servlet;
+* `public void service(ServletRequest request, ServletResponse response) throws ServletException, java.io.IOException` called to process each request;
+* `public void destroy()` performed before unloading the servlet from memory.
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
