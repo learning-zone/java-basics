@@ -281,6 +281,9 @@ Connecting listeners:
 * create an instance of a class implementing this interface;
 * put the created instance into the session with `setAttribute(String, Object)`.
 
+#### Q. When to use servlet filters, and when to listeners?
+Filters should be used if it is necessary to process incoming or outgoing data (for example: for authentication, format conversion, compression, encryption, etc.), if it is necessary to respond to events, it is better to use listeners.
+
 #### Q. How to make sure a servlet is loaded at the application startup?
 #### Q. Write a servlet to upload file on server.
 #### Q. How do we go with database connection and log4j integration in servlet?
