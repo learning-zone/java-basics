@@ -557,10 +557,22 @@ Subclass
 ```
 #### Q. What is the difference between abstraction and encapsulation?
 * Abstraction solves the problem at design level while Encapsulation solves it implementation level. 
-
 * In Java, Abstraction is supported using `interface` and `abstract class` while Encapsulation is supported using access modifiers e.g. public, private and protected.
-
 * Abstraction is about hiding unwanted details while giving out most essential details, while Encapsulation means hiding the code and data into a single unit e.g. class or method to protect inner working of an object from outside world. 
+
+<table class="alt">
+<tbody><tr><th>Abstraction</th><th>Encapsulation</th></tr>
+<tr><td>Abstraction is a process of hiding the implementation details and showing only functionality to the user.</td>
+<td> Encapsulation is a process of wrapping code and data together into a single unit</td></tr>
+<tr><td>Abstraction lets you focus on what the object does instead of how it does it.</td>
+<td>Encapsulation provides you the control over the data and keeping it safe from outside misuse.</td></tr>
+<tr><td>Abstraction solves the problem in the Design Level.</td>
+<td>Encapsulation solves the problem in the Implementation Level.</td></tr>
+<tr><td>Abstraction is implemented by using Interfaces and Abstract Classes.</td>
+<td>Encapsulation is implemented by using Access Modifiers (private, default, protected, public)</td></tr>
+<tr><td>Abstraction means hiding implementation complexities by using interfaces and abstract class.</td>
+<td>Encapsulation means hiding data by using setters and getters.</td></tr>
+</tbody></table>
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
