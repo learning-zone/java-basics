@@ -297,6 +297,23 @@ If the integer value of this parameter is negative, then the servlet will be loa
     <load-on-startup> 1 </load-on-startup>
 </servlet>
 ```
+#### Q. How to handle exceptions thrown by another servlet in an application?
+When the application throws an exception, the servlet container processes it and creates an HTML response. This is similar to what happens with error codes like 404, 403, etc.
+
+In addition to this, it is possible to write your own servlets to handle exceptions and errors with their indication in the deployment descriptor:
+```xml
+<error-page>
+    <error-code> 404 </error-code>
+    <location> / AppExceptionHandler </location>
+</error-page>
+
+<error-page>
+    <exception-type> javax.servlet.ServletException </exception-type>
+    <location> / AppExceptionHandler </location>
+</error-page>
+```
+The main task of these servlets is to handle the error / exception and generate an understandable response to the user. For example, provide a link to the main page or a description of the error.
+
 #### Q. How to make sure a servlet is loaded at the application startup?
 #### Q. Write a servlet to upload file on server.
 #### Q. How do we go with database connection and log4j integration in servlet?
