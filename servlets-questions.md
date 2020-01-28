@@ -198,6 +198,7 @@ Then create a class `xyz.company.ExampleServlet` by inheriting from `HttpServlet
 #### Q. What are the differences between forward() method and sendRedirect() methods?
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
+
 #### Q. What are the different methods of session management in servlets?
 #### Q. What is MIME Type?
 #### Q. What is the use of servlet wrapper classes?
