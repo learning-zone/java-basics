@@ -137,6 +137,20 @@ Most of the classes and interfaces required to create servlets are contained in 
 * Using servlets increases the reliability of the program, as the servlet container itself takes care of the servlet life cycle (and therefore memory leaks), security, and the garbage collector.
 * Servlets are relatively easy to learn and maintain, so the developer only needs to care about the business logic of the application, and not the internal implementation of web technologies.
 
+#### Q. What is a servlet container?
+**A servlet container** is a program that is a server that provides system support for servlets and ensures their life cycle in accordance with the rules defined in the specifications. It can work as a full-fledged stand-alone web server, be a page provider for another web server, or integrate into a Java EE application server.
+
+The servlet container provides data exchange between the servlet and clients, takes on the execution of functions such as creating a software environment for a functioning servlet, identifying and authorizing clients, and organizing a session for each of them.
+
+The most famous servlet container implementations are:
+
+* Apache tomcat
+* Jetty
+* Jboss
+* Glassfish
+* IBM WebSphere
+* Oracle Weblogic
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
