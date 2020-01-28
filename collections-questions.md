@@ -994,6 +994,16 @@ Forward Traversal :
 Backward Traversal : 
 50 40 30 20 10
 ```
+
+**Methods of Iterator Interface**
+
+<table class="alt">
+<tbody><tr><th>No.</th><th>Method</th><th>Description</th></tr>
+<tr><td>1</td><td>public boolean hasNext()</td><td>It returns true if iterator has more elements.</td></tr>
+<tr><td>2</td><td>public Object next()</td><td>It returns the element and moves the cursor pointer to the next element.</td></tr>
+<tr><td>3</td><td>public void remove()</td><td>It removes the last elements returned by the iterator. It is rarely used.</td></tr>
+</tbody></table>
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
