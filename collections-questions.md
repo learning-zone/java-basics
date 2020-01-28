@@ -565,6 +565,28 @@ Output
 ```
 {.c=C, .cpp=C++, .cs=C#, .java=Java, .php=PHP, .pl=Perl, .xml=XML}
 ```
+
+**Useful Methods of Map Interface**
+
+<table class="alt">
+<tbody><tr><th>Method</th><th>Description</th></tr>
+<tr><td> Object put(Object key, Object value)</td><td>It is used to insert an entry in this map.</td></tr>
+<tr><td>void putAll(Map map)</td><td>It is used to insert the specified map in this map.</td></tr>
+<tr><td>Object remove(Object key)</td><td>It is used to delete an entry for the specified key.</td></tr>
+<tr><td>Object get(Object key)</td><td>It is used to return the value for the specified key.</td></tr>
+<tr><td>boolean containsKey(Object key)</td><td>It is used to search the specified key from this map.</td></tr>
+<tr><td>Set keySet()</td><td>It is used to return the Set view containing all the keys.</td></tr>
+<tr><td>Set entrySet()</td><td>It is used to return the Set view containing all the keys and values.</td></tr>
+</tbody></table>
+
+**Methods of Map.Entry Interface**  
+
+<table class="alt">
+<tbody><tr><th>Method</th><th>Description</th></tr>
+<tr><td> Object getKey()</td><td>It is used to obtain key.</td></tr>
+<tr><td>Object getValue()</td><td>It is used to obtain value.</td></tr>
+</tbody></table>
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
