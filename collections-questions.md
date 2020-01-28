@@ -46,6 +46,11 @@ A double ended queue (pronounced “deck“) that supports element insertion and
 
 Some common known classes implementing this interface are **ArrayDeque, ConcurrentLinkedDeque, LinkedBlockingDeque** and **LinkedList**.
 
+|           |List	|Set        |	Queue  |Map                             |
+|-----------|-------|-----------|----------|--------------------------------|
+|Order	    |Yes	|No	        |Yes	   |No                              |
+|Duplicates	|Yes	|No	        |Yes	   |No (Allow duplicate values not keys)|
+|Null Values|Yes	|Single Null|	Yes (LinkedList Queue). No (Priority Queue).|Single null key and many null values|
 
 **The Java Collections Framework provides the following benefits:**
 
