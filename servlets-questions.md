@@ -248,6 +248,9 @@ This configuration file specifies the deployment settings for a module or applic
 </web-app>
 ```
 For web applications, the deployment descriptor must be named `web.xml` and located in the directory `WEB-INF` at the root of the web application. This file is the standard deployment descriptor defined in the specification. There are also other types of descriptors, such as a deployment descriptor file `sun-web.xml` that contains Sun GlassFish Enterprise Server- specific deployment information for that particular application server or a file `application.xml` in the J2EE`META-INF` application directory.
+
+#### Q. Why do servlets use different listeners?
+
 #### Q. How to make sure a servlet is loaded at the application startup?
 #### Q. Write a servlet to upload file on server.
 #### Q. How do we go with database connection and log4j integration in servlet?
@@ -267,6 +270,22 @@ For web applications, the deployment descriptor must be named `web.xml` and loca
 #### Q. why we should override only no-airs init() method.
 #### Q. What is the difference between encodeRedirectUrl and encodeURL?
 #### Q. Why do we have servlet filters?
+A servlet filter is reusable Java code that converts the contents of HTTP requests, HTTP responses, and the information contained in HTML headers. The servlet filter pre-processes the request before it gets to the servlet, and / or subsequently processes the response coming from the servlet.
+
+Servlet filters can:
+
+* intercept servlet initiation before servlet initiation;
+* determine the contents of the request before the servlet is triggered;
+* modify the headers and data of the request into which the incoming request is packaged;
+* modify the headers and response data into which the received response is packaged;
+* intercept servlet initiation after accessing the servlet.
+
+A servlet filter can be configured to work with a single servlet or a group of servlets. The basis for the formation of filters is an interface javax.servlet.Filterthat implements three methods:
+
+* `void init(FilterConfig config) throws ServletException;`
+* `void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException;`
+* `void destroy();`
+
 #### Q. How to handle exceptions thrown by application with another servlet?
 #### Q. What are different ways for servlet authentication?
 #### Q. What is Servlet Chaining?
