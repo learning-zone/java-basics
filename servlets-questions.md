@@ -165,6 +165,24 @@ Thus, the servlet is created the first time it is accessed and lives throughout 
 * `public void service(ServletRequest request, ServletResponse response)` - called for each request. The method cannot be called before the init()method is executed .
 * `public void destroy()` - called to destroy the servlet (once during the life of the servlet).
 
+#### Q. What actions do you need to do when creating servlets?
+To create a servlet `ExampleServlet`, you must describe it in the deployment descriptor:
+```xml
+<servlet-mapping>
+    <servlet-name> ExampleServlet </servlet-name>
+    <url-pattern> / example </url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name> ExampleServlet </servlet-name>
+    <servlet-class> xyz.company.ExampleServlet </servlet-class>
+    <init-param>
+        <param-name> config </param-name>
+        <param-value> default </param-value>
+    </init-param>       
+</servlet>
+```
+Then create a class `xyz.company.ExampleServlet` by inheriting from `HttpServlet` and implement the logic of its work in the method `service()`/ methods `doGet()`/ `doPost()`.
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
