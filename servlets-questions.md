@@ -284,6 +284,19 @@ Connecting listeners:
 #### Q. When to use servlet filters, and when to listeners?
 Filters should be used if it is necessary to process incoming or outgoing data (for example: for authentication, format conversion, compression, encryption, etc.), if it is necessary to respond to events, it is better to use listeners.
 
+#### Q. How to implement servlet launch simultaneously with application launch?
+A servlet container typically loads a servlet at the first request of a client.
+
+If you need to load a servlet right at the start of the application (for example, if the servlet has been loading for a long time), you should use an element <load-on-startup>in the descriptor or an annotation @loadOnStartupin the servlet code, which will indicate the need to load the servlet at startup.
+
+If the integer value of this parameter is negative, then the servlet will be loaded when the client requests. Otherwise, it will load at the start of the application, and the smaller the number, the earlier it will be in the download queue.
+```xml
+<servlet>
+    <servlet-name> ExampleServlet </servlet-name>
+    <servlet-class> xyz.company.ExampleServlet </servlet-class>
+    <load-on-startup> 1 </load-on-startup>
+</servlet>
+```
 #### Q. How to make sure a servlet is loaded at the application startup?
 #### Q. Write a servlet to upload file on server.
 #### Q. How do we go with database connection and log4j integration in servlet?
