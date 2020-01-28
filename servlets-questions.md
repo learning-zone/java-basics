@@ -183,6 +183,13 @@ To create a servlet `ExampleServlet`, you must describe it in the deployment des
 ```
 Then create a class `xyz.company.ExampleServlet` by inheriting from `HttpServlet` and implement the logic of its work in the method `service()`/ methods `doGet()`/ `doPost()`.
 
+#### Q. What are the most common tasks performed in a servlet container?
+* **Support data exchange**: The servlet container provides an easy way to exchange data between the web client (browser) and the servlet. Thanks to the container, there is no need to create a socket listener on the server to track requests from the client, as well as parse the request and generate a response. All these important and complex tasks are solved using the container and the developer can focus on the business logic of the application.
+* **Servlet and resource lifecycle management**: From servlet loading into memory, initialization, implementation of methods, and ending with servlet destruction. The container also provides additional utilities, such as JNDI, for managing the resource pool.
+* **Multithreading support**: The container independently creates a new thread for each request and provides it with a request and response for processing. Thus, the servlet is not reinitialized for each request and thereby saves memory and reduces the time before processing the request.
+* **JSP support**: JSP classes are not like standard Java classes, but the servlet container converts each JSP into a servlet and is then managed by the container as a regular servlet.
+* **Various tasks**: The servlet container manages the resource pool, application memory, and garbage collector. Security settings and more.
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
