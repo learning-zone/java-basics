@@ -2843,6 +2843,24 @@ public class MainClass {
 #### Q. Scenario where in we have to download a big file by clicking on a link, how will you make sure that connections is reliable throughout. 
 * use `persistent MQueues`
 
+#### Q. What are methods of Object Class?
+The Object class is the parent class of all the classes in java by default.
+
+<table class="alt">
+<tbody><tr><th>Method</th><th>Description</th></tr>
+<tr><td>public final Class getClass()</td><td>returns the Class class object of this object. The Class class can further be used to get the metadata of this class.</td></tr>
+<tr><td>public int hashCode()</td><td> returns the hashcode number for this object.</td></tr>
+<tr><td>public boolean equals(Object obj)</td><td> compares the given object to this object.</td></tr>
+<tr><td>protected Object clone() throws CloneNotSupportedException</td><td> creates and returns the exact copy (clone) of this object.</td></tr>
+<tr><td>public String toString()</td><td> returns the string representation of this object.</td></tr>
+<tr><td>public final void notify()</td><td> wakes up single thread, waiting on this object's monitor.</td></tr>
+<tr><td>public final void notifyAll()</td><td> wakes up all the threads, waiting on this object's monitor.</td></tr>
+<tr><td>public final void wait(long timeout)throws InterruptedException</td><td> causes the current thread to wait for the specified milliseconds, until another thread notifies (invokes notify() or notifyAll() method).</td></tr>
+<tr><td>public final void wait(long timeout,int nanos)throws InterruptedException</td><td>causes the current thread to wait for the specified milliseconds and nanoseconds, until another thread notifies (invokes notify() or notifyAll() method).</td></tr>
+<tr><td>public final void wait()throws InterruptedException</td><td> causes the current thread to wait, until another thread notifies (invokes notify() or notifyAll() method).</td></tr>
+<tr><td>protected void finalize()throws Throwable</td><td> is invoked by the garbage collector before object is being garbage collected.</td></tr>
+</tbody></table>
+
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
