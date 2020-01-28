@@ -131,6 +131,12 @@ Most of the classes and interfaces required to create servlets are contained in 
 * `public void service(ServletRequest request, ServletResponse response) throws ServletException, java.io.IOException` called to process each request;
 * `public void destroy()` performed before unloading the servlet from memory.
 
+#### Q. What are the advantages of servlet technology over CGI (Common Gateway Interface)?
+* Servlets provide better query processing performance and more efficient use of memory by taking advantage of multithreading (a new thread is created for each request, which is faster than allocating memory for a new object for each request, as happens in CGI).
+* Servlets, both platform and system are independent. Thus, a web application written using servlets can be run in any servlet container that implements this standard and in any operating system.
+* Using servlets increases the reliability of the program, as the servlet container itself takes care of the servlet life cycle (and therefore memory leaks), security, and the garbage collector.
+* Servlets are relatively easy to learn and maintain, so the developer only needs to care about the business logic of the application, and not the internal implementation of web technologies.
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
