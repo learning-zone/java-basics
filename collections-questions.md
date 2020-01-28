@@ -2,27 +2,31 @@
 
 
 #### Q. What is Java Collections Framework? List out some benefits of Collections framework?
+
+![Java Collections Framework](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection.png)
+
+
 The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects. Java Collections can achieve all the operations that we perform on a data such as searching, sorting, insertion, manipulation, and deletion.
 
 Java Collection means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
 
-**Collection Interface**  
+**1. Collection Interface**  
 
 Collection interface is at the root of the hierarchy. Collection interface provides all general purpose methods which all collections classes must support (or throw UnsupportedOperationException). It extends **Iterable** interface which adds support for iterating over collection elements using the “for-each loop” statement.
 
-**List**  
+**2. List**  
 
 Lists represents an **ordered collection** of elements. Using lists, we can access elements by their integer index (position in the list), and search for elements in the list. index start with 0, just like an array.
 
 Some useful classes which implement List interface are – **ArrayList**, **CopyOnWriteArrayList**, **LinkedList**, **Stack** and **Vector**.
 
-**Set**  
+**3. Set**  
 
 Sets represents a collection of **sorted** elements. Sets do not allow the duplicate elements. Set interface does not provides no guarantee to return the elements in any predictable order; though some Set implementations store elements in their natural ordering and guarantee this order.
 
 Some useful classes which implement Set interface are – **ConcurrentSkipListSet**, **CopyOnWriteArraySet**, **EnumSet**, **HashSet**, **LinkedHashSet** and **TreeSet**.
 
-**Map**  
+**4. Map**  
 
 The Map interface enable us to store data in key-value pairs (keys should be immutable). A map cannot contain duplicate keys; each key can map to at most one value.
 
@@ -30,17 +34,17 @@ The Map interface provides three collection views, which allow a map’s content
 
 Some useful classes which implement Map interface are – **ConcurrentHashMap**, **ConcurrentSkipListMap**, **EnumMap**, **HashMap**, **Hashtable**, **IdentityHashMap**, **LinkedHashMap**, **Properties**, **TreeMap** and **WeakHashMap**.
 
-**Stack**  
+**5. Stack**  
 
 The Java Stack interface represents a classical stack data structure, where elements can be pushed to last-in-first-out (LIFO) stack of objects. In Stack we push an element to the top of the stack, and popped off from the top of the stack again later.
 
-**Queue**  
+**6. Queue**  
 
 A queue data structure is intended to hold the elements (put by producer threads) prior to processing by consumer thread(s). Besides basic Collection operations, queues provide additional insertion, extraction, and inspection operations.
 
 Some useful classes which implement Map interface are – **ArrayBlockingQueue, ArrayDeque, ConcurrentLinkedDeque, ConcurrentLinkedQueue, DelayQueue, LinkedBlockingDeque, LinkedBlockingQueue, LinkedList, LinkedTransferQueue, PriorityBlockingQueue, PriorityQueue and SynchronousQueue**.
 
-**Deque**  
+**7. Deque**  
 
 A double ended queue (pronounced “deck“) that supports element insertion and removal at both ends. When a deque is used as a queue, FIFO (First-In-First-Out) behavior results. When a deque is used as a stack, LIFO (Last-In-First-Out) behavior results.
 
@@ -60,8 +64,6 @@ Some common known classes implementing this interface are **ArrayDeque, Concurre
 * Reduces effort to learn and to use new APIs
 * Reduces effort to design new APIs
 * Fosters software reuse
-
-![Java Collections Framework](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection.png)
 
 
 **Methods of Collection Interface**
@@ -83,6 +85,10 @@ Some common known classes implementing this interface are **ArrayDeque, Concurre
 <tr><td>13</td><td>public boolean equals(Object element)</td><td>matches two collection.</td></tr>
 <tr><td>14</td><td>public int hashCode()</td><td>returns the hashcode number for collection.</td></tr>
 </tbody></table>
+
+**Collections Framework Implementation Classes Summary**  
+
+![Collection Class](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection-class.png)
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
