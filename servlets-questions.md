@@ -250,6 +250,36 @@ This configuration file specifies the deployment settings for a module or applic
 For web applications, the deployment descriptor must be named `web.xml` and located in the directory `WEB-INF` at the root of the web application. This file is the standard deployment descriptor defined in the specification. There are also other types of descriptors, such as a deployment descriptor file `sun-web.xml` that contains Sun GlassFish Enterprise Server- specific deployment information for that particular application server or a file `application.xml` in the J2EE`META-INF` application directory.
 
 #### Q. Why do servlets use different listeners?
+The Listener (listener) acts as a trigger, performing certain actions when an event occurs in the servlet's life cycle.
+
+Listeners divided by scope:
+
+* Request:
+    * `ServletRequestListener` used to catch the moment of creation and destruction of the request;
+    * `ServletRequestAttributeListener` used to listen for events occurring with request attributes.
+* Context:
+    * `ServletContextListener` allows you to catch the moment when the context is initialized or destroyed;
+    * `ServletContextAttributeListener` used to listen for events occurring with attributes in context.
+* Session:
+    * `HttpSessionListener` allows you to catch the moment of creation and destruction of the session;
+    * `HttpSessionAttributeListener` used when listening to events occurring with attributes in the session;
+    * `HttpSessionActivationListener` used if session migration occurs between different JVMs in distributed applications;
+    * `HttpSessionBindingListener` It is also used to listen for events occurring with attributes in the session. The difference between `HttpSessionAttributeListener` and `HttpSessionBindingListenerlisteners`: the first is declared in `web.xml`; an instance of the class is created automatically by the container in the singular and applies to all sessions; second: an instance of the class must be created and assigned to a certain session “manually”, the number of instances is also independently regulated.
+
+Connecting listeners:
+```xml
+<web-app>
+    ...
+    <listener>
+        <listener-class> xyz.company.ExampleListener </listener-class>
+    </listener>
+    ...
+</web-app>
+```
+`HttpSessionBindingListener` It is connected as an attribute directly to the session, i.e. to connect it you need to:
+
+* create an instance of a class implementing this interface;
+* put the created instance into the session with `setAttribute(String, Object)`.
 
 #### Q. How to make sure a servlet is loaded at the application startup?
 #### Q. Write a servlet to upload file on server.
