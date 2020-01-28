@@ -63,6 +63,27 @@ Some common known classes implementing this interface are **ArrayDeque, Concurre
 
 ![Java Collections Framework](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection.png)
 
+
+**Methods of Collection Interface**
+
+<table class="alt">
+<tbody><tr><th>No.</th><th>Method</th><th>Description</th></tr>
+<tr><td>1</td><td>public boolean add(Object element)</td><td> is used to insert an element in this collection.</td></tr>
+<tr><td>2</td><td>public boolean addAll(Collection c)</td><td>is used to insert the specified collection elements in the invoking collection.</td></tr>
+<tr><td>3</td><td>public boolean remove(Object element)</td><td>is used to delete an element from this collection.</td></tr>
+<tr><td>4</td><td>public boolean removeAll(Collection c)</td><td>is used to delete all the elements of specified collection from the invoking collection.</td></tr>
+<tr><td>5</td><td>public boolean retainAll(Collection c)</td><td>is used to delete all the elements of invoking collection except the specified collection.</td></tr>
+<tr><td>6</td><td>public int size()</td><td>return the total number of elements in the collection.</td></tr>
+<tr><td>7</td><td>public void clear()</td><td>removes the total no of element from the collection.</td></tr>
+<tr><td>8</td><td>public boolean contains(Object element)</td><td>is used to search an element.</td></tr>
+<tr><td>9</td><td>public boolean containsAll(Collection c)</td><td>is used to search the specified collection in this collection.</td></tr>
+<tr><td>10</td><td>public Iterator iterator()</td><td>returns an iterator.</td></tr>
+<tr><td>11</td><td>public Object[] toArray()</td><td>converts collection into array.</td></tr>
+<tr><td>12</td><td>public boolean isEmpty()</td><td>checks if collection is empty.</td></tr>
+<tr><td>13</td><td>public boolean equals(Object element)</td><td>matches two collection.</td></tr>
+<tr><td>14</td><td>public int hashCode()</td><td>returns the hashcode number for collection.</td></tr>
+</tbody></table>
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
