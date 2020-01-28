@@ -183,6 +183,46 @@ Thus, the servlet is created the first time it is accessed and lives throughout 
 #### Q. What is servlet attributes and their scope?
 #### Q. How can we achieve transport layer security for our web application?
 #### Q. What is a deployment descriptor?
+A deployment descriptor is an artifact configuration file that will be deployed to a servlet container. In the Java Platform specification, Enterprise Edition, the deployment descriptor describes how a component, module, or application (such as a web or enterprise application) should be deployed.
+
+This configuration file specifies the deployment settings for a module or application with specific settings, security settings, and describes specific configuration requirements. The deployment descriptor file syntax is XML.
+```xml
+<?xml version = "1.0" encoding = "UTF-8"?>
+<web-app  xmlns = "http://java.sun.com/xml/ns/j2ee"
+     xmlns : xsi = "http://www.w3.org/2001/XMLSchema-instance"
+     xsi : schemaLocation = "http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+     version="2.4">
+
+    <display-name> Display name. </display-name>
+    <description> Description text. </description>
+
+    <servlet>
+        <servlet-name> ExampleServlet </servlet-name>
+        <servlet-class> xyz.company.ExampleServlet </servlet-class>
+        <load-on-startup> 1 </load-on-startup>
+        <init-param>
+            <param-name> configuration </param-name>
+            <param-value> default </param-value>
+        </init-param>       
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name> ExampleServlet </servlet-name>
+        <url-pattern> / example </url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name> ExampleJSP </servlet-name>
+        <jsp-file> /sample/Example.jsp </jsp-file>
+    </servlet>
+
+    <context-param>
+        <param-name> myParam </param-name>
+        <param-value> the value </param-value>
+    </context-param>
+</web-app>
+```
+For web applications, the deployment descriptor must be named `web.xml` and located in the directory `WEB-INF` at the root of the web application. This file is the standard deployment descriptor defined in the specification. There are also other types of descriptors, such as a deployment descriptor file `sun-web.xml` that contains Sun GlassFish Enterprise Server- specific deployment information for that particular application server or a file `application.xml` in the J2EE`META-INF` application directory.
 #### Q. How to make sure a servlet is loaded at the application startup?
 #### Q. Write a servlet to upload file on server.
 #### Q. How do we go with database connection and log4j integration in servlet?
