@@ -151,6 +151,20 @@ The most famous servlet container implementations are:
 * IBM WebSphere
 * Oracle Weblogic
 
+#### Q. How does the servlet container manage the servlet life cycle, when and what methods are called?
+The servlet container manages the four phases of the servlet life cycle:
+
+* **Servlet class loading** - when the container receives a request for a servlet, the servlet class is loaded into memory and its constructor is called without parameters.
+* **Initialization of the servlet class** - after the class is loaded, the container initializes the object ServletConfigfor this servlet and implements it through the init()method. This is where the servlet class is converted from a regular class to a servlet.
+* **Request processing** - after initialization, the servlet is ready to process requests. For each client request, the servlet container spawns a new thread and calls the method service()by passing a reference to the object's responses and request.
+* **Delete** - when the container stops or the application stops, the servlet container destroys the servlet classes by calling the destroy() method.
+
+Thus, the servlet is created the first time it is accessed and lives throughout the entire application run time (unlike the class objects that are destroyed by the garbage collector after they are no longer used) and the entire servlet life cycle can be described as a sequence of method calls:
+
+* `public void init(ServletConfig config)` - Used by the container to initialize the servlet. Called once during the servlet's lifetime.
+* `public void service(ServletRequest request, ServletResponse response)` - called for each request. The method cannot be called before the init()method is executed .
+* `public void destroy()` - called to destroy the servlet (once during the life of the servlet).
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
