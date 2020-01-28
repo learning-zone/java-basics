@@ -177,7 +177,6 @@ The most famous servlet container implementations are:
 #### Q. What are Scriptlets ?
 #### Q. What is different between web server and application server?
 #### Q. Which HTTP method is non-idempotent?
-#### Q. What are common tasks performed by Servlet Container?
 #### Q. What is difference between PrintWriter and ServletOutputStream?
 #### Q. How can we create deadlock situation in servlet?
 #### Q. What is SingleThreadModel interface?
