@@ -155,9 +155,9 @@ The most famous servlet container implementations are:
 The servlet container manages the four phases of the servlet life cycle:
 
 * **Servlet class loading** - when the container receives a request for a servlet, the servlet class is loaded into memory and its constructor is called without parameters.
-* **Initialization of the servlet class** - after the class is loaded, the container initializes the object ServletConfigfor this servlet and implements it through the init()method. This is where the servlet class is converted from a regular class to a servlet.
-* **Request processing** - after initialization, the servlet is ready to process requests. For each client request, the servlet container spawns a new thread and calls the method service()by passing a reference to the object's responses and request.
-* **Delete** - when the container stops or the application stops, the servlet container destroys the servlet classes by calling the destroy() method.
+* **Initialization of the servlet class** - after the class is loaded, the container initializes the object ServletConfigfor this servlet and implements it through the `init()` method. This is where the servlet class is converted from a regular class to a servlet.
+* **Request processing** - after initialization, the servlet is ready to process requests. For each client request, the servlet container spawns a new thread and calls the method `service()` by passing a reference to the object's responses and request.
+* **Delete** - when the container stops or the application stops, the servlet container destroys the servlet classes by calling the `destroy()` method.
 
 Thus, the servlet is created the first time it is accessed and lives throughout the entire application run time (unlike the class objects that are destroyed by the garbage collector after they are no longer used) and the entire servlet life cycle can be described as a sequence of method calls:
 
