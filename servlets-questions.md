@@ -233,6 +233,11 @@ Access to the interface can be obtained using the interface method `ServletConte
 * Slower forward()because Requires creating a new request;
 * Defined in the interface HttpServletResponse.
 
+#### Q. What are servlet attributes used for and how do you work with them?
+Servlet attributes are used for internal servlet communication.
+
+The web application has the ability to work with attributes using the methods `setAttribute()`, `getAttribute()`, `removeAttribute()`, `getAttributeNames()`, who provided interfaces ServletRequest, HttpSessionand ServletContext(for the scope request, the session, context The respectively).
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
