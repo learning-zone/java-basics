@@ -66,12 +66,12 @@ ServletContext is a configuration Object which is created when web application i
 
 **ServletContext Interface Methods**
 
-**1. public String getInitParameter(String name)**: Returns the parameter value for the specified parameter name.
-**2. public Enumeration getInitParameterNames()**: Returns the names of the context's initialization parameters.
-**3. public void setAttribute(String name,Object object)**: sets the given object in the application scope.
-**4. public Object getAttribute(String name)**: Returns the attribute for the specified name.
-**5. public Enumeration getInitParameterNames()**: Returns the names of the context's initialization parameters as an Enumeration of String objects.
-**6. public void removeAttribute(String name)**: Removes the attribute with the given name from the servlet context.
+**1. public String getInitParameter(String name)**: Returns the parameter value for the specified parameter name.  
+**2. public Enumeration getInitParameterNames()**: Returns the names of the context's initialization parameters.  
+**3. public void setAttribute(String name,Object object)**: sets the given object in the application scope.  
+**4. public Object getAttribute(String name)**: Returns the attribute for the specified name.  
+**5. public Enumeration getInitParameterNames()**: Returns the names of the context's initialization parameters as an Enumeration of String objects.  
+**6. public void removeAttribute(String name)**: Removes the attribute with the given name from the servlet context.  
 
 Example: DemoServlet.java
 ```java
