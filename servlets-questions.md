@@ -264,6 +264,11 @@ An abstract class GenericServletis an implementation of the interface independen
 * `doOptions()`- for processing HTTP requests OPTIONS;
 * `doTrace()`- for processing HTTP requests TRACE.
 
+#### Q. Which HTTP method is not immutable?
+An HTTP method is called immutable if it always returns the same result on the same request. HTTP methods `GET`, `PUT`, `DELETE`, `HEAD` and `OPTIONS` are immutable, so it is necessary to implement an application so that these methods return the same results consistently. Variable methods include a method `POST` that is used to implement something that changes with each request.
+
+For example, to access a static HTML page, a method is used `GET`, because it always returns the same result. If you need to save any information, for example in a database, you need to use the `POST` method.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
