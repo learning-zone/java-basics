@@ -214,7 +214,7 @@ Example:
 #### Q. How JSP pages are processed, from the request to the server to the response to the user?
 When the user `page.jsp` follows the link to the page , he sends an http request to the server `GET /page.jsp`. Then, based on this request and the text of the page itself, the server generates a java class, compiles it and executes the resulting servlet, which forms a response to the user in the form of a representation of this page, which the server redirects back to the user.
 
-#### Q. What are the life-cycle methods for a jsp?
+#### Q. What are the the stages (phases) of the JSP life cycle?
 The JSP life cycle consists of several phases that are managed by the JSP container:
 
 * **Translation** - checking and parsing the JSP page code to create the servlet code.
