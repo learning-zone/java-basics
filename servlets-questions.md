@@ -242,6 +242,10 @@ The web application has the ability to work with attributes using the methods `s
 The real path to the servlet location on the server can be obtained from the object 
 ServletContext: `getServletContext().getRealPath(request.getServletPath())`.
 
+#### Q. How to get server information from a servlet?
+Information about the server can be obtained from the object ServletContext:
+`getServletContext().getServerInfo()`.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
