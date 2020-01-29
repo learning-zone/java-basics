@@ -255,6 +255,14 @@ Custom handlers can `ServletRequest` also `ServletResponse` be implemented by ad
 #### Q. What are the differences GenericServletand HttpServlet?
 An abstract class GenericServletis an implementation of the interface independent of the protocol used Servlet, and an abstract class, HttpServletin turn, extends GenericServletfor the HTTP protocol.
 
+#### Q. What are the main methods present in the class HttpServlet?
+* `doGet()`- for processing HTTP requests GET;
+* `doPost()`- for processing HTTP requests POST;
+* `doPut()`- for processing HTTP requests PUT;
+* `doDelete()`- for processing HTTP requests DELETE;
+* `doHead()`- for processing HTTP requests HEAD;
+* `doOptions()`- for processing HTTP requests OPTIONS;
+* `doTrace()`- for processing HTTP requests TRACE.
 
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
