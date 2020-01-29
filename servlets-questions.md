@@ -296,6 +296,13 @@ Servlet API provides support for cookies through the class `javax.servlet.http.C
 #### Q. What is URL Rewriting?
 **URL Rewriting** - special rewriting (recoding) of the original URL. This mechanism can be used to control the session in servlets when cookies are disabled.
 
+#### Q. What is difference between encodeURL() and encodeRedirectURL()?
+`HttpServletResponse.encodeURL()` provides a way to convert a URL to HTML hyperlink with the conversion of special characters and spaces, as well as adding session id to the URL. This behavior is similar `java.net.URLEncoder.encode()`, but with the addition of an additional parameter `jsessionid` at the end of the URL.
+
+The method `HttpServletResponse.encodeRedirectURL()` translates the URL for later use in the method `sendRedirect()`.
+
+Thus for HTML hyperlinks when URL rewriting is necessary to use `encodeURL()`, and for the URL when redirecting - `encodeRedirectUrl()`.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
