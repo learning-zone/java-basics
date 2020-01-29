@@ -306,6 +306,9 @@ Thus for HTML hyperlinks when URL rewriting is necessary to use `encodeURL()`, a
 #### Q. How to notify an object in a session that a session is invalid or has ended?
 To be sure that the object will be notified about the termination of the session, you need to implement the interface `javax.servlet.http.HttpSessionBindingListener`. Two methods of this interface: `valueBound()` and `valueUnbound()` are used when adding an object as an attribute to a session and when destroying a session, respectively.
 
+#### Q. What is an effective way to make sure that all servlets are only accessible to the user with the correct session?
+Servlet filters are used to intercept all requests between the servlet container and the servlet. Therefore, it is logical to use the appropriate filter to check the necessary information (for example, the validity of the session) in the request.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
