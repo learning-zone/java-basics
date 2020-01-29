@@ -212,7 +212,27 @@ Two methods are implemented in the interface:
 
 Access to the interface can be obtained using the interface method `ServletContext`- `RequestDispatcher getRequestDispatcher(String path)`, where the path starting with `/` is interpreted relative to the current root path of the context.
 
-#### Q. What are the differences between forward() method and sendRedirect() methods?
+#### Q. What are the differences between forward() and sendRedirect() methods?
+**forward()**
+
+* Performed on the server side;
+* The request is redirected to another resource within the same server;
+* It does not depend on the client request protocol of the client, as it is provided by the servlet container;
+* Cannot be used to inject a servlet in a different context;
+* The client does not know about the actually processed resource and the URL in the string remains the same;
+* It is faster than the method sendRedirect();
+* Defined in the interface RequestDispatcher.
+
+**sendRedirect()**
+
+* Performed on the client side;
+* A response is returned to the client 302 (redirect)and the request is redirected to another server;
+* It can only be used with HTTP clients;
+* Permitted to be used to implement a servlet in a different context;
+* The URL is changed to the address of the new resource;
+* Slower forward()because Requires creating a new request;
+* Defined in the interface HttpServletResponse.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
