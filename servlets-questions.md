@@ -195,10 +195,18 @@ Then create a class `xyz.company.ExampleServlet` by inheriting from `HttpServlet
 #### Q. What is a servlet? What is the life-cycle of a servlet?
 #### Q. What are the differences between Get and Post methods?
 #### Q. What is Request Dispatcher?
+The interface is `RequestDispatcher` used to transfer the request to another resource, while it is possible to add data received from this resource to the servlet’s own response. This interface is also used for internal communication between servlets in the same context.
+
+Two methods are implemented in the interface:
+
+* `void forward(ServletRequest var1, ServletResponse var2)` - transfers the request from the servlet to another resource (servlet, JSP or HTML file) on the server.
+* `void include(ServletRequest var1, ServletResponse var2)` - includes the content of the resource (servlet, JSP or HTML page) in the response.
+
+Access to the interface can be obtained using the interface method `ServletContext`- `RequestDispatcher getRequestDispatcher(String path)`, where the path starting with `/` is interpreted relative to the current root path of the context.
+
 #### Q. What are the differences between forward() method and sendRedirect() methods?
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
-
 #### Q. What are the different methods of session management in servlets?
 #### Q. What is MIME Type?
 #### Q. What is the use of servlet wrapper classes?
