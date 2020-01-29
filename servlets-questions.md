@@ -309,6 +309,9 @@ To be sure that the object will be notified about the termination of the session
 #### Q. What is an effective way to make sure that all servlets are only accessible to the user with the correct session?
 Servlet filters are used to intercept all requests between the servlet container and the servlet. Therefore, it is logical to use the appropriate filter to check the necessary information (for example, the validity of the session) in the request.
 
+#### Q. How can we provide transport layer security for our web application?
+To provide transport layer security, you must configure SSL support for the container servlet. How to do this depends on the particular implementation of the servlet container.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
