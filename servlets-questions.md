@@ -318,6 +318,22 @@ To provide transport layer security, you must configure SSL support for the cont
 * **Dynamically add web components**: Now you can programmatically add filters and listeners using the ServletContextobject. For this purpose methods are used addServlet(), addFilter(), addListener(). Using this innovation, it became possible to build a dynamic system in which the necessary object will be created and called only when necessary.
 * **Asynchronous execution**: Support for asynchronous processing allows you to transfer the execution of a request to another thread without keeping the entire server busy.
 
+#### Q. What authentication methods are available to the servlet?
+The servlet specification defines four types of authentication:
+
+* **HTTP Basic Authentication** - `BASIC`: When accessing private resources, a window appears that asks you to enter authentication information.
+* **Form Based Login** - `FORM`: The native html form is used:
+* **HTTP Digest Authentication** - `DIGEST`: Digital authentication with encryption.
+* **HTTPS Authentication** - `CLIENT-CERT`: Authentication with a client certificate.
+```xml
+<login-config>
+    <auth-method> FORM </auth-method>
+    <form-login-config>
+        <form-login-page> /login.html </form-login-page>
+        <form-error-page> /error.html </form-error-page>
+    </form-login-config>
+</login-config>
+```
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
