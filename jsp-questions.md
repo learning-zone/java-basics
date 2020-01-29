@@ -215,6 +215,16 @@ Example:
 When the user `page.jsp` follows the link to the page , he sends an http request to the server `GET /page.jsp`. Then, based on this request and the text of the page itself, the server generates a java class, compiles it and executes the resulting servlet, which forms a response to the user in the form of a representation of this page, which the server redirects back to the user.
 
 #### Q. What are the life-cycle methods for a jsp?
+The JSP life cycle consists of several phases that are managed by the JSP container:
+
+* **Translation** - checking and parsing the JSP page code to create the servlet code.
+* **Compilation** - compilation of the servlet source code.
+* **Class Loading** - loading a compiled class into memory.
+* **Instantiation** - the implementation of the constructor without the parameter of the loaded class for initialization in memory.
+* **Initialization** - calling the `init()` method of the JSP class object and initializing the servlet configuration with the initial parameters that are specified in the deployment descriptor (`web.xml`). After this phase, the JSP is able to handle client requests. Typically, these phases occur after the first client request (i.e., lazy loading), but you can configure the loading and initialization of JSP at the start of the application, similar to servlets.
+* **Request Processing** - the long life cycle of processing client requests with a JSP page. Processing is multithreaded and similar to servlets - for each request a new thread, objects are created, `ServletRequest` and the `ServletResponseservice` methods are executed.
+* **Destroy** is the last phase of the JSP life cycle in which its class is removed from memory. This usually happens when you turn off the server or unload the application.
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
