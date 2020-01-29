@@ -280,6 +280,19 @@ There are several ways to provide a unique session identifier:
     * Most often, just tracking a session is not enough, you also need to save any additional data about it that may be required when processing subsequent requests. Implementing this behavior requires a lot of extra effort.
     * All of the above methods are not universal: for each of them you can choose a specific scenario in which they will not work.
 
+#### Q. What are cookies? What methods for working with cookies are provided in servlets?
+Cookies (“cookies”) - a small piece of data sent by a web server and stored on the user's device. Each time you try to open a site page, the web client sends cookies corresponding to this site to the web server as part of the HTTP request. It is used to save data on the user side and in practice it is usually used to:
+
+* user authentication;
+* storage of personal preferences and user settings;
+* tracking the status of the user's access session;
+* maintaining a variety of statistics.
+
+Servlet API provides support for cookies through the class `javax.servlet.http.Cookie`:
+
+* To get an array of cookies from the request, you must use the method `HttpServletRequest.getCookies()`. There are no methods for adding cookies to `HttpServletRequest`.
+* Used to add a cookie to the response `HttpServletResponse.addCookie(Cookie c)`. There is no method to receive cookies `HttpServletResponse`.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
