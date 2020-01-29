@@ -312,6 +312,12 @@ Servlet filters are used to intercept all requests between the servlet container
 #### Q. How can we provide transport layer security for our web application?
 To provide transport layer security, you must configure SSL support for the container servlet. How to do this depends on the particular implementation of the servlet container.
 
+#### Q. What are the main features that appeared in the Servlet 3 specification?
+* **Servlet Annotations**: Prior to Servlet 3, the entire configuration was contained in web.xml, which led to errors and inconvenience when working with a large number of servlets. Examples of annotations @WebServlet, @WebInitParam, @WebFilter, @WebListener.
+* **Web fragments**: A single-page web application can contain many modules: all modules are registered in fragment.xmla folder META-INF\. This allows you to split the web application into separate modules, assembled as .jar files in a separate lib\directory.
+* **Dynamically add web components**: Now you can programmatically add filters and listeners using the ServletContextobject. For this purpose methods are used addServlet(), addFilter(), addListener(). Using this innovation, it became possible to build a dynamic system in which the necessary object will be created and called only when necessary.
+* **Asynchronous execution**: Support for asynchronous processing allows you to transfer the execution of a request to another thread without keeping the entire server busy.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
