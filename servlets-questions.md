@@ -269,6 +269,17 @@ An HTTP method is called immutable if it always returns the same result on the s
 
 For example, to access a static HTML page, a method is used `GET`, because it always returns the same result. If you need to save any information, for example in a database, you need to use the `POST` method.
 
+#### Q. What are the different methods for managing session in servlets?
+There are several ways to provide a unique session identifier:
+
+* **User Authentication** - Providing credentials by the user at the time of authentication. Information transmitted in this way is then used to maintain the session. This method will not work if the user is logged in from several places at the same time.
+* **HTML Hidden Field** - Assigning a unique value to the hidden field of an HTML page when a user starts a session. This method cannot be used with links, because it needs a form confirmation with a hidden field every time a request is generated. In addition, it is not safe, because there is the possibility of simple substitution of such an identifier.
+* **URL Rewriting** - Add a session id as a URL parameter. It’s a tedious operation, because it requires constant monitoring of this identifier with every request or response.
+* **Cookies** - The use of small pieces of data sent by the web server and stored on the user's device. This method will not work if the client disables the use of cookies.
+* **Session Management API** - Using a special API for session tracking, built on the basis and on the methods described above and which solves particular problems of the listed methods:
+    * Most often, just tracking a session is not enough, you also need to save any additional data about it that may be required when processing subsequent requests. Implementing this behavior requires a lot of extra effort.
+    * All of the above methods are not universal: for each of them you can choose a specific scenario in which they will not work.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
