@@ -190,6 +190,14 @@ Then create a class `xyz.company.ExampleServlet` by inheriting from `HttpServlet
 * **JSP support**: JSP classes are not like standard Java classes, but the servlet container converts each JSP into a servlet and is then managed by the container as a regular servlet.
 * **Various tasks**: The servlet container manages the resource pool, application memory, and garbage collector. Security settings and more.
 
+#### Q. How to call another servlet from one servlet?
+To call a servlet from the same application, you must use the inter-servlet communication mechanisms through method calls `RequestDispatcher()`:
+
+* `forward()` - passes the execution of the request to another servlet;
+* `include()` - provides the ability to include the result of another servlet in the returned response.
+
+If you need to call a servlet belonging to another application, then you `RequestDispatcher` will not be able to use it, because it is defined only for the current application. For such purposes, you must use the method `ServletResponse- sendRedirect()` which is provided with the full URL of another servlet. You can use to transfer data between servlets cookies.
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
