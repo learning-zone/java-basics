@@ -303,6 +303,9 @@ The method `HttpServletResponse.encodeRedirectURL()` translates the URL for late
 
 Thus for HTML hyperlinks when URL rewriting is necessary to use `encodeURL()`, and for the URL when redirecting - `encodeRedirectUrl()`.
 
+#### Q. How to notify an object in a session that a session is invalid or has ended?
+To be sure that the object will be notified about the termination of the session, you need to implement the interface `javax.servlet.http.HttpSessionBindingListener`. Two methods of this interface: `valueBound()` and `valueUnbound()` are used when adding an object as an attribute to a session and when destroying a session, respectively.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
