@@ -246,6 +246,16 @@ ServletContext: `getServletContext().getRealPath(request.getServletPath())`.
 Information about the server can be obtained from the object ServletContext:
 `getServletContext().getServerInfo()`.
 
+#### Q. How to get the client IP address on the server?
+Client IP address can be obtained by calling `request.getRemoteAddr()`.
+
+#### Q. What servlet wrapper classes do you know?
+Custom handlers can `ServletRequest` also `ServletResponse` be implemented by adding new or overriding existing methods for wrapper classes `ServletRequestWrapper( HttpServletRequestWrapper)` and `ServletResponseWrapper( HttpServletRequestWrapper)`.
+
+#### Q. What are the differences GenericServletand HttpServlet?
+An abstract class GenericServletis an implementation of the interface independent of the protocol used Servlet, and an abstract class, HttpServletin turn, extends GenericServletfor the HTTP protocol.
+
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
