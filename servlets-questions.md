@@ -195,7 +195,7 @@ Then create a class `xyz.company.ExampleServlet` by inheriting from `HttpServlet
 #### Q. What is a servlet? What is the life-cycle of a servlet?
 #### Q. What are the differences between Get and Post methods?
 #### Q. What is Request Dispatcher?
-The interface is `RequestDispatcher` used to transfer the request to another resource, while it is possible to add data received from this resource to the servlet’s own response. This interface is also used for internal communication between servlets in the same context.
+The `RequestDispatcher` interface is used to transfer the request to another resource, while it is possible to add data received from this resource to the servlet’s own response. This interface is also used for internal communication between servlets in the same context.
 
 Two methods are implemented in the interface:
 
