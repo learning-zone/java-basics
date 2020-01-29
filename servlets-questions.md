@@ -238,6 +238,10 @@ Servlet attributes are used for internal servlet communication.
 
 The web application has the ability to work with attributes using the methods `setAttribute()`, `getAttribute()`, `removeAttribute()`, `getAttributeNames()`, who provided interfaces ServletRequest, HttpSessionand ServletContext(for the scope request, the session, context The respectively).
 
+#### Q. How to get the real servlet location on the server?
+The real path to the servlet location on the server can be obtained from the object 
+ServletContext: `getServletContext().getRealPath(request.getServletPath())`.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
