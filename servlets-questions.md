@@ -293,6 +293,9 @@ Servlet API provides support for cookies through the class `javax.servlet.http.C
 * To get an array of cookies from the request, you must use the method `HttpServletRequest.getCookies()`. There are no methods for adding cookies to `HttpServletRequest`.
 * Used to add a cookie to the response `HttpServletResponse.addCookie(Cookie c)`. There is no method to receive cookies `HttpServletResponse`.
 
+#### Q. What is URL Rewriting?
+**URL Rewriting** - special rewriting (recoding) of the original URL. This mechanism can be used to control the session in servlets when cookies are disabled.
+
 #### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
