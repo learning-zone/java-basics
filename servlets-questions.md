@@ -438,7 +438,6 @@ The main task of these servlets is to handle the error / exception and generate 
 #### Q. Are Servlets Thread Safe? How to achieve thread safety in servlets?
 #### Q. How do we call one servlet from another servlet?
 #### Q. why we should override only no-airs init() method.
-#### Q. What is the difference between encodeRedirectUrl and encodeURL?
 #### Q. Why do we have servlet filters?
 A servlet filter is reusable Java code that converts the contents of HTTP requests, HTTP responses, and the information contained in HTML headers. The servlet filter pre-processes the request before it gets to the servlet, and / or subsequently processes the response coming from the servlet.
 
