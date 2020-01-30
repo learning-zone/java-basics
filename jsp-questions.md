@@ -433,6 +433,9 @@ The jsp page, by default, always creates a session. Using a directive pagewith a
 ```jsp
 <%@ page session ="false" %>
 ```
+#### Q. What is the difference between JSPWriter and PrintWriter?
+`PrintWriter` is the object responsible for recording the contents of the response to the request. `JspWriter` uses an object `PrintWriter` to buffer. When the buffer is full or flushed, it `JspWriter`uses the object `PrintWriter` to write the content in response.
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
