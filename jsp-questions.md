@@ -398,6 +398,19 @@ The JSP 2.0 expression language includes:
 
 An expression language is used inside a construct `${ ... }`. A similar construction can be placed either separately or on the right side of the tag attribute setting expression.
 
+#### Q. How is error handling using JSTL?
+JSTL Core Tags `c:catchand` are used to catch and handle exceptions in the service methods of the class `c:if`.
+
+The tag `c:catchcatches` the exception and wraps it in a variable `exception` available for processing in the tag `c:if`
+```xml
+<c:catch var ="exception">
+   <% int x = 42/0;%>
+</c:catch>  
+<c:if test = "${exception ne null}">
+   <p>Exception is : ${exception} <br />
+   Exception Message: ${exception.message}</p>
+</c:if>
+```
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
