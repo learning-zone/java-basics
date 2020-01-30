@@ -384,6 +384,20 @@ PageContext has the following set of features and capabilities:
 * mechanisms for sending or including the current request into other application components;
 * mechanism for handling exception processes on error page errorpage;
 
+#### Q. What do you know about the JSP Expression Language (EL)?
+**JSP Expression Language (EL)** is a scripted expression language that allows you to access Java components (JavaBeans) from JSP. Starting with JSP 2.0, it is used inside JSP tags to separate Java code from the JSP to provide easy access to Java components, while reducing the amount of Java code in JSP pages, or even completely eliminating it.
+
+The development of EL was aimed at making it easier for designers who have minimal knowledge of the Java programming language. Before the advent of the expression language, JSP had several special tags such as scriptlets (English), expressions, etc. that allowed you to write Java code directly on the page. Using an expression language, a web designer only needs to know how to organize the call of the corresponding java methods.
+
+The JSP 2.0 expression language includes:
+
+* Create and modify variables.
+* Program flow control: branching, performing various types of iterations, etc.
+* Simplified access to embedded JSPs.
+* Ability to create your own functions.
+
+An expression language is used inside a construct `${ ... }`. A similar construction can be placed either separately or on the right side of the tag attribute setting expression.
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
