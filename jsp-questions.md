@@ -307,13 +307,13 @@ It also used to insert a jsp file into another file, just like include directive
 
 This property is used to set the property of the bean. We need to define a bean before setting the property
 ```jsp
-<jsp:setproperty name="" property="" >
+<jsp:setproperty name="" property="">
 ```
 **4. jsp:getProperty**  
 
 This property is used to get the property of the bean. It converts into a string and finally inserts into the output.
 ```jsp
-<jsp:getAttribute name="" property="" >
+<jsp:getAttribute name="" property="">
 ```
 **5. jsp:forward**  
 
@@ -332,7 +332,7 @@ It is used to introduce Java components into jsp, i.e., the java components can 
 This is child object of the plugin object described above. It must contain one or more actions to provide additional parameters.
 ```jsp
 <jsp:params>
-    <jsp:param name="val" value="val"/ >
+    <jsp:param name="val" value="val"/>
 </jsp:params>
 ```
 **8. jsp:body**  
@@ -411,6 +411,23 @@ The tag `c:catchcatches` the exception and wraps it in a variable `exception` av
    Exception Message: ${exception.message}</p>
 </c:if>
 ```
+#### Q. How JSP is configured in the deployment descriptor?
+To configure various parameters of JSP pages, an element is used jsp-configthat is responsible for:
+
+* management of scriptlet elements on the page;
+* control of execution in the language of expressions;
+* URL pattern definition for encoding;
+* determining the size of the buffer used for objects on the page;
+* designation of resource groups corresponding to the URL pattern that should be processed as an XML document.
+```xml
+<jsp-config>
+    <taglib>
+        <taglib-uri> http://company.xyz/jsp/tlds/customtags </ taglib-uri>
+        <taglib-location> /WEB-INF/exampleTag.tld </ taglib-location>
+    </ taglib>
+</ jsp-config>
+```
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
