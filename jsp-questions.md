@@ -427,7 +427,12 @@ To configure various parameters of JSP pages, an element is used jsp-configthat 
     </ taglib>
 </ jsp-config>
 ```
+#### Q. Is a session object always created on a JSP page, can I disable its creation?
+The jsp page, by default, always creates a session. Using a directive pagewith an attribute, sessionyou can change this behavior:
 
+```jsp
+<%@ page session ="false" %>
+```
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
