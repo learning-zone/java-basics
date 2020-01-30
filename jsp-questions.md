@@ -441,7 +441,6 @@ The jsp page, by default, always creates a session. Using a directive pagewith a
 #### Q. How to disable session in JSP?
 #### Q. How to delete a Cookie in a JSP?
 #### Q. How is JSP better than Servlet technology?
-#### Q. What are the JSP implicit objects?
 #### Q. What are the differences between include directive and include action?
 #### Q. Explain the jspDestroy() method.
 #### Q. Why should we not configure JSP standard tags in web.xml?
