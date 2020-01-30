@@ -214,7 +214,7 @@ Example:
 #### Q. How JSP pages are processed, from the request to the server to the response to the user?
 When the user `page.jsp` follows the link to the page , he sends an http request to the server `GET /page.jsp`. Then, based on this request and the text of the page itself, the server generates a java class, compiles it and executes the resulting servlet, which forms a response to the user in the form of a representation of this page, which the server redirects back to the user.
 
-#### Q. What are the the stages (phases) of the JSP life cycle?
+#### Q. What are the phases of the JSP life cycle?
 The JSP life cycle consists of several phases that are managed by the JSP container:
 
 * **Translation** - checking and parsing the JSP page code to create the servlet code.
@@ -224,6 +224,13 @@ The JSP life cycle consists of several phases that are managed by the JSP contai
 * **Initialization** - calling the `init()` method of the JSP class object and initializing the servlet configuration with the initial parameters that are specified in the deployment descriptor (`web.xml`). After this phase, the JSP is able to handle client requests. Typically, these phases occur after the first client request (i.e., lazy loading), but you can configure the loading and initialization of JSP at the start of the application, similar to servlets.
 * **Request Processing** - the long life cycle of processing client requests with a JSP page. Processing is multithreaded and similar to servlets - for each request a new thread, objects are created, `ServletRequest` and the `ServletResponseservice` methods are executed.
 * **Destroy** is the last phase of the JSP life cycle in which its class is removed from memory. This usually happens when you turn off the server or unload the application.
+
+#### Q. What are the JSP life cycle methods?
+A servlet container (for example, Tomcat, GlassFish) creates a servlet class from a JSP page that inherits interface properties `javax.servlet.jsp.HttpJspBase` and includes the following methods:
+
+* **jspInit()**- the method is declared in the JSP page and is implemented using the container. This method is called once in the JSP life cycle in order to initialize the configuration parameters specified in the deployment descriptor. You can override this method by defining a JSP scripting element and specifying the necessary parameters for initialization;
+* **_jspService()**- the method is automatically overridden by the container and corresponds directly to the JSP code described on the page. This method is defined in the interface `HttpJspPage`, its name begins with an underscore, and it differs from other life cycle methods in that it cannot be redefined;
+* **jspDestroy()**- the method is called by the container to remove the object from memory (at the last phase of the JSP life cycle is Destroy). The method is called only once and is available for redefinition, providing the ability to free resources that were created in `jspInit()`.
 
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
