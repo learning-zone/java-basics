@@ -362,6 +362,13 @@ It specifies the XML declaration or the DOCTYPE declaration of jsp. The XML decl
 ```jsp
 <jsp:output doctype-root-element="" doctype-system="">
 ```
+#### Q. JSP - Servlet - JSP interaction?
+"JSP - servlet - JSP" architecture for building applications is called MVC (Model / View / Controller) :
+
+* Model - data classes and business logic;
+* View - JSP pages;
+* Controller - servlets.
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
