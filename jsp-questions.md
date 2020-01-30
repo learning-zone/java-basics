@@ -257,6 +257,24 @@ There is no direct access to the directory `/WEB-INF/` from the web application.
 * **JSP directive include**: `<%@ include file="url" %>`- a file on the local system that is included when translating the JSP into the servlet.
 * **JSP Comment**: `<%-- comment --%>`- Comment; ignored when translating a JSP page to a servlet.
 
+#### Q. What are the JSP action tags and JSP Action Elements?
+**Action tag** and **JSP Action Elements** provide methods for working with Java Beans, connecting resources, forwarding queries and creating dynamic XML elements. Such elements always begin with recording jsp:and are used directly inside the JSP page without the need for third-party libraries or additional settings.
+
+The most commonly used JSP Action Elements are:
+
+* jsp:useBean
+* jsp:include
+* jsp:setProperty
+* jsp:getProperty
+* jsp:forward
+* jsp:plugin
+* jsp:attribute
+* jsp:body
+* jsp:text
+* jsp:param
+* jsp:attribute
+* jsp:output
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
