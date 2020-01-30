@@ -249,6 +249,13 @@ There is no direct access to the directory `/WEB-INF/` from the web application.
     <url-pattern> /example.jsp </url-pattern>
 </servlet-mapping>
 ```
+#### Q. What are the main types of JSP tags?
+* **JSP expression**: `<%= expression %>`- expression that will be processed with redirecting the result to the output;
+* **JSP Scriptlet**: `<% code %>`- The code to add to the method service().
+* **JSP declaration**: `<%! code %>`- code added to the servlet class body outside the method service().
+* **JSP page**`<%@ page att="value" %>` directive: - directives for the servlet container with parameter information.
+* **JSP directive include**: `<%@ include file="url" %>`- a file on the local system that is included when translating the JSP into the servlet.
+* **JSP Comment**: `<%-- comment --%>`- Comment; ignored when translating a JSP page to a servlet.
 
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
