@@ -369,6 +369,21 @@ It specifies the XML declaration or the DOCTYPE declaration of jsp. The XML decl
 * View - JSP pages;
 * Controller - servlets.
 
+### Q. What do you know about PageContext and what are the benefits of using it?
+Implicit JSP object - an instance of a class `javax.servlet.jsp.PageContext` provides access to all namespaces associated with a JSP page, as well as its various attributes. The remaining implicit objects are added to `pageContext` automatically.
+
+A class `PageContext` is an abstract class, and its instance can be obtained through a method call `JspFactory.getPageContext()`, and released through a method call `JspFactory.releasePageContext()`.
+
+PageContext has the following set of features and capabilities:
+
+* a single API for serving namespaces of various scopes;
+* several convenient APIs for accessing various `public` objects;
+* `JspWriter` output mechanism for output;
+* page session use service mechanism;
+* mechanism for exposing ("showing") the attributes of the directive to `page` the scripting environment;
+* mechanisms for sending or including the current request into other application components;
+* mechanism for handling exception processes on error page errorpage;
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
