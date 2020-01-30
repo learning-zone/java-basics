@@ -275,6 +275,93 @@ The most commonly used JSP Action Elements are:
 * jsp:attribute
 * jsp:output
 
+**1. jsp:useBean**  
+
+This action name is used when we want to use beans in the JSP page. With this tag, we can easily invoke a bean.
+```jsp
+<jsp:useBean id="" class="" />
+```
+Example:
+```jsp
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+ <title>Action JSP1</title>
+ </head>
+<body>
+    <jsp:useBean id="name" class="demotest.DemoClass">
+</body>
+</html>
+```
+**2. jsp:include**  
+
+It also used to insert a jsp file into another file, just like include directive. It is added during request processing phase
+
+```jsp
+<jsp:include page="page URL" flush="true/false">
+```
+**3. jsp:setProperty**  
+
+This property is used to set the property of the bean. We need to define a bean before setting the property
+```jsp
+<jsp:setproperty name="" property="" >
+```
+**4. jsp:getProperty**  
+
+This property is used to get the property of the bean. It converts into a string and finally inserts into the output.
+```jsp
+<jsp:getAttribute name="" property="" >
+```
+**5. jsp:forward**  
+
+It is used to forward the request to another jsp or any static page. Here the request can be forwarded with no parameters or with parameters.
+```jsp
+<jsp:forward page="value">
+```
+**6. jsp:plugin**  
+
+It is used to introduce Java components into jsp, i.e., the java components can be either an applet or bean. It detects the browser and adds <object> or <embed> tags into the file
+```jsp
+<jsp:plugin type="applet/bean" code="objectcode" codebase="objectcodebase">
+```
+**7. jsp:param**   
+
+This is child object of the plugin object described above. It must contain one or more actions to provide additional parameters.
+```jsp
+<jsp:params>
+    <jsp:param name="val" value="val"/ >
+</jsp:params>
+```
+**8. jsp:body**  
+
+This tag is used to define the XML dynamically i.e., the elements can generate during request time than compilation time.
+It actually defines the XML, which is generated dynamically element body.
+```jsp
+<jsp:body></jsp:body>
+```
+**9. jsp:attribute**  
+
+This tag is used to define the XML dynamically i.e. the elements can be generated during request time than compilation time
+It actually defines the attribute of XML which will be generated dynamically.
+```jsp
+<jsp:attribute></jsp:attribute>
+```
+
+**10. jsp:text**  
+
+It is used to template text in JSP pages. Its body does not contain any other elements, and it contains only text and EL expressions.
+```jsp
+<jsp:text>template text</jsp:text>
+```
+**11. jsp:output**  
+
+It specifies the XML declaration or the DOCTYPE declaration of jsp. The XML declaration and DOCTYPE are declared by the output
+```jsp
+<jsp:output doctype-root-element="" doctype-system="">
+```
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
