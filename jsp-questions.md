@@ -232,6 +232,24 @@ A servlet container (for example, Tomcat, GlassFish) creates a servlet class fro
 * **_jspService()**- the method is automatically overridden by the container and corresponds directly to the JSP code described on the page. This method is defined in the interface `HttpJspPage`, its name begins with an underscore, and it differs from other life cycle methods in that it cannot be redefined;
 * **jspDestroy()**- the method is called by the container to remove the object from memory (at the last phase of the JSP life cycle is Destroy). The method is called only once and is available for redefinition, providing the ability to free resources that were created in `jspInit()`.
 
+#### Q. How can I prevent direct access to the JSP page from a browser?
+There is no direct access to the directory `/WEB-INF/` from the web application. Therefore, JSP pages can be located inside this folder and thereby restrict access to the page from the browser. However, by analogy with the description of servlets, it will be necessary to configure the deployment descriptor:
+```xml
+<servlet>
+    <servlet-name> Example </servlet-name>
+    <jsp-file> /WEB-INF/example.jsp </jsp-file>
+    <init-param>
+        <param-name> exampleParameter </param-name>
+        <param-value> parameterValue </param-value>
+    </init-param>
+</servlet>
+    
+<servlet-mapping>
+    <servlet-name> Example </servlet-name>
+    <url-pattern> /example.jsp </url-pattern>
+</servlet-mapping>
+```
+
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
 #### Q. How to disable session in JSP?
