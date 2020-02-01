@@ -338,6 +338,10 @@ To provide transport layer security, you must configure SSL support for the cont
 * **Dynamically add web components**: Now you can programmatically add filters and listeners using the ServletContextobject. For this purpose methods are used addServlet(), addFilter(), addListener(). Using this innovation, it became possible to build a dynamic system in which the necessary object will be created and called only when necessary.
 * **Asynchronous execution**: Support for asynchronous processing allows you to transfer the execution of a request to another thread without keeping the entire server busy.
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What authentication methods are available to the servlet?
 The servlet specification defines four types of authentication:
 
@@ -395,6 +399,10 @@ This configuration file specifies the deployment settings for a module or applic
 </web-app>
 ```
 For web applications, the deployment descriptor must be named `web.xml` and located in the directory `WEB-INF` at the root of the web application. This file is the standard deployment descriptor defined in the specification. There are also other types of descriptors, such as a deployment descriptor file `sun-web.xml` that contains Sun GlassFish Enterprise Server- specific deployment information for that particular application server or a file `application.xml` in the J2EE`META-INF` application directory.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Why do servlets use different listeners?
 The Listener (listener) acts as a trigger, performing certain actions when an event occurs in the servlet's life cycle.
