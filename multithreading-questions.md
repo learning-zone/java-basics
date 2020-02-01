@@ -1958,6 +1958,10 @@ I am running….
 I am running….
 Stopped Running….
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Why implementing Runnable is better than extending thread?
 | Features	           |implements Runnable	   | extends Thread |
 |----------------------|-----------------------|----------------|
