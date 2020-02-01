@@ -458,7 +458,6 @@ The jsp page, by default, always creates a session. Using a directive pagewith a
 #### Q. Can I store a double value in a long variable without casting?
 #### Q. What will this return 3*0.1 == 0.3? true or false?
 #### Q. Which one will take more memory, an int or Integer?
-#### Q. Explain Expression Language in JSP?
 #### Q. Which containers use a border layout as their default layout?
 #### Q. Which containers use a FlowLayout as their default layout?
 #### Q. What are peerless components?
