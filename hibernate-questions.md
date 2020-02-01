@@ -1795,7 +1795,6 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. What is difference between managed associations and hibernate associations?
 #### Q. What are the inheritance mapping strategies?
 #### Q. What is automatic dirty checking in hibernate?
-#### Q. What is Query level cache in Hibernate?
 #### Q. Explain Hibernate configuration file and Hibernate mapping file?
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
