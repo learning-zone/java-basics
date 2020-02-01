@@ -787,6 +787,10 @@ First Name: Mohd  Last Name: Yasee  Salary: 3000
 Total Coint: 4
 Total Salary: 15000
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is a One-to-One association in Hibernate?
 A **One-to-One** Association is similar to Many-to-One association with a difference that the column will be set as unique i.e. Two entities are said to be in a One-to-One relationship if one entity has only one occurrence in the other entity. For example, an address object can be associated with a single employee object. However, these relationships are rarely used in the relational table models and therefore, we won’t need this mapping too often.
 
@@ -1042,6 +1046,10 @@ Annotation Example. Transaction Details=
 20, 100.0, Alex Kr, Alex@yahoo.com, San Jose, USA
 Closing SessionFactory
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is hibernate caching? Explain Hibernate first level cache?
 Hibernate Cache can be very useful in gaining fast application performance if used correctly. The idea behind cache is to reduce the number of database queries, hence reducing the throughput time of the application.
 
@@ -1149,6 +1157,10 @@ Hibernate: select employee0_.emp_id as emp_id1_1_0_, employee0_.emp_name as emp_
 8:: Name=David, Zipcode=95051
 Session Contains Employee with id=2?true
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is second level cache in Hibernate?
 **Hibernate second level cache** uses a common cache for all the session object of a session factory. It is useful if you have multiple session objects from a session factory. **SessionFactory** holds the second level cache data. It is global for all the session objects and not enabled by default.
 
