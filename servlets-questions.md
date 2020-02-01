@@ -264,7 +264,7 @@ Client IP address can be obtained by calling `request.getRemoteAddr()`.
 #### Q. What servlet wrapper classes do you know?
 Custom handlers can `ServletRequest` also `ServletResponse` be implemented by adding new or overriding existing methods for wrapper classes `ServletRequestWrapper( HttpServletRequestWrapper)` and `ServletResponseWrapper( HttpServletRequestWrapper)`.
 
-#### Q. What are the differences GenericServletand HttpServlet?
+#### Q. What are the differences GenericServlet and HttpServlet?
 An abstract class GenericServletis an implementation of the interface independent of the protocol used Servlet, and an abstract class, HttpServletin turn, extends GenericServletfor the HTTP protocol.
 
 #### Q. What are the main methods present in the class HttpServlet?
@@ -606,12 +606,8 @@ public class SimpleServlet extends HttpServlet {
 
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What are the differences between ServletContext vs ServletConfig?
-#### Q. What are the different methods of session management in servlets?
 #### Q. What is MIME Type?
-#### Q. What is the use of servlet wrapper classes?
-#### Q. What is difference between ServletResponse sendRedirect() and RequestDispatcher forward() method?
 #### Q. Why HttpServlet class is declared abstract?
-#### Q. What is difference between GenericServlet and HttpServlet?
 #### Q. How to notify an object in session when session is invalidated or timed-out?
 #### Q. What is servlet attributes and their scope?
 #### Q. How can we achieve transport layer security for our web application?
