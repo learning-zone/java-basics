@@ -265,6 +265,10 @@ The types of locks in JDBC:
 |You cannot call stored procedures from a function|You can call a function from a stored procedure.|
 |You can call a function using a select statement.|You cannot call a procedure using select statements.|
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is batch processing and how to perform batch processing in JDBC?
 Batch Processing allows to group related SQL statements into a batch and submit them with one call to the database. The `java.sql.Statement` and `java.sql.PreparedStatement` interfaces provide methods for batch processing.
 
@@ -345,6 +349,10 @@ int[] count = stmt.executeBatch();
 // Explicitly commit statements to apply changes
 conn.commit();
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is database connection pooling? What are the advantages of using a connection pool?
 **Connection pooling** means that connections are reused rather than created each time a connection is requested. To facilitate connection reuse, a memory cache of database connections, called a connection pool, is maintained by a connection pooling module as a layer on top of any standard JDBC driver product.
 
