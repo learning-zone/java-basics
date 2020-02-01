@@ -614,7 +614,7 @@ public class SimpleServlet extends HttpServlet {
 #### Q. How do we go with database connection and log4j integration in servlet?
 #### Q. What is the effective way to make sure all the servlets are accessible only when user has a valid session?
 #### Q. Why do we have servlet listeners?
-#### Q. What are Scriptlets ?
+#### Q. What are Scriptlets?
 #### Q. What is different between web server and application server?
 #### Q. Which HTTP method is non-idempotent?
 #### Q. What is difference between PrintWriter and ServletOutputStream?
@@ -622,11 +622,8 @@ public class SimpleServlet extends HttpServlet {
 #### Q. What is SingleThreadModel interface?
 #### Q. Do we need to override service() method?
 #### Q. Is it good idea to create servlet constructor?
-#### Q. What is the inter-servlet communication?
 #### Q. Are Servlets Thread Safe? How to achieve thread safety in servlets?
-#### Q. How do we call one servlet from another servlet?
 #### Q. why we should override only no-airs init() method.
-#### Q. How to handle exceptions thrown by application with another servlet?
 #### Q. What are different ways for servlet authentication?
 #### Q. What is Servlet Chaining?
 #### Q. How do you find out what client machine is making a request to your servlet?
