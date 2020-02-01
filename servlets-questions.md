@@ -1,4 +1,4 @@
-## Servlets Interview Questions
+## Servlets Interview Questions and Answers
 
 
 #### Q. Explain Servlets Lifecycle?
