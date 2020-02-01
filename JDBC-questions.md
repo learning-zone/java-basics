@@ -484,6 +484,10 @@ public class ConnectionPool {
     }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is JDBC Driver?
 JDBC Driver is a software component that enables java application to interact with the database. There are 4 types of JDBC drivers:  
 
@@ -509,6 +513,10 @@ The Network Protocol driver uses middleware (application server) that converts J
 **4. Thin driver**  
 
 The thin driver converts JDBC calls directly into the vendor-specific database protocol. That is why it is known as thin driver. It is fully written in Java language.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What are the JDBC API components?
 
@@ -561,6 +569,10 @@ Total columns: 2
 Column Name of 1st column: ID
 Column Type Name of 1st column: NUMBER
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is JDBC DatabaseMetaData interface?
 DatabaseMetaData interface provides methods to get meta data of a database such as database product name, database product version, driver name, name of total number of tables, name of total number of views etc.
 
