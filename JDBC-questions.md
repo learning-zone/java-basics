@@ -619,6 +619,10 @@ Driver Name: Oracle JDBC Driver
        Database Product Version: Oracle Database 10g Express Edition
                                  Release 10.2.0.1.0 -Production
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How can we set null value in JDBC PreparedStatement?
 Use the **setNull()** method to bind null to the parameter. The setNull() method accepts two parameter, index and the sql type as arguments.
 
@@ -657,6 +661,10 @@ public class Main {
   }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the differences between execute, executeQuery, and executeUpdate?
 #### Q. Which interface is responsible for transaction management in JDBC?
 #### Q. How can we maintain the integrity of a database by using JDBC?
