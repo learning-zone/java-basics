@@ -198,10 +198,6 @@ To call a servlet from the same application, you must use the inter-servlet comm
 
 If you need to call a servlet belonging to another application, then you `RequestDispatcher` will not be able to use it, because it is defined only for the current application. For such purposes, you must use the method `ServletResponse- sendRedirect()` which is provided with the full URL of another servlet. You can use to transfer data between servlets cookies.
 
-#### Q. What is a Server Side Include (SSI)?
-#### Q. What is the difference between doGet() and doPost()?
-#### Q. What is a servlet? What is the life-cycle of a servlet?
-#### Q. What are the differences between Get and Post methods?
 #### Q. What is Request Dispatcher?
 The `RequestDispatcher` interface is used to transfer the request to another resource, while it is possible to add data received from this resource to the servlet’s own response. This interface is also used for internal communication between servlets in the same context.
 
@@ -334,17 +330,6 @@ The servlet specification defines four types of authentication:
     </form-login-config>
 </login-config>
 ```
-#### Q. How does cookies work in Servlets?
-#### Q. What are the differences between ServletContext vs ServletConfig?
-#### Q. What are the different methods of session management in servlets?
-#### Q. What is MIME Type?
-#### Q. What is the use of servlet wrapper classes?
-#### Q. What is difference between ServletResponse sendRedirect() and RequestDispatcher forward() method?
-#### Q. Why HttpServlet class is declared abstract?
-#### Q. What is difference between GenericServlet and HttpServlet?
-#### Q. How to notify an object in session when session is invalidated or timed-out?
-#### Q. What is servlet attributes and their scope?
-#### Q. How can we achieve transport layer security for our web application?
 #### Q. What is a deployment descriptor?
 A deployment descriptor is an artifact configuration file that will be deployed to a servlet container. In the Java Platform specification, Enterprise Edition, the deployment descriptor describes how a component, module, or application (such as a web or enterprise application) should be deployed.
 
@@ -452,23 +437,6 @@ In addition to this, it is possible to write your own servlets to handle excepti
 ```
 The main task of these servlets is to handle the error / exception and generate an understandable response to the user. For example, provide a link to the main page or a description of the error.
 
-#### Q. How to make sure a servlet is loaded at the application startup?
-#### Q. Write a servlet to upload file on server.
-#### Q. How do we go with database connection and log4j integration in servlet?
-#### Q. What is the effective way to make sure all the servlets are accessible only when user has a valid session?
-#### Q. Why do we have servlet listeners?
-#### Q. What are Scriptlets ?
-#### Q. What is different between web server and application server?
-#### Q. Which HTTP method is non-idempotent?
-#### Q. What is difference between PrintWriter and ServletOutputStream?
-#### Q. How can we create deadlock situation in servlet?
-#### Q. What is SingleThreadModel interface?
-#### Q. Do we need to override service() method?
-#### Q. Is it good idea to create servlet constructor?
-#### Q. What is the inter-servlet communication?
-#### Q. Are Servlets Thread Safe? How to achieve thread safety in servlets?
-#### Q. How do we call one servlet from another servlet?
-#### Q. why we should override only no-airs init() method.
 #### Q. Why do we have servlet filters?
 A servlet filter is reusable Java code that converts the contents of HTTP requests, HTTP responses, and the information contained in HTML headers. The servlet filter pre-processes the request before it gets to the servlet, and / or subsequently processes the response coming from the servlet.
 
@@ -486,10 +454,6 @@ A servlet filter can be configured to work with a single servlet or a group of s
 * `void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException;`
 * `void destroy();`
 
-#### Q. How to handle exceptions thrown by application with another servlet?
-#### Q. What are different ways for servlet authentication?
-#### Q. What is Servlet Chaining?
-#### Q. How do you find out what client machine is making a request to your servlet?
 #### Q. What is difference between sendRedirect() and forward() in Servlet?
 
 * **SendRedirect()**: This method is declared in **HttpServletResponse** Interface. It is used to redirect client request to some other location for further processing, the new location is available on different server or different context.our web container handle this and transfer the request using  browser, and this request is visible in browser as a new request. 
@@ -596,3 +560,39 @@ public class SimpleServlet extends HttpServlet {
 	}
 }
 ```
+#### Q. What is a Server Side Include (SSI)?
+#### Q. What is the difference between doGet() and doPost()?
+#### Q. What is a servlet? What is the life-cycle of a servlet?
+#### Q. What are the differences between Get and Post methods?
+#### Q. How does cookies work in Servlets?
+#### Q. What are the differences between ServletContext vs ServletConfig?
+#### Q. What are the different methods of session management in servlets?
+#### Q. What is MIME Type?
+#### Q. What is the use of servlet wrapper classes?
+#### Q. What is difference between ServletResponse sendRedirect() and RequestDispatcher forward() method?
+#### Q. Why HttpServlet class is declared abstract?
+#### Q. What is difference between GenericServlet and HttpServlet?
+#### Q. How to notify an object in session when session is invalidated or timed-out?
+#### Q. What is servlet attributes and their scope?
+#### Q. How can we achieve transport layer security for our web application?
+#### Q. How to make sure a servlet is loaded at the application startup?
+#### Q. Write a servlet to upload file on server.
+#### Q. How do we go with database connection and log4j integration in servlet?
+#### Q. What is the effective way to make sure all the servlets are accessible only when user has a valid session?
+#### Q. Why do we have servlet listeners?
+#### Q. What are Scriptlets ?
+#### Q. What is different between web server and application server?
+#### Q. Which HTTP method is non-idempotent?
+#### Q. What is difference between PrintWriter and ServletOutputStream?
+#### Q. How can we create deadlock situation in servlet?
+#### Q. What is SingleThreadModel interface?
+#### Q. Do we need to override service() method?
+#### Q. Is it good idea to create servlet constructor?
+#### Q. What is the inter-servlet communication?
+#### Q. Are Servlets Thread Safe? How to achieve thread safety in servlets?
+#### Q. How do we call one servlet from another servlet?
+#### Q. why we should override only no-airs init() method.
+#### Q. How to handle exceptions thrown by application with another servlet?
+#### Q. What are different ways for servlet authentication?
+#### Q. What is Servlet Chaining?
+#### Q. How do you find out what client machine is making a request to your servlet?
