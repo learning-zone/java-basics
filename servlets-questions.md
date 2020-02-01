@@ -61,6 +61,10 @@ public void destroy() {
    // Finalization code...
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is ServletContext Interface?
 ServletContext is a configuration Object which is created when web application is started. It contains different initialization parameter that can be configured in web.xml.
 
@@ -130,6 +134,10 @@ Most of the classes and interfaces required to create servlets are contained in 
 * `public String getServletInfo()` returns a string containing information about the servlet, for example: author and version of the servlet;
 * `public void service(ServletRequest request, ServletResponse response) throws ServletException, java.io.IOException` called to process each request;
 * `public void destroy()` performed before unloading the servlet from memory.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What are the advantages of servlet technology over CGI (Common Gateway Interface)?
 * Servlets provide better query processing performance and more efficient use of memory by taking advantage of multithreading (a new thread is created for each request, which is faster than allocating memory for a new object for each request, as happens in CGI).
