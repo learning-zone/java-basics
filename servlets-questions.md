@@ -452,6 +452,10 @@ If the integer value of this parameter is negative, then the servlet will be loa
     <load-on-startup> 1 </load-on-startup>
 </servlet>
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How to handle exceptions thrown by another servlet in an application?
 When the application throws an exception, the servlet container processes it and creates an HTML response. This is similar to what happens with error codes like 404, 403, etc.
 
@@ -485,6 +489,10 @@ A servlet filter can be configured to work with a single servlet or a group of s
 * `void init(FilterConfig config) throws ServletException;`
 * `void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException;`
 * `void destroy();`
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between sendRedirect() and forward() in Servlet?
 
