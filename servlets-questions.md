@@ -609,10 +609,8 @@ public class SimpleServlet extends HttpServlet {
 #### Q. What is MIME Type?
 #### Q. Why HttpServlet class is declared abstract?
 #### Q. How to notify an object in session when session is invalidated or timed-out?
-#### Q. What is servlet attributes and their scope?
-#### Q. How can we achieve transport layer security for our web application?
 #### Q. How to make sure a servlet is loaded at the application startup?
-#### Q. Write a servlet to upload file on server.
+#### Q. Write a servlet to upload file on server?
 #### Q. How do we go with database connection and log4j integration in servlet?
 #### Q. What is the effective way to make sure all the servlets are accessible only when user has a valid session?
 #### Q. Why do we have servlet listeners?
