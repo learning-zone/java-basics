@@ -117,6 +117,10 @@ Student: [RollNo : 1, Name : John ]
 Student: Roll No 0, updated in the database
 Student: [RollNo : 0, Name : Michael ]
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the differences between ResultSet and RowSet?
 A **ResultSet** maintains a connection to a database and because of that it can’t be serialized and also we cant pass the Resultset object from one class to other class across the network.
 
@@ -180,6 +184,10 @@ public class Proc {
    }  
 }  
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the differences between Statement and PreparedStatement interface?
 JDBC API provides 3 different interfaces to execute the different types of SQL queries. They are,
 
@@ -229,6 +237,10 @@ cstmt.execute();
  
 /** Use cstmt.getter() methods to retrieve the result returned by the stored procedure **/
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the different types of locking in JDBC?
 The types of locks in JDBC:
 
@@ -642,7 +654,6 @@ public class Main {
 #### Q. Explain optimistic and pessimistic locking in JDBC?
 #### Q. How can we store and retrieve images from the database?
 #### Q. How can we store and retrieve the file in the Oracle database?
-
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
