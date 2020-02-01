@@ -605,10 +605,6 @@ public class SimpleServlet extends HttpServlet {
 </div>
 
 #### Q. What is a Server Side Include (SSI)?
-#### Q. What is the difference between doGet() and doPost()?
-#### Q. What is a servlet? What is the life-cycle of a servlet?
-#### Q. What are the differences between Get and Post methods?
-#### Q. How does cookies work in Servlets?
 #### Q. What are the differences between ServletContext vs ServletConfig?
 #### Q. What are the different methods of session management in servlets?
 #### Q. What is MIME Type?
