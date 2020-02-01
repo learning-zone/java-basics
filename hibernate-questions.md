@@ -356,6 +356,10 @@ query.setFirstResult(1);
 query.setMaxResults(10);
 List results = query.list();
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Mention the Key components of Hibernate?
 
 **hibernate.cfg.xml**: This file has database connection details  
@@ -402,6 +406,10 @@ catch (Exception e) {
    session.close();
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How transaction management works in Hibernate?
 A **Transaction** is a sequence of operation which works as an atomic unit. A transaction only completes if all the operations completed successfully. A transaction has the Atomicity, Consistency, Isolation, and Durability properties (ACID).
 
@@ -1716,6 +1724,10 @@ session2.merge(emp1); //it merge the object state with emp2
 session2.update(emp1); //Now it will work with exception
 ```
 In the hibernate session we can maintain only one employee object in persistent state with same primary key, while converting a detached object into persistent, if already that session has a persistent object with the same primary key then hibernate throws an Exception whenever update() method is called to reattach a detached object with a session. In this case we need to call **merge()** method instead of **update()** so that hibernate copies the state changes from detached object into persistent object and we can say a detached object is converted into a persistent object.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between Hibernate save(), saveOrUpdate() and persist() methods?
 #### Q. What will happen if we don’t have no-args constructor in Entity bean?
