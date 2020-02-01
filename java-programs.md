@@ -1540,8 +1540,8 @@ class Graph
 	List<List<Edge>> adjList = null;
 
 	// Constructor
-	Graph(List<Edge> edges, int N)
-	{
+	Graph(List<Edge> edges, int N) {
+
 		adjList = new ArrayList<>(N);
 
 		for (int i = 0; i < N; i++) {
@@ -1557,8 +1557,7 @@ class Graph
 
 class Main
 {
-	private static void printRoute(int prev[], int i)
-	{
+	private static void printRoute(int prev[], int i) {
 		if (i < 0)
 			return;
 
@@ -1567,8 +1566,8 @@ class Main
 	}
 
 	// Run Dijkstra's algorithm on given graph
-	public static void shortestPath(Graph graph, int source, int N)
-	{
+	public static void shortestPath(Graph graph, int source, int N) {
+
 		// create min heap and push source node having distance 0
 		PriorityQueue<Node> minHeap = new PriorityQueue<>((lhs, rhs) -> lhs.weight - rhs.weight);
 		minHeap.add(new Node(source, 0));
@@ -1589,8 +1588,8 @@ class Main
 		prev[0] = -1;
 
 		// run till minHeap is not empty
-		while (!minHeap.isEmpty())
-		{
+		while (!minHeap.isEmpty()) {
+
 			// Remove and return best vertex
 			Node node = minHeap.poll();
 
@@ -1598,14 +1597,13 @@ class Main
 			int u = node.vertex;
 
 			// do for each neighbor v of u
-			for (Edge edge: graph.adjList.get(u))
-			{
+			for (Edge edge: graph.adjList.get(u)) {
+
 				int v = edge.dest;
 				int weight = edge.weight;
 
 				// Relaxation step
-				if (!done[v] && (dist.get(u) + weight) < dist.get(v))
-				{
+				if (!done[v] && (dist.get(u) + weight) < dist.get(v)) {
 					dist.set(v, dist.get(u) + weight);
 					prev[v] = u;
 					minHeap.add(new Node(v, dist.get(v)));
@@ -1616,8 +1614,7 @@ class Main
 			done[u] = true;
 		}
 
-		for (int i = 1; i < N; ++i)
-		{
+		for (int i = 1; i < N; ++i) {
 			System.out.print("Path from vertex 0 to vertex " + i + " has minimum cost of "
 								+ dist.get(i) + " and the route is [ ");
 			printRoute(prev, i);
@@ -1625,8 +1622,8 @@ class Main
 		}
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
+        
 		// initialize edges as per above diagram
 		// (u, v, w) triplet represent undirected edge from
 		// vertex u to vertex v having weight w
