@@ -276,6 +276,10 @@ An abstract class GenericServletis an implementation of the interface independen
 * `doOptions()`- for processing HTTP requests OPTIONS;
 * `doTrace()`- for processing HTTP requests TRACE.
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Which HTTP method is not immutable?
 An HTTP method is called immutable if it always returns the same result on the same request. HTTP methods `GET`, `PUT`, `DELETE`, `HEAD` and `OPTIONS` are immutable, so it is necessary to implement an application so that these methods return the same results consistently. Variable methods include a method `POST` that is used to implement something that changes with each request.
 
@@ -291,6 +295,10 @@ There are several ways to provide a unique session identifier:
 * **Session Management API** - Using a special API for session tracking, built on the basis and on the methods described above and which solves particular problems of the listed methods:
     * Most often, just tracking a session is not enough, you also need to save any additional data about it that may be required when processing subsequent requests. Implementing this behavior requires a lot of extra effort.
     * All of the above methods are not universal: for each of them you can choose a specific scenario in which they will not work.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What are cookies? What methods for working with cookies are provided in servlets?
 Cookies (“cookies”) - a small piece of data sent by a web server and stored on the user's device. Each time you try to open a site page, the web client sends cookies corresponding to this site to the web server as part of the HTTP request. It is used to save data on the user side and in practice it is usually used to:
