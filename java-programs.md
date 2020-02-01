@@ -1487,6 +1487,21 @@ public class MainClass {
   }
 }
 ```
+#### Q. Find the shortest-path weights d(s, v) from given source s for all vertices v present in the graph.
+
+![Dijkstras Algorithm](https://github.com/learning-zone/java-interview-questions/blob/master/assets/shorted-path-dijkstras.png)
+
+For Example:
+
+
+Path from vertex A to vertex B has min cost of 4 & the route is [ A -> E -> B ]
+
+Path from vertex A to vertex C has min cost of 6 & the route is [ A -> E -> B -> C ]
+
+Path from vertex A to vertex D has min cost of 5 & the route is [ A -> E -> D ]
+
+Path from vertex A to vertex E has min cost of 3 & the route is [ A -> E ]
+
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
 #### Q. How to find trigonometric values of an angle in java?
