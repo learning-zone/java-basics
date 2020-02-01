@@ -438,7 +438,6 @@ The jsp page, by default, always creates a session. Using a directive pagewith a
 
 #### Q. How to disable caching on back button of the browser?
 #### Q. What are the different tags provided in JSTL?
-#### Q. How to disable session in JSP?
 #### Q. How to delete a Cookie in a JSP?
 #### Q. How is JSP better than Servlet technology?
 #### Q. What are the differences between include directive and include action?
