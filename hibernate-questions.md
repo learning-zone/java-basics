@@ -1454,6 +1454,10 @@ public class Employee {
     }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Explain some of the elements of hbm.xml?
 Hibernate mapping file is used by hibernate framework to get the information about the mapping of a POJO class and a database table.
 
@@ -1514,6 +1518,10 @@ Relationship annotations:
 |EntityTransaction	    |It has one-to-one relationship with EntityManager. For each EntityManager, operations are maintained by EntityTransaction class.|
 |Persistence	        |This class contain static methods to obtain EntityManagerFactory instance.|
 |Query	                |This interface is implemented by each JPA vendor to obtain relational objects that meet the criteria.|
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Name some important interfaces of Hibernate framework?
 * **Session Interface**: This is the primary interface used by hibernate applications
