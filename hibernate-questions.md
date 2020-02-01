@@ -1729,6 +1729,10 @@ mysql> select * from student;
 +-----+--------+--------+-------+------+
 1 row in set (0.05 sec)
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between merge() and update() methods in Hibernate?
 Both update() and merge() methods in hibernate are used to convert the object which is in detached state into persistence state. But there are different situation where we should be used update() and where should be used merge() method in hibernate
 
