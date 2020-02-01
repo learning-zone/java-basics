@@ -600,6 +600,10 @@ public class SimpleServlet extends HttpServlet {
 	}
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is a Server Side Include (SSI)?
 #### Q. What is the difference between doGet() and doPost()?
 #### Q. What is a servlet? What is the life-cycle of a servlet?
@@ -636,3 +640,6 @@ public class SimpleServlet extends HttpServlet {
 #### Q. What are different ways for servlet authentication?
 #### Q. What is Servlet Chaining?
 #### Q. How do you find out what client machine is making a request to your servlet?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
