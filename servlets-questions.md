@@ -173,6 +173,10 @@ Thus, the servlet is created the first time it is accessed and lives throughout 
 * `public void service(ServletRequest request, ServletResponse response)` - called for each request. The method cannot be called before the init()method is executed .
 * `public void destroy()` - called to destroy the servlet (once during the life of the servlet).
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What actions do you need to do when creating servlets?
 To create a servlet `ExampleServlet`, you must describe it in the deployment descriptor:
 ```xml
@@ -205,6 +209,10 @@ To call a servlet from the same application, you must use the inter-servlet comm
 * `include()` - provides the ability to include the result of another servlet in the returned response.
 
 If you need to call a servlet belonging to another application, then you `RequestDispatcher` will not be able to use it, because it is defined only for the current application. For such purposes, you must use the method `ServletResponse- sendRedirect()` which is provided with the full URL of another servlet. You can use to transfer data between servlets cookies.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is Request Dispatcher?
 The `RequestDispatcher` interface is used to transfer the request to another resource, while it is possible to add data received from this resource to the servlet’s own response. This interface is also used for internal communication between servlets in the same context.
