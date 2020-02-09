@@ -114,6 +114,15 @@ public  static  void main ( String [] args) {
      System.out.println(sum ( new  int [] { 0 , 1 , 0 , 3 , 0 , 5 , 0 , 7 , 0 , 9 }, (n) - > n ! =  0 ));
 } 
 ```
+#### Q. What variables do lambda expressions have access to?
+Access to external scope variables from a lambda expression is very similar to access from anonymous objects. 
+
+* immutable ( effectively final - not necessarily marked as final) local variables;
+* class fields
+* static variables.
+
+The default methods of the implemented functional interface are not allowed to be accessed inside the lambda expression.
+
 #### Q. What is a Functional Interface? What is SAM Interface?
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
