@@ -186,6 +186,21 @@ interface  Example {
 * They give classes the freedom to choose the method to be redefined.
 * One of the main reasons for introducing default methods is the ability of collections in Java 8 to use lambda expressions.
 
+#### Q. How to call `default`an interface method in a class that implements this interface?
+Using the keyword superalong with the interface name:
+```java
+interface  Paper {
+    default void  show () {
+        System.out.println(" default show ()");
+    }
+}
+
+class  License  implements  Paper {
+     public  void  show () {
+        Paper.super.show();
+    }
+}
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
