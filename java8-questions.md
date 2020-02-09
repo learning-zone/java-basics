@@ -130,6 +130,18 @@ public  static  List < String > sort ( List < String > list) {
     return list;
 }
 ```
+#### Q. What is a method reference?
+If the method existing in the class already does everything that is necessary, then you can use the method reference mechanism (method reference) to directly pass this method. The result will be exactly the same as in the case of defining a lambda expression that calls this method.
+```java
+private  interface  Measurable {
+    public  int  length ( String  string );
+}
+
+public  static  void main ( String [] args) {
+    Measurable a =  String::length;
+    System.out.println(a.length("abc"));
+}
+```
 #### Q. What is a Functional Interface? What is SAM Interface?
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
