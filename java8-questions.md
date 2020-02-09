@@ -52,9 +52,9 @@ interface  Operationable {
 }
 
 public  static  void main ( String [] args) {
-     Operationable operation = (x, y) - > x + y;     
-    int result = operation . calculate ( 10 , 20 );
-    The System . out . println (result); // 30 
+    Operationable operation = (x, y) - > x + y;     
+    int result = operation.calculate ( 10 , 20 );
+    System.out.println (result); // 30 
 }
 ```
 In fact, lambda expressions are in some way a shorthand form of internal anonymous classes that were previously used in Java.
@@ -74,24 +74,23 @@ n - > n * n;
 * Trailing lambda expressions are not required to return any value.
 ```java
 interface  Printable {
-     void  print ( String  s );
+     void  print( String  s );
 }
  
 public  static  void main ( String [] args) {
-     Printable printer = s - >  System . out . println (s);
-    printer . print ( " Hello, world " );
+    Printable printer = s - >  System.out.println(s);
+    printer.print("Hello, world");
 }
-
 
 // _ Block lambda - expressions_ are surrounded by curly braces . The modular lambda - expressions can be used inside nested blocks, loops, `design the if ` ` switch statement ', create variables, and so on . d . If you block a lambda - expression must return a value, it explicitly applies `statement return statement ' :
 
 
 Operationable operation = ( int x, int y) - > {       
-     if (y ==  0 ) {
-         return  0 ;
+    if (y ==  0 ) {
+        return  0 ;
     }
     else {
-         return x / y;
+        return x / y;
     }
 };
 ```
@@ -104,7 +103,7 @@ interface  Condition {
 private  static  int sum ( int [] numbers, Condition condition) {
      int result =  0 ;
     for ( int i : numbers) {
-         if (condition . isAppropriate (i)) {
+         if (condition.isAppropriate(i)) {
             result + = i;
         }
     }
