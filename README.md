@@ -482,9 +482,6 @@ Subclass
 #### Q. Can there be an abstract method without an abstract class?
 Yes. because methods in an interface are also abstract. so the interface can be use to declare abstract method.
 
-#### Q. Can you declare an interface method static?
-Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
-
 #### Q. Can we use private or protected member variables in an interface?
 The java compiler adds public and abstract keywords before the interface method and **public, static and final keyword** before data members automatically
 ```java
