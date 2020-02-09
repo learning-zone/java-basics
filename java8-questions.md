@@ -215,6 +215,15 @@ hello.accept( " world " );
 * `IntConsumer`- the consumer receiving the input `Integer`;
 * `LongConsumer`- the consumer receiving the input `Long`.
 
+#### Q. What are the functional interfaces `Supplier<T>`, `BooleanSupplier`, `DoubleSupplier`, `IntSupplier`and `LongSupplier`?
+`Supplier<T>`(**provider**) - the interface through which a function is implemented that takes nothing to the input, but returns the result of the class to the output `T`;
+```java
+Supplier < LocalDateTime > now =  LocalDateTime::now;
+now.get();
+```
+* `DoubleSupplier`- the supplier is returning `Double`;
+* `IntSupplier`- the supplier is returning `Integer`;
+* `LongSupplier`- the supplier is returning `Long`.
 
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
