@@ -233,6 +233,26 @@ optional.ifPresent(s ->  System.out.println(s . length ())); // 5
 optional.get(); // "hello" 
 optional.orElse( " ops ... " ); // "hello"
 ```
+#### Q. What is Stream?
+An interface `java.util.Stream` is a sequence of elements on which various operations can be performed.
+
+Operations on streams can be either intermediate (intermediate) or final (terminal) . Final operations return a result of a certain type, and intermediate operations return the same stream. Thus, you can build chains of several operations on the same stream.
+
+A stream can have any number of calls to intermediate operations and the last call to the final operation. At the same time, all intermediate operations are performed lazily and until the final operation is called, no actions actually happen (similar to creating an object `Thread`or `Runnable`, without a call `start()`).
+
+Streams are created based on sources of some, for example, classes from `java.util.Collection`.
+
+Associative arrays (maps), for example `HashMap`, are not supported.
+
+Operations on streams can be performed both sequentially and in parallel.
+
+Streams cannot be reused. As soon as some final operation has been called, the flow is closed.
+
+In addition to the universal object, there are special types of streams to work with primitive data types `int`, `long`and `double`: `IntStream`, `LongStream`and `DoubleStream`. These primitive streams work just like regular object streams, but with the following differences:
+
+* use specialized lambda expressions, for example, `IntFunction`or `IntPredicate`instead of `Function`and `Predicate`;
+* support additional end operations `sum()`, `average()`, `mapToObj()`.
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
