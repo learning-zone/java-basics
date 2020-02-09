@@ -142,6 +142,8 @@ public  static  void main ( String [] args) {
     System.out.println(a.length("abc"));
 }
 ```
+Method references are potentially more efficient than using lambda expressions. In addition, they provide the compiler with better information about the type, and if you can choose between using a reference to an existing method and using a lambda expression, you should always use a method reference.
+
 #### Q. What is a Functional Interface? What is SAM Interface?
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
