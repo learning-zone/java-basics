@@ -172,6 +172,25 @@ backToString.apply("123");     // "123"
 * `IntFunction<R>`- a function that receives input `Integer`and returns an instance of the class at the output `R`;
 * `LongFunction<R>`- a function that receives input `Long`and returns an instance of the class at the output `R`.
 
+#### Q. What are the functional interfaces `UnaryOperator<T>`, `DoubleUnaryOperator`, `IntUnaryOperator`and `LongUnaryOperator`?
+`UnaryOperator<T>`(**unary operator**) takes an object of type as a parameter `T`, performs operations on them and returns the result of operations in the form of an object of type `T`:
+```java
+UnaryOperator < Integer > operator = x - > x * x;
+System.out.println(operator.apply ( 5 )); // 25
+```
+* `DoubleUnaryOperator`- unary operator receiving input `Double`;
+* `IntUnaryOperator`- unary operator receiving input `Integer`;
+* `LongUnaryOperator`- unary operator receiving input `Long`.
+
+#### Q. What are the functional interfaces `BinaryOperator<T>`, `DoubleBinaryOperator`, `IntBinaryOperator`and `LongBinaryOperator`?
+`BinaryOperator<T>`(**binary operator**) - an interface through which a function is implemented that receives two instances of the class `T`and returns an instance of the class at the output `T`.
+```java
+BinaryOperator < Integer > operator = (a, b) -> a + b;
+System.out.println(operator.apply ( 1 , 2 )); // 3
+```
+* `DoubleBinaryOperator`- binary operator receiving input Double;
+* `IntBinaryOperator`- binary operator receiving input Integer;
+* `LongBinaryOperator`- binary operator receiving input Long.
 
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
