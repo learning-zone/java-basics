@@ -148,6 +148,10 @@ Method references are potentially more efficient than using lambda expressions. 
 * on the static method;
 * per instance method;
 * to the constructor.
+
+#### Q. Explain the expression `System.out::println`
+The specified expression illustrates passing a reference to a static method of a `println()`class `System.out`.
+
 #### Q. What is a Functional Interface? What is SAM Interface?
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
