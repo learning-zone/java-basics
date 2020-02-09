@@ -5,6 +5,7 @@
 
 ### Table of Contents
 
+* *[Java 8 Interview Questions](java8-questions.md)*
 * *[Multithreading Interview Questions](multithreading-questions.md)*
 * *[Collections Interview Questions](collections-questions.md)*
 * *[Hibernate Interview Questions](hibernate-questions.md)*
