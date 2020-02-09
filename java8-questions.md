@@ -43,7 +43,7 @@ Java 8 interface changes include static methods and default methods in interface
 #### Q. What is a lambda ? What is the structure and features of using a lambda expression?
 A lambda is a set of instructions that can be separated into a separate variable and then repeatedly called in various places of the program.
 
-The basis of the lambda expression is the lambda operator , which represents the arrow ->. This operator divides the lambda expression into two parts: the left side contains a list of expression parameters, and the right actually represents the body of the lambda expression, where all actions are performed.
+The basis of the lambda expression is the _lambda operator_ , which represents the arrow `->`. This operator divides the lambda expression into two parts: the left side contains a list of expression parameters, and the right actually represents the body of the lambda expression, where all actions are performed.
 
 The lambda expression is not executed by itself, but forms the implementation of the method defined in the functional interface. It is important that the functional interface should contain only one single method without implementation.
 ```java
@@ -59,9 +59,9 @@ public  static  void main ( String [] args) {
 ```
 In fact, lambda expressions are in some way a shorthand form of internal anonymous classes that were previously used in Java.
 
-* Deferred execution lambda expressions - it is defined once in one place of the program, it is called if necessary, any number of times and in any place of the program.
+* _Deferred execution lambda expressions_ - it is defined once in one place of the program, it is called if necessary, any number of times and in any place of the program.
 
-* The parameters of the lambda expression must correspond in type to the parameters of the functional interface method:
+* _The parameters of the lambda expression_ must correspond in type to the parameters of the functional interface method:
 ```javascript
 operation = ( int x, int y) - > x + y;
 // When writing the lambda expression itself, the parameter type is allowed not to be specified: 
