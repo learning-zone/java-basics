@@ -96,3 +96,11 @@ cmd> jjs hello.js
 
 #### Q. Can you declare an interface method static?
 Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
+
+#### Q. What is a Functional Interface? What is SAM Interface?
+#### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
+#### Q. Explain Differences between Collection API and Stream API?
+#### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
+#### Q. What is Optional in Java 8? What is the use of Optional?
+#### Q. What is Type Inference? Is Type Inference available in older versions like Java 7 and Before 7 or it is available only in Java SE 8?
+#### Q. What is differences between Functional Programming and Object-Oriented Programming?

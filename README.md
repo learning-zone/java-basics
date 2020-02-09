@@ -2806,14 +2806,7 @@ The Object class is the parent class of all the classes in java by default.
 #### Q. Give me an example of design pattern which is based upon open closed principle?
 #### Q. What is Law of Demeter violation? Why it matters?
 #### Q. When do you use Flyweight pattern?
-#### Q. What is a Functional Interface? What is SAM Interface?
-#### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
-#### Q. Explain Differences between Collection API and Stream API?
-#### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
-#### Q. What is Optional in Java 8? What is the use of Optional?
-#### Q. What is Type Inference? Is Type Inference available in older versions like Java 7 and Before 7 or it is available only in Java SE 8?
 #### Q. What is differences between External Iteration and Internal Iteration?
-#### Q. What is differences between Functional Programming and Object-Oriented Programming?
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
