@@ -168,6 +168,17 @@ for ( String s :  " Hello the brave world " . split ( "  " )) {
 }
 System.out.println(joiner); // prefix-Hello.the.brave.world-suffix
 ```
+#### Q. What are `default`interface methods?
+Java 8 allows you to add non-abstract method implementations to an interface using the keyword default:
+```java
+interface  Example {
+    int  process ( int  a );
+    default void  show () {
+        System.out.println("default show ()");
+    }
+}
+```
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
