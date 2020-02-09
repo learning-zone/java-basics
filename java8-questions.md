@@ -208,6 +208,21 @@ Static interface methods are similar to default methods, except that there is no
 * Class methods `java.lang.Object`cannot be overridden as static
 * Static methods in the interface are used to provide helper methods, for example, checking for null, sorting collections, etc.
 
+#### Q. How to call `static` interface method?
+Using the interface name:
+```java
+interface  Paper {
+     static  void  show () {
+         System.out.println( " static show () " );
+    }
+}
+
+class  License {
+     public  void  showPaper () {
+         Paper.show ();
+    }
+}
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
