@@ -338,6 +338,11 @@ The method `filter()` is an intermediate operation receiving a predicate that fi
 #### Q. What is the use of `limit()` method in streams?
 The method `limit()`is an intermediate operation, which allows you to limit the selection to a certain number of first elements.
 
+#### Q. What is the use of `sorted()` method in streams?
+The method `sorted()`is an intermediate operation, which allows you to sort the values ​​either in natural order or by setting Comparator.
+
+The order of the elements in the original collection remains untouched - `sorted()`it just creates its sorted representation.
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
