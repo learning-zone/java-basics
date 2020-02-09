@@ -205,6 +205,17 @@ predicate.negate().test("foo"); // false
 * `IntPredicate`- predicate receiving input `Integer`;
 * `LongPredicate`- predicate receiving input `Long`.
 
+#### Q. What are the functional interfaces `Consumer<T>`, `DoubleConsumer`, `IntConsumer`and `LongConsumer`?
+`Consumer<T>`(**consumer**) - the interface through which a function is implemented that receives an instance of the class as an input `T`, performs some action with it, and returns nothing.
+```java
+Consumer<String> hello = (name) ->  System.out.println( " Hello, "  + name);
+hello.accept( " world " );
+```
+* `DoubleConsumer`- the consumer receiving the input `Double`;
+* `IntConsumer`- the consumer receiving the input `Integer`;
+* `LongConsumer`- the consumer receiving the input `Long`.
+
+
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
 #### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
