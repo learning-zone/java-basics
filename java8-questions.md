@@ -159,6 +159,15 @@ To accurately determine the interface as functional, an annotation has been adde
 
 An interface can include as many `default` methods as you like while remaining functional, because `default` methods are not abstract.
 
+#### Q. What is StringJoiner?
+The class is StringJoinerused to create a sequence of strings separated by a separator with the ability to append a prefix and suffix to the resulting string:
+```java
+StringJoiner joiner =  new  StringJoiner ( " . " , " Prefix- " , " -suffix " );
+for ( String s :  " Hello the brave world " . split ( "  " )) {
+    , joiner, . add (s);
+}
+System.out.println(joiner); // prefix-Hello.the.brave.world-suffix
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
@@ -224,6 +233,8 @@ now.get();
 * `DoubleSupplier`- the supplier is returning `Double`;
 * `IntSupplier`- the supplier is returning `Integer`;
 * `LongSupplier`- the supplier is returning `Long`.
+
+
 
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
