@@ -332,6 +332,8 @@ Stream
     .mapToInt ( Integer :: parseInt)
     .toArray (); // [12, 22, 4, 444, 123]
 ```
+#### Q. What is the purpose of the method `filter()`in streams?
+The method `filter()` is an intermediate operation receiving a predicate that filters all elements, returning only those that match the condition.
 
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
