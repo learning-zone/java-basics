@@ -178,6 +178,13 @@ interface  Example {
     }
 }
 ```
+* If a class implements an interface, it can, but does not have to, implement the default methods already implemented in the * interface. The class inherits the default implementation.
+* If a class implements several interfaces that have the same default method, then the class must implement the method with the same signature on its own. The situation is similar if one interface has a default method, and in the other the same method is abstract - no class default implementation is inherited.
+* The default method cannot override the class method `java.lang.Object`.
+* They help implement interfaces without fear of disrupting other classes.
+* Avoid creating utility classes, since all the necessary methods can be represented in the interfaces themselves.
+* They give classes the freedom to choose the method to be redefined.
+* One of the main reasons for introducing default methods is the ability of collections in Java 8 to use lambda expressions.
 
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
