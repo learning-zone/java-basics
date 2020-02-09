@@ -318,6 +318,10 @@ Collector < String , a List < String > , a List < String > > toList =  Collector
     (l1, l2) -> {l1 . addAll (l2); return l1; }
 );
 ```
+#### Q. Why do streams use `forEach()`and `forEachOrdered()` methods?
+* `forEach()` applies a function to each stream object; ordering in parallel execution is not guaranteed;
+* `forEachOrdered()` applies a function to each stream object while maintaining the order of the elements.
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
