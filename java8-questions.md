@@ -40,6 +40,81 @@
 #### Q. Can you declare an interface method static?
 Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
 
+#### Q. What is a lambda ? What is the structure and features of using a lambda expression?
+A lambda is a set of instructions that can be separated into a separate variable and then repeatedly called in various places of the program.
+
+The basis of the lambda expression is the lambda operator , which represents the arrow ->. This operator divides the lambda expression into two parts: the left side contains a list of expression parameters, and the right actually represents the body of the lambda expression, where all actions are performed.
+
+The lambda expression is not executed by itself, but forms the implementation of the method defined in the functional interface. It is important that the functional interface should contain only one single method without implementation.
+```java
+interface  Operationable {
+     int  calculate ( int  x , int  y );
+}
+
+public  static  void main ( String [] args) {
+     Operationable operation = (x, y) - > x + y;     
+    int result = operation . calculate ( 10 , 20 );
+    The System . out . println (result); // 30 
+}
+```
+In fact, lambda expressions are in some way a shorthand form of internal anonymous classes that were previously used in Java.
+
+* Deferred execution lambda expressions - it is defined once in one place of the program, it is called if necessary, any number of times and in any place of the program.
+
+* The parameters of the lambda expression must correspond in type to the parameters of the functional interface method:
+```javascript
+operation = ( int x, int y) - > x + y;
+// When writing the lambda expression itself, the parameter type is allowed not to be specified: 
+(x, y) - > x + y;
+// If the method does not accept any parameters, then empty brackets are written, for example: 
+() - >  30  +  20 ;
+// If the method accepts only one parameter, then the brackets can be omitted: 
+n - > n * n;
+```
+* Trailing lambda expressions are not required to return any value.
+```java
+interface  Printable {
+     void  print ( String  s );
+}
+ 
+public  static  void main ( String [] args) {
+     Printable printer = s - >  System . out . println (s);
+    printer . print ( " Hello, world " );
+}
+
+
+// _ Block lambda - expressions_ are surrounded by curly braces . The modular lambda - expressions can be used inside nested blocks, loops, `design the if ` ` switch statement ', create variables, and so on . d . If you block a lambda - expression must return a value, it explicitly applies `statement return statement ' :
+
+
+Operationable operation = ( int x, int y) - > {       
+     if (y ==  0 ) {
+         return  0 ;
+    }
+    else {
+         return x / y;
+    }
+};
+```
+* Passing a lambda expression as a method parameter
+```java
+interface  Condition {
+     boolean  isAppropriate ( int  n );
+}
+
+private  static  int sum ( int [] numbers, Condition condition) {
+     int result =  0 ;
+    for ( int i : numbers) {
+         if (condition . isAppropriate (i)) {
+            result + = i;
+        }
+    }
+    return result;
+}
+
+public  static  void main ( String [] args) {
+     System.out.println(sum ( new  int [] { 0 , 1 , 0 , 3 , 0 , 5 , 0 , 7 , 0 , 9 }, (n) - > n ! =  0 ));
+} 
+```
 #### Q. What is a Functional Interface? What is SAM Interface?
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
