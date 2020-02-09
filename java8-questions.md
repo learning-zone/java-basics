@@ -294,10 +294,12 @@ A method `collect()`is the final operation that is used to represent the result 
 
 `collect()`accepts an input that contains four stages: 
 
-* **supplier** — initialization of the battery,   
-* **accumulator** — processing of each element,   
-* **combiner** — connection of two accumulators in parallel execution,   
-* **[finisher]** —a non-mandatory method of the last processing of the accumulator. In Java 8, the class `Collectors` implements several common collectors:  
+* **supplier** — initialization of the battery,
+* **accumulator** — processing of each element,
+* **combiner** — connection of two accumulators in parallel execution,
+* **[finisher]** —a non-mandatory method of the last processing of the accumulator. 
+
+In Java 8, the class `Collectors` implements several common collectors:  
 
 * `toList()`, `toCollection()`, `toSet()`- present stream in the form of a list, collection or set;
 * `toConcurrentMap()`, `toMap()`- allow you to convert the stream to `Map`;
