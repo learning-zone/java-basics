@@ -253,6 +253,40 @@ In addition to the universal object, there are special types of streams to work 
 * use specialized lambda expressions, for example, `IntFunction`or `IntPredicate`instead of `Function`and `Predicate`;
 * support additional end operations `sum()`, `average()`, `mapToObj()`.
 
+#### Q. What are the ways to create a stream?
+* Using collection:
+```java
+Stream < String > fromCollection =  Arrays.asList ( " x " , " y " , " z " ).stream ();
+```
+* Using  set of values:
+```java
+Stream < String > fromValues =  Stream.of( " x " , " y " , " z " );
+```
+* Using Array
+```java
+Stream < String > fromArray =  Arrays.stream( new  String [] { " x " , " y " , " z " });
+```
+* Using file (each line in the file will be a separate element in the stream):
+```java
+Stream < String > fromFile =  Files.lines( Paths.get(" input.txt "));
+```
+* From the line:
+```java
+IntStream fromString =  " 0123456789 " . chars ();
+```
+* With the help of `Stream.builder()`:
+```java
+Stream < String > fromBuilder =  Stream.builder().add (" z ").add(" y ").add(" z ").build ();
+```
+* Using `Stream.iterate()(infinite)`:
+```java
+Stream < Integer > fromIterate =  Stream.iterate ( 1 , n - > n +  1 );
+```
+* Using `Stream.generate()(infinite)`:
+```java
+Stream < String > fromGenerate =  Stream.generate(() ->  " 0 " );
+```
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
