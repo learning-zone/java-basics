@@ -286,7 +286,36 @@ Stream < Integer > fromIterate =  Stream.iterate ( 1 , n - > n +  1 );
 ```java
 Stream < String > fromGenerate =  Stream.generate(() ->  " 0 " );
 ```
+#### Q. What is the difference between `Collection` and `Stream`?
+Collections allow you to work with elements separately, while streams do not allow this, but instead provides the ability to perform functions on data as one.
 
+#### Q. What is the method `collect()`for streams for?
+A method `collect()`is the final operation that is used to represent the result as a collection or some other data structure.
+
+`collect()`accepts an input that contains four stages: 
+
+* **supplier** — initialization of the battery,   
+* **accumulator** — processing of each element,   
+* **combiner** — connection of two accumulators in parallel execution,   
+* **[finisher]** —a non-mandatory method of the last processing of the accumulator. In Java 8, the class `Collectors` implements several common collectors:  
+
+* `toList()`, `toCollection()`, `toSet()`- present stream in the form of a list, collection or set;
+* `toConcurrentMap()`, `toMap()`- allow you to convert the stream to `Map`;
+* `averagingInt()`, `averagingDouble()`, `averagingLong()`- return the average value;
+* `summingInt()`, `summingDouble()`, `summingLong()`- returns the sum;
+* `summarizingInt()`, `summarizingDouble()`, `summarizingLong()`- return SummaryStatisticswith different values of the aggregate;
+* `partitioningBy()`- divides the collection into two parts according to the condition and returns them as `Map<Boolean, List>`;
+* `groupingBy()`- divides the collection into several parts and returns `Map<N, List<T>>`;
+* `mapping()`- Additional value conversions for complex Collectors.
+
+There is also the possibility of creating your own collector through `Collector.of()`:
+```java
+Collector < String , a List < String > , a List < String > > toList =  Collector.of (
+    ArrayList :: new ,
+    List :: add,
+    (l1, l2) -> {l1 . addAll (l2); return l1; }
+);
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
