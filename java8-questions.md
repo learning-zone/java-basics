@@ -152,7 +152,12 @@ Method references are potentially more efficient than using lambda expressions. 
 #### Q. Explain the expression `System.out::println`
 The specified expression illustrates passing a reference to a static method of a `println()`class `System.out`.
 
-#### Q. What is a Functional Interface? What is SAM Interface?
+#### Q. What is a Functional Interface?
+A **functional interface** is an interface that defines only one abstract method.
+
+To accurately determine the interface as functional, an annotation has been added `@FunctionalInterface` that works on the principle of `@Override`. It will designate a plan and will not allow to define the second abstract method in the interface.
+
+An interface can include as many `default` methods as you like while remaining functional, because `default` methods are not abstract.
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
 #### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
