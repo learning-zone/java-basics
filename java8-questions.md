@@ -123,6 +123,13 @@ Access to external scope variables from a lambda expression is very similar to a
 
 The default methods of the implemented functional interface are not allowed to be accessed inside the lambda expression.
 
+#### Q. How to sort a list of strings using a lambda expression?
+```java
+public  static  List < String > sort ( List < String > list) {
+    Collections.sort(list, (a, b) -> a.compareTo(b));
+    return list;
+}
+```
 #### Q. What is a Functional Interface? What is SAM Interface?
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
