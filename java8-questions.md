@@ -158,6 +158,21 @@ A **functional interface** is an interface that defines only one abstract method
 To accurately determine the interface as functional, an annotation has been added `@FunctionalInterface` that works on the principle of `@Override`. It will designate a plan and will not allow to define the second abstract method in the interface.
 
 An interface can include as many `default` methods as you like while remaining functional, because `default` methods are not abstract.
+
+#### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
+`Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
+
+Default methods can be used to build call chains ( `compose`, `andThen`).
+```java
+Function < String , Integer > toInteger =  Integer :: valueOf;
+Function < String , String > backToString = toInteger.andThen ( String :: valueOf);
+backToString.apply("123");     // "123"
+```
+* `DoubleFunction<R>`- a function that receives input `Double` and returns an instance of the class at the output `R`;
+* `IntFunction<R>`- a function that receives input `Integer`and returns an instance of the class at the output `R`;
+* `LongFunction<R>`- a function that receives input `Long`and returns an instance of the class at the output `R`.
+
+
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
 #### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
