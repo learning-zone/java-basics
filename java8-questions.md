@@ -192,6 +192,19 @@ System.out.println(operator.apply ( 1 , 2 )); // 3
 * `IntBinaryOperator`- binary operator receiving input Integer;
 * `LongBinaryOperator`- binary operator receiving input Long.
 
+#### Q. What are the functional interfaces `Predicate<T>`, `DoublePredicate`, `IntPredicateand` `LongPredicate`?
+`Predicate<T>`(**predicate**) - the interface with which a function is implemented that receives an instance of the class as input `T`and returns the type value at the output `boolean`.
+
+The interface contains a variety of methods by default, allow to build complex conditions ( `and`, `or`, `negate`).
+```java
+Predicate < String > predicate = (s) -> s.length () >  0 ;
+predicate.test("foo"); // true 
+predicate.negate().test("foo"); // false
+```
+* `DoublePredicate`- predicate receiving input `Double`;
+* `IntPredicate`- predicate receiving input `Integer`;
+* `LongPredicate`- predicate receiving input `Long`.
+
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
 #### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
