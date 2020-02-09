@@ -186,7 +186,7 @@ interface  Example {
 * They give classes the freedom to choose the method to be redefined.
 * One of the main reasons for introducing default methods is the ability of collections in Java 8 to use lambda expressions.
 
-#### Q. How to call `default`an interface method in a class that implements this interface?
+#### Q. How to call `default` interface method in a class that implements this interface?
 Using the keyword superalong with the interface name:
 ```java
 interface  Paper {
@@ -201,6 +201,13 @@ class  License  implements  Paper {
     }
 }
 ```
+#### Q. What is `static` interface method?
+Static interface methods are similar to default methods, except that there is no way to override them in classes that implement the interface.
+
+* Static methods in the interface are part of the interface without the ability to use them for objects of the implementation class
+* Class methods `java.lang.Object`cannot be overridden as static
+* Static methods in the interface are used to provide helper methods, for example, checking for null, sorting collections, etc.
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
