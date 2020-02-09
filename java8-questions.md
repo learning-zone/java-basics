@@ -40,7 +40,7 @@
 #### Q. Can you declare an interface method static?
 Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
 
-#### Q. What is a lambda ? What is the structure and features of using a lambda expression?
+#### Q. What is a lambda? What is the structure and features of using a lambda expression?
 A lambda is a set of instructions that can be separated into a separate variable and then repeatedly called in various places of the program.
 
 The basis of the lambda expression is the _lambda operator_ , which represents the arrow `->`. This operator divides the lambda expression into two parts: the left side contains a list of expression parameters, and the right actually represents the body of the lambda expression, where all actions are performed.
