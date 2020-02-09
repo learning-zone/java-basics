@@ -223,6 +223,16 @@ class  License {
     }
 }
 ```
+#### Q. What is Optional
+An optional value `Optional`is a container for an object that may or may not contain a value `null`. Such a wrapper is a convenient means of prevention `NullPointerException`, as has some higher-order functions, eliminating the need for repeating `if null/notNullchecks`:
+```java
+Optional < String > optional =  Optional . of ( " hello " );
+
+optional.isPresent(); // true 
+optional.ifPresent(s ->  System.out.println(s . length ())); // 5 
+optional.get(); // "hello" 
+optional.orElse( " ops ... " ); // "hello"
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
