@@ -478,6 +478,42 @@ Stream
     .average ()
     .getAsDouble (); // 13.8
 ```
+#### Q. What additional methods for working with associative arrays (maps) appeared in Java 8?
+* `putIfAbsent()` adds a key-value pair only if the key was missing:
+```java
+map.putIfAbsent("a", "Aa");
+```
+
+* `forEach()` accepts a function that performs an operation on each element:
+```java
+map.forEach((k, v) -> System.out.println(v));
+```
+
+* `compute()` creates or updates the current value to the result of the calculation (it is possible to use the key and the current value):
+```java
+map.compute("a", (k, v) -> String.valueOf(k).concat(v)); //["a", "aAa"]
+```
+
+* `computeIfPresent()` if the key exists, updates the current value to the result of the calculation (it is possible to use the key and the current value):
+```java
+map.computeIfPresent("a", (k, v) -> k.concat(v));
+```
+
+* `computeIfAbsent()` if the key is missing, creates it with the value that is calculated (it is possible to use the key):
+```java
+map.computeIfAbsent("a", k -> "A".concat(k)); //["a","Aa"]
+```
+
+* `getOrDefault()` if there is no key, returns the passed value by default:
+```java
+map.getOrDefault("a", "not found");
+```
+
+* `merge()` accepts a key, a value, and a function that combines the transmitted and current values. If there is no value under the specified key, then it writes the transmitted value there.
+```java
+map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
+```
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
