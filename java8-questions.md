@@ -564,6 +564,9 @@ To define a repeatable annotation, you must create a container annotation for th
 #### Q. What is Nashorn?
 **Nashorn** is a JavaScript engine developed in Java by Oracle. Designed to provide the ability to embed JavaScript code in Java applications. Compared to Rhino , which is supported by the Mozilla Foundation, Nashorn provides 2 to 10 times better performance, as it compiles code and transfers bytecode to the Java virtual machine directly in memory. Nashorn can compile JavaScript code and generate Java classes that are loaded with a special loader. It is also possible to call Java code directly from JavaScript.
 
+#### Q. What is jjs?
+`jjs` - This is a command line utility that allows you to execute JavaScript programs directly in the console.
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
