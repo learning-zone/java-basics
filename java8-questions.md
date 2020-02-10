@@ -343,6 +343,16 @@ The method `sorted()`is an intermediate operation, which allows you to sort the 
 
 The order of the elements in the original collection remains untouched - `sorted()`it just creates its sorted representation.
 
+#### Q. What streamers designed methods `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`?
+The method `flatMap()` is similar to map, but can create several from one element. Thus, each object will be converted to zero, one or more other objects supported by the stream. The most obvious way to use this operation is to convert container elements using functions that return containers.
+```java
+Stream 
+    .of ( " Hello " , " world! " )
+    .flatMap ((p) ->  Arrays.stream (p . split ( " , " )))
+    .toArray ( String [] :: new ); // ["H", "e", "l", "l", "o", "w", "o", "r", "l", "d", "!"]
+```
+`flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- are analogues `flatMap()`, returns the corresponding numerical stream.
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
