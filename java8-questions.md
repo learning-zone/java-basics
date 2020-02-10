@@ -261,6 +261,10 @@ In addition to the universal object, there are special types of streams to work 
 * use specialized lambda expressions, for example, `IntFunction`or `IntPredicate`instead of `Function`and `Predicate`;
 * support additional end operations `sum()`, `average()`, `mapToObj()`.
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the ways to create a stream?
 * Using collection:
 ```java
@@ -326,6 +330,10 @@ Collector < String , a List < String > , a List < String > > toList =  Collector
     (l1, l2) -> {l1 . addAll (l2); return l1; }
 );
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Why do streams use `forEach()`and `forEachOrdered()` methods?
 * `forEach()` applies a function to each stream object; ordering in parallel execution is not guaranteed;
 * `forEachOrdered()` applies a function to each stream object while maintaining the order of the elements.
