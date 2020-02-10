@@ -577,6 +577,10 @@ LocalDate
     .with ( TemporalAdjusters.nextOrSame ( DayOfWeek.SATURDAY ))
     .with ( TemporalAdjusters.next ( DayOfWeek.SATURDAY ));
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How to get the current time in local time accurate to milliseconds using the Date Time API?
 ```java
 LocalDateTime.ofInstant ( new  Date().toInstant(), ZoneId.systemDefault());
@@ -606,6 +610,10 @@ Base64 contains 6 basic methods:
 
 `getEncoder() / getDecoder()`- returns a base64 encoder / decoder conforming to the RFC 4648 standard ; getUrlEncoder()/ `getUrlDecoder()`- returns URL-safe base64 encoder / decoder conforming to RFC 4648 standard ; 
 `getMimeEncoder() / getMimeDecoder()`- returns a MIME encoder / decoder conforming to RFC 2045 .
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How to create a Base64 encoder and decoder?
 ```java
