@@ -369,6 +369,10 @@ Stream
 ```
 `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- are analogues `flatMap()`, returns the corresponding numerical stream.
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Tell us about parallel processing in Java 8?
 Streams can be sequential and parallel. Operations on sequential streams are performed in one processor thread, on parallel streams - using several processor threads. Parallel streams use the shared stream `ForkJoinPool`through the static `ForkJoinPool.commonPool()`method. In this case, if the environment is not multi-core, then the stream will be executed as sequential. In fact, the use of parallel streams is reduced to the fact that the data in the streams will be divided into parts, each part is processed on a separate processor core, and in the end these parts are connected, and final operations are performed on them.
 
@@ -417,6 +421,10 @@ collection.parallelStream ()
 * `reduce()`allows you to perform aggregate functions and return a single result.
 * `sum()` returns the sum of all numbers
 * `average()` returns the arithmetic mean of all numbers.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What intermediate methods of working with streams do you know?
 * `filter()` filters records, returning only records matching the condition;
