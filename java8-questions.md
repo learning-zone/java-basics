@@ -385,6 +385,22 @@ collection.parallelStream ()
     .unordered ()
     .collect ( Collectors . toList ());
 ```
+#### Q. What are the final methods of working with streams you know?
+* `findFirst()` returns the first element
+* `findAny()` returns any suitable item
+* `collect()` presentation of results in the form of collections and other data structures
+* `count()` returns the number of elements
+* `anyMatch()`returns trueif the condition is satisfied for at least one element
+* `noneMatch()`returns trueif the condition is not satisfied for any element
+* `allMatch()`returns trueif the condition is satisfied for all elements
+* `min()`returns the minimum element, using as a condition Comparator
+* `max()`returns the maximum element, using as a condition Comparator
+* `forEach()` applies a function to each object (order is not guaranteed in parallel execution)
+* `forEachOrdered()` applies a function to each object while preserving the order of elements
+* `toArray()` returns an array of values
+* `reduce()`allows you to perform aggregate functions and return a single result.
+* `sum()` returns the sum of all numbers
+* `average()` returns the arithmetic mean of all numbers.
 
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
