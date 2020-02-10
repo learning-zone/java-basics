@@ -402,6 +402,19 @@ collection.parallelStream ()
 * `sum()` returns the sum of all numbers
 * `average()` returns the arithmetic mean of all numbers.
 
+#### Q. What intermediate methods of working with streams do you know?
+* `filter()` filters records, returning only records matching the condition;
+* `skip()` allows you to skip a certain number of elements at the beginning;
+* `distinct()`returns a stream without duplicates (for a method `equals()`);
+* `map()` converts each element;
+* `peek()` returns the same stream, applying a function to each element;
+* `limit()` allows you to limit the selection to a certain number of first elements;
+* `sorted()`allows you to sort values ​​either in natural order or by setting Comparator;
+* `mapToInt()`, mapToDouble(), mapToLong()- analogues map()return stream numeric primitives;
+* `flatMap()`, flatMapToInt(), flatMapToDouble(), flatMapToLong()- similar to map(), but can create a single element more.
+
+For numerical streams, an additional method is available `mapToObj()`that converts the numerical stream back to the object stream.
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
