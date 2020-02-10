@@ -575,6 +575,13 @@ Base64 contains 6 basic methods:
 `getEncoder() / getDecoder()`- returns a base64 encoder / decoder conforming to the RFC 4648 standard ; getUrlEncoder()/ `getUrlDecoder()`- returns URL-safe base64 encoder / decoder conforming to RFC 4648 standard ; 
 `getMimeEncoder() / getMimeDecoder()`- returns a MIME encoder / decoder conforming to RFC 2045 .
 
+#### Q. How to create a Base64 encoder and decoder?
+```java
+// Encode 
+String b64 =  Base64.getEncoder().encodeToString ( " input " . getBytes ( " utf-8 " )); // aW5wdXQ == 
+// Decode 
+new  String ( Base64.getDecoder().decode ( " aW5wdXQ == " ), " utf-8 " ); // input
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
