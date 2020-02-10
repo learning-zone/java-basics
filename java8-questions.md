@@ -648,8 +648,6 @@ now.get();
 * `IntSupplier`- the supplier is returning `Integer`;
 * `LongSupplier`- the supplier is returning `Long`.
 
-
-
 #### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
 #### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
