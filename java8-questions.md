@@ -534,6 +534,10 @@ LocalDate as.now ().plus ( 1 , ChronoUnit.DECADES );
 ```java
 LocalDate as.now().with( TemporalAdjusters.next ( DayOfWeek.TUESDAY ));
 ```
+#### Q. How to get the current time accurate to milliseconds using the Date Time API?
+```java
+new  Date ().toInstant ();
+```
 #### Q. How to get the second Saturday of the current month using the Date Time API?
 ```java
 LocalDate 
