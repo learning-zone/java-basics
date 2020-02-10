@@ -431,7 +431,14 @@ Stream
     .collect ( Collectors . toList ())
     .forEach ( System . out :: println);
 ```
-
+#### Q. How to display the number of empty lines using the method filter()?
+```java
+System.out.println (
+     Stream 
+        .of ( " Hello " , " " , " , " , " world " , " ! " )
+        .filter ( String :: isEmpty)
+        .count ());
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
