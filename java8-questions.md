@@ -530,6 +530,10 @@ LocalDate as.now ().plusMonths ( 1 );
 LocalDate as.now ().plusYears ( 1 );
 LocalDate as.now ().plus ( 1 , ChronoUnit.DECADES );
 ```
+#### Q. How to get the next Tuesday using the Date Time API?
+```java
+LocalDate as.now().with( TemporalAdjusters.next ( DayOfWeek.TUESDAY ));
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
