@@ -470,6 +470,14 @@ Stream
     .mapToInt()
     .sum(); // 69
 ```
+#### Q. How to get the average of all numbers?
+```java
+Stream 
+    .of ( 5 , 3 , 4 , 55 , 2 )
+    .mapToInt (a -> a)
+    .average ()
+    .getAsDouble (); // 13.8
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
