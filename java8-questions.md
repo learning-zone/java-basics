@@ -523,6 +523,13 @@ map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 ```java
 LocalDate as.now();
 ```
+#### Q. How to add 1 week, 1 month, 1 year, 10 years to the current date using the Date Time API?
+```java
+LocalDate as.now ().plusWeeks ( 1 );
+LocalDate as.now ().plusMonths ( 1 );
+LocalDate as.now ().plusYears ( 1 );
+LocalDate as.now ().plus ( 1 , ChronoUnit.DECADES );
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
