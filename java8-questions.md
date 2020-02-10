@@ -439,6 +439,14 @@ System.out.println (
         .filter ( String :: isEmpty)
         .count ());
 ```
+#### Q. How to display 10 random numbers in ascending order?
+```java
+( new  Random ())
+    .ints ()
+    .limit ( 10 )
+    .sorted ()
+    .forEach ( System . out :: println);
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
