@@ -415,6 +415,23 @@ collection.parallelStream ()
 
 For numerical streams, an additional method is available `mapToObj()`that converts the numerical stream back to the object stream.
 
+#### Q. How to display 10 random numbers using forEach()?
+```java
+( new  Random ())
+    .ints ()
+    .limit ( 10 )
+    .forEach ( System . out :: println);
+```
+#### Q. How can I display unique squares of numbers using the method map()?
+```java
+Stream 
+    .of ( 1 , 2 , 3 , 2 , 1 )
+    .map (s -> s * s)
+    .distinct ()
+    .collect ( Collectors . toList ())
+    .forEach ( System . out :: println);
+```
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
