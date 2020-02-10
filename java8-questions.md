@@ -479,6 +479,10 @@ Stream
     .max ()
     .getAsInt (); // 55
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How to find the minimum number in a set?
 ```java
 Stream 
@@ -537,6 +541,10 @@ map.getOrDefault("a", "not found");
 ```java
 map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is LocalDateTime?
 `LocalDateTime`combines together `LocaleDate`and `LocalTime`contains the date and time in the calendar system ISO-8601 without reference to the time zone. Time is stored accurate to the nanosecond. It contains many convenient methods such as plusMinutes, plusHours, isAfter, toSecondOfDay, etc.
 
