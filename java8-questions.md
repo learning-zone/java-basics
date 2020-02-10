@@ -409,9 +409,9 @@ collection.parallelStream ()
 * `map()` converts each element;
 * `peek()` returns the same stream, applying a function to each element;
 * `limit()` allows you to limit the selection to a certain number of first elements;
-* `sorted()`allows you to sort values ​​either in natural order or by setting Comparator;
-* `mapToInt()`, mapToDouble(), mapToLong()- analogues map()return stream numeric primitives;
-* `flatMap()`, flatMapToInt(), flatMapToDouble(), flatMapToLong()- similar to map(), but can create a single element more.
+* `sorted()`allows you to sort values ​​either in natural order or by setting `Comparator`;
+* `mapToInt()`, `mapToDouble()`, `mapToLong()`- analogues `map()`return stream numeric primitives;
+* `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- similar to `map()`, but can create a single element more.
 
 For numerical streams, an additional method is available `mapToObj()`that converts the numerical stream back to the object stream.
 
