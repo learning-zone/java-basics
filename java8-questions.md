@@ -534,6 +534,13 @@ LocalDate as.now ().plus ( 1 , ChronoUnit.DECADES );
 ```java
 LocalDate as.now().with( TemporalAdjusters.next ( DayOfWeek.TUESDAY ));
 ```
+#### Q. How to get the second Saturday of the current month using the Date Time API?
+```java
+LocalDate 
+    .of ( LocalDate.Now ().GetYear (), LocalDate.Now ().GetMonth (), 1 )
+    .with ( TemporalAdjusters.nextOrSame ( DayOfWeek.SATURDAY ))
+    .with ( TemporalAdjusters.next ( DayOfWeek.SATURDAY ));
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
