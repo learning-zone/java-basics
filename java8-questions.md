@@ -549,6 +549,18 @@ LocalDate
 ```java
 LocalDateTime.ofInstant ( new  Date().toInstant(), ZoneId.systemDefault());
 ```
+#### Q. How to determine repeatable annotation?
+To define a repeatable annotation, you must create a container annotation for the list of repeatable annotations and designate a repeatable meta annotation `@Repeatable`:
+```java
+@interface  Schedulers {
+    Scheduler [] value ();
+}
+
+@Repeatable ( Schedulers . Class)
+ @interface  Scheduler {
+    String  birthday () default "Jan 8 2000";
+ }
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
