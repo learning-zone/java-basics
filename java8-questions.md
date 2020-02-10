@@ -654,3 +654,6 @@ now.get();
 #### Q. What is Optional in Java 8? What is the use of Optional?
 #### Q. What is Type Inference? Is Type Inference available in older versions like Java 7 and Before 7 or it is available only in Java SE 8?
 #### Q. What is differences between Functional Programming and Object-Oriented Programming?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
