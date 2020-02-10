@@ -519,6 +519,10 @@ map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 #### Q. What is ZonedDateTime?
 `java.time.ZonedDateTime`- an analogue `java.util.Calendar`, a class with the most complete amount of information about the temporary context in the calendar system ISO-8601. It includes a time zone, therefore, this class carries out all operations with time shifts taking into account it.
 
+#### Q. How to get current date using Date Time API from Java 8?
+```java
+LocalDate as.now();
+```
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
