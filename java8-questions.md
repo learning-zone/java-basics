@@ -567,6 +567,14 @@ To define a repeatable annotation, you must create a container annotation for th
 #### Q. What is jjs?
 `jjs` - This is a command line utility that allows you to execute JavaScript programs directly in the console.
 
+#### Q. What class appeared in Java 8 for encoding / decoding data?
+`Base64`- a thread-safe class that implements a data encoder and decoder using a base64 encoding scheme according to RFC 4648 and RFC 2045 .
+
+Base64 contains 6 basic methods:
+
+`getEncoder() / getDecoder()`- returns a base64 encoder / decoder conforming to the RFC 4648 standard ; getUrlEncoder()/ `getUrlDecoder()`- returns URL-safe base64 encoder / decoder conforming to RFC 4648 standard ; 
+`getMimeEncoder() / getMimeDecoder()`- returns a MIME encoder / decoder conforming to RFC 2045 .
+
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
