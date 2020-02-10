@@ -655,6 +655,10 @@ System.out.println(operator.apply ( 1 , 2 )); // 3
 * `IntBinaryOperator`- binary operator receiving input Integer;
 * `LongBinaryOperator`- binary operator receiving input Long.
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What are the functional interfaces `Predicate<T>`, `DoublePredicate`, `IntPredicateand` `LongPredicate`?
 `Predicate<T>`(**predicate**) - the interface with which a function is implemented that receives an instance of the class as input `T`and returns the type value at the output `boolean`.
 
