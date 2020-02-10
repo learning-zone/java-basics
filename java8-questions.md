@@ -513,6 +513,8 @@ map.getOrDefault("a", "not found");
 ```java
 map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 ```
+#### Q. What is LocalDateTime?
+`LocalDateTime`combines together `LocaleDate`and `LocalTime`contains the date and time in the calendar system ISO-8601 without reference to the time zone. Time is stored accurate to the nanosecond. It contains many convenient methods such as plusMinutes, plusHours, isAfter, toSecondOfDay, etc.
 
 #### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
