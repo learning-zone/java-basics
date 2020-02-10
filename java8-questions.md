@@ -114,6 +114,10 @@ public  static  void main ( String [] args) {
      System.out.println(sum ( new  int [] { 0 , 1 , 0 , 3 , 0 , 5 , 0 , 7 , 0 , 9 }, (n) - > n ! =  0 ));
 } 
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What variables do lambda expressions have access to?
 Access to external scope variables from a lambda expression is very similar to access from anonymous objects. 
 
@@ -185,6 +189,10 @@ interface  Example {
 * Avoid creating utility classes, since all the necessary methods can be represented in the interfaces themselves.
 * They give classes the freedom to choose the method to be redefined.
 * One of the main reasons for introducing default methods is the ability of collections in Java 8 to use lambda expressions.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How to call `default` interface method in a class that implements this interface?
 Using the keyword superalong with the interface name:
