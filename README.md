@@ -87,6 +87,61 @@ public class CustomExceptionExample {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
+#### Q. What is the difference between aggregation and composition?
+
+![Aggregation](https://github.com/learning-zone/java-interview-questions/blob/master/assets/aggregation.png)
+
+
+**Aggregation**: We call aggregation those relationships whose **objects have an independent lifecycle, but there is ownership**, and child objects cannot belong to another parent object.
+
+Example: Since Organization has Person as employees, the relationship between them is Aggregation. Here is how they look like in terms of Java classes
+```java
+public class Organization {
+   private List employees;
+}
+
+public class Person {
+   private String name;   
+}
+```
+
+**Composition**: We use the term composition to refer to relationships whose objects **don’t have an independent lifecycle**, and if the parent object is deleted, all child objects will also be deleted.
+
+Example: Since Engine is-part-of Car, the relationship between them is Composition. Here is how they are implemented between Java classes.
+```java
+public class Car {
+    //final will make sure engine is initialized
+    private final Engine engine;  
+       
+    public Car(){
+       engine  = new Engine();
+    }
+}
+
+class Engine {
+    private String type;
+}
+```
+
+<table class="alt">
+<tbody><tr><th>Aggregation</th><th>Composition</th></tr>
+<tr><td>Aggregation is a weak Association.</td><td>Composition is a strong Association.</td></tr>
+<tr><td>Class can exist independently without owner.</td><td>Class can not meaningfully exist without owner.</td></tr>
+<tr><td>Have their own Life Time.</td><td>Life Time depends on the Owner.</td></tr>
+<tr><td>A uses B.</td><td>A owns B.</td></tr>
+<tr><td>Child is not owned by 1 owner.</td><td>Child can have only 1 owner.</td></tr>
+<tr><td>Has-A relationship. A has B.</td><td>Part-Of relationship. B is part of A.</td></tr>
+<tr><td>Denoted by a empty diamond in UML.</td><td>Denoted by a filled diamond in UML.</td></tr>
+<tr><td>We do not use "final" keyword for Aggregation.</td><td>"final" keyword is used to represent Composition.</td></tr>
+<tr><td>Examples:<br>- Car has a Driver.<br>- A Human uses Clothes.<br>- A Company is an aggregation of People.<br>- A Text Editor uses a File.<br>- Mobile has a SIM Card.</td><td>Examples:<br>- Engine is a part of Car.<br>- A Human owns the Heart.<br>- A Company is a composition of Accounts.<br>- A Text Editor owns a Buffer.<br>- IMEI Number is a part of a Mobile.</td></tr>
+</tbody></table>
+
+*Note: "final" keyword is used in Composition to make sure child variable is initialized.*
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is difference between Heap and Stack Memory in java?
 **Java Heap Space**  
 
@@ -919,61 +974,6 @@ overridden method is static
 
 1 error
 ```
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
-#### Q. What is the difference between aggregation and composition?
-
-![Aggregation](https://github.com/learning-zone/java-interview-questions/blob/master/assets/aggregation.png)
-
-
-**Aggregation**: We call aggregation those relationships whose **objects have an independent lifecycle, but there is ownership**, and child objects cannot belong to another parent object.
-
-Example: Since Organization has Person as employees, the relationship between them is Aggregation. Here is how they look like in terms of Java classes
-```java
-public class Organization {
-   private List employees;
-}
-
-public class Person {
-   private String name;   
-}
-```
-
-**Composition**: We use the term composition to refer to relationships whose objects **don’t have an independent lifecycle**, and if the parent object is deleted, all child objects will also be deleted.
-
-Example: Since Engine is-part-of Car, the relationship between them is Composition. Here is how they are implemented between Java classes.
-```java
-public class Car {
-    //final will make sure engine is initialized
-    private final Engine engine;  
-       
-    public Car(){
-       engine  = new Engine();
-    }
-}
-
-class Engine {
-    private String type;
-}
-```
-
-<table class="alt">
-<tbody><tr><th>Aggregation</th><th>Composition</th></tr>
-<tr><td>Aggregation is a weak Association.</td><td>Composition is a strong Association.</td></tr>
-<tr><td>Class can exist independently without owner.</td><td>Class can not meaningfully exist without owner.</td></tr>
-<tr><td>Have their own Life Time.</td><td>Life Time depends on the Owner.</td></tr>
-<tr><td>A uses B.</td><td>A owns B.</td></tr>
-<tr><td>Child is not owned by 1 owner.</td><td>Child can have only 1 owner.</td></tr>
-<tr><td>Has-A relationship. A has B.</td><td>Part-Of relationship. B is part of A.</td></tr>
-<tr><td>Denoted by a empty diamond in UML.</td><td>Denoted by a filled diamond in UML.</td></tr>
-<tr><td>We do not use "final" keyword for Aggregation.</td><td>"final" keyword is used to represent Composition.</td></tr>
-<tr><td>Examples:<br>- Car has a Driver.<br>- A Human uses Clothes.<br>- A Company is an aggregation of People.<br>- A Text Editor uses a File.<br>- Mobile has a SIM Card.</td><td>Examples:<br>- Engine is a part of Car.<br>- A Human owns the Heart.<br>- A Company is a composition of Accounts.<br>- A Text Editor owns a Buffer.<br>- IMEI Number is a part of a Mobile.</td></tr>
-</tbody></table>
-
-*Note: "final" keyword is used in Composition to make sure child variable is initialized.*
-
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
