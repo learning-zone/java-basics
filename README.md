@@ -543,7 +543,7 @@ No, we cannot achieve runtime polymorphism by data members. Method is overridden
 #### Q. Can you have virtual functions in Java?
 In Java, all non-static methods are by default **virtual functions**. Only methods marked with the `keyword final`, which cannot be overridden, along with `private methods`, which are not inherited, are non-virtual.
 
-**Example with virtual functions with interfaces** 
+**Virtual function with Interface** 
 
 ```java
 interface Bicycle {         //the function applyBrakes() is virtual because
