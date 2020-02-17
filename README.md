@@ -544,11 +544,14 @@ No, we cannot achieve runtime polymorphism by data members. Method is overridden
 In Java, all non-static methods are by default **virtual functions**. Only methods marked with the `keyword final`, which cannot be overridden, along with `private methods`, which are not inherited, are non-virtual.
 
 **Virtual function with Interface** 
-
 ```java
-interface Bicycle {         //the function applyBrakes() is virtual because
-    void applyBrakes();     //functions in interfaces are designed to be 
-}                           //overridden.
+/**
+* The function applyBrakes() is virtual because
+* functions in interfaces are designed to be overridden.
+**/
+interface Bicycle {         
+    void applyBrakes();     
+}                           
 
 class ACMEBicycle implements Bicycle {
     public void applyBrakes(){               //Here we implement applyBrakes()
