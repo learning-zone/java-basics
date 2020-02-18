@@ -668,6 +668,27 @@ I am executed by Thread-0
     <b><a href="#">↥ back to top</a></b>
 </div>
 
+#### Q. Why we use Vector class?
+Vector implements a dynamic array that means it can grow or shrink as required. Like an array, it contains components that can be accessed using an integer index. They are very similar to ArrayList but Vector is **synchronised** and have some legacy method which collection framework does not contain. It extends AbstractList and implements List interfaces.
+```java
+import java.util.*; 
+class Vector_demo { 
+
+    public static void main(String[] arg) { 
+
+        // create default vector 
+        Vector v = new Vector(); 
+        v.add(10); 
+        v.add(20); 
+        v.add("Numbers");   
+        System.out.println("Vector is " + v); 
+    } 
+}
+```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is Thread Group? Why it’s advised not to use it?
 ThreadGroup creates a group of threads. It offers a convenient way to manage groups of threads as a unit. This is particularly valuable in situation in which you want to suspend and resume a number of related threads.
 

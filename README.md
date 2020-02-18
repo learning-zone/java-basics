@@ -291,27 +291,6 @@ class TestClass {
 ```java
 Class.forName (String className);
 ```
-#### Q. Why we use Vector class?
-Vector implements a dynamic array that means it can grow or shrink as required. Like an array, it contains components that can be accessed using an integer index. They are very similar to ArrayList but Vector is **synchronised** and have some legacy method which collection framework does not contain. It extends AbstractList and implements List interfaces.
-```java
-import java.util.*; 
-class Vector_demo { 
-
-    public static void main(String[] arg) { 
-
-        // create default vector 
-        Vector v = new Vector(); 
-        v.add(10); 
-        v.add(20); 
-        v.add("Numbers");   
-        System.out.println("Vector is " + v); 
-    } 
-}
-```
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
 #### Q. What is the difference between transient and volatile variable in Java?
 **Transient**: The transient modifier tells the Java object serialization subsystem to exclude the field when serializing an instance of the class. When the object is then deserialized, the field will be initialized to the default value; i.e. null for a reference type, and zero or false for a primitive type.
 ```java
