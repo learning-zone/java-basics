@@ -209,10 +209,9 @@ C. int num1, num2 = 0;
 D. int num1 = 0, num2 = 0;  
 ```
 A. double num1, int num2 = 0;
-
-Explanation: A. Option A does not compile because Java does not allow declaring different types as
-part of the same declaration. 
 ```
+**Explanation**: A. Option A does not compile because Java does not allow declaring different types as part of the same declaration. 
+
 #### Q. What is the output of the following?
 public static void main(String... args) {
    String chair, table = "metal";
@@ -225,9 +224,9 @@ C. nullmetal
 D. The code does not compile  
 ```
 D. The code does not compile 
-
-Explanation: The local variable chair may not have been initialized
 ```
+**Explanation**: The local variable chair may not have been initialized
+
 #### Q. Which is correct about an instance variable of type String?
 A. It defaults to an empty string.  
 B. It defaults to null.  
@@ -262,11 +261,9 @@ C. Two
 D. Three  
 ```
 C. Two
-
-Explanation: Objects have instance methods while primitives do not. Since int is a primitive, you
-cannot call instance methods on it. Integer and String are both objects and have
-instance methods
 ```
+**Explanation**: Objects have instance methods while primitives do not. Since int is a primitive, you cannot call instance methods on it. Integer and String are both objects and have instance methods.
+
 #### Q. Which of the following does not compile?
 A. int num = 999;  
 B. int num = 9_9_9;  
@@ -288,9 +285,9 @@ C. p3
 D. p4  
 ```
 D. P4
-
-Explanation: Type mismatch: cannot convert from double to float
 ```
+**Explanation**: Type mismatch: cannot convert from double to float
+
 #### Q. How many instance initializers are in this code?
 ```java
 public class Bowling {
@@ -322,10 +319,9 @@ C. It will be called exactly once.
 D. It may be called one or more times.  
 ```
 A. It may be called zero or one times.
-
-The finalize() method may not be called, such as if your program crashes.
-However, it is guaranteed to be called no more than once.
 ```
+**Explanation**: The `finalize()` method may not be called, such as if your program crashes. However, it is guaranteed to be called no more than once.
+
 #### Q. Which of the following is true about primitives?
 A. You can call methods on a primitive.  
 B. You can convert a primitive to a wrapper class object simply by assigning it.  
@@ -356,9 +352,9 @@ C. char and int
 D. None of the above  
 ```
 C. char and int
-
-Explanation: The wrapper class for int is Integer and the wrapper class for char is Character. All other primitives have the same name. For example, the wrapper class for boolean is Boolean.
 ```
+**Explanation**: The wrapper class for int is Integer and the wrapper class for char is Character. All other primitives have the same name. For example, the wrapper class for boolean is Boolean.
+
 #### Q. How do you force garbage collection to occur at a certain point?
 A. Call System.forceGc()  
 B. Call System.gc()  
@@ -366,9 +362,9 @@ C. Call System.requireGc()
 D. None of the above   
 ```
 D. None of the above
-
-Explanation: While you can suggest to the JVM that it might want to run a garbage collection cycle, the JVM is free to ignore your suggestion.
 ```
+**Explanation**: While you can suggest to the JVM that it might want to run a garbage collection cycle, the JVM is free to ignore your suggestion.
+
 #### Q. How many of the String objects are eligible for garbage collection right before the end of the main method?
 ```java
 public static void main(String[] fruits) {
@@ -386,9 +382,9 @@ C. Two
 D. Three  
 ```
 C. Two 
-
-Explanation: All three references point to the String apple. This makes the other two String objects eligible for garbage collection.
 ```
+**Explanation**: All three references point to the String apple. This makes the other two String objects eligible for garbage collection.
+
 #### Q. Which of the following does not compile?
 A. double num = 2.718;  
 B. double num = 2._718;  
