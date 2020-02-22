@@ -396,9 +396,9 @@ C. double num = 2.7_1_8;
 D. None of the above; they all compile  
 ```
 B. double num = 2._718;
-
-Explanation: Underscores are allowed between any two digits in a numeric literal. Underscores are not allowed adjacent to a decimal point
 ```
+**Explanation**: Underscores are allowed between any two digits in a numeric literal. Underscores are not allowed adjacent to a decimal point
+
 #### Q. Which of the following is the output of this code, assuming it runs to completion?
 ```java
 public class Toy {
@@ -423,6 +423,20 @@ C. play-clean-play-
 D. play-play-clean-clean-  
 ```
 B. play-play-  
-
-Explanation: If there was a finalize() method, this would be a different story. However, the method here is finalizer. Tricky! That’s just a normal method that doesn’t get called automatically. Therefore clean is never output.
 ```
+**Explanation**: If there was a finalize() method, this would be a different story. However, the method here is finalizer. Tricky! That’s just a normal method that doesn’t get called automatically. Therefore clean is never output.
+
+#### Q. What is the value of tip after executing the following code snippet?
+```java
+int meal = 5;
+int tip = 2;
+int total = meal + (meal>6 ? ++tip : --tip);
+```
+A. 1
+B. 2
+C. 3
+D. 6
+```
+A. 1
+```
+**Explanation**: Remember that in ternary expressions, only one of the two right-most expressions are evaluated. Since `meal>6` is false, `––tip` is evaluated and `++tip` is skipped. The result is that `tip` is changed from 2 to 1.
