@@ -428,10 +428,10 @@ int meal = 5;
 int tip = 2;
 int total = meal + (meal>6 ? ++tip : --tip);
 ```
-A. 1
-B. 2
-C. 3
-D. 6
+A. 1  
+B. 2  
+C. 3  
+D. 6  
 ```
 A. 1
 ```
@@ -444,10 +444,10 @@ String jon = new String(john);
 
 System.out.println((john==jon) + " "+ (john.equals(jon)));
 ```
-A. true true
-B. true false
-C. false true
-D. false false
+A. true true  
+B. true false  
+C. false true  
+D. false false  
 ```
 C. false true
 ```
