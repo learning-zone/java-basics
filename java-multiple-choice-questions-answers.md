@@ -91,7 +91,7 @@ public class Test {
 }
 ```
 Output
-```
+```java
 Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
 	Type mismatch: cannot convert from int to boolean
 
@@ -120,7 +120,7 @@ public class Test {
 }  
 ```
 Output
-```
+```java
 Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
 	Cannot make a static reference to the non-static field two
 
@@ -165,7 +165,7 @@ public class Test
 } 
 ```
 Output
-```
+```java
 Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
 	Unreachable catch block for ArithmeticException. It is already handled by the catch block for Exception
 
