@@ -435,7 +435,7 @@ D. 6
 ```
 A. 1
 ```
-**Explanation**: Remember that in ternary expressions, only one of the two right-most expressions are evaluated. Since `meal>6` is false, `––tip` is evaluated and `++tip` is skipped. The result is that `tip` is changed from 2 to 1.
+**Explanation**: In ternary expressions, only one of the two right-most expressions are evaluated. Since `meal>6` is false, `––tip` is evaluated and `++tip` is skipped. The result is that `tip` is changed from 2 to 1.
 
 #### Q. What is the output of the following application?
 ```java
