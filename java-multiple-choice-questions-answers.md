@@ -439,10 +439,10 @@ A. 1
 
 #### Q. What is the output of the following application?
 ```java
-  String john = "john";
-  String jon = new String(john);
-  
-  System.out.println((john==jon) + " "+ (john.equals(jon)));
+String john = "john";
+String jon = new String(john);
+
+System.out.println((john==jon) + " "+ (john.equals(jon)));
 ```
 A. true true
 B. true false
