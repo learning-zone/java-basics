@@ -436,3 +436,18 @@ D. 6
 A. 1
 ```
 **Explanation**: Remember that in ternary expressions, only one of the two right-most expressions are evaluated. Since `meal>6` is false, `––tip` is evaluated and `++tip` is skipped. The result is that `tip` is changed from 2 to 1.
+
+#### Q. What is the output of the following application?
+```java
+	String john = "john";
+	String jon = new String(john);
+	
+	System.out.println((john==jon) + " "+ (john.equals(jon)));
+```
+A. true true
+B. true false
+C. false true
+D. false false
+```
+C. false true
+```
