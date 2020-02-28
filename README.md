@@ -2773,6 +2773,7 @@ The Object class is the parent class of all the classes in java by default.
 <tr><td>protected void finalize()throws Throwable</td><td> is invoked by the garbage collector before object is being garbage collected.</td></tr>
 </tbody></table>
 
+#### Q. What is copyonwritearraylist in java?
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
