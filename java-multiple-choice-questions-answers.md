@@ -60,6 +60,10 @@ Output
 35
 36
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the output of following program?
 ```java
 import java.util.ArrayList;
@@ -126,6 +130,10 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 	at Test.main(Test.java:9)
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the output of following program?
 ```java
 public class Test{  
