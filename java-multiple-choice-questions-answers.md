@@ -179,6 +179,10 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 
 	at Test.main(Test.java:12)
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is the output of following program?
 ```java
 public class Test 
@@ -234,6 +238,10 @@ D. The code does not compile
 D. The code does not compile 
 ```
 **Explanation**: The local variable chair may not have been initialized
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Which is correct about an instance variable of type String?
 A. It defaults to an empty string.  
