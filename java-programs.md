@@ -80,6 +80,10 @@ Output
 ```
 5
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Write a program to generate random numbers between the given range?
 *TODO*
 #### Q. Write a java program to swap two string variables without using temp variable?
@@ -180,6 +184,10 @@ Output
 Array after pushing all zeros to end of array:
 1 9 8 4 2 7 6 9 0 0 0 0
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Write a multi-threading program to print odd number using one thread and even number using other?
 ```java
 class TaskEvenOdd implements Runnable {
