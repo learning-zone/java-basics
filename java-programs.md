@@ -1652,6 +1652,10 @@ Path from vertex 0 to vertex 2 has minimum cost of 6 and the route is [ 0 4 1 2 
 Path from vertex 0 to vertex 3 has minimum cost of 5 and the route is [ 0 4 3 ]
 Path from vertex 0 to vertex 4 has minimum cost of 3 and the route is [ 0 4 ]
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
 #### Q. How to find trigonometric values of an angle in java?
@@ -1753,5 +1757,8 @@ Path from vertex 0 to vertex 4 has minimum cost of 3 and the route is [ 0 4 ]
 #### Q. Java Program to find gcd and lcm of two numbers
 #### Q. Write a program to find the sum of the first 1000 prime numbers?
 #### Q. How to perform matrix operations in java?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 
