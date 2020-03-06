@@ -1404,6 +1404,10 @@ public class toLowerCase {
      }
 }    
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Explain deadlock condition in-between two threads with example?
 
 ```java
@@ -1487,6 +1491,10 @@ public class MainClass {
   }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Find the shortest-path weights d(s, v) from given source s for all vertices v present in the graph.
 
 ![Dijkstras Algorithm](https://github.com/learning-zone/java-interview-questions/blob/master/assets/shorted-path-dijkstras.png)
