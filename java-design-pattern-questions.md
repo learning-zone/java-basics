@@ -461,6 +461,16 @@ Output
 500 paid using Paypal.
 500 paid with credit/debit card
 ```
+#### Q. When do you use Flyweight pattern?
+#### Q. What is difference between dependency injection and factory design pattern?
+#### Q. Difference between Adapter and Decorator pattern?
+#### Q. Difference between Adapter and Proxy Pattern?
+#### Q. What is Template method pattern?
+#### Q. When do you use Visitor design pattern?
+#### Q. When do you use Composite design pattern?
+#### Q. Difference between Abstract factory and Prototype design pattern?
+*TODO*
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
