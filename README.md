@@ -2778,18 +2778,11 @@ The Object class is the parent class of all the classes in java by default.
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
 #### Q. What is the difference between @Before and @BeforeClass annotation?
-#### Q. What is difference between dependency injection and factory design pattern?
-#### Q. Difference between Adapter and Decorator pattern?
-#### Q. Difference between Adapter and Proxy Pattern?
-#### Q. What is Template method pattern?
-#### Q. When do you use Visitor design pattern?
-#### Q. When do you use Composite design pattern?
-#### Q. Difference between Abstract factory and Prototype design pattern?
 #### Q. Can you explain Liskov Substitution principle?
 #### Q. Give me an example of design pattern which is based upon open closed principle?
 #### Q. What is Law of Demeter violation? Why it matters?
-#### Q. When do you use Flyweight pattern?
 #### Q. What is differences between External Iteration and Internal Iteration?
+*TODO*
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
