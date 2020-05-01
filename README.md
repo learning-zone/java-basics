@@ -17,6 +17,7 @@
 * *[Java Design Pattern Questions](java-design-pattern-questions.md)*
 * *[Java Multiple Choice Questions](java-multiple-choice-questions-answers.md)*
 
+<br/>
 
 #### Q. ***What are the types of Exceptions? Explain the hierarchy of Java Exception classes?***
 Exception is an error event that can happen during the execution of a program and disrupts its normal flow.
