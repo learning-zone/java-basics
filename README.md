@@ -2783,7 +2783,7 @@ The Object class is the parent class of all the classes in java by default.
 #### Q. ***Give me an example of design pattern which is based upon open closed principle?***
 #### Q. ***What is Law of Demeter violation? Why it matters?***
 #### Q. ***What is differences between External Iteration and Internal Iteration?***
-*TODO*
+*ToDo*
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
