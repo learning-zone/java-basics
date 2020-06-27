@@ -207,7 +207,8 @@ The **Java ClassLoader** is a part of the Java Runtime Environment that dynamica
 
 **JRE**: Java Runtime Environment provides a platform to execute java programs. JRE consists of JVM and java binaries and other classes to execute any program successfully.
 
-![Java Compiler](https://github.com/learning-zone/java-interview-questions/blob/master/assets/jdk.jpg)
+
+<img src="assets/jdk.jpg" alt="Java Compiler" />
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
