@@ -1,6 +1,6 @@
 ## Java, J2EE, JSP, Servlet, Hibernate Interview Questions
 
-*Click <img src="https://github.com/learning-zone/java-interview-questions/blob/master/assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
+*Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
 
 ### Table of Contents
@@ -31,7 +31,7 @@ Exception is an error event that can happen during the execution of a program an
 **Hierarchy of Java Exception classes**   
 The java.lang.Throwable class is the root class of Java Exception hierarchy which is inherited by two subclasses: Exception and Error. 
 
-![Java Exception](https://github.com/learning-zone/java-interview-questions/blob/master/assets/exception.png)
+<img src="assets/exception.png" alt="Java Exception" />
 
 
 Example:
@@ -90,7 +90,7 @@ public class CustomExceptionExample {
 
 #### Q. ***What is the difference between aggregation and composition?***
 
-![Aggregation](https://github.com/learning-zone/java-interview-questions/blob/master/assets/aggregation.png)
+<img src="assets/aggregation.png" alt="Aggregation" />
 
 
 **Aggregation**: We call aggregation those relationships whose **objects have an independent lifecycle, but there is ownership**, and child objects cannot belong to another parent object.
