@@ -2636,6 +2636,7 @@ StringBuffer: World
 #### Q. ***How can we create a object of a class without using new operator?***
 Different ways to create an object in Java
 * **Using new Keyword**
+
 ```java
 class ObjectCreationExample{
 	String Owner;
@@ -2649,6 +2650,7 @@ public class MainClass {
 
 ```
 * **Using New Instance (Reflection)**
+
 ```java
 class CreateObjectClass {
 	static int j = 10;
@@ -2682,6 +2684,7 @@ class MainClass {
 
 ```
 * **Using Clone**
+
 ```java
  class CreateObjectWithClone implements Cloneable {
 	@Override
@@ -2713,6 +2716,7 @@ class MainClass {
 }
 ```
 * **Using ClassLoader**
+
 ```java
 class CreateObjectWithClassLoader {
 	static int j = 10;
