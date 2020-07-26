@@ -1,8 +1,7 @@
-## Java 8 Interview Questions and Answers
+# Java 8 Interview Questions and Answers
 
+## Q. What are the important features of Java 8 release?
 
-
-#### Q. What are the important features of Java 8 release?
 * Interface methods by default;
 * Lambda expressions;
 * Functional interfaces;
@@ -37,15 +36,23 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Can you declare an interface method static?
+## Q. Can you declare an interface method static?
+
 Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
 
-#### Q. What is a lambda? What is the structure and features of using a lambda expression?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is a lambda?
+
+ What is the structure and features of using a lambda expression?
 A lambda is a set of instructions that can be separated into a separate variable and then repeatedly called in various places of the program.
 
 The basis of the lambda expression is the _lambda operator_ , which represents the arrow `->`. This operator divides the lambda expression into two parts: the left side contains a list of expression parameters, and the right actually represents the body of the lambda expression, where all actions are performed.
 
 The lambda expression is not executed by itself, but forms the implementation of the method defined in the functional interface. It is important that the functional interface should contain only one single method without implementation.
+
 ```java
 interface  Operationable {
      int  calculate ( int  x , int  y );
@@ -57,11 +64,13 @@ public  static  void main ( String [] args) {
     System.out.println (result); // 30 
 }
 ```
+
 In fact, lambda expressions are in some way a shorthand form of internal anonymous classes that were previously used in Java.
 
 * _Deferred execution lambda expressions_ - it is defined once in one place of the program, it is called if necessary, any number of times and in any place of the program.
 
 * _The parameters of the lambda expression_ must correspond in type to the parameters of the functional interface method:
+
 ```javascript
 operation = ( int x, int y) - > x + y;
 // When writing the lambda expression itself, the parameter type is allowed not to be specified: 
@@ -114,11 +123,13 @@ public  static  void main ( String [] args) {
      System.out.println(sum ( new  int [] { 0 , 1 , 0 , 3 , 0 , 5 , 0 , 7 , 0 , 9 }, (n) - > n ! =  0 ));
 } 
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What variables do lambda expressions have access to?
+## Q. What variables do lambda expressions have access to?
+
 Access to external scope variables from a lambda expression is very similar to access from anonymous objects. 
 
 * immutable ( effectively final - not necessarily marked as final) local variables;
@@ -127,14 +138,25 @@ Access to external scope variables from a lambda expression is very similar to a
 
 The default methods of the implemented functional interface are not allowed to be accessed inside the lambda expression.
 
-#### Q. How to sort a list of strings using a lambda expression?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to sort a list of strings using a lambda expression?
+
 ```java
 public  static  List < String > sort ( List < String > list) {
     Collections.sort(list, (a, b) -> a.compareTo(b));
     return list;
 }
 ```
-#### Q. What is a method reference?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is a method reference?
+
 If the method existing in the class already does everything that is necessary, then you can use the method reference mechanism (method reference) to directly pass this method. The result will be exactly the same as in the case of defining a lambda expression that calls this method.
 ```java
 private  interface  Measurable {
@@ -146,24 +168,45 @@ public  static  void main ( String [] args) {
     System.out.println(a.length("abc"));
 }
 ```
+
 Method references are potentially more efficient than using lambda expressions. In addition, they provide the compiler with better information about the type, and if you can choose between using a reference to an existing method and using a lambda expression, you should always use a method reference.
 
-#### Q. What types of method references do you know?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What types of method references do you know?
+
 * on the static method;
 * per instance method;
 * to the constructor.
 
-#### Q. Explain the expression `System.out::println`
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. Explain the expression `System.out::println`?
+
 The specified expression illustrates passing a reference to a static method of a `println()`class `System.out`.
 
-#### Q. What is a Functional Interface?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is a Functional Interface?
+
 A **functional interface** is an interface that defines only one abstract method.
 
 To accurately determine the interface as functional, an annotation has been added `@FunctionalInterface` that works on the principle of `@Override`. It will designate a plan and will not allow to define the second abstract method in the interface.
 
 An interface can include as many `default` methods as you like while remaining functional, because `default` methods are not abstract.
 
-#### Q. What is StringJoiner?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is StringJoiner?
+
 The class is StringJoinerused to create a sequence of strings separated by a separator with the ability to append a prefix and suffix to the resulting string:
 ```java
 StringJoiner joiner =  new  StringJoiner ( " . " , " Prefix- " , " -suffix " );
@@ -172,7 +215,13 @@ for ( String s :  " Hello the brave world " . split ( "  " )) {
 }
 System.out.println(joiner); // prefix-Hello.the.brave.world-suffix
 ```
-#### Q. What are `default`interface methods?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are `default`interface methods?
+
 Java 8 allows you to add non-abstract method implementations to an interface using the keyword default:
 ```java
 interface  Example {
@@ -194,7 +243,8 @@ interface  Example {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to call `default` interface method in a class that implements this interface?
+## Q. How to call `default` interface method in a class that implements this interface?
+
 Using the keyword superalong with the interface name:
 ```java
 interface  Paper {
@@ -209,14 +259,25 @@ class  License  implements  Paper {
     }
 }
 ```
-#### Q. What is `static` interface method?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is `static` interface method?
+
 Static interface methods are similar to default methods, except that there is no way to override them in classes that implement the interface.
 
 * Static methods in the interface are part of the interface without the ability to use them for objects of the implementation class
 * Class methods `java.lang.Object`cannot be overridden as static
 * Static methods in the interface are used to provide helper methods, for example, checking for null, sorting collections, etc.
 
-#### Q. How to call `static` interface method?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to call `static` interface method?
+
 Using the interface name:
 ```java
 interface  Paper {
@@ -231,7 +292,12 @@ class  License {
     }
 }
 ```
-#### Q. What is Optional
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is Optional
 An optional value `Optional`is a container for an object that may or may not contain a value `null`. Such a wrapper is a convenient means of prevention `NullPointerException`, as has some higher-order functions, eliminating the need for repeating `if null/notNullchecks`:
 ```java
 Optional < String > optional =  Optional . of ( " hello " );
@@ -241,7 +307,13 @@ optional.ifPresent(s ->  System.out.println(s . length ())); // 5
 optional.get(); // "hello" 
 optional.orElse( " ops ... " ); // "hello"
 ```
-#### Q. What is Stream?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is Stream?
+
 An interface `java.util.Stream` is a sequence of elements on which various operations can be performed.
 
 Operations on streams can be either intermediate (intermediate) or final (terminal) . Final operations return a result of a certain type, and intermediate operations return the same stream. Thus, you can build chains of several operations on the same stream.
@@ -265,7 +337,8 @@ In addition to the universal object, there are special types of streams to work 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the ways to create a stream?
+## Q. What are the ways to create a stream?
+
 * Using collection:
 ```java
 Stream < String > fromCollection =  Arrays.asList ( " x " , " y " , " z " ).stream ();
@@ -298,10 +371,21 @@ Stream < Integer > fromIterate =  Stream.iterate ( 1 , n - > n +  1 );
 ```java
 Stream < String > fromGenerate =  Stream.generate(() ->  " 0 " );
 ```
-#### Q. What is the difference between `Collection` and `Stream`?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between `Collection` and `Stream`?
+
 Collections allow you to work with elements separately, while streams do not allow this, but instead provides the ability to perform functions on data as one.
 
-#### Q. What is the method `collect()`for streams for?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is the method `collect()`for streams for?
+
 A method `collect()`is the final operation that is used to represent the result as a collection or some other data structure.
 
 `collect()`accepts an input that contains four stages: 
@@ -330,15 +414,22 @@ Collector < String , a List < String > , a List < String > > toList =  Collector
     (l1, l2) -> {l1 . addAll (l2); return l1; }
 );
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Why do streams use `forEach()`and `forEachOrdered()` methods?
+## Q. Why do streams use `forEach()`and `forEachOrdered()` methods?
+
 * `forEach()` applies a function to each stream object; ordering in parallel execution is not guaranteed;
 * `forEachOrdered()` applies a function to each stream object while maintaining the order of the elements.
 
-#### Q. What are `map()`, `mapToInt()`, `mapToDouble()` and `mapToLong()` methods in Stream?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are `map()`, `mapToInt()`, `mapToDouble()` and `mapToLong()` methods in Stream?
+
 The method `map()`is an intermediate operation, which transforms each element of the stream in a specified way.
 
 `mapToInt()`, `mapToDouble()`, `mapToLong()`- analogues `map()`, returns the corresponding numerical stream (ie the stream of numerical primitives):
@@ -348,18 +439,39 @@ Stream
     .mapToInt ( Integer :: parseInt)
     .toArray (); // [12, 22, 4, 444, 123]
 ```
-#### Q. What is the purpose of `filter()` method in streams?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is the purpose of `filter()` method in streams?
+
 The method `filter()` is an intermediate operation receiving a predicate that filters all elements, returning only those that match the condition.
 
-#### Q. What is the use of `limit()` method in streams?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is the use of `limit()` method in streams?
+
 The method `limit()`is an intermediate operation, which allows you to limit the selection to a certain number of first elements.
 
-#### Q. What is the use of `sorted()` method in streams?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is the use of `sorted()` method in streams?
+
 The method `sorted()`is an intermediate operation, which allows you to sort the values ​​either in natural order or by setting Comparator.
 
 The order of the elements in the original collection remains untouched - `sorted()`it just creates its sorted representation.
 
-#### Q. What streamers designed methods `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What streamers designed methods `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`?
+
 The method `flatMap()` is similar to map, but can create several from one element. Thus, each object will be converted to zero, one or more other objects supported by the stream. The most obvious way to use this operation is to convert container elements using functions that return containers.
 ```java
 Stream 
@@ -373,7 +485,8 @@ Stream
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Tell us about parallel processing in Java 8?
+## Q. Tell us about parallel processing in Java 8?
+
 Streams can be sequential and parallel. Operations on sequential streams are performed in one processor thread, on parallel streams - using several processor threads. Parallel streams use the shared stream `ForkJoinPool`through the static `ForkJoinPool.commonPool()`method. In this case, if the environment is not multi-core, then the stream will be executed as sequential. In fact, the use of parallel streams is reduced to the fact that the data in the streams will be divided into parts, each part is processed on a separate processor core, and in the end these parts are connected, and final operations are performed on them.
 
 You can also use the `parallelStream()`interface method to create a parallel stream from the collection `Collection`.
@@ -405,7 +518,13 @@ collection.parallelStream ()
     .unordered ()
     .collect ( Collectors . toList ());
 ```
-#### Q. What are the final methods of working with streams you know?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are the final methods of working with streams you know?
+
 * `findFirst()` returns the first element
 * `findAny()` returns any suitable item
 * `collect()` presentation of results in the form of collections and other data structures
@@ -426,7 +545,8 @@ collection.parallelStream ()
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What intermediate methods of working with streams do you know?
+## Q. What intermediate methods of working with streams do you know?
+
 * `filter()` filters records, returning only records matching the condition;
 * `skip()` allows you to skip a certain number of elements at the beginning;
 * `distinct()`returns a stream without duplicates (for a method `equals()`);
@@ -439,14 +559,25 @@ collection.parallelStream ()
 
 For numerical streams, an additional method is available `mapToObj()`that converts the numerical stream back to the object stream.
 
-#### Q. How to display 10 random numbers using forEach()?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to display 10 random numbers using forEach()?
+
 ```java
 ( new  Random ())
     .ints ()
     .limit ( 10 )
     .forEach ( System . out :: println);
 ```
-#### Q. How can I display unique squares of numbers using the method map()?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How can I display unique squares of numbers using the method map()?
+
 ```java
 Stream 
     .of ( 1 , 2 , 3 , 2 , 1 )
@@ -455,7 +586,13 @@ Stream
     .collect ( Collectors . toList ())
     .forEach ( System . out :: println);
 ```
-#### Q. How to display the number of empty lines using the method filter()?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to display the number of empty lines using the method filter()?
+
 ```java
 System.out.println (
      Stream 
@@ -463,7 +600,13 @@ System.out.println (
         .filter ( String :: isEmpty)
         .count ());
 ```
-#### Q. How to display 10 random numbers in ascending order?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to display 10 random numbers in ascending order?
+
 ```java
 ( new  Random ())
     .ints ()
@@ -471,7 +614,13 @@ System.out.println (
     .sorted ()
     .forEach ( System . out :: println);
 ```
-#### Q. How to find the maximum number in a set?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to find the maximum number in a set?
+
 ```java
 Stream 
     .of ( 5 , 3 , 4 , 55 , 2 )
@@ -479,11 +628,13 @@ Stream
     .max ()
     .getAsInt (); // 55
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to find the minimum number in a set?
+## Q. How to find the minimum number in a set?
+
 ```java
 Stream 
     .of ( 5 , 3 , 4 , 55 , 2 )
@@ -491,14 +642,26 @@ Stream
     .min ()
     .getAsInt (); // 2
 ```
-#### Q. How to get the sum of all numbers in a set?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the sum of all numbers in a set?
+
 ```java
 Stream 
     .of( 5 , 3 , 4 , 55 , 2 )
     .mapToInt()
     .sum(); // 69
 ```
-#### Q. How to get the average of all numbers?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the average of all numbers?
+
 ```java
 Stream 
     .of ( 5 , 3 , 4 , 55 , 2 )
@@ -506,7 +669,8 @@ Stream
     .average ()
     .getAsDouble (); // 13.8
 ```
-#### Q. What additional methods for working with associative arrays (maps) appeared in Java 8?
+## Q. What additional methods for working with associative arrays (maps) appeared in Java 8?
+
 * `putIfAbsent()` adds a key-value pair only if the key was missing:
 ```java
 map.putIfAbsent("a", "Aa");
@@ -541,36 +705,72 @@ map.getOrDefault("a", "not found");
 ```java
 map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is LocalDateTime?
+## Q. What is LocalDateTime?
+
 `LocalDateTime`combines together `LocaleDate`and `LocalTime`contains the date and time in the calendar system ISO-8601 without reference to the time zone. Time is stored accurate to the nanosecond. It contains many convenient methods such as plusMinutes, plusHours, isAfter, toSecondOfDay, etc.
 
-#### Q. What is ZonedDateTime?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is ZonedDateTime?
+
 `java.time.ZonedDateTime`- an analogue `java.util.Calendar`, a class with the most complete amount of information about the temporary context in the calendar system ISO-8601. It includes a time zone, therefore, this class carries out all operations with time shifts taking into account it.
 
-#### Q. How to get current date using Date Time API from Java 8?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get current date using Date Time API from Java 8?
+
 ```java
 LocalDate as.now();
 ```
-#### Q. How to add 1 week, 1 month, 1 year, 10 years to the current date using the Date Time API?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to add 1 week, 1 month, 1 year, 10 years to the current date using the Date Time API?
+
 ```java
 LocalDate as.now ().plusWeeks ( 1 );
 LocalDate as.now ().plusMonths ( 1 );
 LocalDate as.now ().plusYears ( 1 );
 LocalDate as.now ().plus ( 1 , ChronoUnit.DECADES );
 ```
-#### Q. How to get the next Tuesday using the Date Time API?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the next Tuesday using the Date Time API?
+
 ```java
 LocalDate as.now().with( TemporalAdjusters.next ( DayOfWeek.TUESDAY ));
 ```
-#### Q. How to get the current time accurate to milliseconds using the Date Time API?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the current time accurate to milliseconds using the Date Time API?
+
 ```java
 new  Date ().toInstant ();
 ```
-#### Q. How to get the second Saturday of the current month using the Date Time API?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the second Saturday of the current month using the Date Time API?
+
 ```java
 LocalDate 
     .of ( LocalDate.Now ().GetYear (), LocalDate.Now ().GetMonth (), 1 )
@@ -581,12 +781,20 @@ LocalDate
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to get the current time in local time accurate to milliseconds using the Date Time API?
+## Q. How to get the current time in local time accurate to milliseconds using the Date Time API?
+
 ```java
 LocalDateTime.ofInstant ( new  Date().toInstant(), ZoneId.systemDefault());
 ```
-#### Q. How to determine repeatable annotation?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to determine repeatable annotation?
+
 To define a repeatable annotation, you must create a container annotation for the list of repeatable annotations and designate a repeatable meta annotation `@Repeatable`:
+
 ```java
 @interface  Schedulers {
     Scheduler [] value ();
@@ -597,13 +805,29 @@ To define a repeatable annotation, you must create a container annotation for th
     String  birthday () default "Jan 8 2000";
  }
 ```
-#### Q. What is Nashorn?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is Nashorn?
+
 **Nashorn** is a JavaScript engine developed in Java by Oracle. Designed to provide the ability to embed JavaScript code in Java applications. Compared to Rhino , which is supported by the Mozilla Foundation, Nashorn provides 2 to 10 times better performance, as it compiles code and transfers bytecode to the Java virtual machine directly in memory. Nashorn can compile JavaScript code and generate Java classes that are loaded with a special loader. It is also possible to call Java code directly from JavaScript.
 
-#### Q. What is jjs?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What is jjs?
+
 `jjs` - This is a command line utility that allows you to execute JavaScript programs directly in the console.
 
-#### Q. What class appeared in Java 8 for encoding / decoding data?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What class appeared in Java 8 for encoding / decoding data?
+
 `Base64`- a thread-safe class that implements a data encoder and decoder using a base64 encoding scheme according to RFC 4648 and RFC 2045 .
 
 Base64 contains 6 basic methods:
@@ -615,14 +839,21 @@ Base64 contains 6 basic methods:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to create a Base64 encoder and decoder?
+## Q. How to create a Base64 encoder and decoder?
+
 ```java
 // Encode 
 String b64 =  Base64.getEncoder().encodeToString ( " input " . getBytes ( " utf-8 " )); // aW5wdXQ == 
 // Decode 
 new  String ( Base64.getDecoder().decode ( " aW5wdXQ == " ), " utf-8 " ); // input
 ```
-#### Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
+
 `Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
 
 Default methods can be used to build call chains ( `compose`, `andThen`).
@@ -635,7 +866,12 @@ backToString.apply("123");     // "123"
 * `IntFunction<R>`- a function that receives input `Integer`and returns an instance of the class at the output `R`;
 * `LongFunction<R>`- a function that receives input `Long`and returns an instance of the class at the output `R`.
 
-#### Q. What are the functional interfaces `UnaryOperator<T>`, `DoubleUnaryOperator`, `IntUnaryOperator`and `LongUnaryOperator`?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `UnaryOperator<T>`, `DoubleUnaryOperator`, `IntUnaryOperator`and `LongUnaryOperator`?
+
 `UnaryOperator<T>`(**unary operator**) takes an object of type as a parameter `T`, performs operations on them and returns the result of operations in the form of an object of type `T`:
 ```java
 UnaryOperator < Integer > operator = x - > x * x;
@@ -645,7 +881,12 @@ System.out.println(operator.apply ( 5 )); // 25
 * `IntUnaryOperator`- unary operator receiving input `Integer`;
 * `LongUnaryOperator`- unary operator receiving input `Long`.
 
-#### Q. What are the functional interfaces `BinaryOperator<T>`, `DoubleBinaryOperator`, `IntBinaryOperator`and `LongBinaryOperator`?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `BinaryOperator<T>`, `DoubleBinaryOperator`, `IntBinaryOperator`and `LongBinaryOperator`?
+
 `BinaryOperator<T>`(**binary operator**) - an interface through which a function is implemented that receives two instances of the class `T`and returns an instance of the class at the output `T`.
 ```java
 BinaryOperator < Integer > operator = (a, b) -> a + b;
@@ -659,7 +900,8 @@ System.out.println(operator.apply ( 1 , 2 )); // 3
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the functional interfaces `Predicate<T>`, `DoublePredicate`, `IntPredicateand` `LongPredicate`?
+## Q. What are the functional interfaces `Predicate<T>`, `DoublePredicate`, `IntPredicateand` `LongPredicate`?
+
 `Predicate<T>`(**predicate**) - the interface with which a function is implemented that receives an instance of the class as input `T`and returns the type value at the output `boolean`.
 
 The interface contains a variety of methods by default, allow to build complex conditions ( `and`, `or`, `negate`).
@@ -672,7 +914,12 @@ predicate.negate().test("foo"); // false
 * `IntPredicate`- predicate receiving input `Integer`;
 * `LongPredicate`- predicate receiving input `Long`.
 
-#### Q. What are the functional interfaces `Consumer<T>`, `DoubleConsumer`, `IntConsumer`and `LongConsumer`?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `Consumer<T>`, `DoubleConsumer`, `IntConsumer`and `LongConsumer`?
+
 `Consumer<T>`(**consumer**) - the interface through which a function is implemented that receives an instance of the class as an input `T`, performs some action with it, and returns nothing.
 ```java
 Consumer<String> hello = (name) ->  System.out.println( " Hello, "  + name);
@@ -682,7 +929,12 @@ hello.accept( " world " );
 * `IntConsumer`- the consumer receiving the input `Integer`;
 * `LongConsumer`- the consumer receiving the input `Long`.
 
-#### Q. What are the functional interfaces `Supplier<T>`, `BooleanSupplier`, `DoubleSupplier`, `IntSupplier`and `LongSupplier`?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `Supplier<T>`, `BooleanSupplier`, `DoubleSupplier`, `IntSupplier`and `LongSupplier`?
+
 `Supplier<T>`(**provider**) - the interface through which a function is implemented that takes nothing to the input, but returns the result of the class to the output `T`;
 ```java
 Supplier < LocalDateTime > now =  LocalDateTime::now;
@@ -692,12 +944,18 @@ now.get();
 * `IntSupplier`- the supplier is returning `Integer`;
 * `LongSupplier`- the supplier is returning `Long`.
 
-#### Q. When do we go for Java 8 Stream API? Why do we need to use Java 8 Stream API in our projects?
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+#### Q. When do we go for Java 8 Stream API?
+#### Q. Why do we need to use Java 8 Stream API in our projects?
 #### Q. Explain Differences between Collection API and Stream API?
 #### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
 #### Q. What is Optional in Java 8? What is the use of Optional?
 #### Q. What is Type Inference? Is Type Inference available in older versions like Java 7 and Before 7 or it is available only in Java SE 8?
 #### Q. What is differences between Functional Programming and Object-Oriented Programming?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
