@@ -1,6 +1,6 @@
-## JSP Interview Questions
+# JSP Interview Questions
 
-#### Q. What is JSP Implicit Object? 
+## Q. What is JSP Implicit Object?
 
 * **request**: This is the HttpServletRequest object associated with the request.
 
@@ -211,10 +211,10 @@ Example:
 </body>
 </html>
 ```
-#### Q. How JSP pages are processed, from the request to the server to the response to the user?
+## Q. How JSP pages are processed, from the request to the server to the response to the user?
 When the user `page.jsp` follows the link to the page , he sends an http request to the server `GET /page.jsp`. Then, based on this request and the text of the page itself, the server generates a java class, compiles it and executes the resulting servlet, which forms a response to the user in the form of a representation of this page, which the server redirects back to the user.
 
-#### Q. What are the phases of the JSP life cycle?
+## Q. What are the phases of the JSP life cycle?
 The JSP life cycle consists of several phases that are managed by the JSP container:
 
 * **Translation** - checking and parsing the JSP page code to create the servlet code.
@@ -225,14 +225,14 @@ The JSP life cycle consists of several phases that are managed by the JSP contai
 * **Request Processing** - the long life cycle of processing client requests with a JSP page. Processing is multithreaded and similar to servlets - for each request a new thread, objects are created, `ServletRequest` and the `ServletResponseservice` methods are executed.
 * **Destroy** is the last phase of the JSP life cycle in which its class is removed from memory. This usually happens when you turn off the server or unload the application.
 
-#### Q. What are the JSP life cycle methods?
+## Q. What are the JSP life cycle methods?
 A servlet container (for example, Tomcat, GlassFish) creates a servlet class from a JSP page that inherits interface properties `javax.servlet.jsp.HttpJspBase` and includes the following methods:
 
 * **jspInit()**- the method is declared in the JSP page and is implemented using the container. This method is called once in the JSP life cycle in order to initialize the configuration parameters specified in the deployment descriptor. You can override this method by defining a JSP scripting element and specifying the necessary parameters for initialization;
 * **_jspService()**- the method is automatically overridden by the container and corresponds directly to the JSP code described on the page. This method is defined in the interface `HttpJspPage`, its name begins with an underscore, and it differs from other life cycle methods in that it cannot be redefined;
 * **jspDestroy()**- the method is called by the container to remove the object from memory (at the last phase of the JSP life cycle is Destroy). The method is called only once and is available for redefinition, providing the ability to free resources that were created in `jspInit()`.
 
-#### Q. How can I prevent direct access to the JSP page from a browser?
+## Q. How can I prevent direct access to the JSP page from a browser?
 There is no direct access to the directory `/WEB-INF/` from the web application. Therefore, JSP pages can be located inside this folder and thereby restrict access to the page from the browser. However, by analogy with the description of servlets, it will be necessary to configure the deployment descriptor:
 ```xml
 <servlet>
@@ -249,7 +249,7 @@ There is no direct access to the directory `/WEB-INF/` from the web application.
     <url-pattern> /example.jsp </url-pattern>
 </servlet-mapping>
 ```
-#### Q. What are the main types of JSP tags?
+## Q. What are the main types of JSP tags?
 * **JSP expression**: `<%= expression %>`- expression that will be processed with redirecting the result to the output;
 * **JSP Scriptlet**: `<% code %>`- The code to add to the method service().
 * **JSP declaration**: `<%! code %>`- code added to the servlet class body outside the method service().
@@ -257,7 +257,7 @@ There is no direct access to the directory `/WEB-INF/` from the web application.
 * **JSP directive include**: `<%@ include file="url" %>`- a file on the local system that is included when translating the JSP into the servlet.
 * **JSP Comment**: `<%-- comment --%>`- Comment; ignored when translating a JSP page to a servlet.
 
-#### Q. What are the JSP action tags and JSP Action Elements?
+## Q. What are the JSP action tags and JSP Action Elements?
 **Action tag** and **JSP Action Elements** provide methods for working with Java Beans, connecting resources, forwarding queries and creating dynamic XML elements. Such elements always begin with recording jsp:and are used directly inside the JSP page without the need for third-party libraries or additional settings.
 
 The most commonly used JSP Action Elements are:
@@ -362,7 +362,7 @@ It specifies the XML declaration or the DOCTYPE declaration of jsp. The XML decl
 ```jsp
 <jsp:output doctype-root-element="" doctype-system="">
 ```
-#### Q. JSP - Servlet - JSP interaction?
+## Q. JSP - Servlet - JSP interaction?
 "JSP - servlet - JSP" architecture for building applications is called MVC (Model / View / Controller) :
 
 * Model - data classes and business logic;
@@ -384,7 +384,7 @@ PageContext has the following set of features and capabilities:
 * mechanisms for sending or including the current request into other application components;
 * mechanism for handling exception processes on error page errorpage;
 
-#### Q. What do you know about the JSP Expression Language (EL)?
+## Q. What do you know about the JSP Expression Language (EL)?
 **JSP Expression Language (EL)** is a scripted expression language that allows you to access Java components (JavaBeans) from JSP. Starting with JSP 2.0, it is used inside JSP tags to separate Java code from the JSP to provide easy access to Java components, while reducing the amount of Java code in JSP pages, or even completely eliminating it.
 
 The development of EL was aimed at making it easier for designers who have minimal knowledge of the Java programming language. Before the advent of the expression language, JSP had several special tags such as scriptlets (English), expressions, etc. that allowed you to write Java code directly on the page. Using an expression language, a web designer only needs to know how to organize the call of the corresponding java methods.
@@ -398,7 +398,7 @@ The JSP 2.0 expression language includes:
 
 An expression language is used inside a construct `${ ... }`. A similar construction can be placed either separately or on the right side of the tag attribute setting expression.
 
-#### Q. How is error handling using JSTL?
+## Q. How is error handling using JSTL?
 JSTL Core Tags `c:catchand` are used to catch and handle exceptions in the service methods of the class `c:if`.
 
 The tag `c:catchcatches` the exception and wraps it in a variable `exception` available for processing in the tag `c:if`
@@ -411,7 +411,7 @@ The tag `c:catchcatches` the exception and wraps it in a variable `exception` av
    Exception Message: ${exception.message}</p>
 </c:if>
 ```
-#### Q. How JSP is configured in the deployment descriptor?
+## Q. How JSP is configured in the deployment descriptor?
 To configure various parameters of JSP pages, an element is used jsp-configthat is responsible for:
 
 * management of scriptlet elements on the page;
@@ -427,13 +427,13 @@ To configure various parameters of JSP pages, an element is used jsp-configthat 
     </ taglib>
 </ jsp-config>
 ```
-#### Q. Is a session object always created on a JSP page, can I disable its creation?
+## Q. Is a session object always created on a JSP page, can I disable its creation?
 The jsp page, by default, always creates a session. Using a directive pagewith an attribute, sessionyou can change this behavior:
 
 ```jsp
 <%@ page session ="false" %>
 ```
-#### Q. What is the difference between JSPWriter and PrintWriter?
+## Q. What is the difference between JSPWriter and PrintWriter?
 `PrintWriter` is the object responsible for recording the contents of the response to the request. `JspWriter` uses an object `PrintWriter` to buffer. When the buffer is full or flushed, it `JspWriter`uses the object `PrintWriter` to write the content in response.
 
 #### Q. How to disable caching on back button of the browser?
