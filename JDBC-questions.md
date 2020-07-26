@@ -1,7 +1,7 @@
-## JDBC Interview Questions
+# JDBC Interview Questions
 
 
-#### Q. What is DAO factory design pattern in Java?
+## Q. What is DAO factory design pattern in Java?
 Data Access Object Pattern or DAO pattern is used to separate low level data accessing API or operations from high level business services.
 
 DAO pattern is based on abstraction and encapsulation design principles and shields rest of application from any change in the persistence layer e.g. change of database from Oracle to MySQL, change of persistence technology e.g. from File System to Database.
@@ -121,7 +121,7 @@ Student: [RollNo : 0, Name : Michael ]
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the differences between ResultSet and RowSet?
+## Q. What are the differences between ResultSet and RowSet?
 A **ResultSet** maintains a connection to a database and because of that it can’t be serialized and also we cant pass the Resultset object from one class to other class across the network.
 
 **RowSet** is a disconnected, serializable version of a JDBC ResultSet and also the RowSet extends the ResultSet interface so it has all the methods of ResultSet. The RowSet can be serialized because it doesn’t have a connection to any database and also it can be sent from one class to another across the network.
@@ -134,7 +134,7 @@ A **ResultSet** maintains a connection to a database and because of that it can�
 |ResultSet object is not a JavaBean object You can create/get a result set using the executeQuery() method.|ResultSet Object is a JavaBean object. You can get a RowSet using the RowSetProvider.newFactory().createJdb cRowSet() method.|
 |By default, ResultSet object is not scrollable or, updatable.|By default, RowSet object is scrollable and updatable.|
 
-#### Q. How can we execute stored procedures using CallableStatement?
+## Q. How can we execute stored procedures using CallableStatement?
 **CallableStatement** interface in java is used to call stored procedure from java program. **Stored Procedures** are group of statements that we compile in the database for some task. Stored procedures are beneficial when we are dealing with multiple tables with complex scenario and rather than sending multiple queries to the database, we can send required data to the stored procedure and have the logic executed in the database server itself.
 
 A CallableStatement object provides a way to call stored procedures using JDBC. Connection.prepareCall() method provides you CallableStatement object.
@@ -188,7 +188,7 @@ public class Proc {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the differences between Statement and PreparedStatement interface?
+## Q. What are the differences between Statement and PreparedStatement interface?
 JDBC API provides 3 different interfaces to execute the different types of SQL queries. They are,
 
 * **Statement**  –  Used to execute normal SQL queries.
@@ -241,7 +241,7 @@ cstmt.execute();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the different types of locking in JDBC?
+## Q. What are the different types of locking in JDBC?
 The types of locks in JDBC:
 
 **1. Row and Key Locks**: Useful when updating the rows (update, insert or delete operations), as they increase concurrency.
@@ -255,7 +255,7 @@ The types of locks in JDBC:
 
 **4. Database Lock**: In order to prevent the read or update access from other transactions when the database is open, the database lock is used.
 
-#### Q. What are the differences between Stored Procedure and functions?
+## Q. What are the differences between Stored Procedure and functions?
 |Functions	               |Procedures                                       |
 |--------------------------|-------------------------------------------------|
 |A function has a return type and returns a value.|A procedure does not have a return type. But it returns values using the OUT parameters.|
@@ -269,7 +269,7 @@ The types of locks in JDBC:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is batch processing and how to perform batch processing in JDBC?
+## Q. What is batch processing and how to perform batch processing in JDBC?
 Batch Processing allows to group related SQL statements into a batch and submit them with one call to the database. The `java.sql.Statement` and `java.sql.PreparedStatement` interfaces provide methods for batch processing.
 
 * **addBatch()**: The addBatch() method of Statement, PreparedStatement, and CallableStatement is used to add individual statements to the batch.
@@ -353,7 +353,7 @@ conn.commit();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is database connection pooling? What are the advantages of using a connection pool?
+## Q. What is database connection pooling? What are the advantages of using a connection pool?
 **Connection pooling** means that connections are reused rather than created each time a connection is requested. To facilitate connection reuse, a memory cache of database connections, called a connection pool, is maintained by a connection pooling module as a layer on top of any standard JDBC driver product.
 
 Connection pooling is performed in the background and does not affect how an application is coded; however, the application must use a DataSource object (an object implementing the DataSource interface) to obtain a connection instead of using the DriverManager class. 
@@ -488,7 +488,7 @@ public class ConnectionPool {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is JDBC Driver?
+## Q. What is JDBC Driver?
 JDBC Driver is a software component that enables java application to interact with the database. There are 4 types of JDBC drivers:  
 
 * JDBC-ODBC bridge driver
@@ -518,7 +518,7 @@ The thin driver converts JDBC calls directly into the vendor-specific database p
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the JDBC API components?
+## Q. What are the JDBC API components?
 
 The JDBC API provides the following interfaces and classes −
 
@@ -534,7 +534,7 @@ The JDBC API provides the following interfaces and classes −
 
 * **SQLException**: This class handles any errors that occur in a database application.
 
-#### Q. What is JDBC ResultSetMetaData interface?
+## Q. What is JDBC ResultSetMetaData interface?
 ResultSetMetaData is an interface in **java.sql** package of JDBC API which is used to get the metadata about a ResultSet object. Whenever we query the database using SELECT statement, the result will be stored in a ResultSet object. Every ResultSet object is associated with one ResultSetMetaData object. This object will have all the meta data about a ResultSet object like schema name, table name, number of columns, column name, datatype of a column etc. We can get this ResultSetMetaData object using **getMetaData()** method of ResultSet.
 
 ```java
@@ -573,7 +573,7 @@ Column Type Name of 1st column: NUMBER
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is JDBC DatabaseMetaData interface?
+## Q. What is JDBC DatabaseMetaData interface?
 DatabaseMetaData interface provides methods to get meta data of a database such as database product name, database product version, driver name, name of total number of tables, name of total number of views etc.
 
 | Methods                      | Description                          |
@@ -623,7 +623,7 @@ Driver Name: Oracle JDBC Driver
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How can we set null value in JDBC PreparedStatement?
+## Q. How can we set null value in JDBC PreparedStatement?
 Use the **setNull()** method to bind null to the parameter. The setNull() method accepts two parameter, index and the sql type as arguments.
 
 ```java
@@ -661,6 +661,7 @@ public class Main {
   }
 }
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -682,6 +683,7 @@ public class Main {
 #### Q. Explain optimistic and pessimistic locking in JDBC?
 #### Q. How can we store and retrieve images from the database?
 #### Q. How can we store and retrieve the file in the Oracle database?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
