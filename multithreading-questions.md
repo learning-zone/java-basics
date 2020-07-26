@@ -1,6 +1,6 @@
-## Multithreading Interview Questions and Answers
+# Multithreading Interview Questions and Answers
 
-#### Q. What are the states in the lifecycle of a Thread?
+## Q. What are the states in the lifecycle of a Thread?
 A java thread can be in any of following thread states during it’s life cycle i.e. New, Runnable, Blocked, Waiting, Timed Waiting or Terminated. These are also called life cycle events of a thread in java. 
 
 * New
@@ -15,7 +15,7 @@ A java thread can be in any of following thread states during it’s life cycle 
 **4. Non-Runnable (Blocked)**: This is the state when the thread is still alive, but is currently not eligible to run.  
 **5. Terminated**: A thread is in terminated or dead state when its run() method exits.  
 
-#### Q. What are the different ways of implementing thread? 
+## Q. What are the different ways of implementing thread? 
 There are two ways to create a thread:
 * extends Thread class
 * implement Runnable interface
@@ -69,7 +69,7 @@ class MyThread implements Runnable {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the difference between Process and Thread?
+## Q. What is the difference between Process and Thread?
 Both processes and threads are independent sequences of execution. The typical difference is that threads run in a **shared memory space**, while processes run in **separate memory spaces**.
 
 **Process**  
@@ -94,7 +94,7 @@ Both processes and threads are independent sequences of execution. The typical d
 * All the threads running within a process share the same address space, file descriptors, stack and other process related attributes.
 * Since the threads of a process share the same memory, synchronizing the access to the shared data within the process gains unprecedented importance.
 
-#### Q. What is difference between user Thread and daemon Thread?
+## Q. What is difference between user Thread and daemon Thread?
 Daemon threads are low priority threads which always run in background and user threads are high priority threads which always run in foreground. User Thread or Non-Daemon are designed to do specific or complex task where as daemon threads are used to perform supporting tasks.
 
 **Difference Between Daemon Threads And User Threads In Java**  
@@ -168,7 +168,7 @@ name: T2, isDaemon: true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How does thread communicate with each other?
+## Q. How does thread communicate with each other?
 **Inter-thread communication** is a mechanism in which a thread is paused running in its critical section and another thread is allowed to enter (or lock) in the same critical section to be executed. It is implemented by following methods of Object class:
 
 * wait()
@@ -204,7 +204,7 @@ class ThreadB extends Thread {
   }
 }
 ```
-#### Q. What do you understand about Thread Priority?
+## Q. What do you understand about Thread Priority?
 Every thread in Java has a priority that helps the thread scheduler to determine the order in which threads scheduled. The threads with higher priority will usually run before and more frequently than lower priority threads. By default, all the threads had the same priority, i.e., they regarded as being equally distinguished by the scheduler, when a thread created it inherits its priority from the thread that created it.
 
 Default priority of a thread is 5 (NORM_PRIORITY). The value of MIN_PRIORITY is 1 and the value of MAX_PRIORITY is 10.
@@ -242,7 +242,7 @@ Running thread priority is: 1
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Thread Scheduler and Time Slicing?
+## Q. What is Thread Scheduler and Time Slicing?
 **Thread scheduler** in java is the part of the JVM that decides which thread should run. The thread scheduler mainly uses preemptive or time slicing scheduling to schedule the threads.
 
 **Preemptive scheduling**: The highest priority task executes until it enters the waiting or dead states or a higher priority task comes into existence.
@@ -302,10 +302,10 @@ I am in first thread
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is context-switching in multi-threading?
+## Q. What is context-switching in multi-threading?
 Context Switching is the process of storing and restoring of CPU state so that Thread execution can be resumed from the same point at a later point of time. Context Switching is the essential feature for multitasking operating system and support for multi-threaded environment.
 
-#### Q. What is Deadlock? How to analyze and avoid deadlock situation?
+## Q. What is Deadlock? How to analyze and avoid deadlock situation?
 **Deadlock** is a programming situation where two or more threads are blocked forever, this situation arises with at least two threads and two or more resources.
 ```java
 class HelloClass {
@@ -391,7 +391,7 @@ public void run() {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Thread Pool? How can we create Thread Pool in Java?
+## Q. What is Thread Pool? How can we create Thread Pool in Java?
 A thread pool reuses previously created threads to execute current tasks and offers a solution to the problem of thread cycle overhead and resource thrashing. Since the thread is already existing when the request arrives, the delay introduced by thread creation is eliminated, making the application more responsive.
 
 Java provides the Executor framework which is centered around the Executor interface, its sub-interface –**ExecutorService** and the class-**ThreadPoolExecutor**, which implements both of these interfaces. By using the executor, one only has to implement the Runnable objects and send them to the executor to execute.
@@ -518,12 +518,12 @@ task 4 complete
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Why wait(), notify() and notifyAll() must be called from inside of the synchronized block or method.?
+## Q. Why wait(), notify() and notifyAll() must be called from inside of the synchronized block or method.?
 `wait()` forces the thread to release its lock. This means that it must own the lock of an object before calling the `wait()` method of that (same) object. Hence the thread must be in one of the object's synchronized methods or synchronized block before calling wait().
 
 When a thread invokes an object's `notify()` or `notifyAll()` method, one (an arbitrary thread) or all of the threads in its waiting queue are removed from the waiting queue to the entry queue. They then actively contend for the object's lock, and the one that gets the lock goes on to execute.
 
-#### Q. What is the difference between wait() and sleep() method?
+## Q. What is the difference between wait() and sleep() method?
 **1.  Class  belongs**:  The wait() method belongs to `java.lang.Object` class, thus can be called on any Object. The sleep() method belongs to `java.lang.Thread` class, thus can be called on Threads.  
 
 **2. Context**:  The wait() method can only be called from Synchronized context i.e. using synchronized block or synchronized method. The sleep() method can be called from any context.  
@@ -543,7 +543,7 @@ synchronized(LOCK) {
     LOCK.wait(); // LOCK is not held
 }
 ```
-#### Q. What is static synchronization?
+## Q. What is static synchronization?
 Static synchronization is achieved by static synchronized methods. Static synchronized method locked on **class** and non-static synchronized method locked on **current object** i.e. static and non-static synchronized methods can run at same time. It can produce inconsistency problem.
 
 If static synchronized method is called a class level lock is acquired and then if an object is tries to access non-static synchronized method at the same time it will not be accessible because class level lock is already acquired.
@@ -621,7 +621,7 @@ Table of 5
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How is the safety of a thread achieved?
+## Q. How is the safety of a thread achieved?
 * Immutable objects are by default thread-safe because there state can not be modified once created. Since String is immutable in Java, its inherently thread-safe.
 * Read only or final variables in Java are also thread-safe in Java.
 * Locking is one way of achieving thread-safety in Java.
@@ -632,7 +632,7 @@ Table of 5
 * In order to avoid thread-safety issue minimize sharing of objects between multiple thread.
 * Volatile keyword in Java can also be used to instruct thread not to cache variables and read from main memory and can also instruct JVM not to reorder or optimize code from threading perspective.
 
-#### Q. What is difference between start() and run() method of thread class?
+## Q. What is difference between start() and run() method of thread class?
 * When program calls `start()` method a **new Thread** is created and code inside `run()` method is executed in new Thread while if you call `run()` method directly **no new Thread is created** and code inside `run()` will execute on current Thread.
 
 * `start()` Can't be invoked more than one time otherwise throws `java.lang.IllegalStateException`  but `run()` can be invoked multiple times
@@ -668,7 +668,7 @@ I am executed by Thread-0
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Why we use Vector class?
+## Q. Why we use Vector class?
 Vector implements a dynamic array that means it can grow or shrink as required. Like an array, it contains components that can be accessed using an integer index. They are very similar to ArrayList but Vector is **synchronised** and have some legacy method which collection framework does not contain. It extends AbstractList and implements List interfaces.
 ```java
 import java.util.*; 
@@ -689,7 +689,7 @@ class Vector_demo {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Thread Group? Why it’s advised not to use it?
+## Q. What is Thread Group? Why it’s advised not to use it?
 ThreadGroup creates a group of threads. It offers a convenient way to manage groups of threads as a unit. This is particularly valuable in situation in which you want to suspend and resume a number of related threads.
 
 * The thread group form a tree in which every thread group except the initial thread group has a parent.
@@ -732,7 +732,7 @@ public class ThreadGroupExample
     } 
 } 
 ```
-#### Q. How do you stop a thread in java?
+## Q. How do you stop a thread in java?
 A thread is automatically destroyed when the run() method has completed. But it might be required to kill/stop a thread before it has completed its life cycle. Modern ways to suspend/stop a thread are by using a boolean flag and `Thread.interrupt()` method.
 ```java
 class MyThread extends Thread
@@ -788,7 +788,7 @@ Stopped Running….
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Can we call run() method of a Thread class?
+## Q. Can we call run() method of a Thread class?
 No, you can not directly call run method to start a thread. You need to call start method to create a new thread.
 If you call run method directly, it won’t create a new thread and it will be in same stack as main.
 ```java
@@ -833,7 +833,7 @@ Thread is running :4
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between Yield and Sleep method in Java?
+## Q. What is difference between Yield and Sleep method in Java?
 **1. Currently executing thread state**: sleep()  method causes the currently executing thread to sleep for the number of milliseconds specified in the argument. yield() method temporarily pauses the currently executing thread to give a chance to the remaining waiting threads of the same priority to execute.
 If there is no waiting thread or all the waiting threads of low priority then the current thread will continue its execution.
 
@@ -841,7 +841,7 @@ If there is no waiting thread or all the waiting threads of low priority then th
 
 **3. Give up monitors**:  Thread.sleep() method does not cause cause currently executing thread to give up any monitors while yield() method give up the monitors.
 
-#### Q. What is ThreadLocal?
+## Q. What is ThreadLocal?
 The Java ThreadLocal class enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to the same ThreadLocal variable, the two threads cannot see each other's ThreadLocal variables. Thus, the Java ThreadLocal class provides a simple way to make code thread safe that would not otherwise be so.
 
 **Creating a ThreadLocal**   
@@ -879,7 +879,7 @@ public class ThreadLocalExample {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Java Thread Dump, How can we get Java Thread dump of a Program?
+## Q. What is Java Thread Dump, How can we get Java Thread dump of a Program?
 A Java thread dump is a way of finding out what every thread in the JVM is doing at a particular point in time. This is especially useful if your Java application sometimes seems to hang when running under load, as an analysis of the dump will show where the threads are stuck.
 
 You can generate a thread dump under Unix/Linux by running `kill -QUIT <pid>`, and under Windows by hitting `Ctl + Break`.
@@ -967,7 +967,7 @@ JNI global references: 116
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What will happen if we don’t override Thread class run() method?
+## Q. What will happen if we don’t override Thread class run() method?
 If we don't override Thread class run() method in our defined thread then Thread class run() method will be executed and we will not get any output because Thread class run() is with an empty implementation.
 
 It is highly recommended to override run() method because it improves the performance of the system. If we override run() method in the user-defined thread then in run() method we will define a job and Our created thread is responsible to execute run() method.
@@ -991,7 +991,7 @@ Thread class run() method will be executed with empty implementation
 I am in run() method 
 ```
 
-#### Q. What is difference between the Thread class and Runnable interface for creating a Thread?
+## Q. What is difference between the Thread class and Runnable interface for creating a Thread?
 A thread can be defined in two ways. First, by extending a **Thread class** that has already implemented a Runnable interface. Second, by directly implementing a **Runnable interface**.
 
 **Difference**  
@@ -1004,7 +1004,7 @@ A thread can be defined in two ways. First, by extending a **Thread class** that
 |A user must extend thread class only if it wants to override the other methods in Thread class.|If you only want to specialize run method then implementing Runnable is a better option.|
 |Extending Thread class introduces tight coupling as the class contains code of Thread class and also the job assigned to the thread|	Implementing Runnable interface introduces loose coupling as the code of Thread is separate form the job of Threads.|
 
-#### Q. What does join() method?
+## Q. What does join() method?
 `java.lang.Thread` class provides the join() method which allows one thread to wait until another thread completes its execution. 
 ```java
 public class ThreadJoinExample {
@@ -1077,7 +1077,7 @@ All threads are dead, exiting main thread
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is race-condition?
+## Q. What is race-condition?
 Race condition in Java occurs in a multi-threaded environment **when more than one thread try to access a shared resource** (modify, write) at the same time. Since multiple threads try to race each other to finish executing a method thus the name **race condition**.
 
 **Example of race condition in Java**   
@@ -1201,7 +1201,7 @@ Value for Thread at last Thread-1 0
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Lock interface in Java Concurrency API? What is the Difference between ReentrantLock and Synchronized?
+## Q. What is Lock interface in Java Concurrency API? What is the Difference between ReentrantLock and Synchronized?
 A `java.util.concurrent.locks.Lock` is a thread synchronization mechanism just like synchronized blocks. A Lock is, however, more flexible and more sophisticated than a synchronized block. Since Lock is an interface, you need to use one of its implementations to use a Lock in your applications. `ReentrantLock` is one such implementation of Lock interface.
 ```java
 Lock lock = new ReentrantLock();
@@ -1248,7 +1248,7 @@ public class ConcurrencyLockExample implements Runnable {
 	}
 }
 ```
-#### Q. What is the difference between the Runnable and Callable interface?
+## Q. What is the difference between the Runnable and Callable interface?
 Runnable and Callable interface both are used in the multithreading environment. Runnable is the core interface provided for representing multi-threaded tasks and Callable is an improved version of Runnable that was added in Java 1.5.
 
 **Difference between Callable and Runnable in Java**  
@@ -1384,7 +1384,7 @@ Output
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the Thread’s interrupt flag? How does it relate to the InterruptedException?
+## Q. What is the Thread’s interrupt flag? How does it relate to the InterruptedException?
 If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked), calling the interrupt() method on the thread, breaks out the sleeping or waiting state throwing InterruptedException. If the thread is not in the sleeping or waiting state, calling the interrupt() method performs normal behaviour and doesn't interrupt the thread but sets the interrupt flag to true.
 
 Example: **Interrupting a thread that stops working**
@@ -1417,7 +1417,7 @@ Output
 ```
 Exception in thread "Thread-0" java.lang.RuntimeException: Thread interrupted
 ```
-#### Q. What is Java Memory Model (JMM)? Describe its purpose and basic ideas.
+## Q. What is Java Memory Model (JMM)? Describe its purpose and basic ideas.
 The Java memory model used internally in the JVM divides memory between thread stacks and the heap. Each thread running in the Java virtual machine has its own thread stack. The thread stack contains information about what methods the thread has called to reach the current point of execution. 
 
 The thread stack also contains all local variables for each method being executed (all methods on the call stack). A thread can only access it's own thread stack. Local variables created by a thread are invisible to all other threads than the thread who created it. Even if two threads are executing the exact same code, the two threads will still create the local variables of that code in each their own thread stack. Thus, each thread has its own version of each local variable.
@@ -1430,7 +1430,7 @@ The heap contains all objects created in your Java application, regardless of wh
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Describe the conditions of livelock and starvation?
+## Q. Describe the conditions of livelock and starvation?
 **Livelock** occurs when two or more processes continually repeat the same interaction in response to changes in the other processes without doing any useful work. These processes are not in the waiting state, and they are running concurrently. This is different from a deadlock because in a deadlock all processes are in the waiting state.
 ```java
 var l1 = .... // lock object like semaphore or mutex etc 
@@ -1480,14 +1480,14 @@ Starvation can occur due to the following reasons:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How do I share a variable between 2 Java threads?
+## Q. How do I share a variable between 2 Java threads?
 We should declare such variables as static and volatile.
 
 **Volatile variables** are shared across multiple threads. This means that individual threads won’t cache its copy in the thread local. But every object would have its own copy of the variable so threads may cache value locally.
 
 We know that static fields are shared across all the objects of the class, and it belongs to the class and not the individual objects. But, for static and non-volatile variable also, threads may cache the variable locally.
 
-#### Q. What are the main components of concurrency API?
+## Q. What are the main components of concurrency API?
 The concurrency API are designed and optimized specifically for synchronized multithreaded access. They are grouped under the `java.util.concurrent` package.
 
 **Main Components**  
@@ -1505,7 +1505,7 @@ The concurrency API are designed and optimized specifically for synchronized mul
 * Locks
 * Phaser
 
-#### Q. What is difference between CyclicBarrier and CountDownLatch in Java?
+## Q. What is difference between CyclicBarrier and CountDownLatch in Java?
 Both CyclicBarrier and CountDownLatch are used to implement a scenario where one Thread waits for one or more Thread to complete their job before starts processing. The differences are:
 
 **1. Definition**:  CountDownLatch  is a synchronization aid that allows one or more threads to wait until a set of operations being performed in other threads completes.
@@ -1516,7 +1516,7 @@ CyclicBarrier is a synchronization aid that allows a set of threads to all wait 
 
 CyclicBarrier is used to reset count. The barrier is called cyclic because it can be reused after the waiting threads are released (or count  become zero).  
 
-#### Q. What is Semaphore in Java concurrency?
+## Q. What is Semaphore in Java concurrency?
 A Semaphore is a thread synchronization construct that can be used either to send signals between threads to avoid missed signals, or to guard a critical section like you would with a lock. Java 5 comes with semaphore implementations in the java.util.concurrent package.   
 
 **1. Simple Semaphore**: 
@@ -1594,7 +1594,7 @@ try{
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Callable and Future in Java concurrency?
+## Q. What is Callable and Future in Java concurrency?
 Future and FutureTask in Java allows to write asynchronous code. A Future interface provides methods **to check if the computation is complete, to wait for its completion and to retrieve the results of the computation**. The result is retrieved using Future’s get() method when the computation has completed, and it blocks until it is completed. We need a callable object to create a future task and then we can use Java Thread Pool Executor to process these asynchronously.
 
 ```java
@@ -1677,7 +1677,7 @@ Factorial of 1000000 is : 3628800
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is blocking method in Java?
+## Q. What is blocking method in Java?
 Blocking methods in Java are those methods which block the executing thread until their operation finished. Example of blocking method is `InputStream read()` method which blocks until all data from InputStream has been read completely.
 
 ```java
@@ -1696,7 +1696,7 @@ public class BlcokingCallTest {
 * **ServerSocket.accept()** which listens for incoming socket connection in Java and blocks until a connection is made.
 * **InvokeAndWait()** wait until code is executed from Event Dispatcher thread.
 
-#### Q. What is atomic variable in Java?
+## Q. What is atomic variable in Java?
 Atomic variables allow us to perform atomic operations on the variables. The most commonly used atomic variable classes in Java are `AtomicInteger`, `AtomicLong`, `AtomicBoolean`, and `AtomicReference`. These classes represent an int, long, boolean and object reference respectively which can be atomically updated. The main methods exposed by these classes are:
 
 *  `get()`: gets the value from the memory, so that changes made by other threads are visible; equivalent to reading a volatile variable
@@ -1728,7 +1728,7 @@ public class SafeCounterWithoutLock {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Executors Framework?
+## Q. What is Executors Framework?
 The Executor framework helps to **decouple a command submission from command execution**. In the java.util.concurrent package there are three interfaces:
 
 **1. Executor** — Used to submit a new task.
@@ -1757,21 +1757,21 @@ Second, an anonymous implementation of the Runnable interface is passed to the e
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the available implementations of ExecutorService in the standard library?
+## Q. What are the available implementations of ExecutorService in the standard library?
 The ExecutorService interface has three standard implementations:
 
 * **ThreadPoolExecutor**: for executing tasks using a pool of threads. Once a thread is finished executing the task, it goes back into the pool. If all threads in the pool are busy, then the task has to wait for its turn.
 * **ScheduledThreadPoolExecutor**: allows to schedule task execution instead of running it immediately when a thread is available. It can also schedule tasks with fixed rate or fixed delay.
 * **ForkJoinPool**: is a special ExecutorService for dealing with recursive algorithms tasks. If you use a regular ThreadPoolExecutor for a recursive algorithm, you will quickly find all your threads are busy waiting for the lower levels of recursion to finish. The ForkJoinPool implements the so-called work-stealing algorithm that allows it to use available threads more efficiently.
 
-#### Q. What kind of thread is the Garbage collector thread?
+## Q. What kind of thread is the Garbage collector thread?
 * Daemon thread
-#### Q. How can we pause the execution of a Thread for specific time?
+## Q. How can we pause the execution of a Thread for specific time?
 * **Thread.sleep(...)**: causes the currently executing thread to sleep (cease execution) for the specified number of milliseconds plus the specified number of nanoseconds, subject to the precision and accuracy of system timers and schedulers. The thread does not lose ownership of any monitors;
 * **Thread.yield()**: causes the currently executing thread object to temporarily pause and allow other threads to execute;
 * **Monitors**: you call wait on the object you want to lock and you release the lock by calling notify on the same object.
 
-#### Q. What is difference between Executor.submit() and Executer.execute() method?
+## Q. What is difference between Executor.submit() and Executer.execute() method?
 **execute()**:  
 
 * Takes Runnable object as parameter.
@@ -1790,7 +1790,7 @@ The ExecutorService interface has three standard implementations:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Phaser in Java concurrency?
+## Q. What is Phaser in Java concurrency?
 The Phaser allows us to build logic in which **threads need to wait on the barrier before going to the next step of execution**. Phaser is similar to other synchronization barrier utils like CountDownLatch and CyclicBarrier. 
 
 **CountDownLatch vs CyclicBarrier vs Phaser**  
@@ -1872,7 +1872,7 @@ Phasecount is 1
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to stop a Thread in Java?
+## Q. How to stop a Thread in Java?
 A thread is automatically destroyed when the run() method has completed. But it might be required to kill/stop a thread before it has completed its life cycle. Modern ways to suspend/stop a thread are by using a **boolean flag** and **Thread.interrupt()** method.
 
 Example: Stop a thread Using a boolean variable
@@ -1983,7 +1983,7 @@ Stopped Running….
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Why implementing Runnable is better than extending thread?
+## Q. Why implementing Runnable is better than extending thread?
 | Features	           |implements Runnable	   | extends Thread |
 |----------------------|-----------------------|----------------|
 |Inheritance option	   |extends any java class | No             |
@@ -2055,12 +2055,12 @@ Run method executed by child Thread
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Tell me about join() and wait() methods?
+## Q. Tell me about join() and wait() methods?
 The `wait()` and `join()` methods are used to pause the current thread. The `wait()` is used in with `notify()` and `notifyAll()` methods, but `join()` is used in Java to wait until one thread finishes its execution. 
 
 The `wait()` is mainly used for shared resources, a thread notifies other waiting thread when a resource becomes free. On the other hand `join()` is used for waiting a thread to die.
 
-#### Q. How to implement thread-safe code without using the synchronized keyword? 
+## Q. How to implement thread-safe code without using the synchronized keyword? 
 * **Atomic updates**: A technique in which you call atomic instructions like compare and set provided by the CPU
 * **java.util.concurrent.locks.ReentrantLock**: A lock implementation that provides more flexibility than synchronized blocks
 * **java.util.concurrent.locks.ReentrantReadWriteLock**: A lock implementation in which reads do not block reads
@@ -2073,6 +2073,7 @@ The `wait()` is mainly used for shared resources, a thread notifies other waitin
 #### Q. What is SynchronousQueue in Java?
 #### Q. What is Exchanger in Java concurrency?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
