@@ -84,8 +84,10 @@ Output
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. Write a program to generate random numbers between the given range?
-*TODO*
+#### Q. Write a program to generate random numbers between the given range?
+
+*ToDo*
+
 ## Q. Write a java program to swap two string variables without using temp variable?
 **Approach**  
 
