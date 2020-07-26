@@ -1,7 +1,7 @@
-## Collections Interview Questions and Answers
+# Collections Interview Questions and Answers
 
 
-#### Q. What is Java Collections Framework? List out some benefits of Collections framework?
+## Q. What is Java Collections Framework? List out some benefits of Collections framework?
 
 ![Java Collections Framework](https://github.com/learning-zone/java-interview-questions/blob/master/assets/collection.png)
 
@@ -94,7 +94,7 @@ Some common known classes implementing this interface are **ArrayDeque, Concurre
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What will be the problem if you don't override hashcode() method?
+## Q. What will be the problem if you do not override hashcode() method?
 Some collections, like HashSet, HashMap or HashTable use the hashcode value of an object to find out how the object would be stored in the collection, and subsequently hashcode is used to help locate the object in the collection. Hashing retrieval involves:
 
 * First, find out the right bucket using hashCode().
@@ -145,10 +145,10 @@ Checking equality between alex1 and alex2 = false
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the benefit of Generics in Collections Framework?
+## Q. What is the benefit of Generics in Collections Framework?
 Generics allow us to provide the type of Object that a collection can contain, so if we try to add any element of other type it throws compile time error. This avoids ClassCastException at Runtime because we will get the error at compilation. Also Generics make code clean since we don’t need to use casting and instanceof operator. 
 
-#### Q. How do WeakHashMap works?
+## Q. How do WeakHashMap works?
 WeakHashMap is a Hash table-based implementation of the Map interface with weak keys. An entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. Both null values and the null key are supported. This class has performance characteristics similar to those of the HashMap class and has the same efficiency parameters of initial capacity and load factor. 
 ```java
 // Java program to illustrate  
@@ -196,7 +196,7 @@ INACTIVE   [project id : 200, project name : Employee Management System,
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between Array and ArrayList?
+## Q. What is difference between Array and ArrayList?
 **1. Size**: Array in Java is fixed in size. We can not change the size of array after creating it. ArrayList is dynamic in size. When we add elements to an ArrayList, its capacity increases automatically.
 
 **2. Performance**: In Java Array and ArrayList give different performance for different operations.
@@ -253,7 +253,7 @@ Output
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between ArrayList and LinkedList?
+## Q. What is difference between ArrayList and LinkedList?
 ArrayList and LinkedList both implements List interface and maintains insertion order. Both are non synchronized classes.
 
 |Sl.No |ArrayList               |LinkedList                                                                 |
@@ -306,7 +306,7 @@ public class ArrayListLinkedListExample
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between Comparable and Comparator interface?
+## Q. What is difference between Comparable and Comparator interface?
 **Comparable**: A comparable object is capable of comparing itself with another object. The class itself must implements the `java.lang.Comparable` interface in order to be able to compare its instances.
 
 **Comparator**: A comparator object is capable of comparing two different objects. The class is not comparing its instances, but some other class’s instances. This comparator class must implement the `java.util.Comparator` interface.
@@ -365,7 +365,7 @@ public class TestSort3 {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to remove duplicates from ArrayList?
+## Q. How to remove duplicates from ArrayList?
 The LinkedHashSet is the best approach for removing duplicate elements in an arraylist. LinkedHashSet does two things internally :
 
 * Remove duplicate elements
@@ -396,7 +396,7 @@ Output
 ArrayList with duplicate elements: [1, 1, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7, 8]
 ArrayList without duplicate elements: [1, 2, 3, 4, 5, 6, 7, 8]
 ```
-#### Q. What is Java Priority Queue?
+## Q. What is Java Priority Queue?
 A priority queue in Java is a special type of queue wherein all the elements are ordered as per their natural ordering or based on a custom Comparator supplied at the time of creation.
 
 The front of the priority queue contains the least element according to the specified ordering, and the rear of the priority queue contains the greatest element. So when we remove an element from the priority queue, the least element according to the specified ordering is removed first. The Priority Queue class is part of Java’s collections framework and implements the Queue interface. 
@@ -464,7 +464,7 @@ Vijay
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is LinkedHashMap in Java?
+## Q. What is LinkedHashMap in Java?
 LinkedHashMap is just like HashMap with an additional feature of maintaining an order of elements inserted into it. Java LinkedHashMap class is Hashtable and Linked list implementation of the Map interface, with predictable iteration order. It inherits HashMap class and implements the Map interface.
 
 **Features**
@@ -514,7 +514,7 @@ Key is: 1   & Value is: Sherry
 Key is: 2   & Value is: Karon
 Key is: 100 & Value is: Jim
 ```
-#### Q. What are different Collection views provided by Map interface?
+## Q. What are different Collection views provided by Map interface?
 
 **Hierarchy of Map Interface**  
 
@@ -603,7 +603,7 @@ Output
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between HashMap and Hashtable?
+## Q. What is difference between HashMap and Hashtable?
 HashMap and Hashtable both are used to store data in key and value form. Both are using hashing technique to store unique keys.
 
 |Sl.No|HashMap	              |Hashtable                                         |
@@ -671,7 +671,7 @@ Hash map:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is EnumSet?
+## Q. What is EnumSet?
 Java EnumSet class is the specialized Set implementation for use with enum types. It inherits AbstractSet class and implements the Set interface.
 
 **Features**  
@@ -749,7 +749,7 @@ drawing line in color : BLUE
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the difference between fail-fast and fail-safe iterator?
+## Q. What is the difference between fail-fast and fail-safe iterator?
 **fail-fast Iterator**  
 
 `Iterators` in java are used to iterate over the Collection objects.Fail-Fast iterators immediately throw `ConcurrentModificationException` if there is **structural modification** of the collection. Structural modification means adding, removing or updating any element from collection while a thread is iterating over that collection. Iterator on ArrayList, HashMap classes are some examples of fail-fast Iterator.
@@ -830,7 +830,7 @@ THREE : 3
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are concurrent collection classes?
+## Q. What are concurrent collection classes?
 The concurrent collection APIs of Java provide a range of classes that are specifically designed to deal with concurrent operations. These classes are alternatives to the Java Collection Framework and provide similar functionality except with the additional support of concurrency.
 
 **Java Concurrent Collection Classes**  
@@ -850,7 +850,7 @@ The concurrent collection APIs of Java provide a range of classes that are speci
 * ConcurrentNavigableMap 
 * ConcurrentSkipListMap 
 
-#### Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
+## Q. What is BlockingQueue? How to implement producer-consumer problem by using BlockingQueue?
 **BlockingQueue**: When a thread try to dequeue from an empty queue is blocked until some other thread inserts an item into the queue. Also, when a thread try to enqueue an item in a full queue is blocked until some other thread makes space in the queue, either by dequeuing one or more items or clearing the queue completely.
 
 **Producter-Consumer Problem**  
@@ -919,7 +919,7 @@ Here, The Producer start producing objects and pushing it to the Queue. Once the
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between Enumeration and Iterator interface?
+## Q. What is difference between Enumeration and Iterator interface?
 Enumeration and Iterator are two interfaces in java.util package which are used to traverse over the elements of a Collection object.
 
 **Differences**  
@@ -979,7 +979,7 @@ public class PerformanceTest {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between Iterator and ListIterator?
+## Q. What is difference between Iterator and ListIterator?
 ListIterator is the child interface of Iterator interface. The major difference between Iterator and ListIterator is that Iterator can traverse the elements in the collection only in **forward direction** whereas, the ListIterator can traverse the elements in a collection in both the **forward as well as the backwards direction**.
 
 ```java
@@ -1048,7 +1048,7 @@ Backward Traversal :
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How can we create a synchronized collection from given collection?
+## Q. How can we create a synchronized collection from given collection?
 In Java, normally collections aren't synchronized, which leads to fast performance. However, in multi-threaded situations, it can be very useful for collections to be synchronized. The Java Collections class has several static methods on it that provide synchronized collections. These methods are:
 
 * Synchronized Collection Methods of Collections class
@@ -1107,7 +1107,7 @@ Synchronized view is : [10, 20, 30, 40, 50]
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is a default capacity of ArrayList, Vector, HashMap, Hashtable and Hashset?
+## Q. What is a default capacity of ArrayList, Vector, HashMap, Hashtable and Hashset?
 
 |Collections | Capacity |
 |------------|----------|
@@ -1124,7 +1124,7 @@ Synchronized view is : [10, 20, 30, 40, 50]
 * **Hashtable**: Constructs a new, empty hashtable with a default initial capacity (11) and load factor (0.75).
 * **Hashset**: Constructs a new, empty set; the backing HashMap instance has default initial capacity (16) and load factor (0.75).
 
-#### Q. What is the difference between Collection and Collections?
+## Q. What is the difference between Collection and Collections?
 **Collection Interface**  
 
 Collection is a root level interface of the Java Collection Framework. Most of the classes in Java Collection Framework inherit from this interface. **List, Set and Queue** are main sub interfaces of this interface. JDK provides direct implementations of it’s sub interfaces. **ArrayList, Vector, HashSet, LinkedHashSet, PriorityQueue** are some indirect implementations of Collection interface. 
@@ -1145,7 +1145,7 @@ Collections is an utility class in java.util package. It consists of only static
 |Collections.copy()	                  |This method copies all elements from one collection to another collectio|n.|
 |Collections.reverse()	              |This method reverses the order of elements in the specified collection.|
 
-#### Q. What is the difference between HashSet and TreeSet?
+## Q. What is the difference between HashSet and TreeSet?
 1) HashSet gives better performance (faster) than TreeSet for the operations like add, remove, contains, size etc. HashSet offers constant time cost while TreeSet offers log(n) time cost for such operations.
 
 2) HashSet does not maintain any order of elements while TreeSet elements are sorted in ascending order by default.
@@ -1224,7 +1224,7 @@ Singh
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the difference between Set and Map?
+## Q. What is the difference between Set and Map?
 
 **Sets**:-
 
@@ -1240,7 +1240,7 @@ Singh
 3. Set Map also doesn’t stores the elements in an order, however few of its classes does the same.
 4. Classes in Maps HashMap, TreeMap, WeakHashMap, LinkedHashMap, IdentityHashMap etc.
 
-#### Q. What is the difference between HashSet and HashMap?
+## Q. What is the difference between HashSet and HashMap?
 
 **HashSet**:-
 
@@ -1259,7 +1259,7 @@ Singh
 4. HashMap permits single null key and any number of null values.
 5. HashMap is not synchronized which means they are not suitable for thread-safe operations until unless synchronized explicitly.
 
-#### Q. What is the difference between HashMap and TreeMap?
+## Q. What is the difference between HashMap and TreeMap?
 Java **HashMap** and **TreeMap** both are the classes of the Java Collections framework. Java Map implementation usually acts as a bucketed hash table. When buckets get too large, they get transformed into nodes of **TreeNodes**, each structured similarly to those in java.util.TreeMap.
 
 |HashMap	                       |TreeMap                           |
@@ -1279,7 +1279,7 @@ Java **HashMap** and **TreeMap** both are the classes of the Java Collections fr
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the Dictionary class?
+## Q. What is the Dictionary class?
 **util.Dictionary** is an abstract class, representing a key-value relation and works similiar to a map. Both keys and values can be objects of any type but not null. An attempt to insert either a null key or a null value to a dictionary causes a NullPointerException exception.
 
 ```java
@@ -1347,7 +1347,7 @@ Size of Dictionary : 1
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are all the Classes and Interfaces that are available in the collections?
+## Q. What are all the Classes and Interfaces that are available in the collections?
 **Java Collections Interfaces**  
 
 * Collection Interface
@@ -1371,7 +1371,7 @@ Size of Dictionary : 1
 * TreeMap Class
 * PriorityQueue Class
 
-#### Q. What is the difference between HashMap and ConcurrentHashMap?
+## Q. What is the difference between HashMap and ConcurrentHashMap?
  	
 |HashMap	                   |ConcurrentHashMap                                     |
 |------------------------------|------------------------------------------------------|
@@ -1381,7 +1381,7 @@ Size of Dictionary : 1
 |HashMap allows key and value to be null.|ConcurrentHashMap does not allow null key/value. It will throw NullPointerException.|
 |HashMap is faster.     	   |ConcurrentHashMap is slower than HashMap.|
 
-#### Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
+## Q. What is CopyOnWriteArrayList? How it is different from ArrayList in Java?
 CopyOnWriteArrayList class is introduced in JDK 1.5, which implements List interface. It is enhanced version of ArrayList in which all modifications (add, set, remove, etc) are implemented by making a fresh copy.
 
 ```java
@@ -1443,7 +1443,7 @@ D
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to make an ArrayList read only in Java?
+## Q. How to make an ArrayList read only in Java?
 An ArrayList can be made read-only easily with the help of **Collections.unmodifiableList()** method. This method takes the modifiable ArrayList as a parameter and returns the read-only unmodifiable view of this ArrayList.
 
 ```java
@@ -1500,17 +1500,17 @@ Exception thrown : java.lang.UnsupportedOperationException
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
+## Q. Why Collection doesn’t extend Cloneable and Serializable interfaces?
 Collection is an interface that specifies a group of objects known as elements. The details of how the group of elements is maintained is left up to the concrete implementations of `Collection`. For example, some Collection implementations like `List` allow duplicate elements whereas other implementations like `Set` don't.
 
 Collection is the root interface for all the collection classes ( like ArrayList, LinkedList ). If collection interface extends Cloneable/Serializable interfaces, then it is mandating all the concrete implementations of this interface to implement cloneable and serializable interfaces. To give freedom to concrete implementation classes, Collection interface don’t extended Cloneable or Serializable interfaces.
 
-#### Q. Why ConcurrentHashMap is faster than Hashtable in Java?
+## Q. Why ConcurrentHashMap is faster than Hashtable in Java?
 ConcurrentHashMap uses multiple buckets to store data. This avoids read locks and greatly improves performance over a HashTable. Both are thread safe, but there are obvious performance wins with ConcurrentHashMap.
 
 When we read from a ConcurrentHashMap using get(), there are no locks, contrary to the HashTable for which all operations are simply synchronized. HashTable was released in old versions of Java whereas ConcurrentHashMap is added in java 1.5 version.
 
-#### Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
+## Q. What is the difference between peek(), poll() and remove() method of the Queue interface?
 This represents a collection that is indented to hold data before processing. It is an arrangement of the type First-In-First-Out (FIFO). The first element put in the queue is the first element taken out from it.
 
 **The peek() method**  
@@ -1598,7 +1598,7 @@ The main difference lies when the Queue is empty(). If Queue is empty then poll(
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How HashMap works in Java?
+## Q. How HashMap works in Java?
 HashMap in Java works on **hashing** principle. It is a data structure which allow to store object and retrieve it in constant time O(1). In hashing, hash functions are used to link key and value in HashMap. Objects are stored by calling **put(key, value)** method of HashMap and retrieved by calling **get(key)** method. When we call put method, **hashcode()** method of the key object is called so that hash function of the map can find a bucket location to store value object, which is actually an index of the internal array, known as the table. HashMap internally stores mapping in the form of **Map.Entry** object which contains both key and value object.
 
 Since the internal array of HashMap is of fixed size, and if you keep storing objects, at some point of time hash function will return same bucket location for two different keys, this is called **collision** in HashMap. In this case, a linked list is formed at that bucket location and a new entry is stored as next node.
@@ -1646,12 +1646,12 @@ public class HashMapExample {
     } 
 } 
 ```
-#### Q. How does HashMap handle collisions in java?
+## Q. How does HashMap handle collisions in java?
 Prior to Java 8, HashMap and all other hash table based Map implementation classes in Java handle collision by chaining, i.e. they use linked list to store map entries which ended in the same bucket due to a collision. If a key end up in same bucket location where an entry is already stored then this entry is just added at the head of the linked list there. In the worst case this degrades the performance of the `get()` method of HashMap to `O(n)` from `O(1)`. In order to address this issue in the case of frequent HashMap collisions, Java 8 has started using a **balanced tree** instead of linked list for storing collided entries. This also means that in the worst case you will get a performance boost from `O(n)` to `O(log n)`.
 
 The threshold of switching to the balanced tree is defined as TREEIFY_THRESHOLD constant in java.util.HashMap JDK 8 code.  Currently, it's value is 8, which means if there are more than 8 elements in the same bucket than HashMap will use a tree instead of linked list to hold them in the same bucket. 
 
-#### Q. Write a code to convert HashMap to ArrayList.  
+## Q. Write a code to convert HashMap to ArrayList.  
 ```java
 import java.util.ArrayList; 
 import java.util.Collection; 
@@ -1714,7 +1714,7 @@ public class MapToListExamples {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between arrayList and linkedList?
+## Q. What is difference between arrayList and linkedList?
 
 ArrayList and LinkedList both implements List interface and maintains insertion order. Both are non synchronized classes.
 
@@ -1725,7 +1725,7 @@ ArrayList and LinkedList both implements List interface and maintains insertion 
 | An ArrayList class can act as a list only because it implements List only.|	LinkedList class can act as a list and queue |both because it implements List and Deque interfaces.|
 | ArrayList is better for storing and accessing data. 	          |LinkedList is better for manipulating data.|
 
-#### Q. How Set/HashSet implement unique values?
+## Q. How Set/HashSet implement unique values?
 
 Java HashSet class is used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements Set interface.
 
@@ -1764,7 +1764,7 @@ When we create a HashSet, it internally creates a HashMap and if we insert an el
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Comparable and Comparator Interface in java?
+## Q. What is Comparable and Comparator Interface in java?
 
 Comparable and Comparator both are interfaces and can be used to sort collection elements.
 
@@ -1911,7 +1911,7 @@ Sorting by Age
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Difference between containsKey(), keySet() and values() in HashMap. 
+## Q. Difference between containsKey(), keySet() and values() in HashMap. 
 
 * **The keySet() method**:
 This method returns a Set view of all the keys in the map. The set is backed by the map, so changes to the map are reflected in the set, and vice-versa. 
@@ -1969,7 +1969,7 @@ public class HashMapExample {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the difference between Array and ArrayList data-structure? 
+## Q. What is the difference between Array and ArrayList data-structure? 
 * **Resizable**: Implementation of array is simple fixed sized array but Implementation of ArrayList is dynamic sized array.
 * **Primitives**: Array can contain both primitives and objects but ArrayList can contain only object elements
 * **Generics**: We can’t use generics along with array but ArrayList allows us to use generics to ensure type safety.
@@ -2016,13 +2016,13 @@ class ArrayExample {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Array or ArrayList which one is faster?  
+## Q. Array or ArrayList which one is faster?  
 * Array is faster
 
-#### Q. What is difference between HashSet and LinkedHashSet?
+## Q. What is difference between HashSet and LinkedHashSet?
 A HashSet is unordered and unsorted Set. LinkedHashSet is the ordered version of HashSet. The only difference between HashSet and LinkedHashSet is that LinkedHashSet maintains the **insertion order**. When we iterate through a HashSet, the order is unpredictable while it is predictable in case of LinkedHashSet. The reason why LinkedHashSet maintains insertion order is because the underlying data structure is a doubly-linked list.
 
-#### Q. What is the difference between HashTable and HashMap?
+## Q. What is the difference between HashTable and HashMap?
 |HashMap	                                           |Hashtable                                               |
 |------------------------------------------------------|--------------------------------------------------------|
 |HashMap is **non synchronized**. It is not-thread safe and can't be shared between many threads without proper synchronization code. |	Hashtable is **synchronized**. It is thread-safe and can be shared with many threads.|
@@ -2085,12 +2085,12 @@ Hash Map Values
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What happens when a duplicate key is put into a HashMap?
+## Q. What happens when a duplicate key is put into a HashMap?
 By definition, the `put` command replaces the previous value associated with the given key in the map (conceptually like an array indexing operation for primitive types).
 
 The map simply drops its reference to the value. If nothing else holds a reference to the object, that object becomes eligible for garbage collection. Additionally, Java returns any previous value associated with the given key (or `null` if none present), so you can determine what was there and maintain a reference if necessary.
 
-#### Q. What are the differences between ArrayList and Vector?
+## Q. What are the differences between ArrayList and Vector?
 |ArrayList	                    |Vector                               |
 |-------------------------------|-------------------------------------|
 |ArrayList is **not synchronized**. |Vector is **synchronized**.              |
@@ -2156,11 +2156,12 @@ Six
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. If you store Employee object as key say: Employee emp = new Employee(“name1”,20); store it in a HashMap as key, now if we add a new parameter emp.setMarriedStatus(true) and try to override it what will happen? 
+## Q. If you store Employee object as key say: Employee emp = new Employee(“name1”,20); store it in a HashMap as key, now if we add a new parameter emp.setMarriedStatus(true) and try to override it what will happen? 
 new instance of Employee will be inserted to HashMap 
 
-#### Q. Why Map interface doesn’t extend Collection interface?
-#### Q. What is CompareAndSwap approach?
+### Q. Why Map interface does not extend Collection interface?
+### Q. What is CompareAndSwap approach?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
