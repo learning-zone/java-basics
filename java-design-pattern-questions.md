@@ -1,11 +1,10 @@
-## Java Design Pattern Questions and Answers
-
-
+# Java Design Pattern Questions and Answers
 
 #### Q. Exaplain MVC, Front-Controller, DAO, DTO, Service-Locator, Prototype design patterns?
-*TODO*
 
-#### Q. What are the design patterns available in Java?
+*ToDo*
+
+## Q. What are the design patterns available in Java?
 Java Design Patterns are divided into three categories – creational, structural, and behavioral design patterns.
 
 **1. Creational Design Patterns**
@@ -42,7 +41,7 @@ Java Design Patterns are divided into three categories – creational, structura
 * Dependency Injection Pattern
 * MVC Pattern
 
-#### Q. Explain Singleton Design Pattern in Java? 
+## Q. Explain Singleton Design Pattern in Java? 
 **1. Eager initialization:**  
 In eager initialization, the instance of Singleton Class is created at the time of class loading.
 
@@ -149,7 +148,7 @@ public class BillPughSingleton {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Explain Adapter Design Pattern in Java?
+## Q. Explain Adapter Design Pattern in Java?
 Adapter design pattern is one of the structural design pattern and its used so that two unrelated interfaces can work together. The object that joins these unrelated interface is called an Adapter.
 
 Example:
@@ -232,7 +231,7 @@ public class Main {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Explain Factory Design Pattern in Java?
+## Q. Explain Factory Design Pattern in Java?
 A Factory Pattern or Factory Method Pattern says that just define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate. In other words, subclasses are responsible to create the instance of the class.
 
 Example: Calculate Electricity Bill
@@ -330,7 +329,7 @@ class GenerateBill {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Explain Strategy Design Pattern in Java?
+## Q. Explain Strategy Design Pattern in Java?
 Strategy design pattern is one of the behavioral design pattern. Strategy pattern is used when we have multiple algorithm for a specific task and client decides the actual implementation to be used at runtime.
 
 Example: Simple Shopping Cart where we have two payment strategies – using Credit Card or using PayPal.
