@@ -1,7 +1,6 @@
-## Servlets Interview Questions and Answers
+# Servlets Interview Questions and Answers
 
-
-#### Q. Explain Servlets Lifecycle?
+## Q. Explain Servlets Lifecycle?
 The web container maintains the life cycle of a servlet instance. 
 
 **Stages of the Servlet Life Cycle**: 
@@ -65,7 +64,7 @@ public void destroy() {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is ServletContext Interface?
+## Q. What is ServletContext Interface?
 ServletContext is a configuration Object which is created when web application is started. It contains different initialization parameter that can be configured in web.xml.
 
 **ServletContext Interface Methods**
@@ -122,7 +121,7 @@ web.xml
     </servlet-mapping>
 </web-app>
 ```
-#### Q. What is a servlet?
+## Q. What is a servlet?
 **A servlet** is an interface whose implementation extends the functionality of a server. A servlet interacts with clients through a request-response principle. Although servlets can handle any request, they are commonly used to expand web servers.
 
 Most of the classes and interfaces required to create servlets are contained in `javax.servlet` and packages `javax.servlet.http`.
@@ -139,13 +138,13 @@ Most of the classes and interfaces required to create servlets are contained in 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are the advantages of servlet technology over CGI (Common Gateway Interface)?
+## Q. What are the advantages of servlet technology over CGI (Common Gateway Interface)?
 * Servlets provide better query processing performance and more efficient use of memory by taking advantage of multithreading (a new thread is created for each request, which is faster than allocating memory for a new object for each request, as happens in CGI).
 * Servlets, both platform and system are independent. Thus, a web application written using servlets can be run in any servlet container that implements this standard and in any operating system.
 * Using servlets increases the reliability of the program, as the servlet container itself takes care of the servlet life cycle (and therefore memory leaks), security, and the garbage collector.
 * Servlets are relatively easy to learn and maintain, so the developer only needs to care about the business logic of the application, and not the internal implementation of web technologies.
 
-#### Q. What is a servlet container?
+## Q. What is a servlet container?
 **A servlet container** is a program that is a server that provides system support for servlets and ensures their life cycle in accordance with the rules defined in the specifications. It can work as a full-fledged stand-alone web server, be a page provider for another web server, or integrate into a Java EE application server.
 
 The servlet container provides data exchange between the servlet and clients, takes on the execution of functions such as creating a software environment for a functioning servlet, identifying and authorizing clients, and organizing a session for each of them.
@@ -159,7 +158,7 @@ The most famous servlet container implementations are:
 * IBM WebSphere
 * Oracle Weblogic
 
-#### Q. How does the servlet container manage the servlet life cycle, when and what methods are called?
+## Q. How does the servlet container manage the servlet life cycle, when and what methods are called?
 The servlet container manages the four phases of the servlet life cycle:
 
 * **Servlet class loading** - when the container receives a request for a servlet, the servlet class is loaded into memory and its constructor is called without parameters.
@@ -177,7 +176,7 @@ Thus, the servlet is created the first time it is accessed and lives throughout 
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What actions do you need to do when creating servlets?
+## Q. What actions do you need to do when creating servlets?
 To create a servlet `ExampleServlet`, you must describe it in the deployment descriptor:
 ```xml
 <servlet-mapping>
@@ -195,14 +194,14 @@ To create a servlet `ExampleServlet`, you must describe it in the deployment des
 ```
 Then create a class `xyz.company.ExampleServlet` by inheriting from `HttpServlet` and implement the logic of its work in the method `service()`/ methods `doGet()`/ `doPost()`.
 
-#### Q. What are the most common tasks performed in a servlet container?
+## Q. What are the most common tasks performed in a servlet container?
 * **Support data exchange**: The servlet container provides an easy way to exchange data between the web client (browser) and the servlet. Thanks to the container, there is no need to create a socket listener on the server to track requests from the client, as well as parse the request and generate a response. All these important and complex tasks are solved using the container and the developer can focus on the business logic of the application.
 * **Servlet and resource lifecycle management**: From servlet loading into memory, initialization, implementation of methods, and ending with servlet destruction. The container also provides additional utilities, such as JNDI, for managing the resource pool.
 * **Multithreading support**: The container independently creates a new thread for each request and provides it with a request and response for processing. Thus, the servlet is not reinitialized for each request and thereby saves memory and reduces the time before processing the request.
 * **JSP support**: JSP classes are not like standard Java classes, but the servlet container converts each JSP into a servlet and is then managed by the container as a regular servlet.
 * **Various tasks**: The servlet container manages the resource pool, application memory, and garbage collector. Security settings and more.
 
-#### Q. How to call another servlet from one servlet?
+## Q. How to call another servlet from one servlet?
 To call a servlet from the same application, you must use the inter-servlet communication mechanisms through method calls `RequestDispatcher()`:
 
 * `forward()` - passes the execution of the request to another servlet;
@@ -214,7 +213,7 @@ If you need to call a servlet belonging to another application, then you `Reques
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Request Dispatcher?
+## Q. What is Request Dispatcher?
 The `RequestDispatcher` interface is used to transfer the request to another resource, while it is possible to add data received from this resource to the servlet’s own response. This interface is also used for internal communication between servlets in the same context.
 
 Two methods are implemented in the interface:
@@ -224,7 +223,7 @@ Two methods are implemented in the interface:
 
 Access to the interface can be obtained using the interface method `ServletContext`- `RequestDispatcher getRequestDispatcher(String path)`, where the path starting with `/` is interpreted relative to the current root path of the context.
 
-#### Q. What are the differences between forward() and sendRedirect() methods?
+## Q. What are the differences between forward() and sendRedirect() methods?
 **forward()**
 
 * Performed on the server side;
@@ -245,29 +244,29 @@ Access to the interface can be obtained using the interface method `ServletConte
 * Slower forward()because Requires creating a new request;
 * Defined in the interface HttpServletResponse.
 
-#### Q. What are servlet attributes used for and how do you work with them?
+## Q. What are servlet attributes used for and how do you work with them?
 Servlet attributes are used for internal servlet communication.
 
 The web application has the ability to work with attributes using the methods `setAttribute()`, `getAttribute()`, `removeAttribute()`, `getAttributeNames()`, who provided interfaces ServletRequest, HttpSessionand ServletContext(for the scope request, the session, context The respectively).
 
-#### Q. How to get the real servlet location on the server?
+## Q. How to get the real servlet location on the server?
 The real path to the servlet location on the server can be obtained from the object 
 ServletContext: `getServletContext().getRealPath(request.getServletPath())`.
 
-#### Q. How to get server information from a servlet?
+## Q. How to get server information from a servlet?
 Information about the server can be obtained from the object ServletContext:
 `getServletContext().getServerInfo()`.
 
-#### Q. How to get the client IP address on the server?
+## Q. How to get the client IP address on the server?
 Client IP address can be obtained by calling `request.getRemoteAddr()`.
 
-#### Q. What servlet wrapper classes do you know?
+## Q. What servlet wrapper classes do you know?
 Custom handlers can `ServletRequest` also `ServletResponse` be implemented by adding new or overriding existing methods for wrapper classes `ServletRequestWrapper( HttpServletRequestWrapper)` and `ServletResponseWrapper( HttpServletRequestWrapper)`.
 
-#### Q. What are the differences GenericServlet and HttpServlet?
+## Q. What are the differences GenericServlet and HttpServlet?
 An abstract class GenericServletis an implementation of the interface independent of the protocol used Servlet, and an abstract class, HttpServletin turn, extends GenericServletfor the HTTP protocol.
 
-#### Q. What are the main methods present in the class HttpServlet?
+## Q. What are the main methods present in the class HttpServlet?
 * `doGet()`- for processing HTTP requests GET;
 * `doPost()`- for processing HTTP requests POST;
 * `doPut()`- for processing HTTP requests PUT;
@@ -280,12 +279,12 @@ An abstract class GenericServletis an implementation of the interface independen
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Which HTTP method is not immutable?
+## Q. Which HTTP method is not immutable?
 An HTTP method is called immutable if it always returns the same result on the same request. HTTP methods `GET`, `PUT`, `DELETE`, `HEAD` and `OPTIONS` are immutable, so it is necessary to implement an application so that these methods return the same results consistently. Variable methods include a method `POST` that is used to implement something that changes with each request.
 
 For example, to access a static HTML page, a method is used `GET`, because it always returns the same result. If you need to save any information, for example in a database, you need to use the `POST` method.
 
-#### Q. What are the different methods for managing session in servlets?
+## Q. What are the different methods for managing session in servlets?
 There are several ways to provide a unique session identifier:
 
 * **User Authentication** - Providing credentials by the user at the time of authentication. Information transmitted in this way is then used to maintain the session. This method will not work if the user is logged in from several places at the same time.
@@ -300,7 +299,7 @@ There are several ways to provide a unique session identifier:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are cookies? What methods for working with cookies are provided in servlets?
+## Q. What are cookies? What methods for working with cookies are provided in servlets?
 Cookies (“cookies”) - a small piece of data sent by a web server and stored on the user's device. Each time you try to open a site page, the web client sends cookies corresponding to this site to the web server as part of the HTTP request. It is used to save data on the user side and in practice it is usually used to:
 
 * user authentication;
@@ -313,26 +312,26 @@ Servlet API provides support for cookies through the class `javax.servlet.http.C
 * To get an array of cookies from the request, you must use the method `HttpServletRequest.getCookies()`. There are no methods for adding cookies to `HttpServletRequest`.
 * Used to add a cookie to the response `HttpServletResponse.addCookie(Cookie c)`. There is no method to receive cookies `HttpServletResponse`.
 
-#### Q. What is URL Rewriting?
+## Q. What is URL Rewriting?
 **URL Rewriting** - special rewriting (recoding) of the original URL. This mechanism can be used to control the session in servlets when cookies are disabled.
 
-#### Q. What is difference between encodeURL() and encodeRedirectURL()?
+## Q. What is difference between encodeURL() and encodeRedirectURL()?
 `HttpServletResponse.encodeURL()` provides a way to convert a URL to HTML hyperlink with the conversion of special characters and spaces, as well as adding session id to the URL. This behavior is similar `java.net.URLEncoder.encode()`, but with the addition of an additional parameter `jsessionid` at the end of the URL.
 
 The method `HttpServletResponse.encodeRedirectURL()` translates the URL for later use in the method `sendRedirect()`.
 
 Thus for HTML hyperlinks when URL rewriting is necessary to use `encodeURL()`, and for the URL when redirecting - `encodeRedirectUrl()`.
 
-#### Q. How to notify an object in a session that a session is invalid or has ended?
+## Q. How to notify an object in a session that a session is invalid or has ended?
 To be sure that the object will be notified about the termination of the session, you need to implement the interface `javax.servlet.http.HttpSessionBindingListener`. Two methods of this interface: `valueBound()` and `valueUnbound()` are used when adding an object as an attribute to a session and when destroying a session, respectively.
 
-#### Q. What is an effective way to make sure that all servlets are only accessible to the user with the correct session?
+## Q. What is an effective way to make sure that all servlets are only accessible to the user with the correct session?
 Servlet filters are used to intercept all requests between the servlet container and the servlet. Therefore, it is logical to use the appropriate filter to check the necessary information (for example, the validity of the session) in the request.
 
-#### Q. How can we provide transport layer security for our web application?
+## Q. How can we provide transport layer security for our web application?
 To provide transport layer security, you must configure SSL support for the container servlet. How to do this depends on the particular implementation of the servlet container.
 
-#### Q. What are the main features that appeared in the Servlet 3 specification?
+## Q. What are the main features that appeared in the Servlet 3 specification?
 * **Servlet Annotations**: Prior to Servlet 3, the entire configuration was contained in web.xml, which led to errors and inconvenience when working with a large number of servlets. Examples of annotations @WebServlet, @WebInitParam, @WebFilter, @WebListener.
 * **Web fragments**: A single-page web application can contain many modules: all modules are registered in fragment.xmla folder META-INF\. This allows you to split the web application into separate modules, assembled as .jar files in a separate lib\directory.
 * **Dynamically add web components**: Now you can programmatically add filters and listeners using the ServletContextobject. For this purpose methods are used addServlet(), addFilter(), addListener(). Using this innovation, it became possible to build a dynamic system in which the necessary object will be created and called only when necessary.
@@ -342,7 +341,7 @@ To provide transport layer security, you must configure SSL support for the cont
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What authentication methods are available to the servlet?
+## Q. What authentication methods are available to the servlet?
 The servlet specification defines four types of authentication:
 
 * **HTTP Basic Authentication** - `BASIC`: When accessing private resources, a window appears that asks you to enter authentication information.
@@ -358,7 +357,7 @@ The servlet specification defines four types of authentication:
     </form-login-config>
 </login-config>
 ```
-#### Q. What is a deployment descriptor?
+## Q. What is a deployment descriptor?
 A deployment descriptor is an artifact configuration file that will be deployed to a servlet container. In the Java Platform specification, Enterprise Edition, the deployment descriptor describes how a component, module, or application (such as a web or enterprise application) should be deployed.
 
 This configuration file specifies the deployment settings for a module or application with specific settings, security settings, and describes specific configuration requirements. The deployment descriptor file syntax is XML.
@@ -404,7 +403,7 @@ For web applications, the deployment descriptor must be named `web.xml` and loca
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Why do servlets use different listeners?
+## Q. Why do servlets use different listeners?
 The Listener (listener) acts as a trigger, performing certain actions when an event occurs in the servlet's life cycle.
 
 Listeners divided by scope:
@@ -436,10 +435,10 @@ Connecting listeners:
 * create an instance of a class implementing this interface;
 * put the created instance into the session with `setAttribute(String, Object)`.
 
-#### Q. When to use servlet filters, and when to listeners?
+## Q. When to use servlet filters, and when to listeners?
 Filters should be used if it is necessary to process incoming or outgoing data (for example: for authentication, format conversion, compression, encryption, etc.), if it is necessary to respond to events, it is better to use listeners.
 
-#### Q. How to implement servlet launch simultaneously with application launch?
+## Q. How to implement servlet launch simultaneously with application launch?
 A servlet container typically loads a servlet at the first request of a client.
 
 If you need to load a servlet right at the start of the application (for example, if the servlet has been loading for a long time), you should use an element <load-on-startup>in the descriptor or an annotation @loadOnStartupin the servlet code, which will indicate the need to load the servlet at startup.
@@ -456,7 +455,7 @@ If the integer value of this parameter is negative, then the servlet will be loa
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to handle exceptions thrown by another servlet in an application?
+## Q. How to handle exceptions thrown by another servlet in an application?
 When the application throws an exception, the servlet container processes it and creates an HTML response. This is similar to what happens with error codes like 404, 403, etc.
 
 In addition to this, it is possible to write your own servlets to handle exceptions and errors with their indication in the deployment descriptor:
@@ -473,7 +472,7 @@ In addition to this, it is possible to write your own servlets to handle excepti
 ```
 The main task of these servlets is to handle the error / exception and generate an understandable response to the user. For example, provide a link to the main page or a description of the error.
 
-#### Q. Why do we have servlet filters?
+## Q. Why do we have servlet filters?
 A servlet filter is reusable Java code that converts the contents of HTTP requests, HTTP responses, and the information contained in HTML headers. The servlet filter pre-processes the request before it gets to the servlet, and / or subsequently processes the response coming from the servlet.
 
 Servlet filters can:
@@ -494,7 +493,7 @@ A servlet filter can be configured to work with a single servlet or a group of s
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between sendRedirect() and forward() in Servlet?
+## Q. What is difference between sendRedirect() and forward() in Servlet?
 
 * **SendRedirect()**: This method is declared in **HttpServletResponse** Interface. It is used to redirect client request to some other location for further processing, the new location is available on different server or different context.our web container handle this and transfer the request using  browser, and this request is visible in browser as a new request. 
 
@@ -600,6 +599,7 @@ public class SimpleServlet extends HttpServlet {
 	}
 }
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -627,6 +627,7 @@ public class SimpleServlet extends HttpServlet {
 #### Q. What are different ways for servlet authentication?
 #### Q. What is Servlet Chaining?
 #### Q. How do you find out what client machine is making a request to your servlet?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
