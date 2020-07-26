@@ -1,6 +1,6 @@
-## Java Programs
+# Java Programs
 
-#### Q. Write a function to find out duplicate words in a given string?
+## Q. Write a function to find out duplicate words in a given string?
 **Approach**  
 
 1. Define a string.
@@ -48,7 +48,7 @@ Duplicate words in a given string :
 big
 black
 ```
-#### Q. Find the missing number in an array?
+## Q. Find the missing number in an array?
 **Approach**  
 
 1. Calculate `A = n (n+1)/2` where n is largest number in series 1…N.
@@ -84,9 +84,9 @@ Output
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Write a program to generate random numbers between the given range?
+## Q. Write a program to generate random numbers between the given range?
 *TODO*
-#### Q. Write a java program to swap two string variables without using temp variable?
+## Q. Write a java program to swap two string variables without using temp variable?
 **Approach**  
 
 1. Append second string to first string and store in first string:
@@ -140,7 +140,7 @@ Strings before swap: a = Hello and b = World
 Strings after swap: a = World and b = Hello
 ```
 
-#### Q. Write a java program to Move all zeroes to end of array?
+## Q. Write a java program to Move all zeroes to end of array?
 ```
 Input:  arr[] = {1, 2, 0, 4, 3, 0, 5, 0};
 Output: arr[] = {1, 2, 4, 3, 5, 0, 0, 0};
@@ -188,7 +188,7 @@ Array after pushing all zeros to end of array:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Write a multi-threading program to print odd number using one thread and even number using other?
+## Q. Write a multi-threading program to print odd number using one thread and even number using other?
 ```java
 class TaskEvenOdd implements Runnable {
 
@@ -272,7 +272,7 @@ Thread Odd: 3
 Thread Even: 4
 Thread Odd: 5
 ```
-#### Q. How to print all permutations of a String in Java?
+## Q. How to print all permutations of a String in Java?
 **Approach**  
 
 1. Define a string.
@@ -338,7 +338,7 @@ BCA
 CBA
 CAB
 ```
-#### Q. Reverse the string with preserving the position of spaces
+## Q. Reverse the string with preserving the position of spaces
 **Approach**  
 
 1. Create a string to store result. Mark the space position of the given string in this string.
@@ -385,7 +385,7 @@ Output
 ```
 India Is my country --> yrtnu oc ym sIaidnI
 ```
-#### Q. How do you find longest substring without repeating characters in a string?
+## Q. How do you find longest substring without repeating characters in a string?
 **Approach**  
 
 1. Start traversing the string from left to right and maintain track
@@ -422,7 +422,7 @@ Output
 ```
 LongestSubstringFindOut --> LongestSub
 ```
-#### Q. A Program to check if strings are rotations of each other or not?
+## Q. A Program to check if strings are rotations of each other or not?
 **Approach**
 
 1. Create a temp string and store concatenation of str1 to str1 in temp.
@@ -461,7 +461,7 @@ Output
 ```
 Strings are rotations of each other
 ```
-#### Q. Can you write a regular expression to check if String is a number?
+## Q. Can you write a regular expression to check if String is a number?
 ```java
 public class StringTest 
 {
@@ -477,7 +477,7 @@ Output
 ```
 Is Number: true
 ```
-#### Q. Write a program to find top two maximum numbers in a array?
+## Q. Write a program to find top two maximum numbers in a array?
 ```java
 public class TwoMaxNumbers {
  
@@ -508,7 +508,7 @@ Output
 First Max Number: 99
 Second Max Number: 78
 ```
-#### Q. How to find all the leaders in an integer array in java?
+## Q. How to find all the leaders in an integer array in java?
 An element is leader if it is greater than all the elements to its right side. And the rightmost element is always a leader. For example int the array {16, 17, 4, 3, 5, 2}, leaders are 17, 5 and 2.
 
 ```java
@@ -538,7 +538,7 @@ Output
 ```
 25 10 4 3 
 ```
-#### Q. Write a java program to find number of characters, number of words and number of lines in a text file?
+## Q. Write a java program to find number of characters, number of words and number of lines in a text file?
 ```java
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -586,7 +586,7 @@ public class CharacterCount
     }   
 } 
 ```
-#### Q. Find all pairs of elements whose sum is equal to given number?
+## Q. Find all pairs of elements whose sum is equal to given number?
 ```java
 public class FindPairs 
 {  	
@@ -614,7 +614,7 @@ Output
 (5, 7) 
 (7, 5)
 ```
-#### Q. Program to convert lower to upper case without using toUppercase()?
+## Q. Program to convert lower to upper case without using toUppercase()?
 ```java
 public class LowerToUpperCase 
 {  	
@@ -637,7 +637,7 @@ Output
 ```
 HELLO WORLD --> hello world
 ```
-#### Q. Write a program to create deadlock between two threads?
+## Q. Write a program to create deadlock between two threads?
 ```java
 public class DeadlockExample  
 {  	
@@ -802,7 +802,7 @@ Java stack information for the threads listed above:
 
 Found 1 deadlock.
 ```
-#### Q. How to find the word with the highest frequency from a file in Java?
+## Q. How to find the word with the highest frequency from a file in Java?
 ```java
 public class MostRepeatedWord  
 {  	
@@ -860,7 +860,7 @@ Output
 The most repeated word in input file is: java
 Number Of Occurrences: 5
 ```
-#### Q. How to sort a text file in java?
+## Q. How to sort a text file in java?
 ```java
 public class SortTextFile 
 {  	
@@ -912,7 +912,7 @@ Java Transaction Service (JTS)
 JavaMail
 JavaServer Pages (JSP)
 ```
-#### Q. Find middle index of array where both ends sum is equal?
+## Q. Find middle index of array where both ends sum is equal?
 ```java
 public class FindMiddleIndex 
 {
@@ -954,11 +954,11 @@ Output
 ```
 Sum preceding the index 2 is equal to sum succeeding the index 2
 ```
-#### Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
+## Q. What do the expression 1.0 / 0.0 will return? will it throw Exception? any compile time error? 
 * Output: Infinity, No Exception
-#### Q. How do you check the equality of two arrays in java?
+## Q. How do you check the equality of two arrays in java?
 * Arrays.equals() 
-#### Q. How to remove duplicate elements from ArrayList in java?
+## Q. How to remove duplicate elements from ArrayList in java?
 **Using Java 8 Stream.distinct()**  
 
 **Approach**  
@@ -999,7 +999,7 @@ Output
 ArrayList with duplicates: [1, 10, 1, 2, 2, 3, 10, 3, 3, 4, 5, 5]
 ArrayList with duplicates removed: [1, 10, 2, 3, 4, 5]
 ```
-#### Q. Write a java program to append text to a file?
+## Q. Write a java program to append text to a file?
 ```java
 public class Test 
 {  	
@@ -1017,7 +1017,7 @@ public class Test
     }
 } 
 ```
-#### Q. Write a program to sort a map by value?
+## Q. Write a program to sort a map by value?
 ```java
 public class SortMapExample 
 {
@@ -1058,7 +1058,7 @@ Key: England,       Value: London
 Key: India,         Value: New Delhi
 Key: United States, Value: Washington
 ```
-#### Q. How to find duplicate number on Integer array in Java?
+## Q. How to find duplicate number on Integer array in Java?
 ```java
 public class DuplicatesInArray 
 {
@@ -1081,7 +1081,7 @@ Output
 Duplicate Element: 4
 Duplicate Element: 2
 ```
-#### Q. How to find largest and smallest number in unsorted array?
+## Q. How to find largest and smallest number in unsorted array?
 ```java
 public class FindBiggestSmallestNumber  
 {
@@ -1107,7 +1107,7 @@ Output
 Smallest Number is: 6
 Largest Number is: 98
 ```
-#### Q. FizzBuzz problem:- Write a program which return "fizz" if the number is a multiplier of 3, return "buzz" if its multiplier of 5 and return "fizzbuzz" if the number is divisible by both 3 and 5. If the number is not divisible by either 3 or 5 then it should just return the number itself?
+## Q. FizzBuzz problem:- Write a program which return "fizz" if the number is a multiplier of 3, return "buzz" if its multiplier of 5 and return "fizzbuzz" if the number is divisible by both 3 and 5. If the number is not divisible by either 3 or 5 then it should just return the number itself?
 ```java
 public class FizzBuzzExample 
 {
@@ -1134,7 +1134,7 @@ Output
 15  ---> fizzbuzz
 23  ---> 23 
 ```
-#### Q. Write a Comparator in Java to compare two employees based upon their name, departments and age?
+## Q. Write a Comparator in Java to compare two employees based upon their name, departments and age?
 **Name Sorter**
 ```java
 import java.util.Comparator;
@@ -1233,7 +1233,7 @@ Output:
 , Employee : 4 - dTestName - zLastName - 25]
 
 ```
-#### Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
+## Q. Write a program to convert Decimal To Binary, Decimal To Octal and Decimal to HexaDecimal in Java?
 ```java
 public class DecimalToBinary 
 {
@@ -1320,7 +1320,7 @@ Enter The Decimal Number: 100
 
 HexaDecimal Equivalent of 100 is 64
 ```
-#### Q. How to rearrange array in alternating positive and negative number?
+## Q. How to rearrange array in alternating positive and negative number?
 **Objective**: Given an array arrA[] which has negative and positive elements, rearrange the array in such a manner that positive and negative elements occupy the alternate positions and if there are extra positive or negative elements are left then append it to the end.
 
 Example:
@@ -1387,7 +1387,7 @@ Output
 ```
 -13 9 -3 10 -5 6 -7 2 -12 1 -11 14 -4 -8
 ```
-#### Q. How Convert lower to upper case without using toUppercase() in java?
+## Q. How Convert lower to upper case without using toUppercase() in java?
 
 ```java
 /**
@@ -1416,7 +1416,7 @@ public class toLowerCase {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Explain deadlock condition in-between two threads with example?
+## Q. Explain deadlock condition in-between two threads with example?
 
 ```java
 public class DeadLockSimulator {
@@ -1477,7 +1477,7 @@ Output:
    Locked ownable synchronizers:
     - None
 ```
-#### Q. How do you sort out items in ArrayList in reverse direction?
+## Q. How do you sort out items in ArrayList in reverse direction?
 Reverse order of all elements of Java ArrayList
 ```java
 import java.util.ArrayList;
@@ -1503,7 +1503,7 @@ public class MainClass {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Find the shortest-path weights d(s, v) from given source s for all vertices v present in the graph.
+## Q. Find the shortest-path weights d(s, v) from given source s for all vertices v present in the graph.
 
 ![Dijkstras Algorithm](https://github.com/learning-zone/java-interview-questions/blob/master/assets/shorted-path-dijkstras.png)
 
@@ -1773,6 +1773,7 @@ Path from vertex 0 to vertex 4 has minimum cost of 3 and the route is [ 0 4 ]
 #### Q. Java Program to find gcd and lcm of two numbers
 #### Q. Write a program to find the sum of the first 1000 prime numbers?
 #### Q. How to perform matrix operations in java?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
