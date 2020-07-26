@@ -468,7 +468,6 @@ Output
 #### Q. When do you use Visitor design pattern?
 #### Q. When do you use Composite design pattern?
 #### Q. Difference between Abstract factory and Prototype design pattern?
-*TODO*
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
