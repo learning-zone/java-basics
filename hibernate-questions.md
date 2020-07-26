@@ -1,6 +1,6 @@
-## Hibernate Interview Questions & Answers
+# Hibernate Interview Questions & Answers
 
-#### Q. How to integrate hibernate with spring boot?
+## Q. How to integrate hibernate with spring boot?
 
 **Step 01: Maven Dependencies**
 ```xml
@@ -247,7 +247,7 @@ Employee id 2 -> EmployeeEntity [id=2, firstName=Deja, lastName=Vu, email=xyz@em
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Mention the differences between JPA and Hibernate?
+## Q. Mention the differences between JPA and Hibernate?
 JPA is a specification for accessing, persisting and managing the data between Java objects and the relational database. 
 
 Where as, Hibernate is the actual implementation of JPA guidelines. When hibernate implements the JPA specification, this will be certified by the JPA group upon following all the standards mentioned in the specification. For example, JPA guidelines would provide information of mandatory and optional features to be implemented as part of the JPA implementation.
@@ -260,7 +260,7 @@ Where as, Hibernate is the actual implementation of JPA guidelines. When hiberna
 |It is used to map Java data types with database tables and SQL data types.|It is the standard API which allows developers to perform database operations smoothly.|
 |The Query language in this is Hibernate Query Language.|The query language of JPA is JPQL (Java Persistence Query Language)|
 
-#### Q. What is HQL and what are its benefits?
+## Q. What is HQL and what are its benefits?
 Hibernate Query Language (HQL) is an object-oriented query language, similar to SQL, but instead of operating on tables and columns, HQL works with persistent objects and their properties. HQL queries are translated by Hibernate into conventional SQL queries, which in turns perform action on database.
 
 **Advantages Of HQL:**  
@@ -360,7 +360,7 @@ List results = query.list();
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Mention the Key components of Hibernate?
+## Q. Mention the Key components of Hibernate?
 
 **hibernate.cfg.xml**: This file has database connection details  
 
@@ -377,7 +377,7 @@ List results = query.list();
 * Session represents unit of work with database
 * Session should be closed once the task is completed
 
-#### Q. Explain Session object in Hibernate?
+## Q. Explain Session object in Hibernate?
 A Session is used to get a physical connection with a database. The Session object is lightweight and designed to be instantiated each time an interaction is needed with the database. Persistent objects are saved and retrieved through a Session object.
 
 The lifecycle of a Session is bounded by the beginning and end of a logical transaction. The main function of the Session is to offer create, read and delete operations for instances of mapped entity classes. Instances may exist in one of three states:
@@ -410,7 +410,7 @@ catch (Exception e) {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How transaction management works in Hibernate?
+## Q. How transaction management works in Hibernate?
 A **Transaction** is a sequence of operation which works as an atomic unit. A transaction only completes if all the operations completed successfully. A transaction has the Atomicity, Consistency, Isolation, and Durability properties (ACID).
 
 In hibernate framework, **Transaction interface** that defines the unit of work. It maintains abstraction from the transaction implementation (JTA, JDBC). A transaction is associated with Session and instantiated by calling **session.beginTransaction()**.
@@ -446,7 +446,7 @@ try {
     sessionObj.close(); 
 }
 ```
-#### Q. Explain the Criteria object in Hibernate?
+## Q. Explain the Criteria object in Hibernate?
 The Criteria API allows to build up a criteria query object programmatically; the `org.hibernate.Criteria` interface defines the available methods for one of these objects. The Hibernate Session interface contains several overloaded `createCriteria()` methods.
 
 **1. Restrictions with Criteria**  
@@ -791,7 +791,7 @@ Total Salary: 15000
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is a One-to-One association in Hibernate?
+## Q. What is a One-to-One association in Hibernate?
 A **One-to-One** Association is similar to Many-to-One association with a difference that the column will be set as unique i.e. Two entities are said to be in a One-to-One relationship if one entity has only one occurrence in the other entity. For example, an address object can be associated with a single employee object. However, these relationships are rarely used in the relational table models and therefore, we won’t need this mapping too often.
 
 In One-to-One association, the source entity has a field that references another target entity. The `@OneToOne` JPA annotation is used to map the source entity with the target entity. 
@@ -1050,7 +1050,7 @@ Closing SessionFactory
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is hibernate caching? Explain Hibernate first level cache?
+## Q. What is hibernate caching? Explain Hibernate first level cache?
 Hibernate Cache can be very useful in gaining fast application performance if used correctly. The idea behind cache is to reduce the number of database queries, hence reducing the throughput time of the application.
 
 Hibernate comes with different types of Cache:
@@ -1161,7 +1161,7 @@ Session Contains Employee with id=2?true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is second level cache in Hibernate?
+## Q. What is second level cache in Hibernate?
 **Hibernate second level cache** uses a common cache for all the session object of a session factory. It is useful if you have multiple session objects from a session factory. **SessionFactory** holds the second level cache data. It is global for all the session objects and not enabled by default.
 
 Different vendors have provided the implementation of Second Level Cache.
@@ -1314,7 +1314,7 @@ public class FetchTest {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are concurrency strategies?
+## Q. What are concurrency strategies?
 The READ_WRITE strategy is an asynchronous cache concurrency mechanism and to prevent data integrity issues (e.g. stale cache entries), it uses a locking mechanism that provides unit-of-work isolation guarantees.
 
 In hibernate, cache concurrency strategy can be set globally using the property hibernate.cache. default_cache_concurrency_strategy. The allowed values are,
@@ -1378,7 +1378,7 @@ public void doAfterTransactionCompletion(boolean success,
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Lazy loading in hibernate?
+## Q. What is Lazy loading in hibernate?
 Hibernate defaults to a lazy fetching strategy for all entities and collections. Lazy loading in hibernate improves the performance. It loads the child objects on demand. To enable lazy loading explicitly you must use **fetch = FetchType.LAZY** on a association which you want to lazy load when you are using hibernate annotations.
 
 Example:
@@ -1386,7 +1386,7 @@ Example:
 @OneToMany( mappedBy = "category", fetch = FetchType.LAZY )
 private Set<ProductEntity> products; 
 ```
-#### Q. Explain the persistent classes in Hibernate?
+## Q. Explain the persistent classes in Hibernate?
 Persistence class are simple POJO classes in an application. It works as implementation of the business application for example Employee, department etc. It is not necessary that all instances of persistence class are defined persistence.
 
 There are following main rules of persistent classes
@@ -1458,7 +1458,7 @@ public class Employee {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Explain some of the elements of hbm.xml?
+## Q. Explain some of the elements of hbm.xml?
 Hibernate mapping file is used by hibernate framework to get the information about the mapping of a POJO class and a database table.
 
 It mainly contains the following mapping information:
@@ -1489,7 +1489,7 @@ Syntax
  
 </hibernate-mapping>
 ```
-#### Q. What is Java Persistence API (JPA)?
+## Q. What is Java Persistence API (JPA)?
 Java Persistence API is a collection of classes and methods to persistently store the vast amounts of data into a database.
 The Java Persistence API (JPA) is one possible approach to ORM. Via JPA the developer can map, store, update and retrieve data from relational databases to Java objects and vice versa. JPA can be used in Java-EE and Java-SE applications.
 
@@ -1523,7 +1523,7 @@ Relationship annotations:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Name some important interfaces of Hibernate framework?
+## Q. Name some important interfaces of Hibernate framework?
 * **Session Interface**: This is the primary interface used by hibernate applications
 The instances of this interface are lightweight and are inexpensive to create and destroy
 Hibernate sessions are not thread safe
@@ -1537,7 +1537,7 @@ The instance of this interface is used by the application in order to specify th
 
 * **Query and Criteria Interface**: This interface allows the user to perform queries and also control the flow of the query execution
 
-#### Q. What is Hibernate SessionFactory and how to configure it?
+## Q. What is Hibernate SessionFactory and how to configure it?
 SessionFactory can be created by providing Configuration object, which will contain all DB related property details pulled from either hibernate.cfg.xml file or hibernate.properties file. SessionFactory is a factory for Session objects.
 
 We can create one SessionFactory implementation per database in any application. If your application is referring to multiple databases, then we need to create one SessionFactory per database.
@@ -1595,7 +1595,7 @@ public class HibernateUtil {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is the difference between opensession and getcurrentsession in hibernate?
+## Q. What is the difference between opensession and getcurrentsession in hibernate?
 Hibernate SessionFactory getCurrentSession() method returns the session bound to the context. Since this session object belongs to the hibernate context, we don't need to close it. Once the session factory is closed, this session object gets closed.
 
 Hibernate SessionFactory openSession() method always opens a new session. We should close this session object once we are done with all the database operations.
@@ -1653,7 +1653,7 @@ try {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between Hibernate Session get() and load() method?
+## Q. What is difference between Hibernate Session get() and load() method?
 Hibernate Session class provides two method to access object e.g. `session.get()` and `session.load()`.The difference between get() vs load() method is that get() involves database hit if object doesn't exists in **Session Cache** and returns a fully initialized object which may involve several database call while load method can return proxy in place and only initialize the object or hit the database if any method other than getId() is called on persistent or entity object. This lazy initialization can save couple of database round-trip which result in better performance.
 
 |load() 	                                    |get() 
@@ -1662,7 +1662,7 @@ Hibernate Session class provides two method to access object e.g. `session.get()
 |load() method will throw an exception if the unique id is not found in the database.|get() method will return null if the unique id is not found in the database.| 
 |load() just returns a proxy by default and database won't be hit until the proxy is first invoked.|get() will hit the database immediately.| 
 
-#### Q. What are different states of an entity bean?
+## Q. What are different states of an entity bean?
 The Entity bean has three states:
 
 **1. Transient**: Transient objects exist in heap memory. Hibernate does not manage transient objects or persist changes to transient objects. Whenever pojo class object created then it will be in the Transient state.
@@ -1733,7 +1733,7 @@ mysql> select * from student;
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is difference between merge() and update() methods in Hibernate?
+## Q. What is difference between merge() and update() methods in Hibernate?
 Both update() and merge() methods in hibernate are used to convert the object which is in detached state into persistence state. But there are different situation where we should be used update() and where should be used merge() method in hibernate
 
 ```java
@@ -1848,6 +1848,7 @@ In the hibernate session we can maintain only one employee object in persistent 
 #### Q. What are the inheritance mapping strategies?
 #### Q. What is automatic dirty checking in hibernate?
 #### Q. Explain Hibernate configuration file and Hibernate mapping file?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
