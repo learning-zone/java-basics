@@ -1,6 +1,6 @@
 # Java Design Pattern Questions and Answers
 
-#### Q. Exaplain MVC, Front-Controller, DAO, DTO, Service-Locator, Prototype design patterns?
+## Q. Exaplain MVC, Front-Controller, DAO, DTO, Service-Locator, Prototype design patterns?
 
 **2. Front-Controller**
 
@@ -12,7 +12,7 @@ The front controller design pattern is used to provide a centralized request han
 
 * View - Views are the object for which the requests are made.
 
-Example:
+*Example:*
 
 We are going to create a `FrontController` and `Dispatcher` to act as Front Controller and Dispatcher correspondingly. `HomeView` and `StudentView` represent various views for which requests can come to front controller.
 
@@ -88,11 +88,11 @@ public class FrontController {
    public void dispatchRequest(String request){
       //log each request
       trackRequest(request);
-      
+
       //authenticate the user
       if(isAuthenticUser()){
          dispatcher.dispatch(request);
-      }	
+      }
    }
 }
 ```
@@ -112,12 +112,16 @@ public class FrontControllerPatternDemo {
 }
 ```
 
-*ToDo*
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 ## Q. What are the design patterns available in Java?
+
 Java Design Patterns are divided into three categories – creational, structural, and behavioral design patterns.
 
 **1. Creational Design Patterns**
+
 * Singleton Pattern
 * Factory Pattern
 * Abstract Factory Pattern
@@ -125,6 +129,7 @@ Java Design Patterns are divided into three categories – creational, structura
 * Prototype Pattern
 
 **2. Structural Design Patterns**
+
 * Adapter Pattern
 * Composite Pattern
 * Proxy Pattern
@@ -134,6 +139,7 @@ Java Design Patterns are divided into three categories – creational, structura
 * Decorator Pattern
 
 **3. Behavioral Design Patterns**
+
 * Template Method Pattern
 * Mediator Pattern
 * Chain of Responsibility Pattern
@@ -147,11 +153,17 @@ Java Design Patterns are divided into three categories – creational, structura
 * Memento Pattern
 
 **4. Miscellaneous Design Patterns**
+
 * DAO Design Pattern
 * Dependency Injection Pattern
 * MVC Pattern
 
-## Q. Explain Singleton Design Pattern in Java? 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. Explain Singleton Design Pattern in Java?
+
 **1. Eager initialization:**  
 In eager initialization, the instance of Singleton Class is created at the time of class loading.
 
@@ -254,11 +266,13 @@ public class BillPughSingleton {
     }
 }
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
 ## Q. Explain Adapter Design Pattern in Java?
+
 Adapter design pattern is one of the structural design pattern and its used so that two unrelated interfaces can work together. The object that joins these unrelated interface is called an Adapter.
 
 Example:
@@ -337,15 +351,18 @@ public class Main {
     }
 }
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
 ## Q. Explain Factory Design Pattern in Java?
+
 A Factory Pattern or Factory Method Pattern says that just define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate. In other words, subclasses are responsible to create the instance of the class.
 
 Example: Calculate Electricity Bill
 Plan.java
+
 ```java
 import java.io.*;      
 abstract class Plan {  
@@ -435,11 +452,13 @@ class GenerateBill {
     }  
 } 
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
 ## Q. Explain Strategy Design Pattern in Java?
+
 Strategy design pattern is one of the behavioral design pattern. Strategy pattern is used when we have multiple algorithm for a specific task and client decides the actual implementation to be used at runtime.
 
 Example: Simple Shopping Cart where we have two payment strategies – using Credit Card or using PayPal.
@@ -570,6 +589,11 @@ Output
 500 paid using Paypal.
 500 paid with credit/debit card
 ```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. When do you use Flyweight pattern?
 #### Q. What is difference between dependency injection and factory design pattern?
 #### Q. Difference between Adapter and Decorator pattern?
