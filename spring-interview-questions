@@ -1,0 +1,30 @@
+- What is loose coupling?
+- What is a Dependency?
+- What is IOC (Inversion of Control)?
+- What is Dependency Injection?
+- Can you give a few examples of Dependency Injection?
+- What is Auto Wiring?
+- What are the important roles of an IOC Container?
+- What are Bean Factory and Application Context?
+- Can you compare Bean Factory with Application Context?
+- How do you create an application context with Spring?
+- How does Spring know where to search for Components or Beans?
+- What is a component scan?
+- How do you define a component scan in XML and Java Configurations?
+- How is it done with Spring Boot?
+- What does @Component signify?
+- What does @Autowired signify?
+- What’s the difference Between @Controller, @Component, @Repository, and @Service Annotations in Spring?
+- What is the default scope of a bean?
+- Are Spring beans thread-safe?
+- What are the other scopes available?
+- How is Spring’s singleton bean different from Gang of Four Singleton Pattern?
+- What are the different types of dependency injections?
+- What is setter injection?
+- What is constructor injection?
+- How do you choose between setter and constructor injections?
+- What are the different options available to create Application Contexts for Spring?
+- What is the difference between XML and Java Configurations for Spring?
+- How do you choose between XML and Java Configurations for Spring?
+- How does Spring do Autowiring?
+- What are the different kinds of matching used by Spring for Autowiring?
