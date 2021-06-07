@@ -461,10 +461,10 @@ B. 2
 C. 3  
 D. 6  
 ```
-A. 1
+D. 6
 ```
-**Explanation**: In ternary expressions, only one of the two right-most expressions are evaluated. Since `meal>6` is false, `––tip` is evaluated and `++tip` is skipped. The result is that `tip` is changed from 2 to 1.
-
+**Explanation**: In ternary expressions, only one of the two right-most expressions are evaluated. Since `meal>6` is false, `––tip` is evaluated and `++tip` is skipped. `tip` is changed from 2 to 1 and `total` becomes `meal + (1)` which means `5 + 1 = 6`.
+ 
 ## Q. What is the output of the following application?
 ```java
 String john = "john";
