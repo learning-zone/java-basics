@@ -1553,7 +1553,7 @@ Hbase
 ```
 **The poll() method**  
 
-The peek() method of the Queue interface returns the object at the top of the current queue and removes it. If the queue is empty this method returns null.
+The poll() method of the Queue interface returns the object at the top of the current queue and removes it. If the queue is empty this method returns null.
 
 ```java
 import java.util.Iterator;
