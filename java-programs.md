@@ -84,9 +84,55 @@ Output
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. Write a program to generate random numbers between the given range?
+## Q. Write a program to generate random numbers between the given range?
 
-*ToDo*
+**Approach**
+1. Get the Min and Max which are the specified range.
+1. Call the nextInt() method of ThreadLocalRandom class (java.util.concurrent.ThreadLocalRandom) and specify the Min and Max value as the parameter as
+`ThreadLocalRandom.current().nextInt(min, max + 1);`
+1. Return the received random value
+
+```java
+// Java program to generate a random integer
+// within this specific range
+
+import java.util.concurrent.ThreadLocalRandom;
+
+class GFG {
+
+	public static int getRandomValue(int Min, int Max)
+	{
+
+		// Get and return the random integer
+		// within Min and Max
+		return ThreadLocalRandom
+			.current()
+			.nextInt(Min, Max + 1);
+	}
+
+	// Driver code
+	public static void main(String[] args)
+	{
+
+		int Min = 1, Max = 100;
+
+		System.out.println("Random value between "
+						+ Min + " and " + Max + ": "
+						+ getRandomValue(Min, Max));
+	}
+}
+
+```
+
+**Input**
+```
+Input: Min = 1, Max = 10
+```
+
+**Output**
+```
+Random value between 1 and 100: 35
+```
 
 ## Q. Write a java program to swap two string variables without using temp variable?
 **Approach**  
