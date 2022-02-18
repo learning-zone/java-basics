@@ -445,7 +445,7 @@ for this, once the session is invalidated, in your respective jsp page add follo
     response.setHeader ("Expires", 0);
     response.setDateHeader ("Expires", -1);
     if(session.getAttribute("token")==null){
-        response.sendRedirect("login.jsp");
+        response.sendRedirect(request.getContextPath() + "/login.jsp");
     }
 %>
 ```
