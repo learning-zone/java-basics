@@ -436,7 +436,33 @@ The jsp page, by default, always creates a session. Using a directive pagewith a
 ## Q. What is the difference between JSPWriter and PrintWriter?
 `PrintWriter` is the object responsible for recording the contents of the response to the request. `JspWriter` uses an object `PrintWriter` to buffer. When the buffer is full or flushed, it `JspWriter`uses the object `PrintWriter` to write the content in response.
 
-#### Q. How to disable caching on back button of the browser?
+## Q. How to disable caching on back button of the browser?
+for this, once the session is invalidated, in your respective jsp page add following code snippet 
+```jsp
+<%
+    response.setHeader("Cache-Control","no-cache, no-store, must-revalidate");
+    response.setHeader("Pragma","no-cache");
+    response.setHeader ("Expires", 0);
+    response.setDateHeader ("Expires", -1);
+    if(session.getAttribute("token")==null){
+        response.sendRedirect(request.getContextPath() + "/login.jsp");
+    }
+%>
+```
+_`token` can be any valid session attribute used for validation_
+
+**Cache-Control** : HTTP 1.1 header filed holds directives (in requests and responses) that control caching in browsers and shared chaches eg. proxies , CDNs.
+- no-cache :  allows caches to store a response, but requires them to revalidate it before reuse.
+- no-store : any caches of any kind (private or shared) should not store this request and corresponding response.
+- must-revalidate: cache either revalidates the stored response with the origin server, or if that's not possible it generates a 504 (Gateway Timeout) response to prevent reuse of stale responses when they are disconnected from the origin server.
+
+**Pragma** : HTTP 1.0 header is an implementation-specific header that may have various effects along the request-response chain to prevent the client from caching the response.
+- no-cache: Forces caches to submit the request to the origin server for validation before a cached copy is released.
+
+**Expires**: HTTP header contains the date/time after which the response is considered expired.
+- Invalid expiration dates with value 0 represent a date in the past and mean that the resource is already expired.
+- `setDateHeader()` used in case to prevent caching on proxy servers
+
 #### Q. What are the different tags provided in JSTL?
 #### Q. How is JSP better than Servlet technology?
 #### Q. What are the differences between include directive and include action?
