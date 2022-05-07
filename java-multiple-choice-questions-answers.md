@@ -125,10 +125,7 @@ public class Test {
 ```
 Output
 ```java
-Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
-	Cannot make a static reference to the non-static field two
-
-	at Test.main(Test.java:9)
+50
 ```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
