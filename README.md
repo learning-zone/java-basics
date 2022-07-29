@@ -2299,42 +2299,17 @@ public class SerialExample {
     } 
 }
 ```
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
 
-## Q. ***What are the various ways to load a class in Java?***
-
-
-**a). Creating a reference**:
-```java
-SomeClass someInstance = null;
-```
-
-**b). Using Class.forName(String)**:
-```java
- Class.forName("SomeClass");
-```
-
-**c). Using SystemClassLoader()**: 
-```java
-ClassLoader.getSystemClassLoader().loadClass("SomeClass");
-```
-
-**d). Using Overloaded Class.forName()**:
-```java
-Class.forName(String name, boolean initialize, ClassLoader loader);
-```
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
 ## Q. ***Java Program to Implement Singly Linked List?***
 
-
 The singly linked list is a linear data structure in which each element of the list contains a pointer which points to the next element in the list. Each element in the singly linked list is called a node. Each node has two components: data and a pointer next which points to the next node in the list. 
 
 Example:
+
 ```java
 public class SinglyLinkedList {    
     // Represent a node of the singly linked list    
