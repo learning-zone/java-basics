@@ -1,4 +1,4 @@
-# Java, J2EE, JSP, Servlet, Hibernate Interview Questions
+# Java Interview Questions
 
 *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
@@ -28,10 +28,13 @@ Exception is an error event that can happen during the execution of a program an
 **2. Unchecked Exception**: The classes which inherit `RuntimeException` are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.  
 **3. Error**: Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
 
-**Hierarchy of Java Exception classes**   
-The java.lang.Throwable class is the root class of Java Exception hierarchy which is inherited by two subclasses: Exception and Error. 
+**Hierarchy of Java Exception classes:**
 
-<img src="assets/exception.png" alt="Java Exception" />
+The java.lang.Throwable class is the root class of Java Exception hierarchy which is inherited by two subclasses: Exception and Error.
+
+<p align="center">
+  <img src="assets/exception.png" alt="Exception in Java" width="500px" />
+</p>
 
 Example:
 
@@ -91,8 +94,6 @@ public class CustomExceptionExample {
 
 ## Q. ***What is the difference between aggregation and composition?***
 
-<img src="assets/aggregation.png" alt="Aggregation" />
-
 **Aggregation**: We call aggregation those relationships whose **objects have an independent lifecycle, but there is ownership**, and child objects cannot belong to another parent object.
 
 Example: Since Organization has Person as employees, the relationship between them is Aggregation. Here is how they look like in terms of Java classes
@@ -125,6 +126,10 @@ class Engine {
     private String type;
 }
 ```
+
+<p align="center">
+  <img src="assets/aggregation.png" alt="Aggregation" width="400px" />
+</p>
 
 <table class="alt">
 <tbody><tr><th>Aggregation</th><th>Composition</th></tr>
@@ -299,13 +304,6 @@ class HybridCar extends Car {
     //...
 }
 ```
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***Can we import same package/class two times? Will the JVM load the package twice at runtime?***
-
-We can import the same package or same class multiple times. The JVM will internally load the class only once no matter how many times import the same class.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -373,14 +371,6 @@ JVM is a program which takes Java bytecode and converts the byte code (line by l
 **4. Stack**: Java Stack stores frames.It holds local variables and partial results, and plays a part in method invocation and return. Each thread has a private JVM stack, created at the same time as thread.  
 **5. Program Counter Register**: PC (program counter) register. It contains the address of the Java virtual machine instruction currently being executed.  
 **6. Native Method Stack**: It contains all the native methods used in the application.
-
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***What will be the initial value of an object reference which is defined as an instance variable?***
-
-The object references are all initialized to `null` in Java. However in order to do anything useful with these references, It must set to a valid object, else you will get NullPointerExceptions everywhere you try to use such default initialized references.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -507,16 +497,6 @@ Cannot override the final method from Test.
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the difference between the final method and abstract method?***
-
-Final method is a method that is marked as final, i.e. it cannot be overridden anymore. Just like final class cannot be inherited anymore.
-
-Abstract method, on the other hand, is an empty method that is ought to be overridden by the inherited class. Without overriding, you will quickly get compilation error.
-
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
 ## Q. ***What is the difference between compile-time polymorphism and runtime polymorphism?***
 
 There are two types of polymorphism in java:
@@ -576,14 +556,6 @@ Output:
 ```
 Overriding Method
 ```
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***Can you achieve Runtime Polymorphism by data members?***
-
-No, we cannot achieve runtime polymorphism by data members. Method is overridden not the data members, so runtime polymorphism can not be achieved by data members.
-
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -665,17 +637,10 @@ Subclass
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. ***Can there be an abstract method without an abstract class?***
-
-Yes. because methods in an interface are also abstract. so the interface can be use to declare abstract method.
-
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
 ## Q. ***Can we use private or protected member variables in an interface?***
 
 The java compiler adds public and abstract keywords before the interface method and **public, static and final keyword** before data members automatically
+
 ```java
 public interface Test {
    public string name1;
@@ -683,6 +648,7 @@ public interface Test {
    protected pass;
 }
 ```
+
 as you have declare variable in test interface with private and protected it will give error. if you do not specify the modifier the compiler will add public static final automatically.
 ```java
 public interface Test {
@@ -790,13 +756,6 @@ public class CopyFile {
    }
 }
 ```
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***Can you access non static variable in static context?***
-
-No, non-static variable cannot be referenced in a static context directly one needs to use object.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -834,14 +793,6 @@ public class Example {
    }
 }
 ```
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***Can we have multiple public classes in a java source file?***
-
-A Java source file can have only one class declared as **public**, we cannot put two or more public classes together in a **.java** file. This is because of the restriction that the file name should be same as the name of the public class with **.java** extension. If we want to multiple classes under consideration are to be declared as public, we have to store them in separate source files and attach the package statement as the first statement in those source files.
-
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -977,17 +928,11 @@ class Test {
 }  
 ```
 Output
+
 ```
 boolean
 Test
 ```
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***What is the default value of the local variables?***
-
-There is no default value for local variables, so local variables should be declared and an initial value should be assigned before the first use.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -2984,30 +2929,6 @@ public class MainClass {
 	}
 }
 ```
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***What code coverage tools are you using for your project?***
- 
-* <a href="https://cobertura.github.io/cobertura/" target="_blank">Cobertura</a>
-
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***Scenario of browser’s browsing history, where you need to store the browsing history, what data structure will you use.?***
- 
-* use `stack`
-
-<div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. ***Scenario where in we have to download a big file by clicking on a link, how will you make sure that connections is reliable throughout?***
-
-* use `persistent MQueues`
-
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
