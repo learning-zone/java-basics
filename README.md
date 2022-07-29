@@ -22,11 +22,19 @@
 
 Exception is an error event that can happen during the execution of a program and disrupts its normal flow.
 
-**Types of Java Exceptions**  
+**Types of Java Exceptions:**  
 
-**1. Checked Exception**: The classes which directly inherit `Throwable class` except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.  
-**2. Unchecked Exception**: The classes which inherit `RuntimeException` are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.  
-**3. Error**: Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
+**1. Checked Exception**:
+
+The classes which directly inherit `Throwable class` except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.  
+
+**2. Unchecked Exception**:
+
+The classes which inherit `RuntimeException` are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.  
+
+**3. Error**:
+
+Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
 
 **Hierarchy of Java Exception classes:**
 
@@ -36,7 +44,7 @@ The java.lang.Throwable class is the root class of Java Exception hierarchy whic
   <img src="assets/exception.png" alt="Exception in Java" width="500px" />
 </p>
 
-Example:
+**Example:**
 
 ```java
 import java.io.FileInputStream;
@@ -94,9 +102,11 @@ public class CustomExceptionExample {
 
 ## Q. ***What is the difference between aggregation and composition?***
 
-**Aggregation**: We call aggregation those relationships whose **objects have an independent lifecycle, but there is ownership**, and child objects cannot belong to another parent object.
+**1. Aggregation:**
 
-Example: Since Organization has Person as employees, the relationship between them is Aggregation. Here is how they look like in terms of Java classes
+We call aggregation those relationships whose **objects have an independent lifecycle, but there is ownership**, and child objects cannot belong to another parent object.
+
+**Example:** Since Organization has Person as employees, the relationship between them is Aggregation. Here is how they look like in terms of Java classes
 
 ```java
 public class Organization {
@@ -108,9 +118,11 @@ public class Person {
 }
 ```
 
-**Composition**: We use the term composition to refer to relationships whose objects **don’t have an independent lifecycle**, and if the parent object is deleted, all child objects will also be deleted.
+**2. Composition:**
 
-Example: Since Engine is-part-of Car, the relationship between them is Composition. Here is how they are implemented between Java classes.
+We use the term composition to refer to relationships whose objects **don’t have an independent lifecycle**, and if the parent object is deleted, all child objects will also be deleted.
+
+**Example:** Since Engine is-part-of Car, the relationship between them is Composition. Here is how they are implemented between Java classes.
 
 ```java
 public class Car {
@@ -152,13 +164,13 @@ class Engine {
 
 ## Q. ***What is difference between Heap and Stack Memory in java?***
 
-**Java Heap Space**  
+**1. Java Heap Space:**  
 
 Java Heap space is used by java runtime to allocate memory to Objects and JRE classes. Whenever we create any object, it’s always created in the Heap space.
 
 Garbage Collection runs on the heap memory to free the memory used by objects that doesn’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
 
-**Java Stack Memory**  
+**2. Java Stack Memory:**
 
 Stack in java is a section of memory which contains methods, local variables and reference variables. Local variables are created in the stack.
 
@@ -166,7 +178,7 @@ Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a 
 
 As soon as method ends, the block becomes unused and become available for next method. Stack memory size is very less compared to Heap memory.
 
-**Difference**  
+**Difference:**  
 
 
 |Parameter	       |Stack Memory	               |Heap Space                       |
@@ -205,15 +217,21 @@ Java programs consists of classes, which contain platform-neutral bytecodes that
 
 ## Q. ***What is Classloader in Java? What are different types of classloaders?***
 
-The **Java ClassLoader** is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine. Java code is compiled into class file by javac compiler and JVM executes Java program, by executing byte codes written in class file. ClassLoader is responsible for loading class files from file system, network or any other source. 
+The **Java ClassLoader** is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine. Java code is compiled into class file by javac compiler and JVM executes Java program, by executing byte codes written in class file. ClassLoader is responsible for loading class files from file system, network or any other source.
 
-**Types of ClassLoader**   
+**Types of ClassLoader:**
 
-**a) Bootstrap Class Loader**: It loads standard JDK class files from rt.jar and other core classes. It loads class files from jre/lib/rt.jar. For example, java.lang package class.
+**a) Bootstrap Class Loader**:
 
-**b) Extensions Class Loader**: It loads classes from the JDK extensions directly usually `JAVA_HOME/lib/ext` directory or any other directory as java.ext.dirs. 
+It loads standard JDK class files from rt.jar and other core classes. It loads class files from jre/lib/rt.jar. For example, java.lang package class.
 
-**c) System Class Loader**: It loads application specific classes from the CLASSPATH environment variable. It can be set while invoking program using -cp or classpath command line options. 
+**b) Extensions Class Loader**:
+
+It loads classes from the JDK extensions directly usually `JAVA_HOME/lib/ext` directory or any other directory as java.ext.dirs.
+
+**c) System Class Loader**:
+
+It loads application specific classes from the CLASSPATH environment variable. It can be set while invoking program using -cp or classpath command line options.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -221,11 +239,17 @@ The **Java ClassLoader** is a part of the Java Runtime Environment that dynamica
 
 ## Q. ***Java Compiler is stored in JDK, JRE or JVM?***
 
-**JDK**: Java Development Kit is the core component of Java Environment and provides all the tools, executables and binaries required to compile, debug and execute a Java Program. 
+**1. JDK**:
 
-**JVM**: JVM is responsible for converting Byte code to the machine specific code. JVM is also platform dependent and provides core java functions like memory management, garbage collection, security etc. JVM is customizable and we can use java options to customize it, for example allocating minimum and maximum memory to JVM. JVM is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
+Java Development Kit is the core component of Java Environment and provides all the tools, executables and binaries required to compile, debug and execute a Java Program. 
 
-**JRE**: Java Runtime Environment provides a platform to execute java programs. JRE consists of JVM and java binaries and other classes to execute any program successfully.
+**2. JVM**:
+
+JVM is responsible for converting Byte code to the machine specific code. JVM is also platform dependent and provides core java functions like memory management, garbage collection, security etc. JVM is customizable and we can use java options to customize it, for example allocating minimum and maximum memory to JVM. JVM is called virtual because it provides an interface that does not depend on the underlying operating system and machine hardware.
+
+**2. JRE**:
+
+Java Runtime Environment provides a platform to execute java programs. JRE consists of JVM and java binaries and other classes to execute any program successfully.
 
 <img src="assets/jdk.jpg" alt="Java Compiler" />
 
@@ -279,6 +303,7 @@ Class inherits methods from the following classes in terms of HashMap
 ## Q. ***What is difference between the Inner Class and Sub Class?***
 
 Nested Inner class can access any private instance variable of outer class. Like any other instance variable, we can have access modifier private, protected, public and default modifier.
+
 ```java
 class Outer { 
    class Inner { 
@@ -294,7 +319,9 @@ class Main {
    } 
 } 
 ```
+
 A subclass is class which inherits a method or methods from a superclass.
+
 ```java
 class Car {
     //...
@@ -311,7 +338,10 @@ class HybridCar extends Car {
 
 ## Q. ***Distinguish between static loading and dynamic class loading?***
 
-**Static Class Loading**: Creating objects and instance using `new` keyword is known as static class loading. The retrieval of class definition and instantiation of the object is done at compile time.
+**1. Static Class Loading:**
+
+Creating objects and instance using `new` keyword is known as static class loading. The retrieval of class definition and instantiation of the object is done at compile time.
+
 ```java
 class TestClass {
   public static void main(String args[]) {
@@ -320,22 +350,33 @@ class TestClass {
 }
 ```
 
-**Dynamic Class Loading**: Loading classes use `Class.forName()` method. Dynamic class loading is done when the name of the class is not known at compile time.
+**2. Dynamic Class Loading:**
+
+Loading classes use `Class.forName()` method. Dynamic class loading is done when the name of the class is not known at compile time.
+
 ```java
 Class.forName (String className);
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
 ## Q. ***What is the difference between transient and volatile variable in Java?***
 
-**Transient**: The transient modifier tells the Java object serialization subsystem to exclude the field when serializing an instance of the class. When the object is then deserialized, the field will be initialized to the default value; i.e. null for a reference type, and zero or false for a primitive type.
+**1. Transient:**
+
+The transient modifier tells the Java object serialization subsystem to exclude the field when serializing an instance of the class. When the object is then deserialized, the field will be initialized to the default value; i.e. null for a reference type, and zero or false for a primitive type.
+
 ```java
 public transient int limit = 55;   // will not persist
 public int b;   // will persist
 ```
-**Volatile**: The volatile modifier tells the JVM that writes to the field should always be synchronously flushed to memory, and that reads of the field should always read from memory. This means that fields marked as volatile can be safely accessed and updated in a multi-thread application without using native or standard library-based synchronization.
+
+**2. Volatile:**
+
+The volatile modifier tells the JVM that writes to the field should always be synchronously flushed to memory, and that reads of the field should always read from memory. This means that fields marked as volatile can be safely accessed and updated in a multi-thread application without using native or standard library-based synchronization.
+
 ```java
 public class MyRunnable implements Runnable {
    private volatile boolean active;
@@ -776,6 +817,7 @@ public class CopyFile {
 An assertion allows testing the correctness of any assumptions that have been made in the program. Assertion is achieved using the assert statement in Java. While executing assertion, it is believed to be true. If it fails, JVM throws an error named `AssertionError`. It is mainly used for testing purposes during development.
 
 The assert statement is used with a Boolean expression and can be written in two different ways.
+
 ```
 // First way 
 assert expression;
@@ -783,7 +825,9 @@ assert expression;
 // Second way
 assert expression1 : expression2;
 ```
-Example:
+
+**Example:**
+
 ```java
 public class Example {
    public static void main(String[] args) {
@@ -793,6 +837,7 @@ public class Example {
    }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -839,7 +884,8 @@ The wrapper class in Java provides the mechanism to convert primitive into objec
 | 07.  |float	         |Float|
 | 08.  |double	         |Double|
 
-Example: Primitive to Wrapper
+**Example:** Primitive to Wrapper
+
 ```java
 //Java program to convert primitive into objects  
 //Autoboxing example of int to Integer  
@@ -942,12 +988,13 @@ Test
 
 In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling constructor, memory for the object is allocated in the memory.
 
-**Types of Java Constructors**  
+**Types of Java Constructors:**  
 
 * Default Constructor (or) no-arg Constructor
 * Parameterized Constructor
 
-Example: Default Constructor (or) no-arg constructor
+**Example:** Default Constructor (or) no-arg constructor
+
 ```java
 public class Car 
 {
@@ -960,11 +1007,15 @@ public class Car
     }
 }
 ```
+
 Output
-```
+
+```java
 Default Constructor of Car class called
 ```
-Example: Parameterized Constructor   
+
+**Example:** Parameterized Constructor
+
 ```java
 public class Car 
 {
@@ -983,6 +1034,7 @@ public class Car
     }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -1517,7 +1569,8 @@ class Simple {
 
 The automatic conversion of primitive data types into its equivalent Wrapper type is known as boxing and opposite operation is known as unboxing.
 
-Example: Autoboxing
+**Example:** Autoboxing
+
 ```java
 class BoxingExample1 {  
    public static void main(String args[]) {  
@@ -1530,7 +1583,8 @@ class BoxingExample1 {
 }  
 ```
 
-Example: Unboxing 
+**Example:** Unboxing 
+
 ```java
 class UnboxingExample1 {  
    public static void main(String args[]) {  
@@ -1616,7 +1670,8 @@ public class DateContainer {
 
 Though both Inheritance and Composition provides code reusablility, main difference between Composition and Inheritance in Java is that Composition allows reuse of code without extending it but for Inheritance you must extend the class for any reuse of code or functionality. Inheritance is an **"is-a"** relationship. Composition is a **"has-a"**.
 
-Example: Inheritance 
+**Example:** Inheritance 
+
 ```java
 class Fruit {
    //...
@@ -1625,7 +1680,9 @@ class Apple extends Fruit {
    //...
 }
 ```
-Example: Composition 
+
+**Example:** Composition 
+
 ```java
 class Fruit {
    //...
@@ -1706,7 +1763,8 @@ public final class Employee {
 
 **Thread-Safety Difference:** The difference between `StringBuffer` and `StringBuilder` is that StringBuffer is thread-safe. So when the application needs to be run only in a single thread then it is better to use StringBuilder. StringBuilder is more efficient than StringBuffer.
 
-Example: StringBuffer 
+**Example:** StringBuffer 
+
 ```java
 public class BufferTest{  
    public static void main(String[] args){  
@@ -1716,7 +1774,9 @@ public class BufferTest{
    }  
 }  
 ```
-Example: StringBuilder 
+
+**Example:** StringBuilder 
+
 ```java
 public class BuilderTest{  
     public static void main(String[] args){  
@@ -2122,12 +2182,15 @@ There are methods like <code>System.gc()</code> and <code>Runtime.gc()</code> wh
 An interface with no methods is known as marker or tagged interface. It provides some useful information to JVM/compiler so that JVM/compiler performs some special operations on it. It is used for better readability of code.  Example: **Serializable, Clonnable** etc. 
 
 Syntax:
+
 ```java
 public interface Interface_Name {
 
 }
 ```
-Example:
+
+**Example:**
+
 ```java
 /**
 * Java program to illustrate Maker Interface 
@@ -2156,7 +2219,8 @@ class Main {
 
 Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
 
-Example:
+**Example:**
+
 ```java
 /**
 * Serialization and Deserialization  
@@ -2253,7 +2317,7 @@ public class SerialExample {
 
 The singly linked list is a linear data structure in which each element of the list contains a pointer which points to the next element in the list. Each element in the singly linked list is called a node. Each node has two components: data and a pointer next which points to the next node in the list. 
 
-Example:
+**Example:**
 
 ```java
 public class SinglyLinkedList {    
@@ -2338,7 +2402,8 @@ Nodes of singly linked list:
 
 If a method declares to throw a given exception, the overriding method in a subclass can only declare to throw that exception or its subclass. This is because of polymorphism.
 
-Example:
+**Example:**
+
 ```java
 class A {
    public void message() throws IOException {..}
@@ -2373,7 +2438,8 @@ class B extends A {
 * These are the classes that extend **Throwable** except **RuntimeException** and **Error**.
 * They are also known as compile time exceptions because they are checked at **compile time**, meaning the compiler forces us to either handle them with try/catch or indicate in the function signature that it **throws** them and forcing us to deal with them in the caller.
 * They are programmatically recoverable problems which are caused by unexpected conditions outside the control of the code (e.g. database down, file I/O error, wrong input, etc).
-* Example: **IOException, SQLException** etc.
+
+**Example:** **IOException, SQLException** etc.
 
 ```java
 import java.io.*; 
@@ -2423,7 +2489,8 @@ Output: First three lines of file “C:\assets\file.txt”
 * The classes that extend **RuntimeException** are known as unchecked exceptions.
 * Unchecked exceptions are not checked at compile-time, but rather at **runtime**, hence the name.
 * They are also programmatically recoverable problems but unlike checked exception they are caused by faults in code flow or configuration.
-* Example:  **ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException** etc.
+
+**Example:**  **ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException** etc.
 
 ```java
 class Main { 
@@ -2443,7 +2510,7 @@ Java Result: 1
 
 **3. Error**:
 
-**Error** refers to an irrecoverable situation that is not being handled by a **try/catch**.  
+**Error** refers to an irrecoverable situation that is not being handled by a **try/catch**. 
 Example: **OutOfMemoryError, VirtualMachineError, AssertionError** etc.
 
 <div align="right">
@@ -2597,7 +2664,8 @@ There are two types of polymorphism in java:
 * **Static Polymorphism** also known as compile time polymorphism
 * **Dynamic Polymorphism** also known as runtime polymorphism
 
-Example: Static Polymorphism
+**Example:** Static Polymorphism
+
 ```java
 class SimpleCalculator {
 
@@ -2622,7 +2690,9 @@ Output
 30
 60
 ```
-Example: Runtime polymorphism
+
+**Example:** Runtime polymorphism
+
 ```java
 class ABC {
    public void myMethod() {
@@ -2678,7 +2748,8 @@ To achieve encapsulation in Java −
 * Declare the variables of a class as private.
 * Provide public setter and getter methods to modify and view the variables values.
 
-Example:
+**Example:**
+
 ```java
 public class EncapClass {
    private String name;
@@ -2713,7 +2784,8 @@ public class MainClass {
 * **Type Casting**: There is no need to typecast the object.
 * **Compile-Time Checking**: It is checked at compile time so problem will not occur at runtime.
 
-Example:
+**Example:**
+
 ```java
 /** 
 * A Simple Java program to show multiple 
@@ -2769,7 +2841,8 @@ The difference between `StringBuffer` and `StringBuilder` is that `StringBuffer`
 * If your string can change (example: lots of logic and operations in the construction of the string) and will only be accessed from a single thread, using a `StringBuilder` is good enough.
 * If your string can change, and will be accessed from multiple threads, use a `StringBuffer` because `StringBuffer` is synchronous so you have thread-safety.  
 
-Example:
+**Example:**
+
 ```java
 class StringExample {
 
