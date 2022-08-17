@@ -3040,7 +3040,8 @@ The Object class is the parent class of all the classes in java by default.
 #### Q. What is differences between External Iteration and Internal Iteration?
 #### Q. What is a copy constructor in Java?
 #### Q. What are the different access specifiers available in java?
-#### Q. 
+#### Q. What is runtime polymorphism in java?
+
 *ToDo*
 
 <div align="right">
