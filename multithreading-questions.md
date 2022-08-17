@@ -1,7 +1,7 @@
 # Multithreading Interview Questions and Answers
 
 ## Q. What are the states in the lifecycle of a Thread?
-A java thread can be in any of following thread states during it’s life cycle i.e. New, Runnable, Blocked, Waiting, Timed Waiting or Terminated. These are also called life cycle events of a thread in java. 
+A java thread can be in any of following thread states during it\'s life cycle i.e. New, Runnable, Blocked, Waiting, Timed Waiting or Terminated. These are also called life cycle events of a thread in java. 
 
 * New
 * Runnable
@@ -60,7 +60,7 @@ class MyThread implements Runnable {
 
 **Difference between Runnable vs Thread**  
 
-* Implementing Runnable is the preferred way to do it. Here, you’re not really specializing or modifying the thread’s behavior. You’re just giving the thread something to run. That means composition is the better way to go.
+* Implementing Runnable is the preferred way to do it. Here, you’re not really specializing or modifying the thread\'s behavior. You’re just giving the thread something to run. That means composition is the better way to go.
 * Java only supports single inheritance, so you can only extend one class.
 * Instantiating an interface gives a cleaner separation between your code and the implementation of threads.
 * Implementing Runnable makes your class more flexible. If you extend Thread then the action you’re doing is always going to be in a thread. However, if you implement Runnable it doesn’t have to be. You can run it in a thread, or pass it to some kind of executor service, or just pass it around as a task within a single threaded application.
@@ -364,7 +364,7 @@ HiClass is calling HelloClass second() method
 ```
 **Avoid deadlock**  
 
-**1. Avoid Nested Locks**: This is the most common reason for deadlocks, avoid locking another resource if you already hold one. It’s almost impossible to get deadlock situation if you are working with only one object lock. For example, here is the another implementation of run() method without nested lock and program runs successfully without deadlock situation.
+**1. Avoid Nested Locks**: This is the most common reason for deadlocks, avoid locking another resource if you already hold one. It\'s almost impossible to get deadlock situation if you are working with only one object lock. For example, here is the another implementation of run() method without nested lock and program runs successfully without deadlock situation.
 ```java
 public void run() {
     String name = Thread.currentThread().getName();
@@ -383,9 +383,9 @@ public void run() {
     System.out.println(name + ' finished execution.');
 }
 ```
-**2. Lock Only What is Required**: You should acquire lock only on the resources you have to work on, for example in above program I am locking the complete Object resource but if we are only interested in one of it’s fields, then we should lock only that specific field not complete object.
+**2. Lock Only What is Required**: You should acquire lock only on the resources you have to work on, for example in above program I am locking the complete Object resource but if we are only interested in one of it\'s fields, then we should lock only that specific field not complete object.
 
-**3. Avoid waiting indefinitely**: You can get deadlock if two threads are waiting for each other to finish indefinitely using thread join. If your thread has to wait for another thread to finish, it’s always best to use join with maximum time you want to wait for thread to finish.
+**3. Avoid waiting indefinitely**: You can get deadlock if two threads are waiting for each other to finish indefinitely using thread join. If your thread has to wait for another thread to finish, it\'s always best to use join with maximum time you want to wait for thread to finish.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -689,11 +689,11 @@ class Vector_demo {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. What is Thread Group? Why it’s advised not to use it?
+## Q. What is Thread Group? Why it\'s advised not to use it?
 ThreadGroup creates a group of threads. It offers a convenient way to manage groups of threads as a unit. This is particularly valuable in situation in which you want to suspend and resume a number of related threads.
 
 * The thread group form a tree in which every thread group except the initial thread group has a parent.
-* A thread is allowed to access information about its own thread group but not to access information about its thread group’s parent thread group or any other thread group.
+* A thread is allowed to access information about its own thread group but not to access information about its thread group\'s parent thread group or any other thread group.
 ```java
 // Java code illustrating Thread Group 
 import java.lang.*; 
@@ -952,7 +952,7 @@ JNI global references: 116
 * **Thread Priority**: Priority of the thread
 * **Thread ID**: Represents the unique ID of the Thread
 * **Thread Status**: Provides the current thread state, for example RUNNABLE, WAITING, BLOCKED. While analyzing deadlock look for the blocked threads and resources on which they are trying to acquire lock.
-* **Thread callstack**: Provides the vital stack information for the thread. This is the place where we can see the locks obtained by Thread and if it’s waiting for any lock.
+* **Thread callstack**: Provides the vital stack information for the thread. This is the place where we can see the locks obtained by Thread and if it\'s waiting for any lock.
 
 **Tools**  
 
@@ -1215,7 +1215,7 @@ lock.unlock();
 **Difference between Lock Interface and synchronized keyword**  
 
 * Having a timeout trying to get access to a `synchronized` block is not possible. Using `Lock.tryLock(long timeout, TimeUnit timeUnit)`, it is possible.
-* The `synchronized` block must be fully contained within a single method. A Lock can have it’s calls to `lock()` and `unlock()` in separate methods.
+* The `synchronized` block must be fully contained within a single method. A Lock can have it\'s calls to `lock()` and `unlock()` in separate methods.
 
 ```java
 import java.util.concurrent.TimeUnit;
@@ -1384,7 +1384,7 @@ Output
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. What is the Thread’s interrupt flag? How does it relate to the InterruptedException?
+## Q. What is the Thread\'s interrupt flag? How does it relate to the InterruptedException?
 If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked), calling the interrupt() method on the thread, breaks out the sleeping or waiting state throwing InterruptedException. If the thread is not in the sleeping or waiting state, calling the interrupt() method performs normal behaviour and doesn't interrupt the thread but sets the interrupt flag to true.
 
 Example: **Interrupting a thread that stops working**
@@ -1472,7 +1472,7 @@ Starvation can occur due to the following reasons:
 
 * Threads are blocked infinitely because a thread takes long time to execute some synchronized code (e.g. heavy I/O operations or infinite loop).
 
-* A thread doesn’t get CPU’s time for execution because it has low priority as compared to other threads which have higher priority.
+* A thread doesn’t get CPU\'s time for execution because it has low priority as compared to other threads which have higher priority.
 
 * Threads are waiting on a resource forever but they remain waiting forever because other threads are constantly notified instead of the hungry ones.
 
@@ -1595,7 +1595,7 @@ try{
 </div>
 
 ## Q. What is Callable and Future in Java concurrency?
-Future and FutureTask in Java allows to write asynchronous code. A Future interface provides methods **to check if the computation is complete, to wait for its completion and to retrieve the results of the computation**. The result is retrieved using Future’s get() method when the computation has completed, and it blocks until it is completed. We need a callable object to create a future task and then we can use Java Thread Pool Executor to process these asynchronously.
+Future and FutureTask in Java allows to write asynchronous code. A Future interface provides methods **to check if the computation is complete, to wait for its completion and to retrieve the results of the computation**. The result is retrieved using Future\'s get() method when the computation has completed, and it blocks until it is completed. We need a callable object to create a future task and then we can use Java Thread Pool Executor to process these asynchronously.
 
 ```java
 import java.util.concurrent.Callable; 
@@ -2073,6 +2073,7 @@ The `wait()` is mainly used for shared resources, a thread notifies other waitin
 #### Q. What is SynchronousQueue in Java?
 #### Q. What is Exchanger in Java concurrency?
 #### Q. What is Busy Spinning? Why will you use Busy Spinning as wait strategy?
+#### Q. What is Multithreading in java?
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
