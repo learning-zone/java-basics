@@ -274,9 +274,12 @@ Java Runtime Environment provides a platform to execute java programs. JRE consi
 
 The Factory Method is usually categorised by a switch statement where each case returns a different class, using the same root interface so that the calling code never needs to make decisions about the implementation.
 
-For example credit card validator factory which returns a different validator for each card type.
+**Example:** credit card validator factory which returns a different validator for each card type.
 
 ```java
+/**
+ * Abstract Factory Pattern
+ */
 public ICardValidator GetCardValidator (string cardType)
 {
     switch (cardType.ToLower())
