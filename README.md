@@ -262,7 +262,9 @@ JVM is responsible for converting Byte code to the machine specific code. JVM is
 
 Java Runtime Environment provides a platform to execute java programs. JRE consists of JVM and java binaries and other classes to execute any program successfully.
 
-<img src="assets/jdk.jpg" alt="Java Compiler" />
+<p align="center">
+  <img src="assets/jdk.jpg" alt="Java Compiler" width="500px"  />
+</p>
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
