@@ -321,6 +321,8 @@ Class inherits methods from the following classes in terms of HashMap
 
 Nested Inner class can access any private instance variable of outer class. Like any other instance variable, we can have access modifier private, protected, public and default modifier.
 
+**Example:**
+
 ```java
 /**
  * Inner Class
@@ -341,6 +343,8 @@ class Main {
 ```
 
 A subclass is class which inherits a method or methods from a superclass.
+
+**Example:**
 
 ```java
 /**
@@ -365,7 +369,12 @@ class HybridCar extends Car {
 
 Creating objects and instance using `new` keyword is known as static class loading. The retrieval of class definition and instantiation of the object is done at compile time.
 
+**Example:**
+
 ```java
+/**
+ * Static Class Loading 
+ */
 class TestClass {
   public static void main(String args[]) {
       TestClass tc = new TestClass();
@@ -377,7 +386,12 @@ class TestClass {
 
 Loading classes use `Class.forName()` method. Dynamic class loading is done when the name of the class is not known at compile time.
 
+**Example:**
+
 ```java
+/**
+ * Dynamic Class Loading 
+ */
 Class.forName (String className);
 ```
 
