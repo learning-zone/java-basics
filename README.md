@@ -306,6 +306,7 @@ In Abstract Factory pattern an interface is responsible for creating a factory o
 ## Q. What are the methods used to implement for key Object in HashMap?
 
 **1. equals()** and **2. hashcode()**
+
 Class inherits methods from the following classes in terms of HashMap
 
 * java.util.AbstractMap
