@@ -695,23 +695,24 @@ Overriding Method
 
 In Java, all non-static methods are by default **virtual functions**. Only methods marked with the `keyword final`, which cannot be overridden, along with `private methods`, which are not inherited, are non-virtual.
 
-**Virtual function with Interface:** 
+**Example:** Virtual function with Interface
 
 ```java
 /**
-* The function applyBrakes() is virtual because
-* functions in interfaces are designed to be overridden.
-**/
-interface Bicycle {         
-    void applyBrakes();     
-}                           
+ * The function applyBrakes() is virtual because
+ * functions in interfaces are designed to be overridden.
+ **/
+interface Bicycle {
+    void applyBrakes();
+}
 
 class ACMEBicycle implements Bicycle {
-    public void applyBrakes(){               //Here we implement applyBrakes()
-       System.out.println("Brakes applied"); //function
+    public void applyBrakes() { // Here we implement applyBrakes()
+        System.out.println("Brakes applied"); // function
     }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
