@@ -578,7 +578,11 @@ Calling parameterized constructor of derived
 
 ## Q. Can you declare the main method as final?
 
-Yes. We can declare main method as final. But, In inheritance concept we cannot declare main method as final in parent class. It give compile time error. The main method has to be public because it has to be called by JVM which is outside the scope of the package and hence would need the access specifier-public.
+Yes. We can declare main method as final. But, In inheritance concept we cannot declare main method as final in parent class. It give compile time error.
+
+The main method has to be public because it has to be called by JVM which is outside the scope of the package and hence would need the access specifier-public.
+
+**Example:**
 
 ```java
 public class Test {
@@ -593,10 +597,13 @@ class Child extends Test {
 	}
 }
 ```
+
 Output
-```
+
+```java
 Cannot override the final method from Test.
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -605,64 +612,81 @@ Cannot override the final method from Test.
 
 There are two types of polymorphism in java:
 
-1. Static Polymorphism also known as compile time polymorphism
-2. Dynamic Polymorphism also known as runtime polymorphism
+1. Static Polymorphism also known as Compile time polymorphism
+2. Runtime polymorphism also known as Dynamic Polymorphism  
 
-**Example of static Polymorphism:**  
+**1. Static Polymorphism:**  
 
 Method overloading is one of the way java supports static polymorphism. Here we have two definitions of the same method add() which add method would be called is determined by the parameter list at the compile time. That is the reason this is also known as compile time polymorphism.
 
+**Example:**
+
 ```java
-class SimpleCalculator
-{
+/**
+ * Static Polymorphism
+ */
+class SimpleCalculator {
     int add(int a, int b) {
-         return a + b;
+        return a + b;
     }
-    int  add(int a, int b, int c) {
-         return a + b + c;
+
+    int add(int a, int b, int c) {
+        return a + b + c;
     }
 }
-public class Demo
-{
-   public static void main(String args[]) {
 
-	   SimpleCalculator obj = new SimpleCalculator();
-      System.out.println(obj.add(10, 20));
-      System.out.println(obj.add(10, 20, 30));
-   }
+public class Demo {
+    public static void main(String args[]) {
+        SimpleCalculator obj = new SimpleCalculator();
+        System.out.println(obj.add(10, 20));
+        System.out.println(obj.add(10, 20, 30));
+    }
 }
-
-// Output:
-// 30
-// 60
 ```
 
-**Runtime Polymorphism (or Dynamic polymorphism):**  
-
-It is also known as Dynamic Method Dispatch. Dynamic polymorphism is a process in which a call to an overridden method is resolved at runtime, thats why it is called runtime polymorphism. 
+Output
 
 ```java
+30
+60
+```
+
+**2. Runtime Polymorphism:**  
+
+It is also known as **Dynamic Method Dispatch**. Dynamic polymorphism is a process in which a call to an overridden method is resolved at runtime, thats why it is called runtime polymorphism.
+
+**Example:**
+
+```java
+/**
+ * Runtime Polymorphism
+ */
 class ABC {
 
-   public void myMethod() {
-	System.out.println("Overridden Method");
-   }
+    public void myMethod() {
+        System.out.println("Overridden Method");
+    }
 }
+
 public class XYZ extends ABC {
 
-   public void myMethod() {
-	System.out.println("Overriding Method");
-   }
-   public static void main(String args[]) {
-	ABC obj = new XYZ();
-	obj.myMethod();
-   }
+    public void myMethod() {
+        System.out.println("Overriding Method");
+    }
+
+    public static void main(String args[]) {
+        ABC obj = new XYZ();
+        obj.myMethod();
+    }
 }
 ```
+
 Output:
-```
+
+```java
 Overriding Method
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
