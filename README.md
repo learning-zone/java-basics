@@ -322,6 +322,9 @@ Class inherits methods from the following classes in terms of HashMap
 Nested Inner class can access any private instance variable of outer class. Like any other instance variable, we can have access modifier private, protected, public and default modifier.
 
 ```java
+/**
+ * Inner Class
+ */
 class Outer { 
    class Inner { 
       public void show() { 
@@ -340,6 +343,9 @@ class Main {
 A subclass is class which inherits a method or methods from a superclass.
 
 ```java
+/**
+ * Sub Class 
+ */
 class Car {
     //...
 }
