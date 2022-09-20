@@ -226,21 +226,21 @@ Java programs consists of classes, which contain platform-neutral bytecodes that
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. What is Classloader in Java? What are different types of classloaders?
+## Q. What is Classloader in Java?
 
 The **Java ClassLoader** is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine. Java code is compiled into class file by javac compiler and JVM executes Java program, by executing byte codes written in class file. ClassLoader is responsible for loading class files from file system, network or any other source.
 
 **Types of ClassLoader:**
 
-**a) Bootstrap Class Loader**:
+**1. Bootstrap Class Loader**:
 
 It loads standard JDK class files from rt.jar and other core classes. It loads class files from jre/lib/rt.jar. For example, java.lang package class.
 
-**b) Extensions Class Loader**:
+**2. Extensions Class Loader**:
 
 It loads classes from the JDK extensions directly usually `JAVA_HOME/lib/ext` directory or any other directory as java.ext.dirs.
 
-**c) System Class Loader**:
+**3. System Class Loader**:
 
 It loads application specific classes from the CLASSPATH environment variable. It can be set while invoking program using -cp or classpath command line options.
 
