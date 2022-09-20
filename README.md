@@ -40,7 +40,7 @@ Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionErro
 
 ## Q. Explain hierarchy of Java Exception classes?
 
-The java.lang.Throwable class is the root class of Java Exception hierarchy which is inherited by two subclasses: Exception and Error.
+The **java.lang.Throwable** class is the root class of Java Exception hierarchy which is inherited by two subclasses: Exception and Error.
 
 <p align="center">
   <img src="assets/exception.png" alt="Exception in Java" width="500px" />
@@ -49,6 +49,9 @@ The java.lang.Throwable class is the root class of Java Exception hierarchy whic
 **Example:**
 
 ```java
+/**
+ * Exception classes
+ */
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -111,6 +114,9 @@ We call aggregation those relationships whose **objects have an independent life
 **Example:** Since Organization has Person as employees, the relationship between them is Aggregation. Here is how they look like in terms of Java classes
 
 ```java
+/**
+ * Aggregation
+ */
 public class Organization {
    private List employees;
 }
@@ -127,6 +133,9 @@ We use the term composition to refer to relationships whose objects **don’t ha
 **Example:** Since Engine is-part-of Car, the relationship between them is Composition. Here is how they are implemented between Java classes.
 
 ```java
+/**
+ * Composition
+ */
 public class Car {
     //final will make sure engine is initialized
     private final Engine engine;  
