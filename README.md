@@ -693,7 +693,7 @@ Overriding Method
 
 ## Q. Can you have virtual functions in Java?
 
-In Java, all non-static methods are by default **virtual functions**. Only methods marked with the `keyword final`, which cannot be overridden, along with `private methods`, which are not inherited, are non-virtual.
+In Java, all non-static methods are by default **virtual functions**. Only methods marked with the keyword `final`, which cannot be overridden, along with `private methods`, which are not inherited, are non-virtual.
 
 **Example:** Virtual function with Interface
 
@@ -759,9 +759,11 @@ Subclass
 
 ## Q. What is the difference between abstraction and encapsulation?
 
-* Abstraction solves the problem at design level while Encapsulation solves it implementation level. 
-* In Java, Abstraction is supported using `interface` and `abstract class` while Encapsulation is supported using access modifiers e.g. public, private and protected.
-* Abstraction is about hiding unwanted details while giving out most essential details, while Encapsulation means hiding the code and data into a single unit e.g. class or method to protect inner working of an object from outside world. 
+In Java, Abstraction is supported using `interface` and `abstract class` while Encapsulation is supported using access modifiers e.g. public, private and protected. Abstraction solves the problem at design level while Encapsulation solves it implementation level.
+
+Abstraction is about hiding unwanted details while giving out most essential details, while Encapsulation means hiding the code and data into a single unit e.g. class or method to protect inner working of an object from outside world.
+
+**Difference:**
 
 <table class="alt">
 <tbody><tr><th>Abstraction</th><th>Encapsulation</th></tr>
