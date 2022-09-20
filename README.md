@@ -721,28 +721,38 @@ class ACMEBicycle implements Bicycle {
 
 It is possible to have different return type for a overriding method in child class, but child\'s return type should be sub-type of parent\'s return type. Overriding method becomes variant with respect to return type. The covariant return type specifies that the return type may vary in the same direction as the subclass.
 
+**Example:**
+
 ```java
+/**
+ * Covariant Return Type
+ */
 class SuperClass {
-   SuperClass get() {
-      System.out.println("SuperClass");
-      return this;
-   }
+    SuperClass get() {
+        System.out.println("SuperClass");
+        return this;
+    }
 }
+
 public class Tester extends SuperClass {
-   Tester get() {
-      System.out.println("SubClass");
-      return this;
-   }
-   public static void main(String[] args) {
-      SuperClass tester = new Tester();
-      tester.get();
-   }
+    Tester get() {
+        System.out.println("SubClass");
+        return this;
+    }
+
+    public static void main(String[] args) {
+        SuperClass tester = new Tester();
+        tester.get();
+    }
 }
 ```
+
 Output:
-```
+
+```java
 Subclass
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
