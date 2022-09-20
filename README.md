@@ -128,7 +128,7 @@ public class Person {
 
 **2. Composition:**
 
-We use the term composition to refer to relationships whose objects **don’t have an independent lifecycle**, and if the parent object is deleted, all child objects will also be deleted.
+We use the term composition to refer to relationships whose objects **don\'t have an independent lifecycle**, and if the parent object is deleted, all child objects will also be deleted.
 
 **Example:** Since Engine is-part-of Car, the relationship between them is Composition. Here is how they are implemented between Java classes.
 
@@ -179,7 +179,7 @@ class Engine {
 
 Java Heap space is used by java runtime to allocate memory to **Objects** and **JRE classes**. Whenever we create any object, it\'s always created in the Heap space.
 
-Garbage Collection runs on the heap memory to free the memory used by objects that doesn’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
+Garbage Collection runs on the heap memory to free the memory used by objects that doesn\'t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
 
 **2. Java Stack Memory:**
 
@@ -1785,8 +1785,8 @@ Immutable class means that once an object is created, we cannot change its conte
 
 **Rules to create immutable classes**  
 
-* The class must be declared as final (So that child classes can’t be created)
-* Data members in the class must be declared as final (So that we can’t change the value of it after object creation)
+* The class must be declared as final (So that child classes can\'t be created)
+* Data members in the class must be declared as final (So that we can\'t change the value of it after object creation)
 * A parameterized constructor
 * Getter method for all the variables in it
 * No setters(To not have the option to change the value of the instance variable)
@@ -1884,7 +1884,7 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 
 ## Q. Why String is popular HashMap key in Java?
 
-Since String is immutable, its hashcode is cached at the time of creation and it doesn’t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
+Since String is immutable, its hashcode is cached at the time of creation and it doesn\'t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -1942,7 +1942,7 @@ class TestExceptionPropagation {
 Some of the common main thread exception are as  follows:
 * **Exception in thread main java.lang.UnsupportedClassVersionError**: This exception comes when your java class is compiled from another JDK version and you are trying to run it from another java version.
 * **Exception in thread main java.lang.NoClassDefFoundError**: There are two variants of this exception. The first one is where you provide the class full name with .class extension. The second scenario is when Class is not found.
-* **Exception in thread main java.lang.NoSuchMethodError: main**: This exception comes when you are trying to run a class that doesn’t have main method.
+* **Exception in thread main java.lang.NoSuchMethodError: main**: This exception comes when you are trying to run a class that doesn\'t have main method.
 * **Exception in thread "main" java.lang.ArithmeticException**: Whenever any exception is thrown from main method, it prints the exception is console. The first part explains that exception is thrown from main method, second part prints the exception class name and then after a colon, it prints the exception message.
 
 <div align="right">
