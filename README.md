@@ -26,17 +26,21 @@ Exception is an error event that can happen during the execution of a program an
 
 **1. Checked Exception**:
 
-The classes which directly inherit `Throwable class` except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.  
+The classes which directly inherit **Throwable class** except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.  
 
 **2. Unchecked Exception**:
 
-The classes which inherit `RuntimeException` are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.  
+The classes which inherit **RuntimeException** are known as unchecked exceptions e.g. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.  
 
 **3. Error**:
 
 Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
 
-**Hierarchy of Java Exception classes:**
+<div align="right">
+    <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. Explain hierarchy of Java Exception classes?
 
 The java.lang.Throwable class is the root class of Java Exception hierarchy which is inherited by two subclasses: Exception and Error.
 
