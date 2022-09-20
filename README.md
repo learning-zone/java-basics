@@ -183,9 +183,9 @@ Garbage Collection runs on the heap memory to free the memory used by objects th
 
 **2. Java Stack Memory:**
 
-Stack in java is a section of memory which contains methods, local variables and reference variables. Local variables are created in the stack.
+Stack in java is a section of memory which contains **methods**, **local variables** and **reference variables**. Local variables are created in the stack.
 
-Stack memory is always referenced in LIFO (Last-In-First-Out) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
+Stack memory is always referenced in LIFO ( Last-In-First-Out ) order. Whenever a method is invoked, a new block is created in the stack memory for the method to hold local primitive values and reference to other objects in the method.
 
 As soon as method ends, the block becomes unused and become available for next method. Stack memory size is very less compared to Heap memory.
 
