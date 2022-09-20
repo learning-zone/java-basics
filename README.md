@@ -477,8 +477,10 @@ Java constructor chaining is a method of calling one constructor with the help o
 * **From base class**: By using `super()` keyword to call a constructor from the base class.
 
 ```java
-// Java program to illustrate Constructor Chaining 
-// within same class Using this() keyword 
+/**
+ * Constructor Chaining 
+ * within same class Using this() keyword 
+ */
 class Temp 
 { 
     // default constructor 1 
@@ -508,15 +510,20 @@ class Temp
     } 
 } 
 ```
+
 Ouput:
-```
+
+```java
 30
 10
 The Default constructor
 ```
+
 ```java
-// Java program to illustrate Constructor Chaining to 
-// other class using super() keyword 
+/**
+ * Constructor Chaining to 
+ * other class using super() keyword 
+ */
 class Base 
 { 
     String name; 
@@ -557,11 +564,14 @@ class Derived extends Base
     } 
 } 
 ```
+
 Output:
-```
+
+```java
 Calling parameterized constructor of base
 Calling parameterized constructor of derived
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
