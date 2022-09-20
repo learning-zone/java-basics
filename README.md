@@ -804,8 +804,9 @@ public interface Test {
    public static final pass;
 }
 ```
-* interfaces cannot be instantiated that is why the variable are **static**
-* interface are used to achieve the 100% abstraction there for the variable are **final**
+
+* Interfaces cannot be instantiated that is why the variable are **static**
+* Interface are used to achieve the 100% abstraction there for the variable are **final**
 * An interface provide a way for the client to interact with the object. If variables were not public, the clients would not have access to them. that is why variable are **public**
 
 <div align="right">
