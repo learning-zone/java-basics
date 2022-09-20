@@ -177,7 +177,7 @@ class Engine {
 
 **1. Java Heap Space:**  
 
-Java Heap space is used by java runtime to allocate memory to Objects and JRE classes. Whenever we create any object, it’s always created in the Heap space.
+Java Heap space is used by java runtime to allocate memory to **Objects** and **JRE classes**. Whenever we create any object, it\'s always created in the Heap space.
 
 Garbage Collection runs on the heap memory to free the memory used by objects that doesn’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
 
@@ -208,7 +208,7 @@ As soon as method ends, the block becomes unused and become available for next m
 
 ## Q. What is JVM and is it platform independent?
 
-Java Virtual Machine (JVM) is a specification that provides runtime environment in which java bytecode(.class files) can be executed. The JVM is the platform. The JVM acts as a "virtual" machine or processor. Java's platform independence consists mostly of its Java Virtual Machine (JVM). JVM makes this possible because it is aware of the specific instruction lengths and other particularities of the platform (Operating System).
+Java Virtual Machine (JVM) is a specification that provides runtime environment in which java bytecode(.class files) can be executed. The JVM is the platform. The JVM acts as a "virtual" machine or processor. Java\'s platform independence consists mostly of its Java Virtual Machine (JVM). JVM makes this possible because it is aware of the specific instruction lengths and other particularities of the platform (Operating System).
 
 The JVM is not platform independent. Java Virtual Machine (JVM) provides the environment to execute the java file(. Class file). So at the end it's depends on kernel and kernel is differ from OS (Operating System) to OS. The JVM is used to both translate the bytecode into the machine language for a particular computer and actually execute the corresponding machine-language instructions as well.
 
@@ -528,6 +528,7 @@ Calling parameterized constructor of derived
 ## Q. Can you declare the main method as final?
 
 Yes. We can declare main method as final. But, In inheritance concept we cannot declare main method as final in parent class. It give compile time error. The main method has to be public because it has to be called by JVM which is outside the scope of the package and hence would need the access specifier-public.
+
 ```java
 public class Test {
 	public final static void main(String[] args) throws Exception {
@@ -552,12 +553,14 @@ Cannot override the final method from Test.
 ## Q. What is the difference between compile-time polymorphism and runtime polymorphism?
 
 There are two types of polymorphism in java:
-1) Static Polymorphism also known as compile time polymorphism
-2) Dynamic Polymorphism also known as runtime polymorphism
 
-**Example of static Polymorphism**  
+1. Static Polymorphism also known as compile time polymorphism
+2. Dynamic Polymorphism also known as runtime polymorphism
+
+**Example of static Polymorphism:**  
 
 Method overloading is one of the way java supports static polymorphism. Here we have two definitions of the same method add() which add method would be called is determined by the parameter list at the compile time. That is the reason this is also known as compile time polymorphism.
+
 ```java
 class SimpleCalculator
 {
@@ -577,15 +580,16 @@ public class Demo
       System.out.println(obj.add(10, 20, 30));
    }
 }
+
+// Output:
+// 30
+// 60
 ```
-Output:
-```
-30
-60
-```
-**Runtime Polymorphism (or Dynamic polymorphism)**  
+
+**Runtime Polymorphism (or Dynamic polymorphism):**  
 
 It is also known as Dynamic Method Dispatch. Dynamic polymorphism is a process in which a call to an overridden method is resolved at runtime, thats why it is called runtime polymorphism. 
+
 ```java
 class ABC {
 
@@ -616,7 +620,8 @@ Overriding Method
 
 In Java, all non-static methods are by default **virtual functions**. Only methods marked with the `keyword final`, which cannot be overridden, along with `private methods`, which are not inherited, are non-virtual.
 
-**Virtual function with Interface** 
+**Virtual function with Interface:** 
+
 ```java
 /**
 * The function applyBrakes() is virtual because
@@ -638,7 +643,8 @@ class ACMEBicycle implements Bicycle {
 
 ## Q. What is covariant return type?
 
-It is possible to have different return type for a overriding method in child class, but child’s return type should be sub-type of parent’s return type. Overriding method becomes variant with respect to return type. The covariant return type specifies that the return type may vary in the same direction as the subclass.
+It is possible to have different return type for a overriding method in child class, but child\'s return type should be sub-type of parent\'s return type. Overriding method becomes variant with respect to return type. The covariant return type specifies that the return type may vary in the same direction as the subclass.
+
 ```java
 class SuperClass {
    SuperClass get() {
@@ -702,6 +708,7 @@ public interface Test {
 ```
 
 as you have declare variable in test interface with private and protected it will give error. if you do not specify the modifier the compiler will add public static final automatically.
+
 ```java
 public interface Test {
    public static final string name1;
@@ -720,6 +727,7 @@ public interface Test {
 ## Q. When can an object reference be cast to a Java interface reference?
 
 An interface reference can point to any object of a class that implements this interface 
+
 ```java
 interface Foo {
   void display();
@@ -929,11 +937,12 @@ There are 3 ways to get the instance of Class class. They are as follows:
 * getClass() method of Object class
 * the .class syntax
 
-**1. forName() method of Class class**  
+**1. forName() method of Class class:**  
 
 * is used to load the class dynamically.
 * returns the instance of Class class.
 * It should be used if you know the fully qualified name of class.This cannot be used for primitive types.
+
 ```java
 class Simple{}  
   
@@ -948,9 +957,11 @@ Output
 ```
 Simple
 ```
-**2. getClass() method of Object class**  
+
+**2. getClass() method of Object class:**  
 
 It returns the instance of Class class. It should be used if you know the type. Moreover, it can be used with primitives.
+
 ```java
 class Simple{}  
   
@@ -970,9 +981,10 @@ Output
 ```
 Simple
 ```
-**3. The .class syntax**  
+**3. The .class syntax:**  
 
 If a type is available but there is no instance then it is possible to obtain a Class by appending ".class" to the name of the type.It can be used for primitive data type also.
+
 ```java
 class Test {  
   public static void main(String args[]) {  
@@ -1093,6 +1105,7 @@ overridden method is static
 ## Q. What is the final variable, final class, and final blank variable?
 
 **Final Variable**: final variables are nothing but constants. We cannot change the value of a final variable once it is initialized.
+
 ```java
 class Demo {  
 
@@ -1115,6 +1128,7 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problem:
 	at beginnersbook.com.Demo.main(Details.java:10)
 ```
 **Blank final variable**: A final variable that is not initialized at the time of declaration is known as blank final variable. We must initialize the blank final variable in constructor of the class otherwise it will throw a compilation error (Error: `variable MAX_VALUE might not have been initialized`).
+
 ```java
 class Demo {  
    //Blank final variable
@@ -1138,6 +1152,7 @@ Output
 100
 ```
 **Final Method**: A final method cannot be overridden. Which means even though a sub class can call the final method of parent class without any issues but it cannot override it.
+
 ```java
 class XYZ {  
    final void demo() {
@@ -1163,6 +1178,7 @@ class ABC extends XYZ {
 ## Q. What is the static import?
 
 The static import feature of Java 5 facilitate the java programmer to access any static member of a class directly. There is no need to qualify it by the class name.
+
 ```java
 import static java.lang.System.*;    
 class StaticImportExample {
@@ -1214,6 +1230,7 @@ public class RegexExample {
 ## Q. How will you invoke any external process in Java?
 
 We can invoke the external process in Java using **exec()** method of **Runtime Class**.
+
 ```java
 class ExternalProcessExample 
 { 
@@ -1241,6 +1258,7 @@ class ExternalProcessExample
 `BufferedInputStream` and `BufferedOutputStream` class is used for buffering an input and output stream while reading and writing, respectively. It internally uses buffer to store data. It adds more efficiency than to write data directly into a stream. So, it makes the performance fast.
 
 **BufferedInputStreamExample.java**
+
 ```java
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -1285,6 +1303,7 @@ Output
 This is an example of reading data from file
 ```
 **BufferedOutputStreamExample.java**  
+
 ```java
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -1331,6 +1350,7 @@ This is an example of writing data to a file
 ## Q. How to set the Permissions to a file in Java?
 
 Java 7 has introduced PosixFilePermission Enum and **java.nio.file.Files** includes a method setPosixFilePermissions(Path path, `Set<PosixFilePermission> perms`) that can be used to set file permissions easily.
+
 ```java
 import java.io.File;
 import java.io.IOException;
@@ -1379,6 +1399,7 @@ public class FilePermissions {
 In Java, there are three different ways for reading input from the user in the command line environment(console).
 
 **1. Using Buffered Reader Class**: This method is used by wrapping the System.in (standard input stream) in an InputStreamReader which is wrapped in a BufferedReader, we can read input from the user in the command line.
+
 ```java
 import java.io.BufferedReader; 
 import java.io.IOException; 
@@ -1399,6 +1420,7 @@ public class Test
 } 
 ```
 **2. Using Scanner Class**: The main purpose of the Scanner class is to parse primitive types and strings using regular expressions, however it is also can be used to read input from the user in the command line.
+
 ```java
 import java.util.Scanner; 
   
@@ -1419,7 +1441,9 @@ class GetInputFromUser
     } 
 } 
 ```  
-**3. Using Console Class**: It has been becoming a preferred way for reading user’s input from the command line. In addition, it can be used for reading password-like input without echoing the characters entered by the user; the format string syntax can also be used (like System.out.printf()).
+
+**3. Using Console Class**: It has been becoming a preferred way for reading user\'s input from the command line. In addition, it can be used for reading password-like input without echoing the characters entered by the user; the format string syntax can also be used (like System.out.printf()).
+
 ```java
 public class Sample  
 { 
@@ -1437,6 +1461,7 @@ public class Sample
 ## Q. How can you avoid serialization in child class if the base class is implementing the Serializable interface?
 
 If superClass has implemented Serializable that means subclass is also Serializable (as subclass always inherits all features from its parent class), for avoiding Serialization in sub-class we can define **writeObject()** method and throw **NotSerializableException()** from there as done below.
+
 ```java
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -1517,9 +1542,9 @@ java.io.NotSerializableException: This class cannot be Serialized
 |Sl.No |SERIALIZABLE |	EXTERNALIZABLE        |
 |----|----------------|-----------------------|
 | 01.|Serializable is a marker interface i.e. does not contain any method.|	Externalizable interface contains two methods writeExternal() and readExternal() which implementing classes MUST override.|
-| 02.|Serializable interface pass the responsibility of serialization to JVM and it’s default algorithm.|	Externalizable provides control of serialization logic to programmer – to write custom logic.|
+| 02.|Serializable interface pass the responsibility of serialization to JVM and it\'s default algorithm.|	Externalizable provides control of serialization logic to programmer – to write custom logic.|
 | 03.|Mostly, default serialization is easy to implement, but has higher performance cost.|Serialization done using Externalizable, add more responsibility to programmer but often result in better performance.|
-| 04.|It’s hard to analyze and modify class structure because any change may break the serialization.|	It’s more easy to analyze and modify class structure because of complete control over serialization logic.|
+| 04.|It\'s hard to analyze and modify class structure because any change may break the serialization.|	It\'s more easy to analyze and modify class structure because of complete control over serialization logic.|
 | 05.|Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
 
 <div align="right">
@@ -1529,23 +1554,31 @@ java.io.NotSerializableException: This class cannot be Serialized
 ## Q. What are the ways to instantiate the Class class?
 
 **1. Using new keyword**
+
 ```java
 MyObject object = new MyObject();
 ```
+
 **2. Using Class.forName()**
+
 ```java
 MyObject object = (MyObject) Class.forName("subin.rnd.MyObject").newInstance();
 ```
+
 **3. Using clone()**
+
 ```java
 MyObject anotherObject = new MyObject();
 MyObject object = (MyObject) anotherObject.clone();
 ```
+
 **4. Using object deserialization**
+
 ```java
 ObjectInputStream inStream = new ObjectInputStream(anInputStream );
 MyObject object = (MyObject) inStream.readObject();
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -1615,6 +1648,7 @@ class UnboxingExample1 {
 A native method is a Java method (either an instance method or a class method) whose implementation is also written in another programming language such as C/C++. Moreover, a method marked as native cannot have a body and should end with a semicolon:
 
 **Main.java**
+
 ```java
 public class Main {
    public native int intMethod(int i);
@@ -1624,7 +1658,9 @@ public class Main {
    }
 }
 ```
+
 **Main.c**
+
 ```c
 #include <jni.h>
 #include "Main.h"
@@ -1635,6 +1671,7 @@ JNIEXPORT jint JNICALL Java_Main_intMethod(
 }
 ```
 **Compile and run**  
+
 ```
 javac Main.java
 javah -jni Main
@@ -1642,7 +1679,9 @@ gcc -shared -fpic -o libMain.so -I${JAVA_HOME}/include \
   -I${JAVA_HOME}/include/linux Main.c
 java -Djava.library.path=. Main
 ```
+
 Output
+
 ```
 4
 ```
@@ -1725,7 +1764,8 @@ DOM and SAX parser are extensively used to read and parse XML file in java and h
 
 ## Q. What is the difference between creating String as new() and literal?
 
-When you create String object using `new()` operator, it always create a new object in heap memory. On the other hand, if you create object using String literal syntax e.g. "Java", it may return an existing object from String pool (a cache of String object in Perm gen space, which is now moved to heap space in recent Java release), if it's already exists. Otherwise it will create a new string object and put in string pool for future re-use.
+When you create String object using `new()` operator, it always create a new object in heap memory. On the other hand, if you create object using String literal syntax e.g. "Java", it may return an existing object from String pool (a cache of String object in Perm gen space, which is now moved to heap space in recent Java release), if it\'s already exists. Otherwise it will create a new string object and put in string pool for future re-use.
+
 ```java
 String a = "abc"; 
 String b = "abc";
@@ -2142,7 +2182,7 @@ public class ClassLoaderTest {
 ## Q. Why string is immutable in java?
  
 
-The string is Immutable in Java because String objects are cached in String pool. Since cached String literals are shared between multiple clients there is always a risk, where one client's action would affect all another client. 
+The string is Immutable in Java because String objects are cached in String pool. Since cached String literals are shared between multiple clients there is always a risk, where one client\'s action would affect all another client. 
 
 Since string is immutable it can safely share between many threads and avoid any synchronization issues in java.
 
@@ -2182,7 +2222,7 @@ public class StringPool {
  
 Garbage collection works on **Mark** and **Sweep** algorithm. In Mark phase it detects all the unreachable objects and Sweep phase it reclaim the heap space used by the garbage objects and make the space available again to the program.
 
-There are methods like <code>System.gc()</code> and <code>Runtime.gc()</code> which is used to send request of Garbage collection to JVM but it’s not guaranteed that garbage collection will happen. If there is no memory space for creating a new object in Heap Java Virtual Machine throws <code>OutOfMemoryError</code> or <code>java.lang.OutOfMemoryError</code> heap space
+There are methods like <code>System.gc()</code> and <code>Runtime.gc()</code> which is used to send request of Garbage collection to JVM but it\'s not guaranteed that garbage collection will happen. If there is no memory space for creating a new object in Heap Java Virtual Machine throws <code>OutOfMemoryError</code> or <code>java.lang.OutOfMemoryError</code> heap space
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -2550,13 +2590,15 @@ In Java there are four types of references differentiated on the way by which th
 1. Phantom Reference
 
 **1. Strong Reference**: This is the default type/class of Reference Object. Any object which has an active strong reference are not eligible for garbage collection. The object is garbage collected only when the variable which was strongly referenced points to null.
+
 ```java
 StrongReferenceClass obj = new StrongReferenceClass();
 ```
 Here `obj` object is strong reference to newly created instance of MyClass, currently obj is active object so can't be garbage collected.
 
-**2. Weak Reference**: A weakly referenced object is cleared by the Garbage Collector when it’s weakly reachable.
+**2. Weak Reference**: A weakly referenced object is cleared by the Garbage Collector when it\'s weakly reachable.
 Weak reachability means that an object has neither strong nor soft references pointing to it. The object can be reached only by traversing a weak reference. To create such references `java.lang.ref.WeakReference` class is used.
+
 ```java
 /**
 * Java Code to illustrate Weak reference
@@ -2593,6 +2635,7 @@ Weak Reference Example!
 Weak Reference Example!
 ```
 **3. Soft Reference**: In Soft reference, even if the object is free for garbage collection then also its not garbage collected, until JVM is in need of memory badly.The objects gets cleared from the memory when JVM runs out of memory.To create such references `java.lang.ref.SoftReference` class is used.
+
 ```java
 /**
 * Java Code to illustrate Soft reference
@@ -2629,6 +2672,7 @@ Soft Reference Example!
 Soft Reference Example!
 ```
 **4. Phantom Reference**: The objects which are being referenced by phantom references are eligible for garbage collection. But, before removing them from the memory, JVM puts them in a queue called **reference queue**. They are put in a reference queue after calling finalize() method on them. To create such references `java.lang.ref.PhantomReference` class is used.
+
 ```java
 /**
 * Code to illustrate Phantom reference 
@@ -3013,6 +3057,7 @@ public class MainClass {
 	}
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -3028,8 +3073,8 @@ The Object class is the parent class of all the classes in java by default.
 <tr><td>public boolean equals(Object obj)</td><td> compares the given object to this object.</td></tr>
 <tr><td>protected Object clone() throws CloneNotSupportedException</td><td> creates and returns the exact copy (clone) of this object.</td></tr>
 <tr><td>public String toString()</td><td> returns the string representation of this object.</td></tr>
-<tr><td>public final void notify()</td><td> wakes up single thread, waiting on this object's monitor.</td></tr>
-<tr><td>public final void notifyAll()</td><td> wakes up all the threads, waiting on this object's monitor.</td></tr>
+<tr><td>public final void notify()</td><td> wakes up single thread, waiting on this object\'s monitor.</td></tr>
+<tr><td>public final void notifyAll()</td><td> wakes up all the threads, waiting on this object\'s monitor.</td></tr>
 <tr><td>public final void wait(long timeout)throws InterruptedException</td><td> causes the current thread to wait for the specified milliseconds, until another thread notifies (invokes notify() or notifyAll() method).</td></tr>
 <tr><td>public final void wait(long timeout,int nanos)throws InterruptedException</td><td>causes the current thread to wait for the specified milliseconds and nanoseconds, until another thread notifies (invokes notify() or notifyAll() method).</td></tr>
 <tr><td>public final void wait()throws InterruptedException</td><td> causes the current thread to wait, until another thread notifies (invokes notify() or notifyAll() method).</td></tr>
