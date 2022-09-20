@@ -22,8 +22,6 @@
 
 Exception is an error event that can happen during the execution of a program and disrupts its normal flow.
 
-**Types of Java Exceptions:**  
-
 **1. Checked Exception**:
 
 The classes which directly inherit **Throwable class** except RuntimeException and Error are known as checked exceptions e.g. IOException, SQLException etc. Checked exceptions are checked at compile-time.  
