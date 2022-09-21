@@ -1811,13 +1811,13 @@ java.io.NotSerializableException: This class cannot be Serialized
 ## Q. What is the difference between Serializable and Externalizable interface?
 
 
-|Sl.No |SERIALIZABLE |	EXTERNALIZABLE        |
-|----|----------------|-----------------------|
-| 01.|Serializable is a marker interface i.e. does not contain any method.|	Externalizable interface contains two methods writeExternal() and readExternal() which implementing classes MUST override.|
-| 02.|Serializable interface pass the responsibility of serialization to JVM and it\'s default algorithm.|	Externalizable provides control of serialization logic to programmer – to write custom logic.|
-| 03.|Mostly, default serialization is easy to implement, but has higher performance cost.|Serialization done using Externalizable, add more responsibility to programmer but often result in better performance.|
-| 04.|It\'s hard to analyze and modify class structure because any change may break the serialization.|	It\'s more easy to analyze and modify class structure because of complete control over serialization logic.|
-| 05.|Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
+|SERIALIZABLE    |	EXTERNALIZABLE        |
+|----------------|-----------------------|
+|Serializable is a marker interface i.e. does not contain any method.|	Externalizable interface contains two methods writeExternal() and readExternal() which implementing classes MUST override.|
+|Serializable interface pass the responsibility of serialization to JVM and it\'s default algorithm.|	Externalizable provides control of serialization logic to programmer – to write custom logic.|
+|Mostly, default serialization is easy to implement, but has higher performance cost.|Serialization done using Externalizable, add more responsibility to programmer but often result in better performance.|
+|It\'s hard to analyze and modify class structure because any change may break the serialization.|	It\'s more easy to analyze and modify class structure because of complete control over serialization logic.|
+|Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -1825,26 +1825,26 @@ java.io.NotSerializableException: This class cannot be Serialized
 
 ## Q. What are the ways to instantiate the Class class?
 
-**1. Using new keyword**
+**1. Using new keyword:**
 
 ```java
 MyObject object = new MyObject();
 ```
 
-**2. Using Class.forName()**
+**2. Using Class.forName():**
 
 ```java
 MyObject object = (MyObject) Class.forName("subin.rnd.MyObject").newInstance();
 ```
 
-**3. Using clone()**
+**3. Using clone():**
 
 ```java
 MyObject anotherObject = new MyObject();
 MyObject object = (MyObject) anotherObject.clone();
 ```
 
-**4. Using object deserialization**
+**4. Using object deserialization:**
 
 ```java
 ObjectInputStream inStream = new ObjectInputStream(anInputStream );
@@ -1857,60 +1857,74 @@ MyObject object = (MyObject) inStream.readObject();
 
 ## Q. What is the purpose of using javap?
 
-The javap command displays information about the fields, constructors and methods present in a class file. The javap command (also known as the Java Disassembler) disassembles one or more class files. 
+The **javap** command displays information about the fields, constructors and methods present in a class file. The javap command ( also known as the Java Disassembler ) disassembles one or more class files.
 
  ```java
-class Simple {  
-  public static void main(String args[]) {  
-    System.out.println("Hello World");  
-  }  
-}  
+ /**
+  * Java Disassembler
+  */
+class Simple {
+    public static void main(String args[]) {
+        System.out.println("Hello World");
+    }
+}
 ```
-```
+
+```cmd
 cmd> javap Simple.class  
 ```
+
 Output
-```
+
+```java
 Compiled from ".java"  
 class Simple {  
   Simple();  
   public static void main(java.lang.String[]);  
 }  
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. What are autoboxing and unboxing? When does it occur?
+## Q. What are autoboxing and unboxing?
 
 The automatic conversion of primitive data types into its equivalent Wrapper type is known as boxing and opposite operation is known as unboxing.
 
 **Example:** Autoboxing
 
 ```java
-class BoxingExample1 {  
-   public static void main(String args[]) {  
-      int a = 50;  
-      Integer a2 = new Integer(a); //Boxing  
-      Integer a3 = 5; //Boxing  
-      
-      System.out.println(a2+" "+a3);  
-   }   
-}  
-```
+/**
+ * Autoboxing
+ */
+class BoxingExample {
+    public static void main(String args[]) {
+        int a = 50;
+        Integer a2 = new Integer(a); // Boxing
+        Integer a3 = 5; // Boxing
 
-**Example:** Unboxing 
-
-```java
-class UnboxingExample1 {  
-   public static void main(String args[]) {  
-      Integer i = new Integer(50);  
-      int a = i;  
-          
-      System.out.println(a);  
-   }   
+        System.out.println(a2 + " " + a3);
+    }
 } 
 ```
+
+**Example:** Unboxing
+
+```java
+/**
+ * Unboxing
+ */
+class UnboxingExample {
+    public static void main(String args[]) {
+        Integer i = new Integer(50);
+        int a = i;
+
+        System.out.println(a);
+    }
+}
+```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
