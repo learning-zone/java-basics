@@ -2,7 +2,7 @@
 
 *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
-## Table of Contents
+## Related Interview Questions
 
 * *[Java 8 Interview Questions](java8-questions.md)*
 * *[Multithreading Interview Questions](multithreading-questions.md)*
@@ -15,6 +15,7 @@
 * *[Servlets Interview Questions](servlets-questions.md)*
 * *[Java Design Pattern Questions](java-design-pattern-questions.md)*
 * *[Java Multiple Choice Questions](java-multiple-choice-questions-answers.md)*
+* *[Spring Interview Questions](https://github.com/learning-zone/spring-interview-questions)*
 
 <br/>
 
@@ -35,7 +36,7 @@ The classes which inherit **RuntimeException** are known as unchecked exceptions
 Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, AssertionError etc.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Explain hierarchy of Java Exception classes?
@@ -102,7 +103,7 @@ public class CustomExceptionExample {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between aggregation and composition?
@@ -170,7 +171,7 @@ class Engine {
 *Note: "final" keyword is used in Composition to make sure child variable is initialized.*
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is difference between Heap and Stack Memory in java?
@@ -203,7 +204,7 @@ As soon as method ends, the block becomes unused and become available for next m
 |Allocation/Deallocation| This Memory is automatically allocated and deallocated when a method is called and returned respectively|Heap space is allocated when new objects are created and deallocated by Gargabe Collector when they are no longer referenced |
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is JVM and is it platform independent?
@@ -213,7 +214,7 @@ Java Virtual Machine (JVM) is a specification that provides runtime environment 
 The JVM is not platform independent. Java Virtual Machine (JVM) provides the environment to execute the java file(. Class file). So at the end it's depends on kernel and kernel is differ from OS (Operating System) to OS. The JVM is used to both translate the bytecode into the machine language for a particular computer and actually execute the corresponding machine-language instructions as well.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is JIT compiler in Java?
@@ -223,7 +224,7 @@ The Just-In-Time (JIT) compiler is a component of the runtime environment that i
 Java programs consists of classes, which contain platform-neutral bytecodes that can be interpreted by a JVM on many different computer architectures. At run time, the JVM loads the class files, determines the semantics of each individual bytecode, and performs the appropriate computation. The additional processor and memory usage during interpretation means that a Java application performs more slowly than a native application. The JIT compiler helps improve the performance of Java programs by compiling bytecodes into native machine code at run time. The JIT compiler is enabled by default. When a method has been compiled, the JVM calls the compiled code of that method directly instead of interpreting it. 
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is Classloader in Java?
@@ -245,7 +246,7 @@ It loads classes from the JDK extensions directly usually `JAVA_HOME/lib/ext` di
 It loads application specific classes from the CLASSPATH environment variable. It can be set while invoking program using -cp or classpath command line options.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Java Compiler is stored in JDK, JRE or JVM?
@@ -267,7 +268,7 @@ Java Runtime Environment provides a platform to execute java programs. JRE consi
 </p>
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between factory and abstract factory pattern?
@@ -300,7 +301,7 @@ Abstract Factory patterns work around a super-factory which creates other factor
 In Abstract Factory pattern an interface is responsible for creating a factory of related objects without explicitly specifying their classes. Each generated factory can give the objects as per the Factory pattern.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are the methods used to implement for key Object in HashMap?
@@ -314,7 +315,7 @@ Class inherits methods from the following classes in terms of HashMap
 * java.util.Map
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is difference between the Inner Class and Sub Class?
@@ -360,7 +361,7 @@ class HybridCar extends Car {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Distinguish between static loading and dynamic class loading?
@@ -396,7 +397,7 @@ Class.forName (String className);
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between transient and volatile variable in Java?
@@ -439,7 +440,7 @@ public class MyRunnable implements Runnable {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How many types of memory areas are allocated by JVM?
@@ -466,7 +467,7 @@ JVM is a program which takes Java bytecode and converts the byte code (line by l
 **6. Native Method Stack**: It contains all the native methods used in the application.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How can constructor chaining be done using this keyword?
@@ -573,7 +574,7 @@ Calling parameterized constructor of derived
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Can you declare the main method as final?
@@ -605,7 +606,7 @@ Cannot override the final method from Test.
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between compile-time polymorphism and runtime polymorphism?
@@ -688,7 +689,7 @@ Overriding Method
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Can you have virtual functions in Java?
@@ -714,7 +715,7 @@ class ACMEBicycle implements Bicycle {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is covariant return type?
@@ -754,7 +755,7 @@ Subclass
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between abstraction and encapsulation?
@@ -780,7 +781,7 @@ Abstraction is about hiding unwanted details while giving out most essential det
 </tbody></table>
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Can we use private or protected member variables in an interface?
@@ -810,7 +811,7 @@ public interface Test {
 * An interface provide a way for the client to interact with the object. If variables were not public, the clients would not have access to them. that is why variable are **public**
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. When can an object reference be cast to a Java interface reference?
@@ -839,7 +840,7 @@ public class TestInterface implements MyInterface {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Give the hierarchy of InputStream and OutputStream classes?
@@ -926,7 +927,7 @@ public class CopyFile {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the purpose of the Runtime class and System class?
@@ -968,7 +969,7 @@ public class RuntimeTest
 The purpose of the System class is to provide access to system resources. It contains accessibility to standard input, standart output, error output streams, current time in millis, terminating the application, etc.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are assertions in Java?
@@ -1003,7 +1004,7 @@ public class Example {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between abstract class and interface?
@@ -1021,7 +1022,7 @@ Abstract class and interface both are used to achieve abstraction where we can d
 |A Java abstract class can have class members like private, protected, etc.|Members of a Java interface are public by default.|
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are Wrapper classes?
@@ -1076,7 +1077,7 @@ Output
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is Java Reflection API?
@@ -1174,7 +1175,7 @@ Test
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How many types of constructors are used in Java?
@@ -1236,7 +1237,7 @@ public class Car {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are the restrictions that are applied to the Java static methods?
@@ -1287,7 +1288,7 @@ overridden method is static
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the final variable, final class, and final blank variable?
@@ -1392,7 +1393,7 @@ class ABC extends XYZ {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the static import?
@@ -1415,7 +1416,7 @@ class StaticImportExample {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Name some classes present in java.util.regex package?
@@ -1449,7 +1450,7 @@ public class Index {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How will you invoke any external process in Java?
@@ -1481,7 +1482,7 @@ class ExternalProcessExample {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the purpose of using BufferedInputStream and BufferedOutputStream classes?
@@ -1587,7 +1588,7 @@ This is an example of writing data to a file
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How to set the Permissions to a file in Java?
@@ -1643,7 +1644,7 @@ public class FilePermissions {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. In Java, How many ways you can take input from the console?
@@ -1721,7 +1722,7 @@ public class Sample {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How can you avoid serialization in child class if the base class is implementing the Serializable interface?
@@ -1805,7 +1806,7 @@ java.io.NotSerializableException: This class cannot be Serialized
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between Serializable and Externalizable interface?
@@ -1820,7 +1821,7 @@ java.io.NotSerializableException: This class cannot be Serialized
 |Default serialization does not call any class constructor.|A public no-arg constructor is required while using Externalizable interface. |
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are the ways to instantiate the Class class?
@@ -1852,7 +1853,7 @@ MyObject object = (MyObject) inStream.readObject();
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the purpose of using javap?
@@ -1885,7 +1886,7 @@ class Simple {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are autoboxing and unboxing?
@@ -1926,7 +1927,7 @@ class UnboxingExample {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is a native method?
@@ -1975,7 +1976,7 @@ Output
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is immutable object?
@@ -2008,7 +2009,7 @@ public class DateContainer {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. The difference between Inheritance and Composition?
@@ -2047,7 +2048,7 @@ class Apple {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. The difference between DOM and SAX parser in Java?
@@ -2063,7 +2064,7 @@ DOM and SAX parser are extensively used to read and parse XML file in java and h
 |suitable	      |better suitable for smaller and efficient memory|	SAX is suitable for larger XML doc|
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between creating String as new() and literal?
@@ -2089,7 +2090,7 @@ System.out.println(c == d);  // false
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How can we create an immutable class in Java?
@@ -2123,7 +2124,7 @@ public final class Employee {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is difference between String, StringBuffer and StringBuilder?
@@ -2167,7 +2168,7 @@ public class BuilderTest {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is a Memory Leak?
@@ -2208,7 +2209,7 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 * Through `finalize()` Methods
 * Calling `String.intern()` on Long String
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Why String is popular HashMap key in Java?
@@ -2216,7 +2217,7 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 Since String is immutable, its hashcode is cached at the time of creation and it doesn\'t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is difference between Error and Exception?
@@ -2233,7 +2234,7 @@ Since String is immutable, its hashcode is cached at the time of creation and it
 |Example	               |OutOfMemory, StackOverFlow.|Checked Exceptions: NoSuchMethod, ClassNotFound.Unchecked Exceptions: NullPointer, IndexOutOfBounds.|
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Explain about Exception Propagation?
@@ -2263,7 +2264,7 @@ class TestExceptionPropagation {
 }  
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are different scenarios causing "Exception in thread main"?
@@ -2279,7 +2280,7 @@ Some of the common main thread exception are as  follows:
 * **Exception in thread "main" java.lang.ArithmeticException**: Whenever any exception is thrown from main method, it prints the exception is console. The first part explains that exception is thrown from main method, second part prints the exception class name and then after a colon, it prints the exception message.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are the differences between throw and throws?
@@ -2340,7 +2341,7 @@ You shouldn\'t divide number by zero
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. The difference between Serial and Parallel Garbage Collector?
@@ -2356,7 +2357,7 @@ Turn on the `-XX:+UseSerialGC` JVM argument to use the serial garbage collector.
 Parallel garbage collector is also called as throughput collector. It is the default garbage collector of the JVM. Unlike serial garbage collector, this uses multiple threads for garbage collection. Similar to serial garbage collector this also freezes all the application threads while performing garbage collection.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is difference between WeakReference and SoftReference in Java?
@@ -2457,7 +2458,7 @@ public class Example
 } 
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is a compile time constant in Java? What is the risk of using it?
@@ -2476,7 +2477,7 @@ They are replaced with actual values at compile time because compiler know their
 private final int x = 10;
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How bootstrap class loader works in java?
@@ -2517,7 +2518,7 @@ public class ClassLoaderTest {
 }
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Why string is immutable in java?
@@ -2528,7 +2529,7 @@ The string is Immutable in Java because String objects are cached in String pool
 Since string is immutable it can safely share between many threads and avoid any synchronization issues in java.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is Java String Pool?
@@ -2556,7 +2557,7 @@ public class StringPool {
 }
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How Garbage collector algorithm works?
@@ -2566,7 +2567,7 @@ Garbage collection works on **Mark** and **Sweep** algorithm. In Mark phase it d
 There are methods like <code>System.gc()</code> and <code>Runtime.gc()</code> which is used to send request of Garbage collection to JVM but it\'s not guaranteed that garbage collection will happen. If there is no memory space for creating a new object in Heap Java Virtual Machine throws <code>OutOfMemoryError</code> or <code>java.lang.OutOfMemoryError</code> heap space
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How to create marker interface?
@@ -2604,7 +2605,7 @@ class Main {
 }
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How serialization works in java?
@@ -2702,7 +2703,7 @@ public class SerialExample {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Java Program to Implement Singly Linked List?
@@ -2786,7 +2787,7 @@ Nodes of singly linked list:
 10 20 30 40
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. While overriding a method can you throw another exception or broader exception?
@@ -2819,7 +2820,7 @@ class B extends A {
 }
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is checked, unchecked exception and errors?
@@ -2906,7 +2907,7 @@ Java Result: 1
 Example: **OutOfMemoryError, VirtualMachineError, AssertionError** etc.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is difference between ClassNotFoundException and NoClassDefFoundError?
@@ -2918,7 +2919,7 @@ Example: **OutOfMemoryError, VirtualMachineError, AssertionError** etc.
 `NoClassDefFoundError` is an error that occurs when a particular class is present at compile time, but was missing at run time.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What do we mean by weak reference?
@@ -2965,7 +2966,7 @@ Weak Reference Example!
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What do you mean Run time Polymorphism?
@@ -3027,7 +3028,7 @@ Output
 Overriding Method
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. If I do not have Explicit constructor in parent class and having in child class, while calling the child constructor jvm automatically calls Implicit Constructor of parent class?
@@ -3035,7 +3036,7 @@ Overriding Method
 If the subclass constructor does not specify which superclass constructor to invoke then the compiler will automatically call the accessible no-args constructor in the superclass.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are the different types of JDBC Driver?
@@ -3049,7 +3050,7 @@ There are 4 types of JDBC drivers:
 1. **Thin driver**: The thin driver converts JDBC calls directly into the vendor-specific database protocol. That is why it is known as thin driver. It is fully written in Java language.
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How Encapsulation concept implemented in JAVA?
@@ -3084,7 +3085,7 @@ public class MainClass {
 }
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. Do you know Generics? How did you used in your coding?
@@ -3139,7 +3140,7 @@ Generic Class Example !
 100
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What is difference between String, StringBuilder and StringBuffer?
@@ -3195,7 +3196,7 @@ StringBuilder: World
 StringBuffer: World
 ```
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How can we create a object of a class without using new operator?
@@ -3316,7 +3317,7 @@ public class MainClass {
 ```
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. What are methods of Object Class?
@@ -3339,7 +3340,7 @@ The Object class is the parent class of all the classes in java by default.
 </tbody></table>
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 #### Q. What is copyonwritearraylist in java?
@@ -3358,7 +3359,7 @@ The Object class is the parent class of all the classes in java by default.
 *ToDo*
 
 <div align="right">
-    <b><a href="#table-of-contents">↥ back to top</a></b>
+    <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 
