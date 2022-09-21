@@ -1081,63 +1081,80 @@ Output
 
 ## Q. What is Java Reflection API?
 
-Java Reflection is the process of analyzing and modifying all the capabilities of a class at runtime. Reflection API in Java is used to manipulate class and its members which include fields, methods, constructor, etc. at runtime. The **java.lang.Class** class provides many methods that can be used to get metadata, examine and change the run time behavior of a class.
+Reflection API in Java is used to manipulate class and its members which include fields, methods, constructor, etc. at **runtime**. The **java.lang.Class** class provides many methods that can be used to get metadata, examine and change the run time behavior of a class.
 
-There are 3 ways to get the instance of Class class. They are as follows:
+There are 3 ways to get the instance of Class class.
 
 * forName() method of Class class
 * getClass() method of Object class
 * the .class syntax
 
-**1. forName() method of Class class:**  
+**1. forName() method:**  
 
 * is used to load the class dynamically.
 * returns the instance of Class class.
 * It should be used if you know the fully qualified name of class.This cannot be used for primitive types.
 
 ```java
-class Simple{}  
-  
-class Test {  
-   public static void main(String args[]) {  
-      Class c = Class.forName("Simple");  
-      System.out.println(c.getName());  
-   }  
-}  
+/**
+ * forName()
+ */
+class Simple {
+}
+
+class Test {
+    public static void main(String args[]) {
+        Class c = Class.forName("Simple");
+        System.out.println(c.getName());
+    }
+}
 ```
+
 Output
-```
+
+```java
 Simple
 ```
 
-**2. getClass() method of Object class:**  
+**2. getClass() method:**  
 
 It returns the instance of Class class. It should be used if you know the type. Moreover, it can be used with primitives.
 
 ```java
-class Simple{}  
-  
-class Test {  
-  void printName(Object obj) {  
-    Class c=obj.getClass();    
-    System.out.println(c.getName());  
-  }  
-  public static void main(String args[]) {  
-    Simple s=new Simple();  
-    Test t=new Test();  
-    t.printName(s);  
-  }  
-}  
-```
-Output
-```
-Simple
-```
-**3. The .class syntax:**  
+/**
+ * getClass
+ */
+class Simple {
+}
 
-If a type is available but there is no instance then it is possible to obtain a Class by appending ".class" to the name of the type.It can be used for primitive data type also.
+class Test {
+    void printName(Object obj) {
+        Class c = obj.getClass();
+        System.out.println(c.getName());
+    }
+
+    public static void main(String args[]) {
+        Simple s = new Simple();
+        Test t = new Test();
+        t.printName(s);
+    }
+} 
+```
+
+Output
 
 ```java
+Simple
+```
+
+**3. The .class syntax:**  
+
+If a type is available but there is no instance then it is possible to obtain a Class by appending ".class" to the name of the type. It can be used for primitive data type also.
+
+```java
+/**
+ * .class Syntax
+ */
 class Test {  
   public static void main(String args[]) {  
    Class c = boolean.class;   
@@ -1148,9 +1165,10 @@ class Test {
  }  
 }  
 ```
+
 Output
 
-```
+```java
 boolean
 Test
 ```
