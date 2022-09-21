@@ -3276,9 +3276,9 @@ The Object class is the parent class of all the classes in java by default.
 #### Q. Give me an example of design pattern which is based upon open closed principle?
 #### Q. What is Law of Demeter violation? Why it matters?
 #### Q. What is differences between External Iteration and Internal Iteration?
-#### Q. What is a copy constructor in Java?
 #### Q. What are the different access specifiers available in java?
 #### Q. What is runtime polymorphism in java?
+#### Q. What is a private constructor?
 
 *ToDo*
 
