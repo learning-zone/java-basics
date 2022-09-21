@@ -1933,19 +1933,20 @@ class UnboxingExample {
 
 A native method is a Java method (either an instance method or a class method) whose implementation is also written in another programming language such as C/C++. Moreover, a method marked as native cannot have a body and should end with a semicolon:
 
-**Main.java**
+**Main.java:**
 
 ```java
 public class Main {
-   public native int intMethod(int i);
-   public static void main(String[] args) {
-      System.loadLibrary("Main");
-      System.out.println(new Main().intMethod(2));
-   }
+    public native int intMethod(int i);
+
+    public static void main(String[] args) {
+        System.loadLibrary("Main");
+        System.out.println(new Main().intMethod(2));
+    }
 }
 ```
 
-**Main.c**
+**Main.c:**
 
 ```c
 #include <jni.h>
@@ -1956,9 +1957,10 @@ JNIEXPORT jint JNICALL Java_Main_intMethod(
   return i * i;
 }
 ```
-**Compile and run**  
 
-```
+**Compile and Run:**  
+
+```java
 javac Main.java
 javah -jni Main
 gcc -shared -fpic -o libMain.so -I${JAVA_HOME}/include \
@@ -1968,9 +1970,10 @@ java -Djava.library.path=. Main
 
 Output
 
-```
+```java
 4
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
