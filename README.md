@@ -1251,6 +1251,8 @@ There are a few restrictions imposed on a static method
 * There is no need to create an object of the class to invoke the static method.
 * A static method cannot be overridden in a subclass
 
+**Example:**
+
 ```java
 /**
  * Static Methods
