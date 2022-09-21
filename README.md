@@ -1454,16 +1454,21 @@ public class Index {
 
 ## Q. How will you invoke any external process in Java?
 
-We can invoke the external process in Java using **exec()** method of **Runtime Class**.
+In java, external process can be invoked using **exec()** method of **Runtime Class**.
+
+**Example:**
 
 ```java
-class ExternalProcessExample 
-{ 
+/**
+ * exec()
+ */
+import java.io.IOException;
+
+class ExternalProcessExample {
     public static void main(String[] args) { 
         try { 
             // Command to create an external process 
-            String command = "C:\Program Files (x86)"+ 
-                 "\Google\Chrome\Application\chrome.exe"; 
+             String command = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"; 
   
             // Running the above command 
             Runtime run  = Runtime.getRuntime(); 
@@ -1471,9 +1476,10 @@ class ExternalProcessExample
         } catch (IOException e) { 
             e.printStackTrace(); 
         } 
-    } 
-} 
+    }
+}
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
