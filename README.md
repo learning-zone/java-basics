@@ -2015,28 +2015,37 @@ public class DateContainer {
 
 Though both Inheritance and Composition provides code reusablility, main difference between Composition and Inheritance in Java is that Composition allows reuse of code without extending it but for Inheritance you must extend the class for any reuse of code or functionality. Inheritance is an **"is-a"** relationship. Composition is a **"has-a"**.
 
-**Example:** Inheritance 
+**Example:** Inheritance
 
 ```java
+/**
+ * Inheritance
+ */
 class Fruit {
-   //...
+    // ...
 }
+
 class Apple extends Fruit {
-   //...
+    // ...
 }
 ```
 
-**Example:** Composition 
+**Example:** Composition
 
 ```java
+/**
+ * Composition
+ */
 class Fruit {
-   //...
+    // ...
 }
+
 class Apple {
-   private Fruit fruit = new Fruit();
-   //...
+    private Fruit fruit = new Fruit();
+    // ...
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
