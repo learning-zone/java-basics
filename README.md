@@ -1631,7 +1631,7 @@ public class FilePermissions {
         perms.add(PosixFilePermission.GROUP_READ);
         perms.add(PosixFilePermission.GROUP_WRITE);
         perms.add(PosixFilePermission.GROUP_EXECUTE);
-        
+
         // add others permissions
         perms.add(PosixFilePermission.OTHERS_READ);
         perms.add(PosixFilePermission.OTHERS_WRITE);
@@ -1648,64 +1648,78 @@ public class FilePermissions {
 
 ## Q. In Java, How many ways you can take input from the console?
 
-In Java, there are three different ways for reading input from the user in the command line environment(console).
+In Java, there are three different ways for reading input from the user in the command line environment ( console ).
 
-**1. Using Buffered Reader Class**: This method is used by wrapping the System.in (standard input stream) in an InputStreamReader which is wrapped in a BufferedReader, we can read input from the user in the command line.
+**1. Using Buffered Reader Class:**
 
-```java
-import java.io.BufferedReader; 
-import java.io.IOException; 
-import java.io.InputStreamReader; 
-public class Test  
-{ 
-    public static void main(String[] args) throws IOException { 
-        //Enter data using BufferReader 
-        BufferedReader reader =  
-                   new BufferedReader(new InputStreamReader(System.in)); 
-         
-        // Reading data using readLine 
-        String name = reader.readLine(); 
-  
-        // Printing the read line 
-        System.out.println(name);         
-    } 
-} 
-```
-**2. Using Scanner Class**: The main purpose of the Scanner class is to parse primitive types and strings using regular expressions, however it is also can be used to read input from the user in the command line.
+This method is used by wrapping the System.in ( standard input stream ) in an InputStreamReader which is wrapped in a BufferedReader, we can read input from the user in the command line.
 
 ```java
-import java.util.Scanner; 
-  
-class GetInputFromUser 
-{ 
-    public static void main(String args[]) { 
-        // Using Scanner for Getting Input from User 
-        Scanner in = new Scanner(System.in); 
-  
-        String s = in.nextLine(); 
-        System.out.println("You entered string "+s); 
-  
-        int a = in.nextInt(); 
-        System.out.println("You entered integer "+a); 
-  
-        float b = in.nextFloat(); 
-        System.out.println("You entered float "+b); 
-    } 
-} 
-```  
+/**
+ * Buffered Reader Class
+ */
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-**3. Using Console Class**: It has been becoming a preferred way for reading user\'s input from the command line. In addition, it can be used for reading password-like input without echoing the characters entered by the user; the format string syntax can also be used (like System.out.printf()).
+public class Test {
+    public static void main(String[] args) throws IOException {
+        // Enter data using BufferReader
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-```java
-public class Sample  
-{ 
-   public static void main(String[] args) {         
-      // Using Console to input data from user 
-      String name = System.console().readLine(); 
-      System.out.println(name); 
-   } 
+        // Reading data using readLine
+        String name = reader.readLine();
+
+        // Printing the read line
+        System.out.println(name);
+    }
 }
 ```
+
+**2. Using Scanner Class:**
+
+The main purpose of the Scanner class is to parse primitive types and strings using regular expressions, however it is also can be used to read input from the user in the command line.
+
+```java
+/**
+ * Scanner Class
+ */
+import java.util.Scanner;
+
+class GetInputFromUser {
+    public static void main(String args[]) {
+        // Using Scanner for Getting Input from User
+        Scanner in = new Scanner(System.in);
+
+        String s = in.nextLine();
+        System.out.println("You entered string " + s);
+
+        int a = in.nextInt();
+        System.out.println("You entered integer " + a);
+
+        float b = in.nextFloat();
+        System.out.println("You entered float " + b);
+    }
+}
+```  
+
+**3. Using Console Class:**
+
+It has been becoming a preferred way for reading user\'s input from the command line. In addition, it can be used for reading password-like input without echoing the characters entered by the user; the format string syntax can also be used ( like System.out.printf() ).
+
+```java
+/**
+ * Console Class
+ */
+public class Sample {
+    public static void main(String[] args) {
+        // Using Console to input data from user
+        String name = System.console().readLine();
+        System.out.println(name);
+    }
+}
+```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
