@@ -1400,15 +1400,20 @@ class ABC extends XYZ {
 The static import feature of Java 5 facilitate the java programmer to access any static member of a class directly. There is no need to qualify it by the class name.
 
 ```java
-import static java.lang.System.*;    
+/**
+ * Static Import
+ */
+import static java.lang.System.*;
+
 class StaticImportExample {
 
-  public static void main(String args[]) {    
-   out.println("Hello");//Now no need of System.out  
-   out.println("Java");  
-  }   
-}  
+    public static void main(String args[]) {
+        out.println("Hello");// Now no need of System.out
+        out.println("Java");
+    }
+}
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
