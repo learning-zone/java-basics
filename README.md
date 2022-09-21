@@ -1978,7 +1978,7 @@ Output
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. What is immutable object? Can you write immutable object?
+## Q. What is immutable object?
 
 Immutable objects are objects that don\'t change. A Java immutable object must have all its fields be internal, private final fields. It must not implement any setters. It needs a constructor that takes a value for every single field.
 
@@ -1991,16 +1991,22 @@ Immutable objects are objects that don\'t change. A Java immutable object must h
 * Don\'t allow subclasses to override methods.
 
 ```java
+/**
+ * Immutable Object
+ */
 public class DateContainer {
-  private final Date date;
-  public DateContainer() {
-      this.date = new Date();
-  }
-  public Date getDate() {
-    return new Date(date.getTime());
-  }
+    private final Date date;
+
+    public DateContainer() {
+        this.date = new Date();
+    }
+
+    public Date getDate() {
+        return new Date(date.getTime());
+    }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
