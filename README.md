@@ -1437,20 +1437,13 @@ The Java Regex or Regular Expression is an API to define a pattern for searching
  */
 import java.util.regex.*;
 
-public class RegexExample {
+public class Index {
     public static void main(String args[]) {
-        // 1st way
-        Pattern p = Pattern.compile(".s");// . represents single character
-        Matcher m = p.matcher("as");
-        boolean b = m.matches();
 
-        // 2nd way
-        boolean b2 = Pattern.compile(".s").matcher("as").matches();
+        // Pattern, String
+        boolean b = Pattern.matches(".s", "as");
 
-        // 3rd way
-        boolean b3 = Pattern.matches(".s", "as");
-
-        System.out.println(b + " " + b2 + " " + b3);
+        System.out.println("Match: " + b);
     }
 }
 ```
