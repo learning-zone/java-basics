@@ -1013,7 +1013,7 @@ Abstract class and interface both are used to achieve abstraction where we can d
 |Abstract Class               |Interface                        |
 |-----------------------------|---------------------------------|
 |Abstract class can have abstract and non-abstract methods.|Interface can have only abstract methods. Since Java 8, it can have default and static methods also.|
-|Abstract class doesn't support multiple inheritance.|Interface supports multiple inheritance.|
+|Abstract class doesn\'t support multiple inheritance.|Interface supports multiple inheritance.|
 |Abstract class can have final, non-final, static and non-static variables.|Interface has only static and final variables.|
 |Abstract class can provide the implementation of interface.|Interface can\'t provide the implementation of abstract class.|
 |The abstract keyword is used to declare abstract class.|The interface keyword is used to declare interface.|
@@ -1836,15 +1836,15 @@ Output
 
 ## Q. What is immutable object? Can you write immutable object?
 
-Immutable objects are objects that don't change. A Java immutable object must have all its fields be internal, private final fields. It must not implement any setters. It needs a constructor that takes a value for every single field.
+Immutable objects are objects that don\'t change. A Java immutable object must have all its fields be internal, private final fields. It must not implement any setters. It needs a constructor that takes a value for every single field.
 
-**Creating an Immutable Object**  
+**Creating an Immutable Object:**  
 
 * Do not add any setter method
 * Declare all fields final and private
 * If a field is a mutable object create defensive copies of it for getter methods
 * If a mutable object passed to the constructor must be assigned to a field create a defensive copy of it
-* Don't allow subclasses to override methods.
+* Don\'t allow subclasses to override methods.
 
 ```java
 public class DateContainer {
@@ -1928,7 +1928,7 @@ System.out.println(c == d);  // false
 
 Immutable class means that once an object is created, we cannot change its content. In Java, all the wrapper classes (like Integer, Boolean, Byte, Short) and String class is immutable. 
 
-**Rules to create immutable classes**  
+**Rules to create immutable classes:**  
 
 * The class must be declared as final (So that child classes can\'t be created)
 * Data members in the class must be declared as final (So that we can\'t change the value of it after object creation)
@@ -2085,9 +2085,13 @@ class TestExceptionPropagation {
 ## Q. What are different scenarios causing "Exception in thread main"?
 
 Some of the common main thread exception are as  follows:
+
 * **Exception in thread main java.lang.UnsupportedClassVersionError**: This exception comes when your java class is compiled from another JDK version and you are trying to run it from another java version.
+
 * **Exception in thread main java.lang.NoClassDefFoundError**: There are two variants of this exception. The first one is where you provide the class full name with .class extension. The second scenario is when Class is not found.
+
 * **Exception in thread main java.lang.NoSuchMethodError: main**: This exception comes when you are trying to run a class that doesn\'t have main method.
+
 * **Exception in thread "main" java.lang.ArithmeticException**: Whenever any exception is thrown from main method, it prints the exception is console. The first part explains that exception is thrown from main method, second part prints the exception class name and then after a colon, it prints the exception message.
 
 <div align="right">
@@ -2098,7 +2102,8 @@ Some of the common main thread exception are as  follows:
 
 **Throw** keyword is used in the method body to throw an exception, while **throws** is used in method signature to declare the exceptions that can occur in the statements present in the method.
 
-**Throw Example**  
+**Throw Example:**
+
 ```java
 public class ThrowExample {  
    void checkAge(int age) {  
@@ -2114,14 +2119,18 @@ public class ThrowExample {
    }  
 }
 ```
+
 Output
-```
+
+```java
 Exception in thread "main" java.lang.ArithmeticException: 
 Not Eligible for voting
 at Example1.checkAge(Example1.java:4)
 at Example1.main(Example1.java:10)
 ```
-**Throws Example**  
+
+**Throws Example:**  
+
 ```java
 public class ThrowsExample {  
    int division(int a, int b) throws ArithmeticException {  
@@ -2139,10 +2148,13 @@ public class ThrowsExample {
    }  
 }
 ```
+
 Output
+
+```java
+You shouldn\'t divide number by zero
 ```
-You shouldn't divide number by zero
-```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -2739,7 +2751,7 @@ In Java there are four types of references differentiated on the way by which th
 ```java
 StrongReferenceClass obj = new StrongReferenceClass();
 ```
-Here `obj` object is strong reference to newly created instance of MyClass, currently obj is active object so can't be garbage collected.
+Here `obj` object is strong reference to newly created instance of MyClass, currently obj is active object so can\'t be garbage collected.
 
 **2. Weak Reference**: A weakly referenced object is cleared by the Garbage Collector when it\'s weakly reachable.
 Weak reachability means that an object has neither strong nor soft references pointing to it. The object can be reached only by traversing a weak reference. To create such references `java.lang.ref.WeakReference` class is used.
@@ -2980,7 +2992,7 @@ public class MainClass {
 `Generics` allows type (Integer, String, … etc and user defined types) to be a parameter to methods, classes and interfaces. For example, classes like HashSet, ArrayList, HashMap, etc use generics very well.
 
 **Advantages**
-* **Type-safety**: We can hold only a single type of objects in generics. It doesn't allow to store other objects.
+* **Type-safety**: We can hold only a single type of objects in generics. It doesn\'t allow to store other objects.
 * **Type Casting**: There is no need to typecast the object.
 * **Compile-Time Checking**: It is checked at compile time so problem will not occur at runtime.
 
