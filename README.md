@@ -931,9 +931,41 @@ public class CopyFile {
 
 ## Q. What is the purpose of the Runtime class and System class?
 
-**Runtime Class**: The purpose of the Runtime class is to provide access to the Java runtime system. The runtime information like memory availability, invoking the garbage collector, etc.
+**1. Runtime Class:**
 
-**System Class**: The purpose of the System class is to provide access to system resources. It contains accessibility to standard input, standart output, error output streams, current time in millis, terminating the application, etc.
+The **java.lang.Runtime** class is a subclass of Object class, provide access to the Java runtime system. The runtime information like memory availability, invoking the garbage collector, etc.
+
+**Example:**
+
+```java
+/**
+ * Runtime Class
+ */
+public class RuntimeTest 
+{
+    static class Message extends Thread {
+        public void run() {
+            System.out.println(" Exit");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            Runtime.getRuntime().addShutdownHook(new Message());
+            System.out.println(" Program Started...");
+            System.out.println(" Wait for 5 seconds...");
+            Thread.sleep(5000);
+            System.out.println(" Program Ended...");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+**2. System Class:**
+
+The purpose of the System class is to provide access to system resources. It contains accessibility to standard input, standart output, error output streams, current time in millis, terminating the application, etc.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
