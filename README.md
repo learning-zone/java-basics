@@ -1189,14 +1189,17 @@ In Java, a constructor is a block of codes similar to the method. It is called w
 **Example:** Default Constructor (or) no-arg constructor
 
 ```java
-public class Car 
-{
+/**
+ * Default Constructor
+ */
+public class Car {
     Car() {
-      System.out.println("Default Constructor of Car class called");
+        System.out.println("Default Constructor of Car class called");
     }
+
     public static void main(String args[]) {
-      //Calling the default constructor
-      Car c = new Car();
+        // Calling the default constructor
+        Car c = new Car();
     }
 }
 ```
@@ -1210,20 +1213,24 @@ Default Constructor of Car class called
 **Example:** Parameterized Constructor
 
 ```java
-public class Car 
-{
+/**
+ * Parameterized Constructor
+ */
+public class Car {
     String carColor;
+
     Car(String carColor) {
         this.carColor = carColor;
     }
-    
-    public void disp() {
-        System.out.println("Color of the Car is : "+carColor);
+
+    public void display() {
+        System.out.println("Color of the Car is : " + carColor);
     }
+
     public static void main(String args[]) {
-        //Calling the parameterized constructor
+        // Calling the parameterized constructor
         Car c = new Car("Blue");
-        c.disp();
+        c.display();
     }
 }
 ```
