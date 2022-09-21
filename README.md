@@ -2052,7 +2052,7 @@ class Apple {
 
 ## Q. The difference between DOM and SAX parser in Java?
 
-DOM and SAX parser are extensively used to read and parse XML file in java and have their own set of advantage and disadvantage. 
+DOM and SAX parser are extensively used to read and parse XML file in java and have their own set of advantage and disadvantage.
 
 |                 |DOM (Document Object Model)     |Parser	SAX (Simple API for XML) Parser           |
 |-----------------|--------------------------------|--------------------------------------------------|
@@ -2068,17 +2068,26 @@ DOM and SAX parser are extensively used to read and parse XML file in java and h
 
 ## Q. What is the difference between creating String as new() and literal?
 
-When you create String object using `new()` operator, it always create a new object in heap memory. On the other hand, if you create object using String literal syntax e.g. "Java", it may return an existing object from String pool (a cache of String object in Perm gen space, which is now moved to heap space in recent Java release), if it\'s already exists. Otherwise it will create a new string object and put in string pool for future re-use.
+When you create String object using `new()` operator, it always create a new object in heap memory. On the other hand, if you create object using String literal syntax e.g. "Java", it may return an existing object from String pool ( a cache of String object in Perm gen space, which is now moved to heap space in recent Java release ), if it\'s already exists. Otherwise it will create a new string object and put in string pool for future re-use.
+
+**Example:**
 
 ```java
+/**
+ * String literal
+ */
 String a = "abc"; 
 String b = "abc";
 System.out.println(a == b);  // true
 
+/**
+ * Using new()
+ */
 String c = new String("abc");
 String d = new String("abc");
 System.out.println(c == d);  // false
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
