@@ -1592,9 +1592,14 @@ This is an example of writing data to a file
 
 ## Q. How to set the Permissions to a file in Java?
 
-Java 7 has introduced PosixFilePermission Enum and **java.nio.file.Files** includes a method setPosixFilePermissions(Path path, `Set<PosixFilePermission> perms`) that can be used to set file permissions easily.
+Java 7 has introduced PosixFilePermission Enum and **java.nio.file.Files** includes a method setPosixFilePermissions( Path path, `Set<PosixFilePermission> perms` ) that can be used to set file permissions easily.
+
+**Example:**
 
 ```java
+/**
+ * FilePermissions 
+ */
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -1607,32 +1612,36 @@ public class FilePermissions {
 
     public static void main(String[] args) throws IOException {
         File file = new File("/Users/file.txt");
-               
-        //change permission to 777 for all the users
-        //no option for group and others
+
+        // change permission to 777 for all the users
+        // no option for group and others
         file.setExecutable(true, false);
         file.setReadable(true, false);
         file.setWritable(true, false);
-        
-        //using PosixFilePermission to set file permissions 777
+
+        // using PosixFilePermission to set file permissions 777
         Set<PosixFilePermission> perms = new HashSet<PosixFilePermission>();
-        //add owners permission
+
+        // add owners permission
         perms.add(PosixFilePermission.OWNER_READ);
         perms.add(PosixFilePermission.OWNER_WRITE);
         perms.add(PosixFilePermission.OWNER_EXECUTE);
-        //add group permissions
+
+        // add group permissions
         perms.add(PosixFilePermission.GROUP_READ);
         perms.add(PosixFilePermission.GROUP_WRITE);
         perms.add(PosixFilePermission.GROUP_EXECUTE);
-        //add others permissions
+        
+        // add others permissions
         perms.add(PosixFilePermission.OTHERS_READ);
         perms.add(PosixFilePermission.OTHERS_WRITE);
         perms.add(PosixFilePermission.OTHERS_EXECUTE);
-        
+
         Files.setPosixFilePermissions(Paths.get("/Users/run.sh"), perms);
     }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
