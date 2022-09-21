@@ -2128,33 +2128,44 @@ public final class Employee {
 
 ## Q. What is difference between String, StringBuffer and StringBuilder?
 
-**Mutability Difference:**  `String` is **immutable**, if you try to alter their values, another object gets created, whereas `StringBuffer` and `StringBuilder` are **mutable** so they can change their values.
+**1. Mutability Difference:**
 
-**Thread-Safety Difference:** The difference between `StringBuffer` and `StringBuilder` is that StringBuffer is thread-safe. So when the application needs to be run only in a single thread then it is better to use StringBuilder. StringBuilder is more efficient than StringBuffer.
+`String` is **immutable**, if you try to alter their values, another object gets created, whereas `StringBuffer` and `StringBuilder` are **mutable** so they can change their values.
 
-**Example:** StringBuffer 
+**2. Thread-Safety Difference:**
 
-```java
-public class BufferTest{  
-   public static void main(String[] args){  
-        StringBuffer buffer=new StringBuffer("Hello");  
-        buffer.append(" World");  
-        System.out.println(buffer);  
-   }  
-}  
-```
+The difference between `StringBuffer` and `StringBuilder` is that StringBuffer is thread-safe. So when the application needs to be run only in a single thread then it is better to use StringBuilder. StringBuilder is more efficient than StringBuffer.
 
-**Example:** StringBuilder 
+**Example:**  
 
 ```java
-public class BuilderTest{  
-    public static void main(String[] args){  
-        StringBuilder builder=new StringBuilder("Hello");  
-        builder.append(" World");  
-        System.out.println(builder);  
-    }  
-}  
+/**
+ * StringBuffer
+ */
+public class BufferTest {
+    public static void main(String[] args) {
+        StringBuffer buffer = new StringBuffer("Hello");
+        buffer.append(" World");
+        System.out.println(buffer);
+    }
+}
 ```
+
+**Example:**  
+
+```java
+/**
+ * StringBuilder
+ */
+public class BuilderTest {
+    public static void main(String[] args) {
+        StringBuilder builder = new StringBuilder("Hello");
+        builder.append(" World");
+        System.out.println(builder);
+    }
+}
+```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
