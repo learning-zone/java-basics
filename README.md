@@ -1081,9 +1081,9 @@ Output
 
 ## Q. What is Java Reflection API?
 
-Reflection API in Java is used to manipulate class and its members which include fields, methods, constructor, etc. at **runtime**. The **java.lang.Class** class provides many methods that can be used to get metadata, examine and change the run time behavior of a class.
+Reflection API in Java is used to manipulate class and its members which include fields, methods, constructor, etc. at **runtime**.
 
-There are 3 ways to get the instance of Class class.
+The **java.lang.Class** class provides many methods that can be used to get metadata, examine and change the run time behavior of a class. There are 3 ways to get the instance of Class class.
 
 * forName() method of Class class
 * getClass() method of Object class
