@@ -815,25 +815,29 @@ public interface Test {
 
 ## Q. When can an object reference be cast to a Java interface reference?
 
-An interface reference can point to any object of a class that implements this interface 
+An interface reference can point to any object of a class that implements this interface
 
 ```java
-interface Foo {
-  void display();
+/**
+ * Interface
+ */
+interface MyInterface {
+    void display();
 }
 
-public class TestFoo implements Foo {
+public class TestInterface implements MyInterface {
 
     void display() {
-      System.out.println("Hello World");
+        System.out.println("Hello World");
     }
 
     public static void main(String[] args) {
-      Foo foo = new TestFoo();
-      foo.display();
+        MyInterface myInterface = new TestInterface();
+        MyInterface.display();
     }
 }
-``` 
+```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
