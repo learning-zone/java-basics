@@ -2505,9 +2505,8 @@ public class ClassLoaderTest {
 </div>
 
 ## Q. Why string is immutable in java?
- 
 
-The string is Immutable in Java because String objects are cached in String pool. Since cached String literals are shared between multiple clients there is always a risk, where one client\'s action would affect all another client. 
+The string is Immutable in Java because String objects are cached in String pool. Since cached String literals are shared between multiple clients there is always a risk, where one client\'s action would affect all another client.
 
 Since string is immutable it can safely share between many threads and avoid any synchronization issues in java.
 
@@ -2516,7 +2515,6 @@ Since string is immutable it can safely share between many threads and avoid any
 </div>
 
 ## Q. What is Java String Pool?
-  
 
 String Pool in java is a pool of Strings stored in Java Heap Memory. String pool helps in saving a lot of space for Java Runtime although it takes more time to create the String.
 
@@ -2524,30 +2522,30 @@ When we use double quotes to create a String, it first looks for String with the
 
 ```java
 /**
-* Java program to illustrate String Pool
-*
-**/
+ * String Pool
+ */
 public class StringPool {
 
     public static void main(String[] args) {
         String s1 = "Java";
         String s2 = "Java";
         String s3 = new String("Java");
-        
-        System.out.println("s1 == s2 :" +(s1==s2)); // true
-        System.out.println("s1 == s3 :" +(s1==s3)); // false
+
+        System.out.println("s1 == s2 :" + (s1 == s2)); // true
+        System.out.println("s1 == s3 :" + (s1 == s3)); // false
     }
 }
 ```
+
 <div align="right">
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
 ## Q. How Garbage collector algorithm works?
- 
+
 Garbage collection works on **Mark** and **Sweep** algorithm. In Mark phase it detects all the unreachable objects and Sweep phase it reclaim the heap space used by the garbage objects and make the space available again to the program.
 
-There are methods like <code>System.gc()</code> and <code>Runtime.gc()</code> which is used to send request of Garbage collection to JVM but it\'s not guaranteed that garbage collection will happen. If there is no memory space for creating a new object in Heap Java Virtual Machine throws <code>OutOfMemoryError</code> or <code>java.lang.OutOfMemoryError</code> heap space
+There are methods like `System.gc()` and `Runtime.gc()` which is used to send request of Garbage collection to JVM but it\'s not guaranteed that garbage collection will happen. If there is no memory space for creating a new object in Heap Java Virtual Machine throws `OutOfMemoryError` or `java.lang.OutOfMemoryError` heap space
 
 <div align="right">
     <b><a href="#related-interview-questions">↥ back to top</a></b>
@@ -2555,9 +2553,9 @@ There are methods like <code>System.gc()</code> and <code>Runtime.gc()</code> wh
 
 ## Q. How to create marker interface?
 
-An interface with no methods is known as marker or tagged interface. It provides some useful information to JVM/compiler so that JVM/compiler performs some special operations on it. It is used for better readability of code.  Example: **Serializable, Clonnable** etc. 
+An interface with no methods is known as marker or tagged interface. It provides some useful information to JVM/compiler so that JVM/compiler performs some special operations on it. It is used for better readability of code. For example Serializable, Clonnable etc.
 
-Syntax:
+**Syntax:**
 
 ```java
 public interface Interface_Name {
@@ -2569,24 +2567,25 @@ public interface Interface_Name {
 
 ```java
 /**
-* Java program to illustrate Maker Interface 
-*
-**/
-interface Marker {    }
+ * Maker Interface
+ */
+interface Marker {
+}
 
-class A implements Marker {
-      //do some task
+class MakerExample implements Marker {
+    // do some task
 }
 
 class Main {
-         public static void main(String[] args) {
-            A obj = new A();
-            if (obj instanceOf Marker){
-                // do some task
-            }
-       }
+    public static void main(String[] args) {
+        MakerExample obj = new MakerExample();
+        if (obj instanceOf Marker) {
+            // do some task
+        }
+    }
 }
 ```
+
 <div align="right">
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
