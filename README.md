@@ -2182,25 +2182,31 @@ Some tools that do memory management to identifies useless objects or memeory le
 * <a href="http://www.javaperformancetuning.com/tools/jprobe/index.shtml">JProbe</a>
 * <a href="https://www.ibm.com/support/knowledgecenter/en/SSTFXA_6.3.0/com.ibm.itm.doc_6.3/install/itm_over.htm">IBM Tivoli</a>
 
+**Example:**
+
 ```java
-// Java Program to illustrate memory leaks 
-import java.util.Vector; 
-public class MemoryLeaksDemo  
-{ 
-   public static void main(String[] args) { 
-      Vector v = new Vector(214444); 
-      Vector v1 = new Vector(214744444); 
-      Vector v2 = new Vector(214444); 
-      System.out.println("Memory Leaks Example"); 
-   } 
-} 
+/**
+ * Memory Leaks 
+ */
+import java.util.Vector;
+
+public class MemoryLeaksExample {
+    public static void main(String[] args) {
+        Vector v = new Vector(214444);
+        Vector v1 = new Vector(214744444);
+        Vector v2 = new Vector(214444);
+        System.out.println("Memory Leaks Example");
+    }
+}
 ```
+
 Output
-```
+
+```java
 Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 ```
 
-**Types of Memory Leaks in Java**  
+**Types of Memory Leaks in Java:**  
 
 * Memory Leak through static Fields
 * Unclosed Resources/connections
@@ -2208,6 +2214,7 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
 * Inner Classes that Reference Outer Classes
 * Through `finalize()` Methods
 * Calling `String.intern()` on Long String
+
 <div align="right">
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
