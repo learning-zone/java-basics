@@ -2219,14 +2219,6 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space exceed
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
-## Q. Why String is popular HashMap key in Java?
-
-Since String is immutable, its hashcode is cached at the time of creation and it doesn\'t need to be calculated again. This makes it a great candidate for key in a Map and its processing is fast than other HashMap key objects. This is why String is mostly used Object as HashMap keys.
-
-<div align="right">
-    <b><a href="#related-interview-questions">↥ back to top</a></b>
-</div>
-
 ## Q. What is difference between Error and Exception?
 
 
@@ -2247,29 +2239,39 @@ Since String is immutable, its hashcode is cached at the time of creation and it
 ## Q. Explain about Exception Propagation?
 
 An exception is first thrown from the top of the stack and if it is not caught, it drops down the call stack to the previous method, If not caught there, the exception again drops down to the previous method, and so on until they are caught or until they reach the very bottom of the call stack. This is called exception propagation.
+
+**Example:**
+
 ```java
+/**
+ * Exception Propagation
+ */
 class TestExceptionPropagation {
 
-  void m() {  
-    int data = 50/0;  
-  }  
-  void n() {  
-    m();  
-  }  
-  void p() {  
-      try {  
-         n();  
-      } catch(Exception e) { 
-         System.out.println("exception handled");
-      }  
-  }  
-  public static void main(String args[]) {  
-   TestExceptionPropagation obj = new TestExceptionPropagation();  
-   obj.p();  
-   System.out.println("Normal Flow...");  
-  }  
-}  
+    void method1() {
+        int data = 10 / 0; // generates an exception
+        System.out.println(data);
+    }
+
+    void method2() {
+        method1(); // doesn't catch the exception
+    }
+
+    void method3() { // method3 catches the exception
+        try {
+            method2();
+        } catch (Exception e) {
+            System.out.println("Exception is caught");
+        }
+    }
+
+    public static void main(String args[]) {
+        TestExceptionPropagation obj = new TestExceptionPropagation();
+        obj.method3();
+    }
+}
 ```
+
 <div align="right">
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
