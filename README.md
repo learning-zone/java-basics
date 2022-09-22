@@ -2469,41 +2469,37 @@ private final int x = 10;
 
 ## Q. How bootstrap class loader works in java?
 
+Bootstrap ClassLoader is repsonsible for loading standard JDK classs files from **rt.jar** and it is parent of all class loaders in java. There are three types of built-in ClassLoader in Java:
 
-Bootstrap **ClassLoader** is repsonsible for loading standard JDK classs files from **rt.jar** and it is parent of all class loaders in java.
-There are three types of built-in ClassLoader in Java:
+**1. Bootstrap Class Loader:** It loads JDK internal classes, typically loads rt.jar and other core classes for example java.lang.* package classes  
 
-**1. Bootstrap Class Loader** – It loads JDK internal classes, typically loads rt.jar and other core classes for example java.lang.* package classes  
+**2. Extensions Class Loader:** It loads classes from the JDK extensions directory, usually $JAVA_HOME/lib/ext directory.  
 
-**2. Extensions Class Loader** – It loads classes from the JDK extensions directory, usually $JAVA_HOME/lib/ext directory.  
-
-**3. System Class Loader** – It loads classes from the current classpath that can be set while invoking a program using -cp or -classpath command line options.
+**3. System Class Loader:** It loads classes from the current classpath that can be set while invoking a program using -cp or -classpath command line options.
 
 ```java
+/**
+ * ClassLoader
+ */
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * Java program to demonstrate How ClassLoader works in Java
- * 
- **/
-
 public class ClassLoaderTest {
-  
-    public static void main(String args[]) {
-        try {          
-            //printing ClassLoader of this class
-            System.out.println("ClassLoader : "+ ClassLoaderTest.class.getClassLoader());
 
-            //trying to explicitly load this class again using Extension class loader
-            Class.forName("Explicitly load class", true 
-                            ,  ClassLoaderTest.class.getClassLoader().getParent());
+    public static void main(String args[]) {
+        try {
+            // printing ClassLoader of this class
+            System.out.println("ClassLoader : " + ClassLoaderTest.class.getClassLoader());
+
+            // trying to explicitly load this class again using Extension class loader
+            Class.forName("Explicitly load class", true, ClassLoaderTest.class.getClassLoader().getParent());
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ClassLoaderTest.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
 ```
+
 <div align="right">
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
