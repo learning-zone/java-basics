@@ -2296,21 +2296,25 @@ Some of the common main thread exception are as  follows:
 
 **Throw** keyword is used in the method body to throw an exception, while **throws** is used in method signature to declare the exceptions that can occur in the statements present in the method.
 
-**Throw Example:**
+**Example:**
 
 ```java
-public class ThrowExample {  
-   void checkAge(int age) {  
-      if(age < 18)  
-         throw new ArithmeticException("Not Eligible for voting");  
-      else  
-         System.out.println("Eligible for voting");  
-      }  
-   public static void main(String args[]) {  
-      ThrowExample obj = new ThrowExample();
-      obj.checkAge(13);  
-      System.out.println("End Of Program");  
-   }  
+/**
+ * Throw in Java
+ */
+public class ThrowExample {
+    void checkAge(int age) {
+        if (age < 18)
+            throw new ArithmeticException("Not Eligible for voting");
+        else
+            System.out.println("Eligible for voting");
+    }
+
+    public static void main(String args[]) {
+        ThrowExample obj = new ThrowExample();
+        obj.checkAge(13);
+        System.out.println("End Of Program");
+    }
 }
 ```
 
@@ -2323,23 +2327,26 @@ at Example1.checkAge(Example1.java:4)
 at Example1.main(Example1.java:10)
 ```
 
-**Throws Example:**  
+**Example:**  
 
 ```java
-public class ThrowsExample {  
-   int division(int a, int b) throws ArithmeticException {  
-	  int t = a/b;
-	  return t;
-   }  
-   public static void main(String args[]) {  
-	  ThrowsExample obj = new ThrowsExample();
-      try {
-         System.out.println(obj.division(15,0));  
-      }
-      catch(ArithmeticException e) {
-         System.out.println("You shouldn't divide number by zero");
-      }
-   }  
+/**
+ * Throws in Java
+ */
+public class ThrowsExample {
+    int division(int a, int b) throws ArithmeticException {
+        int t = a / b;
+        return t;
+    }
+
+    public static void main(String args[]) {
+        ThrowsExample obj = new ThrowsExample();
+        try {
+            System.out.println(obj.division(15, 0));
+        } catch (ArithmeticException e) {
+            System.out.println("You shouldn't divide number by zero");
+        }
+    }
 }
 ```
 
