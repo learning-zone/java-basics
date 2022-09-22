@@ -2446,21 +2446,23 @@ public class Example {
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
 
-## Q. What is a compile time constant in Java? What is the risk of using it?
+## Q. What is a compile time constant in Java?
 
 If a primitive type or a string is defined as a constant and the value is known at compile time, the compiler replaces the constant name everywhere in the code with its value. This is called a compile-time constant.
 
 **Compile time constant must be:**  
 
-* declared final
-* primitive or String
-* initialized within declaration
-* initialized with constant expression
+* Declared final
+* Primitive or String
+* Initialized within declaration
+* Initialized with constant expression
 
 They are replaced with actual values at compile time because compiler know their value up-front and also knows that it cannot be changed during run-time.
+
 ```java
 private final int x = 10;
 ```
+
 <div align="right">
     <b><a href="#related-interview-questions">↥ back to top</a></b>
 </div>
