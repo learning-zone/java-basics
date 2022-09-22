@@ -12,10 +12,10 @@
 * *[Java String Methods](java-string-methods.md)*
 * *[JSP Interview Questions](jsp-questions.md)*
 * *[Servlets Interview Questions](servlets-questions.md)*
-* *[Java Design Pattern Questions](java-design-pattern-questions.md)*
 * *[Java Multiple Choice Questions](java-multiple-choice-questions-answers.md)*
 * *[Spring Interview Questions](https://github.com/learning-zone/spring-interview-questions)*
 * *[Hibernate Interview Questions](https://github.com/learning-zone/hibernate-interview-questions)*
+* *[Java Design Pattern Questions](https://github.com/learning-zone/java-design-patterns)*
 
 <br/>
 
