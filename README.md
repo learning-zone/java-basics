@@ -2422,7 +2422,7 @@ import java.lang.ref.SoftReference;
 
 class MainClass {
     public void message() {
-        System.out.println("Weak References Example");
+        System.out.println("Soft References Example");
     }
 }
 
@@ -2432,7 +2432,7 @@ public class Example {
         MainClass g = new MainClass();
         g.message();
 
-        // Creating Weak Reference to MainClass-type object to which 'g'
+        // Creating Soft Reference to MainClass-type object to which 'g'
         // is also pointing.
         SoftReference<MainClass> softref = new SoftReference<MainClass>(g);
         g = null;
