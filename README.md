@@ -1,20 +1,20 @@
-# Java Interview Questions
+# Java Basics
 
 *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
-## Related Interview Questions
+## Related Topics
 
-* *[Java 8 Interview Questions](java8-questions.md)*
-* *[Multithreading Interview Questions](multithreading-questions.md)*
-* *[Collections Interview Questions](collections-questions.md)*
-* *[JDBC Interview Questions](JDBC-questions.md)*
+* *[Java 8](java8-questions.md)*
+* *[Multithreading](multithreading-questions.md)*
+* *[Collections](collections-questions.md)*
+* *[JDBC](JDBC-questions.md)*
 * *[Java Programs](java-programs.md)*
 * *[Java String Methods](java-string-methods.md)*
-* *[JSP Interview Questions](jsp-questions.md)*
-* *[Servlets Interview Questions](servlets-questions.md)*
+* *[JSP](jsp-questions.md)*
+* *[Servlets](servlets-questions.md)*
 * *[Java Multiple Choice Questions](java-multiple-choice-questions-answers.md)*
-* *[Spring Interview Questions](https://github.com/learning-zone/spring-interview-questions)*
-* *[Hibernate Interview Questions](https://github.com/learning-zone/hibernate-interview-questions)*
+* *[Spring](https://github.com/learning-zone/spring-interview-questions)*
+* *[Hibernate](https://github.com/learning-zone/hibernate-interview-questions)*
 * *[Java Design Pattern Questions](https://github.com/learning-zone/java-design-patterns)*
 
 <br/>
