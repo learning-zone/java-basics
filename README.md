@@ -3320,18 +3320,308 @@ The Object class is the parent class of all the classes in java by default.
 </div>
 
 #### Q. What is copyonwritearraylist in java?
+* `CopyOnWriteArrayList` class implements `List` and `RandomAccess` interfaces and thus provide all functionalities available in `ArrayList` class.
+* Using `CopyOnWriteArrayList` is costly for update operations, because each mutation creates a cloned copy of underlying array and add/update element to it.
+* It is `thread-safe` version of ArrayList. Each thread accessing the list sees its own version of snapshot of backing array created while initializing the iterator for this list.
+* Because it gets `snapshot` of underlying array while creating iterator, it does not throw `ConcurrentModificationException`.
+* Mutation operations on iterators (remove, set, and add) are not supported. These methods throw `UnsupportedOperationException`.
+* CopyOnWriteArrayList is a concurrent `replacement for a synchronized List` and offers better concurrency when iterations outnumber mutations.
+* It `allows duplicate elements and heterogeneous Objects` (use generics to get compile time errors).
+* Because it creates a new copy of array everytime iterator is created, `performance is slower than ArrayList`.
+* We can prefer to use CopyOnWriteArrayList over normal ArrayList in following cases:
+    - When list is to be used in concurrent environemnt.
+    - Iterations outnumber the mutation operations.
+    - Iterators must have snapshot version of list at the time when they were created.
+    - We don’t want to synchronize the thread access programatically.
+```java
+        import java.util.concurrent.CopyOnWriteArrayList;
+        CopyOnWriteArrayList<String> copyOnWriteArrayList = new CopyOnWriteArrayList<String>();
+        copyOnWriteArrayList.add("captain america");
+        Iterator it = copyOnWriteArrayList.iterator();  //iterator creates separate snapshot
+        copyOnWriteArrayList.add("iron man");           //doesn't throw ConcurrentModificationException
+        while(it.hasNext())
+            System.out.println(it.next());              // prints captain america only , since add operation is after returning iterator
+
+        it = copyOnWriteArrayList.iterator();           //fresh snapshot
+        while(it.hasNext())
+            System.out.println(it.next());              // prints captain america and iron man, 
+        
+        it = copyOnWriteArrayList.iterator();           //fresh snapshot
+        while(it.hasNext()){
+            System.out.println(it.next());
+            it.remove();                                //mutable operation 'remove' not allowed ,throws UnsupportedOperationException                            
+        }
+
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("A");
+        Iterator ait = list.iterator();
+        list.add("B");                                      // immediately throws  ConcurrentModificationException
+        while(ait.hasNext())
+            System.out.println(ait.next()); 
+        
+        ait = list.iterator();
+        while(ait.hasNext()){
+            System.out.println(ait.next());
+            ait.remove();                                //mutable operation 'remove' allowed without any exception                            
+        }
+```
+
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
 #### Q. What is the difference between @Before and @BeforeClass annotation?
 #### Q. Can you explain Liskov Substitution principle?
+Liskov Substitution principle (LSP) states that **sub/child/derived-classes should be substitutable for their base/parent-classes.**
+
+Given a class B is subclass of class A , we should be able to pass an object of class B to any method that expects(takes as an argument/parameter) an object of class A and the method should not give any weird output in that case.
+
+`ClientTestProgram` class has a method `playVideoInAllMediaPlayers()` which accepts list of all `MediaPlayer` objects and plays video for each , but method fails at `WinampMediaPlayer` ? Let's check whether it satisfies **LSP**. 
+```java
+public class MediaPlayer {
+
+    // Play audio implementation
+    public void playAudio() {
+        System.out.println("Playing audio...");
+    }
+
+    // Play video implementation
+    public void playVideo() {
+        System.out.println("Playing video...");
+    }
+}
+
+public class VlcMediaPlayer extends MediaPlayer {}
+
+public class WinampMediaPlayer extends MediaPlayer {
+
+    // Play video is not supported in Winamp player
+    public void playVideo() {
+        throw new VideoUnsupportedException();
+    }
+}
+
+public class VideoUnsupportedException extends RuntimeException {
+
+    private static final long serialVersionUID = 1 L;
+
+}
+
+public class ClientTestProgram {
+
+    public static void main(String[] args) {
+
+        // Created list of players
+        List < MediaPlayer > allPlayers = new ArrayList < MediaPlayer > ();
+        allPlayers.add(new VlcMediaPlayer());
+        allPlayers.add(new DivMediaPlayer());
+
+        // Play video in all players
+        playVideoInAllMediaPlayers(allPlayers);
+
+        // Well - all works as of now...... :-)
+        System.out.println("---------------------------");
+
+        // Now adding new Winamp player
+        allPlayers.add(new WinampMediaPlayer());
+
+        // Again play video in all players & Oops it broke the program... :-(
+        // Why we got unexpected behavior in client? --- Because LSP is violated in WinampMediaPlayer.java, 
+        // as it changed the original behavior of super class MediaPlayer.java
+        playVideoInAllMediaPlayers(allPlayers);
+    }
+
+    /**
+     * This method is playing video in all players
+     * 
+     * @param allPlayers
+     */
+    public static void playVideoInAllMediaPlayers(List < MediaPlayer > allPlayers) {
+
+        for (MediaPlayer player: allPlayers) {
+            player.playVideo();
+        }
+    }
+}
+```
+Let's refactor the code to make "good" design using **LSP**?
+- `MediaPlayer` is super class having play audio ability.
+- `VideoMediaPlayer` extends `MediaPlayer` and adds play video ability.
+- `DivMediaPlayer` and `VlcMediaPlayer` both extends `VideoMediaPlayer` for playing audio and video ability.
+- `WinampMediaPlayer` which extends `MediaPlayer` for playing audio ability only.
+- so client program can substitute `DivMediaPlayer` or `VlcMediaPlayer` for their super class `VideoMediaPlayer`
+
+lets reimplement the refactored code
+```java
+public class MediaPlayer {
+
+    // Play audio implementation
+    public void playAudio() {
+        System.out.println("Playing audio...");
+    }
+}
+
+//separated video playing ability from base class 
+public class VideoMediaPlayer extends MediaPlayer {
+
+    // Play video implementation
+    public void playVideo() {
+        System.out.println("Playing video...");
+    }
+}
+
+public class DivMediaPlayer extends VideoMediaPlayer {}
+
+public class VlcMediaPlayer extends VideoMediaPlayer {}
+
+//as Winamp expects only audio playing ability, so it must only extend relative base class behaviour, no need to inherit unnecessary behaviour
+public class WinampMediaPlayer extends MediaPlayer {}
+
+    /**
+     * This method is playing video in all players
+     * 
+     * @param allPlayers
+     */
+    public static void playVideoInAllMediaPlayers(List <VideoMediaPlayer> allPlayers) {
+
+        for (VideoMediaPlayer player: allPlayers) {
+            player.playVideo();
+        }
+    }
+```
+Now, in `ClientTestProgram` , instead of creating list of type `MediaPlayer`, we will create list of `VideoMediaPlayer` type that should give us compile time error at statement `allPlayers.add(new WinampMediaPlayer()); ` as `WinampMediaPlayer` isnt subclass of `VideoMediaPlayer`.But in case of  `DivMediaPlayer` and `VlcMediaPlayer` they are substitutable for their parent class as seen in `playVideoInAllMediaPlayers()` method
+that satisefies *Liskov's substitution principle*.
+
 #### Q. Give me an example of design pattern which is based upon open closed principle?
 #### Q. What is Law of Demeter violation? Why it matters?
 #### Q. What is differences between External Iteration and Internal Iteration?
-#### Q. What are the different access specifiers available in java?
-#### Q. What is runtime polymorphism in java?
-#### Q. What is a private constructor?
 
+#### Q. What are the different access specifiers available in java?
+* access specifiers/modifiers helps to restrict the scope of a class, constructor, variable, method, or data member.
+* There are four types of access modifiers available in java:
+    1. `default` – No keyword required, when a class, constructor,variable, method, or data member declared without any access specifier then it is having default access scope i.e. accessible only within the same package.
+    2. `private` - when declared as a private , access scope is limited within the enclosing class.
+    3. `protected` - when declared as protocted, access scope is limited to enclosing classes, subclasses from same package as well as other packages.
+    4. `public` - when declared as public, accessible everywhere in the program.
+```java
+    ... /* data member variables */
+    String firstName="Pradeep";     /* default scope */
+    protected isValid=true;         /* protected scope */
+    private String otp="AB0392";    /* private scope */
+    public int id = 12334;          /* public scope */
+    ...
+    ... /* data member functions */
+    String getFirstName(){ return this.firstName; } /* default scope */
+    protected boolean getStatus(){this.isValid;}    /* protected scope */
+    private void generateOtp(){                     /* private scope */
+        this.otp = this.hashCode() << 16;
+    };    
+    public int getId(){ return this.id; }           /* public scope */
+    ...
+    .../* inner classes */
+    class A{}            /* default scope */
+    protected class B{}  /* protected scope */
+    private class C{}    /* private scope */
+    public class D{}     /* public scope */
+    ...
+```
+
+#### Q. What is runtime polymorphism in java?
+**Runtime polymorphism** or **Dynamic Method Dispatch** is a process in which a call to an overridden method is resolved at runtime rather than compile-time.
+
+An overridden method is called through the reference variable of a superclass. The determination of the method to be called is based on the object being referred.
+```java
+class Bank{  
+    public float roi=0.0f;
+float getRateOfInterest(){return this.roi;}  
+}  
+class SBI extends Bank{ 
+    float roi=8.4f; 
+float getRateOfInterest(){return this.roi;}  
+}  
+class ICICI extends Bank{ 
+    float roi=7.3f; 
+float getRateOfInterest(){return this.roi;}  
+}  
+class AXIS extends Bank{  
+    float roi=9.7f;
+float getRateOfInterest(){return this.roi;}  
+}  
+
+Bank b;  
+b=new SBI();  
+System.out.println("SBI Rate of Interest: "+b.getRateOfInterest());
+
+b=new ICICI();  
+System.out.println("ICICI Rate of Interest: "+b.getRateOfInterest());
+
+b=new AXIS();  
+System.out.println("AXIS Rate of Interest: "+b.getRateOfInterest()); 
+
+System.out.println("Bank Rate of Interest: "+b.roi); 
+
+/**output:
+SBI Rate of Interest: 8.4
+ICICI Rate of Interest: 7.3
+AXIS Rate of Interest: 9.7
+Bank Rate of Interest: 0.0 
+
+//you might think it should be 9.7 , as recent object being refered to is of AXIS but method is overridden, not the data members, so runtime polymorphism can't be achieved by data members/instance variables.
+**/
+```
+#### Q. What is a private constructor?
+* A constructor with private access specifier/modifier is private constructor. 
+* It is only accessible inside the class by its data members(instance fields,methods,inner classes) and in static block.
+* Private Constructor be used in **Internal Constructor chaining and Singleton class design pattern**
+```java
+public class MyClass {
+    
+    static{
+        System.out.println("outer static block..");
+        new MyClass();
+    }
+    
+    private MyInner in;
+    
+    {
+        System.out.println("outer instance block..");
+        //new MyClass(); //private constructor accessbile but bad practive will cause infinite loop 
+    }
+    
+    private MyClass(){
+        System.out.println("outer private constructor..");
+    }
+    
+    public void getInner(){
+        System.out.println("outer data member function..");
+        
+        new MyInner();
+    }
+
+    private static class MyInner{
+        {
+            System.out.println("inner instance block..");
+            new MyClass();
+        }
+        
+        MyInner(){
+            System.out.println("inner constructor..");
+        }
+    }
+    
+    
+    public static void main(String args[]) {
+        System.out.println("static main method..");
+        MyClass m=new MyClass();
+        m.getInner();
+    }
+}
+
+class Visitor{
+    {
+        new MyClass();//gives compilation error as MyClass() has private access in MyClass
+    }
+}
+```
 *ToDo*
 
 <div align="right">
