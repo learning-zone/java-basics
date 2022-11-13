@@ -1,7 +1,8 @@
 # Java Programs
 
 ## Q. Write a function to find out duplicate words in a given string?
-**Approach**  
+
+**Approach:**
 
 1. Define a string.
 1. Convert the string into lowercase to make the comparison insensitive.
@@ -42,14 +43,18 @@ public class DuplicateWord {
     }  
 }  
 ```
+
 Output
-```
+
+```java
 Duplicate words in a given string : 
 big
 black
 ```
+
 ## Q. Find the missing number in an array?
-**Approach**  
+
+**Approach:**
 
 1. Calculate `A = n (n+1)/2` where n is largest number in series 1…N.
 1. Calculate B = Sum of all numbers in given series
@@ -1716,6 +1721,181 @@ Path from vertex 0 to vertex 2 has minimum cost of 6 and the route is [ 0 4 1 2 
 Path from vertex 0 to vertex 3 has minimum cost of 5 and the route is [ 0 4 3 ]
 Path from vertex 0 to vertex 4 has minimum cost of 3 and the route is [ 0 4 ]
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to display 10 random numbers using forEach()?
+
+```java
+( new  Random ())
+    .ints ()
+    .limit ( 10 )
+    .forEach ( System . out :: println);
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How can I display unique squares of numbers using the method map()?
+
+```java
+Stream 
+    .of ( 1 , 2 , 3 , 2 , 1 )
+    .map (s -> s * s)
+    .distinct ()
+    .collect ( Collectors . toList ())
+    .forEach ( System . out :: println);
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to display the number of empty lines using the method filter()?
+
+```java
+System.out.println (
+     Stream 
+        .of ( " Hello " , " " , " , " , " world " , " ! " )
+        .filter ( String :: isEmpty)
+        .count ());
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to display 10 random numbers in ascending order?
+
+```java
+( new  Random ())
+    .ints ()
+    .limit ( 10 )
+    .sorted ()
+    .forEach ( System . out :: println);
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to find the maximum number in a set?
+
+```java
+Stream 
+    .of ( 5 , 3 , 4 , 55 , 2 )
+    .mapToInt (a -> a)
+    .max ()
+    .getAsInt (); // 55
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to find the minimum number in a set?
+
+```java
+Stream 
+    .of ( 5 , 3 , 4 , 55 , 2 )
+    .mapToInt (a -> a)
+    .min ()
+    .getAsInt (); // 2
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the sum of all numbers in a set?
+
+```java
+Stream 
+    .of( 5 , 3 , 4 , 55 , 2 )
+    .mapToInt()
+    .sum(); // 69
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the average of all numbers?
+
+```java
+Stream 
+    .of ( 5 , 3 , 4 , 55 , 2 )
+    .mapToInt (a -> a)
+    .average ()
+    .getAsDouble (); // 13.8
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+## Q. How to get current date using Date Time API from Java 8?
+
+```java
+LocalDate as.now();
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to add 1 week, 1 month, 1 year, 10 years to the current date using the Date Time API?
+
+```java
+LocalDate as.now ().plusWeeks ( 1 );
+LocalDate as.now ().plusMonths ( 1 );
+LocalDate as.now ().plusYears ( 1 );
+LocalDate as.now ().plus ( 1 , ChronoUnit.DECADES );
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the next Tuesday using the Date Time API?
+
+```java
+LocalDate as.now().with( TemporalAdjusters.next ( DayOfWeek.TUESDAY ));
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the current time accurate to milliseconds using the Date Time API?
+
+```java
+new  Date ().toInstant ();
+```
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the second Saturday of the current month using the Date Time API?
+
+```java
+LocalDate 
+    .of ( LocalDate.Now ().GetYear (), LocalDate.Now ().GetMonth (), 1 )
+    .with ( TemporalAdjusters.nextOrSame ( DayOfWeek.SATURDAY ))
+    .with ( TemporalAdjusters.next ( DayOfWeek.SATURDAY ));
+```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## Q. How to get the current time in local time accurate to milliseconds using the Date Time API?
+
+```java
+LocalDateTime.ofInstant ( new  Date().toInstant(), ZoneId.systemDefault());
+```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
