@@ -3708,7 +3708,7 @@ class Visitor{
     * Added utility `jdeps` for analyzing .class files.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. Can you declare an interface method static?
@@ -3716,7 +3716,7 @@ class Visitor{
 Java 8 interface changes include static methods and default methods in interfaces. Prior to Java 8, we could have only method declarations in the interfaces. But from Java 8, we can have default methods and static methods in the interfaces.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is a lambda?
@@ -3804,7 +3804,7 @@ public  static  void main ( String [] args) {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What variables do lambda expressions have access to?
@@ -3818,7 +3818,7 @@ Access to external scope variables from a lambda expression is very similar to a
 The default methods of the implemented functional interface are not allowed to be accessed inside the lambda expression.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. How to sort a list of strings using a lambda expression?
@@ -3831,7 +3831,7 @@ public  static  List < String > sort ( List < String > list) {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is a method reference?
@@ -3852,7 +3852,7 @@ public  static  void main ( String [] args) {
 Method references are potentially more efficient than using lambda expressions. In addition, they provide the compiler with better information about the type, and if you can choose between using a reference to an existing method and using a lambda expression, you should always use a method reference.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What types of method references do you know?
@@ -3862,7 +3862,7 @@ Method references are potentially more efficient than using lambda expressions. 
 * to the constructor.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. Explain the expression `System.out::println`?
@@ -3870,7 +3870,7 @@ Method references are potentially more efficient than using lambda expressions. 
 The specified expression illustrates passing a reference to a static method of a `println()`class `System.out`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is a Functional Interface?
@@ -3882,7 +3882,7 @@ To accurately determine the interface as functional, an annotation has been adde
 An interface can include as many `default` methods as you like while remaining functional, because `default` methods are not abstract.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is StringJoiner?
@@ -3898,7 +3898,7 @@ System.out.println(joiner); // prefix-Hello.the.brave.world-suffix
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are `default`interface methods?
@@ -3923,7 +3923,7 @@ interface  Example {
 * One of the main reasons for introducing default methods is the ability of collections in Java 8 to use lambda expressions.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. How to call `default` interface method in a class that implements this interface?
@@ -3945,7 +3945,7 @@ class  License  implements  Paper {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is `static` interface method?
@@ -3957,7 +3957,7 @@ Static interface methods are similar to default methods, except that there is no
 * Static methods in the interface are used to provide helper methods, for example, checking for null, sorting collections, etc.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. How to call `static` interface method?
@@ -3979,7 +3979,7 @@ class  License {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is Optional
@@ -3996,7 +3996,7 @@ optional.orElse( " ops ... " ); // "hello"
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is Stream?
@@ -4021,7 +4021,7 @@ In addition to the universal object, there are special types of streams to work 
 * support additional end operations `sum()`, `average()`, `mapToObj()`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the ways to create a stream?
@@ -4075,7 +4075,7 @@ Stream < String > fromGenerate =  Stream.generate(() ->  " 0 " );
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is the difference between `Collection` and `Stream`?
@@ -4083,7 +4083,7 @@ Stream < String > fromGenerate =  Stream.generate(() ->  " 0 " );
 Collections allow you to work with elements separately, while streams do not allow this, but instead provides the ability to perform functions on data as one.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is the method `collect()`for streams for?
@@ -4119,7 +4119,7 @@ Collector < String , a List < String > , a List < String > > toList =  Collector
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. Why do streams use `forEach()`and `forEachOrdered()` methods?
@@ -4128,7 +4128,7 @@ Collector < String , a List < String > , a List < String > > toList =  Collector
 * `forEachOrdered()` applies a function to each stream object while maintaining the order of the elements.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are `map()`, `mapToInt()`, `mapToDouble()` and `mapToLong()` methods in Stream?
@@ -4144,7 +4144,7 @@ Stream
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is the purpose of `filter()` method in streams?
@@ -4152,7 +4152,7 @@ Stream
 The method `filter()` is an intermediate operation receiving a predicate that filters all elements, returning only those that match the condition.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is the use of `limit()` method in streams?
@@ -4160,7 +4160,7 @@ The method `filter()` is an intermediate operation receiving a predicate that fi
 The method `limit()`is an intermediate operation, which allows you to limit the selection to a certain number of first elements.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is the use of `sorted()` method in streams?
@@ -4170,7 +4170,7 @@ The method `sorted()`is an intermediate operation, which allows you to sort the 
 The order of the elements in the original collection remains untouched - `sorted()`it just creates its sorted representation.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What streamers designed methods `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`?
@@ -4187,7 +4187,7 @@ Stream
 `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- are analogues `flatMap()`, returns the corresponding numerical stream.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. Tell us about parallel processing in Java 8?
@@ -4228,7 +4228,7 @@ collection.parallelStream ()
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the final methods of working with streams you know?
@@ -4250,7 +4250,7 @@ collection.parallelStream ()
 * `average()` returns the arithmetic mean of all numbers.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What intermediate methods of working with streams do you know?
@@ -4268,7 +4268,7 @@ collection.parallelStream ()
 For numerical streams, an additional method is available `mapToObj()`that converts the numerical stream back to the object stream.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What additional methods for working with associative arrays (maps) appeared in Java 8?
@@ -4316,7 +4316,7 @@ map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is LocalDateTime?
@@ -4324,7 +4324,7 @@ map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 `LocalDateTime`combines together `LocaleDate`and `LocalTime`contains the date and time in the calendar system ISO-8601 without reference to the time zone. Time is stored accurate to the nanosecond. It contains many convenient methods such as plusMinutes, plusHours, isAfter, toSecondOfDay, etc.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is ZonedDateTime?
@@ -4332,7 +4332,7 @@ map.merge("a", "z", (value, newValue) -> value.concat(newValue)); //["a","Aaz"]
 `java.time.ZonedDateTime`- an analogue `java.util.Calendar`, a class with the most complete amount of information about the temporary context in the calendar system ISO-8601. It includes a time zone, therefore, this class carries out all operations with time shifts taking into account it.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. How to determine repeatable annotation?
@@ -4351,7 +4351,7 @@ To define a repeatable annotation, you must create a container annotation for th
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is Nashorn?
@@ -4359,7 +4359,7 @@ To define a repeatable annotation, you must create a container annotation for th
 **Nashorn** is a JavaScript engine developed in Java by Oracle. Designed to provide the ability to embed JavaScript code in Java applications. Compared to Rhino , which is supported by the Mozilla Foundation, Nashorn provides 2 to 10 times better performance, as it compiles code and transfers bytecode to the Java virtual machine directly in memory. Nashorn can compile JavaScript code and generate Java classes that are loaded with a special loader. It is also possible to call Java code directly from JavaScript.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What is jjs?
@@ -4367,7 +4367,7 @@ To define a repeatable annotation, you must create a container annotation for th
 `jjs` - This is a command line utility that allows you to execute JavaScript programs directly in the console.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What class appeared in Java 8 for encoding / decoding data?
@@ -4380,7 +4380,7 @@ Base64 contains 6 basic methods:
 `getMimeEncoder() / getMimeDecoder()`- returns a MIME encoder / decoder conforming to RFC 2045 .
 
 <div align="right">
-  <b><a href="#">↥ back to top</a></b>
+  <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. How to create a Base64 encoder and decoder?
@@ -4393,7 +4393,7 @@ new  String ( Base64.getDecoder().decode ( " aW5wdXQ == " ), " utf-8 " ); // inp
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
@@ -4413,7 +4413,7 @@ backToString.apply("123");     // "123"
 * `LongFunction<R>`- a function that receives input `Long`and returns an instance of the class at the output `R`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the functional interfaces `UnaryOperator<T>`, `DoubleUnaryOperator`, `IntUnaryOperator`and `LongUnaryOperator`?
@@ -4430,7 +4430,7 @@ System.out.println(operator.apply ( 5 )); // 25
 * `LongUnaryOperator`- unary operator receiving input `Long`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the functional interfaces `BinaryOperator<T>`, `DoubleBinaryOperator`, `IntBinaryOperator`and `LongBinaryOperator`?
@@ -4447,7 +4447,7 @@ System.out.println(operator.apply ( 1 , 2 )); // 3
 * `LongBinaryOperator`- binary operator receiving input Long.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the functional interfaces `Predicate<T>`, `DoublePredicate`, `IntPredicateand` `LongPredicate`?
@@ -4467,7 +4467,7 @@ predicate.negate().test("foo"); // false
 * `LongPredicate`- predicate receiving input `Long`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the functional interfaces `Consumer<T>`, `DoubleConsumer`, `IntConsumer`and `LongConsumer`?
@@ -4484,7 +4484,7 @@ hello.accept( " world " );
 * `LongConsumer`- the consumer receiving the input `Long`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 ## Q. What are the functional interfaces `Supplier<T>`, `BooleanSupplier`, `DoubleSupplier`, `IntSupplier`and `LongSupplier`?
@@ -4501,7 +4501,7 @@ now.get();
 * `LongSupplier`- the supplier is returning `Long`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
 #### Q. When do we go for Java 8 Stream API?
@@ -4520,5 +4520,5 @@ now.get();
 #### Q. What is the difference between @Before and @BeforeClass annotation?
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#related-topics">↥ back to top</a></b>
 </div>
