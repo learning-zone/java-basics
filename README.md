@@ -41,7 +41,7 @@
 * [Java Abstraction](#-17-java-abstraction)
 * [Java Interfaces](#-18-java-interfaces)
 * [Java Encapsulation](#-19-java-encapsulation)
-* [Miscellaneous](#-20-react-miscellaneous)
+* [Miscellaneous](#-20-miscellaneous)
 
 <br/>
 
@@ -80,6 +80,22 @@
     * Added utility `jjs` for using JavaScript Nashorn;
     * The command `java` can run JavaFX applications;
     * Added utility `jdeps` for analyzing .class files.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is Nashorn?
+
+**Nashorn** is a JavaScript engine developed in Java by Oracle. Designed to provide the ability to embed JavaScript code in Java applications. Compared to Rhino , which is supported by the Mozilla Foundation, Nashorn provides 2 to 10 times better performance, as it compiles code and transfers bytecode to the Java virtual machine directly in memory. Nashorn can compile JavaScript code and generate Java classes that are loaded with a special loader. It is also possible to call Java code directly from JavaScript.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is jjs?
+
+`jjs` - This is a command line utility that allows you to execute JavaScript programs directly in the console.
 
 <div align="right">
     <b><a href="#related-topics">↥ back to top</a></b>
@@ -893,14 +909,16 @@ The default methods of the implemented functional interface are not allowed to b
 
 If the method existing in the class already does everything that is necessary, then you can use the method reference mechanism (method reference) to directly pass this method. The result will be exactly the same as in the case of defining a lambda expression that calls this method.
 
+**Example:**
+
 ```java
-private  interface  Measurable {
-    public  int  length ( String  string );
+private interface Measurable {
+   public int length(String string);
 }
 
 public  static  void main ( String [] args) {
-    Measurable a =  String::length;
-    System.out.println(a.length("abc"));
+   Measurable a =  String::length;
+   System.out.println(a.length("abc"));
 }
 ```
 
@@ -4525,22 +4543,6 @@ To define a repeatable annotation, you must create a container annotation for th
     String  birthday () default "Jan 8 2000";
  }
 ```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is Nashorn?
-
-**Nashorn** is a JavaScript engine developed in Java by Oracle. Designed to provide the ability to embed JavaScript code in Java applications. Compared to Rhino , which is supported by the Mozilla Foundation, Nashorn provides 2 to 10 times better performance, as it compiles code and transfers bytecode to the Java virtual machine directly in memory. Nashorn can compile JavaScript code and generate Java classes that are loaded with a special loader. It is also possible to call Java code directly from JavaScript.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is jjs?
-
-`jjs` - This is a command line utility that allows you to execute JavaScript programs directly in the console.
 
 <div align="right">
     <b><a href="#related-topics">↥ back to top</a></b>
