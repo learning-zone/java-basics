@@ -1900,6 +1900,19 @@ LocalDateTime.ofInstant ( new  Date().toInstant(), ZoneId.systemDefault());
     <b><a href="#">↥ back to top</a></b>
 </div>
 
+## Q. How to sort a list of strings using a lambda expression?
+
+```java
+public  static  List < String > sort ( List < String > list) {
+    Collections.sort(list, (a, b) -> a.compareTo(b));
+    return list;
+}
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
 #### Q. How to find if there is a sub array with sum equal to zero?
 #### Q. How to remove a given element from array in Java?
 #### Q. How to find trigonometric values of an angle in java?
