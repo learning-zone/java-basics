@@ -2181,6 +2181,14 @@ For numerical streams, an additional method is available `mapToObj()`that conver
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
+#### Q. Explain Difference between Collection API and Stream API?
+
+*ToDo*
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
 ## # 11. JAVA REGULAR EXPRESSIONS
 
 <br/>
@@ -3967,6 +3975,16 @@ now.get();
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
+#### Q. What is Spliterator in Java SE 8?
+#### Q. What is Type Inference in Java 8?
+#### Q. What is difference between External Iteration and Internal Iteration?
+
+*ToDo*
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
 ## # 19. JAVA ENCAPSULATION
 
 <br/>
@@ -4574,16 +4592,7 @@ new  String ( Base64.getDecoder().decode ( " aW5wdXQ == " ), " utf-8 " ); // inp
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-#### Q. When do we go for Java 8 Stream API?
-#### Q. Why do we need to use Java 8 Stream API in our projects?
-#### Q. Explain Differences between Collection API and Stream API?
-#### Q. What is Spliterator in Java SE 8? Differences between Iterator and Spliterator in Java SE 8?
-#### Q. What is Optional in Java 8? What is the use of Optional?
-#### Q. What is Type Inference? Is Type Inference available in older versions like Java 7 and Before 7 or it is available only in Java SE 8?
-#### Q. What is differences between Functional Programming and Object-Oriented Programming?
 #### Q. Give me an example of design pattern which is based upon open closed principle?
-#### Q. What is Law of Demeter violation? Why it matters?
-#### Q. What is differences between External Iteration and Internal Iteration?
 #### Q. How do you test static method?
 #### Q. How to do you test a method for an exception using JUnit?
 #### Q. Which unit testing libraries you have used for testing Java programs?
