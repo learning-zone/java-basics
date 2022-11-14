@@ -204,6 +204,47 @@ The specified expression illustrates passing a reference to a static method of a
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
+## Q. Tell us about parallel processing in Java 8?
+
+Streams can be sequential and parallel. Operations on sequential streams are performed in one processor thread, on parallel streams - using several processor threads. Parallel streams use the shared stream `ForkJoinPool`through the static `ForkJoinPool.commonPool()`method. In this case, if the environment is not multi-core, then the stream will be executed as sequential. In fact, the use of parallel streams is reduced to the fact that the data in the streams will be divided into parts, each part is processed on a separate processor core, and in the end these parts are connected, and final operations are performed on them.
+
+You can also use the `parallelStream()`interface method to create a parallel stream from the collection `Collection`.
+
+To make a regular sequential stream parallel, you must call the `Stream`method on the object `parallel()`. The method `isParallel()`allows you to find out if the stream is parallel.
+
+Using, methods `parallel()`and `sequential()`it is possible to determine which operations can be parallel, and which only sequential. You can also make a parallel stream from any sequential stream and vice versa:
+
+```java
+collection
+  .stream ()
+  .peek ( ... ) // operation is sequential
+  .parallel ()
+  .map ( ... ) // the operation can be performed in parallel,
+  .sequential ()
+  .reduce ( ... ) // operation is sequential again
+```
+
+As a rule, elements are transferred to the stream in the same order in which they are defined in the data source. When working with parallel streams, the system preserves the sequence of elements. An exception is a method `forEach()`that can output elements in random order. And in order to maintain the order, it is necessary to apply the method `forEachOrdered()`.
+
+* Criteria that may affect performance in parallel streams:
+* Data size - the more data, the more difficult it is to separate the data first, and then combine them.
+* The number of processor cores. Theoretically, the more cores in a computer, the faster the program will work. If the machine has one core, it makes no sense to use parallel threads.
+* The simpler the data structure the stream works with, the faster operations will occur. For example, data from is `ArrayList`easy to use, since the structure of this collection assumes a sequence of unrelated data. But a type collection  `LinkedList`is not the best option, since in a sequential list all the elements are connected with previous / next. And such  data is difficult to parallelize.
+* Operations with primitive types will be faster than with class objects.
+* It is highly recommended that you do not use parallel streams for any long operations (for example, network connections),  since all parallel streams work with one `ForkJoinPool`, such long operations can stop all parallel streams in the JVM due to  the lack of available threads in the pool, etc. e. parallel streams should be used only for short operations where the count  goes for milliseconds, but not for those where the count can go for seconds and minutes;
+* Saving order in parallel streams increases execution costs, and if order is not important, it is possible to disable its  saving and thereby increase productivity by using an intermediate operation `unordered()`:
+
+```java
+collection.parallelStream ()
+    .sorted ()
+    .unordered ()
+    .collect ( Collectors . toList ());
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
 ## # 2. JAVA ARCHITECTURE
 
 <br/>
@@ -1007,104 +1048,6 @@ The purpose of the System class is to provide access to system resources. It con
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## Q. What is Java Reflection API?
-
-Reflection API in Java is used to manipulate class and its members which include fields, methods, constructor, etc. at **runtime**.
-
-The **java.lang.Class** class provides many methods that can be used to get metadata, examine and change the run time behavior of a class. There are 3 ways to get the instance of Class class.
-
-* forName() method of Class class
-* getClass() method of Object class
-* the .class syntax
-
-**1. forName() method:**  
-
-* is used to load the class dynamically.
-* returns the instance of Class class.
-* It should be used if you know the fully qualified name of class.This cannot be used for primitive types.
-
-```java
-/**
- * forName()
- */
-class Simple {
-}
-
-class Test {
-    public static void main(String args[]) {
-        Class c = Class.forName("Simple");
-        System.out.println(c.getName());
-    }
-}
-```
-
-Output
-
-```java
-Simple
-```
-
-**2. getClass() method:**  
-
-It returns the instance of Class class. It should be used if you know the type. Moreover, it can be used with primitives.
-
-```java
-/**
- * getClass
- */
-class Simple {
-}
-
-class Test {
-    void printName(Object obj) {
-        Class c = obj.getClass();
-        System.out.println(c.getName());
-    }
-
-    public static void main(String args[]) {
-        Simple s = new Simple();
-        Test t = new Test();
-        t.printName(s);
-    }
-} 
-```
-
-Output
-
-```java
-Simple
-```
-
-**3. The .class syntax:**  
-
-If a type is available but there is no instance then it is possible to obtain a Class by appending ".class" to the name of the type. It can be used for primitive data type also.
-
-```java
-/**
- * .class Syntax
- */
-class Test {  
-  public static void main(String args[]) {  
-   Class c = boolean.class;   
-   System.out.println(c.getName());  
-  
-   Class c2 = Test.class;   
-   System.out.println(c2.getName());  
- }  
-}  
-```
-
-Output
-
-```java
-boolean
-Test
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
 ## Q. What are the ways to instantiate the Class class?
 
 **1. Using new keyword:**
@@ -1382,6 +1325,23 @@ The Object class is the parent class of all the classes in java by default.
 <tr><td>public final void wait()throws InterruptedException</td><td> causes the current thread to wait, until another thread notifies (invokes notify() or notifyAll() method).</td></tr>
 <tr><td>protected void finalize()throws Throwable</td><td> is invoked by the garbage collector before object is being garbage collected.</td></tr>
 </tbody></table>
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is Optional
+
+An optional value `Optional`is a container for an object that may or may not contain a value `null`. Such a wrapper is a convenient means of prevention `NullPointerException`, as has some higher-order functions, eliminating the need for repeating `if null/notNullchecks`:
+
+```java
+Optional < String > optional =  Optional.of( " hello " );
+
+optional.isPresent(); // true 
+optional.ifPresent(s ->  System.out.println(s.length())); // 5 
+optional.get(); // "hello" 
+optional.orElse( " ops ... " ); // "hello"
+```
 
 <div align="right">
     <b><a href="#related-topics">↥ back to top</a></b>
@@ -1850,13 +1810,358 @@ StringBuffer: World
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
+## Q. What is StringJoiner?
+
+The class is StringJoinerused to create a sequence of strings separated by a separator with the ability to append a prefix and suffix to the resulting string:
+
+```java
+StringJoiner joiner =  new  StringJoiner ( " . " , " Prefix- " , " -suffix " );
+for ( String s :  " Hello the brave world " . split ( "  " )) {
+    , joiner, . add (s);
+}
+System.out.println(joiner); // prefix-Hello.the.brave.world-suffix
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
 ## # 9. JAVA REFLECTION
 
 <br/>
 
+## Q. What is Java Reflection API?
+
+Reflection API in Java is used to manipulate class and its members which include fields, methods, constructor, etc. at **runtime**.
+
+The **java.lang.Class** class provides many methods that can be used to get metadata, examine and change the run time behavior of a class. There are 3 ways to get the instance of Class class.
+
+* forName() method of Class class
+* getClass() method of Object class
+* the .class syntax
+
+**1. forName() method:**  
+
+* is used to load the class dynamically.
+* returns the instance of Class class.
+* It should be used if you know the fully qualified name of class.This cannot be used for primitive types.
+
+```java
+/**
+ * forName()
+ */
+class Simple {
+}
+
+class Test {
+    public static void main(String args[]) {
+        Class c = Class.forName("Simple");
+        System.out.println(c.getName());
+    }
+}
+```
+
+Output
+
+```java
+Simple
+```
+
+**2. getClass() method:**  
+
+It returns the instance of Class class. It should be used if you know the type. Moreover, it can be used with primitives.
+
+```java
+/**
+ * getClass
+ */
+class Simple {
+}
+
+class Test {
+    void printName(Object obj) {
+        Class c = obj.getClass();
+        System.out.println(c.getName());
+    }
+
+    public static void main(String args[]) {
+        Simple s = new Simple();
+        Test t = new Test();
+        t.printName(s);
+    }
+} 
+```
+
+Output
+
+```java
+Simple
+```
+
+**3. The .class syntax:**  
+
+If a type is available but there is no instance then it is possible to obtain a Class by appending ".class" to the name of the type. It can be used for primitive data type also.
+
+```java
+/**
+ * .class Syntax
+ */
+class Test {  
+  public static void main(String args[]) {  
+   Class c = boolean.class;   
+   System.out.println(c.getName());  
+  
+   Class c2 = Test.class;   
+   System.out.println(c2.getName());  
+ }  
+}  
+```
+
+Output
+
+```java
+boolean
+Test
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
 ## # 10. JAVA STREAMS
 
 <br/>
+
+## Q. What is Stream?
+
+An interface `java.util.Stream` is a sequence of elements on which various operations can be performed.
+
+Operations on streams can be either intermediate (intermediate) or final (terminal) . Final operations return a result of a certain type, and intermediate operations return the same stream. Thus, you can build chains of several operations on the same stream.
+
+A stream can have any number of calls to intermediate operations and the last call to the final operation. At the same time, all intermediate operations are performed lazily and until the final operation is called, no actions actually happen (similar to creating an object `Thread`or `Runnable`, without a call `start()`).
+
+Streams are created based on sources of some, for example, classes from `java.util.Collection`.
+
+Associative arrays (maps), for example `HashMap`, are not supported.
+
+Operations on streams can be performed both sequentially and in parallel.
+
+Streams cannot be reused. As soon as some final operation has been called, the flow is closed.
+
+In addition to the universal object, there are special types of streams to work with primitive data types `int`, `long`and `double`: `IntStream`, `LongStream`and `DoubleStream`. These primitive streams work just like regular object streams, but with the following differences:
+
+* use specialized lambda expressions, for example, `IntFunction`or `IntPredicate`instead of `Function`and `Predicate`;
+* support additional end operations `sum()`, `average()`, `mapToObj()`.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the ways to create a stream?
+
+* Using collection:
+
+```java
+Stream < String > fromCollection =  Arrays.asList ( " x " , " y " , " z " ).stream ();
+```
+
+* Using  set of values:
+
+```java
+Stream < String > fromValues =  Stream.of( " x " , " y " , " z " );
+```
+
+* Using Array
+
+```java
+Stream < String > fromArray =  Arrays.stream( new  String [] { " x " , " y " , " z " });
+```
+
+* Using file (each line in the file will be a separate element in the stream):
+
+```java
+Stream < String > fromFile =  Files.lines( Paths.get(" input.txt "));
+```
+
+* From the line:
+
+```java
+IntStream fromString =  " 0123456789 " . chars ();
+```
+
+* With the help of `Stream.builder()`:
+
+```java
+Stream < String > fromBuilder =  Stream.builder().add (" z ").add(" y ").add(" z ").build ();
+```
+
+* Using `Stream.iterate()(infinite)`:
+
+```java
+Stream < Integer > fromIterate =  Stream.iterate ( 1 , n - > n +  1 );
+```
+
+* Using `Stream.generate()(infinite)`:
+
+```java
+Stream < String > fromGenerate =  Stream.generate(() ->  " 0 " );
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between `Collection` and `Stream`?
+
+Collections allow you to work with elements separately, while streams do not allow this, but instead provides the ability to perform functions on data as one.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is the method `collect()`for streams for?
+
+A method `collect()`is the final operation that is used to represent the result as a collection or some other data structure.
+
+`collect()`accepts an input that contains four stages:
+
+* **supplier** — initialization of the battery,
+* **accumulator** — processing of each element,
+* **combiner** — connection of two accumulators in parallel execution,
+* **[finisher]** —a non-mandatory method of the last processing of the accumulator. 
+
+In Java 8, the class `Collectors` implements several common collectors:  
+
+* `toList()`, `toCollection()`, `toSet()`- present stream in the form of a list, collection or set;
+* `toConcurrentMap()`, `toMap()`- allow you to convert the stream to `Map`;
+* `averagingInt()`, `averagingDouble()`, `averagingLong()`- return the average value;
+* `summingInt()`, `summingDouble()`, `summingLong()`- returns the sum;
+* `summarizingInt()`, `summarizingDouble()`, `summarizingLong()`- return SummaryStatisticswith different values of the aggregate;
+* `partitioningBy()`- divides the collection into two parts according to the condition and returns them as `Map<Boolean, List>`;
+* `groupingBy()`- divides the collection into several parts and returns `Map<N, List<T>>`;
+* `mapping()`- Additional value conversions for complex Collectors.
+
+There is also the possibility of creating your own collector through `Collector.of()`:
+
+```java
+Collector < String , a List < String > , a List < String > > toList =  Collector.of (
+    ArrayList :: new ,
+    List :: add,
+    (l1, l2) -> {l1 . addAll (l2); return l1; }
+);
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. Why do streams use `forEach()`and `forEachOrdered()` methods?
+
+* `forEach()` applies a function to each stream object; ordering in parallel execution is not guaranteed;
+* `forEachOrdered()` applies a function to each stream object while maintaining the order of the elements.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are `map()`, `mapToInt()`, `mapToDouble()` and `mapToLong()` methods in Stream?
+
+The method `map()`is an intermediate operation, which transforms each element of the stream in a specified way.
+
+`mapToInt()`, `mapToDouble()`, `mapToLong()`- analogues `map()`, returns the corresponding numerical stream (ie the stream of numerical primitives):
+```java
+Stream 
+    .of ( " 12 " , " 22 " , " 4 " , " 444 " , " 123 " )
+    .mapToInt ( Integer :: parseInt)
+    .toArray (); // [12, 22, 4, 444, 123]
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is the purpose of `filter()` method in streams?
+
+The method `filter()` is an intermediate operation receiving a predicate that filters all elements, returning only those that match the condition.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is the use of `limit()` method in streams?
+
+The method `limit()`is an intermediate operation, which allows you to limit the selection to a certain number of first elements.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is the use of `sorted()` method in streams?
+
+The method `sorted()`is an intermediate operation, which allows you to sort the values ​​either in natural order or by setting Comparator.
+
+The order of the elements in the original collection remains untouched - `sorted()`it just creates its sorted representation.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What streamers designed methods `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`?
+
+The method `flatMap()` is similar to map, but can create several from one element. Thus, each object will be converted to zero, one or more other objects supported by the stream. The most obvious way to use this operation is to convert container elements using functions that return containers.
+
+```java
+Stream 
+    .of ( " Hello " , " world! " )
+    .flatMap ((p) ->  Arrays.stream (p . split ( " , " )))
+    .toArray ( String [] :: new ); // ["H", "e", "l", "l", "o", "w", "o", "r", "l", "d", "!"]
+```
+
+`flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- are analogues `flatMap()`, returns the corresponding numerical stream.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the final methods of working with streams you know?
+
+* `findFirst()` returns the first element
+* `findAny()` returns any suitable item
+* `collect()` presentation of results in the form of collections and other data structures
+* `count()` returns the number of elements
+* `anyMatch()`returns trueif the condition is satisfied for at least one element
+* `noneMatch()`returns trueif the condition is not satisfied for any element
+* `allMatch()`returns trueif the condition is satisfied for all elements
+* `min()`returns the minimum element, using as a condition Comparator
+* `max()`returns the maximum element, using as a condition Comparator
+* `forEach()` applies a function to each object (order is not guaranteed in parallel execution)
+* `forEachOrdered()` applies a function to each object while preserving the order of elements
+* `toArray()` returns an array of values
+* `reduce()`allows you to perform aggregate functions and return a single result.
+* `sum()` returns the sum of all numbers
+* `average()` returns the arithmetic mean of all numbers.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What intermediate methods of working with streams do you know?
+
+* `filter()` filters records, returning only records matching the condition;
+* `skip()` allows you to skip a certain number of elements at the beginning;
+* `distinct()`returns a stream without duplicates (for a method `equals()`);
+* `map()` converts each element;
+* `peek()` returns the same stream, applying a function to each element;
+* `limit()` allows you to limit the selection to a certain number of first elements;
+* `sorted()`allows you to sort values ​​either in natural order or by setting `Comparator`;
+* `mapToInt()`, `mapToDouble()`, `mapToLong()`- analogues `map()`return stream numeric primitives;
+* `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- similar to `map()`, but can create a single element more.
+
+For numerical streams, an additional method is available `mapToObj()`that converts the numerical stream back to the object stream.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
 
 ## # 11. JAVA REGULAR EXPRESSIONS
 
@@ -3455,6 +3760,195 @@ An interface can include as many `default` methods as you like while remaining f
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
+## Q. What are `default` interface methods?
+
+Java 8 allows you to add non-abstract method implementations to an interface using the keyword default:
+
+```java
+interface  Example {
+    int  process ( int  a );
+    default void  show () {
+        System.out.println("default show ()");
+    }
+}
+```
+
+* If a class implements an interface, it can, but does not have to, implement the default methods already implemented in the * interface. The class inherits the default implementation.
+* If a class implements several interfaces that have the same default method, then the class must implement the method with the same signature on its own. The situation is similar if one interface has a default method, and in the other the same method is abstract - no class default implementation is inherited.
+* The default method cannot override the class method `java.lang.Object`.
+* They help implement interfaces without fear of disrupting other classes.
+* Avoid creating utility classes, since all the necessary methods can be represented in the interfaces themselves.
+* They give classes the freedom to choose the method to be redefined.
+* One of the main reasons for introducing default methods is the ability of collections in Java 8 to use lambda expressions.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. How to call `default` interface method in a class that implements this interface?
+
+Using the keyword superalong with the interface name:
+
+```java
+interface  Paper {
+    default void  show () {
+        System.out.println(" default show ()");
+    }
+}
+
+class  License  implements  Paper {
+     public  void  show () {
+        Paper.super.show();
+    }
+}
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What is `static` interface method?
+
+Static interface methods are similar to default methods, except that there is no way to override them in classes that implement the interface.
+
+* Static methods in the interface are part of the interface without the ability to use them for objects of the implementation class
+* Class methods `java.lang.Object`cannot be overridden as static
+* Static methods in the interface are used to provide helper methods, for example, checking for null, sorting collections, etc.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. How to call `static` interface method?
+
+Using the interface name:
+
+```java
+interface  Paper {
+     static  void  show () {
+         System.out.println( " static show () " );
+    }
+}
+
+class  License {
+     public  void  showPaper () {
+         Paper.show ();
+    }
+}
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
+
+`Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
+
+Default methods can be used to build call chains ( `compose`, `andThen`).
+
+```java
+Function < String , Integer > toInteger =  Integer :: valueOf;
+Function < String , String > backToString = toInteger.andThen ( String :: valueOf);
+backToString.apply("123");     // "123"
+```
+
+* `DoubleFunction<R>`- a function that receives input `Double` and returns an instance of the class at the output `R`;
+* `IntFunction<R>`- a function that receives input `Integer`and returns an instance of the class at the output `R`;
+* `LongFunction<R>`- a function that receives input `Long`and returns an instance of the class at the output `R`.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `UnaryOperator<T>`, `DoubleUnaryOperator`, `IntUnaryOperator`and `LongUnaryOperator`?
+
+`UnaryOperator<T>`(**unary operator**) takes an object of type as a parameter `T`, performs operations on them and returns the result of operations in the form of an object of type `T`:
+
+```java
+UnaryOperator < Integer > operator = x - > x * x;
+System.out.println(operator.apply ( 5 )); // 25
+```
+
+* `DoubleUnaryOperator`- unary operator receiving input `Double`;
+* `IntUnaryOperator`- unary operator receiving input `Integer`;
+* `LongUnaryOperator`- unary operator receiving input `Long`.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `BinaryOperator<T>`, `DoubleBinaryOperator`, `IntBinaryOperator`and `LongBinaryOperator`?
+
+`BinaryOperator<T>`(**binary operator**) - an interface through which a function is implemented that receives two instances of the class `T`and returns an instance of the class at the output `T`.
+
+```java
+BinaryOperator < Integer > operator = (a, b) -> a + b;
+System.out.println(operator.apply ( 1 , 2 )); // 3
+```
+
+* `DoubleBinaryOperator`- binary operator receiving input Double;
+* `IntBinaryOperator`- binary operator receiving input Integer;
+* `LongBinaryOperator`- binary operator receiving input Long.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `Predicate<T>`, `DoublePredicate`, `IntPredicateand` `LongPredicate`?
+
+`Predicate<T>`(**predicate**) - the interface with which a function is implemented that receives an instance of the class as input `T`and returns the type value at the output `boolean`.
+
+The interface contains a variety of methods by default, allow to build complex conditions ( `and`, `or`, `negate`).
+
+```java
+Predicate < String > predicate = (s) -> s.length () >  0 ;
+predicate.test("foo"); // true 
+predicate.negate().test("foo"); // false
+```
+
+* `DoublePredicate`- predicate receiving input `Double`;
+* `IntPredicate`- predicate receiving input `Integer`;
+* `LongPredicate`- predicate receiving input `Long`.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `Consumer<T>`, `DoubleConsumer`, `IntConsumer`and `LongConsumer`?
+
+`Consumer<T>`(**consumer**) - the interface through which a function is implemented that receives an instance of the class as an input `T`, performs some action with it, and returns nothing.
+
+```java
+Consumer<String> hello = (name) ->  System.out.println( " Hello, "  + name);
+hello.accept( " world " );
+```
+
+* `DoubleConsumer`- the consumer receiving the input `Double`;
+* `IntConsumer`- the consumer receiving the input `Integer`;
+* `LongConsumer`- the consumer receiving the input `Long`.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## Q. What are the functional interfaces `Supplier<T>`, `BooleanSupplier`, `DoubleSupplier`, `IntSupplier`and `LongSupplier`?
+
+`Supplier<T>`(**provider**) - the interface through which a function is implemented that takes nothing to the input, but returns the result of the class to the output `T`;
+
+```java
+Supplier < LocalDateTime > now =  LocalDateTime::now;
+now.get();
+```
+
+* `DoubleSupplier`- the supplier is returning `Double`;
+* `IntSupplier`- the supplier is returning `Integer`;
+* `LongSupplier`- the supplier is returning `Long`.
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
 ## # 19. JAVA ENCAPSULATION
 
 <br/>
@@ -3953,393 +4447,6 @@ Generic Class Example !
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-
-## Q. What is StringJoiner?
-
-The class is StringJoinerused to create a sequence of strings separated by a separator with the ability to append a prefix and suffix to the resulting string:
-
-```java
-StringJoiner joiner =  new  StringJoiner ( " . " , " Prefix- " , " -suffix " );
-for ( String s :  " Hello the brave world " . split ( "  " )) {
-    , joiner, . add (s);
-}
-System.out.println(joiner); // prefix-Hello.the.brave.world-suffix
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are `default`interface methods?
-
-Java 8 allows you to add non-abstract method implementations to an interface using the keyword default:
-
-```java
-interface  Example {
-    int  process ( int  a );
-    default void  show () {
-        System.out.println("default show ()");
-    }
-}
-```
-
-* If a class implements an interface, it can, but does not have to, implement the default methods already implemented in the * interface. The class inherits the default implementation.
-* If a class implements several interfaces that have the same default method, then the class must implement the method with the same signature on its own. The situation is similar if one interface has a default method, and in the other the same method is abstract - no class default implementation is inherited.
-* The default method cannot override the class method `java.lang.Object`.
-* They help implement interfaces without fear of disrupting other classes.
-* Avoid creating utility classes, since all the necessary methods can be represented in the interfaces themselves.
-* They give classes the freedom to choose the method to be redefined.
-* One of the main reasons for introducing default methods is the ability of collections in Java 8 to use lambda expressions.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. How to call `default` interface method in a class that implements this interface?
-
-Using the keyword superalong with the interface name:
-
-```java
-interface  Paper {
-    default void  show () {
-        System.out.println(" default show ()");
-    }
-}
-
-class  License  implements  Paper {
-     public  void  show () {
-        Paper.super.show();
-    }
-}
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is `static` interface method?
-
-Static interface methods are similar to default methods, except that there is no way to override them in classes that implement the interface.
-
-* Static methods in the interface are part of the interface without the ability to use them for objects of the implementation class
-* Class methods `java.lang.Object`cannot be overridden as static
-* Static methods in the interface are used to provide helper methods, for example, checking for null, sorting collections, etc.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. How to call `static` interface method?
-
-Using the interface name:
-
-```java
-interface  Paper {
-     static  void  show () {
-         System.out.println( " static show () " );
-    }
-}
-
-class  License {
-     public  void  showPaper () {
-         Paper.show ();
-    }
-}
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is Optional
-
-An optional value `Optional`is a container for an object that may or may not contain a value `null`. Such a wrapper is a convenient means of prevention `NullPointerException`, as has some higher-order functions, eliminating the need for repeating `if null/notNullchecks`:
-
-```java
-Optional < String > optional =  Optional . of ( " hello " );
-
-optional.isPresent(); // true 
-optional.ifPresent(s ->  System.out.println(s . length ())); // 5 
-optional.get(); // "hello" 
-optional.orElse( " ops ... " ); // "hello"
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is Stream?
-
-An interface `java.util.Stream` is a sequence of elements on which various operations can be performed.
-
-Operations on streams can be either intermediate (intermediate) or final (terminal) . Final operations return a result of a certain type, and intermediate operations return the same stream. Thus, you can build chains of several operations on the same stream.
-
-A stream can have any number of calls to intermediate operations and the last call to the final operation. At the same time, all intermediate operations are performed lazily and until the final operation is called, no actions actually happen (similar to creating an object `Thread`or `Runnable`, without a call `start()`).
-
-Streams are created based on sources of some, for example, classes from `java.util.Collection`.
-
-Associative arrays (maps), for example `HashMap`, are not supported.
-
-Operations on streams can be performed both sequentially and in parallel.
-
-Streams cannot be reused. As soon as some final operation has been called, the flow is closed.
-
-In addition to the universal object, there are special types of streams to work with primitive data types `int`, `long`and `double`: `IntStream`, `LongStream`and `DoubleStream`. These primitive streams work just like regular object streams, but with the following differences:
-
-* use specialized lambda expressions, for example, `IntFunction`or `IntPredicate`instead of `Function`and `Predicate`;
-* support additional end operations `sum()`, `average()`, `mapToObj()`.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the ways to create a stream?
-
-* Using collection:
-
-```java
-Stream < String > fromCollection =  Arrays.asList ( " x " , " y " , " z " ).stream ();
-```
-
-* Using  set of values:
-
-```java
-Stream < String > fromValues =  Stream.of( " x " , " y " , " z " );
-```
-
-* Using Array
-
-```java
-Stream < String > fromArray =  Arrays.stream( new  String [] { " x " , " y " , " z " });
-```
-
-* Using file (each line in the file will be a separate element in the stream):
-
-```java
-Stream < String > fromFile =  Files.lines( Paths.get(" input.txt "));
-```
-
-* From the line:
-
-```java
-IntStream fromString =  " 0123456789 " . chars ();
-```
-
-* With the help of `Stream.builder()`:
-
-```java
-Stream < String > fromBuilder =  Stream.builder().add (" z ").add(" y ").add(" z ").build ();
-```
-
-* Using `Stream.iterate()(infinite)`:
-
-```java
-Stream < Integer > fromIterate =  Stream.iterate ( 1 , n - > n +  1 );
-```
-
-* Using `Stream.generate()(infinite)`:
-
-```java
-Stream < String > fromGenerate =  Stream.generate(() ->  " 0 " );
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is the difference between `Collection` and `Stream`?
-
-Collections allow you to work with elements separately, while streams do not allow this, but instead provides the ability to perform functions on data as one.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is the method `collect()`for streams for?
-
-A method `collect()`is the final operation that is used to represent the result as a collection or some other data structure.
-
-`collect()`accepts an input that contains four stages:
-
-* **supplier** — initialization of the battery,
-* **accumulator** — processing of each element,
-* **combiner** — connection of two accumulators in parallel execution,
-* **[finisher]** —a non-mandatory method of the last processing of the accumulator. 
-
-In Java 8, the class `Collectors` implements several common collectors:  
-
-* `toList()`, `toCollection()`, `toSet()`- present stream in the form of a list, collection or set;
-* `toConcurrentMap()`, `toMap()`- allow you to convert the stream to `Map`;
-* `averagingInt()`, `averagingDouble()`, `averagingLong()`- return the average value;
-* `summingInt()`, `summingDouble()`, `summingLong()`- returns the sum;
-* `summarizingInt()`, `summarizingDouble()`, `summarizingLong()`- return SummaryStatisticswith different values of the aggregate;
-* `partitioningBy()`- divides the collection into two parts according to the condition and returns them as `Map<Boolean, List>`;
-* `groupingBy()`- divides the collection into several parts and returns `Map<N, List<T>>`;
-* `mapping()`- Additional value conversions for complex Collectors.
-
-There is also the possibility of creating your own collector through `Collector.of()`:
-
-```java
-Collector < String , a List < String > , a List < String > > toList =  Collector.of (
-    ArrayList :: new ,
-    List :: add,
-    (l1, l2) -> {l1 . addAll (l2); return l1; }
-);
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. Why do streams use `forEach()`and `forEachOrdered()` methods?
-
-* `forEach()` applies a function to each stream object; ordering in parallel execution is not guaranteed;
-* `forEachOrdered()` applies a function to each stream object while maintaining the order of the elements.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are `map()`, `mapToInt()`, `mapToDouble()` and `mapToLong()` methods in Stream?
-
-The method `map()`is an intermediate operation, which transforms each element of the stream in a specified way.
-
-`mapToInt()`, `mapToDouble()`, `mapToLong()`- analogues `map()`, returns the corresponding numerical stream (ie the stream of numerical primitives):
-```java
-Stream 
-    .of ( " 12 " , " 22 " , " 4 " , " 444 " , " 123 " )
-    .mapToInt ( Integer :: parseInt)
-    .toArray (); // [12, 22, 4, 444, 123]
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is the purpose of `filter()` method in streams?
-
-The method `filter()` is an intermediate operation receiving a predicate that filters all elements, returning only those that match the condition.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is the use of `limit()` method in streams?
-
-The method `limit()`is an intermediate operation, which allows you to limit the selection to a certain number of first elements.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What is the use of `sorted()` method in streams?
-
-The method `sorted()`is an intermediate operation, which allows you to sort the values ​​either in natural order or by setting Comparator.
-
-The order of the elements in the original collection remains untouched - `sorted()`it just creates its sorted representation.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What streamers designed methods `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`?
-
-The method `flatMap()` is similar to map, but can create several from one element. Thus, each object will be converted to zero, one or more other objects supported by the stream. The most obvious way to use this operation is to convert container elements using functions that return containers.
-
-```java
-Stream 
-    .of ( " Hello " , " world! " )
-    .flatMap ((p) ->  Arrays.stream (p . split ( " , " )))
-    .toArray ( String [] :: new ); // ["H", "e", "l", "l", "o", "w", "o", "r", "l", "d", "!"]
-```
-
-`flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- are analogues `flatMap()`, returns the corresponding numerical stream.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. Tell us about parallel processing in Java 8?
-
-Streams can be sequential and parallel. Operations on sequential streams are performed in one processor thread, on parallel streams - using several processor threads. Parallel streams use the shared stream `ForkJoinPool`through the static `ForkJoinPool.commonPool()`method. In this case, if the environment is not multi-core, then the stream will be executed as sequential. In fact, the use of parallel streams is reduced to the fact that the data in the streams will be divided into parts, each part is processed on a separate processor core, and in the end these parts are connected, and final operations are performed on them.
-
-You can also use the `parallelStream()`interface method to create a parallel stream from the collection `Collection`.
-
-To make a regular sequential stream parallel, you must call the `Stream`method on the object `parallel()`. The method `isParallel()`allows you to find out if the stream is parallel.
-
-Using, methods `parallel()`and `sequential()`it is possible to determine which operations can be parallel, and which only sequential. You can also make a parallel stream from any sequential stream and vice versa:
-
-```java
-collection
-  .stream ()
-  .peek ( ... ) // operation is sequential
-  .parallel ()
-  .map ( ... ) // the operation can be performed in parallel,
-  .sequential ()
-  .reduce ( ... ) // operation is sequential again
-```
-
-As a rule, elements are transferred to the stream in the same order in which they are defined in the data source. When working with parallel streams, the system preserves the sequence of elements. An exception is a method `forEach()`that can output elements in random order. And in order to maintain the order, it is necessary to apply the method `forEachOrdered()`.
-
-* Criteria that may affect performance in parallel streams:
-* Data size - the more data, the more difficult it is to separate the data first, and then combine them.
-* The number of processor cores. Theoretically, the more cores in a computer, the faster the program will work. If the machine has one core, it makes no sense to use parallel threads.
-* The simpler the data structure the stream works with, the faster operations will occur. For example, data from is `ArrayList`easy to use, since the structure of this collection assumes a sequence of unrelated data. But a type collection  `LinkedList`is not the best option, since in a sequential list all the elements are connected with previous / next. And such  data is difficult to parallelize.
-* Operations with primitive types will be faster than with class objects.
-* It is highly recommended that you do not use parallel streams for any long operations (for example, network connections),  since all parallel streams work with one `ForkJoinPool`, such long operations can stop all parallel streams in the JVM due to  the lack of available threads in the pool, etc. e. parallel streams should be used only for short operations where the count  goes for milliseconds, but not for those where the count can go for seconds and minutes;
-* Saving order in parallel streams increases execution costs, and if order is not important, it is possible to disable its  saving and thereby increase productivity by using an intermediate operation `unordered()`:
-
-```java
-collection.parallelStream ()
-    .sorted ()
-    .unordered ()
-    .collect ( Collectors . toList ());
-```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the final methods of working with streams you know?
-
-* `findFirst()` returns the first element
-* `findAny()` returns any suitable item
-* `collect()` presentation of results in the form of collections and other data structures
-* `count()` returns the number of elements
-* `anyMatch()`returns trueif the condition is satisfied for at least one element
-* `noneMatch()`returns trueif the condition is not satisfied for any element
-* `allMatch()`returns trueif the condition is satisfied for all elements
-* `min()`returns the minimum element, using as a condition Comparator
-* `max()`returns the maximum element, using as a condition Comparator
-* `forEach()` applies a function to each object (order is not guaranteed in parallel execution)
-* `forEachOrdered()` applies a function to each object while preserving the order of elements
-* `toArray()` returns an array of values
-* `reduce()`allows you to perform aggregate functions and return a single result.
-* `sum()` returns the sum of all numbers
-* `average()` returns the arithmetic mean of all numbers.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What intermediate methods of working with streams do you know?
-
-* `filter()` filters records, returning only records matching the condition;
-* `skip()` allows you to skip a certain number of elements at the beginning;
-* `distinct()`returns a stream without duplicates (for a method `equals()`);
-* `map()` converts each element;
-* `peek()` returns the same stream, applying a function to each element;
-* `limit()` allows you to limit the selection to a certain number of first elements;
-* `sorted()`allows you to sort values ​​either in natural order or by setting `Comparator`;
-* `mapToInt()`, `mapToDouble()`, `mapToLong()`- analogues `map()`return stream numeric primitives;
-* `flatMap()`, `flatMapToInt()`, `flatMapToDouble()`, `flatMapToLong()`- similar to `map()`, but can create a single element more.
-
-For numerical streams, an additional method is available `mapToObj()`that converts the numerical stream back to the object stream.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
 ## Q. What additional methods for working with associative arrays (maps) appeared in Java 8?
 
 * `putIfAbsent()` adds a key-value pair only if the key was missing:
@@ -4460,114 +4567,6 @@ String b64 =  Base64.getEncoder().encodeToString ( " input " . getBytes ( " utf-
 // Decode 
 new  String ( Base64.getDecoder().decode ( " aW5wdXQ == " ), " utf-8 " ); // input
 ```
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the functional interfaces `Function<T,R>`, `DoubleFunction<R>`, `IntFunction<R>` and `LongFunction<R>`?
-
-`Function<T, R>`- the interface with which a function is implemented that receives an instance of the class `T` and returns an instance of the class at the output `R`.
-
-Default methods can be used to build call chains ( `compose`, `andThen`).
-
-```java
-Function < String , Integer > toInteger =  Integer :: valueOf;
-Function < String , String > backToString = toInteger.andThen ( String :: valueOf);
-backToString.apply("123");     // "123"
-```
-
-* `DoubleFunction<R>`- a function that receives input `Double` and returns an instance of the class at the output `R`;
-* `IntFunction<R>`- a function that receives input `Integer`and returns an instance of the class at the output `R`;
-* `LongFunction<R>`- a function that receives input `Long`and returns an instance of the class at the output `R`.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the functional interfaces `UnaryOperator<T>`, `DoubleUnaryOperator`, `IntUnaryOperator`and `LongUnaryOperator`?
-
-`UnaryOperator<T>`(**unary operator**) takes an object of type as a parameter `T`, performs operations on them and returns the result of operations in the form of an object of type `T`:
-
-```java
-UnaryOperator < Integer > operator = x - > x * x;
-System.out.println(operator.apply ( 5 )); // 25
-```
-
-* `DoubleUnaryOperator`- unary operator receiving input `Double`;
-* `IntUnaryOperator`- unary operator receiving input `Integer`;
-* `LongUnaryOperator`- unary operator receiving input `Long`.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the functional interfaces `BinaryOperator<T>`, `DoubleBinaryOperator`, `IntBinaryOperator`and `LongBinaryOperator`?
-
-`BinaryOperator<T>`(**binary operator**) - an interface through which a function is implemented that receives two instances of the class `T`and returns an instance of the class at the output `T`.
-
-```java
-BinaryOperator < Integer > operator = (a, b) -> a + b;
-System.out.println(operator.apply ( 1 , 2 )); // 3
-```
-
-* `DoubleBinaryOperator`- binary operator receiving input Double;
-* `IntBinaryOperator`- binary operator receiving input Integer;
-* `LongBinaryOperator`- binary operator receiving input Long.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the functional interfaces `Predicate<T>`, `DoublePredicate`, `IntPredicateand` `LongPredicate`?
-
-`Predicate<T>`(**predicate**) - the interface with which a function is implemented that receives an instance of the class as input `T`and returns the type value at the output `boolean`.
-
-The interface contains a variety of methods by default, allow to build complex conditions ( `and`, `or`, `negate`).
-
-```java
-Predicate < String > predicate = (s) -> s.length () >  0 ;
-predicate.test("foo"); // true 
-predicate.negate().test("foo"); // false
-```
-
-* `DoublePredicate`- predicate receiving input `Double`;
-* `IntPredicate`- predicate receiving input `Integer`;
-* `LongPredicate`- predicate receiving input `Long`.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the functional interfaces `Consumer<T>`, `DoubleConsumer`, `IntConsumer`and `LongConsumer`?
-
-`Consumer<T>`(**consumer**) - the interface through which a function is implemented that receives an instance of the class as an input `T`, performs some action with it, and returns nothing.
-
-```java
-Consumer<String> hello = (name) ->  System.out.println( " Hello, "  + name);
-hello.accept( " world " );
-```
-
-* `DoubleConsumer`- the consumer receiving the input `Double`;
-* `IntConsumer`- the consumer receiving the input `Integer`;
-* `LongConsumer`- the consumer receiving the input `Long`.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. What are the functional interfaces `Supplier<T>`, `BooleanSupplier`, `DoubleSupplier`, `IntSupplier`and `LongSupplier`?
-
-`Supplier<T>`(**provider**) - the interface through which a function is implemented that takes nothing to the input, but returns the result of the class to the output `T`;
-
-```java
-Supplier < LocalDateTime > now =  LocalDateTime::now;
-now.get();
-```
-
-* `DoubleSupplier`- the supplier is returning `Double`;
-* `IntSupplier`- the supplier is returning `Integer`;
-* `LongSupplier`- the supplier is returning `Long`.
 
 <div align="right">
     <b><a href="#related-topics">↥ back to top</a></b>
