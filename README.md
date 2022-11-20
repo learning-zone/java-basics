@@ -26,23 +26,25 @@
 * [Java Architecture](#-2-java-architecture)
 * [Java Data Types](#-3-java-data-types)
 * [Java Methods](#-4-java-methods)
-* [Java Classes](#-5-java-classes)
-* [Java Constructors](#-6-java-constructors)
-* [Java Array](#-7-java-array)
-* [Java Strings](#-8-java-strings)
-* [Java Reflection](#-9-java-reflection)
-* [Java Streams](#-10-java-streams)
-* [Java Regular Expressions](#-11-java-regular-expressions)
-* [Java File Handling](#-12-java-file-handling)
-* [Java Exceptions](#-13-java-exceptions)
-* [Java Inheritance](#-14-java-inheritance)
-* [Java Method Overriding](#-15-java-method-overriding)
-* [Java Polymorphism](#-16-java-polymorphism)
-* [Java Abstraction](#-17-java-abstraction)
-* [Java Interfaces](#-18-java-interfaces)
-* [Java Encapsulation](#-19-java-encapsulation)
-* [Java Generics](#-20-java-generics)
-* [Miscellaneous](#-21-miscellaneous)
+* [Java Functional programming](#-5-java-functional-programming)
+* [Java Lambda expressions](#-6-java-lambda-expressions)
+* [Java Classes](#-7-java-classes)
+* [Java Constructors](#-8-java-constructors)
+* [Java Array](#-9-java-array)
+* [Java Strings](#-10-java-strings)
+* [Java Reflection](#-11-java-reflection)
+* [Java Streams](#-12-java-streams)
+* [Java Regular Expressions](#-13-java-regular-expressions)
+* [Java File Handling](#-14-java-file-handling)
+* [Java Exceptions](#-15-java-exceptions)
+* [Java Inheritance](#-16-java-inheritance)
+* [Java Method Overriding](#-17-java-method-overriding)
+* [Java Polymorphism](#-18-java-polymorphism)
+* [Java Abstraction](#-19-java-abstraction)
+* [Java Interfaces](#-20-java-interfaces)
+* [Java Encapsulation](#-21-java-encapsulation)
+* [Java Generics](#-22-java-generics)
+* [Miscellaneous](#-23-miscellaneous)
 
 <br/>
 
@@ -939,7 +941,15 @@ Method references are potentially more efficient than using lambda expressions. 
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 5. JAVA CLASSES
+## # 5. JAVA FUNCTIONAL PROGRAMMING
+
+<br/>
+
+## # 6. JAVA LAMBDA EXPRESSIONS
+
+<br/>
+
+## # 7. JAVA CLASSES
 
 <br/>
 
@@ -1366,7 +1376,7 @@ optional.orElse( " ops ... " ); // "hello"
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 6. JAVA CONSTRUCTORS
+## # 8. JAVA CONSTRUCTORS
 
 <br/>
 
@@ -1600,7 +1610,7 @@ class Visitor{
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 7. JAVA ARRAY
+## # 9. JAVA ARRAY
 
 <br/>
 
@@ -1658,7 +1668,7 @@ class Visitor{
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 8. JAVA STRINGS
+## # 10. JAVA STRINGS
 
 <br/>
 
@@ -1845,7 +1855,7 @@ System.out.println(joiner); // prefix-Hello.the.brave.world-suffix
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 9. JAVA REFLECTION
+## # 11. JAVA REFLECTION
 
 <br/>
 
@@ -1947,7 +1957,7 @@ Test
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 10. JAVA STREAMS
+## # 12. JAVA STREAMS
 
 <br/>
 
@@ -2190,7 +2200,7 @@ For numerical streams, an additional method is available `mapToObj()`that conver
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 11. JAVA REGULAR EXPRESSIONS
+## # 13. JAVA REGULAR EXPRESSIONS
 
 <br/>
 
@@ -2228,7 +2238,7 @@ public class Index {
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 12. JAVA FILE HANDLING
+## # 14. JAVA FILE HANDLING
 
 <br/>
 
@@ -2573,7 +2583,7 @@ public class SerialExample {
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 13. JAVA EXCEPTIONS
+## # 15. JAVA EXCEPTIONS
 
 <br/>
 
@@ -2943,7 +2953,7 @@ Example: **OutOfMemoryError, VirtualMachineError, AssertionError** etc.
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 14. JAVA INHERITANCE
+## # 16. JAVA INHERITANCE
 
 <br/>
 
@@ -3256,11 +3266,11 @@ that satisefies *Liskov's substitution principle*.
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 15. JAVA METHOD OVERRIDING
+## # 17. JAVA METHOD OVERRIDING
 
 <br/>
 
-## # 16. JAVA POLYMORPHISM
+## # 18. JAVA POLYMORPHISM
 
 <br/>
 
@@ -3464,7 +3474,7 @@ Bank Rate of Interest: 0.0
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 17. JAVA ABSTRACTION
+## # 19. JAVA ABSTRACTION
 
 <br/>
 
@@ -3567,7 +3577,7 @@ Abstraction is about hiding unwanted details while giving out most essential det
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 18. JAVA INTERFACES
+## # 20. JAVA INTERFACES
 
 <br/>
 
@@ -3986,7 +3996,7 @@ now.get();
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 19. JAVA ENCAPSULATION
+## # 21. JAVA ENCAPSULATION
 
 <br/>
 
@@ -4027,7 +4037,7 @@ public class MainClass {
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 20. JAVA GENERICS
+## # 22. JAVA GENERICS
 
 <br/>
 
@@ -4090,7 +4100,7 @@ Generic Class Example !
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 21. MISCELLANEOUS
+## # 23. MISCELLANEOUS
 
 <br/>
 
