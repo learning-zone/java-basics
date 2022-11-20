@@ -41,7 +41,8 @@
 * [Java Abstraction](#-17-java-abstraction)
 * [Java Interfaces](#-18-java-interfaces)
 * [Java Encapsulation](#-19-java-encapsulation)
-* [Miscellaneous](#-20-miscellaneous)
+* [Java Generics](#-20-java-generics)
+* [Miscellaneous](#-21-miscellaneous)
 
 <br/>
 
@@ -4026,7 +4027,70 @@ public class MainClass {
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
 
-## # 20. MISCELLANEOUS
+## # 20. JAVA GENERICS
+
+<br/>
+
+## Q. Do you know Generics? How did you used in your coding?
+
+`Generics` allows type (Integer, String, … etc and user defined types) to be a parameter to methods, classes and interfaces. For example, classes like HashSet, ArrayList, HashMap, etc use generics very well.
+
+**Advantages:**
+
+* **Type-safety**: We can hold only a single type of objects in generics. It doesn\'t allow to store other objects.
+* **Type Casting**: There is no need to typecast the object.
+* **Compile-Time Checking**: It is checked at compile time so problem will not occur at runtime.
+
+**Example:**
+
+```java
+/** 
+* A Simple Java program to show multiple 
+* type parameters in Java Generics 
+*
+* We use < > to specify Parameter type
+*
+**/ 
+class GenericClass<T, U> { 
+    T obj1;  // An object of type T 
+    U obj2;  // An object of type U 
+  
+    // constructor 
+    GenericClass(T obj1, U obj2) { 
+        this.obj1 = obj1; 
+        this.obj2 = obj2; 
+    } 
+  
+    // To print objects of T and U 
+    public void print() { 
+        System.out.println(obj1); 
+        System.out.println(obj2); 
+    } 
+} 
+  
+// Driver class to test above 
+class MainClass { 
+    public static void main (String[] args) { 
+        GenericClass <String, Integer> obj = 
+            new GenericClass<String, Integer>("Generic Class Example !", 100); 
+  
+        obj.print(); 
+    } 
+}
+```
+
+Output:
+
+```java
+Generic Class Example !
+100
+```
+
+<div align="right">
+    <b><a href="#related-topics">↥ back to top</a></b>
+</div>
+
+## # 21. MISCELLANEOUS
 
 <br/>
 
@@ -4419,65 +4483,6 @@ There are 4 types of JDBC drivers:
 1. **Native-API driver**: The Native API driver uses the client-side libraries of the database. The driver converts JDBC method calls into native calls of the database API. It is not written entirely in java.
 1. **Network Protocol driver**: The Network Protocol driver uses middleware (application server) that converts JDBC calls directly or indirectly into the vendor-specific database protocol. It is fully written in java.
 1. **Thin driver**: The thin driver converts JDBC calls directly into the vendor-specific database protocol. That is why it is known as thin driver. It is fully written in Java language.
-
-<div align="right">
-    <b><a href="#related-topics">↥ back to top</a></b>
-</div>
-
-## Q. Do you know Generics? How did you used in your coding?
-
-`Generics` allows type (Integer, String, … etc and user defined types) to be a parameter to methods, classes and interfaces. For example, classes like HashSet, ArrayList, HashMap, etc use generics very well.
-
-**Advantages:**
-
-* **Type-safety**: We can hold only a single type of objects in generics. It doesn\'t allow to store other objects.
-* **Type Casting**: There is no need to typecast the object.
-* **Compile-Time Checking**: It is checked at compile time so problem will not occur at runtime.
-
-**Example:**
-
-```java
-/** 
-* A Simple Java program to show multiple 
-* type parameters in Java Generics 
-*
-* We use < > to specify Parameter type
-*
-**/ 
-class GenericClass<T, U> { 
-    T obj1;  // An object of type T 
-    U obj2;  // An object of type U 
-  
-    // constructor 
-    GenericClass(T obj1, U obj2) { 
-        this.obj1 = obj1; 
-        this.obj2 = obj2; 
-    } 
-  
-    // To print objects of T and U 
-    public void print() { 
-        System.out.println(obj1); 
-        System.out.println(obj2); 
-    } 
-} 
-  
-// Driver class to test above 
-class MainClass { 
-    public static void main (String[] args) { 
-        GenericClass <String, Integer> obj = 
-            new GenericClass<String, Integer>("Generic Class Example !", 100); 
-  
-        obj.print(); 
-    } 
-}
-```
-
-Output:
-
-```java
-Generic Class Example !
-100
-```
 
 <div align="right">
     <b><a href="#related-topics">↥ back to top</a></b>
