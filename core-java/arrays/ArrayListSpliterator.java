@@ -19,5 +19,8 @@ public class ArrayListSpliterator {
 		
 		System.out.println("List of Emails: ");
 		emails.forEachRemaining((n) -> System.out.println(n));
+		
+		//list.stream().forEach(email -> System.out.println(email));
+
 	}
 }
