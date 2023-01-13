@@ -678,6 +678,7 @@ private final int x = 10;
 
 ## # 4. JAVA METHODS
 
+[Java Methods with examples](https://levelup.gitconnected.com/understand-java-methods-with-examples-84886dba2e17)
 <br/>
 
 ## Q. Can you have virtual functions in Java?
