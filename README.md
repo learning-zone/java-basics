@@ -14,9 +14,9 @@
 * *[Jakarta Server Pages (JSP)](jsp-questions.md)*
 * *[Servlets](servlets-questions.md)*
 * *[Java Multiple Choice Questions](java-multiple-choice-questions-answers.md)*
-* *[Spring Framework Basics](https://github.com/learning-zone/spring-basics)*
-* *[Hibernate](https://github.com/learning-zone/hibernate-basics)*
 * *[Java Design Pattern](https://github.com/learning-zone/java-design-patterns)*
+* *[Hibernate](https://github.com/learning-zone/hibernate-basics)*
+* *[Spring Framework Basics](https://github.com/learning-zone/spring-basics)*
 
 <br/>
 
