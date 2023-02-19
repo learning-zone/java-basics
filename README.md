@@ -6,16 +6,16 @@
 
 ## Related Topics
 
-* *[Multithreading Basics](multithreading-questions.md)*
-* *[Collections Basics](collections-questions.md)*
-* *[JDBC Basics](JDBC-questions.md)*
+* *[Multithreading](multithreading-questions.md)*
+* *[Collections](collections-questions.md)*
+* *[Java Database Connectivity (JDBC)](JDBC-questions.md)*
 * *[Java Programs](java-programs.md)*
 * *[Java String Methods](java-string-methods.md)*
-* *[JSP Basics](jsp-questions.md)*
-* *[Servlets Basics](servlets-questions.md)*
+* *[Jakarta Server Pages (JSP)](jsp-questions.md)*
+* *[Servlets](servlets-questions.md)*
 * *[Java Multiple Choice Questions](java-multiple-choice-questions-answers.md)*
-* *[Spring Basics](https://github.com/learning-zone/spring-basics)*
-* *[Hibernate Basics](https://github.com/learning-zone/hibernate-basics)*
+* *[Spring Framework Basics](https://github.com/learning-zone/spring-basics)*
+* *[Hibernate](https://github.com/learning-zone/hibernate-basics)*
 * *[Java Design Pattern](https://github.com/learning-zone/java-design-patterns)*
 
 <br/>
