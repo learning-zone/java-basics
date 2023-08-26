@@ -14,7 +14,6 @@ public class ArrayBlockingQueueAdd {
 			// Add element to ArrayBlockingQueue
 			queue.add(766);
 			queue.add(432);
-			queue.add(456);
 			System.out.println("Added elements are: " + queue);
 		} catch (Exception e) {
 			e.printStackTrace();
