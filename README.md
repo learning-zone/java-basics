@@ -84,6 +84,8 @@
     * The command `java` can run JavaFX applications;
     * Added utility `jdeps` for analyzing .class files.
 
+- [Java 8 Interview Questions](https://boldcoder.blogspot.com/2024/09/java-8-interview-questions.html)
+
 <div align="right">
     <b><a href="#related-topics">↥ back to top</a></b>
 </div>
